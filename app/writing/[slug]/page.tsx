@@ -20,6 +20,352 @@ type Post = {
 
 const posts: Post[] = [
   {
+    slug: "publicis-liveramp-acquisition",
+    title: "Publicis bought LiveRamp for $2.2B. The Trade Desk just lost more than LiveRamp did.",
+    date: "May 18, 2026",
+    readTime: "7 min",
+    tag: "MadTech",
+    color: "from-fuchsia-600 to-rose-500",
+    tldr: "Publicis is paying $2.167B for LiveRamp — a 29.8% premium for the connectivity layer underneath modern programmatic. The biggest casualty isn't LiveRamp's customers; it's The Trade Desk's claim that UID2 is an independent identity standard. Brands have three things to do this week before close.",
+    content: (
+      <div className="prose-content">
+        <p>
+          Press release landed Tuesday morning. Publicis is paying $2.167 billion in cash for LiveRamp &mdash; $38.50 a
+          share, 29.8% premium over Monday&apos;s close. By the time my second coffee was cold, three brand-side clients
+          had texted me some version of the same question: should we be worried?
+        </p>
+        <p>
+          Yes. But probably not for the reason most of the coverage is suggesting.
+        </p>
+        <p>
+          Most of what I&apos;ve read so far treats this as another holdco land grab &mdash; Publicis stocking up on
+          AI-era plumbing the same way they bought Epsilon in 2019 for $4.4B and Profiles a year ago. That framing isn&apos;t
+          wrong. It&apos;s just incomplete. The second-order effect here is much bigger than the deal itself.
+        </p>
+
+        <h2>What Publicis actually bought</h2>
+        <p>
+          LiveRamp is not a CDP, and it is not really a &ldquo;data collaboration platform&rdquo; in the way the press
+          release wants you to read it. What Publicis paid $2.2B for is the connectivity layer between data owners and
+          the media supply chain &mdash; the RampID graph, the clean-room infrastructure, the integrations that sit
+          between every major retailer&apos;s first-party data and the rest of the open internet.
+        </p>
+        <p>
+          That is the substrate underneath modern programmatic. Publicis just bought the rails.
+        </p>
+        <p>
+          Combine that with Epsilon, Profiles, and CoreAI &mdash; all already owned &mdash; and Publicis isn&apos;t a
+          holding company anymore. They are a vertically integrated data and media operating system that happens to
+          also own some agencies.
+        </p>
+
+        <h2>The Trade Desk just lost more than LiveRamp did</h2>
+        <p>
+          Here is the read I have not seen anyone make yet, and the one I think matters most.
+        </p>
+        <p>
+          The Trade Desk&apos;s identity strategy for the last four years has been Unified ID 2.0 &mdash; the open-source
+          alternative to walled-garden identity. UID2 was supposed to be the neutral standard for the open web. RampID
+          was the named competitor. The pitch to brands was: choose UID2 if you want neutrality, RampID if you&apos;re
+          already inside the LiveRamp ecosystem.
+        </p>
+        <p>
+          As of yesterday, RampID is a Publicis-owned asset. Every brand running media through Publicis is now
+          structurally incentivized to favor RampID over UID2. That is not a neutral identity standard anymore. That
+          is an agency holdco&apos;s proprietary identity graph wearing the costume of an open standard.
+        </p>
+        <p>
+          The Trade Desk stock didn&apos;t move much on the news. It should have. Brands are about to start asking
+          pointed questions about whether their open-web ID strategy is sitting on top of a competitor&apos;s asset.
+        </p>
+
+        <h2>What brands should do this week</h2>
+        <p>
+          If you have meaningful media spend running through LiveRamp &mdash; and statistically you almost certainly
+          do &mdash; three things to put in motion this week:
+        </p>
+        <p>
+          First, map your exposure. Pull every contract where LiveRamp is a critical dependency: identity resolution,
+          clean-room infrastructure, audience activation. Know what is load-bearing before close.
+        </p>
+        <p>
+          Second, ask the LiveRamp account team about data portability post-close. Specifically: if a non-Publicis
+          agency runs your media in 2027, can you take your audiences with you? Get the answer in writing now, while
+          LiveRamp still has the incentive to retain you as a standalone enterprise customer.
+        </p>
+        <p>
+          Third, get a written position from your non-Publicis agency. If WPP, the Omnicom-IPG combination, Dentsu, or
+          your independent shop is running your buy, ask them in writing how they plan to use LiveRamp-dependent
+          assets in 2026 and 2027. You will find out very quickly whether they have an actual plan or whether they are
+          quietly hoping nobody asks.
+        </p>
+
+        <h2>The thing nobody is saying out loud</h2>
+        <p>
+          Independent adtech as a category did not die yesterday. It died a long time ago. Yesterday Publicis just
+          hammered in the last nail &mdash; using the matched bookend of the same hammer they used on Epsilon six years
+          ago. Acxiom sits inside IPG, now merged with Omnicom. LiveRamp sits inside Publicis. Profiles sits inside
+          Publicis. Experian&apos;s marketing services arm is technically still independent and is probably making the
+          next round of phone calls.
+        </p>
+        <p>
+          The &ldquo;open&rdquo; internet has had its identity infrastructure quietly consolidated under three or four
+          owners. There is no neutral middle anymore. There hasn&apos;t been for a while. Yesterday just made it
+          impossible to keep pretending.
+        </p>
+        <p>
+          If you are a brand, your job this quarter is to figure out what that means for your media plan. If you are a
+          vendor selling into adtech, your job is to figure out which side of the consolidation you are on. And if you
+          are The Trade Desk, your job is to come up with a much better answer to the question every CMO is about to
+          ask: is UID2 actually independent anymore? Because the entire pitch deck got rewritten Tuesday morning,
+          whether you wanted it to or not.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "claude-mythos-zero-day-security",
+    title: "Claude autonomously found a 17-year-old zero-day. Pen-testing as a service has 12 months.",
+    date: "May 17, 2026",
+    readTime: "8 min",
+    tag: "Security",
+    color: "from-rose-600 to-orange-500",
+    tldr: "Anthropic's unreleased Mythos model autonomously discovered a 17-year-old FreeBSD RCE that human red teams missed for two decades. It wasn't trained on vulnerability research — the capability is emergent. The pen-test market, the bug bounty model, and the entire security buying motion are about to change inside 12 months.",
+    content: (
+      <div className="prose-content">
+        <p>
+          A few weeks ago, Anthropic gave a small group of partners &mdash; Amazon, Apple, Cisco, Microsoft, CrowdStrike
+          &mdash; early access to an unreleased model called Mythos. The program is called Glasswing. The technical
+          writeup is sparse, the marketing is sparser still, and the part that should be on every security leader&apos;s
+          desk this week is this:
+        </p>
+        <p>
+          In limited testing, Mythos autonomously found and exploited a 17-year-old remote code execution flaw in
+          FreeBSD that human red teams had crawled past for two decades. Nobody asked it to. Nobody trained it on
+          vulnerability research. It looked at the codebase and figured it out.
+        </p>
+        <p>
+          The trade press has been treating this as a curiosity. It is not a curiosity. It is the most important
+          development in enterprise security buying since the SOC became a category.
+        </p>
+
+        <h2>Why &ldquo;emergent&rdquo; is the word that should keep you awake</h2>
+        <p>
+          Mythos finding zero-days is not a trained behavior. Anthropic did not sit down and fine-tune a model on CVE
+          databases and exploit code with the explicit goal of producing a vulnerability researcher. The capability is
+          a side effect of the model being better at general reasoning over large codebases.
+        </p>
+        <p>
+          That distinction sounds academic. It isn&apos;t. Trained capabilities can be governed &mdash; you can decide
+          not to ship the model with the vulnerability-research dataset attached. Emergent capabilities don&apos;t
+          behave that way. They show up because the underlying reasoning got better. The only way to stop them is to
+          make the model worse at everything else, which nobody is going to do.
+        </p>
+        <p>
+          Translation: every frontier model from this point forward, regardless of how cautiously it ships, is going
+          to be a vulnerability research tool. That is the bed, and the entire security industry is about to sleep in
+          it.
+        </p>
+
+        <h2>What this does to the pen-test market</h2>
+        <p>
+          Here is the part nobody on the buy-side is internalizing yet. The pen-test motion is built around human-rate
+          discovery. You hire a firm. They assign three to five engineers. They spend a couple of weeks crawling your
+          environment. They write a report. You patch what they found. You wait until next quarter and run it again.
+        </p>
+        <p>
+          That cadence existed because human attention was the bottleneck.
+        </p>
+        <p>
+          The bottleneck is gone.
+        </p>
+        <p>
+          What replaces it is continuous autonomous assessment &mdash; a model running against your codebase 24/7,
+          finding issues faster than your humans can patch them. The product category that wins is &ldquo;continuous
+          AI-driven security with managed remediation,&rdquo; not &ldquo;pen-test as a service.&rdquo; The vendors that
+          end up owning that category are unlikely to be the names currently on your AOR. Anthropic, Google, OpenAI,
+          and a small number of security-native specialists are about to become some of the most important enterprise
+          infrastructure vendors on the planet, whether they wanted to be or not.
+        </p>
+        <p>
+          If your CISO told you last quarter that AI in security was overhyped, ask them how they&apos;re sleeping this
+          week.
+        </p>
+
+        <h2>The defender&apos;s dilemma you cannot ignore</h2>
+        <p>
+          A capability that finds vulnerabilities is, by definition, a capability that can be used to exploit them.
+          The same Mythos that autonomously found the FreeBSD RCE could be pointed at any production codebase by
+          anyone with sufficient access. Anthropic has serious safeguards. State actors are not waiting on Anthropic.
+          Black-hat researchers will have access to comparable open-weight models inside six months.
+        </p>
+        <p>
+          This means defense has to move first and at a cadence it has never moved at before. Quarterly red-team
+          engagements aren&apos;t just slow &mdash; they are irrelevant. The window between vulnerability discovery and
+          active exploitation in the wild is collapsing toward zero. If your remediation cycle takes 30 days, an
+          adversary with a frontier model has 30 days to find every bug your last pen test missed and use them.
+        </p>
+        <p>
+          The CISOs who win this transition are the ones who shift budget toward three things: continuous autonomous
+          discovery and the infrastructure to run it safely; automated remediation pipelines that don&apos;t require a
+          human in the loop for known issue classes; and faster patch cycles, even at the cost of some operational
+          stability. That last one is going to be the hardest political fight in most enterprises, because the
+          operations side has spent two decades optimizing for patch stability. They were right to. The constraint
+          just changed, and nobody told them.
+        </p>
+
+        <h2>The controversial part</h2>
+        <p>
+          Bug bounty programs as currently structured are finished. They paid researchers for human-rate work. An
+          attacker with a frontier model can do that work faster and cheaper than your bounty program pays &mdash; and
+          adversaries don&apos;t disclose responsibly. The programs that survive will look very different: paying for
+          novel attack classes, complex chained exploits, and adversarial AI behavior, not &ldquo;I found an XSS in
+          your login flow.&rdquo;
+        </p>
+        <p>
+          The pen-test firms that survive are going to look different too. The ones that thrive will be the ones who
+          saw clearly in the first half of 2026 that their job changed from &ldquo;find bugs&rdquo; to &ldquo;interpret
+          what the AI found and decide what humans need to do about it.&rdquo; Different product. Different headcount
+          mix. Different pricing. Most legacy firms will not make this transition because they cannot &mdash; their
+          business model is incompatible with the new economics. My over-under: three big-name security firms acquired
+          or restructured by the end of 2027.
+        </p>
+        <p>
+          If you are a security leader right now, this is the budget conversation of your year. The vendors you renew
+          with in the next six months are the vendors your posture lives or dies on for the next three. Get this one
+          right. Pretending Mythos is a curiosity is going to be the most expensive thing the security industry does
+          this decade.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "stanford-agentic-ai-productivity-gap",
+    title: "Stanford: agentic AI delivers 71% productivity gains. 80% of enterprises will miss them.",
+    date: "May 16, 2026",
+    readTime: "8 min",
+    tag: "Enterprise AI",
+    color: "from-indigo-600 to-blue-500",
+    tldr: "Stanford's 2026 AI Index shows agentic AI delivering 71% median productivity gains where deployed, with only 20% of enterprises actually deploying it. 77% of failures trace to change management and data architecture, not the model. Hire a change management lead before you hire another AI engineer.",
+    content: (
+      <div className="prose-content">
+        <p>
+          Stanford&apos;s 2026 AI Index Report dropped, and most of the coverage has fixated on the wrong numbers.
+          Compute trends. Model evaluations. Country rankings. Useful, but not the story.
+        </p>
+        <p>
+          The story is two numbers on the same page, and the 51-point gap between them.
+        </p>
+        <p>
+          71%: median productivity gain reported by enterprises actively using agentic AI in production workflows.
+        </p>
+        <p>
+          20%: percentage of enterprises actually doing it.
+        </p>
+        <p>
+          Eighty percent of the enterprises in the world are watching a 71% productivity advantage compound at their
+          competitors&apos; offices and doing none of the things that capture it. That isn&apos;t a technology gap. It
+          is a management failure on a scale we haven&apos;t seen since the cloud transition.
+        </p>
+
+        <h2>The 95% number nobody wants to look at honestly</h2>
+        <p>
+          The same Stanford report tracks another statistic that is already getting weaponized in board decks all over
+          the country: 95% of companies that have deployed generative AI report little to no measurable ROI. Cue
+          every &ldquo;told you so&rdquo; think piece you have been seeing for six months.
+        </p>
+        <p>
+          Then Stanford adds the part everyone is leaving off the slide.
+        </p>
+        <p>
+          77% of those failures trace to change management and data architecture problems. Not the model. Not the
+          prompt. Not the vendor.
+        </p>
+        <p>
+          The model worked. The org around it didn&apos;t.
+        </p>
+        <p>
+          I have been selling AI to enterprise buyers for three years. I have been in the room when this conversation
+          happens. The dynamic is always the same. Procurement picks a vendor. IT integrates it. Marketing or sales or
+          finance is told &ldquo;this will save you time.&rdquo; Six months later someone gives a board update where
+          they explain that the tool is &ldquo;in use,&rdquo; but the team can&apos;t quite articulate the ROI. The
+          vendor gets the blame. The org adjusts nothing. Then they buy the next thing.
+        </p>
+        <p>
+          If 77% of your AI failures are change-management failures and you respond by switching vendors, you are
+          going to spend the rest of this decade in the 95% bucket.
+        </p>
+
+        <h2>The actual playbook</h2>
+        <p>
+          I am going to be unfashionably direct here, because the soft version of this advice has not been working.
+        </p>
+        <p>
+          Hire a change management lead before you hire another AI engineer.
+        </p>
+        <p>
+          I know that is not what your CFO wants to hear. I know &ldquo;change management&rdquo; sounds like a 1998
+          line item on a McKinsey deck that should have been retired a decade ago. The data is clear: that role is more
+          load-bearing for your AI strategy than your next model upgrade. You can have GPT-7 and Claude Opus 6 and
+          whatever Gemini ships next sitting in your tech stack and still produce zero ROI, because nobody on the
+          business side has actually changed how the work gets done.
+        </p>
+        <p>
+          The second move is auditing your data architecture before you pilot another agent. The reason most agentic
+          workflows fail is that the agent is trying to act on data that lives in 14 different systems with 14
+          different schemas and zero shared identity. The model is fine. The data is broken. Fixing your data
+          architecture is unsexy, slow, expensive, and the precondition for any AI deployment that actually works.
+        </p>
+        <p>
+          The third move is the one that gets the most pushback and is the most important. Put your agentic AI
+          workstream under the COO or a dedicated transformation officer, not under the CTO. Agentic AI is not a
+          technology deployment. It is an operating model change. Run it through the same org structure you used to
+          deploy Salesforce in 2014 and you will get Salesforce-2014-quality results. Which is to say: mixed, on a
+          good day.
+        </p>
+
+        <h2>The competitive math</h2>
+        <p>
+          The 20% of enterprises that captured the 71% productivity gain are not the ones with the biggest AI budget.
+          They are the ones who treated the deployment as an operational redesign and staffed it that way.
+        </p>
+        <p>
+          This part is brutal and worth saying out loud. If you are in a category where 20% of your competitors are
+          running with a 71% productivity advantage and you are not, you have roughly 18 months before the structural
+          cost gap becomes uncrossable without an acquisition. The companies in the leading 20% are reinvesting that
+          differential into more product, more sales coverage, more AI deployment. The advantage compounds every
+          quarter.
+        </p>
+        <p>
+          The clean version of this story in two years reads: &ldquo;The companies that got AI right between 2024 and
+          2026 are now an order of magnitude more efficient than the ones that didn&apos;t. The gap is no longer
+          crossable without a strategic acquisition.&rdquo;
+        </p>
+        <p>
+          The companies still debating whether agentic AI is overhyped have already lost. They just don&apos;t know it
+          yet, because the productivity differential is invisible from the outside until it shows up as gross margin
+          pressure two earnings cycles from now.
+        </p>
+
+        <h2>What I would do this week</h2>
+        <p>
+          If I had to give one piece of advice to a CEO or CRO this week, it would be this.
+        </p>
+        <p>
+          Pick one workflow &mdash; just one &mdash; where agentic AI could plausibly cover 80% of the steps. Staff it
+          as an operational redesign, not as a technology pilot. Give a single accountable owner a budget, a 90-day
+          deadline, and the political cover to actually change how the work gets done. Then measure what changes.
+        </p>
+        <p>
+          Most companies will not do this. They will keep buying tools, hoping the next vendor&apos;s demo is the one
+          that finally works. The few who do this will look very different in 24 months &mdash; and the ones who
+          didn&apos;t will be the case studies in the McKinsey deck that explains how the order book moved while
+          everyone was looking at the dashboards.
+        </p>
+      </div>
+    ),
+  },
+  {
     slug: "agentic-ai-stops-being-demo",
     title: "The week agentic AI stopped being a demo",
     date: "May 15, 2026",
@@ -586,6 +932,9 @@ export default async function PostPage({
     GEO:             "from-emerald-500 to-teal-500",
     Macro:           "from-teal-500 to-emerald-600",
     Sales:           "from-cyan-500 to-blue-600",
+    MadTech:         "from-fuchsia-600 to-rose-500",
+    Security:        "from-rose-600 to-orange-500",
+    "Enterprise AI": "from-indigo-600 to-blue-500",
   };
   const color = tagColors[post.tag] ?? "from-blue-500 to-cyan-500";
 

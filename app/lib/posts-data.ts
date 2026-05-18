@@ -11,6 +11,39 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "publicis-liveramp-acquisition",
+    title: "Publicis bought LiveRamp for $2.2B. The Trade Desk just lost more than LiveRamp did.",
+    date: "May 18, 2026",
+    readTime: "7 min",
+    excerpt:
+      "Press release landed Tuesday: Publicis is paying $2.167B for LiveRamp — $38.50 a share, 29.8% premium, all cash. Most of the coverage is treating this as another holdco land grab. The second-order effect is bigger: Publicis just bought the rails of the open internet, and The Trade Desk's identity story just got much harder to defend.",
+    tag: "MadTech",
+    color: "from-fuchsia-600 to-rose-500",
+    tldr: "Publicis is paying $2.167B for LiveRamp — a 29.8% premium for the connectivity layer underneath modern programmatic. The biggest casualty isn't LiveRamp's customers; it's The Trade Desk's claim that UID2 is an independent identity standard. Brands have three things to do this week before close.",
+  },
+  {
+    slug: "claude-mythos-zero-day-security",
+    title: "Claude autonomously found a 17-year-old zero-day. Pen-testing as a service has 12 months.",
+    date: "May 17, 2026",
+    readTime: "8 min",
+    excerpt:
+      "Anthropic gave Amazon, Apple, Cisco, Microsoft, and CrowdStrike early access to an unreleased model called Mythos. In limited testing it autonomously found and exploited a 17-year-old remote code execution flaw in FreeBSD — a bug that two decades of human red teams missed. Nobody trained it for that. The capability is emergent, and the entire security buying motion is about to flip.",
+    tag: "Security",
+    color: "from-rose-600 to-orange-500",
+    tldr: "Anthropic's unreleased Mythos model autonomously discovered a 17-year-old FreeBSD RCE that human red teams missed for two decades. It wasn't trained on vulnerability research — the capability is emergent. The pen-test market, the bug bounty model, and the entire security buying motion are about to change inside 12 months.",
+  },
+  {
+    slug: "stanford-agentic-ai-productivity-gap",
+    title: "Stanford: agentic AI delivers 71% productivity gains. 80% of enterprises will miss them.",
+    date: "May 16, 2026",
+    readTime: "8 min",
+    excerpt:
+      "Stanford's 2026 AI Index Report dropped, and most of the coverage missed the actual story: 71% median productivity gain for enterprises using agentic AI, 20% of enterprises actually using it, and 95% of generative AI deployments showing no ROI — with 77% of those failures traced to change management and data architecture, not the model. This is a management failure on a cloud-transition scale.",
+    tag: "Enterprise AI",
+    color: "from-indigo-600 to-blue-500",
+    tldr: "Stanford's 2026 AI Index shows agentic AI delivering 71% median productivity gains where deployed, with only 20% of enterprises actually deploying it. 77% of failures trace to change management and data architecture, not the model. Hire a change management lead before you hire another AI engineer.",
+  },
+  {
     slug: "agentic-ai-stops-being-demo",
     title: "The week agentic AI stopped being a demo",
     date: "May 15, 2026",
