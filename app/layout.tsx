@@ -16,7 +16,7 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://christopherdorsey.com"),
+  metadataBase: new URL("https://chrisdorsey.co"),
   title: "Christopher Dorsey — Enterprise Seller, AI Tinkerer, GEO Consultant",
   description:
     "Christopher Dorsey is a senior enterprise sales leader and Generative Engine Optimization (GEO) consultant based in Denver, Colorado. Fifteen years building long-term client relationships across MadTech and AI for brands including JPMorgan Chase, Microsoft, Amazon, PepsiCo, Johnson & Johnson, Merck, Oracle, Vail Resorts, Stitch Fix, Groupon, JCPenney, and JSX.",
@@ -35,13 +35,13 @@ export const metadata: Metadata = {
     "Denver",
   ],
   alternates: {
-    canonical: "https://christopherdorsey.com",
+    canonical: "https://chrisdorsey.co",
   },
   openGraph: {
-    title: "Christopher Dorsey — Enterprise Seller, AI Tinkerer, GEO Consultant",
+    title: "Chris Dorsey — AI and MadTech Advisor, Sales Leader, Girl Dad.",
     description:
       "Senior enterprise sales leader and GEO consultant. Fifteen years driving revenue across MadTech and AI for Fortune 500 brands and category-leading agencies.",
-    url: "https://christopherdorsey.com",
+    url: "https://chrisdorsey.co",
     siteName: "Christopher Dorsey",
     type: "profile",
     images: [
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Christopher Dorsey — Enterprise Seller, AI Tinkerer, GEO Consultant",
+    title: "Chris Dorsey — AI and MadTech Advisor, Sales Leader, Girl Dad.",
     description: "Senior enterprise sales leader and GEO consultant based in Denver, Colorado.",
     images: ["/og-image.jpg"],
   },
@@ -78,12 +78,12 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "Person",
-      "@id": "https://christopherdorsey.com/#person",
+      "@id": "https://chrisdorsey.co/#person",
       name: "Christopher Dorsey",
       alternateName: ["Chris Dorsey", "CT Dorsey"],
       description:
         "Senior enterprise sales leader and Generative Engine Optimization (GEO) consultant with 15 years of experience selling MadTech and AI solutions to Fortune 500 brands.",
-      url: "https://christopherdorsey.com/",
+      url: "https://chrisdorsey.co/",
       email: "mailto:ctjdorsey@gmail.com",
       jobTitle: ["Enterprise Sales Leader", "GEO Consultant", "Sales Strategy Advisor"],
       knowsAbout: [
@@ -117,21 +117,21 @@ const jsonLd = {
     },
     {
       "@type": "WebSite",
-      "@id": "https://christopherdorsey.com/#website",
-      url: "https://christopherdorsey.com/",
+      "@id": "https://chrisdorsey.co/#website",
+      url: "https://chrisdorsey.co/",
       name: "Christopher Dorsey",
       description:
         "The personal site, writing, and builds of Christopher Dorsey — enterprise seller, AI tinkerer, GEO consultant.",
-      publisher: { "@id": "https://christopherdorsey.com/#person" },
+      publisher: { "@id": "https://chrisdorsey.co/#person" },
       inLanguage: "en-US",
     },
     {
       "@type": "ProfessionalService",
-      "@id": "https://christopherdorsey.com/#service",
+      "@id": "https://chrisdorsey.co/#service",
       name: "GEO & Sales Strategy Consulting — Christopher Dorsey",
       description:
         "Consulting on Generative Engine Optimization (GEO), go-to-market strategy, and enterprise sales motion design for AI and MadTech companies.",
-      provider: { "@id": "https://christopherdorsey.com/#person" },
+      provider: { "@id": "https://chrisdorsey.co/#person" },
       areaServed: { "@type": "Country", name: "United States" },
       serviceType: [
         "GEO Consulting",
@@ -139,17 +139,17 @@ const jsonLd = {
         "Go-To-Market Advisory",
         "Sales Leadership Mentoring",
       ],
-      url: "https://christopherdorsey.com/#contact",
+      url: "https://chrisdorsey.co/#contact",
     },
     {
       "@type": "Blog",
-      "@id": "https://christopherdorsey.com/#blog",
+      "@id": "https://chrisdorsey.co/#blog",
       name: "Notes from the field — Christopher Dorsey",
       description:
         "Writing on Generative Engine Optimization, the future of advertising in LLMs, and selling AI to skeptical buyers.",
-      author: { "@id": "https://christopherdorsey.com/#person" },
-      publisher: { "@id": "https://christopherdorsey.com/#person" },
-      url: "https://christopherdorsey.com/#writing",
+      author: { "@id": "https://chrisdorsey.co/#person" },
+      publisher: { "@id": "https://chrisdorsey.co/#person" },
+      url: "https://chrisdorsey.co/#writing",
     },
   ],
 };

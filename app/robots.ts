@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://christopherdorsey.com/sitemap.xml",
-    host: "https://christopherdorsey.com",
+    sitemap: "https://chrisdorsey.co/sitemap.xml",
+    host: "https://chrisdorsey.co",
   };
 }
