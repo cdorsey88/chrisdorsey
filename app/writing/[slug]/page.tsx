@@ -20,6 +20,153 @@ type Post = {
 
 const posts: Post[] = [
   {
+    slug: "chatgpt-ads-manager-sellers-read",
+    title: "Two weeks later: OpenAI shipped the Ads Manager. The seller's read.",
+    date: "May 21, 2026",
+    readTime: "3 min",
+    tag: "Sales",
+    color: "from-cyan-500 to-blue-600",
+    tldr: "OpenAI's Ads Manager UI went live today with holdco integrations and a $2.5B target. For sales orgs, three things change: the discovery question, defensive brand-bidding inside ChatGPT becomes a real budget line, and SDR pre-call research has to include an LLM check.",
+    content: (
+      <div className="prose-content">
+        <p>
+          A few weeks ago I wrote about{" "}
+          <Link href="/writing/chatgpt-ad-platform" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">
+            OpenAI opening ChatGPT ads to every U.S. advertiser through self-serve
+          </Link>{" "}
+          and adding CPC bidding. That was the policy change. Today is the product: OpenAI launched the
+          actual Ads Manager UI inside ChatGPT, with the major holding companies &mdash; Dentsu, Omnicom,
+          Publicis, WPP &mdash; wired in alongside Adobe, Criteo, and StackAdapt. The revenue target is
+          now $2.5B for the year and $100B annually by 2030.
+        </p>
+        <p>
+          The May 6 piece argued the brand-side playbook: audit organic GEO before spending a dollar, treat
+          GEO as the prerequisite to paid, build for incrementality. All still true. This post is for the
+          other side of the table &mdash; anyone running a sales org whose buyers are increasingly
+          researching inside ChatGPT.
+        </p>
+        <p>
+          Three things change for sellers when paid placements scale inside the answer layer.
+        </p>
+
+        <h2>1. The discovery question changes.</h2>
+        <p>
+          A prospect today already shows up partially educated by Google, LinkedIn, peer Slack groups, and
+          what their team has tried. By the end of 2026, add &ldquo;and whatever ChatGPT showed them&rdquo;
+          &mdash; except now some of that has been paid for. If a buyer arrives saying &ldquo;I&apos;ve heard
+          great things about [competitor],&rdquo; I want to know where. Add one discovery question this
+          quarter: &ldquo;When you were researching this, what tools did you use?&rdquo; The answer is now
+          diagnostic.
+        </p>
+
+        <h2>2. Branded-prompt bidding will become a defensive line item.</h2>
+        <p>
+          The first thing that happened on Google Ads in 2005 was competitors bidding on each other&apos;s
+          brand names. Expect the same here. When a prospect types &ldquo;alternatives to [your product],&rdquo;
+          somebody will pay to be the answer. Talk to marketing now about who owns the &ldquo;defensive
+          bidding inside ChatGPT&rdquo; budget line. The first time you lose a deal to a competitor named in
+          an AI answer your buyer didn&apos;t research themselves, that conversation gets a lot more
+          expensive.
+        </p>
+
+        <h2>3. SDR pre-call research has to include the LLM check.</h2>
+        <p>
+          If your reps prep a call by reading the prospect&apos;s LinkedIn and last earnings report,
+          that&apos;s no longer sufficient. Five minutes inside ChatGPT &mdash; asking the model what it
+          knows about the prospect&apos;s company, stated initiatives, and what tools are typical in their
+          stack &mdash; surfaces what the prospect themselves was probably told this week. The buyer is
+          taking advice from the same source your reps should be sanity-checking.
+        </p>
+
+        <p>
+          The May 6 post worried about the answer layer becoming pay-to-play. Two weeks in, the
+          infrastructure to make that real is shipping. The teams that build a feedback loop between deals
+          lost, what the prospect &ldquo;knew&rdquo; coming in, and what the LLMs actually say about their
+          category will spot pattern shifts six months before the marketing team does. Start the loop now.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "fake-watches-brand-launches",
+    title: "The fake watches were better — and that should terrify every brand",
+    date: "May 20, 2026",
+    readTime: "5 min",
+    tag: "Brands",
+    color: "from-violet-600 to-purple-500",
+    tldr: "AI-generated renders of the Swatch x AP collab circulated for weeks before the real product dropped — and the internet preferred the imagined version. The white space between tease and reveal isn't yours anymore. Brands that figure out how to make that a feature instead of a bug will define the next decade of launches.",
+    content: (
+      <div className="prose-content">
+        <p>
+          Justin Taylor published a piece today on his Substack{" "}
+          <a href="https://thelandingpad.substack.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">The Landing Pad</a>{" "}
+          that I haven&apos;t stopped thinking about. The short version: Swatch and Audemars Piguet teased
+          a collab. Before the actual reveal, the internet generated and shared fifty AI versions of what it should
+          be &mdash; colorful Royal Oaks in every Pantone shade you can imagine. When the real product dropped (a
+          pocket watch), people were deflated. The imagined version had already won.
+        </p>
+        <p>
+          <a href="https://thelandingpad.substack.com/p/the-fake-watches-were-better" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">Go read the whole thing.</a>{" "}
+          It&apos;s worth ten minutes.
+        </p>
+        <p>
+          This part really stood out to me:
+        </p>
+        <div className="my-8 pl-6 border-l-4 border-violet-400">
+          <p className="text-xl italic text-slate-700 leading-relaxed" style={{ fontFamily: "var(--font-fraunces)" }}>
+            &ldquo;You&apos;re not launching a product anymore. You&apos;re correcting one.&rdquo;
+          </p>
+        </div>
+        <p>
+          The watch is almost beside the point. Every product launch is going to work like this now.
+        </p>
+
+        <h2>The economics of brand storytelling have flipped</h2>
+        <p>
+          For a long time, the asymmetry favored brands: they had the photographers, the budgets, the agencies, the
+          distribution. A teaser bought you two weeks of anticipation because nobody else could fill that space at
+          scale. Now anyone with a prompt and ten minutes can produce something that looks more polished than the
+          official campaign and spreads faster than the brand&apos;s own channels. The white space between tease and
+          reveal isn&apos;t white anymore. It&apos;s already full of someone else&apos;s version of your product.
+        </p>
+        <p>
+          And it doesn&apos;t stop at the campaign. Justin points out that people are already designing third-party
+          straps for the Royal Pop. Aftermarket used to be a slow, niche business that required CNC machines and
+          distribution. Now it&apos;s a weekend project. Your audience has already designed their version of your
+          product before you&apos;ve shipped it.
+        </p>
+
+        <h2>The move most brands won&apos;t make</h2>
+        <p>
+          The best part of the piece is where Justin asks: what if you just stopped trying to outrun it? What if the tease was the invitation, and the brand built the campaign around the best community renders
+          instead of trying to outrun them? You don&apos;t lose control of the narrative because you never claimed
+          it. You hand it to the people who were going to take it anyway and let them feel like they made it with you.
+        </p>
+        <p>
+          I think he&apos;s right, and I think the brands that figure this out first are going to look obvious in
+          retrospect &mdash; the same way the early creator-economy brands look obvious now. The ones that don&apos;t
+          are going to spend the next five years correcting launches instead of running them.
+        </p>
+        <p>
+          This isn&apos;t a social media problem. It&apos;s not a community management problem. The window between
+          announcement and arrival used to be yours. Now it belongs to your audience, and the only real question is
+          whether you see that as a threat or an opening.
+        </p>
+        <p>
+          The brands still building launch playbooks around tease-and-reveal cadences are writing strategy documents
+          for a world that no longer exists.
+        </p>
+        <p>
+          Read Justin&apos;s full piece:{" "}
+          <a href="https://thelandingpad.substack.com/p/the-fake-watches-were-better" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2"><em>The fake watches were better</em></a>.
+          Subscribe to{" "}
+          <a href="https://thelandingpad.substack.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">The Landing Pad</a>{" "}
+          while you&apos;re there.
+        </p>
+      </div>
+    ),
+  },
+  {
     slug: "publicis-liveramp-acquisition",
     title: "Publicis bought LiveRamp for $2.2B. The Trade Desk just lost more than LiveRamp did.",
     date: "May 18, 2026",
@@ -30,7 +177,7 @@ const posts: Post[] = [
     content: (
       <div className="prose-content">
         <p>
-          Press release landed Tuesday morning. Publicis is paying $2.167 billion in cash for LiveRamp &mdash; $38.50 a
+          <a href="https://liveramp.com/news/publicis-to-acquire-liveramp-to-accelerate-data-co-creation-for-smarter-agents" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">Press release</a> landed Tuesday morning. Publicis is paying $2.167 billion in cash for LiveRamp &mdash; $38.50 a
           share, 29.8% premium over Monday&apos;s close. By the time my second coffee was cold, three brand-side clients
           had texted me some version of the same question: should we be worried?
         </p>
@@ -250,7 +397,7 @@ const posts: Post[] = [
     content: (
       <div className="prose-content">
         <p>
-          Stanford&apos;s 2026 AI Index Report dropped, and most of the coverage has fixated on the wrong numbers.
+          <a href="https://hai.stanford.edu/ai-index/2026-ai-index-report" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">Stanford&apos;s 2026 AI Index Report</a> dropped, and most of the coverage has fixated on the wrong numbers.
           Compute trends. Model evaluations. Country rankings. Useful, but not the story.
         </p>
         <p>
@@ -379,7 +526,7 @@ const posts: Post[] = [
           Something shifted this week, and I want to name it clearly.
         </p>
         <p>
-          On May 5, Anthropic announced that Claude agents are now in production at JPMorgan Chase, Goldman Sachs,
+          On May 5, <a href="https://fortune.com/2026/05/05/anthropic-wall-street-financial-services-agents-jamie-dimon/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">Anthropic announced</a> that Claude agents are now in production at JPMorgan Chase, Goldman Sachs,
           Citi, AIG, and Visa. Not pilots. Not proofs of concept. Production deployments — agents running real
           workflows inside the largest financial institutions in the world. PwC followed on May 14 with a partnership
           to embed Claude agents into enterprise client work across finance and life sciences.
@@ -487,7 +634,7 @@ const posts: Post[] = [
     content: (
       <div className="prose-content">
         <p>
-          On May 5, 2026, OpenAI quietly did something that will reshape the next decade of digital advertising. They
+          On May 5, 2026, <a href="https://openai.com/index/new-ways-to-buy-chatgpt-ads/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">OpenAI quietly did something</a> that will reshape the next decade of digital advertising. They
           dropped the $50,000 minimum spend requirement, opened ChatGPT Ads to every U.S. advertiser through
           self-serve, and added cost-per-click bidding. The pilot that started with a handful of enterprise
           brands is now open to everyone.
@@ -694,7 +841,7 @@ const posts: Post[] = [
 
         <h2>What the data actually says</h2>
         <p>
-          A Federal Reserve study covering more than one million firms found what the researchers called
+          A <a href="https://www.federalreserve.gov/econres/notes/feds-notes/ai-adoption-and-firms-job-posting-behavior-20260327.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">Federal Reserve study</a> covering more than one million firms found what the researchers called
           &ldquo;precisely-estimated null effects&rdquo; for AI adoption on job postings. Not a small effect.
           Not a mixed effect. Null. A 2025 NBER paper tracking 25,000 workers across 7,000 workplaces found zero
           statistically significant effect on earnings or hours worked after AI tool adoption.
@@ -928,6 +1075,7 @@ export default async function PostPage({
   if (!post) notFound();
 
   const tagColors: Record<string, string> = {
+    Brands:          "from-violet-600 to-purple-500",
     "Future of Ads": "from-emerald-500 to-cyan-500",
     GEO:             "from-emerald-500 to-teal-500",
     Macro:           "from-teal-500 to-emerald-600",
@@ -938,6 +1086,27 @@ export default async function PostPage({
   };
   const color = tagColors[post.tag] ?? "from-blue-500 to-cyan-500";
 
+  const postUrl = `https://chrisdorsey.co/writing/${post.slug}`;
+  const publishedISO = new Date(post.date).toISOString();
+  const relatedPosts = posts.filter((p) => p.slug !== post.slug).slice(0, 3);
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    mainEntityOfPage: { "@type": "WebPage", "@id": postUrl },
+    headline: post.title,
+    description: post.tldr,
+    datePublished: publishedISO,
+    dateModified: publishedISO,
+    author: { "@id": "https://chrisdorsey.co/#person" },
+    publisher: { "@id": "https://chrisdorsey.co/#person" },
+    isPartOf: { "@id": "https://chrisdorsey.co/#blog" },
+    url: postUrl,
+    articleSection: post.tag,
+    keywords: [post.tag, "Christopher Dorsey", "AI", "MadTech", "GEO"].join(", "),
+    image: "https://chrisdorsey.co/opengraph-image",
+    inLanguage: "en-US",
+  };
+
   return (
     <div
       className="min-h-screen text-slate-900"
@@ -946,6 +1115,10 @@ export default async function PostPage({
         fontFamily: "var(--font-inter)",
       }}
     >
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       {/* Nav */}
       <nav className="bg-sky-50/80 backdrop-blur-md border-b border-sky-200/50 sticky top-0 z-50">
         <div className="max-w-3xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -1093,6 +1266,88 @@ export default async function PostPage({
             </a>
           </div>
         </div>
+
+        {/* Author bio */}
+        <div className="mt-16 pt-10 border-t border-sky-200">
+          <p className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-5">About the author</p>
+          <div className="flex items-start gap-5 bg-white/70 border border-sky-100 rounded-2xl p-6">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/headshot.jpg"
+              alt="Christopher Dorsey"
+              className="w-16 h-16 rounded-full object-cover flex-shrink-0 ring-2 ring-sky-100"
+            />
+            <div className="flex-1 min-w-0">
+              <p className="text-base font-bold text-slate-900" style={serif}>Christopher Dorsey</p>
+              <p className="text-sm text-slate-500 mb-3">AI &amp; MadTech Advisor · Enterprise Sales Leader · GEO Consultant · Denver, CO</p>
+              <p className="text-sm text-slate-600 leading-relaxed mb-4">
+                Fifteen years selling technology to Fortune 500 brands across AI, advertising, and data infrastructure
+                — most recently at Zeta Global, Oracle, and Fastly. Currently advising founders and sales leaders on
+                AI go-to-market and Generative Engine Optimization.
+              </p>
+              <div className="flex flex-wrap items-center gap-3 text-xs">
+                <a
+                  href="https://www.linkedin.com/in/cdorsey/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-blue-600 hover:text-blue-700 font-medium"
+                >
+                  LinkedIn
+                </a>
+                <span className="text-slate-300">·</span>
+                <a
+                  href="mailto:ctjdorsey@gmail.com"
+                  className="inline-flex items-center gap-1.5 text-blue-600 hover:text-blue-700 font-medium"
+                >
+                  ctjdorsey@gmail.com
+                </a>
+                <span className="text-slate-300">·</span>
+                <Link
+                  href="/work-with-me"
+                  className="inline-flex items-center gap-1.5 text-blue-600 hover:text-blue-700 font-medium"
+                >
+                  Work with me
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Related posts */}
+        {relatedPosts.length > 0 && (
+          <div className="mt-12 pt-10 border-t border-sky-200">
+            <p className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-5">Keep reading</p>
+            <div className="grid gap-4">
+              {relatedPosts.map((rp) => {
+                const rpColor = tagColors[rp.tag] ?? "from-blue-500 to-cyan-500";
+                return (
+                  <Link
+                    key={rp.slug}
+                    href={`/writing/${rp.slug}`}
+                    className="group block bg-white/70 hover:bg-white border border-sky-100 hover:border-blue-200 rounded-xl p-5 hover:shadow-md transition-all"
+                  >
+                    <div className="flex items-center gap-3 mb-2">
+                      <span
+                        className={`text-[10px] font-bold uppercase tracking-wider whitespace-nowrap text-white px-2.5 py-0.5 rounded-full bg-gradient-to-r ${rpColor}`}
+                      >
+                        {rp.tag}
+                      </span>
+                      <span className="text-xs text-slate-400">{rp.date}</span>
+                      <span className="text-xs text-slate-400">·</span>
+                      <span className="text-xs text-slate-400">{rp.readTime} read</span>
+                    </div>
+                    <h3
+                      className="text-base md:text-lg font-bold tracking-tight group-hover:text-blue-600 transition leading-snug"
+                      style={serif}
+                    >
+                      {rp.title}
+                    </h3>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        )}
 
         {/* Footer CTA */}
         <div className="mt-10 pt-8 border-t border-sky-200">

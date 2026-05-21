@@ -1,0 +1,24 @@
+# Christopher Dorsey
+
+> AI and MadTech advisor, enterprise sales leader, and Generative Engine Optimization (GEO) consultant based in Denver, Colorado. Fifteen years selling technology to Fortune 500 brands across AI, advertising, and data infrastructure. Writes about how AI is reshaping enterprise sales, the answer layer, and the future of how technology gets bought and sold.
+
+## About
+
+- [Personal site and bio](https://chrisdorsey.co): Background, current focus, career history (Zeta Global, Oracle, Fastly, GMMB, Crispin Porter Bogusky), and current advisory work.
+- [Work with me](https://chrisdorsey.co/work-with-me): GEO consulting, enterprise sales advisory, and go-to-market strategy engagements.
+
+## Writing
+
+- [Publicis bought LiveRamp for $2.2B. The Trade Desk just lost more than LiveRamp did.](https://chrisdorsey.co/writing/publicis-liveramp-acquisition): Analysis of the May 17, 2026 Publicis–LiveRamp acquisition, why the second-order effect is bigger than the deal itself, and why UID2 just stopped being credibly "neutral."
+- [Claude autonomously found a 17-year-old zero-day. Pen-testing as a service has 12 months.](https://chrisdorsey.co/writing/claude-mythos-zero-day-security): What Anthropic's Mythos preview model finding zero-day vulnerabilities means for enterprise security buying, the pen-test market, and bug bounty programs.
+- [Stanford: agentic AI delivers 71% productivity gains. 80% of enterprises will miss them.](https://chrisdorsey.co/writing/stanford-agentic-ai-productivity-gap): The 51-point gap between agentic AI productivity gains (71%) and adoption (20%), why 95% of generative AI deployments show no ROI, and why change management — not the model — is the bottleneck.
+- [The week agentic AI stopped being a demo](https://chrisdorsey.co/writing/agentic-ai-stops-being-demo): On Anthropic's Wall Street deployments (JPMorgan, Goldman, Citi, AIG, Visa) and Salesforce Agentforce going autonomous — and what the shift from AI-as-tool to AI-as-workflow-executor means for sales leaders.
+- [OpenAI just turned ChatGPT into an ad platform. Here's what brands need to do in the next 90 days.](https://chrisdorsey.co/writing/chatgpt-ad-platform): On OpenAI dropping the ChatGPT ads $50K minimum, opening self-serve, and what the 90-day playbook should look like for enterprise brands — including why GEO is now the prerequisite for paid placement.
+- [GEO is the new SEO — and most brands are already losing](https://chrisdorsey.co/writing/geo-new-seo): How Generative Engine Optimization works, why LLM-cited brands rarely match category leaders by revenue, and the three highest-leverage moves for building presence in the answer layer.
+- [AI didn't kill the entry-level job. Interest rates and a tax change did.](https://chrisdorsey.co/writing/ai-entry-level-jobs): On the Federal Reserve research showing null effects of AI on job postings, and why interest rates, Section 174, and post-pandemic normalization are the real drivers of the 2024–2026 hiring freeze.
+- [Selling AI to skeptical buyers (a field guide)](https://chrisdorsey.co/writing/selling-ai-skeptical-buyers): A practical framework — "proof of work" — for selling AI products to enterprise buyers who have been burned by previous AI tools and are filtering for the catch.
+
+## Contact
+
+- Email: ctjdorsey@gmail.com
+- LinkedIn: https://www.linkedin.com/in/cdorsey/

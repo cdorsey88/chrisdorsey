@@ -11,6 +11,28 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "chatgpt-ads-manager-sellers-read",
+    title: "Two weeks later: OpenAI shipped the Ads Manager. The seller's read.",
+    date: "May 21, 2026",
+    readTime: "3 min",
+    excerpt:
+      "Two weeks ago OpenAI opened self-serve ChatGPT ads. Today the actual Ads Manager UI shipped, with Dentsu, Omnicom, Publicis, WPP, Adobe, Criteo, and StackAdapt wired in and a $2.5B 2026 revenue target. The May 6 piece covered the brand-side playbook. This one is the read for anyone running a sales org whose buyers are increasingly researching inside ChatGPT.",
+    tag: "Sales",
+    color: "from-cyan-500 to-blue-600",
+    tldr: "OpenAI's Ads Manager UI went live today with holdco integrations and a $2.5B target. For sales orgs, three things change: the discovery question, defensive brand-bidding inside ChatGPT becomes a real budget line, and SDR pre-call research has to include an LLM check.",
+  },
+  {
+    slug: "fake-watches-brand-launches",
+    title: "The fake watches were better — and that should terrify every brand",
+    date: "May 20, 2026",
+    readTime: "5 min",
+    excerpt:
+      "Justin Taylor's piece on The Landing Pad asks a simple question about the Swatch x Audemars Piguet teaser: when AI fills the white space between tease and reveal with better versions than you shipped, what does a product launch actually mean anymore?",
+    tag: "Brands",
+    color: "from-violet-600 to-purple-500",
+    tldr: "AI-generated renders of the Swatch x AP collab circulated for weeks before the real product dropped — and the internet preferred the imagined version. The white space between tease and reveal isn't yours anymore. Brands that figure out how to make that a feature instead of a bug will define the next decade of launches.",
+  },
+  {
     slug: "publicis-liveramp-acquisition",
     title: "Publicis bought LiveRamp for $2.2B. The Trade Desk just lost more than LiveRamp did.",
     date: "May 18, 2026",

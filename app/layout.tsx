@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Fraunces } from "next/font/google";
+import { Inter, Fraunces, DM_Serif_Display } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
@@ -12,6 +12,13 @@ const inter = Inter({
 const fraunces = Fraunces({
   subsets: ["latin"],
   variable: "--font-fraunces",
+  display: "swap",
+});
+
+const dmSerifDisplay = DM_Serif_Display({
+  subsets: ["latin"],
+  variable: "--font-dm-serif",
+  weight: "400",
   display: "swap",
 });
 
@@ -49,7 +56,7 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Christopher Dorsey",
+        alt: "Christopher Dorsey — AI & MadTech Advisor, Enterprise Sales Leader",
       },
     ],
     locale: "en_US",
@@ -156,7 +163,7 @@ const jsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${fraunces.variable}`}>
+    <html lang="en" className={`${inter.variable} ${fraunces.variable} ${dmSerifDisplay.variable}`}>
       <body>
         {children}
         <Script

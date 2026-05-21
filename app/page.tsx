@@ -7,6 +7,26 @@ import {
 } from "lucide-react";
 import { posts as allPosts } from "@/app/lib/posts-data";
 
+const MountainMark = ({ id = "mtn" }: { id?: string }) => (
+  <svg
+    width="38" height="24" viewBox="0 0 38 24"
+    fill="none"
+    aria-hidden="true"
+    className="mountain-mark shrink-0"
+  >
+    <defs>
+      <linearGradient id={`${id}-grad`} x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%"   stopColor="#2563EB" />
+        <stop offset="50%"  stopColor="#06B6D4" />
+        <stop offset="100%" stopColor="#10B981" />
+      </linearGradient>
+    </defs>
+    <path className="peak-left"   d="M1 24 L10 11 L18 24Z" fill={`url(#${id}-grad)`} opacity="0.55" />
+    <path className="peak-center" d="M11 24 L22 2 L33 24Z" fill={`url(#${id}-grad)`} />
+    <path className="peak-right"  d="M21 24 L30 13 L38 24Z" fill={`url(#${id}-grad)`} opacity="0.55" />
+  </svg>
+);
+
 const LinkedinIcon = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
@@ -146,15 +166,15 @@ export default function ChrisDorseySite() {
         aria-label="Primary navigation"
       >
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="font-bold tracking-tight" style={serif}>
-            <span className="text-slate-900">Christopher </span><span className="bg-gradient-to-r from-blue-600 to-emerald-500 bg-clip-text text-transparent">Dorsey</span>
+          <div className="flex items-center gap-2.5">
+            <MountainMark />
+            <span className="text-slate-900" style={{ fontFamily: "DM Serif Display", fontSize: "17px", fontWeight: 400 }}>Chris Dorsey</span>
           </div>
           <div className="hidden md:flex gap-7 text-sm text-slate-700">
             <a href="#about"         className="hover:text-blue-600 transition">About</a>
             <a href="#now"           className="hover:text-blue-600 transition">Now</a>
             <a href="#writing"       className="hover:text-blue-600 transition">Thoughts</a>
             <a href="#builds"        className="hover:text-blue-600 transition">AI Sales Tools</a>
-            <Link href="/geo-checker" className="hover:text-emerald-600 transition font-medium text-emerald-700">GEO Checker ✦</Link>
             <Link href="/work-with-me" className="hover:text-blue-600 transition">Work with me</Link>
           </div>
           <a
@@ -177,8 +197,10 @@ export default function ChrisDorseySite() {
             named Agency of the Decade by AdAge in 2009, where he helped build the agency&apos;s first proactive new
             business development function, contributing to a pitch-win streak of more than $100M in new revenue. He
             managed Fortune 500 accounts at Oracle including JPMorgan Chase, PepsiCo, Johnson &amp; Johnson, Amazon,
-            and Merck, led go-to-market for the first agentic AI email acquisition product at Zeta Global, and most
-            recently served as VP of Sales at FancyAI. He graduated from Elon University and currently consults
+            and Merck, then led go-to-market at Zeta Global for the first email-based AI customer acquisition product
+            to reach market — built on an opted-in email universe of up to 135M US adults with no existing budgets,
+            contacts, or category playbook — and most recently served as Sales and GTM Advisor at FancyAI, their
+            first sales hire, building the go-to-market motion from zero in the GEO category. He graduated from Elon University and currently consults
             independently on Generative Engine Optimization go-to-market and sales strategy.
           </p>
         </aside>
@@ -192,19 +214,19 @@ export default function ChrisDorseySite() {
                 className="tracking-tight"
                 style={serif}
               >
-                <span className="block text-6xl md:text-8xl font-black leading-[0.9] mb-3">
-                  I&apos;ve been the first hire
+                <span className="block text-6xl md:text-7xl font-black leading-[1.05] mb-3">
+                  Startup builder.<br />Enterprise closer.<br />AI advisor.
                 </span>
-                <span className="block text-3xl md:text-5xl font-bold italic leading-tight mb-4 bg-gradient-to-r from-blue-600 via-cyan-500 to-emerald-600 bg-clip-text text-transparent">
-                  and the trusted partner to the world&apos;s biggest brands.
+                <span className="block text-2xl md:text-4xl font-bold italic leading-tight mb-4 bg-gradient-to-r from-blue-600 via-cyan-500 to-emerald-600 bg-clip-text text-transparent">
+                  I&apos;ve been the first hire, the Fortune 500 partner, and now the AI strategist top brands trust.
                 </span>
                 <span className="block text-lg md:text-2xl font-semibold text-slate-500 leading-snug">
-                  Real relationships are at the core of both.
+                  Fortune 500 proven. Startup tested.
                 </span>
               </h1>
               <p className="text-lg text-slate-700 leading-relaxed max-w-xl">
-                I&apos;m brought in when the path forward isn&apos;t obvious — when the problem needs diagnosing
-                before it needs pitching. I stay long after the contract is signed.
+                I&apos;ve spent 15 years making emerging technology sellable — from AdTech platforms to agentic AI.
+                I build the sales motion, close the deals, and stay in it long after the contract is signed.
               </p>
             </div>
 
@@ -349,12 +371,17 @@ export default function ChrisDorseySite() {
                 acquired in 2016.
               </p>
               <p>
-                Then enterprise: Oracle (JPMorgan Chase, PepsiCo, J&amp;J, Amazon, Merck), Fastly (selling to
-                engineers who don&apos;t care about your slides), and Zeta Global — where I led GTM for the first
-                agentic AI email acquisition product to hit the market, with brands like Vail Resorts, Groupon,
-                JCPenney, Stitch Fix, and JSX. Most recently, VP of Sales at FancyAI, helping brands compete in the
-                answer layer with implementation-ready GEO outputs instead of dashboards that just tell you
-                you&apos;re losing.
+                Then enterprise. Oracle first — managing relationships with JPMorgan Chase, PepsiCo, J&amp;J, Amazon,
+                and Merck inside one of the largest sales organizations in the world. Fastly next, where selling to
+                engineers taught me that credibility matters more than decks. Then Zeta Global — bigger than a
+                startup, different from Oracle, and sitting on something genuinely new: an opted-in email universe
+                reaching up to 135M US adults, the largest of its kind by a wide margin. I led GTM for the first
+                email-based AI customer acquisition offering to reach market. No existing budget lines for it, no
+                established contacts, no category playbook. I identified the right decision-makers at e-commerce,
+                retail, and travel brands, built the case for allocating toward a new growth channel, and closed
+                the first accounts. Most recently, Sales and GTM Advisor at FancyAI — their first sales hire —
+                building the go-to-market motion from zero in the GEO space, a category so new most buyers
+                didn&apos;t have a budget line for it yet.
               </p>
               <p>
                 Startup of one to Fortune 500. Scrappy NYC walkup to enterprise war room. The constant: be the
@@ -443,8 +470,8 @@ export default function ChrisDorseySite() {
                   Notes from the field.
                 </h2>
               </div>
-              <Link href="/writing" className="text-sm text-slate-700 hover:text-blue-600 flex items-center gap-1 font-medium">
-                All posts <ArrowUpRight className="w-3.5 h-3.5" />
+              <Link href="/writing" className="text-sm text-blue-600 hover:text-emerald-600 flex items-center gap-1 font-semibold">
+                All {allPosts.length} posts <ArrowUpRight className="w-3.5 h-3.5" />
               </Link>
             </div>
             <div className="grid gap-5">
@@ -481,6 +508,15 @@ export default function ChrisDorseySite() {
                   </div>
                 </Link>
               ))}
+            </div>
+            <div className="mt-10 flex justify-center">
+              <Link
+                href="/writing"
+                className="group inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-emerald-600 text-white font-semibold px-7 py-3.5 rounded-full hover:shadow-lg hover:shadow-blue-500/30 transition text-sm"
+              >
+                See all {allPosts.length} posts
+                <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </Link>
             </div>
           </div>
         </section>
@@ -546,35 +582,6 @@ export default function ChrisDorseySite() {
                   </div>
                 </a>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* GEO Checker Feature */}
-        <section className="relative py-10 px-6">
-          <div className="max-w-5xl mx-auto">
-            <div className="bg-gradient-to-br from-emerald-900 via-teal-900 to-slate-900 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl" />
-              <div className="absolute bottom-0 left-0 w-48 h-48 bg-cyan-500/10 rounded-full blur-3xl" />
-              <div className="relative flex-1">
-                <div className="inline-block text-xs uppercase tracking-widest text-emerald-400 bg-emerald-400/10 px-3 py-1 rounded-full mb-4 font-bold">
-                  Free Tool
-                </div>
-                <h2 className="text-2xl md:text-3xl font-bold text-white tracking-tight mb-3" style={serif}>
-                  Does AI recommend you when buyers search your category?
-                </h2>
-                <p className="text-slate-400 text-sm leading-relaxed">
-                  Enter your brand and category. See exactly how — or whether — you appear when buyers ask ChatGPT, Claude, or Perplexity for recommendations. Takes 10 seconds.
-                </p>
-              </div>
-              <div className="relative flex-shrink-0">
-                <Link
-                  href="/geo-checker"
-                  className="flex items-center gap-2 bg-gradient-to-r from-emerald-400 to-cyan-400 text-slate-900 font-bold px-7 py-3.5 rounded-full hover:shadow-lg hover:shadow-emerald-500/30 transition text-sm whitespace-nowrap"
-                >
-                  Check your visibility <ArrowUpRight className="w-4 h-4" />
-                </Link>
-              </div>
             </div>
           </div>
         </section>
