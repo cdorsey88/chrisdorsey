@@ -38,7 +38,7 @@ const posts: Post[] = [
           I think it&apos;s the beginning of the end of the company that got them here.
         </p>
         <p>
-          Not because Oura is bad at what they do &mdash; they&apos;re great at it. <em>Because</em> they&apos;re great at it. The thing public markets are about to ask of them is incompatible with the thing that made them worth buying in the first place.
+          Not because Oura is bad at what they do &mdash; they&apos;re great at it. <em>Because</em>{" "}they&apos;re great at it. The thing public markets are about to ask of them is incompatible with the thing that made them worth buying in the first place.
         </p>
 
         <h2>The growth math that breaks good companies</h2>
@@ -76,7 +76,7 @@ const posts: Post[] = [
           Two weeks ago, Google{" "}
           <a href="https://blog.google/products-and-platforms/devices/fitbit/fitbit-air/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">launched the &ldquo;Fitbit Air&rdquo;</a> &mdash; a $99.99 screenless health tracker{" "}
           <a href="https://techcrunch.com/2026/05/07/google-unveils-whoop-like-screenless-fitbit-air/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">explicitly designed to compete with Whoop and Oura</a>, bundled with a $9.99/month Google Health Premium subscription. The Fitbit app is being{" "}
-          <a href="https://thepixelcase.com/blogs/news/google-fitbit-air-review-complete-guide-the-99-screenless-tracker-that-changes-everything-2026" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">retired entirely and rebranded as Google Health</a>. The Fitbit <em>brand</em> is a ghost, but the Fitbit <em>acquisition</em> is now Google&apos;s wedge against Oura specifically.
+          <a href="https://thepixelcase.com/blogs/news/google-fitbit-air-review-complete-guide-the-99-screenless-tracker-that-changes-everything-2026" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">retired entirely and rebranded as Google Health</a>. The Fitbit <em>brand</em>{" "}is a ghost, but the Fitbit <em>acquisition</em>{" "}is now Google&apos;s wedge against Oura specifically.
         </p>
         <p>
           The Fitbit failure wasn&apos;t &ldquo;wearables don&apos;t work.&rdquo; Wearables work fine &mdash; Apple sells tens of millions of Apple Watches. The failure was that a focused hardware company with a great single-purpose product got forced into a fight it couldn&apos;t win, by the gravitational pull of public-market expectations. By the time Google bought it, Fitbit was{" "}
@@ -96,11 +96,11 @@ const posts: Post[] = [
         </p>
         <p>
           <strong>Prestige</strong> is real but cheap. Being a public company used to mean something. In 2026, with{" "}
-          <a href="https://techcrunch.com/2026/05/20/the-spacex-ipo-filing-ai-bets-starship-dreams-elon-musk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">SpaceX dominating the IPO news cycle the same week on its own S-1</a> and a market full of AI infrastructure companies with no path to profitability, &ldquo;we went public&rdquo; is not the signal it was twenty years ago.
+          <a href="https://techcrunch.com/2026/05/20/the-spacex-ipo-filing-ai-bets-starship-dreams-elon-musk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">SpaceX dominating the IPO news cycle the same week on its own S-1</a>{" "}and a market full of AI infrastructure companies with no path to profitability, &ldquo;we went public&rdquo; is not the signal it was twenty years ago.
         </p>
         <p>
           <strong>Capital</strong> is the only honest one. Public markets give you a deeper pool to raise from. But Oura just{" "}
-          <a href="https://techcrunch.com/2025/09/22/oura-ring-maker-raising-875m-series-e-bringing-valuation-to-11b-report-says/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">raised $875M from private investors</a> eight months ago. They don&apos;t need more money. They need an exit for the people who gave them money.
+          <a href="https://techcrunch.com/2025/09/22/oura-ring-maker-raising-875m-series-e-bringing-valuation-to-11b-report-says/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">raised $875M from private investors</a>{" "}eight months ago. They don&apos;t need more money. They need an exit for the people who gave them money.
         </p>
         <p>
           That&apos;s a fine reason to IPO. It&apos;s just not the same reason as &ldquo;we are building a hundred-year company.&rdquo;
@@ -108,12 +108,12 @@ const posts: Post[] = [
 
         <h2>The companies that didn&apos;t, and what they got for it</h2>
         <p>
-          <a href="https://en.wikipedia.org/wiki/Mailchimp" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">Mailchimp turned down acquisition offers for twenty years</a> as a bootstrapped company before selling to{" "}
+          <a href="https://en.wikipedia.org/wiki/Mailchimp" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">Mailchimp turned down acquisition offers for twenty years</a>{" "}as a bootstrapped company before selling to{" "}
           <a href="https://investors.intuit.com/news-events/press-releases/detail/162/intuit-to-acquire-mailchimp" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">Intuit in 2021 for $12 billion in cash and stock</a> &mdash; on their own terms, at their own valuation, with no quarterly earnings call pressure shaping the decade leading up to it. Basecamp/37signals has been making the same argument out loud for twenty years. Valve has built one of the most profitable software companies on earth without ever filing a single quarterly earnings report.
         </p>
         <p>
           Patagonia did something more extreme. In 2022,{" "}
-          <a href="https://www.patagoniaworks.com/press/2022/9/14/patagonias-next-chapter-earth-is-now-our-only-shareholder" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">Yvon Chouinard transferred ownership</a> of the entire $3B company into a purpose trust and a nonprofit, with annual profits redirected to fighting climate change. His public statement on why he didn&apos;t take the company public is worth reading in full:
+          <a href="https://www.patagoniaworks.com/press/2022/9/14/patagonias-next-chapter-earth-is-now-our-only-shareholder" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">Yvon Chouinard transferred ownership</a>{" "}of the entire $3B company into a purpose trust and a nonprofit, with annual profits redirected to fighting climate change. His public statement on why he didn&apos;t take the company public is worth reading in full:
         </p>
         <div className="my-8 pl-6 border-l-4 border-amber-400">
           <p className="text-xl italic text-slate-700 leading-relaxed" style={{ fontFamily: "var(--font-fraunces)" }}>
@@ -128,7 +128,7 @@ const posts: Post[] = [
           The pattern: companies that resisted the IPO gravity well got to keep being the thing their customers fell in love with. The ones that didn&apos;t &mdash; Fitbit, GoPro, Peloton, Beyond Meat &mdash; became cautionary tales for the next cohort.
         </p>
         <p>
-          I&apos;d add: the public companies that <em>did</em> go public and held it together &mdash; Apple, Costco, Netflix &mdash; almost all had two things in common. A founder who never lost control of the board, and a product category big enough to absorb a decade of growth pressure without forcing the company to become something it wasn&apos;t. Oura has neither.
+          I&apos;d add: the public companies that <em>did</em>{" "}go public and held it together &mdash; Apple, Costco, Netflix &mdash; almost all had two things in common. A founder who never lost control of the board, and a product category big enough to absorb a decade of growth pressure without forcing the company to become something it wasn&apos;t. Oura has neither.
         </p>
 
         <h2>What I&apos;d want to see, if I were them</h2>
@@ -154,8 +154,8 @@ const posts: Post[] = [
         </p>
         <p>
           <strong>One: women&apos;s health becomes the moat.</strong> Oura already{" "}
-          <a href="https://techcrunch.com/2026/02/24/oura-launches-a-proprietary-ai-model-focused-on-womens-health/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">launched a proprietary AI model for women&apos;s health</a> earlier this year, and they&apos;re{" "}
-          <a href="https://techcrunch.com/2025/10/13/oura-is-winning-young-women-and-losing-gym-rats-and-its-fine-with-that/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">winning young women specifically</a> while losing the gym-bro segment. If that becomes a defensible category &mdash; cycle tracking, fertility, perimenopause, pregnancy &mdash; Apple and Google can&apos;t easily catch up because they don&apos;t have the form factor or the years of data. That&apos;s a genuine moat, and a much bigger TAM than &ldquo;sleep tracker.&rdquo;
+          <a href="https://techcrunch.com/2026/02/24/oura-launches-a-proprietary-ai-model-focused-on-womens-health/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">launched a proprietary AI model for women&apos;s health</a>{" "}earlier this year, and they&apos;re{" "}
+          <a href="https://techcrunch.com/2025/10/13/oura-is-winning-young-women-and-losing-gym-rats-and-its-fine-with-that/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">winning young women specifically</a>{" "}while losing the gym-bro segment. If that becomes a defensible category &mdash; cycle tracking, fertility, perimenopause, pregnancy &mdash; Apple and Google can&apos;t easily catch up because they don&apos;t have the form factor or the years of data. That&apos;s a genuine moat, and a much bigger TAM than &ldquo;sleep tracker.&rdquo;
         </p>
         <p>
           <strong>Two: the medical device pivot works.</strong> If Oura gets FDA-cleared diagnostics into the ring &mdash; atrial fibrillation, sleep apnea, glucose, anything insurance will reimburse &mdash; the unit economics flip from consumer hardware to medical device. That&apos;s a different multiple, a different growth story, and a story public markets will actually pay for.
@@ -333,7 +333,7 @@ const posts: Post[] = [
     content: (
       <div className="prose-content">
         <p>
-          <a href="https://liveramp.com/news/publicis-to-acquire-liveramp-to-accelerate-data-co-creation-for-smarter-agents" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">Press release</a> landed Tuesday morning. Publicis is paying $2.167 billion in cash for LiveRamp &mdash; $38.50 a
+          <a href="https://liveramp.com/news/publicis-to-acquire-liveramp-to-accelerate-data-co-creation-for-smarter-agents" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">Press release</a>{" "}landed Tuesday morning. Publicis is paying $2.167 billion in cash for LiveRamp &mdash; $38.50 a
           share, 29.8% premium over Monday&apos;s close. By the time my second coffee was cold, three brand-side clients
           had texted me some version of the same question: should we be worried?
         </p>
@@ -553,7 +553,7 @@ const posts: Post[] = [
     content: (
       <div className="prose-content">
         <p>
-          <a href="https://hai.stanford.edu/ai-index/2026-ai-index-report" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">Stanford&apos;s 2026 AI Index Report</a> dropped, and most of the coverage has fixated on the wrong numbers.
+          <a href="https://hai.stanford.edu/ai-index/2026-ai-index-report" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">Stanford&apos;s 2026 AI Index Report</a>{" "}dropped, and most of the coverage has fixated on the wrong numbers.
           Compute trends. Model evaluations. Country rankings. Useful, but not the story.
         </p>
         <p>
@@ -682,7 +682,7 @@ const posts: Post[] = [
           Something shifted this week, and I want to name it clearly.
         </p>
         <p>
-          On May 5, <a href="https://fortune.com/2026/05/05/anthropic-wall-street-financial-services-agents-jamie-dimon/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">Anthropic announced</a> that Claude agents are now in production at JPMorgan Chase, Goldman Sachs,
+          On May 5, <a href="https://fortune.com/2026/05/05/anthropic-wall-street-financial-services-agents-jamie-dimon/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">Anthropic announced</a>{" "}that Claude agents are now in production at JPMorgan Chase, Goldman Sachs,
           Citi, AIG, and Visa. Not pilots. Not proofs of concept. Production deployments — agents running real
           workflows inside the largest financial institutions in the world. PwC followed on May 14 with a partnership
           to embed Claude agents into enterprise client work across finance and life sciences.
@@ -790,7 +790,7 @@ const posts: Post[] = [
     content: (
       <div className="prose-content">
         <p>
-          On May 5, 2026, <a href="https://openai.com/index/new-ways-to-buy-chatgpt-ads/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">OpenAI quietly did something</a> that will reshape the next decade of digital advertising. They
+          On May 5, 2026, <a href="https://openai.com/index/new-ways-to-buy-chatgpt-ads/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">OpenAI quietly did something</a>{" "}that will reshape the next decade of digital advertising. They
           dropped the $50,000 minimum spend requirement, opened ChatGPT Ads to every U.S. advertiser through
           self-serve, and added cost-per-click bidding. The pilot that started with a handful of enterprise
           brands is now open to everyone.
@@ -997,7 +997,7 @@ const posts: Post[] = [
 
         <h2>What the data actually says</h2>
         <p>
-          A <a href="https://www.federalreserve.gov/econres/notes/feds-notes/ai-adoption-and-firms-job-posting-behavior-20260327.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">Federal Reserve study</a> covering more than one million firms found what the researchers called
+          A <a href="https://www.federalreserve.gov/econres/notes/feds-notes/ai-adoption-and-firms-job-posting-behavior-20260327.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">Federal Reserve study</a>{" "}covering more than one million firms found what the researchers called
           &ldquo;precisely-estimated null effects&rdquo; for AI adoption on job postings. Not a small effect.
           Not a mixed effect. Null. A 2025 NBER paper tracking 25,000 workers across 7,000 workplaces found zero
           statistically significant effect on earnings or hours worked after AI tool adoption.
