@@ -11,6 +11,17 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "oura-ipo-not-every-company-should-go-public",
+    title: "Oura just filed to go public. That's exactly when I'd bet against them.",
+    date: "May 22, 2026",
+    readTime: "7 min",
+    excerpt:
+      "Oura confidentially filed its S-1 yesterday — sold 5.5M rings, $11B Series E valuation, a category they invented. Here's why public-market gravity is the thing most likely to break them.",
+    tag: "Business",
+    color: "from-amber-600 to-orange-500",
+    tldr: "Oura confidentially filed its S-1 yesterday — 5.5M rings sold at an $11B valuation in a category they invented. Public-market gravity is the thing most likely to break them. Fitbit is the case study, and Google relaunched the Fitbit Air this month as the explicit wedge against Oura.",
+  },
+  {
     slug: "chatgpt-ads-manager-sellers-read",
     title: "Two weeks later: OpenAI shipped the Ads Manager. The seller's read.",
     date: "May 21, 2026",
