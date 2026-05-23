@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter, Fraunces, DM_Serif_Display } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 
 const inter = Inter({
@@ -166,10 +165,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${inter.variable} ${fraunces.variable} ${dmSerifDisplay.variable}`}>
       <body>
         {children}
-        <Script
-          id="json-ld"
+        <script
           type="application/ld+json"
-          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </body>
