@@ -72,16 +72,16 @@ export default function ChrisDorseySite() {
 
   const communityBuilds = [
     {
-      title: "Clay Waterfall Enrichment Templates",
+      title: "Clay Custom Signals",
       by: "Clay",
-      desc: "The standard for multi-source prospecting. Chain 10+ data providers to find verified emails and phone numbers, then feed the gaps straight into personalized sequences. The template library is free.",
-      url: "https://www.clay.com/templates",
+      desc: "Turn any data point Clay can reach into a buying signal, then auto-trigger personalized outreach off it. This is the operational backbone of signal-based selling — stop blasting static lists and start firing on actual buyer behavior. The thing your competitors aren't doing yet.",
+      url: "https://www.clay.com/signals",
     },
     {
-      title: "GTM Engineering Template Library",
-      by: "GTME HQ",
-      desc: "Pre-built Clay tables, sales automation sequences, and ops workflows built by GTM engineers for GTM teams. If you're setting up outbound for the first time, start here.",
-      url: "https://www.gtmehq.com/templates",
+      title: "A Rational Conversation on Where AI Is Actually Going",
+      by: "Benedict Evans × Lenny Rachitsky",
+      desc: "Evans' core argument: the model makers may end up as low-margin commodity infrastructure, and the real money flows to the application layer — the companies that own distribution and embed AI into specific workflows. If you sell software, this is the clearest map of where value accrues next.",
+      url: "https://www.lennysnewsletter.com/p/a-rational-conversation-on-where",
     },
     {
       title: "Claude + n8n: Build Workflows from a Single Prompt",
@@ -90,10 +90,10 @@ export default function ChrisDorseySite() {
       url: "https://n8n.io/integrations/claude/",
     },
     {
-      title: "Salesforce AI in 2026: What Einstein Does, What It Doesn't, and What Fills the Gap",
-      by: "Cotera",
-      desc: "The clearest breakdown of Salesforce's agentic architecture I've seen this year. Einstein scores and predicts; agents enrich, update, and act. If you're trying to figure out how Agentforce, Einstein, and your existing stack actually fit together, start here.",
-      url: "https://cotera.co/articles/salesforce-ai-automation-guide",
+      title: "Apollo Acquires Pocus: What Signal-Based Selling Actually Means",
+      by: "Apollo",
+      desc: "Apollo bought Pocus, an enterprise revenue intelligence platform, approaching $200M ARR. The thesis: volume-based outbound is dead. Signal-based selling — outreach triggered by actual buyer behavior, not static lists — is the only model that works at current CAC levels. The implications for how you structure SDR teams are significant.",
+      url: "https://www.apollo.io/magazine/apollo-acquires-pocus",
     },
   ];
 
@@ -314,15 +314,19 @@ export default function ChrisDorseySite() {
             </div>
             <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-x-6 gap-y-7 items-center justify-items-center">
               {clients.map((client) => (
-                <div
+                <a
                   key={client.name}
+                  href={`https://www.${client.domain}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="opacity-60 hover:opacity-100 transition-all duration-300 hover:scale-105 grayscale hover:grayscale-0 flex flex-col items-center justify-center gap-1.5 w-full"
-                  title={client.name}
+                  title={`Visit ${client.name}`}
+                  aria-label={client.name}
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={`https://img.logo.dev/${client.domain}?token=pk_c7ynXyEOSNGSRzM5jrzKBw&size=200&format=png`}
-                    alt={client.name}
+                    alt={`${client.name} logo`}
                     className={`${client.logoClass ?? "h-7"} w-auto max-w-full object-contain`}
                     onError={(e) => {
                       e.currentTarget.style.display = "none";
@@ -331,7 +335,7 @@ export default function ChrisDorseySite() {
                   <span className="text-[10px] font-semibold text-slate-400 tracking-tight text-center leading-tight">
                     {client.name}
                   </span>
-                </div>
+                </a>
               ))}
             </div>
           </div>

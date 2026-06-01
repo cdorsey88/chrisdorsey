@@ -20,6 +20,256 @@ type Post = {
 
 const posts: Post[] = [
   {
+    slug: "commerce-media-passed-tv-agents-buying",
+    title: "Commerce media just passed TV. And the agents are taking the keyboard.",
+    date: "Jun 1, 2026",
+    readTime: "7 min",
+    tag: "Future of Ads",
+    color: "from-orange-500 to-rose-500",
+    tldr: "Commerce media ($178B) just passed global TV ($171B), and retail media is the bulk of it. Simultaneously, Amazon and Walmart are pushing campaign mechanics onto platform-side agents — which guts the value of selling manual campaign management and rewards whoever owns strategy, first-party data, and measurement. If you sell into or around RMNs, reprice your value now.",
+    content: (
+      <div className="prose-content">
+        <p>
+          The biggest channel in advertising is no longer television. As of this year it&apos;s commerce media &mdash; and the people who built careers on managing it by hand are about to find out the platforms want that job back.
+        </p>
+        <p>
+          WPP Media&apos;s latest forecast puts{" "}
+          <a href="https://www.performancemarketingworld.com/article/1942423/commerce-media-surpasses-tv-advertising-first-time-wpp-reports" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">commerce media at $178.2B in global ad revenue, overtaking TV&apos;s $171.1B for the first time</a>. Retail media networks are the bulk of that &mdash; roughly $174B and growing double digits into 2026. Amazon and Walmart alone command about 88% of US retail media share. This stopped being an emerging channel a while ago. It&apos;s now the channel.
+        </p>
+        <p>
+          But the headline number isn&apos;t the interesting part. The interesting part is what&apos;s happening to <em>who does the work.</em>
+        </p>
+
+        <h2>The platforms are eating the agency layer</h2>
+        <p>
+          For a decade, the retail media value chain had a comfortable middle: agencies, specialist shops, and an army of campaign managers who knew the quirks of each platform&apos;s ad console and charged for the labor of running it. That middle is being automated from the inside out. Amazon&apos;s Ads Agent beta is already posting{" "}
+          <a href="https://www.pymnts.com/news/retail/2026/walmarts-retail-media-scores-wins-while-amazons-ai-goes-ambient" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">18% lower CPMs and 16% lower CPAs</a>
+          {" "}by moving campaign mechanics onto the platform side. Walmart&apos;s Marty &mdash; an agentic assistant for suppliers and advertisers &mdash; now handles onboarding, orders, and campaign management directly.
+        </p>
+        <p>
+          I&apos;ve lived the front edge of this. At Zeta I sold an AI customer-acquisition product into retail, e-commerce, and travel brands that didn&apos;t have a budget line for it yet. The hardest part was never the technology &mdash; it was convincing a brand to reallocate from a channel they understood to one they didn&apos;t. That objection is gone now. The budgets have moved. What hasn&apos;t caught up is the way most people in this ecosystem price their value, and that&apos;s the gap worth paying attention to.
+        </p>
+
+        <h2>What the agents commoditize — and what they don&apos;t</h2>
+        <p>
+          Be honest about what a platform-side agent is genuinely good at: bid management, budget pacing, keyword expansion, creative variant testing, the daily console babysitting that used to justify a retainer. If that&apos;s the core of what you or your team sells, the floor is dropping out, and it&apos;s dropping fast. Amazon and Walmart have every incentive to automate it &mdash; cheaper, faster execution on their own platform means more spend flows through them and the agency tax shrinks.
+        </p>
+        <p>
+          Here&apos;s what the agent can&apos;t do, at least not yet. It can&apos;t tell a brand which retailers to bet on and which to abandon. It can&apos;t arbitrate the channel conflict between a CPG&apos;s shopper-marketing team and its brand team. It can&apos;t build a clean-room measurement story that ties Amazon spend to incremental sales the CFO will believe. And it has every reason <em>not</em> to give you honest cross-platform measurement &mdash; Amazon&apos;s agent will never tell you to move budget to Walmart. That last point is the whole game.
+        </p>
+
+        <h2>The seller&apos;s read</h2>
+        <p>
+          If you sell into or around retail media, reprice your value this quarter. Stop charging for execution the platforms are giving away and start charging for the three things they structurally can&apos;t provide: independent strategy across competing retailers, first-party data and clean-room measurement the platforms have a conflict of interest in obscuring, and the human judgment to decide where a finite budget actually goes. The agencies that survive this shift will look less like campaign shops and more like independent advisors who happen to be fluent in the consoles.
+        </p>
+        <p>
+          And if you sell anything <em>else</em> &mdash; martech, measurement, CDPs, retail tech &mdash; the agentic shift is the opening. The $136B agentic-commerce market is{" "}
+          <a href="https://www.adweek.com/agencies/commerce-media-surpasses-tv-globally-and-traditional-search-holds-ai-at-bay-for-now/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">forecast to hit $1.7T by 2030</a>, with Walmart&apos;s and Etsy&apos;s OpenAI partnerships as the early signals. Every brand suddenly relying on platform-side agents needs an independent layer of truth sitting above those agents. That layer is the product.
+        </p>
+
+        <h2>The takeaway</h2>
+        <p>
+          Commerce media passing TV is the kind of milestone that makes the trade press for a day and then gets forgotten. The thing to actually do something about is the automation happening underneath it. The platforms are taking the keyboard. Your value isn&apos;t the keystrokes anymore &mdash; it&apos;s the judgment about where to point the machine, and the honesty the machine has a reason to withhold.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "microsoft-shadow-ai-agent-gatekeeper",
+    title: "Microsoft just made “shadow AI” the new shadow IT. Your agent has a new gatekeeper.",
+    date: "Jun 1, 2026",
+    readTime: "6 min",
+    tag: "AI",
+    color: "from-slate-600 to-blue-600",
+    tldr: "Microsoft Agent 365 is GA, treating unmanaged AI agents as the new shadow IT — it discovers and governs agents (including Claude Code) across clouds at $15/user/month. For anyone selling AI agents into the enterprise, security and governance just became a gate on every deal. Bring the IT/security answer to the first meeting, not the security review.",
+    content: (
+      <div className="prose-content">
+        <p>
+          The easiest enterprise AI deals of the last two years had a quiet thing in common: nobody in IT knew they were happening. That era just ended.
+        </p>
+        <p>
+          Microsoft took{" "}
+          <a href="https://venturebeat.com/technology/microsoft-takes-agent-365-out-of-preview-as-shadow-ai-becomes-an-enterprise-threat" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">Agent 365 generally available</a>
+          {" "}and pointed it directly at what it&apos;s calling &ldquo;shadow AI&rdquo; &mdash; the unmanaged agents employees are running without IT&apos;s knowledge. Defender and Intune can now{" "}
+          <a href="https://www.microsoft.com/en-us/security/blog/2026/05/01/microsoft-agent-365-now-generally-available-expands-capabilities-and-integrations/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">detect agents like Claude Code running on a Windows device</a>, and the control plane governs agents across Microsoft, AWS, and Google Cloud. It&apos;s $15 per user per month, bundled into the new E7 suite. Microsoft is doing to AI agents exactly what it did to SaaS sprawl a decade ago: turning a chaotic, bottoms-up adoption wave into a governed, top-down line item it controls.
+        </p>
+
+        <h2>Why this matters more than another product launch</h2>
+        <p>
+          For two years, the dominant enterprise AI sales motion has been bottoms-up. A team adopts an agent, it works, usage spreads, and procurement formalizes a deal that already has momentum. That motion worked precisely <em>because</em> it flew under IT&apos;s radar. The champion didn&apos;t need permission &mdash; they needed a credit card and a result.
+        </p>
+        <p>
+          Agent 365 is built to end exactly that. The whole pitch to a CIO is: you have agents running in your environment right now that you can&apos;t see, can&apos;t audit, and can&apos;t shut off. Here&apos;s the dashboard that surfaces all of them. The moment that dashboard exists, every unsanctioned agent in the building becomes a flagged risk, and the bottoms-up motion that got you in the door becomes the thing that gets you escorted out.
+        </p>
+        <p>
+          I learned this distinction selling to engineers at Fastly. The people who could say yes and the people who could say no were different humans, and the person who could say <em>no</em> &mdash; security, compliance, platform ownership &mdash; almost always had the longer memory and the louder veto. AI agent selling is about to rediscover that lesson all at once.
+        </p>
+
+        <h2>What changes for anyone selling agents</h2>
+        <p>
+          The gatekeeper changed. It used to be the budget holder. Now it&apos;s whoever owns the governance dashboard. If your agent shows up as an unmanaged red flag in someone&apos;s Agent 365 console, you are no longer a productivity win &mdash; you are an incident. That means three things move to the front of your motion.
+        </p>
+        <p>
+          <strong>First, bring the governance answer to the first meeting, not the security review.</strong> &ldquo;Here&apos;s how we register inside your control plane, here&apos;s the identity model, here&apos;s the audit log&rdquo; needs to be in your opening deck. Treating it as a late-stage procurement hurdle is how deals now die in month four.
+        </p>
+        <p>
+          <strong>Second, get interoperable or get blocked.</strong> Microsoft built cross-cloud registry sync with AWS Bedrock and Google Cloud. The agents that survive enterprise governance are the ones that register cleanly into these control planes. &ldquo;Ungovernable&rdquo; is becoming a synonym for &ldquo;banned.&rdquo;
+        </p>
+        <p>
+          <strong>Third, sell to security as a champion, not an obstacle.</strong> The CISO who was a blocker last year is the economic buyer this year. There&apos;s a real budget forming around agent governance &mdash; Microsoft just priced it at $15 a seat. If you can make a security leader look good in front of the board for having visibility and control over the agent sprawl, you&apos;ve found your new champion.
+        </p>
+
+        <h2>The takeaway</h2>
+        <p>
+          Shadow AI becoming a governed asset class is good for the category &mdash; it&apos;s what every technology has to survive to become real infrastructure. SaaS went through it. Cloud went through it. But the transition is brutal for any seller still running the permissionless, bottoms-up playbook that worked in 2024.
+        </p>
+        <p>
+          Audit your own motion this week. If your deals depend on staying invisible to IT, you&apos;re selling against the single biggest enterprise software company on earth and its new favorite dashboard. Get governable, get in front of security early, and turn the gatekeeper into the champion before someone else&apos;s agent does.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "ai-ipo-race-model-was-never-the-moat",
+    title: "Two AI labs are about to go public. The model was never the moat.",
+    date: "Jun 1, 2026",
+    readTime: "7 min",
+    tag: "Macro",
+    color: "from-sky-600 to-indigo-600",
+    tldr: "OpenAI (September) and Anthropic (October) are both racing to IPO, which forces the frontier labs into public-market transparency for the first time. Benedict Evans' thesis lands at the same moment: models trend toward commodity infrastructure, and value accrues to the application layer that owns distribution and workflow. For sellers, the takeaway is to stop selling the model and start selling the workflow it sits inside.",
+    content: (
+      <div className="prose-content">
+        <p>
+          For three years the AI labs have asked you to take their economics on faith. That ends this quarter.
+        </p>
+        <p>
+          OpenAI just{" "}
+          <a href="https://thenextweb.com/news/openai-ipo-confidential-filing-anthropic-race" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">filed a confidential IPO prospectus</a>
+          {" "}targeting a September debut, and Anthropic is racing to follow in October &mdash; fresh off a{" "}
+          <a href="https://www.cnbc.com/2026/05/28/anthropic-open-ai-startup-value.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">$65B round at a $965B valuation</a>
+          {" "}that briefly made it the most valuable AI startup on earth. Two of the most important companies of the decade are about to file S-1s within weeks of each other. And an S-1 doesn&apos;t care about your narrative. It shows gross margin, cost of revenue, and customer concentration in black and white.
+        </p>
+        <p>
+          That is the real story here, and it isn&apos;t the valuations. It&apos;s that the AI industry is about to be forced into a level of financial transparency it has spent its entire existence avoiding.
+        </p>
+
+        <h2>What the S-1 will actually reveal</h2>
+        <p>
+          Private rounds let you sell a story. Public filings make you show the unit economics. The number every enterprise buyer and every competitor will be reading for is gross margin &mdash; because inference is expensive, frontier training runs are astronomically expensive, and the price war between OpenAI, Anthropic, and Google has been pushing per-token costs down for two years straight. When two labs are competing for revenue heading into a listing, they discount. Aggressively. That&apos;s great for you as a buyer this year. It&apos;s a flashing warning sign about the long-term margin structure of the thing you&apos;re betting on.
+        </p>
+        <p>
+          I&apos;ve watched this movie before. At Fastly, I sold infrastructure into a market where the underlying capability &mdash; moving bytes fast &mdash; was relentlessly commoditizing. The lesson was brutal and clarifying: when the core thing you sell trends toward zero margin, you don&apos;t win on the core thing. You win on everything wrapped around it.
+        </p>
+
+        <h2>Benedict Evans said the quiet part out loud</h2>
+        <p>
+          The same week the IPO timelines leaked, Benedict Evans sat down with Lenny Rachitsky and made{" "}
+          <a href="https://www.lennysnewsletter.com/p/a-rational-conversation-on-where" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">the argument</a>
+          {" "}I think every GTM leader should internalize: the model makers may end up as low-margin commodity infrastructure, and the real money flows to the application layer &mdash; the companies that embed AI into specific workflows, own distribution, and solve an actual business problem.
+        </p>
+        <p>
+          He compared this moment to 1997. Not the dot-com crash &mdash; the part before it, where the technology is obviously real, obviously transformative, and nobody yet knows which layer of the stack captures the value. His bet is that it&apos;s not the layer everyone&apos;s currently valuing at a trillion dollars. It&apos;s the layer that owns the customer relationship and the workflow the customer can&apos;t rip out.
+        </p>
+        <p>
+          If he&apos;s right &mdash; and the commoditization pressure showing up in those S-1s suggests he is &mdash; then the moat was never the model. The moat is distribution and workflow lock-in. The model is becoming electricity: indispensable, ubiquitous, and a terrible business to be the generic supplier of.
+        </p>
+
+        <h2>What this changes for how you sell</h2>
+        <p>
+          If you sell anything with AI inside it, stop leading with the model. &ldquo;We&apos;re built on the latest frontier model&rdquo; is now a statement with the strategic weight of &ldquo;we run on AWS.&rdquo; True, table stakes, and completely undifferentiated. Your buyer can get the same model from a dozen vendors and increasingly from a free tier. The model is not your value. It never was.
+        </p>
+        <p>
+          Your value is the workflow you own. The proprietary data you enrich it with. The integration into the system of record where the work actually happens. The reason a customer would have to tear out three other tools to leave you. That&apos;s the conversation that survives a commodity price war, and it&apos;s the conversation that maps directly to retention and expansion &mdash; which, not coincidentally, is the part of revenue that public-market investors reward most.
+        </p>
+        <p>
+          There&apos;s a defensive read here too. If you&apos;re an enterprise buyer locked into a frontier-lab contract you signed eighteen months ago, the IPO is your leverage. Margin pressure and a price war mean your renewal should cost less, not more. Walk into that conversation knowing the vendor needs your logo on the revenue line more than you need their specific model.
+        </p>
+
+        <h2>The takeaway</h2>
+        <p>
+          Watch the gross-margin line when those S-1s go public. It will tell you more about the next five years of this industry than any keynote. And whatever it says, plan as if Evans is right: the model is becoming a commodity, and the durable businesses are the ones built one layer up &mdash; in the workflow, in the distribution, in the relationship.
+        </p>
+        <p>
+          Sell the workflow, not the model. The labs going public is the clearest signal yet that the model alone was never going to be enough.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "anthropic-900b-category-sale-is-over",
+    title: "Anthropic just crossed $900B. The AI category sale is over.",
+    date: "May 26, 2026",
+    readTime: "7 min",
+    tag: "AI",
+    color: "from-blue-600 to-violet-600",
+    tldr: "Anthropic is closing a $30B round at $900B+, PwC is all-in on Claude, and the Big Four have made their platform bets. The category sale — creating urgency around AI being real — is over. The new conversation is about platform choice, switching costs, and whether your buyer backed the right horse. Your pitch needs to change.",
+    content: (
+      <div className="prose-content">
+        <p>
+          The sale I&apos;ve been running for two years just changed. If yours hasn&apos;t, read this.
+        </p>
+        <p>
+          Anthropic is reportedly{" "}
+          <a href="https://www.buildfastwithai.com/blogs/ai-news-today-may-25-2026" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">closing a $30 billion round at a valuation north of $900 billion</a>
+          {" "}&mdash; which, if it closes at the high end, would make it more valuable than OpenAI for the first time. The same week, PwC announced it&apos;s certifying 30,000 US professionals on Claude and embedding Anthropic engineers inside the firm to build an entirely new finance business group from scratch. Insurance underwriting that took ten weeks now takes ten days. Security tasks that took hours take minutes. The Big Four have made their bets.
+        </p>
+        <p>
+          The enterprise AI sale &mdash; the one where you were creating category urgency, helping buyers understand why they couldn&apos;t afford to wait &mdash; is over. Your buyers made up their minds. The question now is whether you&apos;ve updated your pitch.
+        </p>
+        <p>
+          I started my career at Crispin Porter + Bogusky when digital was the emerging channel nobody had a budget line for. Then I was at Oracle when mobile changed how enterprise buyers researched vendors. Then at Zeta when AI-powered acquisition was new enough that I had to explain what a model was before I could get to the demo. The pattern is always the same: there&apos;s a window where early category framing is the job, and then the window closes and the job becomes something else. Most sellers miss the transition.
+        </p>
+        <p>
+          The window on &ldquo;AI is coming, you should get ready&rdquo; closed sometime in the last six months. Here&apos;s what replaced it.
+        </p>
+
+        <h2>The old conversation</h2>
+        <p>
+          The AI sales motion from 2023 through early 2025 was fundamentally a change-management sale. You were selling urgency. The objection was philosophical: our organization isn&apos;t ready, our data isn&apos;t clean, we don&apos;t have the talent to manage it, our legal team has concerns. The job was to dismantle those objections one by one while building a coalition of internal champions who understood that the cost of inaction was compounding.
+        </p>
+        <p>
+          That was a real job, and I&apos;m proud of what I built doing it. But if you&apos;re still running that motion in May 2026, you&apos;re selling to a customer who already bought &mdash; or you&apos;re selling to the 3% who have genuinely decided to sit it out.
+        </p>
+
+        <h2>The new conversation</h2>
+        <p>
+          Here&apos;s what I&apos;m actually hearing now. &ldquo;We deployed a pilot, it worked, but we&apos;re not sure we picked the right platform.&rdquo; Or: &ldquo;We&apos;re locked into a contract but we don&apos;t think we&apos;re getting the outcomes the vendor promised.&rdquo; Or: &ldquo;Our biggest competitor just announced a major partnership, and our board wants to know if we&apos;re behind.&rdquo;
+        </p>
+        <p>
+          This is a different sale. The category anxiety is gone. Platform anxiety replaced it. Your buyers aren&apos;t asking whether AI is real. They&apos;re asking whether they picked the right bet, whether the deal they signed two years ago aged well, and whether switching costs are lower than staying costs. That is a much more specific conversation, and it requires a completely different set of proof points.
+        </p>
+        <p>
+          The PwC deal is instructive. PwC didn&apos;t announce a pilot. They announced a joint Center of Excellence, 30,000 professional certifications, and an entirely new finance business group built on top of Claude. That is not a buyer who is uncertain about the category. That is a buyer who has placed a long-duration bet and is building switching costs into their own workforce. The question their competitors are asking isn&apos;t &ldquo;should we use AI?&rdquo; It&apos;s &ldquo;are we as committed as PwC is, and if not, what does that cost us?&rdquo;
+        </p>
+
+        <h2>What changes in the room</h2>
+        <p>
+          Three things I&apos;ve noticed shift in the conversations I&apos;m having now.
+        </p>
+        <p>
+          <strong>First, the discovery question changed.</strong> In 2024, the most useful opener was &ldquo;what&apos;s the cost of your team not having this?&rdquo; In 2026, it&apos;s &ldquo;what happened with the last AI deployment you ran?&rdquo; The answer tells you everything: whether they&apos;re in the platform-anxiety conversation, whether they&apos;re nursing a failed pilot, or whether they&apos;re genuinely looking to expand what&apos;s already working.
+        </p>
+        <p>
+          <strong>Second, the proof that moves buyers changed.</strong> Case studies are less compelling than vendor stability signals. Buyers want to know: is this company going to exist in three years? Is the model I&apos;m betting on going to compound, or get left behind? A $900B valuation and a $30B round from blue-chip institutional investors sends a very specific message to enterprise procurement committees. It&apos;s not about the technology anymore &mdash; it&apos;s about whether this is a platform worth betting your career on.
+        </p>
+        <p>
+          <strong>Third, the internal champion&apos;s job changed.</strong> In 2024, the champion was convincing the committee that AI was real. In 2026, they&apos;re defending a platform choice they already made or advocating for one that&apos;s better than what&apos;s already deployed. That&apos;s not persuasion &mdash; it&apos;s politics. Help them build the political case, not the category case.
+        </p>
+
+        <h2>The takeaway</h2>
+        <p>
+          If you&apos;re selling AI products right now, the next call you take should start with a diagnostic question: does your buyer need to be convinced the category is real, or do they need to be convinced your platform is the right one?
+        </p>
+        <p>
+          Most enterprise buyers I talk to are firmly in the second conversation. They&apos;re past the &ldquo;should we do AI&rdquo; phase and into the &ldquo;which AI bet compounds for us&rdquo; phase. The moment you realize which conversation you&apos;re in, everything changes &mdash; the framing, the proof points, the champion strategy, the close.
+        </p>
+        <p>
+          The category sale is over. The platform sale is just beginning. The sellers who figure that out this quarter will have a very different year than the ones still building decks around &ldquo;the AI imperative.&rdquo;
+        </p>
+      </div>
+    ),
+  },
+  {
     slug: "oura-ipo-not-every-company-should-go-public",
     title: "Oura just filed to go public. That's exactly when I'd bet against them.",
     date: "May 22, 2026",

@@ -11,6 +11,50 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "commerce-media-passed-tv-agents-buying",
+    title: "Commerce media just passed TV. And the agents are taking the keyboard.",
+    date: "Jun 1, 2026",
+    readTime: "7 min",
+    excerpt:
+      "WPP says commerce media hit $178B in global ad revenue and overtook TV for the first time. At the same moment, Amazon and Walmart are moving the actual campaign work to the platform side — Amazon's Ads Agent is posting 18% lower CPMs, Walmart's Marty runs onboarding and campaigns for you. The channel just got too big to ignore and too automated to staff the old way. Here's the seller's read.",
+    tag: "Future of Ads",
+    color: "from-orange-500 to-rose-500",
+    tldr: "Commerce media ($178B) just passed global TV ($171B), and retail media is the bulk of it. Simultaneously, Amazon and Walmart are pushing campaign mechanics onto platform-side agents — which guts the value of selling manual campaign management and rewards whoever owns strategy, first-party data, and measurement. If you sell into or around RMNs, reprice your value now.",
+  },
+  {
+    slug: "microsoft-shadow-ai-agent-gatekeeper",
+    title: "Microsoft just made “shadow AI” the new shadow IT. Your agent has a new gatekeeper.",
+    date: "Jun 1, 2026",
+    readTime: "6 min",
+    excerpt:
+      "Microsoft took Agent 365 generally available and pointed it straight at “shadow AI” — unmanaged agents running inside the enterprise. It can already detect Claude Code and other agents on a Windows machine and govern them across AWS and Google Cloud. If you sell AI agents, the person who can kill your deal just changed.",
+    tag: "AI",
+    color: "from-slate-600 to-blue-600",
+    tldr: "Microsoft Agent 365 is GA, treating unmanaged AI agents as the new shadow IT — it discovers and governs agents (including Claude Code) across clouds at $15/user/month. For anyone selling AI agents into the enterprise, security and governance just became a gate on every deal. Bring the IT/security answer to the first meeting, not the security review.",
+  },
+  {
+    slug: "ai-ipo-race-model-was-never-the-moat",
+    title: "Two AI labs are about to go public. The model was never the moat.",
+    date: "Jun 1, 2026",
+    readTime: "7 min",
+    excerpt:
+      "OpenAI is targeting a September IPO, Anthropic is racing to follow in October, and the S-1s will force both into a kind of financial transparency the AI industry has never had to show. Benedict Evans just made the argument out loud: the model makers are sliding toward commodity margins, and the money is moving to whoever owns the workflow. If you sell software, that's the most important sentence you'll read this month.",
+    tag: "Macro",
+    color: "from-sky-600 to-indigo-600",
+    tldr: "OpenAI (September) and Anthropic (October) are both racing to IPO, which forces the frontier labs into public-market transparency for the first time. Benedict Evans' thesis lands at the same moment: models trend toward commodity infrastructure, and value accrues to the application layer that owns distribution and workflow. For sellers, the takeaway is to stop selling the model and start selling the workflow it sits inside.",
+  },
+  {
+    slug: "anthropic-900b-category-sale-is-over",
+    title: "Anthropic just crossed $900B. The AI category sale is over.",
+    date: "May 26, 2026",
+    readTime: "7 min",
+    excerpt:
+      "Anthropic is reportedly closing a $30B round at a $900B+ valuation. PwC is certifying 30,000 professionals on Claude. The Big Four have placed their bets. The enterprise AI sale just changed: your buyers aren't asking if AI is real anymore. They're asking whether they picked the right platform. That changes your job.",
+    tag: "AI",
+    color: "from-blue-600 to-violet-600",
+    tldr: "Anthropic is closing a $30B round at $900B+, PwC is all-in on Claude, and the Big Four have made their platform bets. The category sale — creating urgency around AI being real — is over. The new conversation is about platform choice, switching costs, and whether your buyer backed the right horse. Your pitch needs to change.",
+  },
+  {
     slug: "oura-ipo-not-every-company-should-go-public",
     title: "Oura just filed to go public. That's exactly when I'd bet against them.",
     date: "May 22, 2026",
