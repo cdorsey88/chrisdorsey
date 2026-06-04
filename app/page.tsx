@@ -99,9 +99,9 @@ export default function ChrisDorseySite() {
 
   const builds = [
     {
-      title: "LLM Visibility Audit Agent",
-      stack: "Playwright · Claude API · Clay · Instantly",
-      desc: "An agentic layer that screenshots how prospects appear in ChatGPT, Claude, and Perplexity, then routes the gaps into outbound sequences.",
+      title: "SMB Business Operations Tools",
+      stack: "Pro-bono · Claude API · Automation · SEO & GEO",
+      desc: "Custom AI tools for main-street businesses, built pro bono. I automate the repetitive admin, sharpen their SEO and GEO, and replace the bloated software they only half-use — so local operators can compete and stay in business.",
       accent: "bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border-blue-200",
     },
     {
