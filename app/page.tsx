@@ -102,7 +102,7 @@ export default function ChrisDorseySite() {
       title: "SMB Business Operations Tools",
       stack: "Pro-bono · Claude API · Automation · SEO & GEO",
       desc: "Custom AI tools for main-street businesses, built pro bono. I automate the repetitive admin, sharpen their SEO and GEO, and replace the bloated software they only half-use — so local operators can compete and stay in business.",
-      accent: "bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border-blue-200",
+      accent: "bg-gradient-to-br from-amber-500/10 to-orange-500/10 border-amber-200",
     },
     {
       title: "/client-brief slash command",
