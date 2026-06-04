@@ -23,7 +23,7 @@ const dmSerifDisplay = DM_Serif_Display({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://chrisdorsey.co"),
-  title: "Christopher Dorsey — Enterprise Seller, AI Tinkerer, GEO Consultant",
+  title: "Chris Dorsey — AI & MadTech Advisor | Enterprise Sales Leader",
   description:
     "Christopher Dorsey is a senior enterprise sales leader and Generative Engine Optimization (GEO) consultant based in Denver, Colorado. Fifteen years building long-term client relationships across MadTech and AI for brands including JPMorgan Chase, Microsoft, Amazon, PepsiCo, Johnson & Johnson, Merck, Oracle, Vail Resorts, Stitch Fix, Groupon, JCPenney, and JSX.",
   authors: [{ name: "Christopher Dorsey" }],
