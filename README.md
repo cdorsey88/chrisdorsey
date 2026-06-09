@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# chrisdorsey.co
 
-## Getting Started
+Personal site and writing of Christopher Dorsey — analytical op-eds on AI, GEO (Generative Engine Optimization), enterprise sales, and MadTech.
 
-First, run the development server:
+Built with the Next.js App Router and deployed on Vercel.
+
+## Stack
+
+- **Framework:** Next.js (App Router) + React + TypeScript
+- **Styling:** Tailwind CSS
+- **Hosting:** Vercel (production = `main`)
+- **Source of truth:** this GitHub repo (`cdorsey88/chrisdorsey`)
+
+## Local development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Type-check before committing:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npx tsc --noEmit
+```
 
-## Learn More
+## How writing works
 
-To learn more about Next.js, take a look at the following resources:
+Each post lives in two places and must stay in sync:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **`app/lib/posts-data.ts`** — post metadata for listing pages: `slug`, `title`, `date`, `readTime`, `excerpt`, `tag`, `color`, `tldr`.
+2. **`app/writing/[slug]/page.tsx`** — the full post: the same header fields plus the `content` JSX and an optional `sources` array.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+To publish a post, prepend a new object to the `posts` array in **both** files (newest first), keeping the `slug` identical across the two. The `sources` array (on the `page.tsx` entry) renders a visible Sources list and emits machine-readable `citation` JSON-LD for GEO.
 
-## Deploy on Vercel
+## Project layout
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+app/                 App Router pages, layouts, and the writing entries
+app/lib/posts-data.ts   Post metadata (listing)
+app/writing/[slug]/  Individual post pages + content
+public/              Static assets
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deploy
+
+Production deploys from `main`. Pushing to `main` is the publish step:
+
+```bash
+git add -A
+git commit -m "content: <what changed>"
+git push origin main
+```
+
+Vercel builds and ships `main` automatically.

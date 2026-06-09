@@ -39,3 +39,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# personal / non-site working files (kept locally, not part of the deployed site)
+CHRIS_PROFILE.md
+*.skill
+*.docx
+/content-queue/
+/newsletter-drafts/
+/SightedAI/
+/chrisdorsey website cowork project/
+
+# editor / agent local config
+/.claude/
