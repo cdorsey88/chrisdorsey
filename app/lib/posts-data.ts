@@ -11,6 +11,28 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "agentic-commerce-shopping-agents",
+    title: "Your next big customer is a shopping agent that doesn't care about your brand.",
+    date: "Jun 9, 2026",
+    readTime: "6 min",
+    excerpt:
+      "By 2030, NielsenIQ expects about half of online shoppers to hand routine buying to an AI agent, and pegs the U.S. agentic-commerce prize near a trillion dollars. Google's cart now follows shoppers across Search, Gemini, YouTube and Gmail, and the agents inside ChatGPT and Amazon are good enough to research a product and just buy it. Those agents choose on price, availability, and clean product data, not your campaign, and the work this year is making your product legible to a machine without hollowing out the brand that still wins humans.",
+    tag: "Future of Ads",
+    color: "from-amber-500 to-orange-600",
+    tldr: "By 2030, NielsenIQ expects roughly half of online shoppers to hand routine buying to an AI agent driving about a quarter of their spend, a near-$1T U.S. market. Agents pick on price, availability, and structured product data, not brand equity, and can form their own supplier preferences. Get your canonical product data clean and synced to every retailer API, treat 'is my product legible to an agent' as a board-level metric, and plan demand for two buyers at once: the human you win with story and the agent you win with structure.",
+  },
+  {
+    slug: "financial-services-vertical-ai",
+    title: "Banks are done piloting AI. What they're buying now is boring on purpose.",
+    date: "Jun 9, 2026",
+    readTime: "7 min",
+    excerpt:
+      "Banks moved from AI pilots to production fleets of agents this year, and Wolters Kluwer says 44% of finance teams will use agentic AI in 2026, a 600%+ jump. The vendors winning regulated buyers aren't the flashiest models. They're the ones who shipped immutable audit logs, SOC 2, and EU AI Act alignment as table stakes. If you sell into financial services, compliance is your product surface now.",
+    tag: "AI",
+    color: "from-blue-600 to-cyan-500",
+    tldr: "Banks shifted from AI pilots to production agent fleets in underwriting, fraud, KYC, and reconciliation, with 44% of finance teams using agentic AI in 2026 (up 600%+). Vertical AI is commanding premium multiples because it ships with the guardrails a risk committee needs: SOC 2, PCI-DSS, EU AI Act alignment, immutable audit trails. The economic buyer moved from the line-of-business leader to the chief risk officer. Bring the governance answer to the first meeting, not the security review.",
+  },
+  {
     slug: "commerce-media-passed-tv-agents-buying",
     title: "Commerce media just passed TV. And the agents are taking the keyboard.",
     date: "Jun 1, 2026",

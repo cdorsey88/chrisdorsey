@@ -16,9 +16,102 @@ type Post = {
   color: string;
   tldr: string;
   content: React.ReactNode;
+  sources?: { title: string; url: string }[];
 };
 
 const posts: Post[] = [
+  {
+    slug: "agentic-commerce-shopping-agents",
+    title: "Your next big customer is a shopping agent that doesn't care about your brand.",
+    date: "Jun 9, 2026",
+    readTime: "6 min",
+    tag: "Future of Ads",
+    color: "from-amber-500 to-orange-600",
+    tldr: "By 2030, NielsenIQ expects roughly half of online shoppers to hand routine buying to an AI agent driving about a quarter of their spend, a near-$1T U.S. market. Google's cart now follows shoppers across Search, Gemini, YouTube and Gmail, and the agents inside ChatGPT and Amazon are good enough to research a product and just buy it. Those agents pick on price, availability, and structured product data, not brand equity, and can form their own supplier preferences. Get your canonical product data clean and synced to every retailer API, treat 'is my product legible to an agent' as a board-level metric, and plan demand for two buyers at once: the human you win with story and the agent you win with structure.",
+    content: (
+      <div className="prose-content">
+        <p>
+          By 2030, NielsenIQ expects about half of online shoppers to hand routine buying to an AI agent, with that agent driving roughly a quarter of their spend, and it{" "}
+          <a href="https://nielseniq.com/global/en/insights/analysis/2026/agentic-commerce-and-ai-in-cpg/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">puts the U.S. agentic-commerce prize near a trillion dollars</a>. The plumbing is already going in. Google rolled out a cart that follows a shopper across Search, Gemini, YouTube and Gmail, and the shopping agents inside ChatGPT and Amazon got good enough to research a product and, more and more, just buy it. So picture the moment that decides your quarter. Someone tells their assistant to reorder the usual laundry detergent, and the assistant has to choose. It will never watch your ads. What decides the sale is whatever it can read in your product data.
+        </p>
+        <p>
+          At Zeta I sold an AI acquisition product into retail and CPG brands, and the fight in the room was always the same. The brand team believed the logo did the work, and the performance data kept saying the offer and the product detail did most of it. Agentic shopping takes that old argument and turns it into a budget line you can&apos;t put off.
+        </p>
+
+        <h2>What an agent actually optimizes for</h2>
+        <p>
+          A shopping agent isn&apos;t sentimental. It weighs price, availability, delivery speed, and how cleanly it can read your product facts: size, count, ingredients, allergens, the certifications a household filters on. If your detergent&apos;s data is messy or your retailer feed is out of sync, the agent quietly routes around you to the option it can parse. Worse for you, it can{" "}
+          <a href="https://www.foodnavigator-usa.com/Article/2026/02/18/why-cpg-brands-must-prepare-for-ai-shopping-agents/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">build its own supplier preferences</a>{" "}over time based on which brands behave well inside its system. You can lose a customer you never knew was in play.
+        </p>
+
+        <h2>The loyalty you built may not transfer</h2>
+        <p>
+          The uncomfortable part is for anyone who has spent a career building brand equity. Decades of that work went into winning a human standing in an aisle, scanning a shelf, feeling something. Two things can be true. That equity still moves the human-led purchases, and it&apos;s close to invisible to an agent executing a reorder. The agent inherits the loyalty you earned, but only if your product is the default in the data it reads. Lose that default and your moat is a feeling the buyer never stops to experience.
+        </p>
+
+        <h2>This is a demand-planning problem before it&apos;s a marketing one</h2>
+        <p>
+          Get your canonical product data clean and machine-readable, synced with every retailer API, down to variant-level detail. Treat &ldquo;is my product legible to an agent&rdquo; as a board-level metric, not an e-commerce chore that lives in someone&apos;s spreadsheet. Then plan for two buyers at once: the human you still win with story, and the agent you win with structure. The companies that staff for both will hold share. The ones still pouring the whole budget into the thirty-second spot will watch an agent reorder a competitor while their brand-tracking scores stay a comfortable green.
+        </p>
+
+        <h2>The read</h2>
+        <p>
+          None of this means brand is dead. The emotional, human side of this is exactly what an agent can&apos;t replicate, and it&apos;s still where premium pricing comes from. But a growing slice of your volume is about to be decided by software that has never seen your campaign and never will. The companies that come out ahead won&apos;t be the loudest ones. They&apos;ll be the ones whose pitch still held up after you took the personality out of it. Make your product the obvious answer in the data, then go win the humans. In that order, because the agent reorders first and asks questions never.
+        </p>
+      </div>
+    ),
+    sources: [
+      { title: "NielsenIQ — Agentic Commerce and AI in CPG", url: "https://nielseniq.com/global/en/insights/analysis/2026/agentic-commerce-and-ai-in-cpg/" },
+      { title: "FoodNavigator-USA — Why CPG Brands Must Prepare for AI Shopping Agents", url: "https://www.foodnavigator-usa.com/Article/2026/02/18/why-cpg-brands-must-prepare-for-ai-shopping-agents/" },
+      { title: "PwC — Agentic Commerce Readiness", url: "https://www.pwc.com/us/en/services/consulting/business-transformation/library/agentic-commerce.html" },
+    ],
+  },
+  {
+    slug: "financial-services-vertical-ai",
+    title: "Banks are done piloting AI. What they're buying now is boring on purpose.",
+    date: "Jun 9, 2026",
+    readTime: "7 min",
+    tag: "AI",
+    color: "from-blue-600 to-cyan-500",
+    tldr: "Banks shifted from AI pilots to production agent fleets in underwriting, fraud, KYC, and reconciliation, with 44% of finance teams using agentic AI in 2026 (up 600%+). Vertical AI is commanding premium multiples because it ships with the guardrails a risk committee needs: SOC 2, PCI-DSS, EU AI Act alignment, immutable audit trails. The economic buyer moved from the line-of-business leader to the chief risk officer. Bring the governance answer to the first meeting, not the security review.",
+    content: (
+      <div className="prose-content">
+        <p>
+          Banks spent two years running AI pilots that never left the lab. That phase is over. In 2026 they&apos;re deploying fleets of specialized agents into underwriting, fraud, KYC, and reconciliation, and the spend is following.{" "}
+          <a href="https://www.fintechfutures.com/ai-in-fintech/banking-in-2026-production-scale-ai-agents" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">Wolters Kluwer says 44% of finance teams will use agentic AI this year</a>, up more than 600%.{" "}
+          <a href="https://investors.fiserv.com/news-releases/news-release-details/fiserv-launches-agentos-operating-system-agentic-ai-banking" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">Fiserv just launched an agent operating system for banking</a>{" "}with six institutions co-building it. The money moved from someday to this quarter.
+        </p>
+        <p>
+          I spent years at Oracle inside accounts like JPMorgan Chase, where the difference between a deal that closed and one that died was rarely the technology. It was whether risk, compliance, and the audit function could live with what you were proposing. Selling into a regulated buyer teaches you a humbling lesson. The coolest capability in the room loses to the one with a clean control story.
+        </p>
+
+        <h2>Why vertical beats horizontal in a regulated buyer</h2>
+        <p>
+          This is why vertical AI is commanding premium multiples while horizontal tools fight on price. A general-purpose model is impressive and, to a bank&apos;s risk committee, a little terrifying, because nobody can fully explain what it will do on the edge case that becomes tomorrow&apos;s enforcement action. A vertical AI built for financial services ships with the domain knowledge and the guardrails baked in: SOC 2 Type II, PCI-DSS, alignment with the EU AI Act&apos;s high-risk classification, and an immutable audit trail for every decision an agent makes. In a bank, the audit trail is the product.
+        </p>
+
+        <h2>The buyer you have to win changed</h2>
+        <p>
+          If you&apos;re selling AI into financial services, the economic buyer shifted under your feet. A year ago you sold a line-of-business leader on a productivity win. Now the person who can kill your deal, the chief risk officer or the head of model governance, is in the first meeting, not the last. Your model can be genuinely better and still be unsellable because you can&apos;t produce the audit log a regulator will demand. Bring the governance answer to the opening conversation. Treating it as a procurement formality at the end is how good products die in the risk review.
+        </p>
+
+        <h2>What this means for the next year</h2>
+        <p>
+          The ROI is real enough to keep the budgets coming. Organizations are seeing an average 2.3x return on agentic AI inside about thirteen months, which is why the pilots turned into production lines. But the durable winners in financial-services AI over the next year will be the vendors who treated compliance as a feature to build, not a tax to pay. Regulated industries are where AI either grows up or gets banned, and banking is going first. Healthcare and insurance are watching, ready to copy whatever survives the bank&apos;s risk committee.
+        </p>
+
+        <h2>The read</h2>
+        <p>
+          If your roadmap still treats audit logging and regulatory alignment as the unglamorous work you&apos;ll add later, move it to the front. In financial services, the boring features are the deal. The vendors who figured that out are quietly signing eight-figure agreements while the flashier demos are still stuck in legal. Build the audit trail like it&apos;s the headline, because to your buyer it already is.
+        </p>
+      </div>
+    ),
+    sources: [
+      { title: "FinTech Futures — Banking in 2026: Production-Scale AI Agents (Wolters Kluwer data)", url: "https://www.fintechfutures.com/ai-in-fintech/banking-in-2026-production-scale-ai-agents" },
+      { title: "Fiserv — Launches agentOS: The Operating System for Agentic AI in Banking", url: "https://investors.fiserv.com/news-releases/news-release-details/fiserv-launches-agentos-operating-system-agentic-ai-banking" },
+      { title: "Kore.ai — AI Agents in Finance and Banking: 12 Proven Use Cases (2026)", url: "https://www.kore.ai/blog/ai-agents-in-finance-banking-12-proven-use-cases-2026" },
+    ],
+  },
   {
     slug: "commerce-media-passed-tv-agents-buying",
     title: "Commerce media just passed TV. And the agents are taking the keyboard.",
@@ -1511,6 +1604,15 @@ export default async function PostPage({
     keywords: [post.tag, "Christopher Dorsey", "AI", "MadTech", "GEO"].join(", "),
     image: "https://chrisdorsey.co/opengraph-image",
     inLanguage: "en-US",
+    ...(post.sources?.length
+      ? {
+          citation: post.sources.map((s) => ({
+            "@type": "CreativeWork",
+            name: s.title,
+            url: s.url,
+          })),
+        }
+      : {}),
   };
 
   return (
@@ -1626,6 +1728,27 @@ export default async function PostPage({
           `}</style>
           {post.content}
         </div>
+
+        {/* Sources — GEO citations */}
+        {post.sources?.length ? (
+          <div className="mt-14 pt-8 border-t border-sky-200">
+            <p className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">Sources</p>
+            <ol className="space-y-2 list-decimal list-inside">
+              {post.sources.map((s, i) => (
+                <li key={i} className="text-sm text-slate-600 leading-relaxed">
+                  <a
+                    href={s.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-700 underline underline-offset-2"
+                  >
+                    {s.title}
+                  </a>
+                </li>
+              ))}
+            </ol>
+          </div>
+        ) : null}
 
         {/* Share — bottom */}
         <div className="mt-16 pt-8 border-t border-sky-200">
