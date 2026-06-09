@@ -200,8 +200,8 @@ export default function ChrisDorseySite() {
             and Merck, then led go-to-market at Zeta Global for the first email-based AI customer acquisition product
             to reach market — built on an opted-in email universe of up to 135M US adults with no existing budgets,
             contacts, or category playbook — and most recently served as Sales and GTM Advisor at FancyAI, their
-            first sales hire, building the go-to-market motion from zero in the GEO category. He graduated from Elon University and currently consults
-            independently on Generative Engine Optimization go-to-market and sales strategy.
+            first sales hire, building the go-to-market motion from zero in the GEO category. He graduated from Elon University and currently provides
+            pro bono AI consulting to small businesses, helping Main Street owners put AI to work so they can stay in business.
           </p>
         </aside>
 
@@ -271,8 +271,8 @@ export default function ChrisDorseySite() {
           {/* Personality strip */}
           <div className="max-w-6xl mx-auto mt-14">
             <p className="text-sm text-slate-500 leading-relaxed">
-              Based in <span className="text-slate-700 font-medium">Denver, CO</span>. Currently consulting in the{" "}
-              <span className="text-slate-700 font-medium">Generative Engine Optimization</span> space. On rotation:{" "}
+              Based in <span className="text-slate-700 font-medium">Denver, CO</span>. Currently supporting Main Street with{" "}
+              <span className="text-slate-700 font-medium">pro bono AI consulting</span> for small businesses. On rotation:{" "}
               {[
                 { name: "King Gizzard & the Lizard Wizard", url: "https://music.youtube.com/search?q=King+Gizzard+and+the+Lizard+Wizard" },
                 { name: "Talking Heads", url: "https://music.youtube.com/search?q=Talking+Heads" },
@@ -419,7 +419,7 @@ export default function ChrisDorseySite() {
                   <div className="text-xs uppercase tracking-widest text-blue-400 bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/30 font-bold">
                     Now
                   </div>
-                  <span className="text-xs text-slate-400">Updated May 2026</span>
+                  <span className="text-xs text-slate-400">Updated June 2026</span>
                 </div>
                 <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-12 leading-tight" style={serif}>
                   What I&apos;m working on right now.
@@ -429,11 +429,11 @@ export default function ChrisDorseySite() {
                     <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mb-4">
                       <Compass className="w-5 h-5 text-white" />
                     </div>
-                    <h3 className="font-bold mb-2 text-lg" style={serif}>Consulting in the GEO space</h3>
+                    <h3 className="font-bold mb-2 text-lg" style={serif}>Supporting Main Street with pro bono AI consulting</h3>
                     <p className="text-slate-300 text-sm leading-relaxed">
-                      Partnering with brands and agencies on go-to-market and sales strategy for Generative Engine
-                      Optimization — helping teams own the answer layer with implementation-ready content, schema, and
-                      pipeline motion that actually closes.
+                      Helping small businesses put AI to work so they can stay in business. Free, practical consulting
+                      for local owners and operators on the things that eat their week: customer follow-up, marketing,
+                      and back-office operations.
                     </p>
                   </div>
                   <div className="bg-white/5 backdrop-blur border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-emerald-500/40 transition-all">
