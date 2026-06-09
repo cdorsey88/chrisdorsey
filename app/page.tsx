@@ -431,9 +431,8 @@ export default function ChrisDorseySite() {
                     </div>
                     <h3 className="font-bold mb-2 text-lg" style={serif}>Supporting Main Street with pro bono AI consulting</h3>
                     <p className="text-slate-300 text-sm leading-relaxed">
-                      Helping small businesses put AI to work so they can stay in business. Free, practical consulting
-                      for local owners and operators on the things that eat their week: customer follow-up, marketing,
-                      and back-office operations.
+                      Helping small businesses put AI to work so they can stay in business. Free, hands-on consulting
+                      for local owners on the work that eats their week, from customer follow-up to the books.
                     </p>
                   </div>
                   <div className="bg-white/5 backdrop-blur border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-emerald-500/40 transition-all">

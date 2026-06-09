@@ -65,7 +65,7 @@ const posts: Post[] = [
 
         <h2>The read</h2>
         <p>
-          The SaaSpocalypse looked like a market tantrum. It was a repricing of what software is worth, and it&apos;s still early. The vendors who come out ahead won&apos;t be the ones with the cleverest pricing page. They&apos;ll be the ones whose sellers already knew, account by account, exactly what value they were delivering, because they&apos;d been in the room enough to say it with a number. Go find out what you&apos;re really selling before your buyer&apos;s CFO tells you.
+          Two things can be true about the SaaSpocalypse. The selloff was probably an overreaction, and the repricing underneath it is real. What it rewards is a specific kind of seller: the one who can say, account by account, what the product produced this year, with a number a CFO would accept. Pull up your top five accounts and write down what each one got from you in the last twelve months. If the list is thin, that&apos;s the work between now and your next renewal.
         </p>
       </div>
     ),
