@@ -172,6 +172,7 @@ export default function ChrisDorseySite() {
           </div>
           <div className="hidden md:flex gap-7 text-sm text-slate-700">
             <a href="#about"         className="hover:text-blue-600 transition">About</a>
+            <Link href="/track-record" className="hover:text-blue-600 transition">Track Record</Link>
             <a href="#now"           className="hover:text-blue-600 transition">Now</a>
             <a href="#writing"       className="hover:text-blue-600 transition">Thoughts</a>
             <a href="#builds"        className="hover:text-blue-600 transition">AI Sales Tools</a>
