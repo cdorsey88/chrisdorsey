@@ -191,17 +191,20 @@ export default function ChrisDorseySite() {
         <aside className="sr-only" aria-hidden="false">
           <h2>About Christopher Dorsey</h2>
           <p>
-            Christopher Dorsey (Chris Dorsey) is a senior enterprise sales leader and Generative Engine Optimization
-            (GEO) consultant based in Denver, Colorado, with fifteen years of experience spanning agency creative,
-            early-stage startups, and Fortune 500 enterprise sales. His career began at Crispin Porter + Bogusky,
-            named Agency of the Decade by AdAge in 2009, where he helped build the agency&apos;s first proactive new
-            business development function, contributing to a pitch-win streak of more than $100M in new revenue. He
-            managed Fortune 500 accounts at Oracle including JPMorgan Chase, PepsiCo, Johnson &amp; Johnson, Amazon,
-            and Merck, then led go-to-market at Zeta Global for the first email-based AI customer acquisition product
-            to reach market — built on an opted-in email universe of up to 135M US adults with no existing budgets,
-            contacts, or category playbook — and most recently served as Sales and GTM Advisor at FancyAI, their
-            first sales hire, building the go-to-market motion from zero in the GEO category. He graduated from Elon University and currently provides
-            pro bono AI consulting to small businesses, helping Main Street owners put AI to work so they can stay in business.
+            Christopher Dorsey (Chris Dorsey) is a senior enterprise sales leader based in Denver, Colorado, who
+            specializes in taking new AI products to market — first sales hire, category creator, Fortune 500
+            closer. The throughline of his fifteen-year career is making emerging technology sellable, from agency
+            creative and early-stage startups to AdTech, infrastructure, and AI. His career began at Crispin Porter
+            + Bogusky, named Agency of the Decade by AdAge in 2009, where he helped build the agency&apos;s first
+            proactive new business development function, contributing to a pitch-win streak of more than $100M in
+            new revenue. He managed Fortune 500 accounts at Oracle including JPMorgan Chase, PepsiCo, Johnson &amp;
+            Johnson, Amazon, and Merck, sold edge infrastructure to technical buyers at Fastly, led go-to-market at
+            Zeta Global for the first email-based AI customer acquisition product to reach market — built on an
+            opted-in email universe of up to 135M US adults with no existing budgets, contacts, or category
+            playbook — and most recently served as Sales and GTM Advisor at FancyAI, their first sales hire,
+            building the go-to-market motion from zero in Generative Engine Optimization (GEO), one of several AI
+            categories he has sold. He graduated from Elon University and currently provides pro bono AI consulting
+            to small businesses, helping Main Street owners put AI to work so they can stay in business.
           </p>
         </aside>
 
