@@ -695,7 +695,7 @@ export default function ChrisDorseySite() {
                 <p className="text-white/85 text-lg mb-10">I respond to every note personally.</p>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
                   <a
-                    href="mailto:ctjdorsey@gmail.com"
+                    href={`mailto:${CONTACT_EMAIL}`}
                     className="bg-white text-slate-900 px-6 py-3 rounded-full hover:bg-slate-100 transition flex items-center justify-center gap-2 font-semibold flex-1"
                   >
                     <Mail className="w-4 h-4" /> Email me
@@ -731,9 +731,9 @@ export default function ChrisDorseySite() {
             © 2026 Christopher Dorsey. Built in The Rockies, Colorado.
           </div>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-blue-600 transition">RSS</a>
+            <a href="/feed.xml" className="hover:text-blue-600 transition">RSS</a>
             <a href="https://www.linkedin.com/in/cdorsey/" className="hover:text-blue-600 transition">LinkedIn</a>
-            <a href="mailto:ctjdorsey@gmail.com" className="hover:text-blue-600 transition">Email</a>
+            <a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-blue-600 transition">Email</a>
           </div>
         </div>
       </footer>

@@ -1,4 +1,5 @@
 import React from "react";
+import { CONTACT_EMAIL } from "@/app/lib/site-config";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, Calendar, Clock } from "lucide-react";
@@ -1889,7 +1890,7 @@ export default async function PostPage({
             />
             <div className="flex-1 min-w-0">
               <p className="text-base font-bold text-slate-900" style={serif}>Christopher Dorsey</p>
-              <p className="text-sm text-slate-500 mb-3">AI &amp; MadTech Advisor · Enterprise Sales Leader · GEO Consultant · Denver, CO</p>
+              <p className="text-sm text-slate-500 mb-3">Enterprise Sales Leader · AI Go-To-Market · Denver, CO</p>
               <p className="text-sm text-slate-600 leading-relaxed mb-4">
                 Fifteen years selling technology to Fortune 500 brands across AI, advertising, and data infrastructure
                 — most recently at Zeta Global, Oracle, and Fastly. Currently advising founders and sales leaders on
@@ -1906,10 +1907,10 @@ export default async function PostPage({
                 </a>
                 <span className="text-slate-300">·</span>
                 <a
-                  href="mailto:ctjdorsey@gmail.com"
+                  href={`mailto:${CONTACT_EMAIL}`}
                   className="inline-flex items-center gap-1.5 text-blue-600 hover:text-blue-700 font-medium"
                 >
-                  ctjdorsey@gmail.com
+                  {CONTACT_EMAIL}
                 </a>
                 <span className="text-slate-300">·</span>
                 <Link
@@ -1966,7 +1967,7 @@ export default async function PostPage({
           </p>
           <div className="flex flex-wrap gap-3">
             <a
-              href="mailto:ctjdorsey@gmail.com"
+              href={`mailto:${CONTACT_EMAIL}`}
               className="text-sm bg-gradient-to-r from-blue-600 to-emerald-600 text-white px-5 py-2.5 rounded-full hover:shadow-lg hover:shadow-blue-500/20 transition font-medium"
             >
               Get in touch

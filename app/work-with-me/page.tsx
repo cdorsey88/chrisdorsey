@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowLeft, ArrowUpRight, Mail } from "lucide-react";
 import type { Metadata } from "next";
+import { CONTACT_EMAIL } from "@/app/lib/site-config";
 
 const serif = { fontFamily: "var(--font-fraunces)" };
 
@@ -172,11 +173,11 @@ export default function WorkWithMe() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a
-                href="mailto:ctjdorsey@gmail.com"
+                href={`mailto:${CONTACT_EMAIL}`}
                 className="flex items-center justify-center gap-2 bg-white text-slate-900 font-semibold px-6 py-3 rounded-full hover:bg-slate-100 transition text-sm"
               >
                 <Mail className="w-4 h-4" />
-                ctjdorsey@gmail.com
+                {CONTACT_EMAIL}
               </a>
               <a
                 href="https://calendar.app.google/WdU29EvH2jzfwNHe9"
