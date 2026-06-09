@@ -8,6 +8,9 @@ const serif = { fontFamily: "var(--font-fraunces)" };
 export const metadata: Metadata = {
   title: "Thoughts — Christopher Dorsey",
   description: "Writing on AI, GEO, enterprise sales, and the future of how technology gets bought and sold.",
+  alternates: {
+    canonical: "https://chrisdorsey.co/writing",
+  },
 };
 
 export default function WritingIndex() {

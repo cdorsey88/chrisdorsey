@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "Work With Me — Christopher Dorsey",
   description:
     "GEO strategy, enterprise sales advisory, and startup counsel from a 15-year GTM leader. Based in Denver, working everywhere.",
+  alternates: {
+    canonical: "https://chrisdorsey.co/work-with-me",
+  },
 };
 
 const offerings = [
