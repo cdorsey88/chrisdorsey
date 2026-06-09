@@ -7,22 +7,13 @@ const serif = { fontFamily: "var(--font-fraunces)" };
 export const metadata: Metadata = {
   title: "Work With Me — Christopher Dorsey",
   description:
-    "GEO strategy, enterprise sales advisory, and startup counsel from a 15-year GTM leader. Based in Denver, working everywhere.",
+    "Enterprise sales advisory, startup GTM counsel, and GEO strategy from a senior sales leader who takes new AI products to market. Based in Denver, working everywhere.",
   alternates: {
     canonical: "https://chrisdorsey.co/work-with-me",
   },
 };
 
 const offerings = [
-  {
-    label: "GEO Strategy",
-    headline: "Make your brand findable in the AI answer layer.",
-    body:
-      "Most brands have no idea how they appear — or don't appear — when buyers ask ChatGPT, Claude, or Perplexity about their category. I audit how you show up, diagnose the gaps, and build a structured plan to establish and grow your presence before the window closes. This includes schema implementation, citation strategy, content restructuring, and ongoing monitoring. Built for marketing leaders and CMOs who understand that the next SEO moment is already here.",
-    tags: ["GEO audit", "LLM visibility", "Content strategy", "Schema markup"],
-    color: "#0F6E56",
-    bg: "#E1F5EE",
-  },
   {
     label: "Enterprise Sales Advisory",
     headline: "Senior GTM leadership without the full-time overhead.",
@@ -40,6 +31,15 @@ const offerings = [
     tags: ["Pre-seed → Series D", "GTM strategy", "First enterprise sale", "Founder advisory"],
     color: "#534AB7",
     bg: "#EEEDFE",
+  },
+  {
+    label: "GEO Strategy",
+    headline: "Make your brand findable in the AI answer layer.",
+    body:
+      "Generative Engine Optimization is one of the AI categories I know from the inside — I was the first sales hire at a GEO company, building the motion in a market with no playbook. For brands, that translates to practical help: I audit how you appear when buyers ask ChatGPT, Claude, or Perplexity about your category, diagnose the gaps, and build a structured plan covering schema implementation, citation strategy, content restructuring, and ongoing monitoring. Built for marketing leaders who see that the next SEO moment is already here.",
+    tags: ["GEO audit", "LLM visibility", "Content strategy", "Schema markup"],
+    color: "#0F6E56",
+    bg: "#E1F5EE",
   },
 ];
 
