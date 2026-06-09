@@ -6,6 +6,8 @@ import {
   ArrowUpRight, Mail, Code2, Users, Calendar, Clock, Compass, ExternalLink, Zap
 } from "lucide-react";
 import { posts as allPosts } from "@/app/lib/posts-data";
+import { CONTACT_EMAIL, SHOW_TESTIMONIALS } from "@/app/lib/site-config";
+import Testimonials from "@/app/components/Testimonials";
 
 const MountainMark = ({ id = "mtn" }: { id?: string }) => (
   <svg
@@ -427,6 +429,9 @@ export default function ChrisDorseySite() {
             </div>
           </div>
         </section>
+
+        {/* Testimonials — hidden until at least 2 real quotes exist. See TESTIMONIALS-TODO.md */}
+        {SHOW_TESTIMONIALS && <Testimonials />}
 
         {/* Now */}
         <section id="now" className="relative pt-6 pb-20 px-6">
