@@ -217,19 +217,32 @@ export default function ChrisDorseySite() {
                 className="tracking-tight"
                 style={serif}
               >
-                <span className="block text-6xl md:text-7xl font-black leading-[1.05] mb-3">
-                  Startup builder.<br />Enterprise closer.<br />AI advisor.
-                </span>
-                <span className="block text-2xl md:text-4xl font-bold italic leading-tight mb-4 bg-gradient-to-r from-blue-600 via-cyan-500 to-emerald-600 bg-clip-text text-transparent">
-                  I&apos;ve been the first hire, the Fortune 500 partner, and now the AI strategist top brands trust.
-                </span>
-                <span className="block text-lg md:text-2xl font-semibold text-slate-500 leading-snug">
-                  Fortune 500 proven. Startup tested.
+                {/*
+                  Headline options — Chris to confirm. Currently shipping Option A.
+                  A: "I make new AI products sellable."
+                  B: "15 years selling what didn't exist yet — AdTech to agentic AI."
+                  C: "First sales hire. Fortune 500 closer. AI-native seller."
+                */}
+                <span className="block text-6xl md:text-7xl font-black leading-[1.05] mb-5">
+                  I make new AI products{" "}
+                  <span className="bg-gradient-to-r from-blue-600 via-cyan-500 to-emerald-600 bg-clip-text text-transparent italic">
+                    sellable.
+                  </span>
                 </span>
               </h1>
               <p className="text-lg text-slate-700 leading-relaxed max-w-xl">
-                I&apos;ve spent 15 years making emerging technology sellable — from AdTech platforms to agentic AI.
-                I build the sales motion, close the deals, and stay in it long after the contract is signed.
+                Fifteen years from first sales hire to Fortune 500 closer, selling technology that buyers
+                didn&apos;t have a budget line for yet, and building with the AI tools I sell.
+              </p>
+              {/* Hiring-audience path (Task 3) */}
+              <p className="text-sm text-slate-600">
+                Currently exploring full-time senior GTM roles at AI-native companies.{" "}
+                <Link
+                  href="/track-record"
+                  className="font-semibold text-blue-600 hover:text-emerald-600 transition inline-flex items-center gap-0.5"
+                >
+                  Resume <ArrowUpRight className="w-3.5 h-3.5" />
+                </Link>
               </p>
             </div>
 
@@ -627,9 +640,10 @@ export default function ChrisDorseySite() {
               <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full blur-3xl" />
               <div className="relative">
                 <div className="text-xs uppercase tracking-widest text-white/80 mb-4 font-bold">Get in touch</div>
-                <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-10 leading-tight" style={serif}>
-                  The best deals start with a real conversation.
+                <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4 leading-tight" style={serif}>
+                  Whether you&apos;re hiring, building, or stuck on a deal.
                 </h2>
+                <p className="text-white/85 text-lg mb-10">I respond to every note personally.</p>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
                   <a
                     href="mailto:ctjdorsey@gmail.com"
