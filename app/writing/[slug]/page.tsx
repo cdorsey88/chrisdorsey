@@ -1371,6 +1371,10 @@ const posts: Post[] = [
         </p>
       </div>
     ),
+    sources: [
+      { title: "Aggarwal et al. — GEO: Generative Engine Optimization (KDD 2024)", url: "https://arxiv.org/abs/2311.09735" },
+      { title: "Gartner — Search Engine Volume Will Drop 25% by 2026, Due to AI Chatbots and Other Virtual Agents", url: "https://www.gartner.com/en/newsroom/press-releases/2024-02-19-gartner-predicts-search-engine-volume-will-drop-25-percent-by-2026-due-to-ai-chatbots-and-other-virtual-agents" },
+    ],
   },
   {
     slug: "ai-entry-level-jobs",
@@ -1471,6 +1475,12 @@ const posts: Post[] = [
         </p>
       </div>
     ),
+    sources: [
+      { title: "Federal Reserve (FEDS Notes) — AI Adoption and Firms' Job Posting Behavior", url: "https://www.federalreserve.gov/econres/notes/feds-notes/ai-adoption-and-firms-job-posting-behavior-20260327.html" },
+      { title: "Humlum & Vestergaard (NBER w33777) — Large Language Models, Small Labor Market Effects", url: "https://www.nber.org/papers/w33777" },
+      { title: "ResumeBuilder survey via Metaintro — 59% of Hiring Managers Admit AI Is Their Go-To Layoff Excuse", url: "https://www.metaintro.com/blog/hiring-managers-admit-ai-layoff-excuse-survey-2026" },
+      { title: "The Pragmatic Engineer — Will US Companies Hire Fewer Engineers Due to Section 174?", url: "https://blog.pragmaticengineer.com/section-174/" },
+    ],
   },
   {
     slug: "selling-ai-skeptical-buyers",
