@@ -99,24 +99,35 @@ export default function ChrisDorseySite() {
     },
   ];
 
+  // Each build card needs a clickable or concrete proof element before it ships.
+  // proofUrl renders a link; proofText renders an outcome line. See FILL-CHECKLIST.md.
   const builds = [
     {
       title: "SMB Business Operations Tools",
       stack: "Pro-bono · Claude API · Automation · SEO & GEO",
       desc: "Custom AI tools for main-street businesses, built pro bono. I automate the repetitive admin, sharpen their SEO and GEO, and replace the bloated software they only half-use — so local operators can compete and stay in business.",
       accent: "bg-gradient-to-br from-amber-500/10 to-orange-500/10 border-amber-200",
+      proofText: "[FILL: 1–2 sentence anonymized outcome, e.g., \"cut a bakery's weekly admin by X hours\"]",
+      proofUrl: null as string | null,
+      proofLabel: null as string | null,
     },
     {
       title: "/client-brief slash command",
       stack: "Claude Code",
       desc: "A custom slash command that pulls public signals on a prospect and drafts a discovery-ready brief in under a minute.",
       accent: "bg-gradient-to-br from-emerald-500/10 to-teal-500/10 border-emerald-200",
+      proofText: null as string | null,
+      proofUrl: "[FILL: link to GitHub gist or repo, or 60-second Loom]",
+      proofLabel: "See it work",
     },
     {
-      title: "GEO Competitive Intelligence Refresh",
+      title: "AI category landscape mapping",
       stack: "Research · Synthesis · Sales Enablement",
-      desc: "A living five-tier landscape map of the GEO space — Profound, Evertune, Goodie, Gauge, Qwairy — with a 10-vendor capability matrix.",
+      desc: "Living competitive maps and capability matrices for emerging AI categories. Current example: a five-tier landscape of the GEO space — Profound, Evertune, Goodie, Gauge, Qwairy — with a 10-vendor capability matrix.",
       accent: "bg-gradient-to-br from-teal-500/10 to-emerald-500/10 border-teal-200",
+      proofText: null as string | null,
+      proofUrl: "[FILL: link to a sample landscape map or capability matrix]",
+      proofLabel: "See a sample",
     },
   ];
 
@@ -559,9 +570,23 @@ export default function ChrisDorseySite() {
               Hands on the keyboard.
             </h2>
             <p className="text-slate-600 mb-12 max-w-2xl text-lg">
-              I think the best sellers in the next decade are the ones who actually use the tools. Here&apos;s what
-              I&apos;m shipping — and the community builds I think every seller and marketer should know about.
+              Sellers who build with AI win. I use the tools I sell, every week. Here&apos;s what I&apos;m
+              shipping, and the community builds I think every seller and marketer should know about.
             </p>
+
+            {/*
+              Future demo video embed (Task 7). Uncomment and fill when a clip exists.
+              [FILL: Loom/YouTube URL — live selling/demo clip, ~2 minutes]
+
+            <div className="mb-12 rounded-2xl overflow-hidden border border-slate-200 aspect-video">
+              <iframe
+                src="[FILL: Loom/YouTube embed URL]"
+                title="Live demo — selling with AI tools"
+                className="w-full h-full"
+                allowFullScreen
+              />
+            </div>
+            */}
 
             {/* My builds */}
             <p className="text-xs uppercase tracking-widest text-slate-500 font-bold mb-5">What I&apos;m building</p>
@@ -576,6 +601,21 @@ export default function ChrisDorseySite() {
                   </div>
                   <h3 className="font-bold mb-2 tracking-tight text-lg">{build.title}</h3>
                   <p className="text-slate-700 text-sm leading-relaxed mb-4">{build.desc}</p>
+                  {build.proofText && (
+                    <p className="text-sm text-slate-700 font-medium bg-white/70 rounded-lg px-3 py-2 mb-4">
+                      {build.proofText}
+                    </p>
+                  )}
+                  {build.proofUrl && (
+                    <a
+                      href={build.proofUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-sm font-semibold text-blue-600 hover:text-emerald-600 transition mb-4"
+                    >
+                      {build.proofLabel} <ArrowUpRight className="w-3.5 h-3.5" />
+                    </a>
+                  )}
                   <div className="text-xs text-slate-600 font-mono bg-white/60 rounded-lg px-3 py-2 inline-block">
                     {build.stack}
                   </div>
