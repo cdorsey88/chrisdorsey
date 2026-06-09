@@ -406,7 +406,10 @@ export default function ChrisDorseySite() {
               </p>
               <p>
                 Startup of one to Fortune 500. Scrappy NYC walkup to enterprise war room. The constant: be the
-                person clients want in the room when something hard needs solving.
+                person clients want in the room when something hard needs solving.{" "}
+                <Link href="/deal-stories" className="font-semibold text-blue-600 hover:text-emerald-600 transition">
+                  Three of those deals, start to finish →
+                </Link>
               </p>
               <p>
                 The other half of how I work: I build. I write Claude Code commands to automate the boring parts of
