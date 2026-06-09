@@ -11,6 +11,17 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "end-of-per-seat-pricing",
+    title: "Per-seat software is dying. Your renewal is where you'll feel it first.",
+    date: "Jun 9, 2026",
+    readTime: "7 min",
+    excerpt:
+      "Roughly $285B in software market value vanished in February once investors did the math on AI agents that don't pay for seats. Gartner expects 40% of enterprise software spend to move to usage or outcome pricing by 2030. Your renewal is about to turn from a headcount reconciliation into an outcome audit, and the seller who can prove value wins the re-rate.",
+    tag: "Sales",
+    color: "from-violet-600 to-blue-600",
+    tldr: "About $285B in software market cap evaporated in February (the 'SaaSpocalypse') as investors repriced SaaS for a world where AI agents don't buy seats. Gartner sees 40% of enterprise spend moving to usage or outcome pricing by 2030. The renewal conversation shifts from 'how many users' to 'what did this produce.' Start instrumenting the one outcome your buyer's CFO cares about now, not in Q4.",
+  },
+  {
     slug: "agentic-commerce-shopping-agents",
     title: "Your next big customer is a shopping agent that doesn't care about your brand.",
     date: "Jun 9, 2026",
