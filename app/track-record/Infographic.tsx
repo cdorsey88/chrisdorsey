@@ -131,7 +131,7 @@ const chapters: Chapter[] = [
     era: "enterprise",
     headline: "The biggest room",
     detail:
-      "Ran Oracle Advertising's largest enterprise relationship (Amazon), driving $1M+ in incremental revenue through joint business plans. Expanded Pepsi, J&J, and GSK. Led enterprise RFPs exceeding $4M.",
+      "Ran Oracle Advertising's largest enterprise relationship (Amazon), driving $1M+ in incremental revenue through joint business plans. Expanded Pepsi, J&J, and GSK. Led enterprise RFPs exceeding $4M. Tapped by NA executive leadership to represent all North American sellers, carrying market feedback on contextual audience, third-party data, and measurement products back to the people building them.",
     number: "#1",
     numberLabel: "largest client relationship at Oracle Advertising",
   },
@@ -317,6 +317,7 @@ export default function Infographic() {
           {[
             "Agency of the Decade alum",
             "Fortune 500 closer",
+            "NA sellers' voice to Oracle product leadership",
             "Two presidential campaigns' agency",
             "Sells AI, builds with AI",
             "International hand model (retired)",
