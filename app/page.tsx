@@ -342,20 +342,22 @@ export default function ChrisDorseySite() {
               </span>
             </span>
           </div>
-          <div className="hidden md:flex gap-7 text-sm text-slate-700">
-            <a href="#about"         className="hover:text-blue-600 transition">About</a>
-            <Link href="/track-record" className="hover:text-blue-600 transition">Track Record</Link>
-            <a href="#now"           className="hover:text-blue-600 transition">Now</a>
-            <a href="#writing"       className="hover:text-blue-600 transition">Thoughts</a>
-            <a href="#builds"        className="hover:text-blue-600 transition">AI Sales Tools</a>
-            <Link href="/work-with-me" className="hover:text-blue-600 transition">Work with me</Link>
+          <div className="flex items-center gap-7">
+            <div className="hidden md:flex items-center gap-7 text-sm text-slate-700">
+              <a href="#about"         className="hover:text-blue-600 transition">About</a>
+              <Link href="/track-record" className="hover:text-blue-600 transition">Track Record</Link>
+              <a href="#now"           className="hover:text-blue-600 transition">Now</a>
+              <a href="#writing"       className="hover:text-blue-600 transition">Thoughts</a>
+              <a href="#builds"        className="hover:text-blue-600 transition">AI Sales Tools</a>
+              <Link href="/work-with-me" className="hover:text-blue-600 transition">Work with me</Link>
+            </div>
+            <a
+              href="#contact"
+              className="text-sm bg-gradient-to-r from-blue-600 to-emerald-600 text-white px-4 py-1.5 rounded-full hover:shadow-lg hover:shadow-blue-500/30 hover:scale-105 transition-all flex items-center gap-1 font-medium"
+            >
+              Say hi! <Zap className="w-3.5 h-3.5 fill-white" />
+            </a>
           </div>
-          <a
-            href="#contact"
-            className="text-sm bg-gradient-to-r from-blue-600 to-emerald-600 text-white px-5 py-2 rounded-full hover:shadow-lg hover:shadow-blue-500/30 transition flex items-center gap-1 font-medium"
-          >
-            Say hi! <Zap className="w-3.5 h-3.5 fill-white" />
-          </a>
         </div>
       </nav>
 
@@ -653,6 +655,14 @@ export default function ChrisDorseySite() {
                 All {allPosts.length} posts <ArrowUpRight className="w-3.5 h-3.5" />
               </Link>
             </div>
+            <p className="text-slate-600 text-lg leading-relaxed max-w-3xl mb-12 -mt-4">
+              My beat is advertising, marketing, tech, and AI, and the approach is the same one I bring to
+              sales: look for the angle everyone else walked past. I publish while the news is still warm,
+              with sources attached and probability estimates wherever I&apos;m sticking my neck out. Some
+              people have started calling this thought leadership. I avoid the term, mostly because the
+              people who reach for it are exactly who you suspect they are. But the writing is better than
+              a salesperson&apos;s has any right to be, and I&apos;ll own that part.
+            </p>
             <div className="grid gap-5">
               {posts.map((post, i) => (
                 <Link
