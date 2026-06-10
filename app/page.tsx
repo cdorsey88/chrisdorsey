@@ -232,21 +232,21 @@ export default function ChrisDorseySite() {
                 style={serif}
               >
                 {/*
-                  Headline options — Chris to confirm. Currently shipping Option A.
-                  A: "I make new AI products sellable."
-                  B: "15 years selling what didn't exist yet — AdTech to agentic AI."
-                  C: "First sales hire. Fortune 500 closer. AI-native seller."
+                  Headline: fact-based, no first-person claim. Chris rejected
+                  tagline-style lines as too self-promotional. Plan: swap in a
+                  client quote from LinkedIn recommendations when testimonials land.
                 */}
-                <span className="block text-6xl md:text-7xl font-black leading-[1.05] mb-5">
-                  I make new AI products{" "}
+                <span className="block text-5xl md:text-7xl font-black leading-[1.05] mb-5">
+                  Fifteen years selling new technology to the{" "}
                   <span className="bg-gradient-to-r from-blue-600 via-cyan-500 to-emerald-600 bg-clip-text text-transparent italic">
-                    sellable.
+                    Fortune 500.
                   </span>
                 </span>
               </h1>
               <p className="text-lg text-slate-700 leading-relaxed max-w-xl">
-                Fifteen years from first sales hire to Fortune 500 closer, selling technology that buyers
-                didn&apos;t have a budget line for yet, and building with the AI tools I sell.
+                First sales hire twice, selling technology that buyers didn&apos;t have a budget line
+                for yet, and building with the AI tools I sell. Clients tend to keep me around long
+                after the contract is signed.
               </p>
               {/* Hiring-audience path (Task 3) */}
               <p className="text-sm text-slate-600">
