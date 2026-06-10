@@ -147,13 +147,13 @@ const chapters: Chapter[] = [
   },
   {
     company: "FancyAI",
-    years: "2026–",
+    years: "2026",
     era: "ai",
     headline: "First seller in the building, again",
     detail:
-      "An advisory and consulting engagement as FancyAI's first seller: building the go-to-market motion from zero in Generative Engine Optimization, a category most buyers don't have a budget line for yet. The second time starting a sales motion from scratch.",
+      "An advisory and consulting engagement as FancyAI's first seller. Built the go-to-market motion from zero in Generative Engine Optimization, a category most buyers didn't have a budget line for yet. The second time starting a sales motion from scratch.",
     number: "0→1",
-    numberLabel: "building the playbook in real time",
+    numberLabel: "sales motion built from scratch",
   },
 ];
 
