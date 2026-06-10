@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Fraunces, DM_Serif_Display } from "next/font/google";
+import { Inter, Newsreader } from "next/font/google";
 import "./globals.css";
 import { CONTACT_EMAIL } from "@/app/lib/site-config";
 
@@ -9,17 +9,11 @@ const inter = Inter({
   display: "swap",
 });
 
-const fraunces = Fraunces({
+const newsreader = Newsreader({
   subsets: ["latin"],
-  variable: "--font-fraunces",
+  variable: "--font-serif-brand",
   display: "swap",
-});
-
-const dmSerifDisplay = DM_Serif_Display({
-  subsets: ["latin"],
-  variable: "--font-dm-serif",
-  weight: "400",
-  display: "swap",
+  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
@@ -166,7 +160,7 @@ const jsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${fraunces.variable} ${dmSerifDisplay.variable}`}>
+    <html lang="en" className={`${inter.variable} ${newsreader.variable}`}>
       <body>
         {children}
         <script

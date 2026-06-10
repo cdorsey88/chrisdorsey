@@ -328,7 +328,7 @@ export default function ChrisDorseySite() {
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2.5">
             <MountainMark />
-            <span className="text-slate-900" style={{ fontFamily: "DM Serif Display", fontSize: "18px", fontWeight: 400 }}>
+            <span className="text-slate-900" style={{ fontFamily: "var(--font-fraunces)", fontSize: "18px", fontWeight: 500 }}>
               Chris{" "}
               <span
                 style={{
@@ -656,12 +656,10 @@ export default function ChrisDorseySite() {
               </Link>
             </div>
             <p className="text-slate-600 text-lg leading-relaxed max-w-3xl mb-12 -mt-4">
-              My beat is advertising, marketing, tech, and AI, and the approach is the same one I bring to
-              sales: look for the angle everyone else walked past. I publish while the news is still warm,
-              with sources attached and probability estimates wherever I&apos;m sticking my neck out. Some
-              people have started calling this thought leadership. I avoid the term, mostly because the
-              people who reach for it are exactly who you suspect they are. But the writing is better than
-              a salesperson&apos;s has any right to be, and I&apos;ll own that part.
+              My beat is advertising, marketing, tech, and AI. The approach is the one I bring to sales:
+              find the angle everyone else walked past, and publish while the news is still warm, sources
+              attached. People occasionally call this thought leadership. I won&apos;t, and the writing
+              holds up either way.
             </p>
             <div className="grid gap-5">
               {posts.map((post, i) => (

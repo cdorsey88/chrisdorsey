@@ -2,7 +2,7 @@
 
 :root {
   --font-inter: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-fraunces: "Fraunces", "Iowan Old Style", "Palatino", Georgia, serif;
+  --font-fraunces: var(--font-serif-brand), "Iowan Old Style", "Palatino", Georgia, serif;
 }
 
 body {
