@@ -89,7 +89,7 @@ const jsonLd = {
         "Senior enterprise sales leader specializing in taking AI products to market — first sales hire, category creator, Fortune 500 closer. 15 years selling AI, MadTech, and enterprise SaaS, including Generative Engine Optimization (GEO), agentic AI customer acquisition, and edge infrastructure.",
       url: "https://chrisdorsey.co/",
       email: `mailto:${CONTACT_EMAIL}`,
-      jobTitle: ["Enterprise Sales Leader", "AI Go-To-Market Leader", "Sales Strategy Advisor", "GEO Consultant"],
+      jobTitle: ["Enterprise Sales Leader", "AI Go-To-Market Leader", "Startup Advisor", "Sales Strategy Advisor", "GEO Consultant"],
       knowsAbout: [
         "AI Go-To-Market Strategy",
         "Enterprise Sales",

@@ -2000,7 +2000,7 @@ export default async function PostPage({
             />
             <div className="flex-1 min-w-0">
               <p className="text-base font-bold text-slate-900" style={serif}>Christopher Dorsey</p>
-              <p className="text-sm text-slate-500 mb-3">Enterprise Sales Leader · AI Go-To-Market · Denver, CO</p>
+              <p className="text-sm text-slate-500 mb-3">Enterprise Sales Leader · AI Go-To-Market · Startup Advisor · Denver, CO</p>
               <p className="text-sm text-slate-600 leading-relaxed mb-4">
                 Fifteen years selling technology to Fortune 500 brands across AI, advertising, and data infrastructure
                 — most recently at Zeta Global, Oracle, and Fastly. Currently advising founders and sales leaders on
