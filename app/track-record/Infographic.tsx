@@ -69,9 +69,9 @@ const chapters: Chapter[] = [
     company: "CP+B",
     years: "2010–12",
     era: "agency",
-    headline: "Agency of the Decade",
+    headline: "Where the throughline started",
     detail:
-      "Helped build the agency's first proactive new-business function at AdAge's Agency of the Decade. Clients included Microsoft Windows 8, Groupon, and Vail Resorts. Also hand-modeled internationally for Best Buy and Burger King. Seriously.",
+      "Chosen for the team that built the first proactive new-business function at AdAge's Agency of the Decade, when CP+B was one of the best agencies in the world. Creating demand where none existed has been the job ever since. Clients included Microsoft Windows 8, Groupon, and Vail Resorts. Also hand-modeled internationally for Best Buy and Burger King. Seriously.",
     number: "$100M+",
     numberLabel: "pitch-win streak",
   },
