@@ -19,7 +19,6 @@ export function GET() {
 - [Personal site and bio](${BASE}): Background, current focus, career history (Zeta Global, Oracle, Fastly, GMMB, Crispin Porter Bogusky), and current advisory work.
 - [Work with me](${BASE}/work-with-me): Enterprise sales advisory, startup GTM counsel, and GEO strategy engagements.
 - [Track record](${BASE}/track-record): Career scoreboard — roles, numbers, and results across 15 years.
-- [Deal stories](${BASE}/deal-stories): Three enterprise deals, start to finish.
 
 ## Writing
 

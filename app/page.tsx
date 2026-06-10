@@ -107,7 +107,7 @@ export default function ChrisDorseySite() {
       stack: "Pro-bono · Claude API · Automation · SEO & GEO",
       desc: "Custom AI tools for main-street businesses, built pro bono. I automate the repetitive admin, sharpen their SEO and GEO, and replace the bloated software they only half-use — so local operators can compete and stay in business.",
       accent: "bg-gradient-to-br from-amber-500/10 to-orange-500/10 border-amber-200",
-      proofText: "[FILL: 1–2 sentence anonymized outcome, e.g., \"cut a bakery's weekly admin by X hours\"]",
+      proofText: null as string | null,
       proofUrl: null as string | null,
       proofLabel: null as string | null,
     },
@@ -117,7 +117,7 @@ export default function ChrisDorseySite() {
       desc: "A custom slash command that pulls public signals on a prospect and drafts a discovery-ready brief in under a minute.",
       accent: "bg-gradient-to-br from-emerald-500/10 to-teal-500/10 border-emerald-200",
       proofText: null as string | null,
-      proofUrl: "[FILL: link to GitHub gist or repo, or 60-second Loom]",
+      proofUrl: null as string | null,
       proofLabel: "See it work",
     },
     {
@@ -126,7 +126,7 @@ export default function ChrisDorseySite() {
       desc: "Living competitive maps and capability matrices for emerging AI categories. Current example: a five-tier landscape of the GEO space — Profound, Evertune, Goodie, Gauge, Qwairy — with a 10-vendor capability matrix.",
       accent: "bg-gradient-to-br from-teal-500/10 to-emerald-500/10 border-teal-200",
       proofText: null as string | null,
-      proofUrl: "[FILL: link to a sample landscape map or capability matrix]",
+      proofUrl: null as string | null,
       proofLabel: "See a sample",
     },
   ];
@@ -419,10 +419,7 @@ export default function ChrisDorseySite() {
               </p>
               <p>
                 Startup of one to Fortune 500. Scrappy NYC walkup to enterprise war room. The constant: be the
-                person clients want in the room when something hard needs solving.{" "}
-                <Link href="/deal-stories" className="font-semibold text-blue-600 hover:text-emerald-600 transition">
-                  Three of those deals, start to finish →
-                </Link>
+                person clients want in the room when something hard needs solving.
               </p>
               <p>
                 The other half of how I work: I build. I write Claude Code commands to automate the boring parts of

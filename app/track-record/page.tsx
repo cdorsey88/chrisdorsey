@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowLeft, ArrowUpRight, Mail, FileText } from "lucide-react";
+import { ArrowLeft, Mail } from "lucide-react";
 import type { Metadata } from "next";
 import { CONTACT_EMAIL } from "@/app/lib/site-config";
 import Infographic from "./Infographic";
@@ -54,32 +54,10 @@ export default function TrackRecord() {
             Senior enterprise sales leader who takes new AI products to market. First sales hire,
             category creator, Fortune 500 closer. The details live in the resume; the shape of it lives here.
           </p>
-          <p className="text-sm text-slate-500 mb-6">Denver, CO · Open to remote</p>
-          <a
-            href="[FILL: link to PDF resume]"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-emerald-600 text-white font-semibold px-6 py-3 rounded-full hover:shadow-lg hover:shadow-blue-500/30 transition text-sm"
-          >
-            <FileText className="w-4 h-4" /> Download resume (PDF)
-          </a>
+          <p className="text-sm text-slate-500">Denver, CO · Open to remote</p>
         </div>
 
         <Infographic />
-
-        {/* Deal stories cross-link */}
-        <div className="mb-16">
-          <Link
-            href="/deal-stories"
-            className="group flex items-center justify-between bg-white border border-slate-200 rounded-2xl p-7 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-500/10 transition-all"
-          >
-            <div>
-              <h3 className="text-xl font-bold tracking-tight mb-1 group-hover:text-blue-600 transition" style={serif}>
-                Three deals, start to finish.
-              </h3>
-              <p className="text-slate-600 text-sm">How the hard ones actually got closed. Situation, obstacle, what I did, result.</p>
-            </div>
-            <ArrowUpRight className="w-5 h-5 text-slate-400 group-hover:text-blue-600 transition shrink-0" />
-          </Link>
-        </div>
 
         {/* What I'm looking for */}
         <div className="mb-16 bg-gradient-to-br from-sky-50 to-emerald-50 border-l-4 border-blue-500 rounded-r-2xl p-7">
@@ -87,7 +65,10 @@ export default function TrackRecord() {
             What I&apos;m looking for
           </h2>
           <p className="text-slate-700 leading-relaxed">
-            [FILL: target role types, e.g., Director/VP, Strategic AE; fully remote; AI-native companies — 2–3 sentences]
+            Senior individual-contributor GTM roles at AI-native companies: Account Director, Strategic
+            Account Manager, or Director-level partnerships work. The brief I want is the hard one, selling
+            something new into enterprises that haven&apos;t bought it before. Remote, or hybrid from
+            Denver/Boulder.
           </p>
         </div>
 
