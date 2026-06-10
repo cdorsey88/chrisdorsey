@@ -7,10 +7,13 @@ const serif = { fontFamily: "var(--font-fraunces)" };
 // ── Scoreboard ───────────────────────────────────────────────────────────────
 // All numbers below are real, sourced from resume (Jan 2026) and LinkedIn.
 
-type Stat = { prefix: string; end: number; suffix: string; label: string; sub: string };
+type Stat = { prefix: string; end: number; suffix: string; label: string; sub: string; text?: string };
 
 const stats: Stat[] = [
   { prefix: "", end: 15, suffix: "+", label: "Years selling technology", sub: "Agency, enterprise, AI frontier" },
+  { prefix: "", end: 7, suffix: "-figure", text: "7-figure", label: "Deals closed, repeatedly", sub: "Enterprise pilots through multi-year" },
+  { prefix: "", end: 8, suffix: "-figure", text: "8-figure", label: "Client relationships managed", sub: "Fortune 500 books of business" },
+  { prefix: "", end: 3, suffix: "", label: "Categories sold before budget lines existed", sub: "AI acquisition, GEO, contextual" },
   { prefix: "$", end: 100, suffix: "M+", label: "Pitch-win streak", sub: "CP+B, first proactive new-business function" },
   { prefix: "", end: 108, suffix: "%", label: "Net revenue retention", sub: "Fastly, technical buyers" },
   { prefix: "", end: 60, suffix: "%", label: "Book growth in one year", sub: "Oracle, $3.1M to $4.9M" },
@@ -21,7 +24,7 @@ const stats: Stat[] = [
 function CountUp({ stat, started }: { stat: Stat; started: boolean }) {
   const [val, setVal] = useState(0);
   useEffect(() => {
-    if (!started) return;
+    if (!started || stat.text) return;
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduced) {
       setVal(stat.end);
@@ -39,6 +42,7 @@ function CountUp({ stat, started }: { stat: Stat; started: boolean }) {
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
   }, [started, stat.end]);
+  if (stat.text) return <span>{stat.text}</span>;
   return (
     <span>
       {stat.prefix}
