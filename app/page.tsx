@@ -215,7 +215,7 @@ export default function ChrisDorseySite() {
             Johnson, Amazon, and Merck, sold edge infrastructure to technical buyers at Fastly, led go-to-market at
             Zeta Global for the first email-based AI customer acquisition product to reach market — built on an
             opted-in email universe of up to 135M US adults with no existing budgets, contacts, or category
-            playbook — and most recently served as Sales and GTM Advisor at FancyAI, their first sales hire,
+            playbook — and most recently served as Sales and GTM Advisor at FancyAI, an advisory and consulting role as their first seller,
             building the go-to-market motion from zero in Generative Engine Optimization (GEO), one of several AI
             categories he has sold. He graduated from Elon University and currently provides pro bono AI consulting
             to small businesses, helping Main Street owners put AI to work so they can stay in business.
@@ -244,7 +244,7 @@ export default function ChrisDorseySite() {
                 </span>
               </h1>
               <p className="text-lg text-slate-700 leading-relaxed max-w-xl">
-                First sales hire twice, selling technology that buyers didn&apos;t have a budget line
+                Twice the first seller in the building, selling technology that buyers didn&apos;t have a budget line
                 for yet, and building with the AI tools I sell. Clients tend to keep me around long
                 after the contract is signed.
               </p>
@@ -378,7 +378,7 @@ export default function ChrisDorseySite() {
               About
             </div>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-10 leading-[1.1]" style={serif}>
-              I&apos;ve been the first sales hire twice. And, once, an{" "}
+              I&apos;ve been the first seller in the building twice. And, once, an{" "}
               <span className="bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent italic">
                 international hand model.
               </span>
@@ -399,8 +399,8 @@ export default function ChrisDorseySite() {
                 Decade, helping build its first proactive new-business function. I was the first hire at an indie
                 NYC agency and helped grow it 300% in a year. I managed Amazon and Johnson &amp; Johnson for
                 Oracle. And for the last two years I&apos;ve sold AI products that reached market before their
-                budget lines existed, first at Zeta Global, now at FancyAI, where I&apos;m a first sales hire
-                again.
+                budget lines existed, first at Zeta Global, now at FancyAI, where I advise as the first seller
+                in the building.
               </p>
               <p>
                 I also build with the tools I sell. Lately that means Claude Code commands that compress prospect

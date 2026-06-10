@@ -18,7 +18,7 @@ const stats: Stat[] = [
   { prefix: "", end: 108, suffix: "%", label: "Net revenue retention", sub: "Fastly, technical buyers" },
   { prefix: "", end: 60, suffix: "%", label: "Book growth in one year", sub: "Oracle, $3.1M to $4.9M" },
   { prefix: "$", end: 4, suffix: "M+", label: "Enterprise RFPs led and won", sub: "Oracle, Fortune 500 evaluations" },
-  { prefix: "", end: 2, suffix: "×", label: "First sales hire", sub: "Cooke + Wax, FancyAI" },
+  { prefix: "", end: 2, suffix: "×", label: "First seller in the building", sub: "Cooke + Wax hire, FancyAI advisory" },
 ];
 
 function CountUp({ stat, started }: { stat: Stat; started: boolean }) {
@@ -149,9 +149,9 @@ const chapters: Chapter[] = [
     company: "FancyAI",
     years: "2026–",
     era: "ai",
-    headline: "First sales hire, again",
+    headline: "First seller in the building, again",
     detail:
-      "Building the go-to-market motion from zero in Generative Engine Optimization, a category most buyers don't have a budget line for yet. The second time starting a sales org from scratch.",
+      "An advisory and consulting engagement as FancyAI's first seller: building the go-to-market motion from zero in Generative Engine Optimization, a category most buyers don't have a budget line for yet. The second time starting a sales motion from scratch.",
     number: "0→1",
     numberLabel: "building the playbook in real time",
   },

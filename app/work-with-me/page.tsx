@@ -37,7 +37,7 @@ const offerings = [
     label: "GEO Strategy",
     headline: "Make your brand findable in the AI answer layer.",
     body:
-      "Generative Engine Optimization is one of the AI categories I know from the inside — I was the first sales hire at a GEO company, building the motion in a market with no playbook. For brands, that translates to practical help: I audit how you appear when buyers ask ChatGPT, Claude, or Perplexity about your category, diagnose the gaps, and build a structured plan covering schema implementation, citation strategy, content restructuring, and ongoing monitoring. Built for marketing leaders who see that the next SEO moment is already here.",
+      "Generative Engine Optimization is one of the AI categories I know from the inside — I advised a GEO company as its first seller, building the motion in a market with no playbook. For brands, that translates to practical help: I audit how you appear when buyers ask ChatGPT, Claude, or Perplexity about your category, diagnose the gaps, and build a structured plan covering schema implementation, citation strategy, content restructuring, and ongoing monitoring. Built for marketing leaders who see that the next SEO moment is already here.",
     tags: ["GEO audit", "LLM visibility", "Content strategy", "Schema markup"],
     color: "#0F6E56",
     bg: "#E1F5EE",
