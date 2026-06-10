@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import {
   ArrowUpRight, Mail, Code2, Users, Calendar, Clock, Compass, ExternalLink, Zap
@@ -11,21 +11,22 @@ import Testimonials from "@/app/components/Testimonials";
 
 const MountainMark = ({ id = "mtn" }: { id?: string }) => (
   <svg
-    width="38" height="24" viewBox="0 0 38 24"
+    width="30" height="22" viewBox="0 0 30 22"
     fill="none"
     aria-hidden="true"
     className="mountain-mark shrink-0"
   >
     <defs>
       <linearGradient id={`${id}-grad`} x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%"   stopColor="#2563EB" />
-        <stop offset="50%"  stopColor="#06B6D4" />
-        <stop offset="100%" stopColor="#10B981" />
+        <stop offset="0%"   stopColor="#334E8C" />
+        <stop offset="100%" stopColor="#0F6E56" />
       </linearGradient>
     </defs>
-    <path className="peak-left"   d="M1 24 L10 11 L18 24Z" fill={`url(#${id}-grad)`} opacity="0.55" />
-    <path className="peak-center" d="M11 24 L22 2 L33 24Z" fill={`url(#${id}-grad)`} />
-    <path className="peak-right"  d="M21 24 L30 13 L38 24Z" fill={`url(#${id}-grad)`} opacity="0.55" />
+    <path
+      d="M1 21 L10.5 3 Q11 2 11.6 3 L16 11 L19 6 Q19.5 5.2 20 6 L29 21 Q29.3 21.8 28.4 21.8 L1.7 21.8 Q0.7 21.8 1 21Z"
+      fill={`url(#${id}-grad)`}
+    />
+    <path d="M9 9 L11 5.5 L13 9 L11 12Z" fill="#F0F7FA" opacity="0.85" />
   </svg>
 );
 
@@ -39,6 +40,104 @@ const LinkedinIcon = () => (
 
 const serif = { fontFamily: "var(--font-fraunces)" };
 const sans  = { fontFamily: "var(--font-inter)" };
+
+const bandStats: { num?: number; suffix?: string; text?: string; label: string }[] = [
+  { num: 15, suffix: "+", label: "Years selling technology" },
+  { text: "7-figure", label: "Deals closed, repeatedly" },
+  { text: "8-figure", label: "Client relationships managed" },
+  { num: 2, suffix: "\u00d7", label: "First seller in the building" },
+];
+
+function TrackRecordBand() {
+  const ref = useRef<HTMLDivElement | null>(null);
+  const [inView, setInView] = useState(false);
+  const [tick, setTick] = useState(0);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setInView(true);
+          obs.disconnect();
+        }
+      },
+      { threshold: 0.35 }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!inView) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setTick(1);
+      return;
+    }
+    const t0 = performance.now();
+    let raf: number;
+    const step = (t: number) => {
+      const p = Math.min((t - t0) / 900, 1);
+      setTick(1 - Math.pow(1 - p, 3));
+      if (p < 1) raf = requestAnimationFrame(step);
+    };
+    raf = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(raf);
+  }, [inView]);
+
+  return (
+    <section aria-label="Track record highlights" className="relative pt-2 pb-10 px-6">
+      <div className="max-w-5xl mx-auto" ref={ref}>
+        <Link
+          href="/track-record"
+          className="group/band block bg-white/80 border border-sky-100 rounded-3xl p-8 md:p-10 transition-all duration-300 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-0.5"
+          style={{
+            opacity: inView ? 1 : 0,
+            transform: inView ? "translateY(0)" : "translateY(20px)",
+            transition: "opacity 600ms ease, transform 600ms ease, box-shadow 300ms ease, border-color 300ms ease",
+          }}
+        >
+          <div className="flex flex-col lg:flex-row lg:items-center gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-6 flex-1">
+              {bandStats.map((stat, i) => (
+                <div
+                  key={stat.label}
+                  className="group/stat transition-transform duration-300 hover:-translate-y-1"
+                  style={{
+                    opacity: inView ? 1 : 0,
+                    transform: inView ? "translateY(0)" : "translateY(10px)",
+                    transition: `opacity 500ms ease ${i * 110}ms, transform 300ms ease`,
+                  }}
+                >
+                  <div
+                    className="text-3xl font-black leading-none text-slate-900 group-hover/stat:bg-clip-text group-hover/stat:text-transparent transition-colors duration-300"
+                    style={{ ...serif, backgroundImage: "linear-gradient(90deg, #334E8C, #0F6E56)" }}
+                  >
+                    {stat.text ?? `${Math.round((stat.num ?? 0) * tick)}${stat.suffix}`}
+                  </div>
+                  <div
+                    className="h-0.5 rounded-full mt-2 mb-2"
+                    style={{
+                      background: "linear-gradient(90deg, #334E8C, #0F6E56)",
+                      width: inView ? "1.75rem" : "0rem",
+                      transition: `width 700ms ease ${250 + i * 110}ms`,
+                    }}
+                  />
+                  <div className="text-xs uppercase tracking-widest text-slate-500 font-bold">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+            <span className="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 group-hover/band:text-emerald-700 transition shrink-0">
+              See the full track record
+              <ArrowUpRight className="w-4 h-4 group-hover/band:translate-x-0.5 group-hover/band:-translate-y-0.5 transition-transform" />
+            </span>
+          </div>
+        </Link>
+      </div>
+    </section>
+  );
+}
 
 export default function ChrisDorseySite() {
   const [scrollY, setScrollY]   = useState(0);
@@ -181,7 +280,19 @@ export default function ChrisDorseySite() {
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2.5">
             <MountainMark />
-            <span className="text-slate-900" style={{ fontFamily: "DM Serif Display", fontSize: "17px", fontWeight: 400 }}>Chris Dorsey</span>
+            <span className="text-slate-900" style={{ fontFamily: "DM Serif Display", fontSize: "18px", fontWeight: 400 }}>
+              Chris{" "}
+              <span
+                style={{
+                  background: "linear-gradient(90deg, #334E8C, #0F6E56)",
+                  WebkitBackgroundClip: "text",
+                  backgroundClip: "text",
+                  color: "transparent",
+                }}
+              >
+                Dorsey
+              </span>
+            </span>
           </div>
           <div className="hidden md:flex gap-7 text-sm text-slate-700">
             <a href="#about"         className="hover:text-blue-600 transition">About</a>
@@ -421,6 +532,9 @@ export default function ChrisDorseySite() {
 
         {/* Testimonials — hidden until at least 2 real quotes exist. See TESTIMONIALS-TODO.md */}
         {SHOW_TESTIMONIALS && <Testimonials />}
+
+        {/* Track record band */}
+        <TrackRecordBand />
 
         {/* Now */}
         <section id="now" className="relative pt-6 pb-20 px-6">

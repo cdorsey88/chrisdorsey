@@ -34,7 +34,7 @@ export default function WritingIndex() {
           </Link>
           <Link href="/" className="font-bold" style={serif}>
             <span className="text-slate-900">Christopher </span>
-            <span className="bg-gradient-to-r from-blue-600 to-emerald-500 bg-clip-text text-transparent">Dorsey</span>
+            <span className="bg-clip-text text-transparent" style={{ backgroundImage: "linear-gradient(90deg, #334E8C, #0F6E56)" }}>Dorsey</span>
           </Link>
         </div>
       </nav>
