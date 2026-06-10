@@ -11,6 +11,17 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "private-equity-software-rollups",
+    title: "When private equity buys your software vendor, the roadmap goes with it.",
+    date: "Jun 10, 2026",
+    readTime: "7 min",
+    excerpt:
+      "Thoma Bravo closed its ~$2B Verint deal and wrapped PROS, while Vista and Silver Lake circle the same profitable, sticky software now trading cheap after this year's SaaSpocalypse. When private equity buys your vendor, the roadmap you were promised gives way to margin math. A tool in your stack will likely change hands within 18 months. This is how buyers and sellers get ahead of the call.",
+    tag: "Macro",
+    color: "from-emerald-600 to-teal-600",
+    tldr: "Thoma Bravo just closed Verint (~$2B) and PROS, and Vista and Silver Lake are circling profitable, sticky software trading cheap after the SaaSpocalypse. When PE buys your vendor, the roadmap you were promised gives way to margin, price increases, and portfolio cross-sell. Odds are a tool in your stack changes hands within 18 months. Buyers: lock support and roadmap commitments in writing at your next renewal. Sellers inside an acquired company: call your accounts first and re-earn the relationship before they draft their exit.",
+  },
+  {
     slug: "end-of-per-seat-pricing",
     title: "Per-seat software is dying. Your renewal is where you'll feel it first.",
     date: "Jun 9, 2026",
