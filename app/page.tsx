@@ -326,9 +326,20 @@ export default function ChrisDorseySite() {
         aria-label="Primary navigation"
       >
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2.5">
+          <a
+            href="#"
+            aria-label="Back to top"
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+            className="flex items-center gap-2 cursor-pointer select-none hover:opacity-80 transition-opacity"
+          >
             <MountainMark />
-            <span className="text-slate-900" style={{ fontFamily: "var(--font-fraunces)", fontSize: "18px", fontWeight: 500 }}>
+            <span
+              className="text-slate-900 whitespace-nowrap"
+              style={{ fontFamily: "var(--font-fraunces)", fontSize: "21px", fontWeight: 600, lineHeight: 1, transform: "translateY(1px)" }}
+            >
               Chris{" "}
               <span
                 style={{
@@ -341,7 +352,7 @@ export default function ChrisDorseySite() {
                 Dorsey
               </span>
             </span>
-          </div>
+          </a>
           <div className="flex items-center gap-7">
             <div className="hidden md:flex items-center gap-7 text-sm text-slate-700">
               <a href="#about"         className="hover:text-blue-600 transition">About</a>
