@@ -63,7 +63,7 @@ function TrackRecordBand() {
           obs.disconnect();
         }
       },
-      { threshold: 0.35 }
+      { threshold: 0.3 }
     );
     obs.observe(el);
     return () => obs.disconnect();
@@ -78,7 +78,7 @@ function TrackRecordBand() {
     const t0 = performance.now();
     let raf: number;
     const step = (t: number) => {
-      const p = Math.min((t - t0) / 900, 1);
+      const p = Math.min((t - t0) / 2000, 1);
       setTick(1 - Math.pow(1 - p, 3));
       if (p < 1) raf = requestAnimationFrame(step);
     };
@@ -87,53 +87,101 @@ function TrackRecordBand() {
   }, [inView]);
 
   return (
-    <section aria-label="Track record highlights" className="relative pt-2 pb-10 px-6">
+    <section aria-label="Track record highlights" className="relative pt-2 pb-12 px-6">
+      <style>{`
+        @keyframes band-drift {
+          0%   { transform: translate(0, 0) scale(1); }
+          50%  { transform: translate(40px, -20px) scale(1.15); }
+          100% { transform: translate(0, 0) scale(1); }
+        }
+        @keyframes band-drift-2 {
+          0%   { transform: translate(0, 0) scale(1.1); }
+          50%  { transform: translate(-30px, 15px) scale(1); }
+          100% { transform: translate(0, 0) scale(1.1); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .band-orb { animation: none !important; }
+        }
+      `}</style>
       <div className="max-w-5xl mx-auto" ref={ref}>
-        <Link
-          href="/track-record"
-          className="group/band block bg-white/80 border border-sky-100 rounded-3xl p-8 md:p-10 transition-all duration-300 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-0.5"
+        <div
+          className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-3xl p-10 md:p-12 text-slate-100 shadow-2xl"
           style={{
             opacity: inView ? 1 : 0,
-            transform: inView ? "translateY(0)" : "translateY(20px)",
-            transition: "opacity 600ms ease, transform 600ms ease, box-shadow 300ms ease, border-color 300ms ease",
+            transform: inView ? "translateY(0)" : "translateY(28px)",
+            transition: "opacity 1200ms ease, transform 1200ms ease",
           }}
         >
-          <div className="flex flex-col lg:flex-row lg:items-center gap-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-6 flex-1">
-              {bandStats.map((stat, i) => (
-                <div
-                  key={stat.label}
-                  className="group/stat transition-transform duration-300 hover:-translate-y-1"
-                  style={{
-                    opacity: inView ? 1 : 0,
-                    transform: inView ? "translateY(0)" : "translateY(10px)",
-                    transition: `opacity 500ms ease ${i * 110}ms, transform 300ms ease`,
-                  }}
-                >
+          <div
+            className="band-orb absolute -top-24 -right-16 w-96 h-96 rounded-full blur-3xl pointer-events-none"
+            style={{ background: "radial-gradient(circle, rgba(56,189,248,0.25), transparent 70%)", animation: "band-drift 9s ease-in-out infinite" }}
+          />
+          <div
+            className="band-orb absolute -bottom-28 -left-16 w-80 h-80 rounded-full blur-3xl pointer-events-none"
+            style={{ background: "radial-gradient(circle, rgba(52,211,153,0.22), transparent 70%)", animation: "band-drift-2 11s ease-in-out infinite" }}
+          />
+          <div
+            className="absolute top-0 left-0 h-[3px] rounded-full"
+            style={{
+              background: "linear-gradient(90deg, #38BDF8, #34D399)",
+              width: inView ? "100%" : "0%",
+              transition: "width 2200ms ease 300ms",
+            }}
+            aria-hidden="true"
+          />
+
+          <div className="relative flex flex-col lg:flex-row lg:items-center gap-10">
+            <div className="flex-1">
+              <div className="text-xs uppercase tracking-widest text-sky-300 font-bold mb-8">Track record</div>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-8">
+                {bandStats.map((stat, i) => (
                   <div
-                    className="text-3xl font-black leading-none text-slate-900 group-hover/stat:bg-clip-text group-hover/stat:text-transparent transition-colors duration-300"
-                    style={{ ...serif, backgroundImage: "linear-gradient(90deg, #334E8C, #0F6E56)" }}
-                  >
-                    {stat.text ?? `${Math.round((stat.num ?? 0) * tick)}${stat.suffix}`}
-                  </div>
-                  <div
-                    className="h-0.5 rounded-full mt-2 mb-2"
+                    key={stat.label}
+                    className="group/stat"
                     style={{
-                      background: "linear-gradient(90deg, #334E8C, #0F6E56)",
-                      width: inView ? "1.75rem" : "0rem",
-                      transition: `width 700ms ease ${250 + i * 110}ms`,
+                      opacity: inView ? 1 : 0,
+                      transform: inView ? "translateY(0)" : "translateY(24px)",
+                      transition: `opacity 1000ms ease ${300 + i * 220}ms, transform 1000ms ease ${300 + i * 220}ms`,
                     }}
-                  />
-                  <div className="text-xs uppercase tracking-widest text-slate-500 font-bold">{stat.label}</div>
-                </div>
-              ))}
+                  >
+                    <div
+                      className="text-4xl md:text-5xl font-black leading-none bg-clip-text text-transparent transition-transform duration-500 group-hover/stat:scale-105 origin-left"
+                      style={{ ...serif, backgroundImage: "linear-gradient(120deg, #E0F2FE, #7DD3FC 55%, #6EE7B7)" }}
+                    >
+                      {stat.text ?? `${Math.round((stat.num ?? 0) * tick)}${stat.suffix}`}
+                    </div>
+                    <div
+                      className="h-0.5 rounded-full mt-3 mb-2.5"
+                      style={{
+                        background: "linear-gradient(90deg, #38BDF8, #34D399)",
+                        width: inView ? "2.25rem" : "0rem",
+                        transition: `width 1400ms ease ${700 + i * 220}ms`,
+                      }}
+                    />
+                    <div className="text-xs uppercase tracking-widest text-slate-400 font-bold group-hover/stat:text-slate-200 transition-colors duration-500">
+                      {stat.label}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
-            <span className="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 group-hover/band:text-emerald-700 transition shrink-0">
-              See the full track record
-              <ArrowUpRight className="w-4 h-4 group-hover/band:translate-x-0.5 group-hover/band:-translate-y-0.5 transition-transform" />
-            </span>
+            <div
+              className="shrink-0"
+              style={{
+                opacity: inView ? 1 : 0,
+                transform: inView ? "translateY(0)" : "translateY(24px)",
+                transition: "opacity 1000ms ease 1300ms, transform 1000ms ease 1300ms",
+              }}
+            >
+              <Link
+                href="/track-record"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-emerald-500 text-white font-semibold px-7 py-3.5 rounded-full text-sm hover:shadow-lg hover:shadow-emerald-500/30 hover:scale-105 transition-all duration-300"
+              >
+                See the full track record <ArrowUpRight className="w-4 h-4" />
+              </Link>
+            </div>
           </div>
-        </Link>
+        </div>
       </div>
     </section>
   );
