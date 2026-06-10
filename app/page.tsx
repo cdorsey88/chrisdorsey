@@ -76,14 +76,14 @@ export default function ChrisDorseySite() {
     {
       title: "Clay Custom Signals",
       by: "Clay",
-      desc: "Turn any data point Clay can reach into a buying signal, then auto-trigger personalized outreach off it. This is the operational backbone of signal-based selling — stop blasting static lists and start firing on actual buyer behavior. The thing your competitors aren't doing yet.",
+      desc: "Turn any data point Clay can reach into a buying signal, then auto-trigger personalized outreach off it. The operational backbone of signal-based selling: outreach fired on actual buyer behavior instead of static lists.",
       url: "https://www.clay.com/signals",
     },
     {
-      title: "A Rational Conversation on Where AI Is Actually Going",
-      by: "Benedict Evans × Lenny Rachitsky",
-      desc: "Evans' core argument: the model makers may end up as low-margin commodity infrastructure, and the real money flows to the application layer — the companies that own distribution and embed AI into specific workflows. If you sell software, this is the clearest map of where value accrues next.",
-      url: "https://www.lennysnewsletter.com/p/a-rational-conversation-on-where",
+      title: "Selling AI in 2026: Selling Is Easy. Staying In Is Everything",
+      by: "Matt McIlwain × Madrona",
+      desc: "The best ground-level read on enterprise AI sales this year. Pilots are easy to land now; the renewal is the real sale, and it's effectively decided in the first 90 days of production. The 45-day pilot discipline alone is worth the click.",
+      url: "https://www.madrona.com/enterprise-ai-sales-2026-selling-is-easy-staying-in-is-everything/",
     },
     {
       title: "Claude + n8n: Build Workflows from a Single Prompt",
@@ -92,10 +92,10 @@ export default function ChrisDorseySite() {
       url: "https://n8n.io/integrations/claude/",
     },
     {
-      title: "Apollo Acquires Pocus: What Signal-Based Selling Actually Means",
-      by: "Apollo",
-      desc: "Apollo bought Pocus, an enterprise revenue intelligence platform, approaching $200M ARR. The thesis: volume-based outbound is dead. Signal-based selling — outreach triggered by actual buyer behavior, not static lists — is the only model that works at current CAC levels. The implications for how you structure SDR teams are significant.",
-      url: "https://www.apollo.io/magazine/apollo-acquires-pocus",
+      title: "All Agents Will Become Coding Agents",
+      by: "Davis Treybig × Innovation Endeavors",
+      desc: "Why every useful AI agent converges on the same architecture: a model with a file system, a terminal, and the ability to write its own tools. If you sell AI products, this is where the things you'll be selling are headed.",
+      url: "https://www.innovationendeavors.com/insights/all-agents-will-become-coding-agents",
     },
   ];
 
@@ -650,33 +650,6 @@ export default function ChrisDorseySite() {
                   </div>
                 </a>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Newsletter */}
-        <section className="relative py-16 px-6">
-          <div className="max-w-3xl mx-auto">
-            <div className="bg-white/80 border border-sky-100 rounded-3xl p-10 md:p-12 text-center">
-              <div className="inline-block text-xs uppercase tracking-widest text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full mb-4 font-bold">
-                Weekly newsletter
-              </div>
-              <h2 className="text-2xl md:text-4xl font-bold tracking-tight mb-4 leading-tight" style={serif}>
-                The week in AI sales, GEO, and what&apos;s actually moving the market.
-              </h2>
-              <p className="text-slate-500 mb-8 max-w-lg mx-auto">
-                Every week: the news worth knowing, the tools worth trying, and the takes worth arguing about.
-                No fluff. Unsubscribe anytime.
-              </p>
-              <a
-                href="https://aheadofthecurvetoday.beehiiv.com/subscribe"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-emerald-600 text-white font-semibold px-8 py-3.5 rounded-full hover:shadow-lg hover:shadow-blue-500/30 transition text-sm"
-              >
-                Subscribe — it&apos;s free <ArrowUpRight className="w-4 h-4" />
-              </a>
-              <p className="text-xs text-slate-400 mt-4">Sent every week. No spam. Just signal.</p>
             </div>
           </div>
         </section>
