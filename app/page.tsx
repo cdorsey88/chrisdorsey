@@ -378,54 +378,35 @@ export default function ChrisDorseySite() {
               About
             </div>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-10 leading-[1.1]" style={serif}>
-              I&apos;ve been the first hire twice, the Fortune 500 partner to many, and even an{" "}
+              I&apos;ve been the first sales hire twice. And, once, an{" "}
               <span className="bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent italic">
                 international hand model.
               </span>
             </h2>
             <div className="space-y-6 text-lg text-slate-700 leading-relaxed">
               <p>
-                The throughline of my career has been the same from day one: figure out what a client actually needs,
-                then go build the path to get them there. I don&apos;t run pitch cycles — I run relationships. The
-                deals I&apos;m proudest of weren&apos;t won on the first call; they were earned over months of being
-                the person who showed up, asked better questions, and stayed in it long after the contract was signed.
+                The throughline of my career is simple: figure out what a client needs, then build the path to
+                get them there. The deals I&apos;m proudest of took months of showing up before anyone signed,
+                and the work kept going for years after. Most of the deciding in enterprise sales happens when
+                the seller isn&apos;t in the room. Trust is what speaks for you in there.
               </p>
               <p>
-                My first job out of college was at Crispin Porter + Bogusky — AdAge&apos;s Agency of the Decade —
-                where I helped build the agency&apos;s first proactive new-business function and contributed to a
-                $100M+ pitch-win streak. I worked an unholy number of all-nighters to keep the best creative going
-                out the door, and yes, I also hand-modeled internationally for Best Buy and Burger King. Genuinely.
+                The full fifteen years, with the numbers, lives on the{" "}
+                <Link href="/track-record" className="font-semibold text-blue-600 hover:text-emerald-600 transition">
+                  track record page
+                </Link>
+                . The short version: I started at Crispin Porter + Bogusky when it was AdAge&apos;s Agency of the
+                Decade, helping build its first proactive new-business function. I was the first hire at an indie
+                NYC agency and helped grow it 300% in a year. I managed Amazon and Johnson &amp; Johnson for
+                Oracle. And for the last two years I&apos;ve sold AI products that reached market before their
+                budget lines existed, first at Zeta Global, now at FancyAI, where I&apos;m a first sales hire
+                again.
               </p>
               <p>
-                From there I went smaller and scrappier. As the first hire at Cooke + Wax, an indie NYC ad agency,
-                I helped grow the company more than 300% in one year past $2M (and assembled a heroic number of IKEA
-                chairs along the way). I then advised Lunarpad, a bootstrapped no-code mobile platform, on bringing
-                the product to market — onboarding top-tier creative agencies as beta partners and leading BD on
-                mobile dev contracts. One of those was Cord, a voice messaging app with 1M+ users that Spotify
-                acquired in 2016.
-              </p>
-              <p>
-                Then enterprise. Oracle first — managing relationships with JPMorgan Chase, PepsiCo, J&amp;J, Amazon,
-                and Merck inside one of the largest sales organizations in the world. Fastly next, where selling to
-                engineers taught me that credibility matters more than decks. Then Zeta Global — bigger than a
-                startup, different from Oracle, and sitting on something genuinely new: an opted-in email universe
-                reaching up to 135M US adults, the largest of its kind by a wide margin. I led GTM for the first
-                email-based AI customer acquisition offering to reach market. No existing budget lines for it, no
-                established contacts, no category playbook. I identified the right decision-makers at e-commerce,
-                retail, and travel brands, built the case for allocating toward a new growth channel, and closed
-                the first accounts. Most recently, Sales and GTM Advisor at FancyAI — their first sales hire —
-                building the go-to-market motion from zero in the GEO space, a category so new most buyers
-                didn&apos;t have a budget line for it yet.
-              </p>
-              <p>
-                Startup of one to Fortune 500. Scrappy NYC walkup to enterprise war room. The constant: be the
-                person clients want in the room when something hard needs solving.
-              </p>
-              <p>
-                The other half of how I work: I build. I write Claude Code commands to automate the boring parts of
-                selling. I wire up Playwright agents that audit how prospects show up in LLMs. I read the docs. I
-                think the best sellers in the next decade are the ones who actually understand what they&apos;re
-                selling — and the only way to do that is to put your hands on it alongside your clients.
+                I also build with the tools I sell. Lately that means Claude Code commands that compress prospect
+                research from hours to minutes, and a Playwright agent that audits how brands show up in LLM
+                answers. The best sellers of the next decade will know their product at the hands-on level, and
+                the only way I know to get there is to use the thing.
               </p>
               <div className="bg-gradient-to-br from-sky-50 to-emerald-50 border-l-4 border-blue-500 rounded-r-2xl p-6 mt-8">
                 <p className="text-slate-700 italic">

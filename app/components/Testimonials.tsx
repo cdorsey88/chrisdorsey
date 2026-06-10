@@ -17,8 +17,8 @@ const testimonials: Testimonial[] = [
     quote:
       "It's a pretty rare thing to be able to balance the exact right level of support, while being proactive and also not being pushy. Chris lands this so perfectly. I can speak from direct personal experience when I say Chris knows how to form a meaningful client relationship that's built on a foundation of trust and is built to last.",
     name: "Courtney King",
-    title: "Digital Director",
-    company: "agency partner",
+    title: "Audience and Media Lead",
+    company: "Johnson & Johnson",
     relationship: "Client, Oracle Advertising",
   },
   {
