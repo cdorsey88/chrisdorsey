@@ -11,4 +11,4 @@ export const CONTACT_EMAIL = "ctjdorsey@gmail.com";
 // TESTIMONIALS
 // Never ship placeholder testimonials live. Flip to true once at least 2 real quotes
 // exist in app/components/Testimonials.tsx. See TESTIMONIALS-TODO.md.
-export const SHOW_TESTIMONIALS = false;
+export const SHOW_TESTIMONIALS = true;

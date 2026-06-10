@@ -1,6 +1,6 @@
 // Testimonials section — gated behind SHOW_TESTIMONIALS in app/lib/site-config.ts.
-// NEVER ship placeholder testimonials live. Flip the flag only when at least 2
-// real quotes below have been replaced. See TESTIMONIALS-TODO.md at the repo root.
+// All four quotes below are real, excerpted verbatim from Chris's public
+// LinkedIn recommendations (linkedin.com/in/cdorsey, pulled June 2026).
 
 const serif = { fontFamily: "var(--font-fraunces)" };
 
@@ -14,32 +14,36 @@ type Testimonial = {
 
 const testimonials: Testimonial[] = [
   {
-    quote: "[FILL: testimonial 1 — founder advised]",
-    name: "[FILL: name]",
-    title: "[FILL: title]",
-    company: "[FILL: company]",
-    relationship: "founder I advised",
+    quote:
+      "It's a pretty rare thing to be able to balance the exact right level of support, while being proactive and also not being pushy. Chris lands this so perfectly. I can speak from direct personal experience when I say Chris knows how to form a meaningful client relationship that's built on a foundation of trust and is built to last.",
+    name: "Courtney King",
+    title: "Digital Director",
+    company: "agency partner",
+    relationship: "Client, Oracle Advertising",
   },
   {
-    quote: "[FILL: testimonial 2 — former client]",
-    name: "[FILL: name]",
-    title: "[FILL: title]",
-    company: "[FILL: company]",
-    relationship: "former client",
+    quote:
+      "I was introduced to Chris when my team was looking for a programmatic audience provider and we're much better off for it. He was incredibly knowledgeable and kind as he worked with my team throughout the past year. Chris will be an asset to any org looking to improve their client relationships and outreach.",
+    name: "Ben Field",
+    title: "Sr. Transformation Lead",
+    company: "Monks",
+    relationship: "Client, Oracle Advertising",
   },
   {
-    quote: "[FILL: testimonial 3 — former manager]",
-    name: "[FILL: name]",
-    title: "[FILL: title]",
-    company: "[FILL: company]",
-    relationship: "former manager",
+    quote:
+      "He continually challenges the status quo and is keenly focused on improving results. His ability to see the big picture, influence partners to test new ideas, collaborate across teams and find or create opportunities out of any situation makes him a valuable team member.",
+    name: "Elizabeth Floyd",
+    title: "AI Insights, Gemini",
+    company: "Google",
+    relationship: "Former manager, Oracle Data Cloud",
   },
   {
-    quote: "[FILL: testimonial 4 — optional, remove if unused]",
-    name: "[FILL: name]",
-    title: "[FILL: title]",
-    company: "[FILL: company]",
-    relationship: "[FILL: relationship]",
+    quote:
+      "Together, we collaborated to craft strong, customer-first stories that truly resonated, and his ability to connect strategy with impact consistently stood out. I would confidently recommend Chris to any company that prioritizes its customers.",
+    name: "Carlos Vega",
+    title: "Sr. Director, Partnership Marketing",
+    company: "Zeta Global",
+    relationship: "Colleague, Zeta Global",
   },
 ];
 
