@@ -22,6 +22,69 @@ type Post = {
 
 const posts: Post[] = [
   {
+    slug: "where-the-boomers-went",
+    title: "The Boomers cut the cord too, and most media plans missed it",
+    date: "Jun 10, 2026",
+    readTime: "3 min",
+    tag: "MadTech",
+    color: "from-fuchsia-600 to-rose-500",
+    tldr: "The cord-cutting narrative says young viewers left cable for streaming and Boomers stayed loyal to linear. The Boomers left too. They went to FAST. Most media plans still treat the 50-plus audience as the loyal remainder, and being wrong about your most ad-tolerant audience is expensive.",
+    content: (
+      <div className="prose-content">
+        <p>
+          For about three years now the story about television has barely changed. Cord-cutting.
+          Streaming won. The young walked out on cable and the old stayed behind to keep the lights
+          on at the networks.
+        </p>
+        <p>
+          That story is half right, which is the most dangerous kind of wrong.
+        </p>
+        <p>
+          The part everyone repeats is that streaming now eats the majority of ad-supported viewing
+          time among 18-to-49 year olds. That&apos;s true. What gets lost is what the 50-plus crowd
+          was doing while the whole industry watched the kids. They left too. They just left
+          quietly, and they didn&apos;t go where the headlines kept pointing.
+        </p>
+        <p>
+          They went to FAST. Free ad-supported streaming, the Pluto and Tubi end of the dial. It
+          feels like flipping through cable channels except the bill is gone. Some people in the
+          business call it cord-relocating, which is an ugly word for a simple thing. Same lean-back
+          habit, same comfort with ads, piped in over the internet instead of a coax cable. The
+          behavior didn&apos;t change. The delivery did.
+        </p>
+        <p>
+          Most of the planning I&apos;ve seen still treats the older audience as the loyal remainder,
+          the folks who&apos;ll be there as long as linear TV is still breathing. So the math
+          underneath a lot of media plans goes: reach Boomers on traditional TV, reach everyone else
+          on streaming. That split is now wrong. And being wrong about your most ad-tolerant,
+          highest-spending audience is an expensive mistake to keep making month after month.
+        </p>
+        <p>
+          I find the gap between the headline and the reality more interesting than either one on
+          its own. &ldquo;Streaming won&rdquo; is a clean line. It fits in a slide. It also quietly
+          tells you to write off a group of people as gone when they didn&apos;t go anywhere. They
+          sat down in a different room.
+        </p>
+        <p>
+          This is the part of any market I&apos;ve always trusted least: the number everybody
+          already agrees on. Not because it&apos;s false, but because once a number becomes the
+          consensus, people stop asking what&apos;s happening underneath it. The consensus said
+          cord-cutting was a young person&apos;s exit. The behavior said something more boring and
+          more useful. A huge, valuable audience switched pipes and kept watching ads, and a lot of
+          plans haven&apos;t caught up.
+        </p>
+        <p>
+          If you sell anything, the lesson sits right there. The topline tells you what happened. It
+          rarely tells you who&apos;s still reachable and where they&apos;re sitting now. That second
+          question is usually where the money is, and it&apos;s almost never in the headline.
+        </p>
+        <p>
+          The Boomers didn&apos;t leave. Look for them on Tubi.
+        </p>
+      </div>
+    ),
+  },
+  {
     slug: "private-equity-software-rollups",
     title: "When private equity buys your software vendor, the roadmap goes with it.",
     date: "Jun 10, 2026",

@@ -11,6 +11,17 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "where-the-boomers-went",
+    title: "The Boomers cut the cord too, and most media plans missed it",
+    date: "Jun 10, 2026",
+    readTime: "3 min",
+    excerpt:
+      "For three years the cord-cutting story has been about the young walking out on cable. The 50-plus crowd quietly did the same thing while everyone watched the kids. They went to FAST, and a lot of media plans haven't caught up.",
+    tag: "MadTech",
+    color: "from-fuchsia-600 to-rose-500",
+    tldr: "The cord-cutting narrative says young viewers left cable for streaming and Boomers stayed loyal to linear. The Boomers left too. They went to FAST. Most media plans still treat the 50-plus audience as the loyal remainder, and being wrong about your most ad-tolerant audience is expensive.",
+  },
+  {
     slug: "private-equity-software-rollups",
     title: "When private equity buys your software vendor, the roadmap goes with it.",
     date: "Jun 10, 2026",
