@@ -66,7 +66,8 @@ export default function TrackRecord() {
           </h2>
           <p className="text-slate-700 leading-relaxed">
             Senior individual-contributor GTM roles at AI-native companies: Account Director, Strategic
-            Account Manager, or Director-level partnerships work. The brief I want is the hard one, selling
+            Account Manager, or Director-level partnerships work. I&apos;m also open to player/coach roles,
+            carrying a number while helping a small team hit theirs. The brief I want is the hard one, selling
             something new into enterprises that haven&apos;t bought it before. Remote, or hybrid from
             Denver/Boulder.
           </p>
