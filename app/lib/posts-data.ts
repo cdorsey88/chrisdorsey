@@ -11,6 +11,17 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "openai-oracle-credits-cloud-commit",
+    title: "OpenAI now takes Oracle credits. Your AI deal is competing with money that's already spent.",
+    date: "Jun 12, 2026",
+    readTime: "5 min",
+    excerpt:
+      "OpenAI's models can now be paid for with Oracle Universal Credits, and the announcement ends by sending buyers to their Oracle rep. Cloud commitments crossed $500 billion last year, and the path of least resistance for AI budget is money the CFO already spent. The deal is moving inside the commit, and sellers who can't transact there are about to feel it.",
+    tag: "Sales",
+    color: "from-red-600 to-orange-500",
+    tldr: "OpenAI announced June 10 that its models and Codex can be bought with Oracle Universal Credits, the same day Oracle reported $638B in remaining performance obligations. Enterprise cloud commitments crossed $500B last year, and AI is increasingly bought by drawing down that pre-committed spend rather than through net-new deals. If your AI product can't be transacted inside your buyer's cloud commit, you're the expensive option at any price. Add one discovery question now: where does the money for this live, and which commit does it sit inside?",
+  },
+  {
     slug: "where-the-boomers-went",
     title: "The Boomers cut the cord too, and most media plans missed it",
     date: "Jun 10, 2026",
