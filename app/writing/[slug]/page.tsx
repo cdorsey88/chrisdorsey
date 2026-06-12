@@ -41,8 +41,7 @@ const posts: Post[] = [
         <p>
           Read the last line of that post. &ldquo;Contact your Oracle sales representative for
           details, timing, and availability.&rdquo; The most coveted product in software ends its own
-          announcement by sending buyers to another company&apos;s rep. If you sell enterprise
-          technology for a living, that sentence deserves a minute of your attention.
+          announcement by sending buyers to another company&apos;s rep. If you sell for a living, read it twice.
         </p>
 
         <h2>Money inside the commit is already spent</h2>
@@ -76,8 +75,8 @@ const posts: Post[] = [
 
         <h2>Oracle&apos;s earnings whisper the same thing</h2>
         <p>
-          There&apos;s a quieter tell in Tuesday&apos;s numbers, and I haven&apos;t seen anyone pull
-          on it. Oracle grew revenue 21% last quarter while{" "}
+          One stat from Tuesday didn&apos;t make anyone&apos;s headline. Oracle grew revenue 21%
+          last quarter while{" "}
           <a href="https://www.sec.gov/Archives/edgar/data/1341439/000119312526265848/orcl-ex99_1.htm" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">sales and marketing expense fell 10%</a>. Read those two together. When $638 billion of future revenue is
           already under contract, you need fewer people creating demand and more people managing
           drawdown. Growth up, selling cost down is what a commit-based go-to-market looks like at
@@ -90,11 +89,15 @@ const posts: Post[] = [
           For buyers, this is mostly good. One bill, pre-cleared procurement, governance the risk
           committee already blessed.{" "}
           <a href="https://newsletter.partnerinsight.io/p/one-chart-shows-cloud-marketplaces" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">Forrester pegs the procurement time savings at 60%</a>. And the convenience carries a cost that won&apos;t show up for a
-          few quarters. A commit isn&apos;t found money; it was negotiated against a usage forecast,
-          and &ldquo;we should burn down the commit&rdquo; is how a second-best tool beats a better
-          one without anyone defending the choice out loud. Every drawdown also deepens the
-          cloud&apos;s gravity at renewal, when the commitment gets renegotiated by a vendor that now
-          knows exactly how dependent you are.
+          few quarters. A commit was never free money. Your company promised a cloud provider a set
+          amount of spend, in exchange for better pricing, based on a forecast somebody made years
+          ago. Once that promise is signed, the pressure runs one direction: use it all. So when two
+          tools are on the table and only one can be paid for out of the commitment, the lesser tool
+          can win without anyone arguing for it. Nobody says &ldquo;let&apos;s buy the worse
+          one&rdquo; in a meeting. They say &ldquo;this one counts against the cloud spend we
+          already owe,&rdquo; and the meeting moves on. Each purchase routed this way also makes an
+          eventual exit harder, because by the time the contract comes up for renewal, the provider
+          can read your dependence right off its own invoices.
         </p>
 
         <h2>The read</h2>
@@ -114,17 +117,19 @@ const posts: Post[] = [
           roadmap&rdquo; is becoming the new &ldquo;SOC 2 in progress.&rdquo;
         </p>
         <p>
-          Learn the co-sell motion. The hyperscaler rep who owns your buyer&apos;s commit retires
-          quota when deals flow through their marketplace. Bring them a deal that&apos;s worth their
-          while and you&apos;ve added a seller who is inside that account every week. Ignore them and
-          they&apos;ll steer the drawdown to someone who didn&apos;t.
+          Make friends with the cloud rep. Somewhere at Amazon, Microsoft, Google, or Oracle, a
+          salesperson owns your buyer&apos;s cloud contract, and your deal counts toward that
+          person&apos;s number when it runs through their marketplace. That person is inside the
+          account every week and knows where the unspent money is. They also get paid when you win.
+          Bring them in early and you&apos;ve added a seller to your team for free. Leave them out
+          and they&apos;ll point that budget at a competitor who brought them in.
         </p>
         <p>
-          OpenAI can mint intelligence by the token, and its enterprise announcement still ends with
-          a handoff to a field rep. Distribution is deciding this market faster than capability is,
-          and half a trillion dollars of that distribution sits in commits, already spent, waiting
-          for someone to ask for it. Ask where the money lives. The rest of the deal follows from the
-          answer.
+          The longer I sit with this announcement, the funnier the ending gets. The company whose
+          product can write a rep&apos;s emails, and probably their forecast, decided that the
+          fastest road into the enterprise is a human rep with a quota and an expense account.
+          Software keeps eating the world, and the field seller keeps cashing the check. Ask where
+          the money lives. The rest of the deal follows from the answer.
         </p>
       </div>
     ),
