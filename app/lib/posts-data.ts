@@ -11,6 +11,17 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "anthropic-model-pulled-vendor-continuity-risk",
+    title: "The government pulled the best AI model on earth four days after launch. What's your fallback?",
+    date: "Jun 15, 2026",
+    readTime: "6 min",
+    excerpt:
+      "Anthropic shipped Fable 5 on June 9, its most capable model ever. By June 13 the Commerce Department had ordered it dark for every foreign national on the planet, and Anthropic shut the whole thing off to comply. If a frontier model can vanish in 96 hours by government order, model continuity just became a procurement category — and your buyer is about to start asking what happens when the model goes away.",
+    tag: "AI",
+    color: "from-rose-600 to-violet-600",
+    tldr: "Anthropic launched Fable 5 on June 9 as the most capable model it had ever shipped, then suspended all access to it and Mythos 5 by June 13 to comply with a US directive barring foreign-national access. A best-in-class model went dark in four days for reasons outside the vendor's control. Model continuity is now a real risk category buyers will price. If you sell AI, answer the 'what if my model disappears' question before the security review asks it: build model-agnostic, keep a fallback path, and make portability a feature instead of a footnote.",
+  },
+  {
     slug: "openai-oracle-credits-cloud-commit",
     title: "OpenAI now takes Oracle credits. Your AI deal is competing with money that's already spent.",
     date: "Jun 12, 2026",

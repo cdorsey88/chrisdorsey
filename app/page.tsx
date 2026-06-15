@@ -233,10 +233,10 @@ export default function ChrisDorseySite() {
       url: "https://www.madrona.com/enterprise-ai-sales-2026-selling-is-easy-staying-in-is-everything/",
     },
     {
-      title: "Claude + n8n: Build Workflows from a Single Prompt",
-      by: "n8n",
-      desc: "Claude now has live read/write access to your n8n instance — describe an automation in plain English and it architects and deploys the workflow. 7,000+ pre-built templates to start from.",
-      url: "https://n8n.io/integrations/claude/",
+      title: "Mission Andromeda: Gong Opens Its Revenue AI to Outside Agents",
+      by: "Gong",
+      desc: "Gong added native Model Context Protocol support, so agents living in Salesforce, Copilot, or your own stack can pull deal and conversation insight directly, with controls over what they see. If you run a revenue org, this is the reference for what an interoperable AI stack looks like instead of one more walled garden.",
+      url: "https://www.gong.io/press/gong-launches-mission-andromeda-expanding-its-revenue-ai-os-to-enablement-and-account-management",
     },
     {
       title: "All Agents Will Become Coding Agents",
