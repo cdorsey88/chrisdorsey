@@ -11,6 +11,17 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "ai-labs-hiring-salespeople-which-sales-jobs-last",
+    title: "The companies with the best AI on earth are hiring salespeople faster than SaaS is.",
+    date: "Jun 17, 2026",
+    readTime: "5 min",
+    excerpt:
+      "At OpenAI and Anthropic, go-to-market is the single largest category of open roles, about one in five, ahead of research and engineering. The firms most able to automate their own sales are staffing it harder than anyone. The shape of the deal explains which sales jobs are safe and which their products will absorb.",
+    tag: "Sales",
+    color: "from-sky-600 to-emerald-500",
+    tldr: "At OpenAI and Anthropic, go-to-market is the single largest hiring category: roughly one in five open roles, more than any other department, and a higher share than a typical SaaS company runs. The firms most able to automate their own sales are staffing it harder than anyone. The shape of the deal explains which sales jobs are safe: once a purchase involves multiple stakeholders, a novel budget, and procurement, the work goes back to humans. Aim your career at the ambiguous, trust-heavy, category-creating motions and away from the transactional ones.",
+  },
+  {
     slug: "anthropic-model-pulled-vendor-continuity-risk",
     title: "The government pulled the best AI model on earth four days after launch. What's your fallback?",
     date: "Jun 15, 2026",
