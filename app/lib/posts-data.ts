@@ -11,6 +11,50 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "walmart-vibe-self-serve-tv-advertising",
+    title: "Walmart bought the self-serve button for TV. It's aimed at the advertisers TV always priced out.",
+    date: "Jun 23, 2026",
+    readTime: "5 min",
+    excerpt:
+      "Walmart is acquiring Vibe.co, a self-serve connected-TV platform with 10,000+ mostly-SMB advertisers that lets you buy streaming TV like a paid-social ad. Folded into Walmart Connect, with VIZIO as the screen and Walmart's purchase data as the scoreboard, Walmart now owns the full TV-ad stack and is pointing it at the long tail TV never served.",
+    tag: "Future of Ads",
+    color: "from-violet-600 to-fuchsia-600",
+    tldr: "Walmart is acquiring Vibe.co, a self-serve connected-TV platform with 10,000+ mostly-SMB advertisers that lets you buy streaming TV like a paid-social ad — fast, measurable, no agency. Folded into Walmart Connect, with VIZIO as the screen and Walmart's purchase data as the scoreboard, Walmart now owns the full TV-ad stack and is pointing it at the long tail TV never served, including its own marketplace sellers. For sellers, self-serve plus closed-loop-to-sales is the new bar. For advertisers, you finally get measurable TV without a six-figure minimum — bought inside a system where Walmart owns the screen, the tool, and the scorecard.",
+  },
+  {
+    slug: "walmart-sparky-agentic-commerce-customer",
+    title: "Walmart let ChatGPT and Gemini sell its products. It refused to let them own the customer.",
+    date: "Jun 23, 2026",
+    readTime: "5 min",
+    excerpt:
+      "OpenAI's Instant Checkout converted about three times worse than Walmart.com, so Walmart pulled it and embedded its own Sparky agent inside ChatGPT and Gemini — and conversion climbed back to ~70% of its site rate. The lesson: take the platforms' reach, keep the data, identity, and checkout. Amazon stays walled; the AI platforms want the transaction; Walmart found a third path other brands can copy.",
+    tag: "Future of Ads",
+    color: "from-blue-600 to-cyan-500",
+    tldr: "OpenAI's Instant Checkout promised native in-chat buying across Walmart, Shopify, and Etsy, then converted about three times worse than Walmart.com. Walmart pulled out and embedded its own Sparky agent inside ChatGPT and Gemini instead — and conversion climbed back to roughly 70% of its site rate. Walmart takes the platforms' reach while keeping its data, identity, and checkout. Amazon stays a walled garden; the AI platforms want to own the transaction; Walmart found a third path. If you sell commerce or retail-media tech, your pitch now has to answer who owns the customer after the agent. If you buy media, the shelf is becoming the agent's shortlist, and a new gatekeeper is forming.",
+  },
+  {
+    slug: "ai-ipo-clock-price-it-into-contracts",
+    title: "OpenAI and Anthropic are going public. Your AI contract should price that in.",
+    date: "Jun 23, 2026",
+    readTime: "5 min",
+    excerpt:
+      "Anthropic filed a confidential S-1; OpenAI followed, targeting a September debut around $730–850B. When your model vendor becomes a public company, its incentives change — firmer pricing, faster deprecation, tiered support. Negotiate continuity and price protection now, while a pre-IPO vendor still wants your logo.",
+    tag: "Macro",
+    color: "from-slate-700 to-emerald-600",
+    tldr: "Anthropic filed a confidential S-1 in early June; OpenAI followed, targeting a September debut around $730–850B; SpaceX had just IPO'd near $2 trillion. When your model vendor becomes a public company, its incentives change — revenue discipline, firmer pricing, faster deprecation, tiered support. If you buy AI, negotiate continuity and price protection now, while a pre-IPO vendor still wants your logo. If you sell AI built on these models, you inherited their IPO timeline, so build for portability and bring the continuity story to customers before a repricing does it for you.",
+  },
+  {
+    slug: "ai-sdr-boom-revolving-door-churn",
+    title: "The AI SDR boom is real. So is the revolving door behind it.",
+    date: "Jun 18, 2026",
+    readTime: "5 min",
+    excerpt:
+      "AI SDR tools are a multibillion-dollar category losing 50 to 70% of their customers a year, some down most of their buyers inside three months. When teams automated prospecting, reply rates fell from about 2.1% to 1.3%. Every touch got worse, and volume hid it. The churn is built in at the sale, and the same trap waits for anyone selling AI.",
+    tag: "Sales",
+    color: "from-amber-600 to-rose-600",
+    tldr: "AI SDR tools are a multibillion-dollar category with annual churn of 50 to 70%, some losing most buyers within three months. When teams automated prospecting, reply rates fell from about 2.1% with human reps to 1.3%. Every touch got worse, and volume hid it. The churn is built in at the sale: these tools are demoed on activity and renewed on outcomes, so much of the category's growth is the same seat resold to the next believer. If you buy one, write pilot criteria around converted pipeline, not meetings booked; if you sell one, refuse activity-based success metrics.",
+  },
+  {
     slug: "ai-labs-hiring-salespeople-which-sales-jobs-last",
     title: "The companies with the best AI on earth are hiring salespeople faster than SaaS is.",
     date: "Jun 17, 2026",

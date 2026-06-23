@@ -22,6 +22,196 @@ type Post = {
 
 const posts: Post[] = [
   {
+    slug: "walmart-vibe-self-serve-tv-advertising",
+    title: "Walmart bought the self-serve button for TV. It's aimed at the advertisers TV always priced out.",
+    date: "Jun 23, 2026",
+    readTime: "5 min",
+    tag: "Future of Ads",
+    color: "from-violet-600 to-fuchsia-600",
+    tldr: "Walmart is acquiring Vibe.co, a self-serve connected-TV platform with 10,000+ mostly-SMB advertisers that lets you buy streaming TV like a paid-social ad — fast, measurable, no agency. Folded into Walmart Connect, with VIZIO as the screen and Walmart's purchase data as the scoreboard, Walmart now owns the full TV-ad stack and is pointing it at the long tail TV never served, including its own marketplace sellers. For sellers, self-serve plus closed-loop-to-sales is the new bar. For advertisers, you finally get measurable TV without a six-figure minimum — bought inside a system where Walmart owns the screen, the tool, and the scorecard.",
+    content: (
+      <div className="prose-content">
+        <p>
+          Walmart announced today it&apos;s{" "}
+          <a href="https://corporate.walmart.com/news/2026/06/23/walmart-to-acquire-vibe-co-to-expand-access-to-connected-tv-advertising" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">acquiring Vibe.co</a>, a self-serve connected-TV ad platform, and folding it into Walmart Connect. Vibe&apos;s co-founder said the quiet part out loud: the platform was built &ldquo;to run streaming TV the way they run paid social &mdash; measurable, fast to launch, and optimized for better outcomes.&rdquo; That sentence is the whole acquisition.
+        </p>
+        <p>
+          Consider what self-serve plus measurement did to advertising the last time. Facebook and Google became trillion-dollar ad machines not because the creative was better, but because they let millions of small advertisers spend without ever talking to a salesperson, and see exactly what each dollar returned. Television never got that moment. It stayed gated behind agencies, insertion orders, and minimums that started where most businesses&apos; entire marketing budget ended. CTV inherited the reach of TV and most of its friction. Walmart just bought the piece that removes the friction.
+        </p>
+        <h2>Walmart now owns the whole TV-ad stack</h2>
+        <p>
+          Walmart owns VIZIO, the screen in the living room and the data about what plays on it. It&apos;s now buying Vibe, the self-serve tool that launches and optimizes the campaign. And it runs Walmart Connect, the commerce audiences and the closed-loop measurement that ties an ad to a purchase. Screen, buying tool, scoreboard, one owner. And Walmart can offer the one thing Meta and Google can&apos;t fully match for anyone selling physical products: a measured line from the TV ad to a Walmart receipt.
+        </p>
+        <p>
+          The target is the long tail that never could afford TV &mdash; Vibe&apos;s ten thousand mostly-small advertisers, mid-market challengers, and Walmart&apos;s own third-party marketplace sellers. Those marketplace sellers matter most. Amazon built a forty-billion-dollar ad business largely by selling self-serve ads to its own sellers, and Walmart is doing the same thing with streaming TV, with a commerce-data edge Amazon has to work harder to match off its own platform.
+        </p>
+        <h2>If you sell</h2>
+        <p>
+          The bar just moved. &ldquo;We offer CTV&rdquo; stops being a differentiator when a small brand can launch a measured streaming campaign on a credit card. The wedge now is self-serve activation plus measurement that ends at a sale, and the growth is in the long tail that big-brand insertion orders ignored. If you sell retail media or CTV, the unmonetized base is the small and mid-market advertiser, not another upfront with a holding company. And if you&apos;re an agency whose value to a small client was &ldquo;we can buy TV for you,&rdquo; that value is the thing being automated away. Move toward strategy and creative, or get disintermediated at the bottom of the market.
+        </p>
+        <h2>If you buy</h2>
+        <p>
+          For a small or mid-market advertiser, this is a real gift. Measurable streaming TV without an agency or a six-figure minimum, tied to actual sales, is something the medium never offered you. Take it. Just go in with your eyes open about the conflict baked into it. You&apos;re buying inside a closed loop where Walmart owns the screen, the buying tool, and the measurement that grades the campaign. That&apos;s the same setup brands spent the last decade fighting inside the walled gardens. When the platform selling you the ad is also the one telling you it worked, the grade is never neutral &mdash; marketers stopped taking Meta&apos;s and Amazon&apos;s self-reported numbers at face value and brought in independent verification to check them, and the gap between the two was often large enough to change the plan. Convenience is the whole pitch of a closed loop, and it&apos;s worth something. It&apos;s also worth insisting on third-party measurement next to Walmart&apos;s, keeping your own first-party data, and remembering that every dollar here funds a platform that sells private label against you.
+        </p>
+        <h2>The shape underneath</h2>
+        <p>
+          Put today&apos;s Walmart moves next to each other: its shopping agent inside ChatGPT and Gemini, VIZIO, now Vibe, all wired to Walmart Connect. Walmart is assembling a self-serve, full-funnel, commerce-data-backed advertising machine that looks less like a retailer with an ad business and more like a media company with stores attached. The ad business carries retail-level margins on retailer-grade data. Of everything Walmart is building right now, that may be the most valuable company inside the company.
+        </p>
+      </div>
+    ),
+    sources: [
+      { title: "Walmart — Walmart to Acquire Vibe.co to Expand Access to Connected TV Advertising (June 23, 2026)", url: "https://corporate.walmart.com/news/2026/06/23/walmart-to-acquire-vibe-co-to-expand-access-to-connected-tv-advertising" },
+      { title: "Citybiz — Walmart Acquires Vibe.co to Strengthen Connected TV Advertising Platform", url: "https://www.citybiz.co/article/864270/walmart-acquires-vibe-co-to-strengthen-connected-tv-advertising-platform/" },
+    ],
+  },
+  {
+    slug: "walmart-sparky-agentic-commerce-customer",
+    title: "Walmart let ChatGPT and Gemini sell its products. It refused to let them own the customer.",
+    date: "Jun 23, 2026",
+    readTime: "5 min",
+    tag: "Future of Ads",
+    color: "from-blue-600 to-cyan-500",
+    tldr: "OpenAI's Instant Checkout promised native in-chat buying across Walmart, Shopify, and Etsy, then converted about three times worse than Walmart.com. Walmart pulled out and embedded its own Sparky agent inside ChatGPT and Gemini instead — and conversion climbed back to roughly 70% of its site rate. Walmart takes the platforms' reach while keeping its data, identity, and checkout. Amazon stays a walled garden; the AI platforms want to own the transaction; Walmart found a third path. If you sell commerce or retail-media tech, your pitch now has to answer who owns the customer after the agent. If you buy media, the shelf is becoming the agent's shortlist, and a new gatekeeper is forming.",
+    content: (
+      <div className="prose-content">
+        <p>
+          Agentic commerce was the buzzword everyone carried into 2026: AI agents that shop, compare, and check out for you. OpenAI planted the flag with{" "}
+          <a href="https://www.cnbc.com/2026/03/20/open-ai-agentic-shopping-etsy-shopify-walmart-amazon.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">Instant Checkout</a> &mdash; buy inside ChatGPT from Walmart, Shopify merchants, and Etsy sellers without leaving the chat. Walmart put roughly 200,000 products into it last November. Then the numbers came in. Conversion ran about three times lower than when shoppers clicked through to Walmart.com, partly because the flow forced single-item purchases, every recommendation its own order and its own box, and OpenAI hadn&apos;t even built sales-tax collection yet.
+        </p>
+        <p>
+          So Walmart pulled OpenAI&apos;s checkout and put its own agent, Sparky, inside both ChatGPT and Google&apos;s Gemini instead, as a plugin where the platforms never touch the transaction.{" "}
+          <a href="https://www.techbuzz.ai/articles/walmart-dumps-openai-checkout-plugs-sparky-into-chatgpt" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">Conversion climbed back to roughly 70% of Walmart.com&apos;s rate</a>, more than double what the platform-owned checkout managed. Walmart keeps the data, the identity, and the sale, and still shows up wherever the shopper&apos;s agent lives.
+        </p>
+        <h2>Three postures, and only one most brands can copy</h2>
+        <p>
+          There are now three ways to play this. Amazon runs a walled garden: its own agent, its own app, its own data. The AI platforms want the opposite, to own the checkout and the customer relationship across every merchant that plugs in. Walmart split the difference, borrowing the platforms&apos; distribution without handing over the customer. Amazon&apos;s posture takes scale most retailers don&apos;t have. The platforms&apos; posture turns you into a commodity SKU in someone else&apos;s funnel. Walmart&apos;s is the one a brand can actually imitate: present everywhere the agents are, without giving up the data and the customer that make it a relationship.
+        </p>
+        <p>
+          That&apos;s the question every retailer now faces. When an agent stands between you and the shopper, who owns the customer? Rent that to the platform and you&apos;re one interchangeable option the agent ranks. Wall it off and you forfeit the reach. The move is to take the reach and keep the relationship.
+        </p>
+        <h2>If you sell</h2>
+        <p>
+          Whatever you sell into this &mdash; retail media, commerce tooling, the brand&apos;s own roadmap &mdash; the pitch that lands answers the new question directly: after the agent, who holds the customer and the data? &ldquo;We connect you to the AI apps&rdquo; is the floor, not the differentiator. Be inside the AI apps, but keep the customer data, the identity, and the checkout on the brand&apos;s side, and in the pitch, say plainly where that data lives, because that&apos;s the question buyers will actually press on.
+        </p>
+        <h2>If you buy</h2>
+        <p>
+          For the marketer, discovery is moving from the human&apos;s eyeballs to the agent&apos;s recommendation. Your retail-media dollars increasingly buy influence over what the agent surfaces and ranks, not just impressions a person scrolls past. Plan for two things. Getting recommended by the agent is the new shelf placement, and it rewards clean product data, reviews, and the sources the models trust, the same dynamic as showing up in an AI answer. And concentration risk: if most shoppers route through a couple of agent platforms, those platforms become the gatekeeper, with the pricing power and rule-making that follows. Anyone who built a demand engine on a platform they didn&apos;t control knows how that story tends to go.
+        </p>
+        <h2>The line worth holding</h2>
+        <p>
+          Walmart can dictate terms because it has the scale to be its own destination and the leverage to make OpenAI and Google take Sparky on Walmart&apos;s terms. Most brands have neither. So the move for everyone smaller is to decide now what you will never rent &mdash; customer identity, first-party data, the direct line to the buyer &mdash; and treat platform distribution as borrowed reach, not a home. The agents are coming to stand between you and your customer. Walmart just showed you can let them in without giving them the house.
+        </p>
+      </div>
+    ),
+    sources: [
+      { title: "TechBuzz — Walmart Dumps OpenAI Checkout, Plugs Sparky Into ChatGPT (2026)", url: "https://www.techbuzz.ai/articles/walmart-dumps-openai-checkout-plugs-sparky-into-chatgpt" },
+      { title: "CNBC — OpenAI's First Try at Agentic Shopping Stumbled. It's Trying Again (March 20, 2026)", url: "https://www.cnbc.com/2026/03/20/open-ai-agentic-shopping-etsy-shopify-walmart-amazon.html" },
+      { title: "The Paypers — Walmart Drops OpenAI Checkout and Deploys Sparky on AI Platforms", url: "https://thepaypers.com/payments/news/walmart-drops-openai-checkout-and-deploys-sparky-on-ai-platforms" },
+    ],
+  },
+  {
+    slug: "ai-ipo-clock-price-it-into-contracts",
+    title: "OpenAI and Anthropic are going public. Your AI contract should price that in.",
+    date: "Jun 23, 2026",
+    readTime: "5 min",
+    tag: "Macro",
+    color: "from-slate-700 to-emerald-600",
+    tldr: "Anthropic filed a confidential S-1 in early June; OpenAI followed, targeting a September debut around $730–850B; SpaceX had just IPO'd near $2 trillion. When your model vendor becomes a public company, its incentives change — revenue discipline, firmer pricing, faster deprecation, tiered support. If you buy AI, negotiate continuity and price protection now, while a pre-IPO vendor still wants your logo. If you sell AI built on these models, you inherited their IPO timeline, so build for portability and bring the continuity story to customers before a repricing does it for you.",
+    content: (
+      <div className="prose-content">
+        <p>
+          The AI IPO wave is here. Anthropic{" "}
+          <a href="https://www.cnbc.com/2026/06/01/anthropic-ipo-s1-prospectus.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">filed confidentially with the SEC in early June</a>, beating OpenAI to it. OpenAI{" "}
+          <a href="https://techcrunch.com/2026/06/08/following-anthropic-openai-files-confidentially-for-ipo/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">filed days later</a>, aiming for a September listing in the $730 to $850 billion range, with some reports putting it past a trillion. SpaceX had just gone public near $2 trillion, the largest IPO ever. The coverage is about valuations and bragging rights. The part that matters if you run your business on these models is simpler: a private lab optimizes for growth and capability; a public one answers to quarters. That shift reaches all the way down to your contract.
+        </p>
+        <h2>What changes when your vendor answers to shareholders</h2>
+        <p>
+          A few things, predictably. Pricing firms up, as the generous startup credits and free tiers get rationalized to defend the margins the company just promised Wall Street. Anthropic already started charging usage credits for its top model this month; that&apos;s the direction, not the exception. Repricing mid-relationship becomes normal, with new usage meters alongside it. Deprecation speeds up, because a public company retires unprofitable models on a board&apos;s timeline, not yours, and the model you built a workflow on may sunset before you&apos;re ready. And support concentrates on the accounts that move the revenue number. None of this is villainy. It&apos;s what the public markets require. It just lands on the enterprises that bet their workflows on these vendors.
+        </p>
+        <h2>If you buy</h2>
+        <p>
+          Price the IPO, not just the model. Your leverage is highest right now, before the lockups expire and the margin pressure starts, while a pre-IPO vendor still wants your logo and your ARR for its S-1 story. Use it. Get price protection or caps in writing. Get deprecation notice periods and continuity terms that survive a roadmap change. Keep a tested fallback model so a sudden reprice isn&apos;t an emergency. Treat &ldquo;which models can this run on&rdquo; as a procurement question with the same weight as uptime. The vendor courting you today with startup generosity will be a different counterparty once it has shareholders and a margin to defend.
+        </p>
+        <h2>If you sell</h2>
+        <p>
+          If your product is built on one of these models, you just inherited its IPO calendar. Your cost of goods and your roadmap now move with someone else&apos;s quarterly pressure. Two moves protect you. Build model-agnostic, so a vendor&apos;s repricing doesn&apos;t wreck your margin or your customer&apos;s experience overnight. And get ahead of it with your accounts: bring the continuity story to the table &mdash; here&apos;s our primary model, here&apos;s the one we fail over to, here&apos;s how your price is insulated &mdash; rather than waiting for a reprice to detonate a renewal. The sellers who look like adults this year are the ones who priced the IPO before their vendor did.
+        </p>
+        <h2>The drift to watch</h2>
+        <p>
+          Two things can be true. Going public is good for the labs &mdash; capital, durability, the legitimacy that wins enterprise deals. And it adds a variable everyone downstream has to manage. Your relationship with an AI vendor doesn&apos;t get worse the day it rings the bell. It starts answering to a different set of masters, and the terms drift toward whoever those masters are. Build and buy as if that&apos;s already true, because in a quarter or two it will be.
+        </p>
+      </div>
+    ),
+    sources: [
+      { title: "CNBC — Anthropic Confidentially Files IPO Prospectus with SEC (June 1, 2026)", url: "https://www.cnbc.com/2026/06/01/anthropic-ipo-s1-prospectus.html" },
+      { title: "TechCrunch — Following Anthropic, OpenAI Files Confidentially for IPO (June 8, 2026)", url: "https://techcrunch.com/2026/06/08/following-anthropic-openai-files-confidentially-for-ipo/" },
+    ],
+  },
+  {
+    slug: "ai-sdr-boom-revolving-door-churn",
+    title: "The AI SDR boom is real. So is the revolving door behind it.",
+    date: "Jun 18, 2026",
+    readTime: "5 min",
+    tag: "Sales",
+    color: "from-amber-600 to-rose-600",
+    tldr: "AI SDR tools are a multibillion-dollar category with annual churn of 50 to 70%, some losing most buyers within three months. When teams automated prospecting, reply rates fell from about 2.1% with human reps to 1.3%. Every touch got worse, and volume hid it. The churn is built in at the sale: these tools are demoed on activity and renewed on outcomes, so much of the category's growth is the same seat resold to the next believer. If you buy one, write pilot criteria around converted pipeline, not meetings booked; if you sell one, refuse activity-based success metrics.",
+    content: (
+      <div className="prose-content">
+        <p>
+          The pitch for an AI SDR is the cleanest in software. Fire the expensive humans who keep missing
+          quota, hire an agent that prospects around the clock for a fraction of the price. It worked. The
+          category is worth billions. It also loses customers faster than almost anything else you can buy:{" "}
+          <a href="https://prospeo.io/s/ai-bdr-agent" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">annual churn runs 50 to 70%</a>, and some tools are down most of their buyers
+          inside three months. A market that grows that fast while leaking that hard is running on a
+          treadmill. Much of the &ldquo;growth&rdquo; is the same seat sold to the next believer after the
+          last one quit.
+        </p>
+        <p>
+          The category keeps one number off its landing pages. When teams handed prospecting to the
+          machines,{" "}
+          <a href="https://salesmotion.io/blog/ai-sdrs-vs-human-sdrs" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">reply rates didn&apos;t hold steady at a lower cost. They dropped, from about 2.1% with human reps to 1.3%</a>. Every individual touch got worse. Volume buried the evidence, because ten
+          thousand mediocre emails still book a handful of meetings, and a dashboard full of activity feels
+          like progress right up until the quarter closes and the pipeline isn&apos;t there.
+        </p>
+
+        <h2>Churn that was built in at the sale</h2>
+        <p>
+          The same trap waits for anyone selling AI, not just outbound tools. These products get demoed on
+          activity: emails sent, meetings booked, pipeline &ldquo;sourced.&rdquo; Activity closes the deal,
+          because activity is visible in week two. Nobody renews on activity. They renew on whether
+          qualified pipeline turned into revenue, and that verdict doesn&apos;t land until two quarters
+          later, long after the contract was signed on a number that never predicted it. The vendor tuned
+          the demo to the metric that wins the sale and ignored the one that wins the renewal. The customer
+          churns out feeling burned and can&apos;t quite say why.
+        </p>
+        <p>
+          I learned this the expensive way. At Zeta I sold an AI customer-acquisition product into brands
+          that didn&apos;t have a budget line for it yet, and the lesson that stuck was that the renewal is
+          the sale that counts, and it&apos;s mostly won or lost in the first 90 days of production. Spend
+          that quarter celebrating activity instead of standing up the one outcome the buyer&apos;s CFO
+          actually counts, and the renewal is already gone. You just don&apos;t find out for nine months.
+        </p>
+
+        <h2>Make the vendor live on the metric that renews</h2>
+        <p>
+          Two things can be true: AI belongs in outbound, and most of the way it&apos;s sold today is a
+          churn machine wearing a growth chart. The teams getting real value run a hybrid, where the agent
+          carries volume and a human owns judgment, qualification, and the relationship, and those teams
+          report more pipeline, not less. If you&apos;re buying, write your pilot&apos;s success criteria
+          around converted, qualified pipeline, not meetings booked, and make the vendor live or die on it.
+          If you&apos;re selling, refuse activity-based success criteria even when the buyer offers them,
+          because the easy yes in month one is the expensive goodbye in month twelve. Win the metric that
+          renews, and let the demo be the smallest promise you make.
+        </p>
+      </div>
+    ),
+    sources: [
+      { title: "Prospeo — AI BDR Agent: What It Costs & Why Most Fail (2026 churn data)", url: "https://prospeo.io/s/ai-bdr-agent" },
+      { title: "Salesmotion — AI SDRs vs Human SDRs: The Real ROI Comparison for 2026 (reply-rate and hybrid data)", url: "https://salesmotion.io/blog/ai-sdrs-vs-human-sdrs" },
+      { title: "Madrona — Selling AI in 2026: Selling Is Easy, Staying In Is Everything (the renewal is decided early)", url: "https://www.madrona.com/enterprise-ai-sales-2026-selling-is-easy-staying-in-is-everything/" },
+    ],
+  },
+  {
     slug: "ai-labs-hiring-salespeople-which-sales-jobs-last",
     title: "The companies with the best AI on earth are hiring salespeople faster than SaaS is.",
     date: "Jun 17, 2026",
