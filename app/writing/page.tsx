@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ArrowLeft, Calendar, Clock } from "lucide-react";
+import { Calendar, Clock } from "lucide-react";
+import SiteNav from "@/app/components/SiteNav";
 import type { Metadata } from "next";
 import { posts } from "@/app/lib/posts-data";
 
@@ -23,21 +24,7 @@ export default function WritingIndex() {
       }}
     >
       {/* Nav */}
-      <nav className="bg-sky-50/80 backdrop-blur-md border-b border-sky-200/50 sticky top-0 z-50">
-        <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
-          <Link
-            href="/"
-            className="flex items-center gap-2 text-sm text-slate-600 hover:text-blue-600 transition font-medium"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Back
-          </Link>
-          <Link href="/" className="font-bold" style={serif}>
-            <span className="text-slate-900">Christopher </span>
-            <span className="bg-clip-text text-transparent" style={{ backgroundImage: "linear-gradient(90deg, #334E8C, #0F6E56)" }}>Dorsey</span>
-          </Link>
-        </div>
-      </nav>
+      <SiteNav />
 
       <main className="max-w-5xl mx-auto px-6 py-16">
         {/* Header */}
