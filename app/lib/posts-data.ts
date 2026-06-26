@@ -11,6 +11,28 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "spacex-cursor-neutrality-is-not-a-contract",
+    title: "Cursor was the neutral choice. The company that just bought it owns a model.",
+    date: "Jun 25, 2026",
+    readTime: "5 min",
+    excerpt:
+      "SpaceX is buying Anysphere, the company behind Cursor, for about $60 billion in stock. A huge share of developers standardized on Cursor for one reason now in question: it was neutral, routing to Claude, GPT, or Gemini without caring which you used. The buyer owns Grok — and the lesson for anyone who sells or buys AI is that “neutral” and “independent” are marketing positions, not contracts.",
+    tag: "Macro",
+    color: "from-slate-800 to-orange-600",
+    tldr: "SpaceX agreed June 16 to acquire Anysphere, maker of the AI coding tool Cursor, for roughly $60 billion in all-stock — four days after SpaceX’s IPO, with the deal expected to close in Q3. Cursor’s whole appeal was neutrality: it routed to Claude, GPT, Gemini, or its own model and didn’t take sides, a promise that carried it from about $100M to over $4B in ARR in eighteen months. But SpaceX merged with xAI and its Grok models in February, hasn’t committed to keeping Cursor model-agnostic, and has every reason to make Grok the default. For sellers, neutrality is a strong wedge and a weak moat — it wins deals against the platforms and makes you their acquisition target, so build durable value underneath it. For buyers, ask not whether a tool is model-agnostic today but what happens to you if it’s bought by someone with a model to push, and keep an exit.",
+  },
+  {
+    slug: "qualcomm-modular-lock-in-software-moat",
+    title: "Qualcomm paid $4 billion to attack a software moat. Yours is next.",
+    date: "Jun 25, 2026",
+    readTime: "5 min",
+    excerpt:
+      "Qualcomm is paying about $3.92 billion in stock for Modular, a startup that makes no chips — only software that runs an AI model across any vendor's silicon without a rewrite. The point of the deal is to break the software lock-in that's kept Nvidia on top. The lesson for anyone who sells: lock-in is now an asset someone will pay billions to dismantle, and you'd better know whether your moat is switching costs or real value.",
+    tag: "Macro",
+    color: "from-indigo-600 to-cyan-600",
+    tldr: "Qualcomm announced an all-stock deal worth roughly $3.92 billion for Modular, whose MAX platform and Mojo language let developers write an AI model once and run it on Nvidia, AMD, Apple, or Qualcomm chips with no CUDA and no rewrite. The target isn't a chip; it's Nvidia's software moat — the switching cost that keeps developers from leaving. For sellers, the deal is a warning: lock-in and value look identical on a renewal report, but only one survives a competitor offering your customer a free way out. Find out which moat you have before someone runs the test for you, and spend the next year making the product worth keeping on its own merits.",
+  },
+  {
     slug: "walmart-vibe-self-serve-tv-advertising",
     title: "Walmart bought the self-serve button for TV. It's aimed at the advertisers TV always priced out.",
     date: "Jun 23, 2026",
