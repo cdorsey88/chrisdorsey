@@ -131,7 +131,7 @@ const chapters: Chapter[] = [
     era: "enterprise",
     headline: "The biggest room",
     detail:
-      "Ran Oracle Advertising's largest enterprise relationship (Amazon), driving $1M+ in incremental revenue through joint business plans. Expanded Pepsi, J&J, and GSK. Led enterprise RFPs exceeding $4M. Tapped by NA executive leadership to represent all North American sellers, carrying market feedback on contextual audience, third-party data, and measurement products back to the people building them.",
+      "Ran Oracle Advertising's largest enterprise relationship (Amazon), driving $2.25M in incremental revenue through joint business plans. Expanded Pepsi, J&J, and GSK, and won enterprise RFPs exceeding $4M. Tapped by North American executive leadership to represent all NA sellers: I carried market feedback on contextual audience, third-party data, and measurement products into the quarterly executive product team meeting, and helped them prioritize the roadmap by revenue impact and client request volume.",
     number: "#1",
     numberLabel: "largest client relationship at Oracle Advertising",
   },
@@ -141,7 +141,7 @@ const chapters: Chapter[] = [
     era: "ai",
     headline: "A product with no category",
     detail:
-      "Took the first email-based AI acquisition product to market, built on a 250M+ person opted-in universe. No budgets existed for it, so the job was creating them. Closed $1.5M+ in pilot and follow-on revenue with new enterprise logos.",
+      "Brought the first AI, email-based customer acquisition product to market, built on a 250M+ person deterministic universe with 5,000+ data points on each individual. No budgets existed for it, so the job was creating them. Closed $1.5M+ in pilot and follow-on revenue with new enterprise logos.",
     number: "$1.5M+",
     numberLabel: "closed on a first-to-market product",
   },
@@ -151,7 +151,7 @@ const chapters: Chapter[] = [
     era: "ai",
     headline: "First seller in the building, again",
     detail:
-      "An advisory and consulting engagement as FancyAI's first seller. Built the go-to-market motion from zero in Generative Engine Optimization, a category most buyers didn't have a budget line for yet. The second time starting a sales motion from scratch.",
+      "An advisory and consulting engagement as FancyAI's first dedicated seller. Built the go-to-market motion from zero in Generative Engine Optimization, a category most buyers didn't have a budget line for yet. The second time starting a sales motion from scratch, leveraging my network to open doors at iconic brands and agencies.",
     number: "0→1",
     numberLabel: "sales motion built from scratch",
   },

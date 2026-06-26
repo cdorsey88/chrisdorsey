@@ -239,10 +239,10 @@ export default function ChrisDorseySite() {
       url: "https://www.gong.io/press/gong-launches-mission-andromeda-expanding-its-revenue-ai-os-to-enablement-and-account-management",
     },
     {
-      title: "All Agents Will Become Coding Agents",
-      by: "Davis Treybig × Innovation Endeavors",
-      desc: "Why every useful AI agent converges on the same architecture: a model with a file system, a terminal, and the ability to write its own tools. If you sell AI products, this is where the things you'll be selling are headed.",
-      url: "https://www.innovationendeavors.com/insights/all-agents-will-become-coding-agents",
+      title: "Sierra Raises $950M as the Race to Own Enterprise AI Gets Serious",
+      by: "TechCrunch",
+      desc: "Bret Taylor's Sierra raised $950M at roughly a $15.8B valuation, with more than 40% of the Fortune 50 already running its customer agents. The seller's read is in the model: this is the application-layer company built on top of OpenAI and Anthropic, capturing the enterprise relationship the model makers don't own. Worth studying for how an agent vendor lands the Fortune 50 and prices on outcomes instead of seats.",
+      url: "https://techcrunch.com/2026/05/04/sierra-raises-950m-as-the-race-to-own-enterprise-ai-gets-serious/",
     },
   ];
 
@@ -385,11 +385,11 @@ export default function ChrisDorseySite() {
             proactive new business development function, contributing to a pitch-win streak of more than $100M in
             new revenue. He managed Fortune 500 accounts at Oracle including JPMorgan Chase, PepsiCo, Johnson &amp;
             Johnson, Amazon, and Merck, sold edge infrastructure to technical buyers at Fastly, led go-to-market at
-            Zeta Global for the first email-based AI customer acquisition product to reach market — built on an
-            opted-in email universe of up to 135M US adults with no existing budgets, contacts, or category
-            playbook — and most recently completed an advisory and consulting engagement as Sales and GTM Advisor at FancyAI,
-            their first seller, where he built the go-to-market motion from zero in Generative Engine Optimization
-            (GEO), one of several AI categories he has sold. He graduated from Elon University and currently provides pro bono AI consulting
+            Zeta Global for the first email-based AI customer acquisition product to reach market — built on a
+            deterministic universe of 250M+ people with 5,000+ data points on each individual, and with no existing
+            budgets, contacts, or category playbook — and most recently completed an advisory and consulting engagement
+            as FancyAI&apos;s first dedicated seller, where he built the go-to-market motion from zero in Generative Engine
+            Optimization (GEO), one of several AI categories he has sold. He graduated from Elon University and currently provides pro bono AI consulting
             to small businesses, helping Main Street owners put AI to work so they can stay in business.
           </p>
         </aside>
