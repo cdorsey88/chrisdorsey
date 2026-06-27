@@ -3,6 +3,16 @@
 :root {
   --font-inter: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-fraunces: var(--font-serif-brand), "Iowan Old Style", "Palatino", Georgia, serif;
+  --font-display: var(--font-bricolage), "Bricolage Grotesque", var(--font-inter);
+
+  /* Redesign palette — "Connector + Evolution" (locked Jun 27, 2026) */
+  --paper: #F2ECDD;
+  --cream2: #E7DEC8;
+  --ink: #1A1613;
+  --teal: #0E9F86;   /* primary accent / CTAs */
+  --blue: #2B43E8;
+  --acid: #C7F03A;
+  --violet: #6B4BFF;
 }
 
 body {
@@ -13,6 +23,67 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Display type helper for the redesign */
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+/* Film-grain overlay — kills the "sterile" feel over the paper background */
+.grain-overlay::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.5;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.28'/%3E%3C/svg%3E");
+}
+
+/* Reveal-on-scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.in {
+  opacity: 1;
+  transform: none;
+}
+
+/* Marquee (evolution band) */
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.marquee-track {
+  display: flex;
+  white-space: nowrap;
+  animation: marquee-scroll 26s linear infinite;
+}
+
+/* Floating connector chips */
+@keyframes chip-float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+.chip-float { animation: chip-float 5s ease-in-out infinite; }
+
+/* Hard-offset "sticker" hover lift */
+.lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.lift:hover {
+  transform: translateY(-4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; }
+  .marquee-track,
+  .chip-float { animation: none; }
 }
 
 @keyframes peak-rise {

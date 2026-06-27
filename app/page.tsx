@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import {
-  ArrowUpRight, Mail, Code2, Users, Calendar, Clock, Compass, ExternalLink, Zap
+  ArrowUpRight, Mail, Code2, Users, Calendar, Clock, Compass, ExternalLink,
 } from "lucide-react";
 import { posts as allPosts } from "@/app/lib/posts-data";
 import { CONTACT_EMAIL, SHOW_TESTIMONIALS } from "@/app/lib/site-config";
@@ -38,14 +38,279 @@ const LinkedinIcon = () => (
   </svg>
 );
 
-const serif = { fontFamily: "var(--font-fraunces)" };
-const sans  = { fontFamily: "var(--font-inter)" };
+const INK = "#1A1613";
+const PAPER = "#F2ECDD";
+const CREAM2 = "#E7DEC8";
+const TEAL = "#0E9F86";
+const BLUE = "#2B43E8";
+const ACID = "#C7F03A";
+const VIOLET = "#6B4BFF";
+const MAGENTA = "#0E9F86";
 
+// Reveal-on-scroll hook (IntersectionObserver). Adds .in to the element.
+function useReveal<T extends HTMLElement>() {
+  const ref = useRef<T | null>(null);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add("in");
+            io.unobserve(e.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+  return ref;
+}
+
+// One reveal wrapper element.
+function Reveal({
+  as: Tag = "div",
+  className = "",
+  children,
+  style,
+}: {
+  as?: "div" | "section";
+  className?: string;
+  children: React.ReactNode;
+  style?: React.CSSProperties;
+}) {
+  const ref = useReveal<HTMLDivElement>();
+  return (
+    <Tag ref={ref as React.Ref<HTMLDivElement>} className={`reveal ${className}`} style={style}>
+      {children}
+    </Tag>
+  );
+}
+
+/* ---------------------------------------------------------------------------
+   Connector hub — Chris at the center of a network. Lines draw out to people,
+   pulses travel along them, and a rotating "I'll connect you with ___" line.
+   Ported from the mockup; React-idiomatic + prefers-reduced-motion gated.
+--------------------------------------------------------------------------- */
+const ROTATOR_WORDS = [
+  "founders",
+  "CMOs",
+  "data leaders",
+  "AI engineers",
+  "investors",
+  "agency execs",
+  "the right buyer",
+];
+
+function ConnectorHub() {
+  const svgRef = useRef<SVGSVGElement | null>(null);
+  const [rotWord, setRotWord] = useState(ROTATOR_WORDS[0]);
+  const [rotVisible, setRotVisible] = useState(true);
+
+  // Line draw-on + traveling pulses.
+  useEffect(() => {
+    const svg = svgRef.current;
+    if (!svg) return;
+    const reduce =
+      window.matchMedia &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    const lines = Array.from(svg.querySelectorAll<SVGLineElement>(".cline"));
+    const pulses = Array.from(svg.querySelectorAll<SVGCircleElement>(".cpulse"));
+
+    lines.forEach((l, i) => {
+      const len = Math.hypot(
+        l.x2.baseVal.value - l.x1.baseVal.value,
+        l.y2.baseVal.value - l.y1.baseVal.value
+      );
+      l.style.strokeDasharray = String(len);
+      if (reduce) {
+        l.style.strokeDashoffset = "0";
+        return;
+      }
+      l.style.strokeDashoffset = String(len);
+      l.style.transition = `stroke-dashoffset .9s ease ${i * 0.12}s`;
+      requestAnimationFrame(() =>
+        requestAnimationFrame(() => {
+          l.style.strokeDashoffset = "0";
+        })
+      );
+    });
+
+    if (reduce) return;
+
+    let raf = 0;
+    let startTimer = 0;
+    const start = performance.now();
+    const frame = (t: number) => {
+      const elapsed = t - start;
+      pulses.forEach((p, i) => {
+        const L = lines[i];
+        if (!L) return;
+        const x2 = L.x2.baseVal.value;
+        const y2 = L.y2.baseVal.value;
+        const dur = 2600;
+        const ph = i * 330;
+        const tt = ((elapsed + ph) % dur) / dur;
+        p.setAttribute("cx", (460 + (x2 - 460) * tt).toFixed(1));
+        p.setAttribute("cy", (180 + (y2 - 180) * tt).toFixed(1));
+        p.setAttribute(
+          "opacity",
+          (tt < 0.1 ? tt * 10 : tt > 0.9 ? (1 - tt) * 10 : 1).toFixed(2)
+        );
+      });
+      raf = requestAnimationFrame(frame);
+    };
+    startTimer = window.setTimeout(() => {
+      raf = requestAnimationFrame(frame);
+    }, 900);
+
+    return () => {
+      window.clearTimeout(startTimer);
+      cancelAnimationFrame(raf);
+    };
+  }, []);
+
+  // Rotating word.
+  useEffect(() => {
+    const reduce =
+      window.matchMedia &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) return;
+    let wi = 0;
+    const id = window.setInterval(() => {
+      wi = (wi + 1) % ROTATOR_WORDS.length;
+      setRotVisible(false);
+      window.setTimeout(() => {
+        setRotWord(ROTATOR_WORDS[wi]);
+        setRotVisible(true);
+      }, 200);
+    }, 2000);
+    return () => window.clearInterval(id);
+  }, []);
+
+  return (
+    <Reveal as="section">
+      <div className="text-3xl md:text-5xl font-extrabold font-display leading-[0.95]" style={{ color: INK, maxWidth: "20ch" }}>
+        Chances are, I already know who you should talk to.
+      </div>
+      <p className="text-base md:text-lg mt-4 max-w-2xl" style={{ color: "#4a4239" }}>
+        Four industries, fifteen years, one deep network — Fortune 500 CMOs to
+        seed-stage AI founders. Tell me the gap and I&apos;ll make the
+        introduction. No fee, no catch; it&apos;s just how I work.
+      </p>
+      <div className="font-display font-extrabold mt-5" style={{ fontSize: "clamp(22px,4vw,40px)", color: INK }}>
+        I&apos;ll connect you with{" "}
+        <span
+          aria-live="polite"
+          style={{
+            color: TEAL,
+            borderBottom: `6px solid ${ACID}`,
+            display: "inline-block",
+            transition: "opacity .2s ease",
+            opacity: rotVisible ? 1 : 0,
+          }}
+        >
+          {rotWord}
+        </span>
+        .
+      </div>
+
+      <svg
+        ref={svgRef}
+        viewBox="0 0 920 360"
+        className="w-full h-auto block mx-auto mt-6"
+        style={{ maxWidth: 940 }}
+        role="img"
+        aria-label="Chris at the center of a network, connected to Fortune 500 CMOs, AI founders, data leaders, investors, agency execs, and engineers and product managers."
+      >
+        <g stroke={INK} strokeWidth={2} strokeLinecap="round">
+          <line className="cline" x1="460" y1="180" x2="150" y2="64" />
+          <line className="cline" x1="460" y1="180" x2="770" y2="64" />
+          <line className="cline" x1="460" y1="180" x2="80" y2="180" />
+          <line className="cline" x1="460" y1="180" x2="840" y2="180" />
+          <line className="cline" x1="460" y1="180" x2="160" y2="300" />
+          <line className="cline" x1="460" y1="180" x2="760" y2="300" />
+        </g>
+        <g>
+          <circle className="cpulse" r="5" fill={INK} opacity="0" />
+          <circle className="cpulse" r="5" fill={INK} opacity="0" />
+          <circle className="cpulse" r="5" fill={INK} opacity="0" />
+          <circle className="cpulse" r="5" fill={INK} opacity="0" />
+          <circle className="cpulse" r="5" fill={INK} opacity="0" />
+          <circle className="cpulse" r="5" fill={INK} opacity="0" />
+        </g>
+        <g fontFamily="Inter,sans-serif" fontSize="15" fontWeight={600} textAnchor="middle">
+          <g><rect x="75" y="46" width="150" height="36" rx="18" fill={BLUE} /><text x="150" y="69" fill="#fff">Fortune 500 CMOs</text></g>
+          <g><rect x="710" y="46" width="120" height="36" rx="18" fill={VIOLET} /><text x="770" y="69" fill="#fff">AI founders</text></g>
+          <g><rect x="16" y="162" width="128" height="36" rx="18" fill={ACID} /><text x="80" y="185" fill={INK}>Data leaders</text></g>
+          <g><rect x="788" y="162" width="104" height="36" rx="18" fill={MAGENTA} /><text x="840" y="185" fill="#fff">Investors</text></g>
+          <g><rect x="95" y="282" width="130" height="36" rx="18" fill={VIOLET} /><text x="160" y="305" fill="#fff">Agency execs</text></g>
+          <g><rect x="684" y="282" width="152" height="36" rx="18" fill={BLUE} /><text x="760" y="305" fill="#fff">Engineers &amp; PMs</text></g>
+        </g>
+        <defs>
+          <clipPath id="hubclip"><circle cx="460" cy="180" r="46" /></clipPath>
+        </defs>
+        <image href="/headshot.jpg" x="414" y="134" width="92" height="92" clipPath="url(#hubclip)" preserveAspectRatio="xMidYMid slice" />
+        <circle cx="460" cy="180" r="46" fill="none" stroke={INK} strokeWidth={3} />
+      </svg>
+
+      <div className="text-center mt-2">
+        <a
+          href="#contact"
+          className="inline-block font-semibold text-base px-7 py-3.5 rounded-full lift"
+          style={{ background: TEAL, color: "#fff", border: `2px solid ${TEAL}` }}
+        >
+          Tell me what you need →
+        </a>
+      </div>
+    </Reveal>
+  );
+}
+
+/* ---------------------------------------------------------------------------
+   Evolution band — scrolling marquee.
+--------------------------------------------------------------------------- */
+function EvolutionMarquee() {
+  const stages = ["Broadcast", "Digital", "Social", "Programmatic", "Data", "AI", "Agents"];
+  const Segment = () => (
+    <span className="inline-flex items-center" style={{ gap: 40, paddingRight: 40 }}>
+      {stages.map((s, i) => (
+        <span key={s} className="inline-flex items-center" style={{ gap: 40 }}>
+          {s}
+          <i style={{ fontStyle: "normal", color: ACID }}>{i < stages.length - 1 ? "→" : "•"}</i>
+        </span>
+      ))}
+    </span>
+  );
+  return (
+    <div
+      aria-hidden="true"
+      className="overflow-hidden"
+      style={{ background: INK, color: PAPER, padding: "14px 0", borderTop: `3px solid ${INK}`, borderBottom: `3px solid ${INK}` }}
+    >
+      <div
+        className="marquee-track font-display font-bold"
+        style={{ fontSize: 28, gap: 40 }}
+      >
+        <Segment />
+        <Segment />
+      </div>
+    </div>
+  );
+}
+
+/* ---------------------------------------------------------------------------
+   Track-record band — count-up numbers (kept from original, re-skinned).
+--------------------------------------------------------------------------- */
 const bandStats: { num?: number; suffix?: string; text?: string; label: string }[] = [
   { num: 15, suffix: "+", label: "Years selling technology" },
   { text: "7-figure", label: "Deals closed, repeatedly" },
   { text: "8-figure", label: "Client relationships managed" },
-  { num: 2, suffix: "\u00d7", label: "First seller in the building" },
+  { num: 2, suffix: "×", label: "First seller in the building" },
 ];
 
 function TrackRecordBand() {
@@ -87,78 +352,45 @@ function TrackRecordBand() {
   }, [inView]);
 
   return (
-    <section aria-label="Track record highlights" className="relative pt-2 pb-12 px-6">
-      <style>{`
-        @keyframes band-drift {
-          0%   { transform: translate(0, 0) scale(1); }
-          50%  { transform: translate(40px, -20px) scale(1.15); }
-          100% { transform: translate(0, 0) scale(1); }
-        }
-        @keyframes band-drift-2 {
-          0%   { transform: translate(0, 0) scale(1.1); }
-          50%  { transform: translate(-30px, 15px) scale(1); }
-          100% { transform: translate(0, 0) scale(1.1); }
-        }
-        @media (prefers-reduced-motion: reduce) {
-          .band-orb { animation: none !important; }
-        }
-      `}</style>
+    <section aria-label="Track record highlights" className="relative pt-2 pb-14 px-7">
       <div className="max-w-5xl mx-auto" ref={ref}>
         <div
-          className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-3xl p-10 md:p-12 text-slate-100 shadow-2xl"
+          className="relative overflow-hidden rounded-3xl p-10 md:p-12"
           style={{
+            background: INK,
+            color: PAPER,
+            border: `3px solid ${INK}`,
+            boxShadow: `10px 10px 0 ${TEAL}`,
             opacity: inView ? 1 : 0,
             transform: inView ? "translateY(0)" : "translateY(28px)",
-            transition: "opacity 1200ms ease, transform 1200ms ease",
+            transition: "opacity 900ms ease, transform 900ms ease",
           }}
         >
-          <div
-            className="band-orb absolute -top-24 -right-16 w-96 h-96 rounded-full blur-3xl pointer-events-none"
-            style={{ background: "radial-gradient(circle, rgba(56,189,248,0.25), transparent 70%)", animation: "band-drift 9s ease-in-out infinite" }}
-          />
-          <div
-            className="band-orb absolute -bottom-28 -left-16 w-80 h-80 rounded-full blur-3xl pointer-events-none"
-            style={{ background: "radial-gradient(circle, rgba(52,211,153,0.22), transparent 70%)", animation: "band-drift-2 11s ease-in-out infinite" }}
-          />
-          <div
-            className="absolute top-0 left-0 h-[3px] rounded-full"
-            style={{
-              background: "linear-gradient(90deg, #38BDF8, #34D399)",
-              width: inView ? "100%" : "0%",
-              transition: "width 2200ms ease 300ms",
-            }}
-            aria-hidden="true"
-          />
-
           <div className="relative flex flex-col lg:flex-row lg:items-center gap-10">
             <div className="flex-1">
-              <div className="text-xs uppercase tracking-widest text-sky-300 font-bold mb-8">Track record</div>
+              <div className="text-xs uppercase tracking-widest font-bold mb-8" style={{ color: ACID }}>Track record</div>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-8">
                 {bandStats.map((stat, i) => (
                   <div
                     key={stat.label}
-                    className="group/stat"
                     style={{
                       opacity: inView ? 1 : 0,
                       transform: inView ? "translateY(0)" : "translateY(24px)",
                       transition: `opacity 1000ms ease ${300 + i * 220}ms, transform 1000ms ease ${300 + i * 220}ms`,
                     }}
                   >
-                    <div
-                      className="text-4xl md:text-5xl font-black leading-none bg-clip-text text-transparent transition-transform duration-500 group-hover/stat:scale-105 origin-left"
-                      style={{ ...serif, backgroundImage: "linear-gradient(120deg, #E0F2FE, #7DD3FC 55%, #6EE7B7)" }}
-                    >
+                    <div className="text-4xl md:text-5xl font-extrabold leading-none font-display" style={{ color: ACID }}>
                       {stat.text ?? `${Math.round((stat.num ?? 0) * tick)}${stat.suffix}`}
                     </div>
                     <div
                       className="h-0.5 rounded-full mt-3 mb-2.5"
                       style={{
-                        background: "linear-gradient(90deg, #38BDF8, #34D399)",
+                        background: TEAL,
                         width: inView ? "2.25rem" : "0rem",
                         transition: `width 1400ms ease ${700 + i * 220}ms`,
                       }}
                     />
-                    <div className="text-xs uppercase tracking-widest text-slate-400 font-bold group-hover/stat:text-slate-200 transition-colors duration-500">
+                    <div className="text-xs uppercase tracking-widest font-bold" style={{ color: "rgba(242,236,221,0.65)" }}>
                       {stat.label}
                     </div>
                   </div>
@@ -175,7 +407,8 @@ function TrackRecordBand() {
             >
               <Link
                 href="/track-record"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-emerald-500 text-white font-semibold px-7 py-3.5 rounded-full text-sm hover:shadow-lg hover:shadow-emerald-500/30 hover:scale-105 transition-all duration-300"
+                className="inline-flex items-center gap-2 font-semibold px-7 py-3.5 rounded-full text-sm lift"
+                style={{ background: TEAL, color: "#fff" }}
               >
                 See the full track record <ArrowUpRight className="w-4 h-4" />
               </Link>
@@ -188,18 +421,12 @@ function TrackRecordBand() {
 }
 
 export default function ChrisDorseySite() {
-  const [scrollY, setScrollY]   = useState(0);
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
-    const handleMouse  = (e: MouseEvent) => setMousePos({ x: e.clientX, y: e.clientY });
     window.addEventListener("scroll", handleScroll);
-    window.addEventListener("mousemove", handleMouse);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("mousemove", handleMouse);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const clients = [
@@ -218,6 +445,15 @@ export default function ChrisDorseySite() {
   ];
 
   const posts = allPosts.slice(0, 4);
+
+  // Era cards — warming gray→teal toward "now".
+  const eras = [
+    { title: "Creative & PR", year: "2009", desc: "Crispin Porter + Bogusky — Agency of the Decade. Built the first proactive new-business function.", bg: CREAM2, fg: INK, border: INK },
+    { title: "Digital", year: "2013", desc: "First hire at an indie NYC shop. Grew it 300% in a year.", bg: ACID, fg: INK, border: INK },
+    { title: "Data", year: "2018", desc: "Oracle — managed Amazon, J&J, PepsiCo. Edge infrastructure at Fastly.", bg: BLUE, fg: "#fff", border: BLUE },
+    { title: "AI acquisition", year: "2024", desc: "Zeta Global — first email-based AI customer-acquisition product to market.", bg: VIOLET, fg: "#fff", border: VIOLET },
+    { title: "AI & agents", year: "now", desc: "Advising founders, building with the AI tools I sell.", bg: TEAL, fg: "#fff", border: TEAL },
+  ];
 
   const communityBuilds = [
     {
@@ -253,7 +489,6 @@ export default function ChrisDorseySite() {
       title: "SMB Business Operations Tools",
       stack: "Pro-bono · Claude API · Automation · SEO & GEO",
       desc: "Custom AI tools for main-street businesses, built pro bono. I automate the repetitive admin, sharpen their SEO and GEO, and replace the bloated software they only half-use — so local operators can compete and stay in business.",
-      accent: "bg-gradient-to-br from-amber-500/10 to-orange-500/10 border-amber-200",
       proofText: null as string | null,
       proofUrl: null as string | null,
       proofLabel: null as string | null,
@@ -262,7 +497,6 @@ export default function ChrisDorseySite() {
       title: "/client-brief slash command",
       stack: "Claude Code",
       desc: "A custom slash command that pulls public signals on a prospect and drafts a discovery-ready brief in under a minute.",
-      accent: "bg-gradient-to-br from-emerald-500/10 to-teal-500/10 border-emerald-200",
       proofText: null as string | null,
       proofUrl: null as string | null,
       proofLabel: "See it work",
@@ -271,58 +505,53 @@ export default function ChrisDorseySite() {
       title: "AI category landscape mapping",
       stack: "Research · Synthesis · Sales Enablement",
       desc: "Living competitive maps and capability matrices for emerging AI categories. Current example: a five-tier landscape of the GEO space — Profound, Evertune, Goodie, Gauge, Qwairy — with a 10-vendor capability matrix.",
-      accent: "bg-gradient-to-br from-teal-500/10 to-emerald-500/10 border-teal-200",
       proofText: null as string | null,
       proofUrl: null as string | null,
       proofLabel: "See a sample",
     },
   ];
 
+  // FAQ — plain extractable text (also mirrored in FAQPage JSON-LD in layout.tsx).
+  const faqs = [
+    {
+      q: "What does Chris Dorsey do?",
+      a: "Chris is a senior enterprise sales and go-to-market leader who takes new technology to market — AI first, then data and MadTech. Across fifteen years he has been the first seller in the building twice, created categories, and closed Fortune 500 accounts, from agency creative at Crispin Porter + Bogusky to data at Oracle, edge infrastructure at Fastly, and AI customer acquisition at Zeta Global.",
+    },
+    {
+      q: "Who does Chris work with, and who can he introduce you to?",
+      a: "Chris is a connector. Fifteen years across four industries put him a message away from Fortune 500 CMOs, AI founders, data leaders, investors, agency execs, and engineers and PMs. Tell him what you're trying to do and odds are he already knows who you should talk to. Introductions are free — no fee, no catch.",
+    },
+    {
+      q: "What is Generative Engine Optimization (GEO)?",
+      a: "GEO is getting a brand cited and recommended inside AI answers from tools like ChatGPT, Gemini, and Claude, the way SEO got brands ranked in search. It's one slice of Chris's AI and MadTech work — he built a GEO product's go-to-market from zero — not the headline.",
+    },
+    {
+      q: "Is Chris available for roles or advisory?",
+      a: "Yes. He's exploring senior individual-contributor go-to-market roles at AI, retail media, AdTech/MarTech, and enterprise SaaS companies, and advises founders and sales leaders on durable pipeline. He responds to every note personally.",
+    },
+    {
+      q: "Where is Chris based?",
+      a: "Denver, Colorado — working remotely or hybrid across the United States.",
+    },
+    {
+      q: "What industries does Chris cover?",
+      a: "AI go-to-market, data, and MadTech, with deep roots in enterprise SaaS, retail media, AdTech, and agency creative. He has sold through every major marketing shift — broadcast, digital, social, programmatic, data, AI, and now agents.",
+    },
+  ];
+
   return (
     <div
-      className="min-h-screen text-slate-900 relative overflow-x-hidden"
-      style={{
-        background: "linear-gradient(180deg, #F0F7FA 0%, #E0F0F5 50%, #F0F7FA 100%)",
-        ...sans,
-      }}
+      className="min-h-screen relative overflow-x-hidden grain-overlay"
+      style={{ background: PAPER, color: INK, fontFamily: "var(--font-inter)" }}
     >
-      {/* Ambient gradient orbs */}
-      <div className="fixed inset-0 pointer-events-none overflow-hidden">
-        <div
-          className="absolute w-[600px] h-[600px] rounded-full opacity-30 blur-3xl"
-          style={{
-            background: "radial-gradient(circle, #0EA5E9 0%, transparent 70%)",
-            top: "-100px",
-            right: "-100px",
-            transform: `translate(${mousePos.x * 0.02}px, ${mousePos.y * 0.02}px)`,
-            transition: "transform 0.3s ease-out",
-          }}
-        />
-        <div
-          className="absolute w-[500px] h-[500px] rounded-full opacity-25 blur-3xl"
-          style={{
-            background: "radial-gradient(circle, #10B981 0%, transparent 70%)",
-            top: "600px",
-            left: "-150px",
-            transform: `translate(${mousePos.x * -0.015}px, ${mousePos.y * 0.015}px)`,
-            transition: "transform 0.3s ease-out",
-          }}
-        />
-        <div
-          className="absolute w-[400px] h-[400px] rounded-full opacity-20 blur-3xl"
-          style={{
-            background: "radial-gradient(circle, #14B8A6 0%, transparent 70%)",
-            bottom: "200px",
-            right: "20%",
-          }}
-        />
-      </div>
-
       {/* Nav */}
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrollY > 50 ? "bg-sky-50/80 backdrop-blur-md border-b border-sky-200/50" : "bg-transparent"
-        }`}
+        className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+        style={
+          scrollY > 50
+            ? { background: "rgba(242,236,221,0.85)", backdropFilter: "blur(8px)", borderBottom: `1px solid rgba(26,22,19,0.12)` }
+            : { background: "transparent" }
+        }
         aria-label="Primary navigation"
       >
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -336,37 +565,25 @@ export default function ChrisDorseySite() {
             className="flex items-center gap-2 cursor-pointer select-none hover:opacity-80 transition-opacity"
           >
             <MountainMark />
-            <span
-              className="text-slate-900 whitespace-nowrap"
-              style={{ fontFamily: "var(--font-fraunces)", fontSize: "21px", fontWeight: 600, lineHeight: 1, transform: "translateY(1px)" }}
-            >
-              Chris{" "}
-              <span
-                style={{
-                  background: "linear-gradient(90deg, #334E8C, #0F6E56)",
-                  WebkitBackgroundClip: "text",
-                  backgroundClip: "text",
-                  color: "transparent",
-                }}
-              >
-                Dorsey
-              </span>
+            <span className="font-display whitespace-nowrap" style={{ fontSize: 21, fontWeight: 800, lineHeight: 1, color: INK, transform: "translateY(1px)" }}>
+              Chris <span style={{ color: TEAL }}>Dorsey</span>
             </span>
           </a>
           <div className="flex items-center gap-7">
-            <div className="hidden md:flex items-center gap-7 text-sm text-slate-700">
-              <a href="#about"         className="hover:text-blue-600 transition">About</a>
-              <Link href="/track-record" className="hover:text-blue-600 transition">Track Record</Link>
-              <a href="#now"           className="hover:text-blue-600 transition">Now</a>
-              <a href="#writing"       className="hover:text-blue-600 transition">Thoughts</a>
-              <a href="#builds"        className="hover:text-blue-600 transition">AI Sales Tools</a>
-              <Link href="/work-with-me" className="hover:text-blue-600 transition">Work with me</Link>
+            <div className="hidden md:flex items-center gap-7 text-sm" style={{ color: INK }}>
+              <a href="#about"   className="font-medium hover:opacity-60 transition">About</a>
+              <Link href="/track-record" className="font-medium hover:opacity-60 transition">Track Record</Link>
+              <a href="#now"     className="font-medium hover:opacity-60 transition">Now</a>
+              <a href="#writing" className="font-medium hover:opacity-60 transition">Thoughts</a>
+              <a href="#builds"  className="font-medium hover:opacity-60 transition">AI Sales Tools</a>
+              <Link href="/work-with-me" className="font-medium hover:opacity-60 transition">Work with me</Link>
             </div>
             <a
               href="#contact"
-              className="text-sm bg-gradient-to-r from-blue-600 to-emerald-600 text-white px-4 py-1.5 rounded-full hover:shadow-lg hover:shadow-blue-500/30 hover:scale-105 transition-all flex items-center gap-1 font-medium"
+              className="text-sm px-4 py-1.5 rounded-full font-semibold transition-all hover:opacity-90"
+              style={{ background: INK, color: PAPER }}
             >
-              Say hi! <Zap className="w-3.5 h-3.5 fill-white" />
+              Say hi
             </a>
           </div>
         </div>
@@ -395,86 +612,68 @@ export default function ChrisDorseySite() {
         </aside>
 
         {/* Hero */}
-        <section className="relative pt-36 pb-24 px-6" aria-labelledby="hero-heading">
-          <div className="max-w-6xl mx-auto grid md:grid-cols-5 gap-12 items-center relative">
-            <div className="md:col-span-3 space-y-6">
-              <h1
-                id="hero-heading"
-                className="tracking-tight"
-                style={serif}
-              >
-                {/*
-                  Headline: fact-based, no first-person claim. Chris rejected
-                  tagline-style lines as too self-promotional. Plan: swap in a
-                  client quote from LinkedIn recommendations when testimonials land.
-                */}
-                <span className="block text-5xl md:text-7xl font-black leading-[1.05] mb-5">
-                  Fifteen years selling new technology to the{" "}
-                  <span className="bg-gradient-to-r from-blue-600 via-cyan-500 to-emerald-600 bg-clip-text text-transparent italic">
-                    Fortune 500.
-                  </span>
-                </span>
+        <section className="relative pt-32 pb-16 px-7" aria-labelledby="hero-heading">
+          <div className="max-w-6xl mx-auto grid items-center gap-10" style={{ gridTemplateColumns: "minmax(0,1.2fr) minmax(0,0.9fr)" }}>
+            <div>
+              <div className="inline-flex gap-2 items-center font-semibold mb-4" style={{ fontSize: 13, letterSpacing: "0.06em", textTransform: "uppercase" }}>
+                <b style={{ background: ACID, padding: "4px 10px", borderRadius: 100 }}>AI</b>
+                <span style={{ color: "#4a4239" }}>· data · MadTech&nbsp;&nbsp;—&nbsp;&nbsp;Denver</span>
+              </div>
+              <h1 id="hero-heading" className="font-display font-extrabold" style={{ fontSize: "clamp(36px,5.6vw,72px)", lineHeight: 0.95, maxWidth: "15ch", color: INK }}>
+                I help marketers{" "}
+                <span style={{ position: "relative", whiteSpace: "nowrap" }}>
+                  win
+                  <span aria-hidden="true" style={{ position: "absolute", left: -2, right: -2, bottom: "0.08em", height: "0.34em", background: ACID, zIndex: -1, transform: "skewX(-8deg)" }} />
+                </span>{" "}
+                every time the rules{" "}
+                <span style={{ color: TEAL }}>change</span>.
               </h1>
-              <p className="text-lg text-slate-700 leading-relaxed max-w-xl">
-                Twice the first seller in the building, selling technology that buyers didn&apos;t have a budget line
-                for yet, and building with the AI tools I sell. Clients tend to keep me around long
-                after the contract is signed.
+              <p className="mt-5 mb-5 leading-relaxed" style={{ fontSize: "clamp(15px,1.6vw,18px)", maxWidth: "42ch", color: "#3a332c" }}>
+                One of the last who grew up pre-internet and went fully native — I&apos;ve guided marketers from the
+                most awarded creative in advertising, to data, to AI. Tell me what you&apos;re trying to do; odds are
+                I know who you should be talking to.
               </p>
-              {/* Hiring-audience path (Task 3) */}
-              <p className="text-sm text-slate-600">
-                Currently exploring full-time senior GTM roles at AI-native companies.{" "}
-                <Link
-                  href="/track-record"
-                  className="font-semibold text-blue-600 hover:text-emerald-600 transition inline-flex items-center gap-0.5"
+              <div className="flex gap-3.5 flex-wrap items-center">
+                <a
+                  href="#connect"
+                  className="font-semibold rounded-full lift"
+                  style={{ fontSize: 16, padding: "15px 26px", background: TEAL, color: "#fff", border: `2px solid ${TEAL}` }}
                 >
+                  Who can I connect you with?
+                </a>
+                <a
+                  href="#writing"
+                  className="font-semibold rounded-full transition-colors hover:text-[var(--paper)]"
+                  style={{ fontSize: 16, padding: "15px 26px", border: `2px solid ${INK}`, color: INK }}
+                  onMouseEnter={(e) => { e.currentTarget.style.background = INK; e.currentTarget.style.color = PAPER; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = INK; }}
+                >
+                  Read the writing
+                </a>
+              </div>
+              {/* Hiring-audience path */}
+              <p className="text-sm mt-5" style={{ color: "#6a6258" }}>
+                Currently exploring full-time senior GTM roles at AI-native companies.{" "}
+                <Link href="/track-record" className="font-semibold inline-flex items-center gap-0.5" style={{ color: TEAL }}>
                   Resume <ArrowUpRight className="w-3.5 h-3.5" />
                 </Link>
               </p>
             </div>
 
-            {/* Photo composition */}
-            <div className="md:col-span-2 relative pt-8 md:pt-0">
-              <div className="relative max-w-sm mx-auto">
-                <div className="absolute -inset-8 bg-gradient-to-br from-blue-400/30 via-cyan-500/30 to-emerald-500/30 rounded-full blur-3xl" />
-
-                {/* Family Flatirons — bottom left */}
-                <div className="absolute -bottom-6 -left-4 sm:-left-8 w-24 h-32 sm:w-32 sm:h-40 rounded-2xl overflow-hidden border-4 border-white shadow-xl -rotate-6 hover:rotate-0 hover:scale-105 transition-all duration-500 z-10">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src="/family-flatirons.jpg"
-                    alt="The Dorsey family at the Flatirons"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-
-                {/* Sloane airborne — top right */}
-                <div className="absolute -top-4 -right-2 sm:-right-6 w-20 h-28 sm:w-28 sm:h-36 rounded-2xl overflow-hidden border-4 border-white shadow-xl rotate-6 hover:rotate-0 hover:scale-105 transition-all duration-500 z-10">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src="/sloane-airborne.jpg"
-                    alt="Chris lifting Sloane in the air with the Flatirons behind them"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-
-                {/* Main headshot circle */}
-                <div className="relative aspect-square rounded-full overflow-hidden border-[6px] border-white shadow-2xl">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src="/headshot.jpg"
-                    alt="Christopher Dorsey"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+            {/* Boldly framed portrait */}
+            <div className="justify-self-center w-full" style={{ maxWidth: 380 }}>
+              <div className="relative overflow-hidden" style={{ border: `3px solid ${INK}`, borderRadius: 20, boxShadow: `10px 10px 0 ${TEAL}` }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/headshot.jpg" alt="Christopher Dorsey" className="w-full block" />
               </div>
             </div>
           </div>
 
-          {/* Personality strip */}
-          <div className="max-w-6xl mx-auto mt-14">
-            <p className="text-sm text-slate-500 leading-relaxed">
-              Based in <span className="text-slate-700 font-medium">Denver, CO</span>. Currently supporting Main Street with{" "}
-              <span className="text-slate-700 font-medium">pro bono AI consulting</span> for small businesses. On rotation:{" "}
+          {/* Personality strip — music links preserved */}
+          <div className="max-w-6xl mx-auto mt-12">
+            <p className="text-sm leading-relaxed" style={{ color: "#6a6258" }}>
+              Based in <span className="font-medium" style={{ color: INK }}>Denver, CO</span>. Currently supporting Main Street with{" "}
+              <span className="font-medium" style={{ color: INK }}>pro bono AI consulting</span> for small businesses. On rotation:{" "}
               {[
                 { name: "King Gizzard & the Lizard Wizard", url: "https://music.youtube.com/search?q=King+Gizzard+and+the+Lizard+Wizard" },
                 { name: "Talking Heads", url: "https://music.youtube.com/search?q=Talking+Heads" },
@@ -488,11 +687,12 @@ export default function ChrisDorseySite() {
                     href={band.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-0.5 text-slate-700 font-medium hover:text-red-500 transition-colors group"
+                    className="inline-flex items-center gap-0.5 font-medium transition-colors group"
+                    style={{ color: INK }}
                   >
                     {band.name}
                     <svg width="11" height="11" viewBox="0 0 24 24" className="inline-block ml-0.5 shrink-0 opacity-30 group-hover:opacity-100 transition-opacity">
-                      <circle cx="12" cy="12" r="12" fill="#FF0000" />
+                      <circle cx="12" cy="12" r="12" fill="#1A1613" />
                       <polygon points="9.5,7 18,12 9.5,17" fill="white" />
                     </svg>
                   </a>
@@ -503,14 +703,54 @@ export default function ChrisDorseySite() {
           </div>
         </section>
 
+        {/* Connector hub */}
+        <section id="connect" className="px-7 py-14" style={{ background: CREAM2, borderTop: `3px solid ${INK}`, borderBottom: `3px solid ${INK}` }}>
+          <div className="max-w-6xl mx-auto">
+            <ConnectorHub />
+          </div>
+        </section>
+
+        {/* Evolution marquee */}
+        <EvolutionMarquee />
+
+        {/* Evolution era cards */}
+        <section className="px-7 py-16">
+          <div className="max-w-6xl mx-auto">
+            <Reveal>
+              <div className="font-display font-extrabold leading-[0.95]" style={{ fontSize: "clamp(28px,4vw,46px)", color: INK }}>
+                Seen every reinvention. Helped people win through each one.
+              </div>
+              <p className="mt-3 mb-8 max-w-2xl" style={{ fontSize: 17, color: "#4a4239" }}>
+                Same job each era: figure out what&apos;s actually changing, then build the path before everyone else
+                catches up.
+              </p>
+            </Reveal>
+            <Reveal className="grid gap-3.5" style={{ gridTemplateColumns: "repeat(auto-fit,minmax(180px,1fr))" }}>
+              {eras.map((era) => (
+                <div
+                  key={era.title}
+                  className="rounded-2xl p-5 flex flex-col justify-between"
+                  style={{ background: era.bg, color: era.fg, border: `2px solid ${era.border}`, minHeight: 160 }}
+                >
+                  <div>
+                    <h3 className="font-display font-bold" style={{ fontSize: 22 }}>{era.title}</h3>
+                    <p className="font-medium mt-1.5" style={{ fontSize: 13, opacity: 0.85 }}>{era.desc}</p>
+                  </div>
+                  <div className="font-display font-extrabold" style={{ fontSize: 15 }}>{era.year}</div>
+                </div>
+              ))}
+            </Reveal>
+          </div>
+        </section>
+
         {/* Client logos */}
-        <section className="relative py-16 px-6 bg-white/60 backdrop-blur-sm border-y border-sky-200/50">
+        <section className="relative py-16 px-7" style={{ background: "rgba(255,255,255,0.5)", borderTop: `1px solid rgba(26,22,19,0.12)`, borderBottom: `1px solid rgba(26,22,19,0.12)` }}>
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-10 max-w-3xl mx-auto">
-              <p className="text-xs uppercase tracking-widest text-blue-700 mb-3 font-bold">
+              <p className="text-xs uppercase tracking-widest mb-3 font-bold" style={{ color: TEAL }}>
                 Brands &amp; teams I&apos;ve worked with
               </p>
-              <p className="text-lg text-slate-700 leading-relaxed">
+              <p className="text-lg leading-relaxed" style={{ color: "#3a332c" }}>
                 The logos below represent campaigns built, revenue driven, and relationships that outlasted any single deal.
               </p>
             </div>
@@ -534,7 +774,7 @@ export default function ChrisDorseySite() {
                       e.currentTarget.style.display = "none";
                     }}
                   />
-                  <span className="text-[10px] font-semibold text-slate-400 tracking-tight text-center leading-tight">
+                  <span className="text-[10px] font-semibold tracking-tight text-center leading-tight" style={{ color: "#8a8276" }}>
                     {client.name}
                   </span>
                 </a>
@@ -544,18 +784,16 @@ export default function ChrisDorseySite() {
         </section>
 
         {/* About */}
-        <section id="about" className="relative pt-28 pb-10 px-6">
+        <section id="about" className="relative pt-24 pb-10 px-7">
           <div className="max-w-4xl mx-auto">
-            <div className="inline-block text-xs uppercase tracking-widest text-blue-700 bg-blue-100 px-3 py-1 rounded-full mb-6 font-bold">
+            <div className="inline-block text-xs uppercase tracking-widest px-3 py-1 rounded-full mb-6 font-bold" style={{ color: INK, background: ACID }}>
               About
             </div>
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-10 leading-[1.1]" style={serif}>
+            <h2 className="font-display font-extrabold mb-8 leading-[1.0]" style={{ fontSize: "clamp(30px,4vw,48px)", color: INK }}>
               I&apos;ve been the first seller in the building twice. And, once, an{" "}
-              <span className="bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent italic">
-                international hand model.
-              </span>
+              <span style={{ color: TEAL }}>international hand model.</span>
             </h2>
-            <div className="space-y-6 text-lg text-slate-700 leading-relaxed">
+            <div className="space-y-6 text-lg leading-relaxed" style={{ color: "#3a332c" }}>
               <p>
                 The throughline of my career is simple: figure out what a client needs, then build the path to
                 get them there. The deals I&apos;m proudest of took months of showing up before anyone signed,
@@ -564,7 +802,7 @@ export default function ChrisDorseySite() {
               </p>
               <p>
                 The full fifteen years, with the numbers, lives on the{" "}
-                <Link href="/track-record" className="font-semibold text-blue-600 hover:text-emerald-600 transition">
+                <Link href="/track-record" className="font-semibold" style={{ color: TEAL }}>
                   track record page
                 </Link>
                 . The short version: I started at Crispin Porter + Bogusky when it was AdAge&apos;s Agency of the
@@ -580,8 +818,8 @@ export default function ChrisDorseySite() {
                 answers. The best sellers of the next decade will know their product at the hands-on level, and
                 the only way I know to get there is to use the thing.
               </p>
-              <div className="bg-gradient-to-br from-sky-50 to-emerald-50 border-l-4 border-blue-500 rounded-r-2xl p-6 mt-8">
-                <p className="text-slate-700 italic">
+              <div className="rounded-2xl p-6 mt-8" style={{ background: CREAM2, borderLeft: `4px solid ${TEAL}` }}>
+                <p className="italic" style={{ color: "#3a332c" }}>
                   Off the clock: I&apos;m girl dad to Sloane, my adorable and rambunctious toddler, married to my
                   incredible wife Alexis, and happiest somewhere above 8,000 feet. Elon University grad and Maryland
                   native.
@@ -591,59 +829,40 @@ export default function ChrisDorseySite() {
           </div>
         </section>
 
-        {/* Testimonials — hidden until at least 2 real quotes exist. See TESTIMONIALS-TODO.md */}
+        {/* Testimonials — hidden until at least 2 real quotes exist. */}
         {SHOW_TESTIMONIALS && <Testimonials />}
 
         {/* Track record band */}
         <TrackRecordBand />
 
         {/* Now */}
-        <section id="now" className="relative pt-6 pb-20 px-6">
+        <section id="now" className="relative pt-6 pb-20 px-7">
           <div className="max-w-5xl mx-auto">
-            <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-3xl p-10 md:p-16 text-slate-100 shadow-2xl relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl" />
-              <div className="absolute bottom-0 left-0 w-72 h-72 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-full blur-3xl" />
+            <div className="rounded-3xl p-10 md:p-16 relative overflow-hidden" style={{ background: INK, color: PAPER, border: `3px solid ${INK}` }}>
               <div className="relative">
                 <div className="flex items-center gap-3 mb-4 flex-wrap">
-                  <div className="text-xs uppercase tracking-widest text-blue-400 bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/30 font-bold">
+                  <div className="text-xs uppercase tracking-widest px-3 py-1 rounded-full font-bold" style={{ color: INK, background: ACID }}>
                     Now
                   </div>
-                  <span className="text-xs text-slate-400">Updated June 2026</span>
+                  <span className="text-xs" style={{ color: "rgba(242,236,221,0.6)" }}>Updated June 2026</span>
                 </div>
-                <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-12 leading-tight" style={serif}>
+                <h2 className="font-display font-extrabold mb-12 leading-[1.0]" style={{ fontSize: "clamp(28px,4vw,46px)" }}>
                   What I&apos;m working on right now.
                 </h2>
                 <div className="grid md:grid-cols-3 gap-5">
-                  <div className="bg-white/5 backdrop-blur border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-blue-500/40 transition-all">
-                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mb-4">
-                      <Compass className="w-5 h-5 text-white" />
+                  {[
+                    { icon: Compass, color: BLUE, title: "Supporting Main Street with pro bono AI consulting", body: "Helping small businesses put AI to work so they can stay in business. Free, hands-on consulting for local owners on the work that eats their week, from customer follow-up to the books." },
+                    { icon: Code2, color: TEAL, title: "Shipping AI tooling for sellers", body: "Building out a Playwright audit agent and a set of Claude Code slash commands that compress prospect research from hours to minutes." },
+                    { icon: Users, color: VIOLET, title: "Mentoring & advising sales leaders", body: "Working with a small handful of founders and sales leaders on building durable pipeline motions — the kind that compound through relationships, not just outbound volume." },
+                  ].map((card) => (
+                    <div key={card.title} className="rounded-2xl p-6 transition-all lift" style={{ background: "rgba(242,236,221,0.06)", border: "1px solid rgba(242,236,221,0.12)" }}>
+                      <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-4" style={{ background: card.color }}>
+                        <card.icon className="w-5 h-5 text-white" />
+                      </div>
+                      <h3 className="font-display font-bold mb-2 text-lg">{card.title}</h3>
+                      <p className="text-sm leading-relaxed" style={{ color: "rgba(242,236,221,0.8)" }}>{card.body}</p>
                     </div>
-                    <h3 className="font-bold mb-2 text-lg" style={serif}>Supporting Main Street with pro bono AI consulting</h3>
-                    <p className="text-slate-300 text-sm leading-relaxed">
-                      Helping small businesses put AI to work so they can stay in business. Free, hands-on consulting
-                      for local owners on the work that eats their week, from customer follow-up to the books.
-                    </p>
-                  </div>
-                  <div className="bg-white/5 backdrop-blur border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-emerald-500/40 transition-all">
-                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center mb-4">
-                      <Code2 className="w-5 h-5 text-white" />
-                    </div>
-                    <h3 className="font-bold mb-2 text-lg" style={serif}>Shipping AI tooling for sellers</h3>
-                    <p className="text-slate-300 text-sm leading-relaxed">
-                      Building out a Playwright audit agent and a set of Claude Code slash commands that compress
-                      prospect research from hours to minutes.
-                    </p>
-                  </div>
-                  <div className="bg-white/5 backdrop-blur border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-cyan-500/40 transition-all">
-                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center mb-4">
-                      <Users className="w-5 h-5 text-white" />
-                    </div>
-                    <h3 className="font-bold mb-2 text-lg" style={serif}>Mentoring &amp; advising sales leaders</h3>
-                    <p className="text-slate-300 text-sm leading-relaxed">
-                      Working with a small handful of founders and sales leaders on building durable pipeline motions
-                      — the kind that compound through relationships, not just outbound volume.
-                    </p>
-                  </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -651,66 +870,65 @@ export default function ChrisDorseySite() {
         </section>
 
         {/* Writing */}
-        <section id="writing" className="relative py-28 px-6">
+        <section id="writing" className="relative py-24 px-7">
           <div className="max-w-5xl mx-auto">
-            <div className="flex items-end justify-between mb-12 flex-wrap gap-4">
+            <div className="flex items-end justify-between mb-8 flex-wrap gap-4">
               <div>
-                <div className="inline-block text-xs uppercase tracking-widest text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full mb-4 font-bold">
+                <div className="inline-block text-xs uppercase tracking-widest px-3 py-1 rounded-full mb-4 font-bold" style={{ color: "#fff", background: BLUE }}>
                   Thoughts
                 </div>
-                <h2 className="text-3xl md:text-5xl font-bold tracking-tight" style={serif}>
+                <h2 className="font-display font-extrabold" style={{ fontSize: "clamp(28px,4vw,46px)", color: INK }}>
                   Notes from the field.
                 </h2>
               </div>
-              <Link href="/writing" className="text-sm text-blue-600 hover:text-emerald-600 flex items-center gap-1 font-semibold">
+              <Link href="/writing" className="text-sm flex items-center gap-1 font-semibold" style={{ color: TEAL }}>
                 All {allPosts.length} posts <ArrowUpRight className="w-3.5 h-3.5" />
               </Link>
             </div>
-            <p className="text-slate-600 text-lg leading-relaxed max-w-3xl mb-12 -mt-4">
+            <p className="text-lg leading-relaxed max-w-3xl mb-10" style={{ color: "#4a4239" }}>
               My beat is advertising, marketing, tech, and AI. The approach is the one I bring to sales:
               find the angle everyone else walked past, and publish while the news is still warm, sources
               attached. People occasionally call this thought leadership. I won&apos;t, and the writing
               holds up either way.
             </p>
-            <div className="grid gap-5">
-              {posts.map((post, i) => (
-                <Link
-                  key={i}
-                  href={`/writing/${post.slug}`}
-                  className="group block bg-white rounded-2xl p-7 hover:shadow-2xl hover:shadow-blue-500/10 transition-all border border-slate-200 hover:border-blue-300 hover:-translate-y-1 relative overflow-hidden"
-                >
-                  <div
-                    className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${post.color} opacity-0 group-hover:opacity-100 transition-opacity`}
-                  />
-                  <div className="flex items-baseline justify-between gap-6 mb-3">
-                    <h3
-                      className="flex-1 text-xl md:text-2xl font-bold tracking-tight group-hover:text-blue-600 transition leading-tight"
-                      style={serif}
-                    >
-                      {post.title}
-                    </h3>
+            <div className="grid gap-4" style={{ gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))" }}>
+              {posts.map((post, i) => {
+                const tagColors = [BLUE, TEAL, VIOLET, MAGENTA];
+                const tagBg = tagColors[i % tagColors.length];
+                return (
+                  <Link
+                    key={i}
+                    href={`/writing/${post.slug}`}
+                    className="group block rounded-2xl p-6 lift"
+                    style={{ background: "#fff", border: `2px solid ${INK}` }}
+                  >
                     <span
-                      className={`flex-none text-xs font-bold uppercase tracking-wider whitespace-nowrap text-white px-3 py-1 rounded-full bg-gradient-to-r ${post.color}`}
+                      className="inline-block text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-full mb-3.5"
+                      style={{ background: tagBg, color: tagBg === ACID ? INK : "#fff" }}
                     >
                       {post.tag}
                     </span>
-                  </div>
-                  <p className="text-slate-600 leading-relaxed mb-4 max-w-3xl">{post.excerpt}</p>
-                  <div className="flex items-center gap-4 text-xs text-slate-500">
-                    <span className="flex items-center gap-1.5">
-                      <Calendar className="w-3 h-3" /> {post.date}
-                    </span>
-                    <span className="flex items-center gap-1.5">
-                      <Clock className="w-3 h-3" /> {post.readTime}
-                    </span>
-                  </div>
-                </Link>
-              ))}
+                    <h3 className="font-display font-bold leading-tight" style={{ fontSize: 19, color: INK }}>
+                      {post.title}
+                    </h3>
+                    <p className="leading-relaxed mt-3 text-sm" style={{ color: "#4a4239" }}>{post.excerpt.slice(0, 140)}…</p>
+                    <div className="flex items-center gap-4 text-xs mt-4" style={{ color: "#6a6258" }}>
+                      <span className="flex items-center gap-1.5">
+                        <Calendar className="w-3 h-3" /> {post.date}
+                      </span>
+                      <span className="flex items-center gap-1.5">
+                        <Clock className="w-3 h-3" /> {post.readTime}
+                      </span>
+                    </div>
+                  </Link>
+                );
+              })}
             </div>
             <div className="mt-10 flex justify-center">
               <Link
                 href="/writing"
-                className="group inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-emerald-600 text-white font-semibold px-7 py-3.5 rounded-full hover:shadow-lg hover:shadow-blue-500/30 transition text-sm"
+                className="group inline-flex items-center gap-2 font-semibold px-7 py-3.5 rounded-full lift text-sm"
+                style={{ background: TEAL, color: "#fff" }}
               >
                 See all {allPosts.length} posts
                 <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -720,48 +938,31 @@ export default function ChrisDorseySite() {
         </section>
 
         {/* Builds */}
-        <section id="builds" className="relative py-28 px-6">
+        <section id="builds" className="relative py-24 px-7">
           <div className="max-w-5xl mx-auto">
-            <div className="inline-block text-xs uppercase tracking-widest text-cyan-700 bg-cyan-100 px-3 py-1 rounded-full mb-4 font-bold">
+            <div className="inline-block text-xs uppercase tracking-widest px-3 py-1 rounded-full mb-4 font-bold" style={{ color: INK, background: ACID }}>
               AI Sales Tools
             </div>
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-3" style={serif}>
+            <h2 className="font-display font-extrabold mb-3" style={{ fontSize: "clamp(28px,4vw,46px)", color: INK }}>
               Hands on the keyboard.
             </h2>
-            <p className="text-slate-600 mb-12 max-w-2xl text-lg">
+            <p className="mb-10 max-w-2xl text-lg" style={{ color: "#4a4239" }}>
               Sellers who build with AI win. I use the tools I sell, every week. Here&apos;s what I&apos;m
               shipping, and the community builds I think every seller and marketer should know about.
             </p>
 
-            {/*
-              Future demo video embed (Task 7). Uncomment and fill when a clip exists.
-              [FILL: Loom/YouTube URL — live selling/demo clip, ~2 minutes]
-
-            <div className="mb-12 rounded-2xl overflow-hidden border border-slate-200 aspect-video">
-              <iframe
-                src="[FILL: Loom/YouTube embed URL]"
-                title="Live demo — selling with AI tools"
-                className="w-full h-full"
-                allowFullScreen
-              />
-            </div>
-            */}
-
             {/* My builds */}
-            <p className="text-xs uppercase tracking-widest text-slate-500 font-bold mb-5">What I&apos;m building</p>
+            <p className="text-xs uppercase tracking-widest font-bold mb-5" style={{ color: "#6a6258" }}>What I&apos;m building</p>
             <div className="grid md:grid-cols-3 gap-5 mb-16">
               {builds.map((build, i) => (
-                <div
-                  key={i}
-                  className={`${build.accent} backdrop-blur-sm border-2 rounded-2xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all`}
-                >
-                  <div className="w-10 h-10 rounded-xl bg-white shadow-md flex items-center justify-center mb-5">
-                    <Code2 className="w-5 h-5 text-slate-900" />
+                <div key={i} className="rounded-2xl p-6 lift" style={{ background: "#fff", border: `2px solid ${INK}` }}>
+                  <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: CREAM2 }}>
+                    <Code2 className="w-5 h-5" style={{ color: INK }} />
                   </div>
-                  <h3 className="font-bold mb-2 tracking-tight text-lg">{build.title}</h3>
-                  <p className="text-slate-700 text-sm leading-relaxed mb-4">{build.desc}</p>
+                  <h3 className="font-display font-bold mb-2 text-lg" style={{ color: INK }}>{build.title}</h3>
+                  <p className="text-sm leading-relaxed mb-4" style={{ color: "#4a4239" }}>{build.desc}</p>
                   {build.proofText && (
-                    <p className="text-sm text-slate-700 font-medium bg-white/70 rounded-lg px-3 py-2 mb-4">
+                    <p className="text-sm font-medium rounded-lg px-3 py-2 mb-4" style={{ color: "#3a332c", background: CREAM2 }}>
                       {build.proofText}
                     </p>
                   )}
@@ -770,12 +971,13 @@ export default function ChrisDorseySite() {
                       href={build.proofUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-sm font-semibold text-blue-600 hover:text-emerald-600 transition mb-4"
+                      className="inline-flex items-center gap-1 text-sm font-semibold mb-4"
+                      style={{ color: TEAL }}
                     >
                       {build.proofLabel} <ArrowUpRight className="w-3.5 h-3.5" />
                     </a>
                   )}
-                  <div className="text-xs text-slate-600 font-mono bg-white/60 rounded-lg px-3 py-2 inline-block">
+                  <div className="text-xs font-mono rounded-lg px-3 py-2 inline-block" style={{ color: "#4a4239", background: CREAM2 }}>
                     {build.stack}
                   </div>
                 </div>
@@ -783,7 +985,7 @@ export default function ChrisDorseySite() {
             </div>
 
             {/* Community picks */}
-            <p className="text-xs uppercase tracking-widest text-slate-500 font-bold mb-5">Community picks worth your time</p>
+            <p className="text-xs uppercase tracking-widest font-bold mb-5" style={{ color: "#6a6258" }}>Community picks worth your time</p>
             <div className="grid md:grid-cols-2 gap-5">
               {communityBuilds.map((build, i) => (
                 <a
@@ -791,21 +993,22 @@ export default function ChrisDorseySite() {
                   href={build.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex gap-5 bg-white border border-slate-200 rounded-2xl p-6 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1 transition-all"
+                  className="group flex gap-5 rounded-2xl p-6 lift"
+                  style={{ background: "#fff", border: `2px solid ${INK}` }}
                 >
-                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center shrink-0">
-                    <ExternalLink className="w-4 h-4 text-slate-600 group-hover:text-blue-600 transition" />
+                  <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ background: CREAM2 }}>
+                    <ExternalLink className="w-4 h-4" style={{ color: INK }} />
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-start justify-between gap-2 mb-1">
-                      <h3 className="font-bold text-slate-900 group-hover:text-blue-600 transition text-base leading-snug">
+                      <h3 className="font-bold text-base leading-snug" style={{ color: INK }}>
                         {build.title}
                       </h3>
-                      <span className="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-full whitespace-nowrap shrink-0">
+                      <span className="text-xs font-semibold px-2 py-0.5 rounded-full whitespace-nowrap shrink-0" style={{ color: "#4a4239", background: CREAM2 }}>
                         {build.by}
                       </span>
                     </div>
-                    <p className="text-slate-600 text-sm leading-relaxed">{build.desc}</p>
+                    <p className="text-sm leading-relaxed" style={{ color: "#4a4239" }}>{build.desc}</p>
                   </div>
                 </a>
               ))}
@@ -813,22 +1016,68 @@ export default function ChrisDorseySite() {
           </div>
         </section>
 
+        {/* Off the clock — ink band, personality in color */}
+        <section className="px-7 py-14" style={{ background: INK, color: PAPER, borderTop: `3px solid ${INK}`, borderBottom: `3px solid ${INK}` }}>
+          <Reveal>
+            <div className="max-w-6xl mx-auto">
+              <div className="font-display font-extrabold leading-[0.95]" style={{ fontSize: "clamp(28px,4vw,46px)" }}>
+                Off the clock
+              </div>
+              <div className="flex flex-wrap gap-3 mt-6">
+                {[
+                  <>Girl dad to <b style={{ color: ACID }}>Sloane</b></>,
+                  <>Happiest above <b style={{ color: ACID }}>8,000 ft</b></>,
+                  <>On rotation: <b style={{ color: ACID }}>King Gizzard</b>, LCD, Justice</>,
+                  <>Pro bono AI for <b style={{ color: ACID }}>Main Street</b></>,
+                  <>Former international <b style={{ color: ACID }}>hand model</b> (retired)</>,
+                ].map((node, i) => (
+                  <span key={i} className="font-semibold" style={{ background: "rgba(242,236,221,0.12)", border: "2px solid rgba(242,236,221,0.4)", borderRadius: 100, padding: "10px 18px", fontSize: 15 }}>
+                    {node}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+        </section>
+
+        {/* FAQ — plain extractable text for GEO; mirrors FAQPage JSON-LD */}
+        <section aria-labelledby="faq-heading" className="px-7 py-20">
+          <div className="max-w-4xl mx-auto">
+            <div className="inline-block text-xs uppercase tracking-widest px-3 py-1 rounded-full mb-6 font-bold" style={{ color: "#fff", background: VIOLET }}>
+              FAQ
+            </div>
+            <h2 id="faq-heading" className="font-display font-extrabold mb-8 leading-[1.0]" style={{ fontSize: "clamp(28px,4vw,46px)", color: INK }}>
+              Questions people ask.
+            </h2>
+            <div className="space-y-4">
+              {faqs.map((faq) => (
+                <details key={faq.q} className="rounded-2xl p-5 group" style={{ background: "#fff", border: `2px solid ${INK}` }}>
+                  <summary className="font-display font-bold cursor-pointer list-none flex items-center justify-between gap-4" style={{ fontSize: 18, color: INK }}>
+                    {faq.q}
+                    <ArrowUpRight className="w-5 h-5 shrink-0 transition-transform group-open:rotate-90" style={{ color: TEAL }} />
+                  </summary>
+                  <p className="mt-3 leading-relaxed" style={{ color: "#4a4239" }}>{faq.a}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Contact */}
-        <section id="contact" className="relative py-28 px-6">
+        <section id="contact" className="relative py-24 px-7">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="bg-gradient-to-br from-blue-600 via-cyan-500 to-emerald-500 rounded-3xl p-12 md:p-16 text-white shadow-2xl relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
-              <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full blur-3xl" />
+            <div className="rounded-3xl p-12 md:p-16 relative overflow-hidden" style={{ background: TEAL, color: "#fff", border: `3px solid ${INK}`, boxShadow: `10px 10px 0 ${INK}` }}>
               <div className="relative">
-                <div className="text-xs uppercase tracking-widest text-white/80 mb-4 font-bold">Get in touch</div>
-                <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4 leading-tight" style={serif}>
-                  Whether you&apos;re hiring, building, or stuck on a deal.
+                <div className="text-xs uppercase tracking-widest mb-4 font-bold" style={{ color: "rgba(255,255,255,0.85)" }}>Get in touch</div>
+                <h2 className="font-display font-extrabold mb-4 leading-[1.0]" style={{ fontSize: "clamp(30px,5vw,56px)" }}>
+                  Hiring, building, or stuck on a deal? Let&apos;s talk.
                 </h2>
-                <p className="text-white/85 text-lg mb-10">I respond to every note personally.</p>
+                <p className="text-lg mb-10" style={{ color: "rgba(255,255,255,0.9)" }}>I respond to every note personally.</p>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
                   <a
                     href={`mailto:${CONTACT_EMAIL}`}
-                    className="bg-white text-slate-900 px-6 py-3 rounded-full hover:bg-slate-100 transition flex items-center justify-center gap-2 font-semibold flex-1"
+                    className="px-6 py-3 rounded-full transition flex items-center justify-center gap-2 font-semibold flex-1 hover:opacity-90"
+                    style={{ background: "#fff", color: INK }}
                   >
                     <Mail className="w-4 h-4" /> Email me
                   </a>
@@ -836,7 +1085,8 @@ export default function ChrisDorseySite() {
                     href="https://calendar.app.google/WdU29EvH2jzfwNHe9"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-white text-slate-900 px-6 py-3 rounded-full hover:bg-slate-100 transition flex items-center justify-center gap-2 font-semibold flex-1"
+                    className="px-6 py-3 rounded-full transition flex items-center justify-center gap-2 font-semibold flex-1 hover:opacity-90"
+                    style={{ background: "#fff", color: INK }}
                   >
                     <Calendar className="w-4 h-4" /> Book time
                   </a>
@@ -844,7 +1094,8 @@ export default function ChrisDorseySite() {
                     href="https://www.linkedin.com/in/cdorsey/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="border-2 border-white/40 backdrop-blur px-6 py-3 rounded-full hover:bg-white/10 transition flex items-center justify-center gap-2 font-semibold flex-1"
+                    className="px-6 py-3 rounded-full transition flex items-center justify-center gap-2 font-semibold flex-1"
+                    style={{ border: "2px solid rgba(255,255,255,0.5)" }}
                   >
                     <LinkedinIcon /> LinkedIn
                   </a>
@@ -856,16 +1107,16 @@ export default function ChrisDorseySite() {
       </main>
 
       {/* Footer */}
-      <footer className="relative border-t border-sky-200/50 py-10 px-6 mt-12">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-600">
+      <footer className="relative py-10 px-7 mt-2" style={{ borderTop: `2px solid ${INK}` }}>
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm" style={{ color: "#4a4239" }}>
           <div className="flex items-center gap-2">
-            <div className="w-5 h-5 rounded bg-gradient-to-br from-blue-600 to-emerald-500" />
-            © 2026 Christopher Dorsey. Built in The Rockies, Colorado.
+            <MountainMark />
+            <span>© 2026 Christopher Dorsey. Built in The Rockies, Colorado.</span>
           </div>
           <div className="flex gap-6">
-            <a href="/feed.xml" className="hover:text-blue-600 transition">RSS</a>
-            <a href="https://www.linkedin.com/in/cdorsey/" className="hover:text-blue-600 transition">LinkedIn</a>
-            <a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-blue-600 transition">Email</a>
+            <a href="/feed.xml" className="hover:opacity-60 transition">RSS</a>
+            <a href="https://www.linkedin.com/in/cdorsey/" className="hover:opacity-60 transition">LinkedIn</a>
+            <a href={`mailto:${CONTACT_EMAIL}`} className="hover:opacity-60 transition">Email</a>
           </div>
         </div>
       </footer>

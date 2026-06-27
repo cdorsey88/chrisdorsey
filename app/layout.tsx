@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import { Inter, Newsreader } from "next/font/google";
+import { Inter, Newsreader, Bricolage_Grotesque } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import { CONTACT_EMAIL } from "@/app/lib/site-config";
 
@@ -14,6 +16,13 @@ const newsreader = Newsreader({
   variable: "--font-serif-brand",
   display: "swap",
   style: ["normal", "italic"],
+});
+
+const bricolage = Bricolage_Grotesque({
+  subsets: ["latin"],
+  variable: "--font-bricolage",
+  display: "swap",
+  weight: ["700", "800"],
 });
 
 export const metadata: Metadata = {
@@ -155,18 +164,74 @@ const jsonLd = {
       publisher: { "@id": "https://chrisdorsey.co/#person" },
       url: "https://chrisdorsey.co/#writing",
     },
+    {
+      "@type": "FAQPage",
+      "@id": "https://chrisdorsey.co/#faq",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "What does Chris Dorsey do?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Chris Dorsey is a senior enterprise sales and go-to-market leader who takes new technology to market — AI first, then data and MadTech (marketing and advertising technology). Across fifteen years he has been the first seller in the building twice, created categories, and closed Fortune 500 accounts, from agency creative at Crispin Porter + Bogusky to data at Oracle, edge infrastructure at Fastly, and AI customer acquisition at Zeta Global. His throughline is making emerging technology sellable for the people who have to buy it.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Who does Chris work with, and who can he introduce you to?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Chris is a connector. After fifteen years across four industries he knows Fortune 500 CMOs, AI founders, data leaders, investors, agency executives, and engineers and product managers. Tell him what you are trying to do and odds are he already knows who you should be talking to. He makes introductions freely — no fee, no catch.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What is Generative Engine Optimization (GEO)?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Generative Engine Optimization (GEO) is the practice of getting a brand cited and recommended inside AI answers from tools like ChatGPT, Gemini, and Claude, the way SEO got brands ranked in search results. It is one slice of Chris's broader AI and MadTech work, not the headline — he built the go-to-market motion for a GEO product from zero and advises companies on where AI is reshaping how brands get found.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Is Chris Dorsey available for roles or advisory?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. Chris is exploring senior individual-contributor go-to-market roles at AI, retail media, AdTech/MarTech, and enterprise SaaS companies — Account Director, Strategic Account Manager, and Director of Customer Success or Partnerships. He also advises founders and sales leaders on building durable pipeline. He responds to every note personally.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Where is Chris Dorsey based?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Chris is based in Denver, Colorado, and works remotely or hybrid across the United States.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What industries does Chris cover?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "AI go-to-market, data, and MadTech (marketing and advertising technology), with deep roots in enterprise SaaS, retail media, AdTech, and agency creative. He has sold through every major marketing shift — broadcast, digital, social, programmatic, data, AI, and now agents — which is what lets him spot what is actually changing before everyone else catches up.",
+          },
+        },
+      ],
+    },
   ],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${newsreader.variable}`}>
+    <html lang="en" className={`${inter.variable} ${newsreader.variable} ${bricolage.variable}`}>
       <body>
         {children}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
