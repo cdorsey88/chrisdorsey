@@ -6,7 +6,6 @@ import { Calendar, Clock } from "lucide-react";
 import SiteNav from "@/app/components/SiteNav";
 import type { Metadata } from "next";
 
-const serif = { fontFamily: "var(--font-fraunces)" };
 const sans  = { fontFamily: "var(--font-inter)" };
 
 type Post = {
@@ -22,6 +21,301 @@ type Post = {
 };
 
 const posts: Post[] = [
+  {
+    slug: "starbucks-green-apron-creators-employee-influencers",
+    title: "Starbucks is paying baristas to make TikToks. The strategy was sitting in plain sight for a decade.",
+    date: "Jun 30, 2026",
+    readTime: "6 min",
+    tag: "Brands",
+    color: "from-green-700 to-emerald-600",
+    tldr: "At Cannes Lions, Starbucks said it will be the first brand to pilot a custom Creator Network inside TikTok, sending creative briefs to select baristas from its Green Apron Creators program and paying them through ad revenue sharing. Its employees already post about the job at three times the rate of peers at similar chains, so Starbucks is paying for behavior it was getting free. Overdue, yes, but not unprecedented: Macy's built Style Crew on employee sales commissions in 2018, and Walmart's Spotlight has paid associates since 2020. The tactic stayed rare because paying employees to post sets off real wage-and-hour, FTC-disclosure, and audience-ownership problems, and because marketing doesn't run the frontline. What changed is that Gen Z posts natively and TikTok is now building the rails. Where it heads: the employee-creator becomes a defined, paid role, comp blends wage and revenue share, and the following a barista builds is portable — brands are about to learn they're renting the creators they employ.",
+    content: (
+      <div className="prose-content">
+        <p>
+          Starbucks said at Cannes Lions this month that it will be{" "}
+          <a href="https://www.marketingdive.com/news/starbucks-pilots-tiktok-program-for-boosting-employee-generated-content/823565/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">the first brand to pilot a custom Creator Network inside TikTok</a> &mdash; a tool the two companies built together that lets Starbucks send creative briefs to select baristas and pay them through ad revenue sharing on what they post. It builds on{" "}
+          <a href="https://about.starbucks.com/press/2025/how-starbucks-is-elevating-coffee-stories-through-partner-employee-content-creators/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">Green Apron Creators</a>, the in-house program Starbucks started in 2024 to turn employees into content creators. The justification almost writes itself: Starbucks says its workers already post about the job at three times the rate of employees at comparable chains. The company is now paying for something a lot of its staff were doing for free.
+        </p>
+        <p>
+          The reasonable first reaction is that this should have happened years ago. The raw material &mdash; employees who like the brand enough to post about it, and audiences who trust a person in an apron more than a thirty-second spot &mdash; has been sitting in front of every large consumer company since Instagram had a chronological feed. Watching a hundred-billion-dollar brand arrive at it in 2026 feels late to the point of negligence. It is late. It also isn&apos;t the first time it&apos;s been done, which is where the story gets more useful.
+        </p>
+        <h2>Macy&apos;s wrote this template in 2018</h2>
+        <p>
+          Macy&apos;s launched{" "}
+          <a href="https://www.marketingdive.com/news/how-macys-is-flexing-its-style-crew-affiliate-program-beyond-social-media/810062/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">Style Crew</a> in 2018, signing up roughly 3,300 employees as paid brand ambassadors and paying them a commission &mdash; 5% then, 12% now &mdash; on sales that came through their posts and personal storefronts on macys.com. Macy&apos;s says the program drove triple-digit growth in revenue and traffic among its top creators last year. Walmart followed in 2020 with{" "}
+          <a href="https://www.modernretail.co/retailers/a-true-influencer-program-inside-walmarts-growing-army-of-employee-tiktokers/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">Spotlight</a>, paying associates through contests and brand deals &mdash; $200 to the top posts in a Funko campaign, a $1,000 grand prize in another &mdash; with plans to extend it across its 1.5 million U.S. workers. So paying your own employees to be creators isn&apos;t a Starbucks invention. What Starbucks changed is the comp model and the plumbing. Macy&apos;s pays affiliate commission on its own e-commerce; Starbucks is sharing ad revenue on TikTok content that gets used in paid media, on infrastructure TikTok built for the purpose.
+        </p>
+        <p>
+          I spent time at Crispin Porter + Bogusky, and the thing that shop understood in its bones was that the best brand content looks like no brand briefed it. The moment the marketing department&apos;s fingerprints show up, the audience smells it and the effect dies. That&apos;s the needle Starbucks has to thread. The videos work because a barista made one on a slow Tuesday, and the program exists to scale exactly that, which means writing briefs for it and putting it on a comp plan. Pay for spontaneity and brief it, and you can buy out the very thing you were paying for.
+        </p>
+        <h2>The reasons it took this long aren&apos;t flattering, but they&apos;re real</h2>
+        <p>
+          The lateness wasn&apos;t simple corporate slowness. Paying employees to post sets off a chain of problems most brands would rather not touch. The first is wage-and-hour law: if a barista makes a video, when exactly is that work? Content created off the clock can turn into compensable time, overtime exposure attached, the moment an employer directs it with briefs and pays for it, and legal departments have spent years saying no to precisely that. The second is the FTC. An employee endorsing their employer has a material connection they&apos;re required to disclose, and the brand, not only the creator, is{" "}
+          <a href="https://www.americanemployers.org/news/2026-06-10-ftc-updates-guidelines-on-influencer-marketing-disclosures-3" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">liable when they don&apos;t</a>; the agency has been explicit that a company can be penalized for failing to train or supervise the creators it engages, at more than fifty thousand dollars a violation. Spread that across a few thousand baristas posting every day and the exposure compounds quickly.
+        </p>
+        <p>
+          The third problem has no clean answer: who owns the following? Staples spent the past year as the accidental beneficiary of one employee, Kaeden Rowland, the{" "}
+          <a href="https://finance.yahoo.com/news/staples-baddie-went-viral-retailer-204500778.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">&ldquo;Staples Baddie,&rdquo;</a> whose ASMR videos about her job pulled close to 600,000 followers. That audience is hers. She can carry it to a competitor or out on her own, and every brand that turns an employee into a creator is building an asset that walks out the day the person quits. Underneath all of it sits an org problem: marketing doesn&apos;t manage the frontline. The CMO who wants a creator army doesn&apos;t control store scheduling or HR policy; operations does, and operations is graded on throughput, not impressions. The two budgets answer to different bosses who rarely sit in the same room.
+        </p>
+        <p>
+          So the reason this didn&apos;t happen in 2014 wasn&apos;t that nobody thought of it. Macy&apos;s thought of it in 2018. The liabilities were real and the workforce wasn&apos;t ready, and both of those have now changed. Gen Z, who make up most of Starbucks&apos; baristas, post as a reflex, and TikTok has decided to build the tooling that lets a brand assemble and pay a pool of employee creators without inventing the system itself. A platform absorbing the operational headache is what tips this from a scattered set of programs into a category.
+        </p>
+        <h2>Where the line between employee and creator goes from here</h2>
+        <p>
+          Once TikTok productizes employee creator networks, every large consumer brand gets the same offer, and the employee-creator stops being a pilot and becomes a line on a job description. The blur is the part worth thinking through. A barista&apos;s role today is making coffee. Tomorrow it can carry a content cadence, a follower target, a revenue-share line on the pay stub next to the hourly wage. The person who&apos;s good at it becomes more valuable for their audience than their espresso, and the pay will follow: base wage for the job, revenue share for the reach.
+        </p>
+        <p>
+          That cuts in directions brands haven&apos;t priced. It&apos;s a real recruiting and retention pull for a generation that wants to build a personal brand anyway, and the job that lets you grow a following beats the one that bans your phone behind the counter. It also hands leverage to the employee. A barista with 200,000 followers isn&apos;t interchangeable anymore, and they know it. Some will go independent the moment the audience is big enough to monetize without the apron, and brands will find themselves negotiating to keep people they used to be able to replace in an afternoon.
+        </p>
+        <p>
+          The labor question is going to get loud, especially at Starbucks, where the union fight has been running for years. If posting becomes part of the job, it becomes something to bargain over: who&apos;s required to do it, who gets the paid briefs, what the revenue split is, whether the hours count. Pay some baristas to create and not others and you&apos;ve drawn a new hierarchy inside a workforce already organizing over pay. That&apos;s not an argument against the program. It&apos;s a reason to expect it to collide with everything else happening in the stores.
+        </p>
+        <p>
+          Your instinct is right on both counts: the move is smart, and Starbucks should have made it a long time ago. The lesson for anyone running a brand isn&apos;t to copy Starbucks. It&apos;s that the cheapest, most trusted distribution you have is the people already wearing your logo, and the reason you left it on the table is a stack of legal and organizational problems that are finally solvable. Get your wage-and-hour and disclosure answers from counsel before the first brief goes out, decide in advance what happens to the audience when the employee leaves, and accept that the content only keeps working if you let it stay theirs. Starbucks is paying for something its baristas were giving away, which sounds like a bargain until you remember the audience came with the barista, not the brand. Whoever you put on camera, you&apos;re renting their reach for exactly as long as they choose to stay.
+        </p>
+      </div>
+    ),
+    sources: [
+      { title: "Marketing Dive — Starbucks pilots TikTok program for boosting employee-generated content (June 23, 2026)", url: "https://www.marketingdive.com/news/starbucks-pilots-tiktok-program-for-boosting-employee-generated-content/823565/" },
+      { title: "NetInfluencer — Starbucks Pilots TikTok Creator Network Program With Ad Revenue Sharing for Barista Creators", url: "https://www.netinfluencer.com/starbucks-pilots-tiktok-creator-network-program-with-ad-revenue-sharing-for-barista-creators/" },
+      { title: "Marketing Dive — How Macy's is flexing its Style Crew affiliate program beyond social media", url: "https://www.marketingdive.com/news/how-macys-is-flexing-its-style-crew-affiliate-program-beyond-social-media/810062/" },
+      { title: "Modern Retail — 'A true influencer program': Inside Walmart's growing army of employee TikTokers (Spotlight)", url: "https://www.modernretail.co/retailers/a-true-influencer-program-inside-walmarts-growing-army-of-employee-tiktokers/" },
+      { title: "Inc. — Starbucks and Dell Are Turning Regular Employees Into Paid TikTok Creators", url: "https://www.inc.com/ashley-couto/starbucks-dell-employees-paid-tiktok-creators/91366956" },
+    ],
+  },
+  {
+    slug: "albertsons-pg-branded-entertainment-retail-media",
+    title: "Albertsons made a scripted drama from its shopper data. P&G has been here since the 1930s.",
+    date: "Jun 30, 2026",
+    readTime: "5 min",
+    tag: "Future of Ads",
+    color: "from-amber-500 to-rose-600",
+    tldr: "Albertsons Media Collective and P&G launched \"Rico's Tacos,\" a scripted \"Minivela\" microdrama built from Albertsons' shopper data, premiering June 23 across YouTube, social, and in-store screens and running through August, with an episode shown at Cannes. P&G invented the soap opera in the 1930s to sell laundry soap; now it's co-producing scripted drama again, with loyalty-card data writing the brief. The move takes retail media up-funnel into brand-building and brings the measurement branded content never had — a tie to actual purchases. But putting the brand inside the story muddies attribution, and the retailer makes the show, sells the placement, and grades the result. If you sell retail media or build for RMNs, the category is adding production to its skill set. If you're a brand, you can finally measure branded entertainment to a receipt, but the grader made the show — so bring your own scorecard.",
+    content: (
+      <div className="prose-content">
+        <p>
+          At Cannes this month, Albertsons Media Collective and P&amp;G premiered an episode of{" "}
+          <a href="https://www.albertsonscompanies.com/newsroom/press-releases/news-details/2026/Albertsons-Media-Collective-Unveils-Industry-First-Branded-Entertainment-Model-Co-Developed-with-Procter--Gamble/default.aspx" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">&ldquo;Rico&apos;s Tacos,&rdquo;</a> a scripted microdrama &mdash; a &ldquo;Minivela,&rdquo; told in one-to-two-minute episodes &mdash; about a widowed father, his teenage daughter, and her abuela building a family taco business near Venice Beach. It launched June 23 across Albertsons&apos; YouTube, social channels, and in-store screens, with new episodes running weekly through the end of August. The cast and the storylines were shaped by Albertsons&apos; shopper data before a word was written. A grocery chain&apos;s ad division just produced a television show.
+        </p>
+        <p>
+          The trade press is filing this as an industry first. The format is new; the idea is almost a century old. P&amp;G built the original soap opera in the 1930s &mdash; daytime radio dramas it produced and sponsored to sell laundry soap to women at home, which is where the genre got its name. The company that invented branded entertainment to move detergent is making scripted drama again, except this time the brief comes from loyalty-card purchase behavior instead of a hunch about who&apos;s listening.
+        </p>
+        <p>
+          I spent time on the agency side at Crispin Porter + Bogusky, where &ldquo;branded content&rdquo; came back into style every few years and mostly died the same way. A brand made something that looked like real entertainment, everyone in the room agreed it was great, and nobody could prove it sold a single unit. The work was often good. The measurement never closed, and that gap is most of why brand teams kept losing the branded-content budget to performance marketing, year after year.
+        </p>
+        <h2>What&apos;s different is the receipt</h2>
+        <p>
+          The thing Albertsons brings that a network or a studio never could is knowing what the audience bought afterward. It owns the loyalty data and the stores, so it can tie who watched to what landed in their basket the next week. Albertsons says households that engage with this kind of content spend meaningfully more than the average shopper; whatever the precise lift, the point is that it can be measured against real sales rather than estimated against a brand-lift survey. Retail media grew up as a lower-funnel business &mdash; sponsored search on the site, a placement scored to the basket. Producing a scripted series is a move up the funnel into brand-building, carrying the one thing brand-building always lacked: a credible line to the purchase.
+        </p>
+        <h2>The catch is the same closed loop, one floor up</h2>
+        <p>
+          Put the brand inside the story, though, and the clean attribution gets murkier, not sharper. A sponsored-product placement is easy to grade: this ad, this SKU, this basket. A drama a household watches across a dozen short episodes, with P&amp;G products woven through the plot, doesn&apos;t leave that tidy a trail, and the company telling you it worked is the same company that produced it and sold you the slot. That&apos;s the bind brands already fight inside Walmart Connect and the walled gardens, where the platform owns the screen, the placement, and the scoreboard at once. I wrote about Walmart{" "}
+          <Link href="/writing/walmart-vibe-self-serve-tv-advertising" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">assembling exactly that kind of stack</Link>. Albertsons is extending the same loop from a banner to a storyline.
+        </p>
+        <h2>If you sell</h2>
+        <p>
+          The category is moving up-funnel, and &ldquo;we measure to the basket&rdquo; is about to share the pitch with &ldquo;we make the content.&rdquo; That&apos;s a different skill set &mdash; production, story, talent &mdash; bolted onto an ad-tech business, and most retail media networks don&apos;t have it in-house yet. If you sell into retail media or build the tooling around it, the opening is the measurement layer that ties long-form content to sales in a way a buyer trusts, because the retailers will produce these shows faster than they can prove they pay off. And if you&apos;re an agency, the RMN just became a competitor for the branded-content budget you used to own, armed with first-party data you can&apos;t match.
+        </p>
+        <h2>If you buy</h2>
+        <p>
+          You can finally make branded entertainment that&apos;s graded against a receipt instead of a vibe, and for a CPG brand that&apos;s worth taking seriously. Go in knowing the grader made the show. Ask for the sales lift measured independently of the retailer&apos;s own dashboard, run a holdout so you know what the content actually drove versus what those households would have bought anyway, and keep your own read on the result. The closed loop is convenient. It isn&apos;t neutral.
+        </p>
+        <p>
+          P&amp;G worked out ninety years ago that a durable way to sell a household product was to make something people genuinely wanted to watch and put the product inside it. The mechanics have caught up to the ambition &mdash; Albertsons can now connect an episode to a household&apos;s grocery bill in a way radio never could. The question a brand weighing one of these deals should ask is the one the original soap operas never had to answer: when the company producing your show also owns the data that says it worked, how hard did you check the math?
+        </p>
+      </div>
+    ),
+    sources: [
+      { title: "Albertsons Companies — Albertsons Media Collective Unveils Industry-First Branded Entertainment Model, Co-Developed with Procter & Gamble (June 17, 2026)", url: "https://www.albertsonscompanies.com/newsroom/press-releases/news-details/2026/Albertsons-Media-Collective-Unveils-Industry-First-Branded-Entertainment-Model-Co-Developed-with-Procter--Gamble/default.aspx" },
+      { title: "Marketing Dive — P&G's latest branded microdrama is built on Albertsons retail media data", url: "https://www.marketingdive.com/news/pgs-latest-branded-microdrama-is-built-on-albertsons-retail-media-data/823121/" },
+      { title: "Stream TV Insider — 'Rico's Tacos': A Minivela drama informed by retail shopper intelligence", url: "https://www.streamtvinsider.com/content/ricos-tacos-minivela-drama-informed-retail-shopper-intelligence" },
+    ],
+  },
+  {
+    slug: "kroger-tiktok-retail-media-data-offplatform",
+    title: "Kroger is renting its shoppers to TikTok. Walmart spent a year making sure it never has to.",
+    date: "Jun 30, 2026",
+    readTime: "5 min",
+    tag: "MadTech",
+    color: "from-sky-600 to-violet-600",
+    tldr: "Kroger Precision Marketing launched self-service advertising with TikTok, letting brands target Kroger's loyalty-based purchase audiences inside TikTok's ad platform. Same month, same Cannes festival, Walmart kept buying its own stack — VIZIO, Vibe — so its data, inventory, and measurement stay in-house. Two retail media networks made opposite bets on where a retailer's data is worth the most: pointed at the biggest outside audience, or kept behind its own walls. Kroger's move buys reach it can't build alone, and risks teaching the market to value the data over Kroger's owned media while TikTok learns which of its audiences convert. If you sell retail media, audience licensing is a real revenue line, but know whether you're selling reach or renting out your moat. If you buy, Kroger data inside TikTok is good targeting — just don't let TikTok be the only scorecard.",
+    content: (
+      <div className="prose-content">
+        <p>
+          Kroger Precision Marketing, the retail-media arm of the grocery chain, just{" "}
+          <a href="https://www.krogerprecisionmarketing.com/media-hub/blog/kroger-precision-marketing-announces-self-service-advertising-with-tiktok/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">launched self-service advertising with TikTok</a>. Brands can now target Kroger shoppers, matched by actual purchase data from millions of loyalty-card transactions a day, inside TikTok&apos;s ad platform, bought through self-serve tools. Kroger&apos;s pitch is that its data finds the buyer and TikTok&apos;s feed reaches them where their attention already is. The stat it leads with: 68% of Kroger shoppers say they bought a grocery or household product in the last six months because of something they saw on social.
+        </p>
+        <p>
+          What makes the move worth a second look is what a different retailer did the same month, at the same Cannes festival, in the opposite direction. Walmart spent the spring buying its own stack &mdash;{" "}
+          <Link href="/writing/walmart-vibe-self-serve-tv-advertising" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">VIZIO for the screen, Vibe for the self-serve buying tool</Link> &mdash; and wiring both into Walmart Connect so the data, the inventory, and the measurement all stay inside the building. Kroger is doing the reverse: taking its most valuable asset, the purchase data, and pushing it out onto a platform it doesn&apos;t own. Same business, two theories of where a retailer&apos;s data is worth the most.
+        </p>
+        <p>
+          I&apos;ve spent enough time around data partnerships to have watched how this tends to go for the smaller party. You bring the data that makes the targeting work, the platform brings the reach, and over a couple of renewal cycles the platform learns exactly which of your audiences convert and quietly internalizes the value you walked in with. The side that owns the destination usually ends up owning the relationship.
+        </p>
+        <h2>Kroger&apos;s bet is rational anyway</h2>
+        <p>
+          Two things are true at once. Kroger doesn&apos;t have a destination at Walmart&apos;s scale &mdash; no living-room screen it owns, and a website pulling a fraction of the traffic Amazon or Walmart.com command. Meeting shoppers inside TikTok, where they already spend hours, is a clear-eyed read of that position: borrow the reach you can&apos;t build yourself. And every off-platform activation is data leaving the building. TikTok gets to see which Kroger-defined audiences respond, which sharpens TikTok&apos;s own model and makes Kroger a little more replaceable inside it each time. The reach is real today. The dependency compounds in the background.
+        </p>
+        <h2>The measurement question rides along</h2>
+        <p>
+          There&apos;s also the closed-loop problem that shadows every retail-media deal. When the campaign runs inside TikTok, TikTok&apos;s pixel and TikTok&apos;s attribution do a lot of the grading. Kroger&apos;s purchase data can close part of the loop on the sales end, which is genuinely useful and more than most networks can offer, but the platform selling the impressions is still heavily involved in telling you those impressions worked. Brands have spent a decade learning not to take Meta&apos;s and Amazon&apos;s self-reported numbers at face value. The same caution applies here.
+        </p>
+        <h2>If you sell</h2>
+        <p>
+          If you run or sell into a retail media network, licensing your audiences onto the big social platforms is a fast, real revenue line, and the reach argument holds up. Be honest internally about which thing you&apos;re doing: selling reach your owned media can&apos;t match, or renting out the first-party data that was supposed to be your durable advantage. Both can be worth it. They have very different five-year endings, and the smaller you are next to the platform, the more the second one costs you down the road.
+        </p>
+        <h2>If you buy</h2>
+        <p>
+          Kroger purchase-data audiences inside TikTok is a good targeting tool, and for a brand that sells through Kroger it&apos;s worth testing now while it&apos;s fresh. Bring your own measurement. Don&apos;t let TikTok&apos;s attribution be the only scorecard, push for the sales read tied to Kroger&apos;s loyalty data, and run a holdout so you can separate what the campaign drove from what would have sold regardless.
+        </p>
+        <p>
+          Walmart and Kroger answered the same question two different ways in the same week. Walmart is betting a retailer&apos;s data is worth the most when the retailer controls the screen it runs on. Kroger is betting it&apos;s worth the most pointed at the largest audience it can reach, wherever that audience happens to live. Both will make money this year. The one to watch is whose data is still their own advantage in five years, and whose has quietly become a feature of somebody else&apos;s platform.
+        </p>
+      </div>
+    ),
+    sources: [
+      { title: "Kroger Precision Marketing — Kroger Precision Marketing Announces Self-Service Advertising with TikTok (June 2026)", url: "https://www.krogerprecisionmarketing.com/media-hub/blog/kroger-precision-marketing-announces-self-service-advertising-with-tiktok/" },
+      { title: "Grocery Dive — Kroger links with TikTok on targeted ads", url: "https://www.grocerydive.com/news/kroger-tiktok-retail-media-social-media-grocery-supermarkets-advertising/823589/" },
+      { title: "Progressive Grocer — Kroger Precision Marketing Launches Self-Service Advertising With TikTok", url: "https://progressivegrocer.com/kroger-precision-marketing-launches-self-service-advertising-tiktok" },
+    ],
+  },
+  {
+    slug: "geo-citations-google-rankings-diverge",
+    title: "The pages AI cites and the pages Google ranks are barely the same list anymore.",
+    date: "Jun 29, 2026",
+    readTime: "5 min",
+    tag: "GEO",
+    color: "from-emerald-500 to-cyan-600",
+    tldr: "New 5W research, drawing on Brandlight data, says the overlap between the top Google results and the sources AI assistants cite has fallen from about 70% to under 20%, and Ahrefs found roughly 28% of ChatGPT's most-cited pages have no organic Google ranking at all. Search and AI answers are pulling from two increasingly different lists, and Google's own new guidance says most GEO 'hacks' don't work. If you market a brand, stop grading GEO on the SEO scoreboard: track whether the assistants cite and recommend you, find the sources they pull from, and get your brand into those. If you sell GEO tooling, a ranking dashboard isn't the product anymore.",
+    content: (
+      <div className="prose-content">
+        <p>
+          For about a decade the bargain was clear: earn a spot on Google&apos;s first page and you&apos;d get found. New research from 5W, built on{" "}
+          <a href="https://www.prnewswire.com/news-releases/new-5w-research-overlap-between-top-google-rankings-and-ai-cited-sources-has-collapsed-from-70-to-under-20-302760132.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">Brandlight&apos;s data</a>, says that bargain is coming apart. The overlap between the pages that rank at the top of Google and the pages AI assistants cite in their answers has fallen from roughly 70% to under 20%, and it keeps sliding. Ahrefs ran the question separately and found that{" "}
+          <a href="https://ahrefs.com/blog/chatgpt-google-citations/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">around 28% of the pages ChatGPT cites most often don&apos;t rank organically on Google at all</a>. Two systems people use to find things, pulling from two increasingly different lists.
+        </p>
+        <p>
+          If you market a brand, that gap is your problem now. The SEO you already paid for &mdash; the rankings, the backlinks, the content calendar &mdash; was supposed to be the thing that got you discovered. A growing share of discovery now happens inside ChatGPT, Gemini, Perplexity, and Google&apos;s own AI Mode, and the page that wins the blue link isn&apos;t necessarily the source the model quotes back to your buyer. You can be winning search and losing the answer.
+        </p>
+        <p>
+          I&apos;ve spent the recent stretch of my career working on exactly this problem &mdash; getting brands surfaced inside AI answers rather than just search results &mdash; and what surprised me was how little the old playbook transferred. The instinct is to point your SEO team at it and assume the same work pays off in the new channel. Mostly it doesn&apos;t.
+        </p>
+        <h2>Why the two lists drifted apart</h2>
+        <p>
+          A search engine ranks pages. A language model assembles an answer, and it reaches for sources that make that answer easy to write and safe to stand behind: clear definitions, content structured as direct answers, consistent mentions of your brand across places the model already trusts &mdash; Reddit threads, Wikipedia, review sites, trade coverage, established publications. Backlinks and keyword density, the currency of SEO, barely register. So a page engineered to rank can be invisible to the model, and a Reddit comment or a third-party roundup you don&apos;t even own can be the thing it quotes. The signals that win each system were never the same, and at the scale of millions of queries the two lists pull apart.
+        </p>
+        <h2>The mistake is grading GEO on the SEO scoreboard</h2>
+        <p>
+          A whole tooling market has grown up promising to fix your AI visibility, and most of it sells the same dashboard SEO always sold: a number that goes up. Google itself just published{" "}
+          <a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">guidance on optimizing for its generative features</a>, and the blunt version is that a lot of the GEO &ldquo;hacks&rdquo; making the rounds don&apos;t do anything, because generative visibility still rides on the same fundamentals as search quality. Two things can be true: AI visibility is real and worth chasing, and a meaningful slice of what&apos;s being sold to chase it is the old game with a new label. If your GEO report is really a rankings report wearing a costume, you&apos;re paying to measure the wrong list.
+        </p>
+        <h2>If you market a brand</h2>
+        <p>
+          Stop asking where you rank and start asking whether the assistants cite you and recommend you for the queries that matter, and which sources they pull when they do. Run your real buying questions through ChatGPT, Gemini, and Perplexity, write down who gets named, and go find the pages those answers lean on. Often they&apos;re not yours &mdash; a comparison post, a Reddit thread, an analyst&apos;s roundup &mdash; and the work is getting your brand accurately represented in those places, not polishing a landing page the model never reads. Clean, answer-shaped content on your own site still matters. It&apos;s the floor, not the whole building.
+        </p>
+        <h2>If you sell GEO tooling</h2>
+        <p>
+          The ranking dashboard isn&apos;t the product anymore. A buyer can tell within a quarter whether your tool moved an actual citation or just charted a vanity score, and the divergence in this research is exactly what makes that bluff easy to call. Sell the thing that ties to a model citation a buyer can see, name the sources you got them into, and let the score be the smallest promise you make.
+        </p>
+        <p>
+          The two lists used to be close enough that winning one won you the other. They aren&apos;t anymore, and the brands that keep grading themselves on Google&apos;s page while their buyers get answers somewhere else will think they&apos;re winning right up until they wonder why the pipeline went quiet. Check both lists this quarter. They no longer agree.
+        </p>
+      </div>
+    ),
+    sources: [
+      { title: "5W / PR Newswire — Overlap Between Top Google Rankings and AI-Cited Sources Has Collapsed From 70% to Under 20% (2026)", url: "https://www.prnewswire.com/news-releases/new-5w-research-overlap-between-top-google-rankings-and-ai-cited-sources-has-collapsed-from-70-to-under-20-302760132.html" },
+      { title: "Ahrefs — ChatGPT May Scrape Google, but the Results Don't Match", url: "https://ahrefs.com/blog/chatgpt-google-citations/" },
+      { title: "Google Search Central — Optimizing Your Website for Generative AI Features on Google Search", url: "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide" },
+    ],
+  },
+  {
+    slug: "google-conversational-ads-keyword-casualty",
+    title: "Google is turning search ads into a conversation. The keyword is the casualty.",
+    date: "Jun 29, 2026",
+    readTime: "5 min",
+    tag: "Future of Ads",
+    color: "from-blue-600 to-violet-600",
+    tldr: "At Google Marketing Live 2026, Google unveiled Gemini-powered conversational ad formats inside AI Mode and Search, as AI Mode moves from an opt-in experiment to the way Search works. Search ads were sold against keywords for twenty years; a conversation has no keyword, so targeting, placement control, and clean keyword-to-conversion attribution all weaken at once. If you buy media, get your reporting ready for a conversion you can't trace to a query, and treat your free presence in the AI answer as the other half of the buy. If you sell search tooling, 'we optimize keywords' ages fast in a channel leaving keywords behind.",
+    content: (
+      <div className="prose-content">
+        <p>
+          At Google Marketing Live this month, Google showed the next shape of the search ad:{" "}
+          <a href="https://searchengineland.com/google-tests-new-conversational-ad-formats-in-ai-mode-and-search-478115" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">Gemini-powered formats</a> that run inside AI Mode and inside the conversational responses Search now gives, instead of as a row of links above the results. AI Mode, the chat-style search Google introduced last year, is moving from an experiment you opt into to the way Search works. And{" "}
+          <a href="https://blog.google/products/ads-commerce/google-marketing-live-search-ads/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">the ad is moving with it</a> &mdash; into the back-and-forth, alongside the answer, in the place the buyer is actually reading.
+        </p>
+        <p>
+          For twenty years, the search ad was sold against a keyword. Someone typed a query, you bid on the words, and the match between the words and your ad set the price and the placement. That model built a couple-hundred-billion-dollar business and trained every marketer alive to think in keywords and intent. A conversation doesn&apos;t have a keyword. It has a thread, a follow-up, a clarifying question, a recommendation. When the query becomes a dialogue, the thing you were bidding on stops describing what&apos;s being bought.
+        </p>
+        <p>
+          I came up partly on the agency side, at Crispin Porter + Bogusky, back when &ldquo;buying search&rdquo; meant a spreadsheet of keywords, match types, and bids you could reason about line by line. The buyer knew what each dollar was pointed at. That legibility is the thing now in question.
+        </p>
+        <h2>What a conversational placement breaks</h2>
+        <p>
+          Three things the keyword model gave you quietly go soft when the ad lives inside an answer. Targeting: you bid on intent expressed as words, but a model infers intent from a whole exchange, so you&apos;re bidding on its read of the conversation, not on a phrase you chose. Control: you knew where your ad sat and what it sat next to, and inside a generated answer the placement and the surrounding context get decided by the model turn by turn. And measurement: the clean line from keyword to click to conversion was the bedrock of search attribution, and a recommendation surfaced mid-conversation, maybe acted on three turns later, doesn&apos;t leave that trail. The pitch is ads that feel more helpful and contextual. The cost is that the levers you used to pull now sit inside a system you don&apos;t see.
+        </p>
+        <h2>If you buy media</h2>
+        <p>
+          Don&apos;t let keyword muscle memory carry you into this. Start auditing now for what your reporting looks like when the placement is a conversation and the conversion shows up untraceable to a query, because the attribution model your budget defends was built for a world of clicks on links. Push Google on which signals you can actually control and which you&apos;re handing to the model. And treat your presence in the organic AI answer as the other half of the same buy: if the assistant is going to recommend inside the conversation, being a brand it recommends for free is worth as much as the paid slot next to it. That ties straight to the{" "}
+          <Link href="/writing/geo-citations-google-rankings-diverge" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">GEO problem</Link> &mdash; structured, trusted, clearly-stated content is what an answer engine reaches for, paid placement or not.
+        </p>
+        <h2>If you sell the tooling around search</h2>
+        <p>
+          If your product is bid management, attribution, or a keyword platform, the ground your category stands on is shifting, and &ldquo;we optimize keywords&rdquo; ages fast in a channel that&apos;s leaving keywords behind. The value moves to whoever can measure and influence a recommendation inside a conversation, which is a harder and more valuable problem than ranking a bid. Aim there.
+        </p>
+        <p>
+          Google is the largest ad channel on earth, and it spent two decades teaching everyone to buy in keywords. It&apos;s now rebuilding the front door around a conversation, and the buying model will follow whether the tooling and the measurement are ready or not. Two things can be true: conversational ads will probably work, and the way you account for them is about to get much harder. Get your reporting ready for an answer you can&apos;t reduce to a keyword, before the budget review asks you to explain one.
+        </p>
+      </div>
+    ),
+    sources: [
+      { title: "Search Engine Land — Google Tests New Conversational Ad Formats in AI Mode and Search", url: "https://searchengineland.com/google-tests-new-conversational-ad-formats-in-ai-mode-and-search-478115" },
+      { title: "Google — New Ad Formats Built With Gemini Coming to Google Search (Google Marketing Live 2026)", url: "https://blog.google/products/ads-commerce/google-marketing-live-search-ads/" },
+    ],
+  },
+  {
+    slug: "fox-roku-ctv-operating-system",
+    title: "Fox didn't buy a streaming app. It bought the operating system inside 100 million TVs.",
+    date: "Jun 29, 2026",
+    readTime: "5 min",
+    tag: "MadTech",
+    color: "from-slate-700 to-rose-600",
+    tldr: "Fox agreed this month to acquire Roku for about $22 billion ($160/share in cash and stock). The story isn't a content company adding a streaming channel — Roku is the operating system on the TV, the home screen and default layer with a first-party tie to 100M+ households. Whoever owns the screen sets the terms for every app and advertiser downstream. It's the same control Walmart is assembling from the retail side with VIZIO and Vibe, reached from the content side. If you buy CTV, take the reach but insist on independent measurement; if you sell around CTV, own what the screen owner can't replicate in-house.",
+    content: (
+      <div className="prose-content">
+        <p>
+          Fox agreed this month to{" "}
+          <a href="https://www.foxcorporation.com/news/corp-press-releases/2026/fox-corporation-to-acquire-roku-inc/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">buy Roku for about $22 billion</a>, paying $160 a share in cash and stock. The headlines filed it as a content company grabbing a streaming service: Fox gets The Roku Channel, bolts it onto Tubi, adds some live sports and news, done. That undersells what changed hands. Roku isn&apos;t mainly a channel. It&apos;s the operating system running on the TV itself &mdash; the home screen, the default, the layer every app sits on top of &mdash; with a first-party relationship to more than 100 million streaming households. Fox didn&apos;t buy another app in the grid. It bought the grid.
+        </p>
+        <p>
+          That distinction is the whole reason the price makes sense. Anyone can launch a streaming service; plenty have, and most are fighting for a tile on someone else&apos;s screen. The screen is the scarce thing. Whoever owns the operating system decides what gets featured, what the default is, which app the remote button opens, and &mdash; the part advertisers care about &mdash; who holds the data on what the household actually watches. Fox just moved from being a tenant on that screen to being the landlord.
+        </p>
+        <p>
+          I spent years on the agency and ad-tech side watching brands pay a premium to whoever controlled the environment their message ran in. The platform that owns the screen and the data always sets the terms, and everyone else negotiates inside them. That&apos;s the position Fox just bought.
+        </p>
+        <h2>This isn&apos;t the Walmart move, but it rhymes</h2>
+        <p>
+          I wrote recently about{" "}
+          <Link href="/writing/walmart-vibe-self-serve-tv-advertising" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">Walmart assembling a TV-ad stack</Link> &mdash; buying VIZIO for the screen, Vibe for the self-serve buying tool, wiring both to its purchase data. Fox is reaching for the same kind of control from the opposite corner. Walmart is a retailer with the receipt data, adding the screen. Fox is a content company with the programming, adding the operating system and the household graph. Both are converging on the same realization: in connected TV, owning the content or owning the audience isn&apos;t enough on its own. The leverage sits with whoever controls the screen, the data, and the path to the ad in one stack. The screen is becoming the most valuable real estate in television, and the companies that see it are paying up to own it outright.
+        </p>
+        <h2>If you buy CTV advertising</h2>
+        <p>
+          The screen consolidating into a few owners helps your media plan in the short run and becomes a concentration problem in the long run, and both are worth planning for. Near term, a Fox-Roku that pairs live sports and news with 100 million households&apos; viewing data can offer targeting and scale that&apos;s genuinely useful. Longer term, every screen absorbed into a closed stack is one more place where the company selling you the inventory also owns the measurement that grades it &mdash; the same walled-garden bind brands spent a decade fighting on Meta and Amazon. Buy the reach, and insist on independent measurement next to the platform&apos;s own, the way the smart money already learned to.
+        </p>
+        <h2>If you sell around it</h2>
+        <p>
+          If you sell anything in or around connected TV &mdash; ad tech, measurement, content distribution &mdash; the ground under your category is consolidating into a handful of screen owners, and your leverage now depends on whether you need their screen more than they need you. Tools that depend on access to inventory the platforms increasingly own outright sit in a weaker spot every quarter. The durable position is owning something the screen owner can&apos;t replicate in-house: independent measurement they can&apos;t self-grade, demand they can&apos;t reach alone, data that isn&apos;t theirs.
+        </p>
+        <p>
+          The Roku deal got read as Fox catching up in streaming. What actually changed hands is control of the screen: the operating system 100 million households open first, and the data on what they do next. A content company decided that&apos;s the safest thing to own in television, and paid $22 billion to own it outright. Watch who buys the next screen. The same logic will drive the deal, and the list of companies that own the glass in your living room is getting short.
+        </p>
+      </div>
+    ),
+    sources: [
+      { title: "Fox Corporation — Fox Corporation to Acquire Roku, Inc. (June 15, 2026)", url: "https://www.foxcorporation.com/news/corp-press-releases/2026/fox-corporation-to-acquire-roku-inc/" },
+      { title: "PR Newswire — Fox Corporation to Acquire Roku, Inc. (June 15, 2026)", url: "https://www.prnewswire.com/news-releases/fox-corporation-to-acquire-roku-inc-302800220.html" },
+      { title: "Variety — Fox Is Buying Roku in $22 Billion Deal (June 15, 2026)", url: "https://variety.com/2026/tv/news/fox-acquiring-roku-1236781308/" },
+    ],
+  },
   {
     slug: "spacex-cursor-neutrality-is-not-a-contract",
     title: "Cursor was the neutral choice. The company that just bought it owns a model.",
@@ -243,12 +537,12 @@ const posts: Post[] = [
   },
   {
     slug: "ai-sdr-boom-revolving-door-churn",
-    title: "The AI SDR boom is real. So is the revolving door behind it.",
+    title: "The AI SDR boom is real. Retention is the test it has to pass.",
     date: "Jun 18, 2026",
     readTime: "5 min",
     tag: "Sales",
     color: "from-amber-600 to-rose-600",
-    tldr: "AI SDR tools are a multibillion-dollar category with annual churn of 50 to 70%, some losing most buyers within three months. When teams automated prospecting, reply rates fell from about 2.1% with human reps to 1.3%. Every touch got worse, and volume hid it. The churn is built in at the sale: these tools are demoed on activity and renewed on outcomes, so much of the category's growth is the same seat resold to the next believer. If you buy one, write pilot criteria around converted pipeline, not meetings booked; if you sell one, refuse activity-based success metrics.",
+    tldr: "AI SDR is a real, fast-growing category, but several vendors are wrestling with high first-year churn — largely because the tools get demoed on activity and judged on outcomes. When prospecting gets over-automated, reply rates can drop and raw volume masks it. The takeaway cuts both ways: if you buy one, write pilot criteria around converted pipeline, not meetings booked; if you sell one, anchor success on outcomes, not activity — that's what earns the renewal.",
     content: (
       <div className="prose-content">
         <p>
@@ -1140,12 +1434,12 @@ const posts: Post[] = [
   },
   {
     slug: "oura-ipo-not-every-company-should-go-public",
-    title: "Oura just filed to go public. That's exactly when I'd bet against them.",
+    title: "Oura just filed to go public. The hardest test comes after the IPO.",
     date: "May 22, 2026",
     readTime: "7 min",
     tag: "Business",
     color: "from-amber-600 to-orange-500",
-    tldr: "Oura confidentially filed its S-1 yesterday — 5.5M rings sold at an $11B valuation in a category they invented. Public-market gravity is the thing most likely to break them. Fitbit is the case study, and Google relaunched the Fitbit Air this month as the explicit wedge against Oura.",
+    tldr: "Oura confidentially filed its S-1 yesterday — 5.5M rings sold at an $11B valuation in a category it invented. The real test comes after the IPO: public-market gravity reshapes how a hardware company operates. Fitbit is the cautionary case study, and Google relaunched the Fitbit Air this month as a direct competitor.",
     content: (
       <div className="prose-content">
         <p>
@@ -1283,7 +1577,7 @@ const posts: Post[] = [
           <strong>Three: founder control gets baked in.</strong> If the S-1, when it goes effective, includes a dual-class share structure that gives founders/leadership real control, most of what I wrote above gets weaker. Public-market pressure only works if the public market actually controls the votes.
         </p>
         <p>
-          I&apos;d put my own odds at maybe 30% on at least one of those playing out. Which means I&apos;d bet against Oura &mdash; but not heavily, and not without watching closely.
+          I&apos;d put my own odds at maybe 30% on at least one of those playing out. That&apos;s enough to be cautious on Oura &mdash; not bearish, but worth watching closely.
         </p>
         <p>
           The Oura ring is one of the few pieces of hardware I&apos;ve owned that does exactly what it says it does, and nothing more. That is rare and it is valuable, and public markets are about to teach Oura that &ldquo;exactly enough&rdquo; is not an answer they accept.
@@ -1443,12 +1737,12 @@ const posts: Post[] = [
   },
   {
     slug: "publicis-liveramp-acquisition",
-    title: "Publicis bought LiveRamp for $2.2B. The Trade Desk just lost more than LiveRamp did.",
+    title: "Publicis bought LiveRamp for $2.2B. The real story is who controls identity now.",
     date: "May 18, 2026",
     readTime: "7 min",
     tag: "MadTech",
     color: "from-fuchsia-600 to-rose-500",
-    tldr: "Publicis is paying $2.167B for LiveRamp — a 29.8% premium for the connectivity layer underneath modern programmatic. The biggest casualty isn't LiveRamp's customers; it's The Trade Desk's claim that UID2 is an independent identity standard. Brands have three things to do this week before close.",
+    tldr: "Publicis is paying $2.167B for LiveRamp — a 29.8% premium for the connectivity layer underneath modern programmatic. The bigger question it raises is about identity independence across the open internet, including how UID2 is governed. Brands have three things to do this week before close.",
     content: (
       <div className="prose-content">
         <p>
@@ -1481,7 +1775,7 @@ const posts: Post[] = [
           also own some agencies.
         </p>
 
-        <h2>The Trade Desk just lost more than LiveRamp did</h2>
+        <h2>The bigger shift is about who controls &ldquo;independent&rdquo; identity</h2>
         <p>
           Here is the read I have not seen anyone make yet, and the one I think matters most.
         </p>
@@ -1497,8 +1791,8 @@ const posts: Post[] = [
           is an agency holdco&apos;s proprietary identity graph wearing the costume of an open standard.
         </p>
         <p>
-          The Trade Desk stock didn&apos;t move much on the news. It should have. Brands are about to start asking
-          pointed questions about whether their open-web ID strategy is sitting on top of a competitor&apos;s asset.
+          The Trade Desk stock didn&apos;t move much on the news, but the questions this raises are real: brands are
+          about to start asking whether their open-web ID strategy is sitting on top of a competitor&apos;s asset.
         </p>
 
         <h2>What brands should do this week</h2>
@@ -2375,17 +2669,30 @@ export default async function PostPage({
   const post = posts.find((p) => p.slug === slug);
   if (!post) notFound();
 
-  const tagColors: Record<string, string> = {
-    Brands:          "from-violet-600 to-purple-500",
-    "Future of Ads": "from-emerald-500 to-cyan-500",
-    GEO:             "from-emerald-500 to-teal-500",
-    Macro:           "from-teal-500 to-emerald-600",
-    Sales:           "from-cyan-500 to-blue-600",
-    MadTech:         "from-fuchsia-600 to-rose-500",
-    Security:        "from-rose-600 to-orange-500",
-    "Enterprise AI": "from-indigo-600 to-blue-500",
+  // Redesign palette
+  const INK = "#1A1613";
+  const PAPER = "#F2ECDD";
+  const CREAM2 = "#E7DEC8";
+  const TEAL = "#0E9F86";
+  const BLUE = "#2B43E8";
+  const ACID = "#C7F03A";
+  const VIOLET = "#6B4BFF";
+
+  // Per-category accent (a single solid palette color) used for tag chips,
+  // the divider, h2 accents and links. Calm, not a wall of color.
+  const tagAccents: Record<string, { bg: string; fg: string }> = {
+    Brands:          { bg: VIOLET, fg: "#fff" },
+    "Future of Ads": { bg: TEAL,   fg: "#fff" },
+    GEO:             { bg: TEAL,   fg: "#fff" },
+    Macro:           { bg: BLUE,   fg: "#fff" },
+    Sales:           { bg: BLUE,   fg: "#fff" },
+    MadTech:         { bg: VIOLET, fg: "#fff" },
+    Security:        { bg: INK,    fg: ACID },
+    "Enterprise AI": { bg: BLUE,   fg: "#fff" },
+    AI:              { bg: VIOLET, fg: "#fff" },
   };
-  const color = tagColors[post.tag] ?? "from-blue-500 to-cyan-500";
+  const accent = tagAccents[post.tag] ?? { bg: BLUE, fg: "#fff" };
+  const accentColor = accent.bg;
 
   const postUrl = `https://chrisdorsey.co/writing/${post.slug}`;
   const publishedISO = new Date(post.date).toISOString();
@@ -2419,9 +2726,10 @@ export default async function PostPage({
 
   return (
     <div
-      className="min-h-screen text-slate-900"
+      className="min-h-screen grain-overlay"
       style={{
-        background: "linear-gradient(180deg, #F0F7FA 0%, #E8F4F8 100%)",
+        background: PAPER,
+        color: INK,
         fontFamily: "var(--font-inter)",
       }}
     >
@@ -2432,27 +2740,37 @@ export default async function PostPage({
       {/* Nav */}
       <SiteNav />
 
-      {/* Article */}
-      <article className="max-w-3xl mx-auto px-6 py-16">
+      {/* Article — clean editorial reading column */}
+      <article className="max-w-2xl mx-auto px-6 py-16">
+        {/* Back to writing */}
+        <Link
+          href="/writing"
+          className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-widest mb-8"
+          style={{ color: "#6a6258" }}
+        >
+          ← All writing
+        </Link>
+
         {/* Tag + meta */}
-        <div className="flex items-center gap-3 mb-6">
+        <div className="flex items-center gap-3 mb-6 flex-wrap">
           <span
-            className={`text-xs font-bold uppercase tracking-wider text-white px-3 py-1 rounded-full bg-gradient-to-r ${color}`}
+            className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full"
+            style={{ background: accent.bg, color: accent.fg }}
           >
             {post.tag}
           </span>
-          <span className="flex items-center gap-1.5 text-xs text-slate-500">
+          <span className="flex items-center gap-1.5 text-xs" style={{ color: "#6a6258" }}>
             <Calendar className="w-3 h-3" /> {post.date}
           </span>
-          <span className="flex items-center gap-1.5 text-xs text-slate-500">
+          <span className="flex items-center gap-1.5 text-xs" style={{ color: "#6a6258" }}>
             <Clock className="w-3 h-3" /> {post.readTime} read
           </span>
         </div>
 
         {/* Headline */}
         <h1
-          className="text-3xl md:text-5xl font-black tracking-tight leading-[1.05] mb-10 text-slate-900"
-          style={serif}
+          className="font-display font-extrabold leading-[1.04] mb-9"
+          style={{ fontSize: "clamp(30px,4.6vw,52px)", color: INK }}
         >
           {post.title}
         </h1>
@@ -2464,71 +2782,91 @@ export default async function PostPage({
             <img
               src="/headshot.jpg"
               alt="Christopher Dorsey"
-              className="w-10 h-10 rounded-full object-cover flex-shrink-0 ring-2 ring-sky-100"
+              className="w-10 h-10 rounded-full object-cover flex-shrink-0"
+              style={{ border: `2px solid ${INK}` }}
             />
             <div>
-              <p className="text-sm font-semibold text-slate-900">Christopher Dorsey</p>
-              <p className="text-xs text-slate-500">AI &amp; MadTech Advisor · Enterprise Sales Leader</p>
+              <p className="text-sm font-semibold" style={{ color: INK }}>Christopher Dorsey</p>
+              <p className="text-xs" style={{ color: "#6a6258" }}>AI &amp; MadTech Advisor · Enterprise Sales Leader</p>
             </div>
           </div>
           {/* Icon-only share bar */}
           <div className="flex items-center gap-2">
-            <a href={`https://www.linkedin.com/sharing/share-offsite/?url=https://chrisdorsey.co/writing/${post.slug}`} target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn" className="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 hover:border-blue-400 hover:text-blue-600 transition">
+            <a href={`https://www.linkedin.com/sharing/share-offsite/?url=https://chrisdorsey.co/writing/${post.slug}`} target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn" className="w-8 h-8 rounded-full flex items-center justify-center transition hover:opacity-70" style={{ border: `1.5px solid rgba(26,22,19,0.2)`, color: "#6a6258" }}>
               <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
             </a>
-            <a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(`https://chrisdorsey.co/writing/${post.slug}`)}`} target="_blank" rel="noopener noreferrer" aria-label="Share on X" className="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 hover:border-slate-900 hover:text-slate-900 transition">
+            <a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(`https://chrisdorsey.co/writing/${post.slug}`)}`} target="_blank" rel="noopener noreferrer" aria-label="Share on X" className="w-8 h-8 rounded-full flex items-center justify-center transition hover:opacity-70" style={{ border: `1.5px solid rgba(26,22,19,0.2)`, color: "#6a6258" }}>
               <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             </a>
-            <a href={`https://www.threads.net/intent/post?text=${encodeURIComponent(`${post.title} https://chrisdorsey.co/writing/${post.slug}`)}`} target="_blank" rel="noopener noreferrer" aria-label="Share on Threads" className="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 hover:border-slate-900 hover:text-slate-900 transition">
+            <a href={`https://www.threads.net/intent/post?text=${encodeURIComponent(`${post.title} https://chrisdorsey.co/writing/${post.slug}`)}`} target="_blank" rel="noopener noreferrer" aria-label="Share on Threads" className="w-8 h-8 rounded-full flex items-center justify-center transition hover:opacity-70" style={{ border: `1.5px solid rgba(26,22,19,0.2)`, color: "#6a6258" }}>
               <svg width="12" height="12" viewBox="0 0 50 50" fill="currentColor"><text x="2" y="42" font-size="48" font-family="system-ui,sans-serif" font-weight="bold">@</text></svg>
             </a>
-            <a href={`https://www.reddit.com/submit?url=${encodeURIComponent(`https://chrisdorsey.co/writing/${post.slug}`)}&title=${encodeURIComponent(post.title)}`} target="_blank" rel="noopener noreferrer" aria-label="Share on Reddit" className="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 hover:border-orange-400 hover:text-orange-600 transition">
+            <a href={`https://www.reddit.com/submit?url=${encodeURIComponent(`https://chrisdorsey.co/writing/${post.slug}`)}&title=${encodeURIComponent(post.title)}`} target="_blank" rel="noopener noreferrer" aria-label="Share on Reddit" className="w-8 h-8 rounded-full flex items-center justify-center transition hover:opacity-70" style={{ border: `1.5px solid rgba(26,22,19,0.2)`, color: "#6a6258" }}>
               <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg>
             </a>
           </div>
         </div>
 
         {/* Divider */}
-        <div className={`h-1 w-16 rounded-full bg-gradient-to-r ${color} mb-10`} />
+        <div className="h-1 w-16 rounded-full mb-10" style={{ background: accentColor }} />
 
-        {/* TLDR */}
-        <div className="bg-slate-50 border border-slate-200 rounded-2xl px-6 py-5 mb-10">
-          <p className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">TL;DR</p>
-          <p className="text-slate-700 leading-relaxed">{post.tldr}</p>
+        {/* TLDR — styled with a category-color spine */}
+        <div
+          className="rounded-2xl px-6 py-5 mb-12"
+          style={{ background: CREAM2, borderLeft: `5px solid ${accentColor}`, border: `1px solid rgba(26,22,19,0.1)`, borderLeftWidth: 5 }}
+        >
+          <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: accentColor }}>TL;DR</p>
+          <p className="leading-relaxed" style={{ color: "#3a332c" }}>{post.tldr}</p>
         </div>
 
-        {/* Body */}
+        {/* Body — calm, readable editorial column */}
         <div
-          className="text-lg text-slate-700 leading-relaxed space-y-6"
-          style={sans}
+          className="post-body"
+          style={{ ...sans, color: "#2a2520" }}
         >
           <style>{`
-            .prose-content p { margin-bottom: 1.5rem; line-height: 1.8; }
-            .prose-content h2 {
-              font-family: var(--font-fraunces);
-              font-size: 1.5rem;
+            .post-body { font-size: 1.125rem; line-height: 1.8; }
+            .post-body p { margin-bottom: 1.5rem; line-height: 1.8; }
+            .post-body h2 {
+              font-family: var(--font-display);
+              letter-spacing: -0.02em;
+              font-size: 1.6rem;
               font-weight: 800;
-              color: #0f172a;
-              margin-top: 2.5rem;
+              color: ${INK};
+              margin-top: 2.75rem;
               margin-bottom: 1rem;
-              line-height: 1.2;
+              line-height: 1.15;
+              padding-left: 0.9rem;
+              border-left: 4px solid ${accentColor};
             }
+            .post-body a {
+              color: ${accentColor};
+              text-decoration: underline;
+              text-underline-offset: 2px;
+              text-decoration-thickness: 1.5px;
+              font-weight: 500;
+            }
+            .post-body a:hover { opacity: 0.78; }
           `}</style>
           {post.content}
         </div>
 
         {/* Sources — GEO citations */}
         {post.sources?.length ? (
-          <div className="mt-14 pt-8 border-t border-sky-200">
-            <p className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">Sources</p>
-            <ol className="space-y-2 list-decimal list-inside">
+          <div
+            className="mt-14 rounded-2xl px-6 py-6"
+            style={{ background: CREAM2, border: `1px solid rgba(26,22,19,0.12)`, borderLeft: `5px solid ${accentColor}`, borderLeftWidth: 5 }}
+          >
+            <p className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: accentColor }}>Sources</p>
+            <ol className="space-y-2.5 list-decimal list-inside">
               {post.sources.map((s, i) => (
-                <li key={i} className="text-sm text-slate-600 leading-relaxed">
+                <li key={i} className="text-sm leading-relaxed" style={{ color: "#4a4239" }}>
                   <a
                     href={s.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-600 hover:text-blue-700 underline underline-offset-2"
+                    className="underline underline-offset-2 font-medium hover:opacity-70 transition"
+                    style={{ color: accentColor }}
                   >
                     {s.title}
                   </a>
@@ -2539,13 +2877,14 @@ export default async function PostPage({
         ) : null}
 
         {/* Share — bottom */}
-        <div className="mt-16 pt-8 border-t border-sky-200">
-          <p className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">Share this post</p>
+        <div className="mt-16 pt-8" style={{ borderTop: `1px solid rgba(26,22,19,0.14)` }}>
+          <p className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: "#8a8276" }}>Share this post</p>
           <div className="flex flex-wrap gap-3">
             <a
               href={`https://www.linkedin.com/sharing/share-offsite/?url=https://chrisdorsey.co/writing/${post.slug}`}
               target="_blank" rel="noopener noreferrer"
-              className="text-sm border border-slate-200 text-slate-600 hover:border-blue-400 hover:text-blue-600 px-4 py-2 rounded-full transition font-medium flex items-center gap-2"
+              className="share-chip text-sm px-4 py-2 rounded-full transition font-medium flex items-center gap-2"
+              style={{ border: `1.5px solid rgba(26,22,19,0.2)`, color: "#4a4239" }}
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
               LinkedIn
@@ -2553,7 +2892,8 @@ export default async function PostPage({
             <a
               href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(`https://chrisdorsey.co/writing/${post.slug}`)}`}
               target="_blank" rel="noopener noreferrer"
-              className="text-sm border border-slate-200 text-slate-600 hover:border-slate-900 hover:text-slate-900 px-4 py-2 rounded-full transition font-medium flex items-center gap-2"
+              className="share-chip text-sm px-4 py-2 rounded-full transition font-medium flex items-center gap-2"
+              style={{ border: `1.5px solid rgba(26,22,19,0.2)`, color: "#4a4239" }}
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
               X
@@ -2561,7 +2901,8 @@ export default async function PostPage({
             <a
               href={`https://www.threads.net/intent/post?text=${encodeURIComponent(`${post.title} https://chrisdorsey.co/writing/${post.slug}`)}`}
               target="_blank" rel="noopener noreferrer"
-              className="text-sm border border-slate-200 text-slate-600 hover:border-slate-900 hover:text-slate-900 px-4 py-2 rounded-full transition font-medium flex items-center gap-2"
+              className="share-chip text-sm px-4 py-2 rounded-full transition font-medium flex items-center gap-2"
+              style={{ border: `1.5px solid rgba(26,22,19,0.2)`, color: "#4a4239" }}
             >
               <svg width="14" height="14" viewBox="0 0 50 50" fill="currentColor"><text x="2" y="42" font-size="48" font-family="system-ui,sans-serif" font-weight="bold">@</text></svg>
               Threads
@@ -2569,35 +2910,42 @@ export default async function PostPage({
             <a
               href={`https://www.reddit.com/submit?url=${encodeURIComponent(`https://chrisdorsey.co/writing/${post.slug}`)}&title=${encodeURIComponent(post.title)}`}
               target="_blank" rel="noopener noreferrer"
-              className="text-sm border border-slate-200 text-slate-600 hover:border-orange-400 hover:text-orange-600 px-4 py-2 rounded-full transition font-medium flex items-center gap-2"
+              className="share-chip text-sm px-4 py-2 rounded-full transition font-medium flex items-center gap-2"
+              style={{ border: `1.5px solid rgba(26,22,19,0.2)`, color: "#4a4239" }}
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg>
               Reddit
             </a>
             <a
               href={`mailto:?subject=${encodeURIComponent(post.title)}&body=${encodeURIComponent(`Thought you'd find this interesting: https://chrisdorsey.co/writing/${post.slug}`)}`}
-              className="text-sm border border-slate-200 text-slate-600 hover:border-emerald-400 hover:text-emerald-600 px-4 py-2 rounded-full transition font-medium flex items-center gap-2"
+              className="share-chip text-sm px-4 py-2 rounded-full transition font-medium flex items-center gap-2"
+              style={{ border: `1.5px solid rgba(26,22,19,0.2)`, color: "#4a4239" }}
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
               Email
             </a>
           </div>
+          <style>{`.share-chip:hover { border-color: ${accentColor} !important; color: ${accentColor} !important; }`}</style>
         </div>
 
         {/* Author bio */}
-        <div className="mt-16 pt-10 border-t border-sky-200">
-          <p className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-5">About the author</p>
-          <div className="flex items-start gap-5 bg-white/70 border border-sky-100 rounded-2xl p-6">
+        <div className="mt-16 pt-10" style={{ borderTop: `1px solid rgba(26,22,19,0.14)` }}>
+          <p className="text-xs font-bold uppercase tracking-widest mb-5" style={{ color: "#8a8276" }}>About the author</p>
+          <div
+            className="flex items-start gap-5 rounded-2xl p-6"
+            style={{ background: CREAM2, border: `2px solid ${INK}`, boxShadow: `5px 5px 0 ${INK}` }}
+          >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/headshot.jpg"
               alt="Christopher Dorsey"
-              className="w-16 h-16 rounded-full object-cover flex-shrink-0 ring-2 ring-sky-100"
+              className="w-16 h-16 rounded-full object-cover flex-shrink-0"
+              style={{ border: `2px solid ${INK}` }}
             />
             <div className="flex-1 min-w-0">
-              <p className="text-base font-bold text-slate-900" style={serif}>Christopher Dorsey</p>
-              <p className="text-sm text-slate-500 mb-3">Enterprise Sales Leader · AI Go-To-Market · Startup Advisor · Denver, CO</p>
-              <p className="text-sm text-slate-600 leading-relaxed mb-4">
+              <p className="text-base font-bold font-display" style={{ color: INK }}>Christopher Dorsey</p>
+              <p className="text-sm mb-3" style={{ color: "#6a6258" }}>Enterprise Sales Leader · AI Go-To-Market · Startup Advisor · Denver, CO</p>
+              <p className="text-sm leading-relaxed mb-4" style={{ color: "#3a332c" }}>
                 Fifteen years selling technology to Fortune 500 brands across AI, advertising, and data infrastructure
                 — most recently at Zeta Global, Oracle, and Fastly. Currently advising founders and sales leaders on
                 AI go-to-market and Generative Engine Optimization.
@@ -2607,21 +2955,24 @@ export default async function PostPage({
                   href="https://www.linkedin.com/in/cdorsey/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-blue-600 hover:text-blue-700 font-medium"
+                  className="inline-flex items-center gap-1.5 font-semibold hover:opacity-70 transition"
+                  style={{ color: accentColor }}
                 >
                   LinkedIn
                 </a>
-                <span className="text-slate-300">·</span>
+                <span style={{ color: "rgba(26,22,19,0.3)" }}>·</span>
                 <a
                   href={`mailto:${CONTACT_EMAIL}`}
-                  className="inline-flex items-center gap-1.5 text-blue-600 hover:text-blue-700 font-medium"
+                  className="inline-flex items-center gap-1.5 font-semibold hover:opacity-70 transition"
+                  style={{ color: accentColor }}
                 >
                   {CONTACT_EMAIL}
                 </a>
-                <span className="text-slate-300">·</span>
+                <span style={{ color: "rgba(26,22,19,0.3)" }}>·</span>
                 <Link
                   href="/work-with-me"
-                  className="inline-flex items-center gap-1.5 text-blue-600 hover:text-blue-700 font-medium"
+                  className="inline-flex items-center gap-1.5 font-semibold hover:opacity-70 transition"
+                  style={{ color: accentColor }}
                 >
                   Work with me
                 </Link>
@@ -2632,30 +2983,32 @@ export default async function PostPage({
 
         {/* Related posts */}
         {relatedPosts.length > 0 && (
-          <div className="mt-12 pt-10 border-t border-sky-200">
-            <p className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-5">Keep reading</p>
+          <div className="mt-12 pt-10" style={{ borderTop: `1px solid rgba(26,22,19,0.14)` }}>
+            <p className="text-xs font-bold uppercase tracking-widest mb-5" style={{ color: "#8a8276" }}>Keep reading</p>
             <div className="grid gap-4">
               {relatedPosts.map((rp) => {
-                const rpColor = tagColors[rp.tag] ?? "from-blue-500 to-cyan-500";
+                const rpAccent = tagAccents[rp.tag] ?? { bg: BLUE, fg: "#fff" };
                 return (
                   <Link
                     key={rp.slug}
                     href={`/writing/${rp.slug}`}
-                    className="group block bg-white/70 hover:bg-white border border-sky-100 hover:border-blue-200 rounded-xl p-5 hover:shadow-md transition-all"
+                    className="group block rounded-xl p-5 transition-transform hover:-translate-y-0.5"
+                    style={{ background: CREAM2, border: `2px solid ${INK}`, boxShadow: `4px 4px 0 ${INK}` }}
                   >
-                    <div className="flex items-center gap-3 mb-2">
+                    <div className="flex items-center gap-3 mb-2 flex-wrap">
                       <span
-                        className={`text-[10px] font-bold uppercase tracking-wider whitespace-nowrap text-white px-2.5 py-0.5 rounded-full bg-gradient-to-r ${rpColor}`}
+                        className="text-[10px] font-bold uppercase tracking-wider whitespace-nowrap px-2.5 py-0.5 rounded-full"
+                        style={{ background: rpAccent.bg, color: rpAccent.fg }}
                       >
                         {rp.tag}
                       </span>
-                      <span className="text-xs text-slate-400">{rp.date}</span>
-                      <span className="text-xs text-slate-400">·</span>
-                      <span className="text-xs text-slate-400">{rp.readTime} read</span>
+                      <span className="text-xs" style={{ color: "#8a8276" }}>{rp.date}</span>
+                      <span className="text-xs" style={{ color: "#8a8276" }}>·</span>
+                      <span className="text-xs" style={{ color: "#8a8276" }}>{rp.readTime} read</span>
                     </div>
                     <h3
-                      className="text-base md:text-lg font-bold tracking-tight group-hover:text-blue-600 transition leading-snug"
-                      style={serif}
+                      className="text-base md:text-lg font-bold font-display tracking-tight leading-snug"
+                      style={{ color: INK }}
                     >
                       {rp.title}
                     </h3>
@@ -2667,20 +3020,22 @@ export default async function PostPage({
         )}
 
         {/* Footer CTA */}
-        <div className="mt-10 pt-8 border-t border-sky-200">
-          <p className="text-slate-500 text-sm mb-4">
+        <div className="mt-10 pt-8" style={{ borderTop: `1px solid rgba(26,22,19,0.14)` }}>
+          <p className="text-sm mb-4" style={{ color: "#6a6258" }}>
             Questions, pushback, or just want to compare notes?
           </p>
           <div className="flex flex-wrap gap-3">
-            <a
-              href={`mailto:${CONTACT_EMAIL}`}
-              className="text-sm bg-gradient-to-r from-blue-600 to-emerald-600 text-white px-5 py-2.5 rounded-full hover:shadow-lg hover:shadow-blue-500/20 transition font-medium"
+            <Link
+              href="/#contact"
+              className="text-sm px-5 py-2.5 rounded-full transition font-semibold lift"
+              style={{ background: TEAL, color: "#fff", border: `2px solid ${TEAL}` }}
             >
               Get in touch
-            </a>
+            </Link>
             <Link
               href="/#writing"
-              className="text-sm border border-slate-300 text-slate-700 hover:border-blue-400 hover:text-blue-600 px-5 py-2.5 rounded-full transition font-medium"
+              className="text-sm px-5 py-2.5 rounded-full transition font-semibold"
+              style={{ border: `2px solid ${INK}`, color: INK }}
             >
               More writing
             </Link>

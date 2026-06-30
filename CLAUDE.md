@@ -1,10 +1,76 @@
 @AGENTS.md
 
 ## Output preferences
-Always save written outputs (reports, documents, summaries, posts, letters, plans, etc.) as .docx Word documents, not .md markdown files.
+- Default written outputs (reports, documents, summaries, letters, plans, etc.) to .docx Word documents, not .md markdown files.
+- For multi-option / review deliverables meant for Chris to read and choose from (e.g., a set of draft angles or post drafts), prefer a Google Doc over a local .docx so he can read and comment in Drive. Use the connected Google Drive connector to create it.
+
+## Morning briefing — added sections (added Jun 2026)
+Include these in every morning-briefing output. The scheduled morning-briefing skill lives in a read-only cache and can't be edited from Cowork, so these prefs live here; to bake them into the skill itself, update it in Settings > Capabilities.
+
+**Delivery (updated Jun 2026):** When the briefing is generated in an interactive chat session, output it directly in the chat. Do NOT create a Gmail draft. (The automated weekday 7:30am scheduled run still has nowhere to post in chat, so it continues to email a draft unless Chris changes that task.)
+
+Section order: Quote/On-this-day → Schedule → Inbox → Job Leads → News Highlight (National / AI-GTM / Denver) → Podcasts → Reddit.
+
+### Quote / "On this day" opener
+- Open with ONE short line: a "this day in history" note for the date (or a short quote). No padding.
+
+### 🎧 Podcasts (new daily section)
+Track these shows; surface any episode published in the last ~48h. For each: show · episode date · guest · one line on what they discuss. If nothing new, write "No new episode since [date]." Keep to 1-2 lines each. Order comedy/interview first, then the AI show.
+- So True with Caleb Hearon
+- Armchair Expert (Dax Shepard)
+- The Tim Dillon Show (often solo — note the topics he covers)
+- Conan O'Brien Needs a Friend
+- The AI Daily Brief (Nathaniel Whittemore / "NLW") — daily AI news; pull that day's topics
+
+**Discovery picks (don't only check the tracked shows):** every run, surface 2-3 episodes from ANY show that fit Chris's tastes — music (esp. electronic/dance, deep-dive music history), food, travel, current events, comedians, and loose "shoot-the-shit" hangs. Include serialized/multipart deep-dive series (e.g. Dissect, Switched On Pop, 60 Songs…). For each: show · episode/series · one line on why it's up his alley + a link. Favor genuinely interesting/new over recency. Note when something is a multipart series worth bingeing.
+
+### 📰 News Highlight (expanded from "Today's Intel")
+Three buckets, 2-4 items each, linked headline + one sentence:
+- National: top US headlines of the day.
+- AI / GTM industry: enterprise AI, sales tech, model releases (the existing coverage).
+- Denver / Colorado: local news, weather/ozone alerts, notable events.
+Keep retail-media items where job-relevant and tie them to the Job Leads section; the standing news buckets are National / AI-GTM / Denver.
+
+## Daily LinkedIn comments routine
+- Output goes to ONE running Google Doc, "Dorsey Daily Engage - LinkedIn" (id `1AG1C_0pYTZmBPi8FwoxeTegwMERyPmwRglVwFhotshQ`, https://docs.google.com/document/d/1AG1C_0pYTZmBPi8FwoxeTegwMERyPmwRglVwFhotshQ/edit). Do NOT create a Gmail draft for this anymore.
+- Each run, prepend a new dated section to the top of that doc (newest first), keeping prior days below. The Drive connector can't edit docs in place, so append by opening the doc URL in Chrome and typing the new section at the top.
+- For each post, include the FULL exact copy of the person's LinkedIn post (verbatim) and the timestamp it showed when captured (e.g. "10m / ~9:58 AM MT, Jun 23") so Chris can find it fast. Then the gist, profile link, and the drafted comment.
+- **Finish fast (added Jun 2026):** Chris wants the run done as quickly as possible. Cap company content-searches at ~6–8; take the first 5 qualifying target-company posts rather than over-hunting for a perfect company spread. A solid, clearly-qualifying post beats a marginally better one found 10 searches later. Don't re-verify or re-capture more than needed. If Chrome drops mid-run, retry a couple times and keep going. Aim to wrap the whole routine in well under the time it took on Jun 25.
+- **Targeting (updated Jun 29 2026):** Prioritize Chris's DREAM companies and the spaces he most wants to work in — spend the first searches there. Still strictly EMPLOYER-GATED: only people who actually work at a target/dream company or a direct same-vertical peer. Do NOT pick influencers, recruiters, creators, coaches, or "thought leaders," however influential — the author's employer is the whole point.
+  - **Tier-1 dream companies (may repeat day to day; EXEMPT from the variety rule):** the labs — OpenAI, Anthropic, Google (esp. Google Ads & Google Cloud GTM); other frontier AI — Perplexity, Cohere, Mistral, xAI; top retail media — Amazon Ads, Walmart Connect, Instacart.
+  - **Variety:** for every NON-tier-1 company, avoid obvious sameness — don't keep surfacing the same company on back-to-back runs. Loose judgment, no hard spread quota, and finish-fast still applies (if the only fresh, clearly-qualifying post that day is a repeat non-tier-1 company, use it).
+
+## LinkedIn posts
+- When Chris asks for a LinkedIn post to accompany a blog post, put the copy directly in the chat. Do NOT create a doc or file for it.
+- Optimize for engagement (the old short-with-a-link format was getting little reach). Target ~1,100–1,500 characters. Keep it native and skimmable — short lines, white space, no markdown.
+- Front-load a hard, scroll-stopping hook: only ~140 chars (mobile) show before "see more," so the first line carries the weight.
+- Do NOT put the blog link in the body — external links in the post suppress reach. Put the link in the FIRST COMMENT instead.
+- End with a genuine question that invites a reply. Comments drive far more reach than likes, so the close should pull people into the thread.
+- Use Chris's writing voice (the writing-voice skill) and all the AI-tell rules below.
+
+## Writing — AI tells to avoid (all public-facing writing: blog, LinkedIn, newsletter)
+These constructions read as AI-generated. Do not use them; rewrite in plain voice.
+- The reversal/negation setup: "you didn't buy a vendor, you bought their politics," "it's not X, it's Y," "this isn't about X, it's about Y." Draw the contrast a plainer way, or just state the point.
+- Framing crutches and throat-clearing: "the read is simple," "here's the read," "here's the thing," and the generic "If you sell AI / if you sell X for a living" opener.
+- The escalating short-sentence cadence: "X used to be [a nicety]. It's [a Y] now. [Two-word imperative]." (e.g., "That used to be an engineering nicety. It's a sales asset now. Put it on the slide.")
+- The "here's the hidden deeper insight" tease — announcing profundity instead of just delivering it: "the more useful number is buried one layer down," "the real story is one layer beneath," "dig a little deeper and," "what's hiding underneath," "the part nobody's talking about is." Just state the point directly (e.g., instead of "the more useful number is buried one layer down," write "MIT also split the failures by who built the thing: …").
+- The unearned "honest"/"real"/"truth" framing: "the honest framing is," "the honest version of your pitch is," "the real question is," "truth is." Calling a point "honest" implies someone was being dishonest, and no one was — just state the framing directly (e.g., instead of "the honest framing of build-versus-buy is not whether you can build this," write "Build-versus-buy was never about whether you can build this").
+- Forced-casual placeholders that undercut the executive-thought-leader register: "built the thing," "do the thing," "the thing," "make the thing work." Name it precisely instead (the system, the deployment, the model, the workflow). Chris is positioning as a senior thinker, not a casual blogger — keep the register sharp and specific, not trying-too-hard-cool.
+- Insider tech/startup jargon ("dogfood," "table stakes," "north star," "0-to-1," "step-change," "flywheel," "rails," "primitives"). Avoid unless it genuinely fits the moment and reads naturally; default to plain English a smart non-specialist would use.
+- The "quietly [verb-ing]" insinuation and vague strategic metaphors: "the labs are quietly drawing the map," "quietly rewriting the rules," "quietly placing their bets," "showing their hand," "writing the playbook." State plainly what's actually happening (e.g., instead of "the labs are quietly drawing the map of which sales work is durable," write "their own hiring tells you which sales work lasts").
+- Prescriptive framing crutches that tee up the recommendation instead of stating it: "the durable play is," "the smart move is," "the winning play is," "the real opportunity is," "the play here is." Just give the recommendation directly (e.g., instead of "the durable play is getting your brand into the sources models trust," write "Get your brand into the sources models trust").
+- Generic label-style subheads: "The read," "The takeaway," "The bottom line," "Why it matters." Use a specific, declarative header that states the actual point, or no header at all — not a filler label.
+- Reader-instruction / attention-direction crutches: "This is the part worth studying if you sell any AI product," "Here's the part that matters," "Pay attention to this," "Stay with me here," "Sit with that," "Let that sink in," "Watch what X did next," "Here's what happened next." Also the significance-announcing tee-up: "because it's the template," "this is the playbook," "that's the blueprint." Don't tell the reader what to focus on, how to feel about it, or how important it is, and don't pre-announce that something is significant — just narrate what happened and make the point; the significance should be self-evident.
+- Coined slogan-abstractions / manufactured catchphrases: clever three-word brandable phrases like "presence without surrender," "borrowed reach, not a home," "trust is the new shelf." They read as LinkedIn-thought-leader packaging rather than how Chris would actually say it. Prefer the plain, concrete statement over the coined slogan (e.g., instead of "Sell presence without surrender," write "Be inside the AI apps, but keep the customer data and the checkout on your side").
+- Significance-flagging / knowing-insider tee-ups: "that's the tell," "X is the tell," "the picture is hard to miss," "the pattern is clear," "it's hard to miss," "you can see where this is going," "this is what makes it more than a tuck-in/feature/footnote." These nudge the reader to notice how significant or clever a point is instead of just making it. State the fact plainly and let it carry its own weight.
+- Cutesy strategy/sports metaphors used as flourish: "running the same play into the living room," "running the playbook," "the same move on a new field." Say plainly what is happening (e.g., instead of "Walmart is running that play into the living room," write "Walmart is doing the same thing with streaming TV").
+- (Plus everything already in the writing-voice skill: em-dash overload, rhythmic triplets, stray "actually/genuinely/simply/truly.")
+Note: these live here in project memory because the writing-voice skill can't be edited from a Cowork session. To add them to the skill itself, update it in Settings > Capabilities.
 
 ## Who Chris is
 Chris Dorsey (ctjdorsey@gmail.com) is a VP-level AI sales leader and GTM advisor based in Denver, CO. He excels at growing revenue from existing accounts — expansion, upsell, deepening strategic partnerships. He is actively job searching as of May 2026 for senior IC roles (no team management) in AI, Retail Media Networks, AdTech/MarTech, and Enterprise SaaS.
+
+**Current focus (updated Jun 2026):** AI and MadTech broadly — NOT GEO specifically. GEO is one slice, not the headline. Frame his POV and expertise around AI/GTM and MadTech generally. **Chris no longer works at FancyAI** — do not reference FancyAI in the present tense or as a current role in his writing, comments, or bio. Draw on past experience generally (Crispin Porter + Bogusky, Oracle, Fastly, Zeta Global) without naming a current employer. Note: his site/profile source files (CHRIS_PROFILE.md, FILL-CHECKLIST.md, site copy) still list FancyAI as "Present" and lean heavily on GEO — flag these for a separate cleanup when he's ready.
 
 **Target role:** Account Director, Strategic Account Manager, Director of Customer Success / Partnerships — senior IC, $250k+ OTE, remote or Denver/Boulder hybrid.
 

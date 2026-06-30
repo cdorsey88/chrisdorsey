@@ -80,10 +80,57 @@ html {
   transform: translateY(-4px);
 }
 
+/* Scroll progress bar — fixed indicator at very top of viewport.
+   Width tracks scroll %, color steps through the palette via gradient. */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  z-index: 50;
+  width: 0%;
+  background: linear-gradient(
+    90deg,
+    var(--teal) 0%,
+    var(--blue) 38%,
+    var(--violet) 70%,
+    var(--acid) 100%
+  );
+  background-size: 100vw 100%;
+  background-attachment: fixed;
+  transition: width 0.08s linear;
+  pointer-events: none;
+}
+
+/* Hover-alive cards: background fills with accent, text inverts, slight lift.
+   Default (resting) state and hover state are supplied via CSS variables set
+   inline per card (--card-bg/--card-fg resting, --card-hbg/--card-hfg hover). */
+.card-alive {
+  background: var(--card-bg);
+  color: var(--card-fg);
+  transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.card-alive:hover {
+  background: var(--card-hbg);
+  color: var(--card-hfg);
+  transform: translateY(-4px) rotate(var(--card-rot, 0deg));
+  box-shadow: var(--card-hshadow, 10px 10px 0 var(--ink));
+}
+/* Invert helper text + accents inside an alive card on hover */
+.card-alive:hover .card-sub {
+  color: var(--card-hsub, var(--card-hfg));
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; }
   .marquee-track,
   .chip-float { animation: none; }
+  /* Keep the progress bar (it's an indicator) but drop easing */
+  .scroll-progress { transition: none; }
+  /* Color change is fine; no transform/lift under reduced motion */
+  .card-alive { transition: background 0.25s ease, color 0.25s ease; }
+  .card-alive:hover { transform: none; }
 }
 
 @keyframes peak-rise {

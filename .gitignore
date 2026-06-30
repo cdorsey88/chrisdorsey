@@ -48,6 +48,10 @@ CHRIS_PROFILE.md
 /newsletter-drafts/
 /SightedAI/
 /chrisdorsey website cowork project/
+/Job Applications/
 
 # editor / agent local config
 /.claude/
+
+# Cloud-sync upload staging — 12GB+, must NOT be watched by the dev server
+/.tmp.driveupload/

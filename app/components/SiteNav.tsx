@@ -1,7 +1,33 @@
 import Link from "next/link";
-import { Zap } from "lucide-react";
 
-const serif = { fontFamily: "var(--font-fraunces)" };
+// Redesign palette — matches the homepage nav.
+const INK = "#1A1613";
+const PAPER = "#F2ECDD";
+const TEAL = "#0E9F86";
+
+// Mountain mark — mirrors the homepage logo glyph.
+const MountainMark = ({ id = "nav-mtn" }: { id?: string }) => (
+  <svg
+    width="28"
+    height="20"
+    viewBox="0 0 30 22"
+    fill="none"
+    aria-hidden="true"
+    className="shrink-0"
+  >
+    <defs>
+      <linearGradient id={`${id}-grad`} x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#334E8C" />
+        <stop offset="100%" stopColor="#0F6E56" />
+      </linearGradient>
+    </defs>
+    <path
+      d="M1 21 L10.5 3 Q11 2 11.6 3 L16 11 L19 6 Q19.5 5.2 20 6 L29 21 Q29.3 21.8 28.4 21.8 L1.7 21.8 Q0.7 21.8 1 21Z"
+      fill={`url(#${id}-grad)`}
+    />
+    <path d="M9 9 L11 5.5 L13 9 L11 12Z" fill="#F0F7FA" opacity="0.85" />
+  </svg>
+);
 
 // Section links point back to the homepage (/#section) so they work from any page.
 const links = [
@@ -15,31 +41,40 @@ const links = [
 
 export default function SiteNav() {
   return (
-    <nav className="bg-sky-50/80 backdrop-blur-md border-b border-sky-200/50 sticky top-0 z-50">
+    <nav
+      className="sticky top-0 z-50"
+      style={{
+        background: "rgba(242,236,221,0.85)",
+        backdropFilter: "blur(8px)",
+        borderBottom: `1px solid rgba(26,22,19,0.12)`,
+      }}
+      aria-label="Primary navigation"
+    >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
-        <Link href="/" className="font-bold whitespace-nowrap" style={serif}>
-          <span className="text-slate-900">Christopher </span>
+        <Link href="/" className="flex items-center gap-2 whitespace-nowrap select-none hover:opacity-80 transition-opacity">
+          <MountainMark />
           <span
-            className="bg-clip-text text-transparent"
-            style={{ backgroundImage: "linear-gradient(90deg, #334E8C, #0F6E56)" }}
+            className="font-display"
+            style={{ fontSize: 21, fontWeight: 800, lineHeight: 1, color: INK, transform: "translateY(1px)" }}
           >
-            Dorsey
+            Chris <span style={{ color: TEAL }}>Dorsey</span>
           </span>
         </Link>
 
         <div className="flex items-center gap-7">
-          <div className="hidden md:flex items-center gap-7 text-sm text-slate-700">
+          <div className="hidden md:flex items-center gap-7 text-sm" style={{ color: INK }}>
             {links.map((l) => (
-              <Link key={l.href} href={l.href} className="hover:text-blue-600 transition">
+              <Link key={l.href} href={l.href} className="font-medium hover:opacity-60 transition">
                 {l.label}
               </Link>
             ))}
           </div>
           <Link
             href="/#contact"
-            className="text-sm bg-gradient-to-r from-blue-600 to-emerald-600 text-white px-4 py-1.5 rounded-full hover:shadow-lg hover:shadow-blue-500/30 hover:scale-105 transition-all flex items-center gap-1 font-medium whitespace-nowrap"
+            className="text-sm px-4 py-1.5 rounded-full font-semibold transition-all hover:opacity-90 whitespace-nowrap"
+            style={{ background: INK, color: PAPER }}
           >
-            Say hi! <Zap className="w-3.5 h-3.5 fill-white" />
+            Say hi
           </Link>
         </div>
       </div>

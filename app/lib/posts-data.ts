@@ -11,6 +11,72 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "starbucks-green-apron-creators-employee-influencers",
+    title: "Starbucks is paying baristas to make TikToks. The strategy was sitting in plain sight for a decade.",
+    date: "Jun 30, 2026",
+    readTime: "6 min",
+    excerpt:
+      "At Cannes, Starbucks said it's the first brand to pilot a custom Creator Network inside TikTok, paying select baristas through ad revenue sharing to make the content many of them were already posting for free. It's overdue and it's smart — and it isn't new: Macy's built Style Crew on employee commissions in 2018, and Walmart's Spotlight has paid associates since 2020. Why the tactic stayed rare says more than the launch does.",
+    tag: "Brands",
+    color: "from-green-700 to-emerald-600",
+    tldr: "At Cannes Lions, Starbucks said it will be the first brand to pilot a custom Creator Network inside TikTok, sending creative briefs to select baristas from its Green Apron Creators program and paying them through ad revenue sharing. Its employees already post about the job at three times the rate of peers at similar chains, so Starbucks is paying for behavior it was getting free. Overdue, yes, but not unprecedented: Macy's built Style Crew on employee sales commissions in 2018, and Walmart's Spotlight has paid associates since 2020. The tactic stayed rare because paying employees to post sets off real wage-and-hour, FTC-disclosure, and audience-ownership problems, and because marketing doesn't run the frontline. What changed is that Gen Z posts natively and TikTok is now building the rails. Where it heads: the employee-creator becomes a defined, paid role, comp blends wage and revenue share, and the following a barista builds is portable — brands are about to learn they're renting the creators they employ.",
+  },
+  {
+    slug: "albertsons-pg-branded-entertainment-retail-media",
+    title: "Albertsons made a scripted drama from its shopper data. P&G has been here since the 1930s.",
+    date: "Jun 30, 2026",
+    readTime: "5 min",
+    excerpt:
+      "Albertsons Media Collective and P&G premiered \"Rico's Tacos,\" a scripted microdrama built from Albertsons' loyalty-card data, at Cannes this month. A retail media network that spent years selling placements graded to the basket just moved into producing the content itself — and brought the one thing branded entertainment always lacked: a line from the show to a receipt. The catch is that the company telling you it worked is the company that made it.",
+    tag: "Future of Ads",
+    color: "from-amber-500 to-rose-600",
+    tldr: "Albertsons Media Collective and P&G launched \"Rico's Tacos,\" a scripted \"Minivela\" microdrama built from Albertsons' shopper data, premiering June 23 across YouTube, social, and in-store screens and running through August, with an episode shown at Cannes. P&G invented the soap opera in the 1930s to sell laundry soap; now it's co-producing scripted drama again, with loyalty-card data writing the brief. The move takes retail media up-funnel into brand-building and brings the measurement branded content never had — a tie to actual purchases. But putting the brand inside the story muddies attribution, and the retailer makes the show, sells the placement, and grades the result. If you sell retail media or build for RMNs, the category is adding production to its skill set. If you're a brand, you can finally measure branded entertainment to a receipt, but the grader made the show — so bring your own scorecard.",
+  },
+  {
+    slug: "kroger-tiktok-retail-media-data-offplatform",
+    title: "Kroger is renting its shoppers to TikTok. Walmart spent a year making sure it never has to.",
+    date: "Jun 30, 2026",
+    readTime: "5 min",
+    excerpt:
+      "Kroger Precision Marketing launched self-service advertising with TikTok, letting brands target Kroger's purchase-data audiences inside TikTok's own platform. The same month, at the same Cannes festival, Walmart kept buying its own stack so its data and screens stay in-house. Two retail media networks, opposite bets on the same question: push your first-party data out to where the shoppers are, or keep it behind your own walls.",
+    tag: "MadTech",
+    color: "from-sky-600 to-violet-600",
+    tldr: "Kroger Precision Marketing launched self-service advertising with TikTok, letting brands target Kroger's loyalty-based purchase audiences inside TikTok's ad platform. Same month, same Cannes festival, Walmart kept buying its own stack — VIZIO, Vibe — so its data, inventory, and measurement stay in-house. Two retail media networks made opposite bets on where a retailer's data is worth the most: pointed at the biggest outside audience, or kept behind its own walls. Kroger's move buys reach it can't build alone, and risks teaching the market to value the data over Kroger's owned media while TikTok learns which of its audiences convert. If you sell retail media, audience licensing is a real revenue line, but know whether you're selling reach or renting out your moat. If you buy, Kroger data inside TikTok is good targeting — just don't let TikTok be the only scorecard.",
+  },
+  {
+    slug: "geo-citations-google-rankings-diverge",
+    title: "The pages AI cites and the pages Google ranks are barely the same list anymore.",
+    date: "Jun 29, 2026",
+    readTime: "5 min",
+    excerpt:
+      "New 5W research, built on Brandlight data, says the overlap between the top Google results and the sources AI assistants cite has fallen from about 70% to under 20%. Ahrefs found roughly 28% of ChatGPT's most-cited pages don't rank on Google at all. The SEO you already paid for no longer buys a seat in the AI answer.",
+    tag: "GEO",
+    color: "from-emerald-500 to-cyan-600",
+    tldr: "New 5W research, drawing on Brandlight data, says the overlap between the top Google results and the sources AI assistants cite has fallen from about 70% to under 20%, and Ahrefs found roughly 28% of ChatGPT's most-cited pages have no organic Google ranking at all. Search and AI answers are pulling from two increasingly different lists, and Google's own new guidance says most GEO 'hacks' don't work. If you market a brand, stop grading GEO on the SEO scoreboard: track whether the assistants cite and recommend you, find the sources they pull from, and get your brand into those. If you sell GEO tooling, a ranking dashboard isn't the product anymore.",
+  },
+  {
+    slug: "google-conversational-ads-keyword-casualty",
+    title: "Google is turning search ads into a conversation. The keyword is the casualty.",
+    date: "Jun 29, 2026",
+    readTime: "5 min",
+    excerpt:
+      "At Google Marketing Live, Google showed Gemini-powered ad formats that run inside AI Mode and conversational Search, not as a row of links. The keyword-and-intent model that priced search for twenty years stops describing what's being bought once the query becomes a dialogue — and targeting, control, and attribution all go soft with it.",
+    tag: "Future of Ads",
+    color: "from-blue-600 to-violet-600",
+    tldr: "At Google Marketing Live 2026, Google unveiled Gemini-powered conversational ad formats inside AI Mode and Search, as AI Mode moves from an opt-in experiment to the way Search works. Search ads were sold against keywords for twenty years; a conversation has no keyword, so targeting, placement control, and clean keyword-to-conversion attribution all weaken at once. If you buy media, get your reporting ready for a conversion you can't trace to a query, and treat your free presence in the AI answer as the other half of the buy. If you sell search tooling, 'we optimize keywords' ages fast in a channel leaving keywords behind.",
+  },
+  {
+    slug: "fox-roku-ctv-operating-system",
+    title: "Fox didn't buy a streaming app. It bought the operating system inside 100 million TVs.",
+    date: "Jun 29, 2026",
+    readTime: "5 min",
+    excerpt:
+      "Fox agreed to buy Roku for about $22 billion, and most coverage filed it as a content company grabbing a streaming service. What changed hands is the operating system on the TV itself — the home screen, the default, the data on 100M+ households. The screen is the scarce thing, and Fox just went from tenant to landlord.",
+    tag: "MadTech",
+    color: "from-slate-700 to-rose-600",
+    tldr: "Fox agreed this month to acquire Roku for about $22 billion ($160/share in cash and stock). The story isn't a content company adding a streaming channel — Roku is the operating system on the TV, the home screen and default layer with a first-party tie to 100M+ households. Whoever owns the screen sets the terms for every app and advertiser downstream. It's the same control Walmart is assembling from the retail side with VIZIO and Vibe, reached from the content side. If you buy CTV, take the reach but insist on independent measurement; if you sell around CTV, own what the screen owner can't replicate in-house.",
+  },
+  {
     slug: "spacex-cursor-neutrality-is-not-a-contract",
     title: "Cursor was the neutral choice. The company that just bought it owns a model.",
     date: "Jun 25, 2026",
@@ -67,14 +133,14 @@ export const posts: PostMeta[] = [
   },
   {
     slug: "ai-sdr-boom-revolving-door-churn",
-    title: "The AI SDR boom is real. So is the revolving door behind it.",
+    title: "The AI SDR boom is real. Retention is the test it has to pass.",
     date: "Jun 18, 2026",
     readTime: "5 min",
     excerpt:
-      "AI SDR tools are a multibillion-dollar category losing 50 to 70% of their customers a year, some down most of their buyers inside three months. When teams automated prospecting, reply rates fell from about 2.1% to 1.3%. Every touch got worse, and volume hid it. The churn is built in at the sale, and the same trap waits for anyone selling AI.",
+      "AI SDR tools are a multibillion-dollar category growing fast — and wrestling with retention, with some vendors losing a large share of buyers within a year. When teams over-automate prospecting, reply rates can slip and raw volume hides it. The lesson for anyone selling AI: win on converted pipeline, not activity, and the renewal takes care of itself.",
     tag: "Sales",
     color: "from-amber-600 to-rose-600",
-    tldr: "AI SDR tools are a multibillion-dollar category with annual churn of 50 to 70%, some losing most buyers within three months. When teams automated prospecting, reply rates fell from about 2.1% with human reps to 1.3%. Every touch got worse, and volume hid it. The churn is built in at the sale: these tools are demoed on activity and renewed on outcomes, so much of the category's growth is the same seat resold to the next believer. If you buy one, write pilot criteria around converted pipeline, not meetings booked; if you sell one, refuse activity-based success metrics.",
+    tldr: "AI SDR is a real, fast-growing category, but several vendors are wrestling with high first-year churn — largely because the tools get demoed on activity and judged on outcomes. When prospecting gets over-automated, reply rates can drop and raw volume masks it. The takeaway cuts both ways: if you buy one, write pilot criteria around converted pipeline, not meetings booked; if you sell one, anchor success on outcomes, not activity — that's what earns the renewal.",
   },
   {
     slug: "ai-labs-hiring-salespeople-which-sales-jobs-last",
@@ -210,14 +276,14 @@ export const posts: PostMeta[] = [
   },
   {
     slug: "oura-ipo-not-every-company-should-go-public",
-    title: "Oura just filed to go public. That's exactly when I'd bet against them.",
+    title: "Oura just filed to go public. The hardest test comes after the IPO.",
     date: "May 22, 2026",
     readTime: "7 min",
     excerpt:
-      "Oura confidentially filed its S-1 yesterday — sold 5.5M rings, $11B Series E valuation, a category they invented. Here's why public-market gravity is the thing most likely to break them.",
+      "Oura confidentially filed its S-1 yesterday — 5.5M rings sold, an $11B valuation, a category it invented. The harder challenge isn't the debut; it's the public-market gravity that reshapes how a hardware company has to operate after the bell.",
     tag: "Business",
     color: "from-amber-600 to-orange-500",
-    tldr: "Oura confidentially filed its S-1 yesterday — 5.5M rings sold at an $11B valuation in a category they invented. Public-market gravity is the thing most likely to break them. Fitbit is the case study, and Google relaunched the Fitbit Air this month as the explicit wedge against Oura.",
+    tldr: "Oura confidentially filed its S-1 yesterday — 5.5M rings sold at an $11B valuation in a category it invented. The real test comes after the IPO: public-market gravity reshapes how a hardware company operates. Fitbit is the cautionary case study, and Google relaunched the Fitbit Air this month as a direct competitor.",
   },
   {
     slug: "chatgpt-ads-manager-sellers-read",
@@ -243,14 +309,14 @@ export const posts: PostMeta[] = [
   },
   {
     slug: "publicis-liveramp-acquisition",
-    title: "Publicis bought LiveRamp for $2.2B. The Trade Desk just lost more than LiveRamp did.",
+    title: "Publicis bought LiveRamp for $2.2B. The real story is who controls identity now.",
     date: "May 18, 2026",
     readTime: "7 min",
     excerpt:
-      "Press release landed Tuesday: Publicis is paying $2.167B for LiveRamp — $38.50 a share, 29.8% premium, all cash. Most of the coverage is treating this as another holdco land grab. The second-order effect is bigger: Publicis just bought the rails of the open internet, and The Trade Desk's identity story just got much harder to defend.",
+      "Press release landed Tuesday: Publicis is paying $2.167B for LiveRamp — $38.50 a share, 29.8% premium, all cash. Most coverage treats it as another holdco land grab. The bigger second-order effect: Publicis just bought a connectivity layer of the open internet, and the question of who owns independent identity is suddenly live.",
     tag: "MadTech",
     color: "from-fuchsia-600 to-rose-500",
-    tldr: "Publicis is paying $2.167B for LiveRamp — a 29.8% premium for the connectivity layer underneath modern programmatic. The biggest casualty isn't LiveRamp's customers; it's The Trade Desk's claim that UID2 is an independent identity standard. Brands have three things to do this week before close.",
+    tldr: "Publicis is paying $2.167B for LiveRamp — a 29.8% premium for the connectivity layer underneath modern programmatic. The bigger question it raises is about identity independence across the open internet, including how UID2 is governed. Brands have three things to do this week before close.",
   },
   {
     slug: "claude-mythos-zero-day-security",

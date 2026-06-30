@@ -39,8 +39,6 @@ export const metadata: Metadata = {
     "AI go-to-market",
     "first sales hire",
     "agentic AI sales",
-    "Generative Engine Optimization",
-    "GEO consultant",
     "MadTech",
     "account director",
     "sales consultant",
@@ -95,16 +93,14 @@ const jsonLd = {
       name: "Christopher Dorsey",
       alternateName: ["Chris Dorsey", "CT Dorsey"],
       description:
-        "Senior enterprise sales leader specializing in taking AI products to market — first sales hire, category creator, Fortune 500 closer. 15 years selling AI, MadTech, and enterprise SaaS, including Generative Engine Optimization (GEO), agentic AI customer acquisition, and edge infrastructure.",
+        "Senior enterprise sales leader specializing in taking AI products to market — first sales hire, category creator, Fortune 500 closer. 15 years selling AI, MadTech, and enterprise SaaS, including agentic AI customer acquisition and edge infrastructure.",
       url: "https://chrisdorsey.co/",
       email: `mailto:${CONTACT_EMAIL}`,
-      jobTitle: ["Enterprise Sales Leader", "AI Go-To-Market Leader", "Startup Advisor", "Sales Strategy Advisor", "GEO Consultant"],
+      jobTitle: ["Enterprise Sales Leader", "AI Go-To-Market Leader", "Startup Advisor", "Sales Strategy Advisor"],
       knowsAbout: [
         "AI Go-To-Market Strategy",
         "Enterprise Sales",
         "Agentic AI",
-        "Generative Engine Optimization",
-        "GEO",
         "MadTech",
         "AdTech",
         "Account Management",
@@ -143,13 +139,12 @@ const jsonLd = {
       "@id": "https://chrisdorsey.co/#service",
       name: "AI Sales & GTM Advisory — Christopher Dorsey",
       description:
-        "Advisory on enterprise sales, go-to-market strategy, and sales motion design for AI and MadTech companies, including Generative Engine Optimization (GEO) strategy.",
+        "Advisory on enterprise sales, go-to-market strategy, and sales motion design for AI and MadTech companies.",
       provider: { "@id": "https://chrisdorsey.co/#person" },
       areaServed: { "@type": "Country", name: "United States" },
       serviceType: [
         "Sales Strategy",
         "Go-To-Market Advisory",
-        "GEO Consulting",
         "Sales Leadership Mentoring",
       ],
       url: "https://chrisdorsey.co/#contact",
@@ -159,7 +154,7 @@ const jsonLd = {
       "@id": "https://chrisdorsey.co/#blog",
       name: "Notes from the field — Christopher Dorsey",
       description:
-        "Writing on AI go-to-market, the future of advertising in LLMs, Generative Engine Optimization, and selling AI to skeptical buyers.",
+        "Writing on AI go-to-market, the future of advertising in LLMs, retail media, and selling AI to skeptical buyers.",
       author: { "@id": "https://chrisdorsey.co/#person" },
       publisher: { "@id": "https://chrisdorsey.co/#person" },
       url: "https://chrisdorsey.co/#writing",
@@ -186,18 +181,10 @@ const jsonLd = {
         },
         {
           "@type": "Question",
-          name: "What is Generative Engine Optimization (GEO)?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Generative Engine Optimization (GEO) is the practice of getting a brand cited and recommended inside AI answers from tools like ChatGPT, Gemini, and Claude, the way SEO got brands ranked in search results. It is one slice of Chris's broader AI and MadTech work, not the headline — he built the go-to-market motion for a GEO product from zero and advises companies on where AI is reshaping how brands get found.",
-          },
-        },
-        {
-          "@type": "Question",
           name: "Is Chris Dorsey available for roles or advisory?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. Chris is exploring senior individual-contributor go-to-market roles at AI, retail media, AdTech/MarTech, and enterprise SaaS companies — Account Director, Strategic Account Manager, and Director of Customer Success or Partnerships. He also advises founders and sales leaders on building durable pipeline. He responds to every note personally.",
+            text: "Yes. Chris is deliberately focused on senior individual-contributor go-to-market roles at AI, retail media, AdTech/MarTech, and enterprise SaaS companies — Account Director, Strategic Account Manager, and Director of Customer Success or Partnerships. He has led teams and chooses to stay hands-on: carrying a number and owning client relationships rather than managing. He responds to every note personally.",
           },
         },
         {

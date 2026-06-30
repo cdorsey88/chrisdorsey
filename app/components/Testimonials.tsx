@@ -2,7 +2,14 @@
 // All four quotes below are real, excerpted verbatim from Chris's public
 // LinkedIn recommendations (linkedin.com/in/cdorsey, pulled June 2026).
 
-const serif = { fontFamily: "var(--font-fraunces)" };
+const display = { fontFamily: "var(--font-display)", letterSpacing: "-0.02em" };
+
+const INK = "#1A1613";
+const PAPER = "#F2ECDD";
+const TEAL = "#0E9F86";
+const ACID = "#C7F03A";
+const VIOLET = "#6B4BFF";
+const BLUE = "#2B43E8";
 
 type Testimonial = {
   quote: string;
@@ -48,29 +55,58 @@ const testimonials: Testimonial[] = [
 ];
 
 export default function Testimonials() {
+  // Each card gets a different bold fill so the set reads as varied, not templated.
+  const fills = [
+    { bg: ACID, fg: INK, sub: "rgba(26,22,19,0.7)", chip: INK, chipFg: ACID, shadow: INK, rot: -1 },
+    { bg: INK, fg: PAPER, sub: "rgba(242,236,221,0.7)", chip: ACID, chipFg: INK, shadow: TEAL, rot: 1 },
+    { bg: BLUE, fg: "#fff", sub: "rgba(255,255,255,0.78)", chip: ACID, chipFg: INK, shadow: INK, rot: 0.8 },
+    { bg: VIOLET, fg: "#fff", sub: "rgba(255,255,255,0.78)", chip: ACID, chipFg: INK, shadow: INK, rot: -0.8 },
+  ];
+
   return (
     <section id="testimonials" className="relative py-20 px-6">
       <div className="max-w-5xl mx-auto">
-        <div className="inline-block text-xs uppercase tracking-widest text-violet-700 bg-violet-100 px-3 py-1 rounded-full mb-4 font-bold">
-          What people say
+        <div className="inline-block text-xs uppercase tracking-widest px-3 py-1 rounded-full mb-4 font-bold" style={{ color: INK, background: ACID }}>
+          References
         </div>
-        <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-12" style={serif}>
-          From the people I&apos;ve worked with.
+        <h2 className="font-display font-extrabold tracking-tight mb-3" style={{ ...display, fontSize: "clamp(30px,4.5vw,52px)", color: INK }}>
+          They put their name on it.
         </h2>
+        <p className="text-lg mb-12" style={{ color: "#4a4239" }}>
+          Clients who&apos;ll vouch for me, on the record.
+        </p>
         <div className="grid md:grid-cols-2 gap-5">
-          {testimonials.map((t, i) => (
-            <figure
-              key={i}
-              className="bg-white border border-slate-200 rounded-2xl p-7 hover:shadow-xl hover:shadow-blue-500/10 transition-all"
-            >
-              <blockquote className="text-slate-700 leading-relaxed mb-5">&ldquo;{t.quote}&rdquo;</blockquote>
-              <figcaption className="text-sm">
-                <span className="font-bold text-slate-900">{t.name}</span>
-                <span className="text-slate-500"> · {t.title}, {t.company}</span>
-                <span className="block text-xs text-slate-400 mt-0.5">{t.relationship}</span>
-              </figcaption>
-            </figure>
-          ))}
+          {testimonials.map((t, i) => {
+            const f = fills[i % fills.length];
+            return (
+              <figure
+                key={i}
+                className="rounded-2xl p-7 transition-transform hover:-translate-y-1"
+                style={{ background: f.bg, color: f.fg, border: `3px solid ${INK}`, boxShadow: `7px 7px 0 ${f.shadow}`, transform: `rotate(${f.rot}deg)` }}
+              >
+                <blockquote className="leading-relaxed mb-5" style={{ color: f.fg }}>&ldquo;{t.quote}&rdquo;</blockquote>
+                <figcaption className="text-sm">
+                  <div>
+                    <span className="font-bold" style={{ color: f.fg }}>{t.name}</span>
+                    <span style={{ color: f.sub }}> · {t.title}, {t.company}</span>
+                  </div>
+                  <span className="inline-block text-xs font-semibold mt-3 px-2.5 py-0.5 rounded-full" style={{ background: f.chip, color: f.chipFg }}>{t.relationship}</span>
+                </figcaption>
+              </figure>
+            );
+          })}
+        </div>
+        <div className="mt-10">
+          <a
+            href="https://www.linkedin.com/in/cdorsey/details/recommendations/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 font-semibold hover:opacity-70 transition-opacity"
+            style={{ color: INK }}
+          >
+            See more from clients, executive leaders, and cross-functional colleagues
+            <span aria-hidden="true">→</span>
+          </a>
         </div>
       </div>
     </section>
