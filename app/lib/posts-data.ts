@@ -11,6 +11,50 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "microsoft-frontier-company-deployment-is-the-product",
+    title: "Microsoft spent $2.5 billion to put its own engineers inside your customer's building.",
+    date: "Jul 8, 2026",
+    readTime: "6 min",
+    excerpt:
+      "Microsoft launched Frontier Company on July 2 — a $2.5 billion unit staffing 6,000 engineers to embed inside customers and drag their AI from pilot to production. Most coverage called it a rescue squad for the 95% of AI pilots that go nowhere. The seller's read is that the biggest platform on earth just priced where the money in AI really sits, and started competing with the consultancies it calls partners.",
+    tag: "AI",
+    color: "from-blue-700 to-cyan-600",
+    tldr: "On July 2 Microsoft launched Frontier Company, a unit with a $2.5 billion budget and 6,000 engineers and industry specialists whose job is to embed inside a customer and carry its AI from slide deck to production. Microsoft calls the practice forward-deployed engineering, the model Palantir made famous. Most coverage framed it as a rescue squad for the roughly 95% of enterprise gen-AI pilots that MIT's NANDA study found deliver no measurable profit-and-loss impact. The seller's read is different: the largest software vendor on earth just put a price on the work of making AI run inside a business, decided that work is where the durable revenue is, and started competing with the very consultancies — Accenture, PwC, EY, KPMG, Capgemini — it lists as partners. If you sell AI software or services, your deal now sits next to Microsoft's own embedded engineers, so own the specific workflow and outcome its generalists won't go deep on. If you buy, you can rent that muscle, but make portability a written requirement and make sure you own the runbook the day the team rotates off.",
+  },
+  {
+    slug: "claude-sonnet-5-tokenizer-cost-per-task",
+    title: "Anthropic cut its agent price. Then the new tokenizer took part of it back.",
+    date: "Jul 8, 2026",
+    readTime: "5 min",
+    excerpt:
+      "Anthropic shipped Claude Sonnet 5 on June 30 at an introductory $2/$10 per million tokens, pitched as near-Opus performance at a third of the cost. The number almost no one caught: a new tokenizer maps the same input to as much as 1.35x more tokens, and Anthropic priced the switch to be \"roughly cost-neutral.\" If you buy AI by the token, your real number is cost per finished task, not the sticker.",
+    tag: "Sales",
+    color: "from-orange-600 to-amber-500",
+    tldr: "On June 30 Anthropic shipped Claude Sonnet 5, its most agentic mid-tier model, at an introductory $2 per million input tokens and $10 per million output, holding through August 31 before stepping up to $3 and $15. Anthropic says it runs close to Opus 4.8 at about a third of the cost, and the coverage read it as an agent price war opening. Less covered: Sonnet 5 ships with a new tokenizer that maps the same input to roughly 1.0 to 1.35 times more tokens, and Anthropic set the intro price specifically to make the switch, in its words, roughly cost-neutral. A per-token price that fell while tokens-per-task rose means your real number is cost per finished task, not the sticker on the pricing page. If you resell agentic workflows, model the new tokenizer against your real traffic before you celebrate the cut. If you buy, evaluate on cost per completed task run through your own workload end to end, because that is the only figure a tokenizer change can't quietly move.",
+  },
+  {
+    slug: "retail-media-passed-tv-sponsored-search-exposure",
+    title: "Retail media just passed TV. Sixty percent of it rides on an ad shoppers are starting to skip.",
+    date: "Jul 8, 2026",
+    readTime: "6 min",
+    excerpt:
+      "Commerce media just passed TV and US retail media is tracking toward $70 billion in 2026. But more than 60% of that spend rides on sponsored search — promoted listings that only exist if a shopper uses the retailer's search bar. Shoppers are moving that behavior into AI assistants. The growth story and the disruption story are the same companies.",
+    tag: "Future of Ads",
+    color: "from-fuchsia-600 to-orange-500",
+    tldr: "Commerce media overtook television in global ad spend for the first time, and US retail media is tracking toward roughly $70 billion in 2026 by eMarketer's forecast. The engine under that record is sponsored search, the promoted product listings that account for more than 60% of US retail media spend, and it works only as long as a shopper uses the retailer's search bar. They're starting not to: more than 70% of shoppers now fold an AI assistant into some part of buying, and long, conversational queries are climbing. The growth story and the disruption story are the same companies. If you sell retail media, do the exposure math on your own book and build the ad product for the agent-mediated buy before your search line softens. If you buy it, stop treating on-site search as the whole funnel and start measuring whether an AI assistant surfaces and recommends your product at all.",
+  },
+  {
+    slug: "fable-5-returns-government-preclearance-model-continuity",
+    title: "Anthropic's best model came back. Government pre-clearance came with it.",
+    date: "Jul 1, 2026",
+    readTime: "6 min",
+    excerpt:
+      "The US lifted its export controls on Anthropic's Fable 5 and Mythos 5, and the model that went dark for nearly three weeks is back online. But in the same two weeks, OpenAI released GPT-5.6 Sol only to government-vetted partners first. Sign-off before a frontier model ships is becoming the norm — and multi-cloud won't protect you from it.",
+    tag: "AI",
+    color: "from-slate-700 to-blue-600",
+    tldr: "On June 30 the US Commerce Department lifted the export controls that had taken Anthropic's Fable 5 and Mythos 5 dark for nearly three weeks, and Fable 5 began rolling back out worldwide on July 1 under a capped quota through July 7. But in the same fortnight, OpenAI previewed GPT-5.6 Sol only to government-vetted \"trusted partners\" at Washington's request. Government pre-clearance of frontier models is becoming standard, built on the decades-old \"deemed export\" rule that took Fable 5 down globally because a control aimed at foreign nationals became an outage for everyone. Multi-cloud doesn't help — the restriction attaches to the model, so AWS, Google Cloud, and Foundry all went dark together. If you sell AI on a frontier model, your buyer inherited its regulatory exposure: build a real fallback, keep workflows portable, and raise it before the security review does. If you buy, add regulatory interruption to your evaluation and ask where the model is cleared and how fast it was restored last time.",
+  },
+  {
     slug: "starbucks-green-apron-creators-employee-influencers",
     title: "Starbucks is paying baristas to make TikToks. The strategy was sitting in plain sight for a decade.",
     date: "Jun 30, 2026",

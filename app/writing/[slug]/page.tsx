@@ -22,6 +22,195 @@ type Post = {
 
 const posts: Post[] = [
   {
+    slug: "microsoft-frontier-company-deployment-is-the-product",
+    title: "Microsoft spent $2.5 billion to put its own engineers inside your customer's building.",
+    date: "Jul 8, 2026",
+    readTime: "6 min",
+    tag: "AI",
+    color: "from-blue-700 to-cyan-600",
+    tldr: "On July 2 Microsoft launched Frontier Company, a unit with a $2.5 billion budget and 6,000 engineers and industry specialists whose job is to embed inside a customer and carry its AI from slide deck to production. Microsoft calls the practice forward-deployed engineering, the model Palantir made famous. Most coverage framed it as a rescue squad for the roughly 95% of enterprise gen-AI pilots that MIT's NANDA study found deliver no measurable profit-and-loss impact. The seller's read is different: the largest software vendor on earth just put a price on the work of making AI run inside a business, decided that work is where the durable revenue is, and started competing with the very consultancies — Accenture, PwC, EY, KPMG, Capgemini — it lists as partners. If you sell AI software or services, your deal now sits next to Microsoft's own embedded engineers, so own the specific workflow and outcome its generalists won't go deep on. If you buy, you can rent that muscle, but make portability a written requirement and make sure you own the runbook the day the team rotates off.",
+    content: (
+      <div className="prose-content">
+        <p>
+          On July 2 Microsoft launched{" "}
+          <a href="https://blogs.microsoft.com/blog/2026/07/02/microsoft-frontier-company-ai-engineering-that-amplifies-and-protects-your-intelligence/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">Frontier Company</a>, a new unit with a $2.5 billion budget and 6,000 engineers and industry specialists whose job is to move into a customer&apos;s business and carry its AI from slide deck to production. Microsoft calls the practice forward-deployed engineering: you don&apos;t sell the software and leave, you station your own people inside the client until the thing works. Palantir built a company on it. Now the largest software vendor on earth is running the same play at the scale of 6,000 headcount, with a named executive, Rodrigo Kede Lima, brought over to run it as its own company. The reason it&apos;s worth your attention has little to do with Microsoft&apos;s stock.
+        </p>
+        <p>
+          I&apos;ve sold the platform side of this. At Oracle and Fastly the contract closed on the technology, and then the real work, and the real money, showed up in the months after, in the people who made it run against a live business. The vendors who treated deployment as someone else&apos;s problem watched the account&apos;s budget flow to whoever did the integration. Microsoft has clearly done that math and decided to keep the second check for itself.
+        </p>
+        <h2>What the 95% number bought</h2>
+        <p>
+          The statistic driving this is MIT&apos;s NANDA finding that about{" "}
+          <a href="https://www.techcrunch.com/2026/07/02/microsoft-launches-its-own-ai-deployment-company-with-2-5-billion-commitment/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">95% of enterprise generative-AI pilots</a> show no measurable impact on profit or loss. Most coverage read Frontier Company as Microsoft&apos;s answer to that failure rate, a squad for stalled projects. True, and it undersells what happened. Microsoft put a price on the gap between a working demo and a working business process, staffed it with 6,000 people, and stood it up as a standalone company. When the biggest platform on the market decides the durable revenue sits in deployment rather than in the model, that is a data point about where the whole industry&apos;s margin is heading. I&apos;ve made the argument here before that{" "}
+          <Link href="/writing/ai-ipo-race-model-was-never-the-moat" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">the model was never the moat</Link>. This is the most expensive vote yet for that thesis, and it came from the company with the most to lose if it were wrong.
+        </p>
+        <h2>Look at who Microsoft is now competing with</h2>
+        <p>
+          Read the partner list. Frontier Company will work alongside Accenture, PwC, EY, KPMG, and Capgemini, the systems integrators whose core business is precisely this: embedding consultants to stand up enterprise software. Microsoft is their supplier and, as of July 2, their competitor for the same deployment dollars. Those firms built practices worth billions implementing Microsoft&apos;s stack. Now Microsoft is selling the implementation directly, using its ownership of the model, the cloud, and the licensing to get in the door first. Two things can be true: the SIs still get plenty of overflow work, and their most profitable AI engagements just picked up a new bidder who controls the underlying product.
+        </p>
+        <h2>If you sell AI</h2>
+        <p>
+          Your deal has a new neighbor. If you sell AI software or services into a mid-to-large enterprise that runs on Azure or Microsoft 365, there&apos;s now a real chance Microsoft&apos;s own engineers are already inside that account, chartered to make AI work across the business, which is the same sentence you use in your pitch. You are not going to out-scale 6,000 forward-deployed people. What you can do is own a slice of the workflow Microsoft&apos;s generalists won&apos;t go deep on: the specific motion, the specific data, the outcome your buyer&apos;s CFO actually counts. Sell the result you can prove, not the generic capability Microsoft is now willing to staff as a loss leader to protect its cloud consumption.
+        </p>
+        <h2>If you buy AI</h2>
+        <p>
+          You can rent this muscle, and for a stalled project it may be the fastest route to a result. Go in clear-eyed on two things. First, an embedded team that reports to your model and cloud provider has every incentive to build the solution that deepens your Azure commit, so make portability a written requirement rather than a hope. Second, when Microsoft&apos;s engineers rotate off, the workflow they built has to belong to you and your people, documented and owned, or you&apos;ve traded a pilot problem for a dependency problem. Ask who holds the runbook the day the Frontier team leaves.
+        </p>
+        <p>
+          For two years the pitch across this industry was that the model was the hard part and everything downstream would sort itself out. Microsoft just spent $2.5 billion betting the opposite, and staffed that bet with more people than most AI startups will ever hire. If you sell anything in this market, price your own value against that. The model is becoming a commodity someone will deploy for you, and the money is moving to whoever can make it change how a business actually runs. Microsoft intends for that someone to be Microsoft.
+        </p>
+      </div>
+    ),
+    sources: [
+      { title: "Microsoft — Microsoft Frontier Company: AI engineering that amplifies and protects your intelligence (Jul 2, 2026)", url: "https://blogs.microsoft.com/blog/2026/07/02/microsoft-frontier-company-ai-engineering-that-amplifies-and-protects-your-intelligence/" },
+      { title: "CNBC — Microsoft commits $2.5 billion, 6,000 employees to AI implementation unit", url: "https://www.cnbc.com/2026/07/02/microsoft-commits-2point5-billion-6000-employees-ai-implementation-unit.html" },
+      { title: "TechCrunch — Microsoft launches its own AI deployment company with $2.5 billion commitment", url: "https://techcrunch.com/2026/07/02/microsoft-launches-its-own-ai-deployment-company-with-2-5-billion-commitment/" },
+      { title: "GeekWire — Microsoft unveils $2.5B 'Frontier Company' to embed AI engineers inside customers", url: "https://www.geekwire.com/2026/microsoft-announces-2-5b-frontier-company-to-embed-ai-engineers-inside-customers/" },
+    ],
+  },
+  {
+    slug: "claude-sonnet-5-tokenizer-cost-per-task",
+    title: "Anthropic cut its agent price. Then the new tokenizer took part of it back.",
+    date: "Jul 8, 2026",
+    readTime: "5 min",
+    tag: "Sales",
+    color: "from-orange-600 to-amber-500",
+    tldr: "On June 30 Anthropic shipped Claude Sonnet 5, its most agentic mid-tier model, at an introductory $2 per million input tokens and $10 per million output, holding through August 31 before stepping up to $3 and $15. Anthropic says it runs close to Opus 4.8 at about a third of the cost, and the coverage read it as an agent price war opening. Less covered: Sonnet 5 ships with a new tokenizer that maps the same input to roughly 1.0 to 1.35 times more tokens, and Anthropic set the intro price specifically to make the switch, in its words, roughly cost-neutral. A per-token price that fell while tokens-per-task rose means your real number is cost per finished task, not the sticker on the pricing page. If you resell agentic workflows, model the new tokenizer against your real traffic before you celebrate the cut. If you buy, evaluate on cost per completed task run through your own workload end to end, because that is the only figure a tokenizer change can't quietly move.",
+    content: (
+      <div className="prose-content">
+        <p>
+          Anthropic shipped{" "}
+          <a href="https://techcrunch.com/2026/06/30/anthropic-launches-claude-sonnet-5-as-a-cheaper-way-to-run-agents/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">Claude Sonnet 5</a> on June 30, calling it the most agentic Sonnet it has built, and priced it to move: an introductory $2 per million input tokens and $10 per million output, holding through August 31 before it steps up to $3 and $15. Anthropic says it runs close to Opus 4.8 at roughly a third of the cost, and the framing everywhere was the obvious one. The cost of running agents just dropped, and a price war is starting. Then you read the pricing note, and the discount gets more complicated.
+        </p>
+        <p>
+          I&apos;ve carried a bag for usage-priced software, and the pattern is always the same. The number that closes the deal is the per-unit price on the slide. The number that decides whether the customer renews is what they actually spent to get a job done. Those two drift apart the moment the unit changes definition, and that is exactly what happened here.
+        </p>
+        <h2>The sticker fell. The unit didn&apos;t hold still.</h2>
+        <p>
+          Sonnet 5 ships with a new tokenizer, the component that chops your text into the tokens you&apos;re billed on. Anthropic says the same input can map to{" "}
+          <a href="https://www.finout.io/blog/claude-sonnet-5-pricing-2026-the-hidden-costs-and-real-savings-behind-the-cost-neutral-launch" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">roughly 1.0 to 1.35 times as many tokens</a> as before, and it was candid about the consequence: it set the introductory price so the transition would be, in its words, roughly cost-neutral. Look at the mechanics. A headline of $2 against the old $3 reads as a third off. If the identical task now generates a quarter to a third more tokens, part of that cut is arithmetic rather than savings. For a light workload you may still come out ahead. For a heavy agentic loop that reads long documents and reasons in many steps, the exact use Sonnet 5 is sold for, the token inflation lands hardest, right where the model is meant to shine.
+        </p>
+        <h2>Why this bites during a price war</h2>
+        <p>
+          It matters more because everyone is now shopping agents on price. When vendors compete on dollars per million tokens, the comparison only holds if a token means the same thing across models, and it doesn&apos;t. Each lab tokenizes differently, and now Anthropic has changed its own mid-stream. A buyer comparing Sonnet 5&apos;s $2 to another model&apos;s $2.50 on the spec sheet can pick the option that costs more per finished task and never see it, because the cheaper-looking model quietly needs more tokens to do the same work. The pricing page stopped being a fair scoreboard.
+        </p>
+        <h2>If you sell or buy AI on tokens</h2>
+        <p>
+          For anyone reselling agentic workflows, this is a margin question you should answer before your customer does. If you quoted a client based on old token math, run the new tokenizer against your real traffic before you celebrate the cut, because your cost of goods may not have moved the way the announcement implies. For anyone buying, add one line to your evaluation: cost per completed task on your own workload, measured through each model end to end, not list price per token. Take a representative job, the document your team actually processes, the agent loop you actually run, and read the bill at the bottom. That is the only number that survives a tokenizer change.
+        </p>
+        <p>
+          None of this makes Sonnet 5 a bad deal. For plenty of workloads it&apos;s a real cut, and cheaper capable agents are good for everyone building on them. The point is narrower, and it&apos;s about how you count. Model vendors will compete loudly on per-token price all year, and the unit under that price is theirs to redefine. Keep your own meter running on cost per outcome, or you&apos;ll re-quote your customers off a discount your invoice never delivered.
+        </p>
+      </div>
+    ),
+    sources: [
+      { title: "TechCrunch — Anthropic launches Claude Sonnet 5 as a cheaper way to run agents (Jun 30, 2026)", url: "https://techcrunch.com/2026/06/30/anthropic-launches-claude-sonnet-5-as-a-cheaper-way-to-run-agents/" },
+      { title: "Anthropic — Introducing Claude Sonnet 5", url: "https://www.anthropic.com/news/claude-sonnet-5" },
+      { title: "Finout — Claude Sonnet 5 Pricing 2026: the hidden costs behind the 'cost-neutral' launch", url: "https://www.finout.io/blog/claude-sonnet-5-pricing-2026-the-hidden-costs-and-real-savings-behind-the-cost-neutral-launch" },
+    ],
+  },
+  {
+    slug: "retail-media-passed-tv-sponsored-search-exposure",
+    title: "Retail media just passed TV. Sixty percent of it rides on an ad shoppers are starting to skip.",
+    date: "Jul 8, 2026",
+    readTime: "6 min",
+    tag: "Future of Ads",
+    color: "from-fuchsia-600 to-orange-500",
+    tldr: "Commerce media overtook television in global ad spend for the first time, and US retail media is tracking toward roughly $70 billion in 2026 by eMarketer's forecast. The engine under that record is sponsored search, the promoted product listings that account for more than 60% of US retail media spend, and it works only as long as a shopper uses the retailer's search bar. They're starting not to: more than 70% of shoppers now fold an AI assistant into some part of buying, and long, conversational queries are climbing. The growth story and the disruption story are the same companies. If you sell retail media, do the exposure math on your own book and build the ad product for the agent-mediated buy before your search line softens. If you buy it, stop treating on-site search as the whole funnel and start measuring whether an AI assistant surfaces and recommends your product at all.",
+    content: (
+      <div className="prose-content">
+        <p>
+          Commerce media passed television in global ad spend for the first time this year, and US retail media is tracking toward about{" "}
+          <a href="https://www.emarketer.com/content/retail-media-ad-spending-forecast-h1-2026" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">$70 billion in 2026</a>, per eMarketer. I wrote in June that{" "}
+          <Link href="/writing/commerce-media-passed-tv-agents-buying" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">commerce media had overtaken TV and the campaign work was moving to the platforms&apos; own agents</Link>. One piece of that story is worth pulling out on its own: the record retail media just set is concentrated in a single ad format, and it&apos;s the format most exposed to how people are starting to shop.
+        </p>
+        <p>
+          I came up in adtech watching channels get reorganized around whatever the consumer did next. Display got remade when attention moved into feeds. Paid search spent twenty years as the safest line in the media plan because typing a query into a box was simply how people looked for things. Retail media inherited that safety and built its business on it. That inheritance is what&apos;s now in question.
+        </p>
+        <h2>The record rides on sponsored search</h2>
+        <p>
+          Break down where retail media dollars go and it&apos;s lopsided. Sponsored search, the promoted product listings you see when you search &ldquo;coffee maker&rdquo; on a retailer&apos;s site or app, accounts for{" "}
+          <a href="https://www.emarketer.com/content/commerce-media-next-era-why-2026-will-year-of-organizational-evolution" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">more than 60% of US retail media spend</a>, by eMarketer&apos;s count. It&apos;s the entry point for nearly every advertiser and the profit center for nearly every retail media network. And it carries one dependency baked in: a shopper has to use the retailer&apos;s search bar for a sponsored listing to have anywhere to appear. Take away the query and the format has no inventory.
+        </p>
+        <h2>The shopper is drifting off the search bar</h2>
+        <p>
+          That dependency is loosening. More than{" "}
+          <a href="https://rezolve.com/press-releases/rezolve-ai-data-reveals-seven-in-ten-shoppers-now-buy-after-a-single-search-in-the-new-era-of-conversational-commerce/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">70% of shoppers</a> now fold an AI assistant into some part of buying, whether for inspiration, price checks, or comparing features, and the queries are getting longer and more conversational, with three-plus-word searches climbing from about a quarter of searches in 2024 to roughly 40% by early 2026. When the research moves into ChatGPT, Gemini, or a retailer&apos;s own assistant, the shopper often lands on a product without ever scrolling a page of sponsored results. Elf Beauty&apos;s digital chief has already started describing the future buy in terms of{" "}
+          <a href="https://www.thedrum.com/opinion/at-shoptalk-retail-media-s-agentic-anxiety-turned-into-action" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">cost per agent recommendation</a> instead of CPMs, the unit of retail media possibly shifting from the impression to the assistant&apos;s pick. Whether or not that exact phrase sticks, the direction is real: the more the assistant curates, the less the sponsored slot gets seen.
+        </p>
+        <h2>Two things can be true</h2>
+        <p>
+          The retailers aren&apos;t blind to this. The biggest ones are building the assistants themselves. Walmart put its{" "}
+          <Link href="/writing/walmart-sparky-agentic-commerce-customer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">Sparky agent inside ChatGPT and Gemini</Link>, and Amazon has its own, so some of the search spend migrates into surfaces they still control rather than evaporating. Two things can be true: retail media keeps growing in total, and its most profitable format gets reshaped underneath that growth. A retailer that owns the agent can move the money from a sponsored listing to a paid placement in the assistant&apos;s answer. A retailer that doesn&apos;t just loses the query to someone else&apos;s chatbot.
+        </p>
+        <h2>If you sell retail media</h2>
+        <p>
+          Do the exposure math on your own book. What share of your revenue is sponsored search tied to on-site queries, and what&apos;s your plan for the shopper who never runs one? If you&apos;re a retail media network, the work this year is building the ad product for the agent-mediated buy, sponsored recommendations inside your own assistant and clean structured product data the outside agents will actually surface, before your search line starts to soften. Selling more of a format whose foundation is thinning is how you get surprised at renewal.
+        </p>
+        <h2>If you buy it</h2>
+        <p>
+          Your sponsored-search dashboard is about to describe less of reality. Keep spending where it still converts, but stop treating on-site search as the whole funnel, and start measuring whether an AI assistant surfaces and recommends your product at all, because that&apos;s the shelf position forming next to the one you&apos;re bidding on. The brands that get their product data clean and legible to agents now will be the ones found when the query moves off the retailer&apos;s site.
+        </p>
+        <p>
+          Retail media crossing TV is a real milestone and the growth is not fake. The vulnerability sits one level below the top line, in the concentration: an industry that just set a record leans on a single format that assumes a behavior, typing into a search box, that AI assistants are steadily absorbing. If you sell it or buy it, find out today how much of your retail media number depends on that box, because the shopper is already answering the question for you.
+        </p>
+      </div>
+    ),
+    sources: [
+      { title: "eMarketer — Retail Media Ad Spending Forecast H1 2026", url: "https://www.emarketer.com/content/retail-media-ad-spending-forecast-h1-2026" },
+      { title: "eMarketer — Commerce media's next era: why 2026 will be a year of 'organizational evolution'", url: "https://www.emarketer.com/content/commerce-media-next-era-why-2026-will-year-of-organizational-evolution" },
+      { title: "The Drum — At Shoptalk, retail media's agentic anxiety turned into action", url: "https://www.thedrum.com/opinion/at-shoptalk-retail-media-s-agentic-anxiety-turned-into-action" },
+      { title: "Rezolve AI — Seven in ten shoppers now buy after a single search in the new era of conversational commerce", url: "https://rezolve.com/press-releases/rezolve-ai-data-reveals-seven-in-ten-shoppers-now-buy-after-a-single-search-in-the-new-era-of-conversational-commerce/" },
+    ],
+  },
+  {
+    slug: "fable-5-returns-government-preclearance-model-continuity",
+    title: "Anthropic's best model came back. Government pre-clearance came with it.",
+    date: "Jul 1, 2026",
+    readTime: "6 min",
+    tag: "AI",
+    color: "from-slate-700 to-blue-600",
+    tldr: "On June 30 the US Commerce Department lifted the export controls that had taken Anthropic's Fable 5 and Mythos 5 dark for nearly three weeks, and Fable 5 began rolling back out worldwide on July 1 under a capped quota through July 7. But in the same fortnight, OpenAI previewed GPT-5.6 Sol only to government-vetted \"trusted partners\" at Washington's request. Government pre-clearance of frontier models is becoming standard, built on the decades-old \"deemed export\" rule that took Fable 5 down globally because a control aimed at foreign nationals became an outage for everyone. Multi-cloud doesn't help — the restriction attaches to the model, so AWS, Google Cloud, and Foundry all went dark together. If you sell AI on a frontier model, your buyer inherited its regulatory exposure: build a real fallback, keep workflows portable, and raise it before the security review does. If you buy, add regulatory interruption to your evaluation and ask where the model is cleared and how fast it was restored last time.",
+    content: (
+      <div className="prose-content">
+        <p>
+          On June 30 the US Commerce Department{" "}
+          <a href="https://www.cio.com/article/4191550/us-reverses-export-restrictions-on-anthropics-fable-5-mythos-5-ai-models.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">lifted the export controls</a> it had placed on Anthropic&apos;s Fable 5 and Mythos 5, and Fable 5 started rolling back out worldwide on July 1, at first under a capped usage quota through July 7. The two models had been dark for nearly three weeks. On June 12 the government barred any foreign national from accessing them, and Anthropic, with no way to verify nationality at the login screen, shut them off for everyone rather than risk breaking the rule. When it happened I wrote that a frontier model{" "}
+          <Link href="/writing/anthropic-model-pulled-vendor-continuity-risk" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">disappearing in 96 hours by government order</Link> turns model continuity into a procurement category. The model is back. The reason it went away hasn&apos;t changed, and in the same stretch it showed up at a second company.
+        </p>
+        <h2>What actually got approved</h2>
+        <p>
+          When OpenAI previewed{" "}
+          <a href="https://openai.com/index/previewing-gpt-5-6-sol/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">GPT-5.6 Sol</a> last week, it said it had shown the government both its rollout plan and the model&apos;s capabilities before launch and, at the government&apos;s request, was releasing it first only to a small group of trusted partners whose names it had shared with Washington. Anthropic got Fable 5 back after Commerce and its Center for AI Standards and Innovation reviewed a retrained safety classifier. Two of the three frontier labs cleared a top-end release with the US government inside the same two weeks. A government sign-off before the best models reach the market is no longer a one-off tied to a single jailbreak. It is turning into the way frontier models ship.
+        </p>
+        <p>
+          The mechanism analysts point to is the &ldquo;deemed export&rdquo; rule, the decades-old idea that giving a foreign national access to controlled technology counts as exporting it. Applied to a model, that is what took Fable 5 down everywhere at once: a control aimed at foreign nationals became an outage for every user, because Anthropic couldn&apos;t check nationality in real time. As one analyst put it, the reversal isn&apos;t the story; the instrument underneath it is. Washington now has a working lever on which model reaches which users, and it has pulled it twice in a month.
+        </p>
+        <h2>Why multi-cloud doesn&apos;t save you</h2>
+        <p>
+          The reflex for an enterprise worried about a single vendor is to spread the risk across providers. It doesn&apos;t help here. Fable 5 runs on AWS, Google Cloud, and Microsoft Foundry, and all three went dark together, because the restriction attached to the model, not the cloud it sat on. When the constraint is federal policy aimed at the model maker, buying the same model through three vendors gives you three copies of the same exposure. The thing worth diversifying is the model itself, not the invoice.
+        </p>
+        <h2>If you sell</h2>
+        <p>
+          For anyone selling AI built on a frontier model, this belongs in the security review, and you should raise it before the buyer does. Your customer inherited your model provider&apos;s regulatory exposure the day they signed. The answer that holds up isn&apos;t &ldquo;it hasn&apos;t happened to us&rdquo; &mdash; it happened to the most capable model on the market, and a capped-quota relaunch is not the same as full availability. Build a real fallback path to a second model. Keep your prompts and workflows portable, so a switch is a config change instead of a rebuild. Be able to say, in plain terms, what a customer&apos;s Tuesday looks like if your primary model gets gated for a week. That&apos;s a feature now, not a footnote.
+        </p>
+        <h2>If you buy</h2>
+        <p>
+          Add regulatory interruption to the checklist next to security and price. Ask where the model is cleared, who counts as a permitted user, how fast the vendor restored access last time, and whether you&apos;d make the cut for &ldquo;trusted partner&rdquo; early access or wait at the back of the line. The Fable 5 outage ran almost three weeks, and the relaunch is throttled for a week after that. Multi-cloud won&apos;t insulate you from a rule written against the model maker, so treat continuity as its own line of diligence rather than a box the cloud contract already checks.
+        </p>
+        <p>
+          In June the takeaway was defensive: keep a fallback, because a model can vanish. Two weeks later the picture is larger than one company&apos;s bad fortnight. The government has shown it will clear frontier releases before they ship and pull them after, and the labs are building that review into how they launch. The model you standardize on is now governed in part by a policy decision you don&apos;t control and can&apos;t see coming. Restored access isn&apos;t restored certainty. Price the detour into the contract, because the road runs through Washington now.
+        </p>
+      </div>
+    ),
+    sources: [
+      { title: "CIO — US reverses export restrictions on Anthropic's Fable 5, Mythos 5 AI models (Jul 1, 2026)", url: "https://www.cio.com/article/4191550/us-reverses-export-restrictions-on-anthropics-fable-5-mythos-5-ai-models.html" },
+      { title: "Anthropic — Redeploying Fable 5", url: "https://www.anthropic.com/news/redeploying-fable-5" },
+      { title: "Al Jazeera — US lifts restrictions on powerful AI models Fable and Mythos, Anthropic says", url: "https://www.aljazeera.com/economy/2026/7/1/us-lifts-restrictions-on-powerful-ai-models-fable-mythos-anthropic-says" },
+      { title: "OpenAI — Previewing GPT-5.6 Sol", url: "https://openai.com/index/previewing-gpt-5-6-sol/" },
+    ],
+  },
+  {
     slug: "starbucks-green-apron-creators-employee-influencers",
     title: "Starbucks is paying baristas to make TikToks. The strategy was sitting in plain sight for a decade.",
     date: "Jun 30, 2026",
@@ -2565,7 +2754,7 @@ const posts: Post[] = [
           problem, talk about measurement before you talk about the product.
         </p>
 
-        <h2>Handling "we're evaluating everything"</h2>
+        <h2>Handling &ldquo;we&apos;re evaluating everything&rdquo;</h2>
         <p>
           The most common stall in enterprise AI sales right now is the parallel evaluation. &ldquo;We&apos;re looking
           at six vendors, we&apos;ll make a decision in Q3.&rdquo; It sounds reasonable. It often means the buying
