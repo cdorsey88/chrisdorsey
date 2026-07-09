@@ -559,8 +559,8 @@ export default function ChrisDorseySite() {
       a: "Chris is a connector. Fifteen years across four industries put him a message away from Fortune 500 CMOs, creatives, data leaders, investors, agency execs, and engineers and PMs. Tell him what you're trying to do and odds are he already knows who you should talk to. Introductions are free — no fee, no catch.",
     },
     {
-      q: "Is Chris available for roles or advisory?",
-      a: "Yes. He's deliberately focused on senior individual-contributor go-to-market roles — Account Director, Strategic Account Manager, Director of Customer Success or Partnerships — at AI, retail media, AdTech/MarTech, and enterprise SaaS companies. He's led teams and chooses to be hands-on: carrying a number and owning the client relationships, not managing. He responds to every note personally.",
+      q: "Is Chris looking for a full-time role?",
+      a: "Yes — that's the plan, full stop. He's focused on one full-time senior individual-contributor go-to-market role — Account Director, Strategic Account Manager, Director of Customer Success or Partnerships — at an AI, retail media, AdTech/MarTech, or enterprise SaaS company. He's led teams and chooses to be hands-on: carrying a number and owning the client relationships, not managing. He responds to every note personally.",
     },
     {
       q: "Where is Chris based?",
@@ -642,7 +642,7 @@ export default function ChrisDorseySite() {
             deterministic universe of 250M+ people with 5,000+ data points on each individual, and with no existing
             budgets, contacts, or category playbook — and from March to May 2026 completed an advisory and consulting
             engagement as the first dedicated seller at FancyAI, building its go-to-market motion from zero in an
-            emerging AI category. He is now seeking a full-time senior individual-contributor role. He graduated from Elon University and currently provides pro bono AI consulting
+            emerging AI category. His focus now is a full-time senior individual-contributor role where he can go deep on one company&apos;s growth. He graduated from Elon University and currently provides pro bono AI consulting
             to small businesses, helping Main Street owners put AI to work so they can stay in business.
           </p>
         </aside>
@@ -653,7 +653,7 @@ export default function ChrisDorseySite() {
             <div>
               <div className="inline-flex gap-2 items-center font-semibold mb-4" style={{ fontSize: 13, letterSpacing: "0.06em", textTransform: "uppercase" }}>
                 <b style={{ background: ACID, padding: "4px 10px", borderRadius: 100 }}>AI</b>
-                <span style={{ color: "#4a4239" }}>· data · MadTech&nbsp;&nbsp;—&nbsp;&nbsp;Denver</span>
+                <span style={{ color: "#4a4239" }}>· data · MadTech</span>
               </div>
               <h1 id="hero-heading" className="font-display font-extrabold" style={{ fontSize: "clamp(36px,5.6vw,72px)", lineHeight: 0.95, maxWidth: "15ch", color: INK }}>
                 <span style={{ position: "relative", whiteSpace: "nowrap" }}>
@@ -688,7 +688,7 @@ export default function ChrisDorseySite() {
               </div>
               {/* Hiring-audience path */}
               <p className="text-sm mt-5" style={{ color: "#6a6258" }}>
-                Currently exploring full-time senior GTM roles at AI-native companies.{" "}
+                What&apos;s next: one full-time senior GTM role at an AI company. One team, all in.{" "}
                 <Link href="/track-record" className="font-semibold inline-flex items-center gap-0.5" style={{ color: TEAL }}>
                   Resume <ArrowUpRight className="w-3.5 h-3.5" />
                 </Link>
@@ -901,13 +901,16 @@ export default function ChrisDorseySite() {
                   </div>
                   <span className="text-xs" style={{ color: "rgba(242,236,221,0.6)" }}>Updated June 2026</span>
                 </div>
-                <h2 className="font-display font-extrabold mb-12 leading-[1.0]" style={{ fontSize: "clamp(28px,4vw,46px)" }}>
+                <h2 className="font-display font-extrabold mb-4 leading-[1.0]" style={{ fontSize: "clamp(28px,4vw,46px)" }}>
                   What I&apos;m working on right now.
                 </h2>
+                <p className="mb-12 text-base md:text-lg max-w-2xl" style={{ color: "rgba(242,236,221,0.7)" }}>
+                  Between roles, I keep my hands on the work &mdash; here&apos;s where.
+                </p>
                 <div className="grid md:grid-cols-3 gap-5">
                   {[
                     { icon: Compass, num: "01", bg: BLUE, fg: "#fff", title: "Supporting Main Street with pro bono AI consulting", body: "Helping small businesses put AI to work so they can stay in business. Free, hands-on consulting for local owners on the work that eats their week, from customer follow-up to the books." },
-                    { icon: Code2, num: "02", bg: ACID, fg: INK, title: "Shipping AI tooling for sellers", body: "Building an agent that maps untapped opportunities inside existing accounts to seed the account-expansion roadmap, plus Claude Code slash commands that cut prospect research from hours to minutes." },
+                    { icon: Code2, num: "02", bg: ACID, fg: INK, title: "Building the AI tools I'll bring to my next team", body: "An agent that maps untapped opportunities inside existing accounts to seed the account-expansion roadmap, plus Claude Code slash commands that cut prospect research from hours to minutes." },
                     { icon: Users, num: "03", bg: VIOLET, fg: "#fff", title: "Mentoring & advising sales leaders", body: "Working with a small handful of founders and sales leaders on building durable pipeline motions — the kind that compound through relationships, not just outbound volume." },
                   ].map((card, i) => {
                     // Hover: acid-fill cards invert to ink; dark/blue/violet cards
