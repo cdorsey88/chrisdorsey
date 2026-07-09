@@ -27,9 +27,9 @@ const bricolage = Bricolage_Grotesque({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://chrisdorsey.co"),
-  title: "Chris Dorsey — Enterprise Sales Leader | Taking AI Products to Market",
+  title: "Chris Dorsey — Enterprise Sales Leader | Growing Revenue in AI & MadTech",
   description:
-    "Christopher Dorsey is a senior enterprise sales leader specializing in taking AI products to market — from first sales hire to Fortune 500 accounts. Based in Denver, Colorado. Fifteen years building long-term client relationships across AI and MadTech for brands including JPMorgan Chase, Microsoft, Amazon, PepsiCo, Johnson & Johnson, Merck, Oracle, Vail Resorts, Stitch Fix, Groupon, JCPenney, and JSX.",
+    "Christopher Dorsey is a senior enterprise sales leader who grows revenue for AI and MadTech companies by building the trusted client relationships that outlast any feature. Based in Denver, Colorado. Fifteen years growing revenue across creative, data, and AI for brands including JPMorgan Chase, Microsoft, Amazon, PepsiCo, Johnson & Johnson, Merck, Oracle, Vail Resorts, Stitch Fix, Groupon, JCPenney, and JSX.",
   authors: [{ name: "Christopher Dorsey" }],
   keywords: [
     "Christopher Dorsey",
@@ -49,9 +49,9 @@ export const metadata: Metadata = {
     canonical: "https://chrisdorsey.co",
   },
   openGraph: {
-    title: "Chris Dorsey — Enterprise Sales Leader Taking AI to Market. Girl Dad.",
+    title: "Chris Dorsey — Enterprise Sales Leader Clients Trust. Girl Dad.",
     description:
-      "Senior enterprise sales leader specializing in taking AI products to market — first sales hire, category creator, Fortune 500 closer. Fifteen years across AI, MadTech, and enterprise SaaS.",
+      "Senior enterprise sales leader who grows revenue for AI and MadTech companies through trusted, long-term client relationships. Fifteen years across creative, data, and AI.",
     url: "https://chrisdorsey.co",
     siteName: "Christopher Dorsey",
     type: "profile",
@@ -67,8 +67,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Chris Dorsey — Enterprise Sales Leader Taking AI to Market. Girl Dad.",
-    description: "Senior enterprise sales leader specializing in taking AI products to market. Based in Denver, Colorado.",
+    title: "Chris Dorsey — Enterprise Sales Leader Clients Trust. Girl Dad.",
+    description: "Senior enterprise sales leader who grows revenue through trusted client relationships. Based in Denver, Colorado.",
     images: ["/og-image.jpg"],
   },
   robots: {
@@ -93,7 +93,7 @@ const jsonLd = {
       name: "Christopher Dorsey",
       alternateName: ["Chris Dorsey", "CT Dorsey"],
       description:
-        "Senior enterprise sales leader specializing in taking AI products to market — first sales hire, category creator, Fortune 500 closer. 15 years selling AI, MadTech, and enterprise SaaS, including agentic AI customer acquisition and edge infrastructure.",
+        "Senior enterprise sales leader who grows revenue for AI and MadTech companies by building trusted, long-term client relationships. 15 years across creative, data, and enterprise SaaS, including agentic AI customer acquisition and edge infrastructure.",
       url: "https://chrisdorsey.co/",
       email: `mailto:${CONTACT_EMAIL}`,
       jobTitle: ["Enterprise Sales Leader", "AI Go-To-Market Leader", "Startup Advisor", "Sales Strategy Advisor"],

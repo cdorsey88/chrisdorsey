@@ -132,7 +132,7 @@ function Reveal({
    Ported from the mockup; React-idiomatic + prefers-reduced-motion gated.
 --------------------------------------------------------------------------- */
 const ROTATOR_WORDS = [
-  "founders",
+  "creatives",
   "CMOs",
   "data leaders",
   "AI engineers",
@@ -234,8 +234,8 @@ function ConnectorHub() {
         Chances are, I already know who you should talk to.
       </div>
       <p className="text-base md:text-lg mt-4 max-w-2xl" style={{ color: "#4a4239" }}>
-        Four industries, fifteen years, one deep network — Fortune 500 CMOs to
-        seed-stage AI founders. Tell me the gap and I&apos;ll make the
+        Four industries, fifteen years, one deep network — from Fortune 500 CMOs
+        to the creatives who make the work. Tell me the gap and I&apos;ll make the
         introduction. No fee, no angle — I truly just enjoy connecting people.
         Things like that tend to come around.
       </p>
@@ -262,7 +262,7 @@ function ConnectorHub() {
         className="w-full h-auto block mx-auto mt-6"
         style={{ maxWidth: 940 }}
         role="img"
-        aria-label="Chris at the center of a network, connected to Fortune 500 CMOs, AI founders, data leaders, investors, agency execs, and engineers and product managers."
+        aria-label="Chris at the center of a network, connected to Fortune 500 CMOs, creatives, data leaders, investors, agency execs, and engineers and product managers."
       >
         <g stroke={INK} strokeWidth={2} strokeLinecap="round">
           <line className="cline" x1="460" y1="180" x2="150" y2="64" />
@@ -282,7 +282,7 @@ function ConnectorHub() {
         </g>
         <g fontFamily="Inter,sans-serif" fontSize="15" fontWeight={600} textAnchor="middle">
           <g><rect x="75" y="46" width="150" height="36" rx="18" fill={BLUE} /><text x="150" y="69" fill="#fff">Fortune 500 CMOs</text></g>
-          <g><rect x="710" y="46" width="120" height="36" rx="18" fill={VIOLET} /><text x="770" y="69" fill="#fff">AI founders</text></g>
+          <g><rect x="712" y="46" width="116" height="36" rx="18" fill={VIOLET} /><text x="770" y="69" fill="#fff">Creatives</text></g>
           <g><rect x="16" y="162" width="128" height="36" rx="18" fill={ACID} /><text x="80" y="185" fill={INK}>Data leaders</text></g>
           <g><rect x="788" y="162" width="104" height="36" rx="18" fill={MAGENTA} /><text x="840" y="185" fill="#fff">Investors</text></g>
           <g><rect x="95" y="282" width="130" height="36" rx="18" fill={VIOLET} /><text x="160" y="305" fill="#fff">Agency execs</text></g>
@@ -312,13 +312,13 @@ function ConnectorHub() {
    Evolution band — scrolling marquee.
 --------------------------------------------------------------------------- */
 function EvolutionMarquee() {
-  const stages = ["Broadcast", "Digital", "Social", "Programmatic", "Data", "AI", "Agents"];
+  const stages = ["Advertising", "CTV", "Digital", "Social", "Programmatic", "Data", "Measurement", "AI", "Agents", "Marketing", "MadTech", "Consulting"];
   const Segment = () => (
     <span className="inline-flex items-center" style={{ gap: 40, paddingRight: 40 }}>
-      {stages.map((s, i) => (
+      {stages.map((s) => (
         <span key={s} className="inline-flex items-center" style={{ gap: 40 }}>
           {s}
-          <i style={{ fontStyle: "normal", color: ACID }}>{i < stages.length - 1 ? "→" : "•"}</i>
+          <i style={{ fontStyle: "normal", color: ACID }}>✦</i>
         </span>
       ))}
     </span>
@@ -556,7 +556,7 @@ export default function ChrisDorseySite() {
     },
     {
       q: "Who does Chris work with, and who can he introduce you to?",
-      a: "Chris is a connector. Fifteen years across four industries put him a message away from Fortune 500 CMOs, AI founders, data leaders, investors, agency execs, and engineers and PMs. Tell him what you're trying to do and odds are he already knows who you should talk to. Introductions are free — no fee, no catch.",
+      a: "Chris is a connector. Fifteen years across four industries put him a message away from Fortune 500 CMOs, creatives, data leaders, investors, agency execs, and engineers and PMs. Tell him what you're trying to do and odds are he already knows who you should talk to. Introductions are free — no fee, no catch.",
     },
     {
       q: "Is Chris available for roles or advisory?",
@@ -660,13 +660,13 @@ export default function ChrisDorseySite() {
                   The relationship
                   <span aria-hidden="true" style={{ position: "absolute", left: -2, right: -2, bottom: "0.08em", height: "0.34em", background: ACID, zIndex: -1, transform: "skewX(-8deg)" }} />
                 </span>{" "}
-                is the part AI can&apos;t{" "}
-                <span style={{ color: TEAL }}>copy</span>.
+                is the part{" "}
+                <span style={{ color: TEAL }}>AI can&apos;t copy</span>.
               </h1>
               <p className="mt-5 mb-5 leading-relaxed" style={{ fontSize: "clamp(15px,1.6vw,18px)", maxWidth: "42ch", color: "#3a332c" }}>
                 Fifteen years growing revenue across creative, data, and now AI &mdash; by becoming the advisor
                 clients actually trust. As features get easier to copy, that trust is what keeps deals closing and
-                accounts growing. Tell me what you&apos;re trying to grow; odds are I know who you should be talking to.
+                accounts growing.
               </p>
               <div className="flex gap-3.5 flex-wrap items-center">
                 <a
