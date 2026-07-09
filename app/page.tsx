@@ -656,18 +656,17 @@ export default function ChrisDorseySite() {
                 <span style={{ color: "#4a4239" }}>· data · MadTech&nbsp;&nbsp;—&nbsp;&nbsp;Denver</span>
               </div>
               <h1 id="hero-heading" className="font-display font-extrabold" style={{ fontSize: "clamp(36px,5.6vw,72px)", lineHeight: 0.95, maxWidth: "15ch", color: INK }}>
-                Marketing is the way in. The{" "}
                 <span style={{ position: "relative", whiteSpace: "nowrap" }}>
-                  whole business
+                  The relationship
                   <span aria-hidden="true" style={{ position: "absolute", left: -2, right: -2, bottom: "0.08em", height: "0.34em", background: ACID, zIndex: -1, transform: "skewX(-8deg)" }} />
                 </span>{" "}
-                is what{" "}
-                <span style={{ color: TEAL }}>changes</span>.
+                is the part AI can&apos;t{" "}
+                <span style={{ color: TEAL }}>copy</span>.
               </h1>
               <p className="mt-5 mb-5 leading-relaxed" style={{ fontSize: "clamp(15px,1.6vw,18px)", maxWidth: "42ch", color: "#3a332c" }}>
-                Marketing is where I land, but the work never stays there. Everywhere I&apos;ve been, it&apos;s turned
-                into new revenue, new technology put to work, and problems solved across the business. Tell me what
-                you&apos;re trying to do; odds are I know who you should be talking to.
+                Fifteen years growing revenue across creative, data, and now AI &mdash; by becoming the advisor
+                clients actually trust. As features get easier to copy, that trust is what keeps deals closing and
+                accounts growing. Tell me what you&apos;re trying to grow; odds are I know who you should be talking to.
               </p>
               <div className="flex gap-3.5 flex-wrap items-center">
                 <a
