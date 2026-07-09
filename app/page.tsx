@@ -390,7 +390,7 @@ function TrackRecordBand() {
 
   return (
     <section aria-label="Track record highlights" className="relative pt-2 pb-14 px-7">
-      <div className="max-w-5xl mx-auto" ref={ref}>
+      <div className="max-w-6xl mx-auto" ref={ref}>
         <div
           className="relative overflow-hidden rounded-3xl p-6 sm:p-10 md:p-12"
           style={{
@@ -403,7 +403,7 @@ function TrackRecordBand() {
             transition: "opacity 900ms ease, transform 900ms ease",
           }}
         >
-          <div className="relative flex flex-col lg:flex-row lg:items-center gap-10">
+          <div className="relative flex flex-col xl:flex-row xl:items-center gap-10">
             <div className="flex-1">
               <div className="text-xs uppercase tracking-widest font-bold mb-8" style={{ color: ACID }}>Track record</div>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-x-5 sm:gap-x-8 gap-y-8">
@@ -416,7 +416,7 @@ function TrackRecordBand() {
                       transition: `opacity 1000ms ease ${300 + i * 220}ms, transform 1000ms ease ${300 + i * 220}ms`,
                     }}
                   >
-                    <div className="font-extrabold leading-none font-display whitespace-nowrap" style={{ color: ACID, fontSize: "clamp(1.375rem, 6.2vw, 3rem)" }}>
+                    <div className="font-extrabold leading-none font-display whitespace-nowrap" style={{ color: ACID, fontSize: "clamp(1.25rem, 3.6vw, 2.5rem)" }}>
                       {stat.text ?? `${Math.round((stat.num ?? 0) * tick)}${stat.suffix}`}
                     </div>
                     <div
@@ -1239,7 +1239,7 @@ export default function ChrisDorseySite() {
               <div className="relative">
                 <div className="text-xs uppercase tracking-widest mb-4 font-bold" style={{ color: "rgba(255,255,255,0.85)" }}>Get in touch</div>
                 <h2 className="font-display font-extrabold mb-4 leading-[1.0]" style={{ fontSize: "clamp(30px,5vw,56px)" }}>
-                  Hiring, building, or stuck on a deal? Let&apos;s talk.
+                  Hiring, building, or stuck on a deal?<br />Let&apos;s talk.
                 </h2>
                 <p className="text-lg mb-10" style={{ color: "rgba(255,255,255,0.9)" }}>I respond to every note personally.</p>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
