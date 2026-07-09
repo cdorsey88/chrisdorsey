@@ -610,7 +610,7 @@ const posts: Post[] = [
       <div className="prose-content">
         <p>
           Walmart said this week it&apos;s{" "}
-          <a href="https://corporate.walmart.com/news/2026/06/23/walmart-to-acquire-vibe-co-to-expand-access-to-connected-tv-advertising" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">acquiring Vibe.co</a>, a self-serve connected-TV ad platform, and folding it into Walmart Connect. Vibe&apos;s co-founder said the quiet part out loud: the platform was built &ldquo;to run streaming TV the way they run paid social &mdash; measurable, fast to launch, and optimized for better outcomes.&rdquo; That sentence is the whole acquisition.
+          <a href="https://corporate.walmart.com/news/2026/06/23/walmart-to-acquire-vibe-co-to-expand-access-to-connected-tv-advertising" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">acquiring Vibe.co</a>, a self-serve connected-TV ad platform, and folding it into Walmart Connect. Vibe&apos;s co-founder was blunt about the why: the platform was built &ldquo;to run streaming TV the way they run paid social &mdash; measurable, fast to launch, and optimized for better outcomes.&rdquo; That sentence is the whole acquisition.
         </p>
         <p>
           Consider what self-serve plus measurement did to advertising the last time. Facebook and Google became trillion-dollar ad machines not because the creative was better, but because they let millions of small advertisers spend without ever talking to a salesperson, and see exactly what each dollar returned. Television never got that moment. It stayed gated behind agencies, insertion orders, and minimums that started where most businesses&apos; entire marketing budget ended. CTV inherited the reach of TV and most of its friction. Walmart just bought the piece that removes the friction.
@@ -1214,7 +1214,7 @@ const posts: Post[] = [
 
         <h2>The read</h2>
         <p>
-          Consolidation isn&apos;t automatically bad for a customer. Two things can be true. A disciplined PE owner can give a neglected product the focus it always needed, and your priorities will still rank below the math. The job, on either side of the table, is to say the quiet part out loud before the other person does. Read the deal news like it&apos;s about your accounts, because before long it will be.
+          Consolidation isn&apos;t automatically bad for a customer. Two things can be true. A disciplined PE owner can give a neglected product the focus it always needed, and your priorities will still rank below the math. The job, on either side of the table, is to name the trade-off out loud before the other person does. Read the deal news like it&apos;s about your accounts, because before long it will be.
         </p>
       </div>
     ),
@@ -1513,7 +1513,7 @@ const posts: Post[] = [
           I&apos;ve watched this movie before. At Fastly, I sold infrastructure into a market where the underlying capability &mdash; moving bytes fast &mdash; was relentlessly commoditizing. The lesson was brutal and clarifying: when the core thing you sell trends toward zero margin, you don&apos;t win on the core thing. You win on everything wrapped around it.
         </p>
 
-        <h2>Benedict Evans said the quiet part out loud</h2>
+        <h2>Benedict Evans said it plainly</h2>
         <p>
           The same week the IPO timelines leaked, Benedict Evans sat down with Lenny Rachitsky and made{" "}
           <a href="https://www.lennysnewsletter.com/p/a-rational-conversation-on-where" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">the argument</a>
@@ -1591,7 +1591,7 @@ const posts: Post[] = [
           This is a different sale. The category anxiety is gone. Platform anxiety replaced it. Your buyers aren&apos;t asking whether AI is real. They&apos;re asking whether they picked the right bet, whether the deal they signed two years ago aged well, and whether switching costs are lower than staying costs. That is a much more specific conversation, and it requires a completely different set of proof points.
         </p>
         <p>
-          The PwC deal is instructive. PwC didn&apos;t announce a pilot. They announced a joint Center of Excellence, 30,000 professional certifications, and an entirely new finance business group built on top of Claude. That is not a buyer who is uncertain about the category. That is a buyer who has placed a long-duration bet and is building switching costs into their own workforce. The question their competitors are asking isn&apos;t &ldquo;should we use AI?&rdquo; It&apos;s &ldquo;are we as committed as PwC is, and if not, what does that cost us?&rdquo;
+          The PwC deal is instructive. PwC didn&apos;t announce a pilot. They announced a joint Center of Excellence, 30,000 professional certifications, and an entirely new finance business group built on top of Claude. That is a buyer who has already made the call: a long-duration bet placed, switching costs built into their own workforce. The question their competitors are asking isn&apos;t &ldquo;should we use AI?&rdquo; It&apos;s &ldquo;are we as committed as PwC is, and if not, what does that cost us?&rdquo;
         </p>
 
         <h2>What changes in the room</h2>
@@ -1616,7 +1616,7 @@ const posts: Post[] = [
           Most enterprise buyers I talk to are firmly in the second conversation. They&apos;re past the &ldquo;should we do AI&rdquo; phase and into the &ldquo;which AI bet compounds for us&rdquo; phase. The moment you realize which conversation you&apos;re in, everything changes &mdash; the framing, the proof points, the champion strategy, the close.
         </p>
         <p>
-          The category sale is over. The platform sale is just beginning. The sellers who figure that out this quarter will have a very different year than the ones still building decks around &ldquo;the AI imperative.&rdquo;
+          Selling the category is finished. Selling the platform is the job now. The sellers who figure that out this quarter will have a very different year than the ones still building decks around &ldquo;the AI imperative.&rdquo;
         </p>
       </div>
     ),
@@ -1694,7 +1694,7 @@ const posts: Post[] = [
           The pitch for an IPO is liquidity, prestige, and capital. Be honest about each.
         </p>
         <p>
-          <strong>Liquidity</strong> is for early investors and employees with vested equity. It is not for the customer, the product, or the long-term health of the company. It is an exit event for the people who funded you, dressed up in the language of a milestone.
+          <strong>Liquidity</strong> is for early investors and employees with vested equity. The customer, the product, and the long-term health of the company get nothing from it. It is an exit event for the people who funded you, dressed up in the language of a milestone.
         </p>
         <p>
           <strong>Prestige</strong> is real but cheap. Being a public company used to mean something. In 2026, with{" "}
@@ -1896,7 +1896,7 @@ const posts: Post[] = [
 
         <h2>The move most brands won&apos;t make</h2>
         <p>
-          The best part of the piece is where Justin asks: what if you just stopped trying to outrun it? What if the tease was the invitation, and the brand built the campaign around the best community renders
+          The strongest moment in the piece is where Justin asks: what if you just stopped trying to outrun it? What if the tease was the invitation, and the brand built the campaign around the best community renders
           instead of trying to outrun them? You don&apos;t lose control of the narrative because you never claimed
           it. You hand it to the people who were going to take it anyway and let them feel like they made it with you.
         </p>
@@ -2050,7 +2050,7 @@ const posts: Post[] = [
           vulnerability research. It looked at the codebase and figured it out.
         </p>
         <p>
-          The trade press has been treating this as a curiosity. It is not a curiosity. It is the most important
+          The trade press has been treating this as a curiosity. It is the most important
           development in enterprise security buying since the SOC became a category.
         </p>
 
@@ -2285,8 +2285,8 @@ const posts: Post[] = [
         </p>
         <p>
           On May 5, <a href="https://fortune.com/2026/05/05/anthropic-wall-street-financial-services-agents-jamie-dimon/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">Anthropic announced</a>{" "}that Claude agents are now in production at JPMorgan Chase, Goldman Sachs,
-          Citi, AIG, and Visa. Not pilots. Not proofs of concept. Production deployments — agents running real
-          workflows inside the largest financial institutions in the world. PwC followed on May 14 with a partnership
+          Citi, AIG, and Visa. These are full production deployments: agents running real
+          workflows inside the largest financial institutions in the world. No pilots, no proofs of concept. PwC followed on May 14 with a partnership
           to embed Claude agents into enterprise client work across finance and life sciences.
         </p>
         <p>
@@ -2362,8 +2362,8 @@ const posts: Post[] = [
           and the organizational habits needed to work alongside agents will take 18 months to build.
         </p>
         <p>
-          The Anthropic&ndash;Wall Street story this week is not just a press release. It is a signal about where the
-          enterprise AI adoption curve is. The largest, most compliance-heavy, most risk-averse institutions in the
+          Read the Anthropic&ndash;Wall Street story this week as a signal about where the
+          enterprise AI adoption curve sits. The largest, most compliance-heavy, most risk-averse institutions in the
           world just put AI agents into production. If JPMorgan can do it, there is no credible excuse for your
           RevOps team not to at least run a proof of concept this quarter.
         </p>
@@ -2399,7 +2399,7 @@ const posts: Post[] = [
         </p>
         <p>
           The numbers already in market are not small. The ChatGPT ad business is pulling $100M+ in annualized
-          revenue with an internal target of $102 billion by 2030. That is not a test. That is a land grab — and
+          revenue with an internal target of $102 billion by 2030. This is a land grab, and
           it is happening faster than any platform-to-ad-network transition in digital history, including Google&apos;s.
         </p>
 

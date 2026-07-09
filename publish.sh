@@ -38,7 +38,10 @@ git fetch origin main --quiet 2>/dev/null || true
 CHANGED=$( { git diff --name-only origin/main 2>/dev/null; \
              git diff --name-only --staged 2>/dev/null; \
              git diff --name-only 2>/dev/null; } | sort -u )
-POSTS=$(echo "$CHANGED" | grep -Ei '\.(md|mdx)$|/(writing|posts|blog|content)/.*\.(tsx|ts)$' || true)
+# Lint posts only. Exclude repo docs/config (CLAUDE.md, README, etc.) — they
+# document the banned patterns as examples and would always trip the linter.
+POSTS=$(echo "$CHANGED" | grep -Ei '\.(md|mdx)$|/(writing|posts|blog|content)/.*\.(tsx|ts)$' \
+        | grep -viE '(^|/)(CLAUDE|README|CONTRIBUTING|AGENTS)\.mdx?$' || true)
 
 LINT_FAIL=0
 if [ -n "$POSTS" ]; then
