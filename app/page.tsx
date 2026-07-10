@@ -405,7 +405,7 @@ function TrackRecordBand() {
         >
           <div className="relative flex flex-col xl:flex-row xl:items-center gap-10">
             <div className="flex-1">
-              <div className="text-xs uppercase tracking-widest font-bold mb-8" style={{ color: ACID }}>Track record</div>
+              <div className="inline-block text-xs uppercase tracking-widest px-3 py-1 rounded-full mb-8 font-bold" style={{ color: INK, background: ACID }}>Track record</div>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-x-5 sm:gap-x-8 gap-y-8">
                 {bandStats.map((stat, i) => (
                   <div
@@ -523,12 +523,20 @@ export default function ChrisDorseySite() {
   // proofUrl renders a link; proofText renders an outcome line. See FILL-CHECKLIST.md.
   const builds = [
     {
-      title: "SMB Business Operations Tools",
-      stack: "Pro-bono · Claude API · Automation · Local SEO",
-      desc: "Custom AI tools for main-street businesses, built pro bono. I automate the repetitive admin, sharpen how they show up in search and AI answers, and replace the bloated software they only half-use — so local operators can compete and stay in business.",
-      proofText: null as string | null,
+      title: "Call Butler — live call assistant for sellers",
+      stack: "Claude API · Deepgram · Real-time · Shared with sellers",
+      desc: "A real-time call assistant I built and share with other sellers. It transcribes the call live, catches the moment someone asks a real question or drops an unfamiliar term, and quietly surfaces talking points in a side window — pulled from your prep notes and a live web lookup. Nothing is sent into the call; it's like a subject-matter expert sitting beside you while you talk.",
+      proofText: "Built, live-tested, and in daily use.",
       proofUrl: null as string | null,
       proofLabel: null as string | null,
+    },
+    {
+      title: "Basecamp Alerts",
+      stack: "Designed & built solo · Next.js · Python · Fly.io + Supabase · 24/7 cloud monitoring",
+      desc: "A live product I designed and built end to end, now running around the clock in the cloud. Colorado's campgrounds, timed-entry permits, and wilderness zones sell out months ahead, so it watches recreation.gov and emails a booking link the moment a cancellation opens your dates. It also tracks wildfire, smoke, and closures around RMNP trips, so the spot you grabbed is still worth the drive. Real people use it every week — I build with the AI I sell.",
+      proofText: null as string | null,
+      proofUrl: "https://alerts.chrisdorsey.co",
+      proofLabel: "Try it live",
     },
     {
       title: "/client-brief slash command",
@@ -800,7 +808,7 @@ export default function ChrisDorseySite() {
         <section className="relative py-16 px-7" style={{ background: BLUE, borderTop: `3px solid ${INK}`, borderBottom: `3px solid ${INK}` }}>
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-10 max-w-3xl mx-auto">
-              <p className="text-xs uppercase tracking-widest mb-3 font-bold" style={{ color: ACID }}>
+              <p className="inline-block text-xs uppercase tracking-widest px-3 py-1 rounded-full mb-3 font-bold" style={{ color: INK, background: ACID }}>
                 Brands &amp; teams I&apos;ve worked with
               </p>
               <p className="text-lg leading-relaxed" style={{ color: "rgba(255,255,255,0.92)" }}>
@@ -967,8 +975,8 @@ export default function ChrisDorseySite() {
             <p className="text-lg leading-relaxed max-w-3xl mb-10" style={{ color: "rgba(255,255,255,0.92)" }}>
               My beat is advertising, marketing, tech, and AI. The approach is the one I bring to sales:
               find the angle everyone else walked past, and publish while the news is still warm, sources
-              attached. People occasionally call this thought leadership. I won&apos;t, and the writing
-              holds up either way.
+              attached. People occasionally call this thought leadership. I won&apos;t. I just can&apos;t bring
+              myself to do it. I&apos;m also not a visionary, rockstar, or guru.
             </p>
             {/* Featured latest post — wide card that fills its space */}
             {posts[0] && (() => {
@@ -1113,7 +1121,7 @@ export default function ChrisDorseySite() {
             </p>
 
             {/* My builds — bold color tiles, big numbers */}
-            <p className="text-xs uppercase tracking-widest font-bold mb-5" style={{ color: "#6a6258" }}>What I&apos;m building</p>
+            <p className="inline-block text-xs uppercase tracking-widest px-3 py-1 rounded-full mb-5 font-bold" style={{ color: INK, background: ACID }}>What I&apos;m building</p>
             <div className="grid md:grid-cols-3 gap-5 mb-16">
               {builds.map((build, i) => {
                 const tiles = [
