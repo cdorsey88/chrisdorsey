@@ -33,6 +33,17 @@ export const posts: PostMeta[] = [
     tldr: "Broadcast to digital to social to programmatic to data to AI — I've carried a quota through all six shifts. Up close they look like six separate disruptions; they're the same one on repeat. Each wave automates the seller who runs a manual mechanic — the media buy, the campaign build, the list, the report — and pays more for the seller who can take a capability nobody understands yet, build the category in the buyer's head, and get a novel budget approved. The pattern predicts which sales jobs AI absorbs next: the executional ones. The safe ground is the ambiguous, trust-heavy, category-creating work, same as it's been every time. Point your career and your hiring there.",
   },
   {
+    slug: "meta-addiction-machine-nobody-told-the-teens",
+    title: "Meta Built the Perfect Addiction Machine. Nobody Told the Teens.",
+    date: "Jul 10, 2026",
+    readTime: "4 min",
+    excerpt:
+      "Brussels just ruled Facebook and Instagram are engineered to be addictive — as the exact users they're built to hook keep walking out the door. A note on what that means if your business runs on time-on-app.",
+    tag: "Future of Ads",
+    color: "from-blue-600 to-indigo-600",
+    tldr: "The European Commission's preliminary findings say Facebook and Instagram are engineered for compulsion: infinite scroll, autoplay, notifications tuned to pull users back, with a potential fine near 6% of global revenue, around $12 billion. The strange part is the timing. Pew has U.S. teens on Facebook down from 71% in 2014-15 to 32% in 2024, only 3% report being on it \"almost constantly,\" and Meta's daily active users declined in Q1 for the first time in company history. GWI shows daily social use falling fastest among 16-to-24-year-olds, who give TikTok about 76 minutes a day instead. Brussels is locking down an attention machine its target users are already leaving. If your product, pitch, or quota leans on time-on-app, treat the case as a lab result: engagement is a rented asset, and the most engineered feed on the planet still lost the room.",
+  },
+  {
     slug: "microsoft-frontier-company-deployment-is-the-product",
     title: "Microsoft spent $2.5 billion to put its own engineers inside your customer's building.",
     date: "Jul 8, 2026",
