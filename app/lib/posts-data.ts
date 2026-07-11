@@ -11,6 +11,28 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "expansion-is-the-whole-business-ai-gtm",
+    title: "I closed my best deal four times",
+    date: "Jul 11, 2026",
+    readTime: "6 min",
+    excerpt:
+      "The whole AI-sales boom points at landing the customer — AI SDRs, PLG, ChatGPT ads, pilot-to-production. But once pricing moved to usage and outcomes, the vendor only earns when the deployment works in production, which puts the real money in the eighteen months after signing. The labs are hiring go-to-market faster than SaaS and staffing most of it for acquisition. The role that grows a live account is the one the new math rewards, and almost nobody's building it.",
+    tag: "Sales",
+    color: "from-emerald-600 to-teal-600",
+    tldr: "The entire AI-sales gold rush is pointed at landing customers: AI SDRs, PLG funnels, GEO, ChatGPT ads, pilot-to-production. But usage and outcome pricing changed the math. A vendor only makes money once the customer succeeds in production, which means expansion — more seats, more use cases, deeper into the org — is the business, not the encore. The labs are hiring go-to-market faster than SaaS is, and staffing most of it for acquisition. The account leader who grows a live deployment is the role the new pricing rewards, and it's barely written about because it doesn't demo. If you run GTM, build the expansion motion before your next five SDRs. If you sell, the durable career is the book you grow, not the logos you land.",
+  },
+  {
+    slug: "six-reinventions-same-sales-job-dies",
+    title: "Six technology shifts later, the same sales job keeps dying",
+    date: "Jul 11, 2026",
+    readTime: "7 min",
+    excerpt:
+      "Broadcast, digital, social, programmatic, data, AI — I've carried a quota through all six. Up close they look like six different disruptions. They're one pattern on repeat: every shift automates the seller who runs the manual mechanic and pays a premium to the one who can turn a capability nobody understands yet into an approved budget. That pattern tells you which sales jobs AI takes next, and which it makes more valuable.",
+    tag: "Sales",
+    color: "from-amber-600 to-orange-500",
+    tldr: "Broadcast to digital to social to programmatic to data to AI — I've carried a quota through all six shifts. Up close they look like six separate disruptions; they're the same one on repeat. Each wave automates the seller who runs a manual mechanic — the media buy, the campaign build, the list, the report — and pays more for the seller who can take a capability nobody understands yet, build the category in the buyer's head, and get a novel budget approved. The pattern predicts which sales jobs AI absorbs next: the executional ones. The safe ground is the ambiguous, trust-heavy, category-creating work, same as it's been every time. Point your career and your hiring there.",
+  },
+  {
     slug: "microsoft-frontier-company-deployment-is-the-product",
     title: "Microsoft spent $2.5 billion to put its own engineers inside your customer's building.",
     date: "Jul 8, 2026",
