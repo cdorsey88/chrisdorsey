@@ -9,9 +9,10 @@ import { posts as allPosts } from "@/app/lib/posts-data";
 import { CONTACT_EMAIL, SHOW_TESTIMONIALS } from "@/app/lib/site-config";
 import Testimonials from "@/app/components/Testimonials";
 
-const MountainMark = ({ id = "mtn" }: { id?: string }) => (
+// Berkeley + mountain mark — Berkeley (the dog) sits at the base of the peak.
+const MountainMark = ({ id = "mtn", size = 46 }: { id?: string; size?: number }) => (
   <svg
-    width="30" height="22" viewBox="0 0 30 22"
+    width={size} height={Math.round(size * (34 / 46))} viewBox="0 0 46 34"
     fill="none"
     aria-hidden="true"
     className="mountain-mark shrink-0"
@@ -23,10 +24,17 @@ const MountainMark = ({ id = "mtn" }: { id?: string }) => (
       </linearGradient>
     </defs>
     <path
-      d="M1 21 L10.5 3 Q11 2 11.6 3 L16 11 L19 6 Q19.5 5.2 20 6 L29 21 Q29.3 21.8 28.4 21.8 L1.7 21.8 Q0.7 21.8 1 21Z"
+      d="M1 32 L13 8 Q13.7 6.6 14.5 8 L19.5 17 L23 11 Q23.6 10 24.2 11 L36 31 Q36.4 31.9 35.3 31.9 L1.9 31.9 Q0.6 31.9 1 32Z"
       fill={`url(#${id}-grad)`}
     />
-    <path d="M9 9 L11 5.5 L13 9 L11 12Z" fill="#F0F7FA" opacity="0.85" />
+    <path d="M10.8 15.5 L13.7 10 L16.6 15.5 L13.7 19Z" fill="#F0F7FA" opacity="0.85" />
+    <g transform="translate(29.5 16)">
+      <path d="M0.9 2.4 Q0 2.5 0 3.4 Q0 4.3 0.9 4.4 L3 4.5 Q3.1 5.6 3.9 6.3 L3.7 16 L5.6 16 L5.8 11.2 Q6.6 12.6 8 13 Q8.3 16 10.6 16 L12.3 16 Q13.9 14.2 13.9 11.9 Q13.9 9 11.3 7.6 L7.3 5.4 Q7.5 3.4 6.4 2.2 Q5 0.8 3.2 1.3 Q1.6 1.6 0.9 2.4 Z" fill="#1A1613" />
+      <path d="M5.8 1.9 Q7.3 1.7 7.8 3 Q8.2 4.1 7.4 5.1 Q6.3 4.6 5.9 3.5 Q5.7 2.6 5.8 1.9 Z" fill="#1A1613" />
+      <path d="M12.8 9.6 Q14.8 8.8 15 6.6 Q15.1 5.4 14.4 4.6 Q14.5 6.1 13.5 7.2 Q12.7 8 11.7 8.3 Q12.3 9 12.8 9.6 Z" fill="#1A1613" />
+      <path d="M4.3 6.8 Q4.1 8.8 4.6 10.6 Q4.8 11.4 5.3 12 Q5.9 9.9 5.6 8 Q5.45 7.1 5.1 6.6 Z" fill="#F2ECDD" />
+      <rect x="0.4" y="3.8" width="1.3" height="0.5" rx="0.25" fill="#F2ECDD" />
+    </g>
   </svg>
 );
 
@@ -656,7 +664,19 @@ export default function ChrisDorseySite() {
         </aside>
 
         {/* Hero */}
-        <section className="relative pt-32 pb-16 px-7" aria-labelledby="hero-heading">
+        <section className="relative pt-20 pb-14 px-7" aria-labelledby="hero-heading">
+          {/* Faint topographic contours — camping-map texture, kept near-invisible */}
+          <svg aria-hidden="true" className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 1200 620" preserveAspectRatio="xMidYMid slice" fill="none">
+            <g stroke={INK} strokeWidth="1.2" opacity="0.05">
+              <path d="M-40 500 Q140 380 320 430 T680 400 T1080 440 T1300 400" />
+              <path d="M-40 545 Q160 430 340 475 T700 445 T1100 485 T1300 450" />
+              <path d="M-40 590 Q180 480 360 520 T720 490 T1120 530 T1300 500" />
+              <path d="M860 80 Q940 40 1020 78 T1180 92 Q1230 120 1180 156 Q1080 200 960 170 Q860 140 860 80Z" />
+              <path d="M900 100 Q960 72 1020 100 T1140 112 Q1170 132 1136 152 Q1060 182 976 158 Q904 136 900 100Z" />
+              <path d="M60 120 Q120 84 190 110 Q250 132 236 172 Q210 220 130 206 Q56 192 60 120Z" />
+              <path d="M92 136 Q136 112 186 130 Q226 146 214 172 Q192 204 138 192 Q92 180 92 136Z" />
+            </g>
+          </svg>
           <div className="max-w-6xl mx-auto grid items-center gap-10" style={{ gridTemplateColumns: "minmax(0,1.2fr) minmax(0,0.9fr)" }}>
             <div>
               <div className="inline-flex gap-2 items-center font-semibold mb-4" style={{ fontSize: 13, letterSpacing: "0.06em", textTransform: "uppercase" }}>
@@ -846,7 +866,7 @@ export default function ChrisDorseySite() {
         </section>
 
         {/* About */}
-        <section id="about" className="relative pt-24 pb-10 px-7">
+        <section id="about" className="relative pt-16 pb-10 px-7">
           <div className="max-w-4xl mx-auto">
             <div className="inline-block text-xs uppercase tracking-widest px-3 py-1 rounded-full mb-6 font-bold" style={{ color: INK, background: ACID }}>
               About
@@ -855,7 +875,7 @@ export default function ChrisDorseySite() {
               I&apos;ve been the first seller in the building twice. And, once, an{" "}
               <span style={{ color: TEAL }}>international hand model.</span>
             </h2>
-            <div className="space-y-6 text-lg leading-relaxed" style={{ color: "#3a332c" }}>
+            <div className="space-y-6 text-lg leading-relaxed" style={{ color: "#3a332c", maxWidth: "62ch" }}>
               <p>
                 The throughline of my career is simple: figure out what a client needs, then build the path to
                 get them there. The deals I&apos;m proudest of took months of showing up before anyone signed,
@@ -884,8 +904,8 @@ export default function ChrisDorseySite() {
               <div className="rounded-2xl p-6 mt-8" style={{ background: ACID, border: `3px solid ${INK}`, boxShadow: `6px 6px 0 ${INK}`, transform: "rotate(-1deg)" }}>
                 <p className="italic font-medium" style={{ color: INK }}>
                   Off the clock: I&apos;m girl dad to Sloane, my adorable and rambunctious toddler, married to my
-                  incredible wife Alexis, and happiest somewhere above 8,000 feet. Elon University grad and Maryland
-                  native.
+                  incredible wife Alexis, and happiest somewhere above 8,000 feet with Berkeley, our trail dog
+                  (she&apos;s the one in the logo). Elon University grad and Maryland native.
                 </p>
               </div>
             </div>
@@ -899,7 +919,7 @@ export default function ChrisDorseySite() {
         <TrackRecordBand />
 
         {/* Now */}
-        <section id="now" className="relative pt-6 pb-20 px-7">
+        <section id="now" className="relative pt-6 pb-16 px-7">
           <div className="max-w-5xl mx-auto">
             <div className="rounded-3xl p-10 md:p-16 relative overflow-hidden" style={{ background: INK, color: PAPER, border: `3px solid ${INK}` }}>
               <div className="relative">
@@ -957,7 +977,7 @@ export default function ChrisDorseySite() {
         </section>
 
         {/* Writing — teal band, bento layout */}
-        <section id="writing" className="relative py-24 px-7" style={{ background: TEAL, borderTop: `3px solid ${INK}`, borderBottom: `3px solid ${INK}` }}>
+        <section id="writing" className="relative py-16 px-7" style={{ background: TEAL, borderTop: `3px solid ${INK}`, borderBottom: `3px solid ${INK}` }}>
           <div className="max-w-5xl mx-auto">
             <div className="flex items-end justify-between mb-8 flex-wrap gap-4">
               <div>
@@ -972,7 +992,7 @@ export default function ChrisDorseySite() {
                 All {allPosts.length} posts <ArrowUpRight className="w-3.5 h-3.5" />
               </Link>
             </div>
-            <p className="text-lg leading-relaxed max-w-3xl mb-10" style={{ color: "rgba(255,255,255,0.92)" }}>
+            <p className="text-lg leading-relaxed mb-10" style={{ color: "rgba(255,255,255,0.92)", maxWidth: "62ch" }}>
               My beat is advertising, marketing, tech, and AI. The approach is the one I bring to sales:
               find the angle everyone else walked past, and publish while the news is still warm, sources
               attached. People occasionally call this thought leadership. I won&apos;t. I just can&apos;t bring
@@ -1107,7 +1127,7 @@ export default function ChrisDorseySite() {
         </section>
 
         {/* Builds */}
-        <section id="builds" className="relative py-24 px-7">
+        <section id="builds" className="relative py-16 px-7">
           <div className="max-w-5xl mx-auto">
             <div className="inline-block text-xs uppercase tracking-widest px-3 py-1 rounded-full mb-4 font-bold" style={{ color: INK, background: ACID }}>
               AI Sales Tools
@@ -1122,7 +1142,7 @@ export default function ChrisDorseySite() {
 
             {/* My builds — bold color tiles, big numbers */}
             <p className="inline-block text-xs uppercase tracking-widest px-3 py-1 rounded-full mb-5 font-bold" style={{ color: INK, background: ACID }}>What I&apos;m building</p>
-            <div className="grid md:grid-cols-3 gap-5 mb-16">
+            <div className="grid md:grid-cols-2 gap-5 mb-14">
               {builds.map((build, i) => {
                 const tiles = [
                   { bg: INK, fg: PAPER, accent: ACID, chip: "rgba(242,236,221,0.1)", chipFg: PAPER },
@@ -1199,8 +1219,18 @@ export default function ChrisDorseySite() {
           </div>
         </section>
 
+        {/* Ridgeline divider — cream fades into the ink band like dusk over the Front Range */}
+        <div aria-hidden="true" className="relative" style={{ marginBottom: -1 }}>
+          <svg viewBox="0 0 1440 64" preserveAspectRatio="none" className="block w-full" style={{ height: 56 }}>
+            <path
+              d="M0 64 L0 46 L90 28 L150 42 L260 16 L340 40 L430 24 L520 44 L610 20 L700 38 L820 12 L920 40 L1010 26 L1100 44 L1200 18 L1300 40 L1380 30 L1440 46 L1440 64 Z"
+              fill={INK}
+            />
+          </svg>
+        </div>
+
         {/* Off the clock — ink band, personality in color */}
-        <section className="px-7 py-14" style={{ background: INK, color: PAPER, borderTop: `3px solid ${INK}`, borderBottom: `3px solid ${INK}` }}>
+        <section className="px-7 py-14" style={{ background: INK, color: PAPER, borderBottom: `3px solid ${INK}` }}>
           <Reveal>
             <div className="max-w-6xl mx-auto">
               <div className="font-display font-extrabold leading-[0.95]" style={{ fontSize: "clamp(28px,4vw,46px)" }}>
@@ -1244,7 +1274,7 @@ export default function ChrisDorseySite() {
         </section>
 
         {/* Contact */}
-        <section id="contact" className="relative py-24 px-7">
+        <section id="contact" className="relative py-16 px-7">
           <div className="max-w-3xl mx-auto text-center">
             <div className="rounded-3xl p-12 md:p-16 relative overflow-hidden" style={{ background: TEAL, color: "#fff", border: `3px solid ${INK}`, boxShadow: `10px 10px 0 ${INK}` }}>
               <div className="relative">
