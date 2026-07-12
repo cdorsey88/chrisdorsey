@@ -88,7 +88,8 @@ Chris Dorsey (ctjdorsey@gmail.com) is a VP-level AI sales leader and GTM advisor
 - **Local project:** `/Users/chrisdorsey/chrisdorsey/`
 - **Vercel project ID:** `prj_N0ZpQkPw3mgw48ZVSACiLr2x94q7`
 - **Vercel org:** `team_3rapkFQ6wdPMmLtY6BtiRMQn`
-- **Deploy command:** `PROJ=$(ls -d /sessions/*/mnt/chrisdorsey 2>/dev/null | head -1) && cd "$PROJ" && npx vercel --prod --force`
+- **Deploy (updated Jul 2026):** `git push` — Vercel's GitHub integration is connected (cdorsey88/chrisdorsey, since May 22 2026) and auto-deploys main to production. Verified working Jul 12 2026. No manual vercel CLI step needed. Note: Cowork/sandbox sessions can commit but cannot push (no GitHub creds); Chris runs `git push` from his terminal. A voice-lint pre-push hook checks changed posts for AI tells (skips CLAUDE.md/AGENTS.md/README.md).
+- **Manual deploy fallback (only if git push is unavailable):** `PROJ=$(ls -d /sessions/*/mnt/chrisdorsey 2>/dev/null | head -1) && cd "$PROJ" && npx vercel --prod --force` — deploys local working tree directly, which can drift from GitHub; prefer push.
 - **Key files:** `app/page.tsx` (homepage), `app/lib/posts-data.ts` (post metadata), `app/writing/[slug]/page.tsx` (full post content)
 
 ## Scheduled tasks
