@@ -11,6 +11,28 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "delivery-apps-retail-media-third-pole",
+    title: "There's a $4 billion retail media network hiding in your food-delivery app",
+    date: "Jul 12, 2026",
+    readTime: "5 min",
+    excerpt:
+      "Retail media gets tracked as an Amazon-and-Walmart story, and the two still take about 89% of new spend. Underneath, a third network formed: DoorDash, Uber Eats and Instacart now run past $4 billion in combined ad revenue, and on June 4 DoorDash merged DoorDash, Wolt and Deliveroo into one global platform with 400,000 advertisers. What they sell is a fresher signal than a loyalty card — what you want in the next thirty minutes, and who carried it to your door. If you buy retail media, you're probably underweight it.",
+    tag: "Future of Ads",
+    color: "from-rose-600 to-amber-500",
+    tldr: "Retail media is still tracked as an Amazon-and-Walmart story — the two take roughly 89% of new spend in 2026. But a third network formed underneath: DoorDash, Uber Eats and Instacart now run past $4 billion in combined ad revenue, and on June 4 DoorDash stitched DoorDash, Wolt and Deliveroo into one Global Commerce Media Platform with 400,000 advertisers, Symbiosys offsite reach, and a LiveRamp clean room. What the delivery apps sell isn't a cheaper grocery retail media. It's a different signal — what you want in the next thirty minutes, tied to who delivered it to your door — and it doesn't go stale the way purchase history does. If you buy retail media, add the delivery networks as their own line and grade them on incremental reach and the occasions grocery can't see, not against Amazon's scale. If you sell it, get honest about whether your data's edge is the shelf or the moment.",
+  },
+  {
+    slug: "ai-labs-pe-deployment-guaranteed-return",
+    title: "The AI labs are paying private equity a guaranteed 17.5% to sell for them",
+    date: "Jul 12, 2026",
+    readTime: "6 min",
+    excerpt:
+      "AWS put $1 billion into forward-deployed engineers on June 30; Microsoft stood up a $2.5 billion, 6,000-person Frontier unit two days later. The part that got missed sits back in May, when OpenAI and Anthropic built their deployment arms as private-equity joint ventures — and OpenAI guaranteed its PE backers a 17.5% annual return over five years. You don't guarantee a return on a services business. That floor is what you pay to rent a channel that can order thousands of portfolio companies to adopt from the top.",
+    tag: "Sales",
+    color: "from-indigo-700 to-blue-600",
+    tldr: "Five of the biggest names in AI now run the same play: not selling a model, selling the people who install it. AWS put $1 billion into a forward-deployed engineering org on June 30; Microsoft stood up a $2.5 billion, 6,000-person Frontier unit two days later. The part that got missed is from May 4, when OpenAI and Anthropic built their deployment arms as private-equity joint ventures — OpenAI's $10B Deployment Company (TPG, Brookfield, Advent, Bain) and Anthropic's $1.5B venture with Blackstone, Hellman & Friedman and Goldman. OpenAI guaranteed its PE backers a 17.5% annual return over five years, which reads like a fixed-income product, not a services partnership. You don't guarantee a return on consulting revenue. The floor buys distribution: PE owners can order thousands of portfolio companies to adopt from the top, and the embedded team makes the model hard to rip out. If you sell AI into the enterprise, your next competitive deal may arrive as a board mandate with engineers already on-site — get to the same altitude and own a specific outcome. If you buy, take the help but put portability and ownership in writing.",
+  },
+  {
     slug: "expansion-is-the-whole-business-ai-gtm",
     title: "I closed my best deal four times",
     date: "Jul 11, 2026",

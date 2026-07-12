@@ -22,6 +22,96 @@ type Post = {
 
 const posts: Post[] = [
   {
+    slug: "delivery-apps-retail-media-third-pole",
+    title: "There's a $4 billion retail media network hiding in your food-delivery app",
+    date: "Jul 12, 2026",
+    readTime: "5 min",
+    tag: "Future of Ads",
+    color: "from-rose-600 to-amber-500",
+    tldr: "Retail media is still tracked as an Amazon-and-Walmart story — the two take roughly 89% of new spend in 2026. But a third network formed underneath: DoorDash, Uber Eats and Instacart now run past $4 billion in combined ad revenue, and on June 4 DoorDash stitched DoorDash, Wolt and Deliveroo into one Global Commerce Media Platform with 400,000 advertisers, Symbiosys offsite reach, and a LiveRamp clean room. What the delivery apps sell isn't a cheaper grocery retail media. It's a different signal — what you want in the next thirty minutes, tied to who delivered it to your door — and it doesn't go stale the way purchase history does. If you buy retail media, add the delivery networks as their own line and grade them on incremental reach and the occasions grocery can't see, not against Amazon's scale. If you sell it, get honest about whether your data's edge is the shelf or the moment.",
+    content: (
+      <div className="prose-content">
+        <p>
+          There&rsquo;s a retail media network with 400,000 advertisers hiding inside your dinner order, and most media plans still don&rsquo;t have a line for it. On June 4, DoorDash pulled DoorDash, Wolt and Deliveroo into one Global Commerce Media Platform. Add Uber Eats and Instacart and the food-delivery apps now run past $4 billion in combined annual ad revenue. That stopped being a rounding error on the retail media story. It&rsquo;s the third pole.
+        </p>
+        <p>
+          The trade coverage filed it the way it files everything: a scrappy second tier splitting scraps while Amazon and Walmart take roughly 89% of new retail media spend in 2026. That concentration number is real. It also grades the delivery apps on the one thing they&rsquo;re worst at, raw reach, and skips the thing they have that no grocer does.
+        </p>
+        <h2>What a delivery order knows that a loyalty card doesn&rsquo;t</h2>
+        <p>
+          A grocery loyalty card tells a brand what you bought, eventually, after the receipt clears. A delivery order tells a brand what you want in the next thirty minutes, where you are when you want it, and who carried it to your door. At Zeta I spent years selling intent data into brands that didn&rsquo;t have a budget line for it yet, and the hardest part was always freshness. Most &ldquo;intent&rdquo; was a week stale by the time it reached a campaign. A hunger signal doesn&rsquo;t get stale. It converts inside the hour or it doesn&rsquo;t.
+        </p>
+        <p>
+          That&rsquo;s a different product than sponsored search on a grocery site, which is{" "}
+          <Link href="/writing/retail-media-passed-tv-sponsored-search-exposure" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">the soft spot under retail media&rsquo;s record numbers</Link>. Sponsored search only fires when a shopper types into the retailer&rsquo;s box. A delivery order is the shopper already at the register, mid-decision, with the app watching the whole thing.
+        </p>
+        <h2>DoorDash built the part the grocers are still stitching together</h2>
+        <p>
+          The June 4 launch matters for what it assembled, not just what it announced. One platform now spans the US through DoorDash and the rest of the world through Wolt and Deliveroo. Symbiosys, the offsite adtech DoorDash bought in 2025, pushes those audiences out across search, social and display, with media dollars on it nearly doubled since the deal. A LiveRamp clean room integration found more than 80% of the consumers a brand reached this way were new to it. So: global reach, plus a closed loop back to a real order, sold to 400,000 advertisers in one place. Kroger and Albertsons are{" "}
+          <Link href="/writing/kroger-tiktok-retail-media-data-offplatform" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">still negotiating that kind of reach deal by deal</Link>.
+        </p>
+        <h2>Two things can be true here</h2>
+        <p>
+          Amazon and Walmart still own retail media, and they will for years. The delivery basket is narrower, heavy on CPG, restaurants and convenience, light on the big general-merchandise categories that fund the giants. Measurement across three delivery brands and an offsite network is younger and messier than a walled Amazon report. None of this says move your budget. It says you&rsquo;re probably underweight a network whose signal is fresher than anything in your current mix, and that gap widens as more buying runs through an app that already knows you&rsquo;re hungry.
+        </p>
+        <h2>Where this leaves your budget</h2>
+        <p>
+          If you buy retail media, add the delivery networks as their own line and grade them on their own merit: incremental reach through the LiveRamp clean room, and conversion on the occasions grocery can&rsquo;t see, like the Friday-night order or the last-minute convenience run. Don&rsquo;t make them audition against Amazon&rsquo;s scale; that&rsquo;s a test they lose and the wrong test to run. If you sell retail media, get honest about whether your data&rsquo;s edge is the shelf or the moment. DoorDash is betting the moment travels, that a hunger signal, cleaned and matched, is worth more offsite than a stale purchase history. If that bet pays, the retailers whose whole pitch is &ldquo;we know what they bought&rdquo; are selling the weaker half of the signal.
+        </p>
+      </div>
+    ),
+    sources: [
+      { title: "DoorDash — DoorDash Ads Becomes a Global Commerce Media Platform", url: "https://about.doordash.com/en-us/news/doordash-ads-becomes-a-global-commerce-media-platform" },
+      { title: "eMarketer — Best Buy, Instacart, DoorDash expand retail media offerings to entice reluctant advertisers", url: "https://www.emarketer.com/content/best-buy-instacart-doordash-expand-retail-media-offerings-entice-reluctant-advertisers" },
+      { title: "PPC Land — DoorDash Ads becomes a global commerce media platform with 400,000 advertisers", url: "https://ppc.land/doordash-ads-becomes-a-global-commerce-media-platform-with-400-000-advertisers/" },
+    ],
+  },
+  {
+    slug: "ai-labs-pe-deployment-guaranteed-return",
+    title: "The AI labs are paying private equity a guaranteed 17.5% to sell for them",
+    date: "Jul 12, 2026",
+    readTime: "6 min",
+    tag: "Sales",
+    color: "from-indigo-700 to-blue-600",
+    tldr: "Five of the biggest names in AI now run the same play: not selling a model, selling the people who install it. AWS put $1 billion into a forward-deployed engineering org on June 30; Microsoft stood up a $2.5 billion, 6,000-person Frontier unit two days later. The part that got missed is from May 4, when OpenAI and Anthropic built their deployment arms as private-equity joint ventures — OpenAI's $10B Deployment Company (TPG, Brookfield, Advent, Bain) and Anthropic's $1.5B venture with Blackstone, Hellman & Friedman and Goldman. OpenAI guaranteed its PE backers a 17.5% annual return over five years, which reads like a fixed-income product, not a services partnership. You don't guarantee a return on consulting revenue. The floor buys distribution: PE owners can order thousands of portfolio companies to adopt from the top, and the embedded team makes the model hard to rip out. If you sell AI into the enterprise, your next competitive deal may arrive as a board mandate with engineers already on-site — get to the same altitude and own a specific outcome. If you buy, take the help but put portability and ownership in writing.",
+    content: (
+      <div className="prose-content">
+        <p>
+          In one stretch of days, AWS put $1 billion into an organization that installs AI inside other companies, and Microsoft stood up a $2.5 billion one staffed with 6,000 engineers. AWS announced its Forward Deployed Engineering org on June 30. Microsoft&rsquo;s Frontier Company landed two days later. I already wrote the seller&rsquo;s read on the Microsoft move, that{" "}
+          <Link href="/writing/microsoft-frontier-company-deployment-is-the-product" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">the deployment work, not the model, is where the durable money sits</Link>. That still holds. But watching all five big AI names pile into the same idea in a single quarter, the document worth rereading is the one from May that nobody connected to this.
+        </p>
+        <p>
+          On May 4, OpenAI and Anthropic each built their deployment arm as a private-equity joint venture. OpenAI&rsquo;s is called The Deployment Company, valued at $10 billion, funded with more than $4 billion from 19 investors including TPG, Brookfield, Advent and Bain. Anthropic paired with Blackstone, Hellman &amp; Friedman and Goldman Sachs for a $1.5 billion version. And OpenAI guaranteed its private-equity backers a 17.5% annual return over five years.
+        </p>
+        <h2>You don&rsquo;t guarantee a return on a services business</h2>
+        <p>
+          Read that term again, because it carries the whole story. A 17.5% floor over five years is what a fixed-income product looks like, not an operating partnership, and several PE analysts told Bloomberg exactly that. Consultancies don&rsquo;t promise their investors a number. Services revenue is lumpy, headcount-bound and margin-thin; you can&rsquo;t underwrite a guaranteed return on it. So OpenAI wasn&rsquo;t buying a consulting arm when it signed that term. It was paying, up front and expensively, for something a consulting arm can&rsquo;t deliver.
+        </p>
+        <h2>The asset is the org chart above the engineers</h2>
+        <p>
+          Here&rsquo;s what the money bought. TPG, Blackstone, Bain and the rest own thousands of portfolio companies between them, and a PE owner can do the one thing every enterprise software seller dreams about: tell the CEO to adopt, from the board seat, and mean it. The engineers are the visible part. The distribution is the part you pay a 17.5% guarantee to lock up, a standing channel into hundreds of companies where the adoption decision comes down from the top instead of clawing its way up from a pilot.
+        </p>
+        <p>
+          I&rsquo;ve sold on both sides of that line. At Oracle and Fastly, the deals that died slow were the ones where a champion three levels down loved us and nobody above them had signed up for the outcome. The deals that moved had air cover from the top. The hardest thing to manufacture in enterprise sales is a mandate. OpenAI and Anthropic just rented thousands of them.
+        </p>
+        <h2>Two things can be true</h2>
+        <p>
+          The deployment work is real and valuable. That isn&rsquo;t in question, and it&rsquo;s the same reason{" "}
+          <Link href="/writing/ai-ipo-race-model-was-never-the-moat" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">the value in AI keeps sliding from the model to the layer that makes it work</Link>. Most companies can&rsquo;t get AI into production on their own, and someone will get paid well to help. But the reason these five moved in a quarter, and the reason two of them wrapped it in PE money, is that the deployment shop is also the delivery vehicle for the thing that decides an AI company&rsquo;s revenue: whether the customer keeps using it. The services get them in the door; the deeper the team embeds, the harder the model underneath is to replace.
+        </p>
+        <h2>What it means when your competitor arrives with a board mandate</h2>
+        <p>
+          If you sell AI into the enterprise, price this in now. Your next competitive deal may not come from another vendor&rsquo;s AE. It may arrive as a directive from a portfolio company&rsquo;s owner, with engineers already on-site and a model already chosen. You can&rsquo;t out-demo a mandate. What you can do is get to the same altitude: sell the economic buyer on a specific outcome the generalist pod won&rsquo;t go deep enough to own, and make yourself the person accountable for that number. If you&rsquo;re on the buying side and the mandate is landing on you, take the help, but put portability and ownership in writing, whose model, whose data, whose runbook the day the embedded team rotates off. A guaranteed 17.5% has to come from somewhere, and it isn&rsquo;t coming out of the vendor&rsquo;s margin.
+        </p>
+      </div>
+    ),
+    sources: [
+      { title: "CNBC — AWS puts $1 billion into new AI unit to embed engineers with customers", url: "https://www.cnbc.com/2026/06/30/aws-amazon-ai-forward-deployed-engineers.html" },
+      { title: "TechCrunch — Anthropic and OpenAI are both launching joint ventures for enterprise AI services", url: "https://techcrunch.com/2026/05/04/anthropic-and-openai-are-both-launching-joint-ventures-for-enterprise-ai-services/" },
+      { title: "Reuters via Yahoo Finance — OpenAI Guarantees 17.5% Minimum Returns to Private Market Investors", url: "https://finance.yahoo.com/markets/stocks/articles/openai-guarantees-17-5-minimum-165757294.html" },
+    ],
+  },
+  {
     slug: "expansion-is-the-whole-business-ai-gtm",
     title: "I closed my best deal four times",
     date: "Jul 11, 2026",
