@@ -11,6 +11,39 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "chatgpt-work-openai-app-layer",
+    title: "OpenAI moved into the workflow layer it was supplying",
+    date: "Jul 13, 2026",
+    readTime: "6 min",
+    excerpt:
+      "OpenAI launched ChatGPT Work on July 9 — an agent that reads your Slack, Drive, email and CRM and hands back finished spreadsheets, decks, reports and web apps. Coverage called it a Copilot rival. The bigger story is what it does to the thousands of SaaS vendors who built the same product on top of OpenAI's models: the supplier just shipped their roadmap.",
+    tag: "AI",
+    color: "from-sky-700 to-indigo-600",
+    tldr: "On July 9 OpenAI launched ChatGPT Work alongside the general release of GPT-5.6: an agent that connects to Slack, Teams, Google Drive, SharePoint, email, calendars and CRMs, and returns finished spreadsheets, decks, reports and working web apps. The coverage filed it as a Copilot rival. The bigger exposure sits with the app layer: thousands of SaaS companies spent two years building exactly this on top of OpenAI's models, and the supplier just shipped the product. When the agent owns the screen, the software underneath keeps the data and loses the interface, and the seat count was priced on the interface. Enterprise adoption will run slower than the demo, since permissions, security reviews and the Microsoft bundle all stand in the way. But the procurement question ships faster than the capability. 'Why are we paying for this tool when ChatGPT Work makes the same report' is coming to your next renewal. Answer it with an outcome you own, a workflow the generalist agent can't go deep on, and data it can't get elsewhere. A feature list won't survive the question.",
+  },
+  {
+    slug: "instacart-immersive-feed-search-hedge",
+    title: "Instacart's answer to the search problem is a feed of dinner videos",
+    date: "Jul 13, 2026",
+    readTime: "5 min",
+    excerpt:
+      "On June 22 Instacart introduced Immersive Feed — shoppable, TikTok-style vertical video inside its retailer storefronts, in pilot with brands like Hellmann's and Siete Foods. The trade coverage got its TikTok headline and moved on. The context that matters: more than 60% of retail media spend rides on sponsored search, an ad that needs a search bar shoppers are starting to skip. A feed is inventory that doesn't wait for a query.",
+    tag: "Future of Ads",
+    color: "from-lime-600 to-emerald-600",
+    tldr: "Instacart's Immersive Feed, announced June 22, puts shoppable 9:16 vertical video — meals, recipes, add-to-cart mid-scroll — inside retailer storefronts, in early pilot with brands like Hellmann's, Rachael Ray Nutrish and Siete Foods from its 9,000+ brand partners. Coverage filed it as grocery's TikTok clone. The context that matters: more than 60% of US retail media spend is sponsored search, which only exists when a shopper types a query, and that behavior is moving into AI assistants. A feed is ad inventory that doesn't depend on the search bar; instead of harvesting intent a shopper announces, it tries to start some. The catch is that a grocery app now has to earn scroll time against TikTok itself, and brand clips for mayonnaise walk into that fight with a media kit. Instacart's own roadmap adds creator and organic content later this year because it knows this. If you're a brand in the pilot, measure baskets the feed started, not baskets it claimed: incrementality against a holdout, the share of feed-attributed purchases from households that already bought you, and your own scorecard, since the retailer grading the results also built the feed.",
+  },
+  {
+    slug: "geo-chatgpt-sources-split-by-engine",
+    title: "ChatGPT picks its sources somewhere other than Google",
+    date: "Jul 13, 2026",
+    readTime: "5 min",
+    excerpt:
+      "New CiteLens research: Google's AI Mode and Perplexity pull roughly 90% of their citations from Google's top-10 results. ChatGPT pulls about 30%. The GEO program you're funding is really two different games — and if your AI-visibility report is a single blended number, you can't tell which one you're losing.",
+    tag: "GEO",
+    color: "from-cyan-600 to-teal-500",
+    tldr: "New CiteLens research finds Google's AI Mode and Perplexity draw roughly nine in ten citations from Google's top-10 results, while ChatGPT draws about three in ten; Ahrefs' crawl found only 12% of AI-cited URLs rank in Google's top 10 for the matching prompt. Two weeks ago I wrote that the pages AI cites and the pages Google ranks stopped being the same list. The new data splits the gap by engine, and the split changes the budget. Gemini and Perplexity are still won with classic SEO: rank, and they follow. ChatGPT is a different job: find the sources it pulls into your category's answers and earn a presence in them. Three moves: make your GEO vendor report by engine instead of a blended score, ask your sellers which assistant your buyers mention (in most B2B categories the answer is ChatGPT, the engine SEO buys you least access to), and run ten money queries per engine yourself before renewing any tooling. A single AI-visibility number averages two unrelated games and hides losing one of them.",
+  },
+  {
     slug: "delivery-apps-retail-media-third-pole",
     title: "There's a $4 billion retail media network hiding in your food-delivery app",
     date: "Jul 12, 2026",
@@ -324,7 +357,7 @@ export const posts: PostMeta[] = [
     date: "Jun 9, 2026",
     readTime: "7 min",
     excerpt:
-      "Banks moved from AI pilots to production fleets of agents this year, and Wolters Kluwer says 44% of finance teams will use agentic AI in 2026, a 600%+ jump. The vendors winning regulated buyers aren't the flashiest models. They're the ones who shipped immutable audit logs, SOC 2, and EU AI Act alignment as table stakes. If you sell into financial services, compliance is your product surface now.",
+      "Banks moved from AI pilots to production fleets of agents this year, and Wolters Kluwer says 44% of finance teams will use agentic AI in 2026, a 600%+ jump. The vendors winning regulated buyers ship immutable audit logs, SOC 2, and EU AI Act alignment as the baseline, whether or not their model demos best. If you sell into financial services, compliance is your product surface now.",
     tag: "AI",
     color: "from-blue-600 to-cyan-500",
     tldr: "Banks shifted from AI pilots to production agent fleets in underwriting, fraud, KYC, and reconciliation, with 44% of finance teams using agentic AI in 2026 (up 600%+). Vertical AI is commanding premium multiples because it ships with the guardrails a risk committee needs: SOC 2, PCI-DSS, EU AI Act alignment, immutable audit trails. The economic buyer moved from the line-of-business leader to the chief risk officer. Bring the governance answer to the first meeting, not the security review.",
@@ -368,7 +401,7 @@ export const posts: PostMeta[] = [
     date: "May 26, 2026",
     readTime: "7 min",
     excerpt:
-      "Anthropic is reportedly closing a $30B round at a $900B+ valuation. PwC is certifying 30,000 professionals on Claude. The Big Four have placed their bets. The enterprise AI sale just changed: your buyers aren't asking if AI is real anymore. They're asking whether they picked the right platform. That changes your job.",
+      "Anthropic is reportedly closing a $30B round at a $900B+ valuation. PwC is certifying 30,000 professionals on Claude. The Big Four have placed their bets. The enterprise AI sale just changed: your buyers have stopped asking if AI is real and started asking whether they picked the right platform. That changes your job.",
     tag: "AI",
     color: "from-blue-600 to-violet-600",
     tldr: "Anthropic is closing a $30B round at $900B+, PwC is all-in on Claude, and the Big Four have made their platform bets. The category sale — creating urgency around AI being real — is over. The new conversation is about platform choice, switching costs, and whether your buyer backed the right horse. Your pitch needs to change.",

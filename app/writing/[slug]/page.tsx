@@ -22,6 +22,131 @@ type Post = {
 
 const posts: Post[] = [
   {
+    slug: "chatgpt-work-openai-app-layer",
+    title: "OpenAI moved into the workflow layer it was supplying",
+    date: "Jul 13, 2026",
+    readTime: "6 min",
+    tag: "AI",
+    color: "from-sky-700 to-indigo-600",
+    tldr: "On July 9 OpenAI launched ChatGPT Work alongside the general release of GPT-5.6: an agent that connects to Slack, Teams, Google Drive, SharePoint, email, calendars and CRMs, and returns finished spreadsheets, decks, reports and working web apps. The coverage filed it as a Copilot rival. The bigger exposure sits with the app layer: thousands of SaaS companies spent two years building exactly this on top of OpenAI's models, and the supplier just shipped the product. When the agent owns the screen, the software underneath keeps the data and loses the interface, and the seat count was priced on the interface. Enterprise adoption will run slower than the demo, since permissions, security reviews and the Microsoft bundle all stand in the way. But the procurement question ships faster than the capability. 'Why are we paying for this tool when ChatGPT Work makes the same report' is coming to your next renewal. Answer it with an outcome you own, a workflow the generalist agent can't go deep on, and data it can't get elsewhere. A feature list won't survive the question.",
+    content: (
+      <div className="prose-content">
+        <p>
+          OpenAI shipped a product on Thursday whose output is somebody&rsquo;s finished work product. ChatGPT Work, launched July 9 alongside the general release of GPT-5.6, connects to Slack, Microsoft Teams, Google Drive, SharePoint, email, calendars and CRMs, reads what it finds there, and hands back the deliverable: the spreadsheet, the deck, the report, even a working web app. It went live on desktop across every ChatGPT plan the same day, with web and mobile following.
+        </p>
+        <p>
+          The coverage filed it as a shot at Microsoft Copilot, and it is one. OpenAI selling an enterprise agent puts it squarely in Microsoft&rsquo;s yard, days after the two spent a quarter building rival deployment armies. But the Copilot fight is between two giants who can afford it. The exposure nobody priced is further down the stack: the thousands of software companies that spent the last two years building this exact product on top of OpenAI&rsquo;s models.
+        </p>
+        <h2>The app layer built its roadmap on the lab&rsquo;s model</h2>
+        <p>
+          Since 2024 the standard SaaS play has been an AI layer over your own product. Connect the customer&rsquo;s data, wrap GPT around it, ship &ldquo;your copilot for finance&rdquo; or legal or sales, and charge for the seat. The whole stack ran on one assumption: the model company stays a supplier. On July 9 the supplier shipped the wrapper. Context gathering across the customer&rsquo;s apps, connectors into Slack and Drive and the CRM, a finished artifact at the end &mdash; that was the roadmap of a few hundred funded startups and the AI-features slide in every SaaS renewal deck I&rsquo;ve seen this year.
+        </p>
+        <p>
+          When the IPO filings landed in June, I wrote about{" "}
+          <Link href="/writing/ai-ipo-race-model-was-never-the-moat" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">Benedict Evans&rsquo;s argument that models trend toward commodity and the money moves to whoever owns the workflow</Link>. The labs read the same memo everyone else did. ChatGPT Work is OpenAI acting on it, against its own ecosystem.
+        </p>
+        <h2>When the agent owns the screen, the seat loses its argument</h2>
+        <p>
+          Per-seat software priced a person sitting in front of an interface, and{" "}
+          <Link href="/writing/end-of-per-seat-pricing" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">that model was already dying</Link>. ChatGPT Work is built to be the interface. If your product becomes one of the connectors on its menu, something the agent reads from and writes to, the customer still needs your data and your system of record. What they stop needing is as many people logged into your screen. And the screen time was what the seat count billed.
+        </p>
+        <p>
+          I sold at Fastly against cloud platforms that bundled a version of what we did. You can win those fights, and I learned where: never on the feature list, always on the depth the platform treats as an afterthought &mdash; the edge case that was our whole business and a line item in theirs. That lesson is about to get relearned by every vertical SaaS team whose differentiation was &ldquo;we put AI on your data.&rdquo; The generalist agent does that now. It comes with the model.
+        </p>
+        <h2>The procurement question ships faster than the capability</h2>
+        <p>
+          None of this lands overnight. ChatGPT Work inherits every permission problem the enterprise already has; an agent that reads everything a marketing manager can touch is a security review, and security reviews are slow. Microsoft will fight with the bundle, and the bundle usually wins the mid-market. A generalist producing a hundred kinds of deliverables will make a worse financial model than a product tuned for exactly that. The demo is ahead of the deployment, as usual.
+        </p>
+        <p>
+          The question arrives anyway. Some CFO is going to ask &ldquo;why are we paying for this tool when ChatGPT Work makes the same report&rdquo; well before ChatGPT Work makes a good version of that report, the same way &ldquo;why not just use ChatGPT&rdquo; showed up in software deals two years before an agent could do anything about it. If you sell software, write your answer now, and make it an outcome you own instead of a feature you have: the workflow depth the generalist won&rsquo;t reach, the proprietary data it can&rsquo;t see, the number you&rsquo;re accountable for. And if your AI feature is a wrapper on the supplier&rsquo;s model, take a hard look at your renewal calendar. OpenAI just showed everyone its roadmap, and yours was on it.
+        </p>
+      </div>
+    ),
+    sources: [
+      { title: "Bloomberg (via BNN) — OpenAI launches ChatGPT Work, deepening race for workplace AI tools", url: "https://www.bnnbloomberg.ca/business/artificial-intelligence/2026/07/09/openai-launches-chatgpt-work/" },
+      { title: "Forbes — OpenAI Launches GPT-5.6 and ChatGPT Work AI Agent", url: "https://www.forbes.com/sites/madhulika-pathak/2026/07/09/openai-debuts-chatgpt-work-workplace-ai-agent-with-gpt-56/" },
+      { title: "InfoWorld — OpenAI launches ChatGPT Work as it broadens GPT-5.6 rollout", url: "https://www.infoworld.com/article/4195478/openai-launches-chatgpt-work-as-it-broadens-gpt-5-6-rollout.html" },
+    ],
+  },
+  {
+    slug: "instacart-immersive-feed-search-hedge",
+    title: "Instacart's answer to the search problem is a feed of dinner videos",
+    date: "Jul 13, 2026",
+    readTime: "5 min",
+    tag: "Future of Ads",
+    color: "from-lime-600 to-emerald-600",
+    tldr: "Instacart's Immersive Feed, announced June 22, puts shoppable 9:16 vertical video — meals, recipes, add-to-cart mid-scroll — inside retailer storefronts, in early pilot with brands like Hellmann's, Rachael Ray Nutrish and Siete Foods from its 9,000+ brand partners. Coverage filed it as grocery's TikTok clone. The context that matters: more than 60% of US retail media spend is sponsored search, which only exists when a shopper types a query, and that behavior is moving into AI assistants. A feed is ad inventory that doesn't depend on the search bar; instead of harvesting intent a shopper announces, it tries to start some. The catch is that a grocery app now has to earn scroll time against TikTok itself, and brand clips for mayonnaise walk into that fight with a media kit. Instacart's own roadmap adds creator and organic content later this year because it knows this. If you're a brand in the pilot, measure baskets the feed started, not baskets it claimed: incrementality against a holdout, the share of feed-attributed purchases from households that already bought you, and your own scorecard, since the retailer grading the results also built the feed.",
+    content: (
+      <div className="prose-content">
+        <p>
+          More than 60 cents of every US retail media dollar buys sponsored search, an ad that exists only when a shopper types into the retailer&rsquo;s search box. On June 22, Instacart introduced a surface that skips the box entirely. Immersive Feed is short-form shoppable vertical video inside its retailer storefronts: 9:16 clips, five to thirty seconds, meals and recipes you scroll and add to cart mid-video. It&rsquo;s in early pilot with brands like Hellmann&rsquo;s, Rachael Ray Nutrish and Siete Foods, drawn from more than 9,000 brand partners, bookable through Instacart&rsquo;s Ads Manager.
+        </p>
+        <p>
+          The trade coverage got its TikTok headline and moved on. Fair enough, since the format is TikTok&rsquo;s down to the aspect ratio. But the reason this product exists has little to do with what&rsquo;s fashionable in video. Two weeks ago I did{" "}
+          <Link href="/writing/retail-media-passed-tv-sponsored-search-exposure" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">the exposure math on retail media&rsquo;s record year</Link>: the majority of the spend rides on an ad format that requires a search bar, and shoppers are moving that behavior into AI assistants. Immersive Feed is what a retail media network builds when it believes its own search data.
+        </p>
+        <h2>Inventory that doesn&rsquo;t wait for a query</h2>
+        <p>
+          Sponsored search is demand capture. The shopper announces intent, and the auction sells the announcement. Every retail media network shares the same weak point: no query, no auction, and when an assistant carries the intent, the retailer&rsquo;s box never gets typed into. A feed flips the dependency &mdash; instead of harvesting intent a shopper announces, it tries to start some. If people browse dinner videos at 5pm the way they browse TikTok at 5pm, Instacart owns ad inventory that exists whether or not anyone searches, measured to the receipt like everything else on the platform.
+        </p>
+        <h2>The feed has to earn the scroll</h2>
+        <p>
+          I started my career at Crispin Porter + Bogusky, where the product was advertising people chose to watch. It&rsquo;s the hardest brief in the business. An ad that interrupts entertainment can be mediocre and still work. An ad that has to be the entertainment gets no such mercy. A feed inside a grocery app is asking for time people currently give to TikTok, which has spent a decade and billions tuning an algorithm whose only job is keeping you there. A feed of brand-supplied clips for mayonnaise and tortillas walks into that fight holding a media kit.
+        </p>
+        <p>
+          Instacart seems to know it. The launch leans on recipes and inspiration, and the roadmap adds creator and organic content later this year, an acknowledgment that brand clips alone won&rsquo;t hold a scroll. Retail apps have tried inspiration surfaces before, and most became the aisle nobody walks down. The feed only matters if it becomes a habit.
+        </p>
+        <h2>Grade it as a hedge, and bring your own scorecard</h2>
+        <p>
+          If you&rsquo;re a brand in the pilot, the test to run: did the feed start baskets, or did it collect credit for baskets your search ads were going to close anyway? Ask for incrementality against a holdout. Ask what share of feed-attributed purchases came from households that already bought you. And remember who&rsquo;s grading: the retailer that built the feed also runs the measurement,{" "}
+          <Link href="/writing/albertsons-pg-branded-entertainment-retail-media" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">the same conflict I flagged when Albertsons started producing its own shows</Link>. The searchless shelf is coming either way; when the assistant does the shopping, nobody types &ldquo;mayo&rdquo; into anyone&rsquo;s box. Instacart is at least building for that world while its search line still pays the bills. Watch whether the feed earns a habit. That&rsquo;s the whole bet, and for once it&rsquo;s measurable to the receipt.
+        </p>
+      </div>
+    ),
+    sources: [
+      { title: "Instacart — Instacart Introduces New Shoppable Vertical Video Feed for Advertisers", url: "https://company.instacart.com/pressreleases/instacart-introduces-new-shoppable-vertical-video-feed-for-advertisers" },
+      { title: "Supermarket News — Instacart comes out with 'snackable' video feed", url: "https://www.supermarketnews.com/grocery-technology/instacart-comes-out-with-snackable-video-feed" },
+      { title: "Progressive Grocer — Instacart Launches Immersive Feed Feature for Advertisers", url: "https://progressivegrocer.com/instacart-launches-immersive-feed-feature-advertisers" },
+    ],
+  },
+  {
+    slug: "geo-chatgpt-sources-split-by-engine",
+    title: "ChatGPT picks its sources somewhere other than Google",
+    date: "Jul 13, 2026",
+    readTime: "5 min",
+    tag: "GEO",
+    color: "from-cyan-600 to-teal-500",
+    tldr: "New CiteLens research finds Google's AI Mode and Perplexity draw roughly nine in ten citations from Google's top-10 results, while ChatGPT draws about three in ten; Ahrefs' crawl found only 12% of AI-cited URLs rank in Google's top 10 for the matching prompt. Two weeks ago I wrote that the pages AI cites and the pages Google ranks stopped being the same list. The new data splits the gap by engine, and the split changes the budget. Gemini and Perplexity are still won with classic SEO: rank, and they follow. ChatGPT is a different job: find the sources it pulls into your category's answers and earn a presence in them. Three moves: make your GEO vendor report by engine instead of a blended score, ask your sellers which assistant your buyers mention (in most B2B categories the answer is ChatGPT, the engine SEO buys you least access to), and run ten money queries per engine yourself before renewing any tooling. A single AI-visibility number averages two unrelated games and hides losing one of them.",
+    content: (
+      <div className="prose-content">
+        <p>
+          Ask Perplexity and ChatGPT the same question and you&rsquo;ll often get similar answers built from different corners of the web. New research from CiteLens puts numbers on that: Google&rsquo;s AI Mode and Perplexity pull roughly nine of every ten citations from Google&rsquo;s top-10 results. ChatGPT pulls about three. Ahrefs, working from its own crawl, found only 12% of AI-cited URLs rank in Google&rsquo;s top 10 for the matching prompt.
+        </p>
+        <p>
+          Two weeks ago I wrote that{" "}
+          <Link href="/writing/geo-citations-google-rankings-diverge" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">the pages AI cites and the pages Google ranks stopped being the same list</Link>. The new data adds the part that changes what you do about it: the size of the gap depends on which engine you&rsquo;re looking at.
+        </p>
+        <h2>Where each engine shops for sources</h2>
+        <p>
+          AI Mode and Perplexity behave like readers of Google&rsquo;s rankings. When roughly 90% of what they cite already sits in the top 10, the SEO you&rsquo;ve been paying for since 2015 still buys you a seat in their answers. ChatGPT behaves like something else: seventy percent of its citations come from pages outside Google&rsquo;s top 10, and a meaningful share of its favorite pages hold no ranking for the query at all. Nobody outside OpenAI knows the retrieval recipe, and I won&rsquo;t pretend to. What the outside data shows is the output: ChatGPT&rsquo;s reading list and Google&rsquo;s rankings are mostly different pages.
+        </p>
+        <h2>One line item, two different games</h2>
+        <p>
+          I spent part of the past year selling GEO measurement into brands, and the most common setup I saw was one dashboard, one AI-visibility score, one budget line. That made sense when every answer engine looked like a flavor of search. The citation data breaks the frame. Winning Gemini and Perplexity is the game you already know how to play: rank, and the engines follow you there. Winning ChatGPT means figuring out which sources it pulls into your category&rsquo;s answers &mdash; documentation, community threads, independent reviews, trade press &mdash; and earning a presence in those, whether or not they ever rank. So the budget question is now engine-specific: how much of your category&rsquo;s asking happens in ChatGPT, and what would it take to show up there?
+        </p>
+        <h2>Split the scorecard</h2>
+        <p>
+          Three moves this quarter. Make your GEO vendor report by engine; a blended score averages two unrelated games and hides losing one of them. Ask your sellers which assistant your buyers mention on calls; in most B2B categories the answer is ChatGPT, which happens to be the engine your SEO buys you the least access to. And before renewing any tooling, run ten of your money queries in each engine yourself and write down the sources. Twenty minutes of that beats most dashboards I sold against. If your AI-visibility report is a single number, ask for the split. You may find you&rsquo;ve been winning the wrong engine all quarter.
+        </p>
+      </div>
+    ),
+    sources: [
+      { title: "MarTech Series — CiteLens Study: SEO Decides AI Citations on Google and Perplexity, Not ChatGPT", url: "https://martechseries.com/predictive-ai/ai-platforms-machine-learning/citelens-study-seo-decides-ai-citations-on-google-and-perplexity-not-chatgpt/" },
+      { title: "Ahrefs — Only 12% of AI Cited URLs Rank in Google's Top 10 for the Original Prompt", url: "https://ahrefs.com/blog/ai-search-overlap/" },
+      { title: "Whitehat SEO — Perplexity vs ChatGPT vs Gemini: AI Citations", url: "https://whitehat-seo.co.uk/blog/ai-engines-comparison-citations" },
+    ],
+  },
+  {
     slug: "delivery-apps-retail-media-third-pole",
     title: "There's a $4 billion retail media network hiding in your food-delivery app",
     date: "Jul 12, 2026",
