@@ -22,6 +22,103 @@ type Post = {
 
 const posts: Post[] = [
   {
+    slug: "salesforce-m3ter-consumption-billing",
+    title: "Salesforce bought the meter that will price your next renewal",
+    date: "Jul 14, 2026",
+    readTime: "6 min",
+    tag: "Sales",
+    color: "from-violet-700 to-fuchsia-500",
+    tldr: "Salesforce closed its acquisition of m3ter on July 1: a London-based metering and rating platform that will give Agentforce Revenue Management native usage- and outcome-based billing, terms undisclosed. Salesforce's own framing is that AI is moving software from subscriptions to consumption, and it wants the meter inside its walls. The coverage treated this as billing infrastructure. The unwritten part is what consumption pricing does to the people in the deal. Inside the vendor, the comp plan breaks first: a consumption contract signs small and pays out on adoption, so the rep's job no longer ends at signature. Onboarding, workload growth and expansion become the quota. I lived that model at Fastly, where the bill was traffic and the contract was a starting guess. Across the table, the vendor now watches your usage telemetry in near real time, wired into the same system that runs its renewal playbook, which means it may know your ramp flattened before your finance team does. If you sell: ask how comp treats the ramp before you take the job. If you buy: meter your own usage independently and walk into every renewal with your own numbers, because the other side is walking in with theirs.",
+    content: (
+      <div className="prose-content">
+        <p>
+          Salesforce closed its acquisition of m3ter on July 1. If you&rsquo;ve never heard of m3ter, that&rsquo;s roughly the point: it&rsquo;s a London company that does one unglamorous job at enterprise scale: ingest product usage data, rate it, and turn it into a bill. Terms weren&rsquo;t disclosed. The technology goes into Agentforce Revenue Management, where Salesforce customers will be able to launch, track and bill usage-based and outcome-based pricing without leaving the platform.
+        </p>
+        <p>
+          Salesforce&rsquo;s executive framing was unusually direct: AI is moving software &ldquo;from traditional subscriptions to consumption-based models,&rdquo; and Salesforce wants that billing to run inside its walls. In June I wrote that{" "}
+          <Link href="/writing/end-of-per-seat-pricing" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">per-seat pricing was dying and your renewal is where you&rsquo;d feel it</Link>. A month later, the largest subscription-software company on the planet bought itself a usage meter. That argument is settled. What&rsquo;s still wide open is what the meter does to the people in the deal, on both sides of it.
+        </p>
+        <h2>Salesforce keeps buying parts for the agent economy&rsquo;s cash register</h2>
+        <p>
+          Look at the acquisition run as one project. Informatica for data, closed at $8 billion. Contentful for content. Qualified, Momentum and Cimulate for pipeline, conversation capture and simulation. Now m3ter for metering. Every one of those fills in something an agent workforce needs and a seat-based platform never did. An AI agent doesn&rsquo;t occupy a seat; it burns compute, completes tasks and produces outcomes in volumes that swing week to week. You can&rsquo;t bill that on a headcount grid. You bill it on a meter, and as of July 1 Salesforce owns one.
+        </p>
+        <h2>The comp plan breaks before the pricing page does</h2>
+        <p>
+          Here is what the trade coverage skipped. When pricing moves to consumption, the first thing that stops working inside the vendor is the comp plan. A seat deal pays the rep at signature: the number is known, the quota retires, everyone goes to dinner. A consumption deal signs small and becomes real later, based on adoption the rep may or may not stick around to drive. Pay on the commit and you&rsquo;ve invited sandbagging&rsquo;s evil twin, the inflated ramp nobody hits. Pay on actuals and your best closer is suddenly holding a twelve-month bet on a customer&rsquo;s engineering roadmap.
+        </p>
+        <p>
+          I sold at Fastly, where the bill was traffic. The contract was a starting guess, and the real number showed up months later in the customer&rsquo;s usage curve. What that teaches you fast: the sale doesn&rsquo;t end at the signature, because most of the money hasn&rsquo;t happened yet. The job becomes onboarding, workload growth, expansion &mdash;{" "}
+          <Link href="/writing/expansion-is-the-whole-business-ai-gtm" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">the account work I&rsquo;ve argued is the whole business now</Link>, except with the comp plan finally wired to agree. Snowflake and the cloud providers have run this play for years. The rest of enterprise software is about to discover what their sellers already know: consumption comp turns every AE into an account manager, whether the org chart admits it or not.
+        </p>
+        <h2>The meter tells the vendor more than it tells you</h2>
+        <p>
+          Now sit on the buyer&rsquo;s side of the table. m3ter ingests usage telemetry in near real time, and it now lives inside the same platform that runs the vendor&rsquo;s pipeline, account plans and renewal alerts. The account team selling to you can watch your consumption curve the way a trader watches a position. If your ramp flattened in March, they knew in March, possibly before your own finance team did, because your finance team sees the invoice and they see the telemetry behind it.
+        </p>
+        <p>
+          Outcome-based pricing sharpens this further. If the vendor bills on results, the vendor instruments the results, and whoever runs the instruments frames the conversation. None of this is sinister; it&rsquo;s just leverage, and leverage flows to the side with better data. For two decades that was occasionally the buyer, armed with a spreadsheet of shelfware seats. Consumption billing hands the information advantage back to the vendor, permanently, unless you do something about it.
+        </p>
+        <h2>Bring your own numbers</h2>
+        <p>
+          If you carry a bag at a company moving to consumption pricing, get two answers before you sign the offer letter: does comp pay on committed spend or on actuals, and who owns adoption after the ink dries. The gap between those answers is where a year of your earnings lives. If the answer to the second one is &ldquo;customer success, mostly,&rdquo; ask how the last three reps who believed that did against quota.
+        </p>
+        <p>
+          If you buy software, start metering yourself. Pull your own usage data, keep your own curve, and model the unit rates at two and five times your current volume before the QBR, because the volume discounts you didn&rsquo;t negotiate at signature are the ones you&rsquo;ll never get. Your vendor paid real money to know your consumption better than you do. The least you can do is show up to the renewal knowing it as well as they do.
+        </p>
+      </div>
+    ),
+    sources: [
+      { title: "Salesforce — Salesforce Signs Definitive Agreement to Acquire m3ter (completed July 1, 2026)", url: "https://www.salesforce.com/news/stories/salesforce-signs-definitive-agreement-to-acquire-m3ter/" },
+      { title: "CIO — Salesforce to acquire usage-based billing specialist m3ter", url: "https://www.cio.com/article/4183667/salesforce-to-acquire-usage-based-billing-specialist-m3ter.html" },
+      { title: "Futurum Group — Salesforce Bets on Usage-Based Billing", url: "https://futurumgroup.com/insights/salesforce-bets-on-usage-based-billing-will-m3ter-acquisition-redefine-enterprise-monetization/" },
+    ],
+  },
+  {
+    slug: "alexa-agentic-ads-checkout-for-other-brands",
+    title: "Amazon is now the checkout counter for Papa Johns and Ticketmaster",
+    date: "Jul 14, 2026",
+    readTime: "5 min",
+    tag: "Future of Ads",
+    color: "from-orange-600 to-rose-500",
+    tldr: "On June 23, the first morning of Prime Day, Amazon introduced Alexa+ Agentic Ads on Echo Show: sponsored prompts inside Alexa+ conversations where the shopper can ask questions, compare options and complete the purchase without leaving the ad. Launch partners are Papa Johns for food and ticket sales for Beck, Jill Scott and Omar Courtz, delivered straight into the buyer's Ticketmaster account. The trade press filed it as agentic advertising's arrival. The underweighted detail: these transactions never touch amazon.com. Amazon is operating checkout for merchants outside its own store, which extends its take beyond the marketplace, the reverse of Walmart's choice to let AI assistants sell while refusing to surrender the register. And when the ad completes the purchase, the economics stop looking like media. Reach and CPM give way to close rate, take rate, customer-record ownership and who eats the refund when the pizza shows up cold — channel-sales questions, negotiated by people who own revenue lines, which is who will end up buying and selling these placements. If you're a brand offered an agentic format, negotiate it like a channel deal: data rights, the customer record, CX liability, and the commission math against your own checkout margin. And bring whoever owns the revenue number into the room.",
+    content: (
+      <div className="prose-content">
+        <p>
+          On June 23, the first morning of Prime Day, Amazon introduced Alexa+ Agentic Ads on Echo Show devices. The format works like this: an ad surfaces inside an Alexa+ conversation, you ask about the concert, check seat availability, pick a price, and the tickets land in your Ticketmaster account. Or the large pepperoni heads to your door, because Alexa remembers your toppings from past conversations. The purchase completes without the conversation ever ending. Launch partners: Papa Johns for food, and ticket sales for Beck, Jill Scott and Omar Courtz.
+        </p>
+        <p>
+          Digiday called it a glimpse of advertising&rsquo;s agentic future, which is fair. But one detail deserves its own headline, and Adweek came closest to writing it: none of these transactions belong to Amazon&rsquo;s store. Papa Johns pizza and Ticketmaster seats were never marketplace items. Amazon is running the register for commerce that happens somewhere else entirely.
+        </p>
+        <h2>An ad that closes the sale gets graded like a channel</h2>
+        <p>
+          Media is priced on attention: reach, CPM, share of voice, and a long argument about attribution afterward. Channels are priced on transactions: close rate, take rate, commission, and who owns the customer when the money moves. For a hundred years the ad industry lived on the first list. An Alexa+ Agentic Ad runs on the second, because the ad and the transaction are the same object. Amazon&rsquo;s ad VP described the format as closing &ldquo;the gap between intent and action,&rdquo; which is a polite way of saying the ad now finishes the job the media plan used to hand off to a website.
+        </p>
+        <p>
+          Once the ad completes the purchase, the negotiation behind it changes species. The questions stop sounding like a media buy and start sounding like a channel agreement: What&rsquo;s the commission on a completed order? Who owns the customer record, Amazon or Papa Johns? Who eats the refund when the pizza shows up cold and the customer yells at the speaker that sold it to them? Nobody asks those questions about a banner. Every retail media network cloning this format inherits every one of them.
+        </p>
+        <h2>Walmart kept the register. Amazon became one.</h2>
+        <p>
+          The contrast with Walmart is worth sitting on for a minute. Three weeks ago I wrote about{" "}
+          <Link href="/writing/walmart-sparky-agentic-commerce-customer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">Walmart letting ChatGPT and Gemini sell its products while refusing to hand over checkout</Link> &mdash; a retailer defending its register from the AI assistants. Amazon just ran the move in the other direction: it took its assistant and became the register for merchants who never sold through Amazon at all. Walmart is protecting a checkout. Amazon is exporting one, and collecting a position in every transaction it carries.
+        </p>
+        <p>
+          Two things can be true. This is a closed beta with a hand-picked partner list, no public pricing, and one device family. You cannot buy this ad today, and betas die on the vine all the time. It is also the clearest statement of intent any ad platform has made this year: Amazon believes the ad unit of the agentic era is a completed transaction, and it would like a cut of transactions well beyond its own store.
+        </p>
+        <h2>The buyer of this ad owns a revenue number</h2>
+        <p>
+          At Zeta I sold customer-acquisition programs priced on outcomes, and the buying committee told you everything about the product. A media plan gets approved by marketing. A guaranteed outcome gets graded by whoever owns the revenue line, and that person shows up to the meeting with entirely different questions, mostly about margin. Agentic ad formats will pull budget the same direction: away from the media plan, toward the commerce and channel P&amp;L, bought by people who think in cost-of-sale rather than share-of-voice.
+        </p>
+        <p>
+          If you sell for a retail media network, that&rsquo;s your heads-up. The person across the table from these formats will be a head of digital revenue, not a media planner, and the pitch that wins is channel math. If you&rsquo;re a brand and an agentic placement lands on your desk, negotiate it like the channel deal it is: data rights, customer-record ownership, CX liability, and the commission stacked against your own checkout margin. Papa Johns just agreed to let Amazon take the order, learn the customer&rsquo;s toppings and hold the relationship at the moment of purchase. That trade might be worth it. But price the whole trade, because the pizza is the smallest thing changing hands.
+        </p>
+      </div>
+    ),
+    sources: [
+      { title: "Amazon Ads — Order a pizza or buy concert tickets: New Alexa+ Agentic Ads let shoppers purchase directly within an ad", url: "https://advertising.amazon.com/library/news/alexa-agentic-ads" },
+      { title: "Adweek — Alexa Is Becoming a Shopping Agent for Advertisers Outside Amazon", url: "https://www.adweek.com/commerce/alexa-is-becoming-a-shopping-agent-for-advertisers-outside-amazon/" },
+      { title: "Digiday — Amazon's latest ad format offers a glimpse of advertising's agentic future", url: "https://digiday.com/marketing/amazons-latest-ad-format-offers-a-glimpse-of-advertisings-agentic-future/" },
+    ],
+  },
+  {
     slug: "chatgpt-work-openai-app-layer",
     title: "OpenAI moved into the workflow layer it was supplying",
     date: "Jul 13, 2026",

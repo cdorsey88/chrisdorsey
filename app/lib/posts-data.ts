@@ -11,6 +11,28 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "salesforce-m3ter-consumption-billing",
+    title: "Salesforce bought the meter that will price your next renewal",
+    date: "Jul 14, 2026",
+    readTime: "6 min",
+    excerpt:
+      "Salesforce closed its acquisition of m3ter on July 1 — a London metering platform that gives Agentforce native usage- and outcome-based billing. The coverage filed it under monetization infrastructure. Underneath the plumbing story: consumption pricing rewires the sales org on both sides of the deal, starting with the comp plan and ending at a renewal where the vendor reads your usage curve in real time.",
+    tag: "Sales",
+    color: "from-violet-700 to-fuchsia-500",
+    tldr: "Salesforce closed its acquisition of m3ter on July 1: a London-based metering and rating platform that will give Agentforce Revenue Management native usage- and outcome-based billing, terms undisclosed. Salesforce's own framing is that AI is moving software from subscriptions to consumption, and it wants the meter inside its walls. The coverage treated this as billing infrastructure. The unwritten part is what consumption pricing does to the people in the deal. Inside the vendor, the comp plan breaks first: a consumption contract signs small and pays out on adoption, so the rep's job no longer ends at signature. Onboarding, workload growth and expansion become the quota. I lived that model at Fastly, where the bill was traffic and the contract was a starting guess. Across the table, the vendor now watches your usage telemetry in near real time, wired into the same system that runs its renewal playbook, which means it may know your ramp flattened before your finance team does. If you sell: ask how comp treats the ramp before you take the job. If you buy: meter your own usage independently and walk into every renewal with your own numbers, because the other side is walking in with theirs.",
+  },
+  {
+    slug: "alexa-agentic-ads-checkout-for-other-brands",
+    title: "Amazon is now the checkout counter for Papa Johns and Ticketmaster",
+    date: "Jul 14, 2026",
+    readTime: "5 min",
+    excerpt:
+      "Alexa+ Agentic Ads, launched June 23 on Echo Show, take a shopper from seeing an ad to a completed purchase inside one conversation — pizza ordered, concert seats booked into a Ticketmaster account. The coverage called it agentic advertising's debut. The bigger move: none of those transactions live on Amazon's store. Amazon is running the register for other people's commerce, and an ad that closes the sale gets bought, and sold, like a sales channel.",
+    tag: "Future of Ads",
+    color: "from-orange-600 to-rose-500",
+    tldr: "On June 23, the first morning of Prime Day, Amazon introduced Alexa+ Agentic Ads on Echo Show: sponsored prompts inside Alexa+ conversations where the shopper can ask questions, compare options and complete the purchase without leaving the ad. Launch partners are Papa Johns for food and ticket sales for Beck, Jill Scott and Omar Courtz, delivered straight into the buyer's Ticketmaster account. The trade press filed it as agentic advertising's arrival. The underweighted detail: these transactions never touch amazon.com. Amazon is operating checkout for merchants outside its own store, which extends its take beyond the marketplace, the reverse of Walmart's choice to let AI assistants sell while refusing to surrender the register. And when the ad completes the purchase, the economics stop looking like media. Reach and CPM give way to close rate, take rate, customer-record ownership and who eats the refund when the pizza shows up cold — channel-sales questions, negotiated by people who own revenue lines, which is who will end up buying and selling these placements. If you're a brand offered an agentic format, negotiate it like a channel deal: data rights, the customer record, CX liability, and the commission math against your own checkout margin. And bring whoever owns the revenue number into the room.",
+  },
+  {
     slug: "chatgpt-work-openai-app-layer",
     title: "OpenAI moved into the workflow layer it was supplying",
     date: "Jul 13, 2026",
