@@ -520,10 +520,10 @@ export default function ChrisDorseySite() {
       url: "https://www.gong.io/press/gong-launches-mission-andromeda-expanding-its-revenue-ai-os-to-enablement-and-account-management",
     },
     {
-      title: "Sierra Raises $950M as the Race to Own Enterprise AI Gets Serious",
-      by: "TechCrunch",
-      desc: "Bret Taylor's Sierra raised $950M at roughly a $15.8B valuation, with more than 40% of the Fortune 50 already running its customer agents. The seller's read is in the model: this is the application-layer company built on top of OpenAI and Anthropic, capturing the enterprise relationship the model makers don't own. Worth studying for how an agent vendor lands the Fortune 50 and prices on outcomes instead of seats.",
-      url: "https://techcrunch.com/2026/05/04/sierra-raises-950m-as-the-race-to-own-enterprise-ai-gets-serious/",
+      title: "Walmart Sets the Vision for the Next Era of Global Commerce Media",
+      by: "Walmart",
+      desc: "Walmart is aligning Walmart Connect, Walmart Connect International and the newly renamed Sam's Club Connect around shared technology, platforms and measurement, under one global strategy led by Seth Dallaire. Global ad revenue grew 37% last quarter. Advertisers have complained for years that every retail media network is its own platform with its own scorecard; the biggest non-Amazon player just committed to one buy across US, international and club.",
+      url: "https://corporate.walmart.com/news/2026/06/22/walmart-sets-the-vision-for-the-next-era-of-global-commerce-media",
     },
   ];
 

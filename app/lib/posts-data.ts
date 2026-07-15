@@ -11,6 +11,17 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "sales-stack-inside-the-assistant",
+    title: "Gong is a Microsoft SKU now, and ZoomInfo lives inside Claude",
+    date: "Jul 15, 2026",
+    readTime: "6 min",
+    excerpt:
+      "In five weeks, ZoomInfo wired its database into Claude and OpenAI's Codex for Work, Clay put its workflows inside ChatGPT, and Gong became a transactable offer in the Microsoft Marketplace. The biggest names in sales tech are handing over the one thing they spent a decade fighting for, the rep's screen, and keeping the data and the workflows. Your renewal and your pitch are both about to be graded on what's left.",
+    tag: "Sales",
+    color: "from-teal-700 to-sky-500",
+    tldr: "Between June 2 and July 1, ZoomInfo made its GTM Context Graph natively available in OpenAI's Codex for Work and shipped a Claude connector, Clay put its MCP live in Claude and ChatGPT so reps can run full enrichment workflows from a chat prompt, and Gong became a transactable offer in the Microsoft Marketplace, buyable under an existing Microsoft agreement and delivered inside Copilot, Dynamics 365 and Teams. Three of the biggest names in sales tech moved their products into somebody else's window, voluntarily, while growing. Two shifts are happening at once: the interface is dissolving into the assistant, and the purchase is moving inside pre-committed cloud budget. When nobody opens your UI, the renewal argument becomes the quality of what you feed the assistant, and seat pricing stops describing how the product is consumed. If you run a revenue org, audit which tools your reps now touch only through an assistant and reprice the renewal around records and workflows instead of seats. If you sell sales tech, get the marketplace listing and the connector story ready, because asking for net-new budget against a rival who draws down a commit is the losing position.",
+  },
+  {
     slug: "salesforce-m3ter-consumption-billing",
     title: "Salesforce bought the meter that will price your next renewal",
     date: "Jul 14, 2026",
