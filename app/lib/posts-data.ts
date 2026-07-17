@@ -11,6 +11,28 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "ibm-warning-ai-capex-software-budgets",
+    title: "IBM's lost deals went to the data center budget",
+    date: "Jul 16, 2026",
+    readTime: "6 min",
+    excerpt:
+      "IBM warned that Q2 will miss because customers moved capital to servers, storage and memory mid-quarter, and large deals died waiting. The stock lost roughly a quarter of its value, its worst day since 1987, and Salesforce, ServiceNow and Intuit sold off in sympathy. February's SaaSpocalypse was investors repricing software for the AI era. This was customers doing it with real budget dollars, and it lands on your pipeline before it lands on anyone's earnings.",
+    tag: "Sales",
+    color: "from-blue-800 to-slate-500",
+    tldr: "IBM warned on July 14 that second-quarter revenue will land near $17.2 billion against the $17.86 billion analysts expected, with adjusted EPS around $2.93 versus estimates near $3.02. CEO Arvind Krishna said customers redirected capital toward servers, storage and memory late in the quarter, that numerous large deals failed to close, and that IBM didn't anticipate the magnitude of the reprioritization. The stock lost roughly a quarter of its value, its worst day since 1987, and the selloff spread to Microsoft, Salesforce, ServiceNow and Intuit. February's SaaSpocalypse was investors repricing software for a world of AI agents; Tuesday was customers doing the same thing with actual budget dollars, moving money from software opex to infrastructure capex mid-quarter. The competitor that killed those IBM deals was the customer's own AI infrastructure program, a loss reason no CRM picklist tracks. Requalify every deal on where the money physically sits: which line item, opex or capex, whether the AI program has touched it since scoping, and who defends it when the GPU cluster runs over. Expect renewals to get shaved for the same reason, and expect 'no decision' to lead your loss report this year.",
+  },
+  {
+    slug: "paypal-bid-ad-network-transaction-graph",
+    title: "The $53 billion PayPal bid includes an ad network nobody is pricing",
+    date: "Jul 16, 2026",
+    readTime: "6 min",
+    excerpt:
+      "Stripe and Advent International bid $60.50 a share, about $53 billion, for PayPal. The coverage is Venmo, checkout and whether PayPal's board will engage. Inside the same company sits PayPal Ads and a transaction graph spanning 430 million consumers, 30 million merchants and, PayPal says, a third of global transactions: the cross-merchant measurement retail media networks can't offer because each one only sees its own shelf. Nobody has priced that part of the deal.",
+    tag: "MadTech",
+    color: "from-blue-700 to-amber-500",
+    tldr: "Stripe and Advent International offered $60.50 a share for PayPal on July 15, roughly $53 billion at a 28% premium, with about $50 billion in committed financing; PayPal hasn't responded. The coverage is all payments: Venmo, checkout, Stripe finally getting a consumer business. Buried in the same company is PayPal Ads, the commerce-media business Mark Grether (Uber Advertising, Xaxis) has been building since 2024 on a transaction graph PayPal says covers 430 million consumer accounts, more than 30 million merchants and about a third of global transactions. In January it shipped cross-merchant Transaction Graph Insights and Measurement, the view no retail media network can offer because each only sees its own store. Stripe co-built the checkout rails under agentic commerce and would gain the consumer-side purchase record across rival merchants, the ground truth that's left when conversational buying breaks click attribution. A PE co-owner tends to treat a high-margin ad line the way PE treats everything: as a lever to pull harder. If you buy commerce media, put PayPal Ads on the evaluation list while the company is in play and price the cross-merchant measurement. If you're a merchant feeding that graph, re-read the data clause in your agreement, because change of control hands your customers' purchase history to whoever wins the bid.",
+  },
+  {
     slug: "sales-stack-inside-the-assistant",
     title: "Gong is a Microsoft SKU now, and ZoomInfo lives inside Claude",
     date: "Jul 15, 2026",
