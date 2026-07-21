@@ -35,7 +35,7 @@ HARD_REGEX = [
     # "it's not X, it's Y" and "not just X but Y"
     (r"\bnot just\b[^.?!\n]{1,80}?,?\s*but\b",
      'negation: "not just X, but Y"'),
-    (r"\bit'?s not\b[^.?!\n]{1,80}?,\s*(it'?s|it is|it'?s about)\b",
+    (r"\b(it'?s|it is|this is) not\b[^.?!\n]{1,80}?,\s*(it'?s|it is|this is|it'?s about)\b",
      'negation: "it\'s not X, it\'s Y"'),
     # "isn't X. It's Y" / "is not X. That is Y" across a sentence break
     (r"\b(is|are|was|were)n'?t\b[^.?!\n]{0,80}[.?!]\s+(it'?s|it is|that'?s|that is|they'?re)\b",
@@ -64,6 +64,54 @@ HARD_REGEX = [
      'throat-clearing / faux-intimacy opener'),
     (r"\b(in today'?s|now more than ever)\b",
      'hype filler'),
+    # --- added Jul 2026: CLAUDE.md tells that weren't yet encoded ---
+    # "isn't just X, it's Y" (the linter caught "not just...but" but not this)
+    (r"\b(is|are)n'?t just\b[^.?!\n]{1,60}[,;—]\s*(it|they|that)\b",
+     'negation: "isn\'t just X, it\'s Y"'),
+    # framing crutches: "the read is simple", "here's the read"
+    (r"\b(the read is simple|here'?s the read)\b",
+     'framing crutch: "the read is simple / here\'s the read"'),
+    # unearned honesty: "the honest framing/version/answer is"
+    (r"\bthe honest (framing|version|answer|take|read|question)\b",
+     'unearned-honesty framing: "the honest ___"'),
+    (r"\bthe real (question|story|opportunity) is\b",
+     'unearned-honesty framing: "the real question/story is"'),
+    # prescriptive tee-ups: "the durable play is", "the smart move is"
+    (r"\bthe (durable|smart|winning|real|right) (play|move|bet) (is|here)\b",
+     'prescriptive tee-up: "the durable/smart play is"'),
+    (r"\bthe play here is\b",
+     'prescriptive tee-up: "the play here is"'),
+    # insight-tease: announcing a buried deeper point instead of making it
+    (r"\b(buried|hiding|hidden) (one layer|a layer|underneath|beneath)\b",
+     'insight-tease: "buried one layer down"'),
+    (r"\bthe part (nobody|no one)('?s| is)? (talking about|noticing|pricing)\b",
+     'insight-tease: "the part nobody\'s talking about"'),
+    (r"\bdig a little deeper\b",
+     'insight-tease: "dig a little deeper"'),
+    # significance-flagging: telling the reader a point is significant
+    (r"\b(that|this|it|which) is the tell\b|\bthat'?s the tell\b",
+     'significance-flag: "that\'s the tell"'),
+    (r"\bthe (pattern|picture) is (clear|hard to miss)\b",
+     'significance-flag: "the pattern is clear"'),
+    (r"\byou can see where this is going\b",
+     'significance-flag: "you can see where this is going"'),
+    (r"\b(let that sink in|sit with that|read that again|full stop\.)\b",
+     'reader-instruction: "let that sink in / read that again / full stop"'),
+    (r"\b(stay with me|pay attention to this|here'?s what happened next)\b",
+     'reader-instruction: "stay with me / here\'s what happened next"'),
+    (r"\bwatch what \w[\w\s]{0,30}(did|does) next\b",
+     'reader-instruction: "watch what X did next"'),
+    (r"\b(this|that|it) is the (playbook|blueprint|template)\b",
+     'significance tee-up: "this is the playbook/blueprint/template"'),
+    # labeled-musing tee-ups
+    (r"\bI keep (landing on|coming back to|chewing on|wrestling with)\b",
+     'labeled-musing tee-up: "the thing I keep coming back to"'),
+    # "feature, not a bug" cliche (both directions)
+    (r"\b(a )?(feature,? not a bug|bug,? not a feature)\b",
+     'cliche: "feature, not a bug"'),
+    # "quietly [verb]ing" insinuation
+    (r"\bquietly (rewriting|drawing|placing|building|becoming|reshaping|redrawing|assembling|winning|eating)\b",
+     'insinuation: "quietly [verb]ing" — say plainly what happened'),
 ]
 
 # Moralizing / aphoristic closers — only HARD when they appear in the LAST
@@ -87,6 +135,10 @@ SOFT_VOCAB = [
     "realm", "ecosystem", "testament", "cornerstone", "beacon", "pivotal",
     "robust", "seamless", "seamlessly", "vibrant", "transformative",
     "comprehensive", "holistic", "nuanced", "multifaceted", "paramount",
+    # added Jul 2026
+    "supercharge", "supercharged", "supercharges", "skyrocket", "skyrocketed",
+    "skyrocketing", "unpack", "unpacking", "paradigm", "juggernaut",
+    "meteoric", "behemoth", "trailblazing", "groundbreaking",
 ]
 SOFT_INTENSIFIERS = ["actually", "genuinely", "truly", "simply", "essentially",
                      "crucially", "notably", "importantly", "fundamentally"]
@@ -104,6 +156,13 @@ SOFT_REGEX = [
      'rhetorical-question reveal ("...? The answer:")'),
     (r"\bsaid the quiet part out loud\b",
      'recurring crutch phrase: "said the quiet part out loud"'),
+    # generic label subheads (post-markdown-strip these are bare lines)
+    (r"^\s*(The read|The takeaway|The bottom line|Why it matters|The upshot)\s*$",
+     'generic label subhead ("The read" / "Why it matters") — state the actual point'),
+    # coined slogan-abstraction shape: "X without Y" as a branded phrase is fine
+    # in ones; flag the "truth is," opener which reads as unearned honesty
+    (r"^\s*truth is[, ]",
+     'unearned-honesty opener: "Truth is,"'),
 ]
 
 # ----------------------------------------------------------------------------
@@ -123,6 +182,12 @@ def to_prose(raw):
         if re.match(r"\s*(import |export |const |let |function |//|/\*|\*)", s):
             continue
         s = re.sub(r"<[^>]+>", "", s)                 # JSX/HTML tags
+        # decode common HTML entities so apostrophe/dash patterns still match
+        # JSX prose ("it&rsquo;s not" was invisible to the linter before this)
+        for ent, ch in (("&rsquo;", "'"), ("&lsquo;", "'"), ("&ldquo;", '"'),
+                        ("&rdquo;", '"'), ("&mdash;", "—"), ("&ndash;", "–"),
+                        ("&amp;", "&"), ("&nbsp;", " "), ("&hellip;", "…")):
+            s = s.replace(ent, ch)
         s = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", s) # md links -> text
         s = re.sub(r"[*_`#>]", "", s)                  # md emphasis/headers
         lines.append(s)

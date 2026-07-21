@@ -11,6 +11,28 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "kimi-k3-open-weights-renewal-lever",
+    title: "Kimi K3 will show up in your renewal before it shows up in production",
+    date: "Jul 21, 2026",
+    readTime: "6 min",
+    excerpt:
+      "Moonshot AI released Kimi K3 on July 16: 2.8 trillion parameters, open weights promised July 27, and a score within three points of Fable 5 on the Artificial Analysis index. The coverage is all US-China horse race. The part that lands on your desk: every buyer negotiating an AI contract this quarter just picked up a zero-dollar alternative to wave at you, whether or not their security team would ever let a Chinese open model near production.",
+    tag: "Sales",
+    color: "from-rose-700 to-slate-600",
+    tldr: "Moonshot AI released Kimi K3 on July 16: 2.8 trillion parameters, open weights promised for July 27, and a 57.1 on the Artificial Analysis index against 58.9 for GPT-5.6 Sol and 59.9 for Fable 5, the smallest gap ever between an open model and the frontier. Alibaba previewed Qwen3.8 Max four days later and claimed the number-two spot. The coverage reads like a horse race between Washington and Beijing. The version that matters to a seller: every enterprise buyer negotiating an AI contract this quarter just picked up a credible-sounding alternative with a license fee of zero, and most will wave it at you whether or not their security team would ever approve a Chinese open model for production. I sold at Oracle while 'we'll just move to MySQL' hung over every renewal; the migration stayed six months away for years, but the discounts were immediate. Requalify which accounts could really serve a 2.8-trillion-parameter model. Moonshot itself paused new signups on July 20 because demand outran its compute, and that's the company that built the thing running its own GPUs. Then reprice your story around cost per finished task and everything that surrounds the weights: serving, evals, guardrails, support, liability. The license fee was never the moat.",
+  },
+  {
+    slug: "netflix-3b-ads-commerce-media-yardstick",
+    title: "Netflix doubled its ad business to $3 billion, and commerce media barely noticed",
+    date: "Jul 21, 2026",
+    readTime: "5 min",
+    excerpt:
+      "Netflix's July 16 letter confirmed ad revenue on track to roughly double to $3 billion this year, with upfront commitments closing in weeks. Graded against television, it's the fastest ad launch in memory. Graded against commerce media, it's mid-table: Walmart booked $6.4 billion last fiscal year, the delivery apps passed $4 billion, and Amazon books three Netflixes a quarter. The difference is the sales motion, and Netflix's own letter admits it.",
+    tag: "Future of Ads",
+    color: "from-red-600 to-slate-800",
+    tldr: "Netflix's Q2 letter on July 16 confirmed revenue of $12.6 billion, up 13%, and ad revenue on track to roughly double to approximately $3 billion in 2026, with US upfront commitments expected to close within weeks. Every earnings writeup graded that against television, where it looks like the fastest ad launch in memory. Put it next to commerce media instead: Walmart booked nearly $6.4 billion in ads in fiscal 2026, up 46%; DoorDash, Uber Eats and Instacart run past $4 billion combined; Amazon's $68.6 billion in 2025 works out to roughly three Netflixes of ad revenue per quarter. The gap is the sales motion. Netflix sells like a broadcast network: upfronts, insertion orders, a few thousand large brands, and a manual workflow its own letter concedes 'has historically limited access for smaller buyers.' Retail media sells like search: self-serve, closed-loop to a receipt, an advertiser long tail in the hundreds of thousands. Netflix is extending programmatic access to Pause Ads and live inventory this summer, the right direction and years late. If you buy CTV, use Netflix for premium reach and make it prove outcomes against a holdout. If you sell streaming ads, the bar Walmart set with Vibe applies to you now: the next $3 billion has to come from advertisers who can launch a campaign without ever meeting a salesperson.",
+  },
+  {
     slug: "ibm-warning-ai-capex-software-budgets",
     title: "IBM's lost deals went to the data center budget",
     date: "Jul 16, 2026",

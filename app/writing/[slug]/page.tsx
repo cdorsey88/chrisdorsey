@@ -22,6 +22,113 @@ type Post = {
 
 const posts: Post[] = [
   {
+    slug: "kimi-k3-open-weights-renewal-lever",
+    title: "Kimi K3 will show up in your renewal before it shows up in production",
+    date: "Jul 21, 2026",
+    readTime: "6 min",
+    tag: "Sales",
+    color: "from-rose-700 to-slate-600",
+    tldr: "Moonshot AI released Kimi K3 on July 16: 2.8 trillion parameters, open weights promised for July 27, and a 57.1 on the Artificial Analysis index against 58.9 for GPT-5.6 Sol and 59.9 for Fable 5, the smallest gap ever between an open model and the frontier. Alibaba previewed Qwen3.8 Max four days later and claimed the number-two spot. The coverage reads like a horse race between Washington and Beijing. The version that matters to a seller: every enterprise buyer negotiating an AI contract this quarter just picked up a credible-sounding alternative with a license fee of zero, and most will wave it at you whether or not their security team would ever approve a Chinese open model for production. I sold at Oracle while 'we'll just move to MySQL' hung over every renewal; the migration stayed six months away for years, but the discounts were immediate. Requalify which accounts could really serve a 2.8-trillion-parameter model. Moonshot itself paused new signups on July 20 because demand outran its compute, and that's the company that built the thing running its own GPUs. Then reprice your story around cost per finished task and everything that surrounds the weights: serving, evals, guardrails, support, liability. The license fee was never the moat.",
+    content: (
+      <div className="prose-content">
+        <p>
+          On July 16, Moonshot AI, a Beijing lab most American buyers could not have named in June, released Kimi K3: 2.8 trillion parameters, the largest open-weights model ever built, with the full weights promised for download on July 27. On the Artificial Analysis Intelligence Index it scored 57.1. GPT-5.6 Sol scored 58.9. Anthropic&rsquo;s Fable 5, the best model you can buy, scored 59.9. That is the smallest gap ever measured between an open model and the frontier, and on some math benchmarks K3 beats Claude Opus 4.8 outright.
+        </p>
+        <p>
+          Four days later Alibaba previewed Qwen3.8 Max, 2.4 trillion parameters, claiming the number-two spot on the same index, also headed for an open-weight release. Shares of Z.ai and MiniMax sold off in Hong Kong within hours. Bank of America&rsquo;s note said the release proves Chinese labs can keep closing the gap despite chip export controls. Most of the coverage stopped there, at the horse race.
+        </p>
+        <p>
+          The horse race is not your problem. Your problem is smaller and closer: the buyer sitting across from you in a Q3 renewal now has a number to point at, and the number is zero.
+        </p>
+        <h2>I&rsquo;ve negotiated against free before</h2>
+        <p>
+          At Oracle, some version of &ldquo;we&rsquo;ll just move to MySQL&rdquo; hung over every database renewal I touched. The migration was always six months away. It stayed six months away for years, because the DBA team knew what the procurement team didn&rsquo;t: free software still has to be run by somebody, and that somebody was them. But here&rsquo;s what mattered at the negotiating table. The migration almost never happened. The discount happened every time.
+        </p>
+        <p>
+          That is what an open-weights frontier model is to an enterprise AI contract. Not a replacement. A lever. Your buyer&rsquo;s security team will likely never approve a Chinese-origin model for regulated workloads, and their platform team has no appetite for serving 2.8 trillion parameters on rented GPUs. Procurement does not care. Procurement needs the alternative to exist, not to work. From July 27 forward, it exists, downloadable, with benchmark charts attached.
+        </p>
+        <h2>The license fee is zero. The model isn&rsquo;t.</h2>
+        <p>
+          Here is the detail that should anchor your counter-argument: Moonshot paused new subscriptions to K3 on July 20 because demand outran its computing capacity. The company that built the model, with its own infrastructure, its own engineers, and every incentive to ride the moment, could not serve it four days after launch. That is the part of the product that was never in the weights: inference at scale, uptime, latency, evals, safety guardrails, support, and someone to hold liable when the output is wrong.
+        </p>
+        <p>
+          I wrote three weeks ago that{" "}
+          <Link href="/writing/claude-sonnet-5-tokenizer-cost-per-task" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">the sticker price per token stopped describing what AI costs</Link>, and an open model is the extreme case: the sticker is zero and the cost is everything else. Self-hosting a frontier-scale model means GPU capacity that&rsquo;s scarce and climbing in price, an ops team that doesn&rsquo;t exist yet at most enterprises, and a compliance review that starts hard and gets harder when the training run happened in Beijing. Two things can be true. K3 is a real technical achievement, and most US enterprises will never run it. Its main production use in America this year will be as a line item in somebody&rsquo;s negotiation deck.
+        </p>
+        <h2>Requalify before they bring it up</h2>
+        <p>
+          Three questions sort the real threat from the bluff. First, does this account have a platform team that already serves open models in production? If they&rsquo;re running Llama or Qwen today, the threat has teeth, and you should sell against total cost per finished task with real numbers. If their AI runs entirely through vendor APIs, the K3 conversation is a pricing conversation wearing an architecture costume.
+        </p>
+        <p>
+          Second, would a Chinese-origin model survive this buyer&rsquo;s own review? A defense contractor, a bank, a health system: no. And after a year in which{" "}
+          <Link href="/writing/fable-5-returns-government-preclearance-model-continuity" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">Washington showed it will reach directly into model access</Link>, betting a production workload on the one category of model most exposed to the next export-control ruling takes a brave CIO. Know the answer before the meeting, because the buyer is counting on you not to ask.
+        </p>
+        <p>
+          Third, what does your own pricing story sound like next to zero? &ldquo;Our tokens are cheaper&rdquo; loses to free. Cost per finished task, deployment speed, uptime you contractually own, and a throat to choke when it breaks: that argument survives. It&rsquo;s the same one managed databases used against MySQL for twenty years, and it worked, because the buyer was never really comparing software. They were comparing whose problem it becomes at 2 a.m.
+        </p>
+        <p>
+          The weights drop July 27. The benchmark chart is already in your buyer&rsquo;s deck. Walk in with the 2 a.m. question and let them answer it.
+        </p>
+      </div>
+    ),
+    sources: [
+      { title: "CNBC — China's Moonshot AI unveils Kimi K3 that rivals OpenAI, Anthropic (July 17, 2026)", url: "https://www.cnbc.com/2026/07/17/moonshot-ai-kimi-k3-model-openai-anthropic-china.html" },
+      { title: "Fortune — Moonshot's Kimi K3 pushes Chinese AI into Fable-level territory (July 16, 2026)", url: "https://fortune.com/2026/07/16/moonshots-kimi-k3-pushes-chinese-ai-into-fable-level-territory/" },
+      { title: "AP — China's Kimi K3 AI model halts new subscriptions after demand overwhelms capacity (July 20, 2026)", url: "https://apnews.com/article/kimi-k3-china-ai-model-us-4c66a2e0f557ce79d3cc2d769c9a6226" },
+      { title: "TechStartups (citing WSJ) — Alibaba unveils Qwen3.8 Max, claims second-best AI model behind Anthropic's Fable 5 (July 20, 2026)", url: "https://techstartups.com/2026/07/20/top-tech-news-today-july-20-2026-alibaba-bezos-blackstone-google-moonshot-ai-nvidia-samsung-more/" },
+    ],
+  },
+  {
+    slug: "netflix-3b-ads-commerce-media-yardstick",
+    title: "Netflix doubled its ad business to $3 billion, and commerce media barely noticed",
+    date: "Jul 21, 2026",
+    readTime: "5 min",
+    tag: "Future of Ads",
+    color: "from-red-600 to-slate-800",
+    tldr: "Netflix's Q2 letter on July 16 confirmed revenue of $12.6 billion, up 13%, and ad revenue on track to roughly double to approximately $3 billion in 2026, with US upfront commitments expected to close within weeks. Every earnings writeup graded that against television, where it looks like the fastest ad launch in memory. Put it next to commerce media instead: Walmart booked nearly $6.4 billion in ads in fiscal 2026, up 46%; DoorDash, Uber Eats and Instacart run past $4 billion combined; Amazon's $68.6 billion in 2025 works out to roughly three Netflixes of ad revenue per quarter. The gap is the sales motion. Netflix sells like a broadcast network: upfronts, insertion orders, a few thousand large brands, and a manual workflow its own letter concedes 'has historically limited access for smaller buyers.' Retail media sells like search: self-serve, closed-loop to a receipt, an advertiser long tail in the hundreds of thousands. Netflix is extending programmatic access to Pause Ads and live inventory this summer, the right direction and years late. If you buy CTV, use Netflix for premium reach and make it prove outcomes against a holdout. If you sell streaming ads, the bar Walmart set with Vibe applies to you now: the next $3 billion has to come from advertisers who can launch a campaign without ever meeting a salesperson.",
+    content: (
+      <div className="prose-content">
+        <p>
+          Netflix&rsquo;s shareholder letter on July 16 was a victory lap with numbers to back it: Q2 revenue of $12.6 billion, up 13%, operating margin of 33%, and the ads business &ldquo;on track to deliver approximately $3 billion in ads revenue in 2026,&rdquo; roughly double last year. US upfront commitments close in the next few weeks. The Women&rsquo;s World Cup, an expanded NFL slate, and WWE are pulling advertisers in the door.
+        </p>
+        <p>
+          Every earnings writeup I read graded that number against television, and against television it deserves the applause. Ad tiers at streaming services have flopped for a decade, and Netflix built a real one in four years. But television is the wrong yardstick, because television is no longer where the ad money is going.{" "}
+          <Link href="/writing/commerce-media-passed-tv-agents-buying" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">Commerce media passed TV in global ad revenue</Link>{" "}
+          before this year started. Measure Netflix against the channel that&rsquo;s winning and the picture changes.
+        </p>
+        <h2>Mid-table in the league that matters</h2>
+        <p>
+          Walmart&rsquo;s ad business booked nearly $6.4 billion in fiscal 2026, up 46%, which means Walmart added more ad revenue last year than Netflix&rsquo;s entire ads business will bring in this year. The{" "}
+          <Link href="/writing/delivery-apps-retail-media-third-pole" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">food-delivery apps</Link>, a category that barely existed as ad sellers five years ago, run past $4 billion combined. Amazon booked $68.6 billion in 2025, about three Netflixes per quarter. The most scrutinized ad launch in entertainment history, the one with the earnings-call standing ovation, would not crack the top tier of retail media networks.
+        </p>
+        <p>
+          That comparison sounds unfair. Netflix sells thirty seconds of premium attention; Walmart sells a spot on a digital shelf. But the brand dollars funding both come from the same budgets, and CFOs have spent two years moving those budgets toward whatever can prove a sale happened. The channel that grades itself with a receipt has been beating the channel that grades itself with a panel.
+        </p>
+        <h2>Netflix still sells like a broadcast network</h2>
+        <p>
+          The structural gap is in the motion, not the inventory. Netflix runs upfronts, sales teams, insertion orders, and negotiated commitments with a few thousand of the world&rsquo;s biggest brands. Retail media runs like search: log in, set a budget, launch. Amazon&rsquo;s long tail of advertisers numbers in the hundreds of thousands, most of whom have never spoken to a human at Amazon. That long tail is what compounds. Big-brand budgets get negotiated annually; small-advertiser spend grows every week nobody is watching.
+        </p>
+        <p>
+          Don&rsquo;t take my word for the diagnosis, take Netflix&rsquo;s. Buried in the letter: extending programmatic access to Pause Ads and live inventory this summer &ldquo;reduces the manual effort that has historically limited access for smaller buyers, opening Netflix to a broader range of advertisers over time.&rdquo; The company just told you, in an SEC exhibit, that its own workflow has been keeping smaller advertisers out. Walmart saw the same wall from the other side and{" "}
+          <Link href="/writing/walmart-vibe-self-serve-tv-advertising" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">bought Vibe to put a self-serve button on TV</Link>{" "}
+          for advertisers who will never sit in an upfront. Ten thousand small advertisers buying streaming TV like a paid-social ad: that is the motion pointed directly at the money Netflix can&rsquo;t yet touch.
+        </p>
+        <h2>What to do with this</h2>
+        <p>
+          If you buy media, Netflix has something retail media doesn&rsquo;t: scarce, premium, lean-back attention, live sports included, at global scale. Buy it for that. Just grade it honestly, insist on incrementality against a holdout rather than panel math, and resist paying commerce-media prices for broadcast-style proof. If you&rsquo;re a smaller advertiser, watch the programmatic expansion this summer; early inventory in a channel opening to the long tail tends to be underpriced for a while.
+        </p>
+        <p>
+          If you sell streaming ads, at Netflix or anywhere, the uncomfortable sentence in your own shareholder letter is the roadmap. The first $3 billion came from the biggest brands on earth, hand-sold by an excellent sales team. The next $3 billion has to come from advertisers who can launch a campaign without ever meeting one.
+        </p>
+      </div>
+    ),
+    sources: [
+      { title: "Netflix — Q2 2026 Shareholder Letter (July 16, 2026)", url: "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000211/ex991_q226.htm" },
+      { title: "Marketing Dive — Walmart raked in $6.4B from ads last year (February 2026)", url: "https://www.marketingdive.com/news/walmart-raked-in-64b-from-ads-last-year-execs-see-plenty-runway-ahead/812669/" },
+      { title: "Marketing Dive — Amazon's annual ad revenue passes $68B (February 2026)", url: "https://www.marketingdive.com/news/amazon-annual-ad-revenue-passes-68b-boosted-by-full-funnel-strategy/811569/" },
+    ],
+  },
+  {
     slug: "ibm-warning-ai-capex-software-budgets",
     title: "IBM's lost deals went to the data center budget",
     date: "Jul 16, 2026",
