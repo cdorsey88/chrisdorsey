@@ -156,6 +156,14 @@ html {
   animation: peak-rise 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.35s both;
 }
 
+/* Nav links shift to the logo's teal on hover */
+.nav-link {
+  transition: color 0.18s ease;
+}
+.nav-link:hover {
+  color: var(--teal);
+}
+
 .mountain-mark {
   transition: transform 0.25s ease;
 }

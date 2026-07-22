@@ -608,12 +608,12 @@ export default function ChrisDorseySite() {
           </a>
           <div className="flex items-center gap-7">
             <div className="hidden md:flex items-center gap-7 text-sm" style={{ color: INK }}>
-              <a href="#about"   className="font-medium hover:opacity-60 transition">About</a>
-              <Link href="/track-record" className="font-medium hover:opacity-60 transition">Track Record</Link>
-              <a href="#now"     className="font-medium hover:opacity-60 transition">Now</a>
-              <a href="#writing" className="font-medium hover:opacity-60 transition">Thoughts</a>
-              <a href="#builds"  className="font-medium hover:opacity-60 transition">AI Sales Tools</a>
-              <Link href="/work-with-me" className="font-medium hover:opacity-60 transition">Work with me</Link>
+              <a href="#about"   className="font-medium nav-link">About</a>
+              <Link href="/track-record" className="font-medium nav-link">Track Record</Link>
+              <a href="#now"     className="font-medium nav-link">Now</a>
+              <a href="#writing" className="font-medium nav-link">Thoughts</a>
+              <a href="#builds"  className="font-medium nav-link">AI Sales Tools</a>
+              <Link href="/work-with-me" className="font-medium nav-link">Work with me</Link>
             </div>
             <a
               href="#contact"

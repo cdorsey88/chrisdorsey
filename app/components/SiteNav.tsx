@@ -56,7 +56,7 @@ export default function SiteNav() {
         <div className="flex items-center gap-7">
           <div className="hidden md:flex items-center gap-7 text-sm" style={{ color: INK }}>
             {links.map((l) => (
-              <Link key={l.href} href={l.href} className="font-medium hover:opacity-60 transition">
+              <Link key={l.href} href={l.href} className="font-medium nav-link">
                 {l.label}
               </Link>
             ))}
