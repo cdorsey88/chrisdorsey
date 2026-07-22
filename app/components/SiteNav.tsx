@@ -5,34 +5,19 @@ const INK = "#1A1613";
 const PAPER = "#F2ECDD";
 const TEAL = "#0E9F86";
 
-// Berkeley + mountain mark — mirrors the homepage logo glyph (Berkeley the dog at the base of the peak).
-const MountainMark = ({ id = "nav-mtn" }: { id?: string }) => (
+// Layered-range mark — mirrors the homepage logo glyph (three ridges: blue, teal, ink).
+const MountainMark = () => (
   <svg
-    width="42"
-    height="31"
-    viewBox="0 0 46 34"
+    width="48"
+    height="36"
+    viewBox="0 0 48 36"
     fill="none"
     aria-hidden="true"
-    className="shrink-0"
+    className="mountain-mark shrink-0"
   >
-    <defs>
-      <linearGradient id={`${id}-grad`} x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#334E8C" />
-        <stop offset="100%" stopColor="#0F6E56" />
-      </linearGradient>
-    </defs>
-    <path
-      d="M1 32 L13 8 Q13.7 6.6 14.5 8 L19.5 17 L23 11 Q23.6 10 24.2 11 L36 31 Q36.4 31.9 35.3 31.9 L1.9 31.9 Q0.6 31.9 1 32Z"
-      fill={`url(#${id}-grad)`}
-    />
-    <path d="M10.8 15.5 L13.7 10 L16.6 15.5 L13.7 19Z" fill="#F0F7FA" opacity="0.85" />
-    <g transform="translate(29.5 16)">
-      <path d="M0.9 2.4 Q0 2.5 0 3.4 Q0 4.3 0.9 4.4 L3 4.5 Q3.1 5.6 3.9 6.3 L3.7 16 L5.6 16 L5.8 11.2 Q6.6 12.6 8 13 Q8.3 16 10.6 16 L12.3 16 Q13.9 14.2 13.9 11.9 Q13.9 9 11.3 7.6 L7.3 5.4 Q7.5 3.4 6.4 2.2 Q5 0.8 3.2 1.3 Q1.6 1.6 0.9 2.4 Z" fill="#1A1613" />
-      <path d="M5.8 1.9 Q7.3 1.7 7.8 3 Q8.2 4.1 7.4 5.1 Q6.3 4.6 5.9 3.5 Q5.7 2.6 5.8 1.9 Z" fill="#1A1613" />
-      <path d="M12.8 9.6 Q14.8 8.8 15 6.6 Q15.1 5.4 14.4 4.6 Q14.5 6.1 13.5 7.2 Q12.7 8 11.7 8.3 Q12.3 9 12.8 9.6 Z" fill="#1A1613" />
-      <path d="M4.3 6.8 Q4.1 8.8 4.6 10.6 Q4.8 11.4 5.3 12 Q5.9 9.9 5.6 8 Q5.45 7.1 5.1 6.6 Z" fill="#F2ECDD" />
-      <rect x="0.4" y="3.8" width="1.3" height="0.5" rx="0.25" fill="#F2ECDD" />
-    </g>
+    <g className="range-back"><path d="M2 34 L14 12 L24 26 L32 10 L46 34 Z" fill="#334E8C" opacity="0.85" /></g>
+    <g className="range-mid"><path d="M0 34 L12 20 L22 30 L34 16 L48 34 Z" fill="#0E9F86" opacity="0.9" /></g>
+    <g className="range-front"><path d="M-2 35 L10 26 L20 33 L32 24 L50 35 Z" fill="#1A1613" /></g>
   </svg>
 );
 

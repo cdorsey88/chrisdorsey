@@ -9,32 +9,17 @@ import { posts as allPosts } from "@/app/lib/posts-data";
 import { CONTACT_EMAIL, SHOW_TESTIMONIALS } from "@/app/lib/site-config";
 import Testimonials from "@/app/components/Testimonials";
 
-// Berkeley + mountain mark — Berkeley (the dog) sits at the base of the peak.
-const MountainMark = ({ id = "mtn", size = 46 }: { id?: string; size?: number }) => (
+// Layered-range mark — three ridges (blue, teal, ink). Layers rise on load, drift on hover.
+const MountainMark = ({ size = 48 }: { size?: number }) => (
   <svg
-    width={size} height={Math.round(size * (34 / 46))} viewBox="0 0 46 34"
+    width={size} height={Math.round(size * (36 / 48))} viewBox="0 0 48 36"
     fill="none"
     aria-hidden="true"
     className="mountain-mark shrink-0"
   >
-    <defs>
-      <linearGradient id={`${id}-grad`} x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%"   stopColor="#334E8C" />
-        <stop offset="100%" stopColor="#0F6E56" />
-      </linearGradient>
-    </defs>
-    <path
-      d="M1 32 L13 8 Q13.7 6.6 14.5 8 L19.5 17 L23 11 Q23.6 10 24.2 11 L36 31 Q36.4 31.9 35.3 31.9 L1.9 31.9 Q0.6 31.9 1 32Z"
-      fill={`url(#${id}-grad)`}
-    />
-    <path d="M10.8 15.5 L13.7 10 L16.6 15.5 L13.7 19Z" fill="#F0F7FA" opacity="0.85" />
-    <g transform="translate(29.5 16)">
-      <path d="M0.9 2.4 Q0 2.5 0 3.4 Q0 4.3 0.9 4.4 L3 4.5 Q3.1 5.6 3.9 6.3 L3.7 16 L5.6 16 L5.8 11.2 Q6.6 12.6 8 13 Q8.3 16 10.6 16 L12.3 16 Q13.9 14.2 13.9 11.9 Q13.9 9 11.3 7.6 L7.3 5.4 Q7.5 3.4 6.4 2.2 Q5 0.8 3.2 1.3 Q1.6 1.6 0.9 2.4 Z" fill="#1A1613" />
-      <path d="M5.8 1.9 Q7.3 1.7 7.8 3 Q8.2 4.1 7.4 5.1 Q6.3 4.6 5.9 3.5 Q5.7 2.6 5.8 1.9 Z" fill="#1A1613" />
-      <path d="M12.8 9.6 Q14.8 8.8 15 6.6 Q15.1 5.4 14.4 4.6 Q14.5 6.1 13.5 7.2 Q12.7 8 11.7 8.3 Q12.3 9 12.8 9.6 Z" fill="#1A1613" />
-      <path d="M4.3 6.8 Q4.1 8.8 4.6 10.6 Q4.8 11.4 5.3 12 Q5.9 9.9 5.6 8 Q5.45 7.1 5.1 6.6 Z" fill="#F2ECDD" />
-      <rect x="0.4" y="3.8" width="1.3" height="0.5" rx="0.25" fill="#F2ECDD" />
-    </g>
+    <g className="range-back"><path d="M2 34 L14 12 L24 26 L32 10 L46 34 Z" fill="#334E8C" opacity="0.85" /></g>
+    <g className="range-mid"><path d="M0 34 L12 20 L22 30 L34 16 L48 34 Z" fill="#0E9F86" opacity="0.9" /></g>
+    <g className="range-front"><path d="M-2 35 L10 26 L20 33 L32 24 L50 35 Z" fill="#1A1613" /></g>
   </svg>
 );
 
@@ -667,7 +652,7 @@ export default function ChrisDorseySite() {
         <section className="relative pt-20 pb-14 px-7" aria-labelledby="hero-heading">
           {/* Faint topographic contours — camping-map texture, kept near-invisible */}
           <svg aria-hidden="true" className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 1200 620" preserveAspectRatio="xMidYMid slice" fill="none">
-            <g stroke={INK} strokeWidth="1.2" opacity="0.05">
+            <g className="topo-draw" stroke={INK} strokeWidth="1.2" opacity="0.05">
               <path d="M-40 500 Q140 380 320 430 T680 400 T1080 440 T1300 400" />
               <path d="M-40 545 Q160 430 340 475 T700 445 T1100 485 T1300 450" />
               <path d="M-40 590 Q180 480 360 520 T720 490 T1120 530 T1300 500" />
@@ -1220,8 +1205,8 @@ export default function ChrisDorseySite() {
         </section>
 
         {/* Ridgeline divider — cream fades into the ink band like dusk over the Front Range */}
-        <div aria-hidden="true" className="relative" style={{ marginBottom: -1 }}>
-          <svg viewBox="0 0 1440 64" preserveAspectRatio="none" className="block w-full" style={{ height: 56 }}>
+        <div aria-hidden="true" className="relative overflow-hidden" style={{ marginBottom: -1 }}>
+          <svg viewBox="0 0 1440 64" preserveAspectRatio="none" className="block ridge-drift" style={{ height: 56, width: "104%", marginLeft: "-2%" }}>
             <path
               d="M0 64 L0 46 L90 28 L150 42 L260 16 L340 40 L430 24 L520 44 L610 20 L700 38 L820 12 L920 40 L1010 26 L1100 44 L1200 18 L1300 40 L1380 30 L1440 46 L1440 64 Z"
               fill={INK}
