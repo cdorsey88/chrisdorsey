@@ -102,4 +102,5 @@ Chris Dorsey (ctjdorsey@gmail.com) is a VP-level AI sales leader and GTM advisor
 ## Storage context
 - **iCloud:** 1.8 of 2 TB used. Messages retention changed to 1 year (May 2026) — purge in progress.
 - **Google Drive:** Cleaned up May 2026. Key files to still delete: Good Fortune folder, wedding video copies.
-- Job leads saved to: `/Users/chrisdorsey/Documents/Claude/Job Leads/`
+- Job leads saved to: `/Users/chrisdorsey/Documents/Claude/Projects/Job Search/Leads/` (the old `Documents/Claude/Job Leads/` path in the scheduled morning-briefing task no longer exists — update that task in Settings > Capabilities when convenient)
+- For sessions that need the briefing/job-search files: connect `/Users/chrisdorsey/Documents/Claude/Projects` (the parent `Documents/Claude` can't be mounted — it contains a protected `Scheduled` folder)
