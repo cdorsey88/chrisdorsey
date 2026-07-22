@@ -650,18 +650,6 @@ export default function ChrisDorseySite() {
 
         {/* Hero */}
         <section className="relative pt-20 pb-14 px-7" aria-labelledby="hero-heading">
-          {/* Faint topographic contours — camping-map texture, kept near-invisible */}
-          <svg aria-hidden="true" className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 1200 620" preserveAspectRatio="xMidYMid slice" fill="none">
-            <g className="topo-draw" stroke={INK} strokeWidth="1.2" opacity="0.05">
-              <path d="M-40 500 Q140 380 320 430 T680 400 T1080 440 T1300 400" />
-              <path d="M-40 545 Q160 430 340 475 T700 445 T1100 485 T1300 450" />
-              <path d="M-40 590 Q180 480 360 520 T720 490 T1120 530 T1300 500" />
-              <path d="M860 80 Q940 40 1020 78 T1180 92 Q1230 120 1180 156 Q1080 200 960 170 Q860 140 860 80Z" />
-              <path d="M900 100 Q960 72 1020 100 T1140 112 Q1170 132 1136 152 Q1060 182 976 158 Q904 136 900 100Z" />
-              <path d="M60 120 Q120 84 190 110 Q250 132 236 172 Q210 220 130 206 Q56 192 60 120Z" />
-              <path d="M92 136 Q136 112 186 130 Q226 146 214 172 Q192 204 138 192 Q92 180 92 136Z" />
-            </g>
-          </svg>
           <div className="max-w-6xl mx-auto grid items-center gap-10" style={{ gridTemplateColumns: "minmax(0,1.2fr) minmax(0,0.9fr)" }}>
             <div>
               <div className="inline-flex gap-2 items-center font-semibold mb-4" style={{ fontSize: 13, letterSpacing: "0.06em", textTransform: "uppercase" }}>
