@@ -73,7 +73,7 @@ export default function Testimonials() {
           They put their name on it.
         </h2>
         <p className="text-lg mb-12" style={{ color: "#4a4239" }}>
-          Clients who&apos;ll vouch for me, on the record.
+          Clients, executive leaders, and cross-functional peers who&apos;ll vouch for me, on the record.
         </p>
         <div className="grid md:grid-cols-2 gap-5">
           {testimonials.map((t, i) => {
@@ -81,8 +81,8 @@ export default function Testimonials() {
             return (
               <figure
                 key={i}
-                className="rounded-2xl p-7 transition-transform hover:-translate-y-1"
-                style={{ background: f.bg, color: f.fg, border: `3px solid ${INK}`, boxShadow: `7px 7px 0 ${f.shadow}`, transform: `rotate(${f.rot}deg)` }}
+                className="rounded-2xl p-7 flex flex-col justify-between transition-transform hover:-translate-y-1"
+                style={{ background: f.bg, color: f.fg, border: `3px solid ${INK}`, boxShadow: `7px 7px 0 ${f.shadow}`, transform: `rotate(${f.rot}deg)`, minHeight: 260 }}
               >
                 <blockquote className="leading-relaxed mb-5" style={{ color: f.fg }}>&ldquo;{t.quote}&rdquo;</blockquote>
                 <figcaption className="text-sm">
