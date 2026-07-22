@@ -708,8 +708,8 @@ export default function ChrisDorseySite() {
           {/* Personality strip — music links preserved */}
           <div className="max-w-6xl mx-auto mt-12">
             <p className="text-sm leading-relaxed" style={{ color: "#6a6258" }}>
-              Based in <span className="font-medium" style={{ color: INK }}>Denver, CO</span>. Currently supporting Main Street with{" "}
-              <span className="font-medium" style={{ color: INK }}>pro bono AI consulting</span> for small businesses. On rotation:{" "}
+              Based in <span className="font-medium" style={{ color: INK }}>Denver, CO</span>. Currently building{" "}
+              <span className="font-medium" style={{ color: INK }}>AI tools for the seller community</span> &mdash; sharpening how deals get worked, from first conversation to close. On rotation:{" "}
               {[
                 { name: "King Gizzard & the Lizard Wizard", url: "https://music.youtube.com/search?q=King+Gizzard+and+the+Lizard+Wizard" },
                 { name: "Talking Heads", url: "https://music.youtube.com/search?q=Talking+Heads" },
