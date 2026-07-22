@@ -22,6 +22,147 @@ type Post = {
 
 const posts: Post[] = [
   {
+    slug: "anthropic-settlement-training-data-provenance",
+    title: "A judge just put a price on where training data comes from",
+    date: "Jul 22, 2026",
+    readTime: "6 min",
+    tag: "AI",
+    color: "from-stone-700 to-amber-600",
+    tldr: "On July 21 Judge Araceli Martínez-Olguín gave final approval to Anthropic's $1.5 billion settlement with authors: about $3,000 per book across more than 482,000 pirated titles, over 91% claimed, the largest copyright settlement in US history and the first of the major AI training cases to reach the end. The line that survives came from Judge Alsup's earlier ruling: training on lawfully acquired books is fair use; acquiring them from piracy sites is infringement no matter what you built. Anthropic paid for the acquisition, not the training. The coverage is authors and checks. The part that lands on anyone selling AI: procurement now has a reference price for the training-data provenance question, and it will show up in security reviews next to SOC 2. Indemnification splits the field — OpenAI, Microsoft, Google and Anthropic offer copyright indemnities with real caps and conditions attached, mostly covering outputs rather than training data; the 40-person AI app in the same bake-off offers a promise it couldn't survive honoring. If you sell AI, write the provenance answer down and put your indemnity chain in the standard security packet. If you buy, ask whether the indemnity covers the training data or only the outputs, and read the cap out loud before you rely on it.",
+    content: (
+      <div className="prose-content">
+        <p>
+          On July 21, Judge Araceli Mart&iacute;nez-Olgu&iacute;n gave final approval to Anthropic&rsquo;s $1.5 billion settlement with the authors whose books were pirated to train Claude: roughly $3,000 per book across more than 482,000 titles, with over 91% of them already claimed and $101 million in attorneys&rsquo; fees riding along. It is the largest copyright settlement in US history and the first of the big AI training cases to reach the end, while suits against OpenAI, Meta and others grind on.
+        </p>
+        <p>
+          The legal line worth memorizing came earlier, from Judge William Alsup, before he retired: training a model on books you lawfully bought is fair use. Downloading them from piracy sites is infringement, and it stays infringement no matter how transformative the model that ate them. Anthropic paid $1.5 billion for how it acquired the data. The training itself was never the exposure.
+        </p>
+        <p>
+          The coverage this week is authors and checks, and fair enough; $3,000 a book is real money for a working novelist. The settlement also handed a number to your buyer&rsquo;s procurement team, and that is where it starts changing deals.
+        </p>
+        <h2>I&rsquo;ve watched a footnote become a deal gate before</h2>
+        <p>
+          At Zeta I sold data-driven marketing through the years when GDPR and CCPA gave the question &ldquo;where did this data come from&rdquo; legal teeth. Before that, provenance lived in a footnote of the MSA. After, deals passed through privacy reviews that hadn&rsquo;t existed a year earlier, and vendors who couldn&rsquo;t produce a clean sourcing answer stopped making shortlists. Nobody announced the change. The checklists just grew a row.
+        </p>
+        <p>
+          Training data is next, and this time the row arrives with a dollar figure attached. Statutory damages for willful copyright infringement run up to $150,000 per work, and Alsup&rsquo;s framework put Anthropic&rsquo;s theoretical exposure into numbers no board could sit with, which is why the case settled. Risk teams can&rsquo;t price &ldquo;maybe AI has a copyright problem.&rdquo; They can price a settled class action with a per-book rate. The security questionnaire that already asks about{" "}
+          <Link href="/writing/microsoft-shadow-ai-agent-gatekeeper" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">agent governance</Link>{" "}
+          is about to grow a provenance section.
+        </p>
+        <h2>Indemnity splits the field</h2>
+        <p>
+          The frontier labs saw this coming. OpenAI has offered its Copyright Shield to enterprise and API customers since 2023; Microsoft has the Copilot Copyright Commitment; Google indemnifies across much of its generative stack; Anthropic&rsquo;s commercial terms commit it to defend customers over authorized use. Read the fine print, though, and the protection is narrower than the press releases: most of these cover what the model outputs, not the vendor&rsquo;s own training-data liability, and the conditions and caps vary wildly from contract to contract.
+        </p>
+        <p>
+          An indemnity is also only as good as the balance sheet behind it. Anthropic could write a $1.5 billion check and keep operating. The 40-person AI app in the same bake-off cannot, and its indemnity clause, if one exists, is a promise from a company that would not survive the claim. If you sell an AI product built on somebody else&rsquo;s model, you inherit the stack&rsquo;s provenance whether you like it or not, and your buyer&rsquo;s counsel will eventually map the chain: whose model, trained on what, indemnified by whom, up to how much. Map it first.
+        </p>
+        <h2>Get the answer in the packet</h2>
+        <p>
+          If you sell AI: write the provenance answer down before somebody makes you. Where the training data came from, what was licensed, what your model vendor indemnifies and to what cap, and what you cover on top. Put it in the standard security-review packet next to the SOC 2 report. The first vendor in a category to answer cleanly sets the bar the rest get graded against, and this question is cheap to answer today and expensive to answer under deadline in a stalled deal.
+        </p>
+        <p>
+          If you buy AI: two additions to the evaluation. Ask whether the indemnity covers the training data or only the outputs. Then read the cap out loud in the meeting, because a $500,000 cap against a $150,000-per-work exposure is a coupon, not coverage. And ask the provenance question even when the demo is beautiful. Anthropic had the best model in the world and still wrote the largest copyright check in American history for the way it filled its bookshelf.
+        </p>
+      </div>
+    ),
+    sources: [
+      { title: "Publishers Weekly — Judge gives final approval of $1.5 billion Anthropic settlement (July 21, 2026)", url: "https://www.publishersweekly.com/pw/by-topic/digital/copyright/article/100888-judge-gives-final-approval-in-1-5-billion-settlement-in-anthropic-copyright-case.html" },
+      { title: "AP via US News — Judge approves a $1.5B Anthropic settlement over pirated books (July 21, 2026)", url: "https://www.usnews.com/news/business/articles/2026-07-21/judge-approves-a-1-5b-anthropic-settlement-over-pirated-books-used-to-train-the-claude-chatbot" },
+      { title: "TechCrunch — Anthropic's landmark $1.5B copyright settlement is approved (July 20, 2026)", url: "https://techcrunch.com/2026/07/20/anthropics-landmark-1-5b-copyright-settlement-is-approved/" },
+      { title: "Runtime — AI vendors promised indemnification against lawsuits. The details are messy.", url: "https://www.runtime.news/ai-vendors-promised-indemnification-against-copyright-lawsuits-the-details-are-messy/" },
+      { title: "Ropes & Gray — Anthropic's landmark copyright settlement: implications for AI developers and enterprise users (September 2025)", url: "https://www.ropesgray.com/en/insights/alerts/2025/09/anthropics-landmark-copyright-settlement-implications-for-ai-developers-and-enterprise-users" },
+    ],
+  },
+  {
+    slug: "ai-fake-influencers-verified-humans",
+    title: "A content farm can make 1,200 fake influencers a day",
+    date: "Jul 22, 2026",
+    readTime: "5 min",
+    tag: "Brands",
+    color: "from-purple-700 to-pink-500",
+    tldr: "A New York Times investigation found hundreds of AI-generated avatars posing as doctors, naturopaths and wellness influencers across TikTok, Facebook and Instagram: fake diplomas, claims that herbal capsules beat prescription medication for kidney disease, targeting that skews toward older women. One supplement, Rosabella moringa, was sold almost entirely through TikTok Shop by unlabeled AI personas and ended up in an FDA Salmonella recall. Chinese content agencies produce as many as 1,200 of these videos a day for the US market, and no federal law restricts synthetic people in advertising. The coverage frames it as consumer harm, which it is. It is also a supply-side event in the channel brands are scaling into: creator-driven commerce, where the ad, the endorser and the checkout have collapsed into one video. Programmatic ran this experiment with bot traffic a decade ago, and the market's answer was a verification industry — Moat, IAS, DoubleVerify — selling proof that a human saw the ad. The sequel is proof a human made the ad. That hands employee-creator programs like Starbucks' Green Apron Creators a second rationale: provenance. If you buy creator media, get synthetic-content labeling and human verification into the insertion order. If you sell it, verification is part of the pitch now, the way viewability was in 2016.",
+    content: (
+      <div className="prose-content">
+        <p>
+          The New York Times spent months tracking hundreds of AI-generated avatars posing as doctors, naturopaths and wellness influencers across TikTok, Facebook and Instagram. The characters have fake diplomas on the wall, American flags in the yard, and medical advice in the script: herbal capsules that outperform prescription medication for kidney disease, &ldquo;age-reversing secrets&rdquo; from silver-haired women who do not exist. The targeting skews toward older women with real health problems.
+        </p>
+        <p>
+          One product tells the whole story. Rosabella moringa capsules were marketed almost entirely through TikTok Shop by a rotating cast of unlabeled AI personas, different faces on the same synthetic voice. The FDA and CDC linked the capsules to a Salmonella recall. The influencers who sold them cannot be deposed and cannot be embarrassed, and they reposted the next day wearing new faces. Chinese content agencies produce as many as 1,200 of these videos a day for the US market, and no federal law restricts synthetic people in advertising.
+        </p>
+        <p>
+          The Times framed all this as consumer harm, which it is. The same reporting also describes a supply-side event in the channel nearly every consumer brand is scaling into: creator-driven commerce, where the ad, the endorser and the checkout have collapsed into one video.
+        </p>
+        <h2>Programmatic already ran this experiment</h2>
+        <p>
+          I sold ad tech through the bot-traffic years. In the mid-2010s programmatic was the fast, cheap, exploding channel, and a meaningful share of its &ldquo;audience&rdquo; turned out to be servers in a data center clicking on one another; the Methbot operation alone was estimated to be stealing $3 to $5 million a day at its peak. Advertisers did not abandon the channel. They demanded referees, and an entire verification industry got built to sell proof that a human saw the ad. Moat went to Oracle for a reported $850 million. IAS and DoubleVerify went public.
+        </p>
+        <p>
+          The fraud has now moved one seat over. Bot traffic faked the audience; this wave fakes the endorser. And the closed loop that makes TikTok Shop attractive to brands makes the problem heavier, because a synthetic influencer isn&rsquo;t skimming an impression fee, it is selling product with a checkout attached. When the ad completes the sale, fake advertising stops being a media-quality problem and becomes a product-safety problem, with an FDA recall to prove it.
+        </p>
+        <h2>Verified humans just became premium inventory</h2>
+        <p>
+          Three weeks ago I wrote about{" "}
+          <Link href="/writing/starbucks-green-apron-creators-employee-influencers" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">Starbucks paying baristas to make TikToks</Link>, and the argument was about comp and reach. This investigation adds a second rationale that may end up mattering more: provenance. A Green Apron creator has a name, a store, a manager and a work history. In a feed filling with synthetic nutritionists, a verifiable employee is the one endorser a shopper can confirm exists. Expect &ldquo;verified human&rdquo; to become a labeled, targetable, priced attribute on creator platforms, because every previous trust crisis in advertising ended with somebody selling the trust back as a product.
+        </p>
+        <p>
+          If you buy creator media, get synthetic-content terms into the insertion order now: what the platform labels, what share of Shop content is AI-generated, and whether your spend can be restricted to verified humans. If you run a brand, make your real ambassadors easy to verify, with names, faces and workplaces a customer can check, because provenance only pays if shoppers can see it. And if you sell creator or commerce media, verification just became part of your pitch, the way viewability was in 2016.
+        </p>
+        <p>
+          The moringa capsules got recalled. The influencers who sold them were back the next morning with new faces. That is the supply you are bidding against.
+        </p>
+      </div>
+    ),
+    sources: [
+      { title: "The New York Times — AI-generated 'wellness influencers' investigation (July 2026, video)", url: "https://www.tiktok.com/@nytimes/video/7664945707240983821" },
+      { title: "TechStartups (citing NYT) — AI-generated fake influencers flood social media with misleading wellness supplement ads (July 21, 2026)", url: "https://techstartups.com/2026/07/21/top-tech-news-today-july-21-2026-anthropic-blackrock-tesla/" },
+      { title: "The Star (NYT syndication) — An Amish avatar and an AI monk are pitching supplements on social media (March 2026)", url: "https://www.thestar.com.my/tech/tech-news/2026/03/10/an-amish-avatar-and-an-ai-monk-are-pitching-supplements-on-social-media" },
+      { title: "Media Matters — Scammers seem to be using deepfake and AI-generated influencers on TikTok to sell wellness products", url: "https://www.mediamatters.org/tiktok/scammers-seem-be-using-deepfake-and-ai-generated-influencers-tiktok-sell-you-wellness" },
+    ],
+  },
+  {
+    slug: "google-ai-mode-citation-placement",
+    title: "Google moved the recipe links to the top of the AI answer",
+    date: "Jul 22, 2026",
+    readTime: "5 min",
+    tag: "GEO",
+    color: "from-teal-600 to-lime-500",
+    tldr: "Google started placing prominent links to original recipe pages at the top of AI Mode responses — creator name, ratings, ingredient count, images — after two years of recipe bloggers documenting lost traffic. The trade read it as a publisher-relations concession. The GEO read: Google just demonstrated that where a citation sits inside an AI answer is a dial it turns, category by category. Every results-page redesign since universal search has moved money to whoever adapted to the new layout first, and the AI answer now has a layout. A blended AI-visibility score already hid which engine you were losing; it now also hides where in the answer you land, and a named card at the top is a different asset than a footnote below the fold. The recipe cards pull the fields Google's systems can extract cleanly — mostly structured data publishers marked up years ago — which makes schema the cheapest GEO work available. And Gemini-powered ad formats already run inside AI Mode, so designed organic slots and paid formats share a canvas for the first time; Google's designed organic slots have historically grown sponsored siblings. Run your ten money queries in AI Mode and record placement, ask your GEO vendor for placement-level reporting by engine and category, and mark up the fields you'd want your category's card to show before that card gets designed without you.",
+    content: (
+      <div className="prose-content">
+        <p>
+          Google changed how recipes show up in AI Mode this week: prominent links to the original recipe pages now sit at the top of the response, in cards carrying the creator&rsquo;s name, the recipe&rsquo;s ratings, ingredient counts and images. The change followed two years of recipe bloggers documenting what AI answers were doing to their traffic. The reception was wary; Inspired Taste pointed out that Google still generates its own recipe summaries underneath, and those summaries can misrepresent the original.
+        </p>
+        <p>
+          The story got filed as a peace offering in the Google-versus-publishers fight, which it is. It is also a product decision: where a citation sits inside an AI answer is a dial, Google&rsquo;s hand is on it, and the company just turned it for one category because that category complained loudest and best.
+        </p>
+        <h2>Every results-page redesign has moved money</h2>
+        <p>
+          I have been buying and selling around Google&rsquo;s results page since the ten-blue-links era, and the pattern holds across every layout change: universal search, featured snippets, position zero, the local pack. Each time Google redrew the page, clicks and budgets moved to whoever adapted first, while everyone else spent a year arguing about whether the change was fair. The AI answer just got its first layout revision. Recipes today; travel, local and product recommendations will each get their own treatment as the complaints and the usage data come in.
+        </p>
+        <p>
+          That breaks the way most companies measure this. A blended AI-visibility score{" "}
+          <Link href="/writing/geo-chatgpt-sources-split-by-engine" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">already hid which engine you were losing</Link>. Now it also hides where in the answer you land, and a named card at the top of the response is a different asset than a footnote below the fold, the same way position 1 and position 11 were never the same purchase.
+        </p>
+        <h2>The card fields are the new title tag</h2>
+        <p>
+          Look at what the recipe cards display: creator name, star ratings, number of ingredients. Those are the fields Google&rsquo;s systems can extract cleanly, which mostly means structured data recipe publishers marked up years ago to win rich results. The bloggers who invested in schema got cards. Whatever your category is, the version of this that arrives for you will be assembled from the fields machines can read off your pages today, and marking them up before your category&rsquo;s card gets designed is the cheapest GEO work available right now.
+        </p>
+        <h2>Organic cards and paid formats share a canvas now</h2>
+        <p>
+          <Link href="/writing/google-conversational-ads-keyword-casualty" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">Gemini-powered ad formats already run inside AI Mode</Link>, which means the designed organic slot and the paid slot sit on the same surface for the first time. Google&rsquo;s record with designed organic slots is consistent: the shopping grid, the local pack and the top of the page all eventually grew sponsored siblings. Google has said nothing about selling citation placement, and it may never. But after twenty years of watching this company monetize real estate, I know which way to lean.
+        </p>
+        <p>
+          The homework is short. Run your ten money queries in AI Mode and write down where you land: top card, in-text citation, or below the fold. Ask your GEO vendor for placement-level reporting by engine and category, and if all they sell is a blended score, pass. The recipe bloggers spent two years complaining to get their links moved up the page. Being markup-ready before your category&rsquo;s redesign ships is a lot cheaper.
+        </p>
+      </div>
+    ),
+    sources: [
+      { title: "Search Engine Journal — Google puts recipe links at top of AI Mode responses (July 2026)", url: "https://www.searchenginejournal.com/google-puts-recipe-links-at-top-of-ai-mode-responses/581149/" },
+      { title: "Search Engine Roundtable — Google AI Mode improves links for recipe bloggers (July 2026)", url: "https://www.seroundtable.com/google-ai-mode-improves-links-recipes-41600.html" },
+      { title: "Android Authority — Google tweaks AI Mode to highlight recipe creators, but food writers remain wary (July 2026)", url: "https://www.androidauthority.com/google-search-ai-mode-recipe-update-3683495/" },
+    ],
+  },
+  {
     slug: "kimi-k3-open-weights-renewal-lever",
     title: "Kimi K3 will show up in your renewal before it shows up in production",
     date: "Jul 21, 2026",

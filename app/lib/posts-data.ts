@@ -11,6 +11,39 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "anthropic-settlement-training-data-provenance",
+    title: "A judge just put a price on where training data comes from",
+    date: "Jul 22, 2026",
+    readTime: "6 min",
+    excerpt:
+      "A federal judge gave final approval to Anthropic's $1.5 billion settlement over pirated training books: about $3,000 a book across 482,000 titles, the largest copyright settlement in US history. The coverage is authors getting paid. Procurement teams got something too: a reference price for the question 'where did your training data come from,' and copyright indemnities are about to start winning and losing AI deals.",
+    tag: "AI",
+    color: "from-stone-700 to-amber-600",
+    tldr: "On July 21 Judge Araceli Martínez-Olguín gave final approval to Anthropic's $1.5 billion settlement with authors: about $3,000 per book across more than 482,000 pirated titles, over 91% claimed, the largest copyright settlement in US history and the first of the major AI training cases to reach the end. The line that survives came from Judge Alsup's earlier ruling: training on lawfully acquired books is fair use; acquiring them from piracy sites is infringement no matter what you built. Anthropic paid for the acquisition, not the training. The coverage is authors and checks. The part that lands on anyone selling AI: procurement now has a reference price for the training-data provenance question, and it will show up in security reviews next to SOC 2. Indemnification splits the field — OpenAI, Microsoft, Google and Anthropic offer copyright indemnities with real caps and conditions attached, mostly covering outputs rather than training data; the 40-person AI app in the same bake-off offers a promise it couldn't survive honoring. If you sell AI, write the provenance answer down and put your indemnity chain in the standard security packet. If you buy, ask whether the indemnity covers the training data or only the outputs, and read the cap out loud before you rely on it.",
+  },
+  {
+    slug: "ai-fake-influencers-verified-humans",
+    title: "A content farm can make 1,200 fake influencers a day",
+    date: "Jul 22, 2026",
+    readTime: "5 min",
+    excerpt:
+      "The New York Times found hundreds of AI-generated doctors and wellness gurus selling supplements on TikTok Shop. One product landed in an FDA Salmonella recall, and Chinese agencies churn out as many as 1,200 of these videos a day. The consumer-harm story is real. So is the commerce story: the flood hits the exact channel brands are scaling into, and it makes verifiable humans the scarce asset.",
+    tag: "Brands",
+    color: "from-purple-700 to-pink-500",
+    tldr: "A New York Times investigation found hundreds of AI-generated avatars posing as doctors, naturopaths and wellness influencers across TikTok, Facebook and Instagram: fake diplomas, claims that herbal capsules beat prescription medication for kidney disease, targeting that skews toward older women. One supplement, Rosabella moringa, was sold almost entirely through TikTok Shop by unlabeled AI personas and ended up in an FDA Salmonella recall. Chinese content agencies produce as many as 1,200 of these videos a day for the US market, and no federal law restricts synthetic people in advertising. The coverage frames it as consumer harm, which it is. It is also a supply-side event in the channel brands are scaling into: creator-driven commerce, where the ad, the endorser and the checkout have collapsed into one video. Programmatic ran this experiment with bot traffic a decade ago, and the market's answer was a verification industry — Moat, IAS, DoubleVerify — selling proof that a human saw the ad. The sequel is proof a human made the ad. That hands employee-creator programs like Starbucks' Green Apron Creators a second rationale: provenance. If you buy creator media, get synthetic-content labeling and human verification into the insertion order. If you sell it, verification is part of the pitch now, the way viewability was in 2016.",
+  },
+  {
+    slug: "google-ai-mode-citation-placement",
+    title: "Google moved the recipe links to the top of the AI answer",
+    date: "Jul 22, 2026",
+    readTime: "5 min",
+    excerpt:
+      "Google now pins original recipe links to the top of AI Mode answers, in cards with creator names, ratings and ingredient counts, after two years of publisher complaints. Filed as a peace offering to food bloggers. The GEO read: citation placement inside an AI answer is a dial Google turns category by category, which makes the citation slot the answer layer's first designed inventory.",
+    tag: "GEO",
+    color: "from-teal-600 to-lime-500",
+    tldr: "Google started placing prominent links to original recipe pages at the top of AI Mode responses — creator name, ratings, ingredient count, images — after two years of recipe bloggers documenting lost traffic. The trade read it as a publisher-relations concession. The GEO read: Google just demonstrated that where a citation sits inside an AI answer is a dial it turns, category by category. Every results-page redesign since universal search has moved money to whoever adapted to the new layout first, and the AI answer now has a layout. A blended AI-visibility score already hid which engine you were losing; it now also hides where in the answer you land, and a named card at the top is a different asset than a footnote below the fold. The recipe cards pull the fields Google's systems can extract cleanly — mostly structured data publishers marked up years ago — which makes schema the cheapest GEO work available. And Gemini-powered ad formats already run inside AI Mode, so designed organic slots and paid formats share a canvas for the first time; Google's designed organic slots have historically grown sponsored siblings. Run your ten money queries in AI Mode and record placement, ask your GEO vendor for placement-level reporting by engine and category, and mark up the fields you'd want your category's card to show before that card gets designed without you.",
+  },
+  {
     slug: "kimi-k3-open-weights-renewal-lever",
     title: "Kimi K3 will show up in your renewal before it shows up in production",
     date: "Jul 21, 2026",
