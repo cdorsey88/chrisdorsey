@@ -617,10 +617,9 @@ export default function ChrisDorseySite() {
             </div>
             <a
               href="#contact"
-              className="text-sm px-4 py-1.5 rounded-full font-semibold transition-all hover:opacity-90"
-              style={{ background: INK, color: PAPER }}
+              className="text-sm px-4 py-1.5 rounded-full font-semibold font-display btn-sayhi"
             >
-              Say hi
+              Say hi.
             </a>
           </div>
         </div>

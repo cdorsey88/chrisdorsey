@@ -156,6 +156,19 @@ html {
   animation: peak-rise 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.35s both;
 }
 
+/* "Say hi." nav button — quiet outline, fills the logo's teal on hover */
+.btn-sayhi {
+  border: 2px solid var(--ink);
+  color: var(--ink);
+  background: transparent;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.btn-sayhi:hover {
+  background: var(--teal);
+  border-color: var(--teal);
+  color: #fff;
+}
+
 /* Nav links shift to the logo's teal on hover */
 .nav-link {
   transition: color 0.18s ease;

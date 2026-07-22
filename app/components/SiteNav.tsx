@@ -63,10 +63,9 @@ export default function SiteNav() {
           </div>
           <Link
             href="/#contact"
-            className="text-sm px-4 py-1.5 rounded-full font-semibold transition-all hover:opacity-90 whitespace-nowrap"
-            style={{ background: INK, color: PAPER }}
+            className="text-sm px-4 py-1.5 rounded-full font-semibold font-display btn-sayhi whitespace-nowrap"
           >
-            Say hi
+            Say hi.
           </Link>
         </div>
       </div>
