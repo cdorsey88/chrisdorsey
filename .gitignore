@@ -41,14 +41,10 @@ yarn-error.log*
 next-env.d.ts
 
 # personal / non-site working files (kept locally, not part of the deployed site)
+# (bulk personal folders moved to ~/Documents/Claude/Projects on Jul 22 2026)
 CHRIS_PROFILE.md
 *.skill
 *.docx
-/content-queue/
-/newsletter-drafts/
-/SightedAI/
-/chrisdorsey website cowork project/
-/Job Applications/
 
 # editor / agent local config
 /.claude/
