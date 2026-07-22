@@ -2795,7 +2795,7 @@ const posts: Post[] = [
   },
   {
     slug: "publicis-liveramp-acquisition",
-    title: "Publicis bought LiveRamp for $2.2B. The real story is who controls identity now.",
+    title: "Publicis bought LiveRamp for $2.2B, and with it the identity layer of the open internet",
     date: "May 18, 2026",
     readTime: "7 min",
     tag: "MadTech",
@@ -3630,7 +3630,7 @@ const posts: Post[] = [
           process is stuck and no one has authority to move it.
         </p>
         <p>
-          The right move is not to compete on the evaluation rubric — it is to get off the rubric entirely. Ask
+          Instead of competing on the evaluation rubric, get off it entirely. Ask
           for a pilot on a specific, bounded use case with a defined success metric. &ldquo;Instead of a parallel
           evaluation across six tools, let us earn the right to compete. Give us one use case, thirty days, a
           clear definition of what success looks like. If we hit it, you have real evidence. If we don&apos;t,

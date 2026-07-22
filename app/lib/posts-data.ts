@@ -551,7 +551,7 @@ export const posts: PostMeta[] = [
   },
   {
     slug: "publicis-liveramp-acquisition",
-    title: "Publicis bought LiveRamp for $2.2B. The real story is who controls identity now.",
+    title: "Publicis bought LiveRamp for $2.2B, and with it the identity layer of the open internet",
     date: "May 18, 2026",
     readTime: "7 min",
     excerpt:
