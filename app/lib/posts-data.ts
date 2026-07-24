@@ -11,6 +11,28 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "alphabet-q2-search-ads-ai-mode",
+    title: "Google's search ads grew 17% in the quarter AI Mode was supposed to eat them",
+    date: "Jul 23, 2026",
+    readTime: "6 min",
+    excerpt:
+      "Alphabet's Q2 print landed July 22 and the coverage is all capex. The number worth staring at: Search and Other grew 17% to $63.3 billion in the same quarter AI Mode passed a billion monthly users, and Google says AI Overview ads monetize at parity with classic search. I've published the disruption thesis myself. Both can hold, because Google owns the answer layer it's disrupting itself with, and the parties actually exposed — retail media's sponsored search, SEO tooling, publishers — don't own theirs.",
+    tag: "Future of Ads",
+    color: "from-sky-600 to-orange-500",
+    tldr: "Alphabet reported Q2 on July 22: revenue of $119.8 billion, up 24%, Cloud up 82%, and a stock that fell anyway on another capex hike. The number worth staring at is in the ads table: Search and Other grew 17% to $63.3 billion in the same quarter AI Mode passed a billion monthly users. Philipp Schindler says ads in AI Overviews monetize at approximately the same rate as traditional search ads. I've published the disruption thesis myself, so this print deserves an honest reckoning: both can hold, because Google owns the answer layer it's disrupting itself with. Wherever the query moves, Google moves the auction with it and charges parity. The companies that should read this print nervously are the ones that monetize search behavior on surfaces they don't own: retail media networks with 60%+ of spend riding sponsored search, SEO and SEM tooling priced against keyword lists, publishers living on organic clicks. Alphabet's top line will be the last place the shift shows up. Run your ten money queries in AI Mode this week and look at which ads made the cut; that report says more about your exposure than the next ten earnings prints.",
+  },
+  {
+    slug: "openai-presence-deployed-only-sales-motion",
+    title: "OpenAI built an agent product you can't buy without its engineers",
+    date: "Jul 23, 2026",
+    readTime: "5 min",
+    excerpt:
+      "OpenAI launched Presence on July 22 — enterprise voice and chat agents with guardrails, evals, approved actions, and a Codex loop that tunes them after deployment. The coverage is OpenAI versus Sierra and Agentforce. The detail that matters more: Presence is sold only as a deployed product, installed by OpenAI's forward-deployed engineers. No self-serve, no pricing page. The company that built the biggest self-serve funnel in software decided agents get sold by hand.",
+    tag: "Sales",
+    color: "from-slate-700 to-emerald-500",
+    tldr: "OpenAI launched Presence on July 22: enterprise voice and chat agents with policies, guardrails, simulation testing, evaluations, approved actions, and a Codex-powered loop that rewrites the agent's weak spots after deployment. BBVA Mexico, SoftBank and IAG's Retail Insurance Australia are live, and it resolves 75% of OpenAI's own English-language support calls. The coverage files it as OpenAI versus Sierra and Agentforce. The detail that matters more sits in the availability section: Presence is sold only as a deployed product, installed by OpenAI's forward-deployed engineers and a short list of systems integrators. No self-serve, no pricing page. The company that built the largest self-serve funnel in software history decided that agents with authority over customer conversations get sold by hand, which splits the agent market into self-serve tools and deployed outcomes, with different buyers, different comp and different margins on each side. Outbound sales development is on the use-case list, so the AI SDR category now competes with its own model supplier, and the supplier brought engineers. If you sell agents on a self-serve motion, the accountability question is coming to your next bake-off; the revenue in this model gets made after the install, by whoever grows the live deployment.",
+  },
+  {
     slug: "anthropic-settlement-training-data-provenance",
     title: "A judge just put a price on where training data comes from",
     date: "Jul 22, 2026",
