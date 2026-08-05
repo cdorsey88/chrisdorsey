@@ -11,6 +11,72 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "ai-tokens-principal-buying-agency-margin",
+    title: "Your agency wants to sell you AI tokens the way it sells you media",
+    date: "Aug 5, 2026",
+    readTime: "6 min",
+    excerpt:
+      "Digiday reported this week that marketers are being offered free AI tokenization in exchange for signing a principal buying and data services contract. Omnicom's third-party service costs ran $2.9 billion in the first half, up from $1.7 billion, and margin still improved. Meanwhile Cloudflare cut token costs 80% and Gemini serving costs fell 78%. Lock a fixed markup onto an input falling that fast and within a year the markup is worth more than the work.",
+    tag: "Sales",
+    color: "from-rose-700 to-amber-500",
+    tldr: "Digiday reported this week that marketers are being offered free AI tokenization in exchange for signing a principal buying and data services contract. Omnicom's third-party service costs ran $2.9 billion in the first half, up from $1.7 billion a year earlier, and its margin still improved to 15.5%. Meanwhile the input keeps getting cheaper: Cloudflare cut token costs about 80% by serving Markdown instead of HTML, and Alphabet says Gemini serving costs fell 78% through 2025. Seven agencies have seven different pricing models for the same line item, and Ebiquity says token usage audits are headed into contracts. If you buy: get compute quoted at cost, separately from media, with an audit right, before it gets bundled into anything undisclosed. If you sell AI: your unit cost is about to be somebody's audit finding.",
+  },
+  {
+    slug: "chatgpt-ad-destination-is-an-agent",
+    title: "Your next ad's landing page is a conversation somebody has to staff",
+    date: "Aug 4, 2026",
+    readTime: "6 min",
+    excerpt:
+      "OpenAI is testing a ChatGPT ad where the click opens a conversation with the advertiser's own AI agent instead of loading a website. Amazon already published the proof it converts: shoppers using Sponsored Prompts in Alexa+ convert 48% more often and spend 21% more. The format works. It also hands the answering, the liability and the staffing to the advertiser while the money stays in a media line.",
+    tag: "Future of Ads",
+    color: "from-violet-700 to-cyan-500",
+    tldr: "Anu Adegbola at Search Engine Land reported July 31 that OpenAI is testing a ChatGPT ad format that opens a conversation with the advertiser's own AI agent instead of sending the shopper to a website. AdExchanger picked it up Monday. In the same stretch OpenAI published its advertising credit terms: 90-day expiry, no stacking with other discounts, OpenAI's discretion over which fees qualify and whether credits get revoked. Amazon supplied the proof the format converts, with Andy Jassy telling analysts July 31 that shoppers using Sponsored Prompts in Alexa+ convert 48% more often and spend 21% more. The format works. It also moves the answering, the liability and the staffing onto the advertiser while the money still sits in a media line. Before you buy it, decide which team owns what the agent says about price, stock and returns, then go look at your product feed, because it just became your creative.",
+  },
+  {
+    slug: "astra-lean-proofs-verification-buyers",
+    title: "OpenAI spent $2,000 on compute and got ten math proofs anyone can check",
+    date: "Aug 3, 2026",
+    readTime: "6 min",
+    excerpt:
+      "OpenAI says an unreleased model called Astra solved ten open problems in math and theoretical computer science for about $2,000 in compute. The commercially interesting part is how they published it: machine-checkable Lean proofs on GitHub that any skeptic can run without touching the model. Enterprise AI deals stall on one question, and this is the first credible third answer to it.",
+    tag: "AI",
+    color: "from-teal-700 to-indigo-500",
+    tldr: "On August 1 OpenAI published results from Astra, an unreleased model: ten open problems in mathematics and theoretical computer science, including the first explicit construction of a non-sofic group, open since 1999, and an improvement to sphere-packing bounds that had stood since 1978. Inference cost roughly $2,000 at the lab's own API rates. How they published it is the commercially interesting move. Alongside a 249-page manuscript they shipped machine-checkable Lean 4 certificates on GitHub, so any skeptic can verify the proofs without access to the model and without trusting OpenAI. Enterprise AI deals have stalled for three years on one question: how does the buyer know the output is right. Benchmarks are chosen by the vendor and pilots are staffed by the vendor. An artifact the customer runs on their own hardware is a third answer. Find the parts of your product where one exists and lead with those.",
+  },
+  {
+    slug: "mcp-final-spec-standards-body-openrtb",
+    title: "The most important AI document this week is a deprecation policy",
+    date: "Jul 30, 2026",
+    readTime: "6 min",
+    excerpt:
+      "The Model Context Protocol shipped its final spec Tuesday and every writeup is a migration guide. Three things in the release have nothing to do with code: a deprecation policy promising twelve months' notice, a public conformance suite, and a flagship extension co-authored by Anthropic and OpenAI together. Advertising did this in 2010 with OpenRTB. Integration stopped being a reason to pick a vendor, and the money moved to the two ends of the pipe.",
+    tag: "AI",
+    color: "from-emerald-700 to-slate-600",
+    tldr: "The Model Context Protocol published its final 2026-07-28 specification on Tuesday, the largest revision since launch. Every writeup is a migration guide: the initialize handshake is gone, session IDs are gone, Roots and Sampling and Logging are deprecated. Three things in the release have nothing to do with code. A formal deprecation policy gives every feature an Active, Deprecated, Removed lifecycle with at least twelve months between deprecation and any removal. A public conformance suite now gates whether a proposal can reach Final status, and scores official SDKs. And MCP Apps, the flagship new extension, was co-authored by Anthropic, OpenAI and the community MCP-UI maintainers. Anthropic donated MCP to the Linux Foundation in December, where it anchors the Agentic AI Foundation alongside Block's goose and OpenAI's AGENTS.md, backed by Google, Microsoft, AWS, Cloudflare and Bloomberg. I watched advertising do this in 2010 and 2011, when direct competitors agreed on OpenRTB and the IAB adopted it in January 2012. Integration stopped being a reason to pick a vendor, margin compressed on the companies whose product was the connection, and value concentrated with whoever held unique data or real demand. MCP Apps complicates the story I told on July 15: servers can render interactive UI back inside Claude and ChatGPT, but on the host's terms, with templates security-reviewed up front and every action routed through the host's consent path. If you sell software that plugs into an assistant, find out which spec version you conform to and whether you pass the suite, then stop selling the integration. If you buy, the twelve-month deprecation window is a procurement answer you didn't have in April.",
+  },
+  {
+    slug: "microsoft-copilot-seats-license-tier-renewal",
+    title: "Your AI deal is now a line item in someone's Microsoft renewal",
+    date: "Jul 30, 2026",
+    readTime: "6 min",
+    excerpt:
+      "Microsoft passed 30 million paid Copilot seats on Wednesday, adding ten million in a single quarter. Half the coverage calls it vindication and half points out that's under 7% of its installed base. The part that matters for anyone selling AI is how those seats got booked: through E7, a $99 license tier that bundles Copilot with E5, Entra and Agent 365, sold to procurement during a renewal.",
+    tag: "Sales",
+    color: "from-indigo-700 to-rose-500",
+    tldr: "Microsoft reported FY26 Q4 on July 29: $90 billion in revenue up 18%, Azure past $100 billion for the fiscal year, and more than 30 million paid Microsoft 365 Copilot seats, up from 20 million last quarter and 15 million the quarter before. The coverage split into two camps, one calling it vindication and one pointing out that 30 million is under 7% of Microsoft's roughly 464 million commercial seats. Both are true and neither is the useful part. What changed this quarter is the mechanism: E7, the $99 tier bundling Copilot with E5, Entra and Agent 365, went from launch to hundreds of enterprise customers and millions of seats in two months, with EY deploying it to 400,000 employees. Copilot didn't win those accounts in a bake-off. It arrived attached to a license tier the customer was already renegotiating. Meanwhile the deployment gap that killed AI renewals is closing — Nadella says time to high usage went from months to days — and a consumption meter is going in underneath, with 40 million agents registered in Agent 365 and Dynamics 365 credit consumption up fourfold quarter over quarter. If you sell AI into enterprises, find out what license tier your account sits on and when the agreement renews, because your budget conversation may already be happening inside a Microsoft negotiation you weren't invited to.",
+  },
+  {
+    slug: "vusion-ism-shelf-edge-retail-media",
+    title: "The company putting digital price tags in every Walmart just bought an ad sales house",
+    date: "Jul 28, 2026",
+    readTime: "6 min",
+    excerpt:
+      "VusionGroup, the shelf-label company wiring every Walmart in the US, agreed July 27 to buy In-Store Media, a Barcelona ad sales house with €120 million in revenue across 90 retail banners. As of Tuesday morning the US ad trades hadn't written a line about it. It's the Fox–Roku screen-owner purchase executed at shelf height, and it lands on the one retail media inventory an AI assistant can't stand in front of.",
+    tag: "MadTech",
+    color: "from-yellow-600 to-teal-700",
+    tldr: "VusionGroup, the French company installing electronic shelf labels across every Walmart in the US, agreed July 27 to acquire In-Store Media, a Barcelona firm that has sold in-store retail media since 1998: roughly €120 million in 2025 revenue, 90 retail banners, 1,600+ brands, nine countries. Terms undisclosed, financed with debt. As of Tuesday morning the US ad trades hadn't written a line about it; the deal is running on press-release pickups and European retail-tech blogs. The deal itself is the screen-owner purchase Fox made with Roku and Walmart made with VIZIO, executed at shelf height: Vusion owns a surface going into thousands of stores for operational reasons and just bought the sales operation that monetizes stores. The wrinkle is that its biggest customer insists the hardware has nothing to do with ads. Walmart's COO says surge pricing is 'not our approach,' and two senators have a bill out on digital shelf labels. Meanwhile the category context is the one I keep writing about: more than 60% of retail media spend rides on sponsored search while shoppers move their queries into AI assistants. In-store is around 3% of retail media today, headed for about $1 billion in 2028, and it's the one inventory an assistant can't stand in front of. If you sell or buy retail media, find out who owns the shelf edge at your accounts before the rate card shows up.",
+  },
+  {
     slug: "alphabet-q2-search-ads-ai-mode",
     title: "Google's search ads grew 17% in the quarter AI Mode was supposed to eat them",
     date: "Jul 23, 2026",

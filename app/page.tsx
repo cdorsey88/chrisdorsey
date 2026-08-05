@@ -505,10 +505,10 @@ export default function ChrisDorseySite() {
       url: "https://www.gong.io/press/gong-launches-mission-andromeda-expanding-its-revenue-ai-os-to-enablement-and-account-management",
     },
     {
-      title: "Walmart Sets the Vision for the Next Era of Global Commerce Media",
-      by: "Walmart",
-      desc: "Walmart is aligning Walmart Connect, Walmart Connect International and the newly renamed Sam's Club Connect around shared technology, platforms and measurement, under one global strategy led by Seth Dallaire. Global ad revenue grew 37% last quarter. Advertisers have complained for years that every retail media network is its own platform with its own scorecard; the biggest non-Amazon player just committed to one buy across US, international and club.",
-      url: "https://corporate.walmart.com/news/2026/06/22/walmart-sets-the-vision-for-the-next-era-of-global-commerce-media",
+      title: "Where Enterprises are Actually Adopting AI",
+      by: "Kimberly Tan × a16z",
+      desc: "Hard numbers instead of survey sentiment: 29% of the Fortune 500 and roughly 19% of the Global 2000 are live, paying customers of a leading AI startup, and adoption is concentrated in coding, support and search, with tech, legal and healthcare buying first. If you're building a territory plan or an ROI case, this is the most useful map of where enterprise AI budget is actually landing.",
+      url: "https://a16z.com/where-enterprises-are-actually-adopting-ai/",
     },
   ];
 
