@@ -11,6 +11,28 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "people-inc-sessions-down-rates-up",
+    title: "People Inc. lost 22% of its sessions and its ad revenue stayed flat",
+    date: "Aug 6, 2026",
+    readTime: "6 min",
+    excerpt:
+      "People Inc.'s Q2 call landed Tuesday: core sessions down 22% year over year, Google search traffic down 40%, Google now sending 21% of total traffic. Session-based ad revenue came in flat. A fifth of the audience left and the money those sessions generated didn't move, because rates rose enough to cover the hole. The coverage went to whether the company will block Google's crawlers. The pricing is the more useful story.",
+    tag: "Future of Ads",
+    color: "from-orange-700 to-sky-600",
+    tldr: "On Tuesday's Q2 call, People Inc. reported core sessions down 22% year over year and Google search traffic down 40%. Session-based ad revenue came in flat. CFO Tim Quinn said rates are up \"significantly.\" Digital revenue grew 6%, the eleventh consecutive quarter of growth, with digital adjusted EBITDA up 18% and margin at 26% against 23% a year ago. Non-session revenue, meaning Apple News licensing including AI partnerships, events, social programs and the D/Cipher targeting tool, grew 16% from $108 million to $125 million and now accounts for 43% of digital revenue versus 39%. Google search is down to roughly 21% of traffic from 25% last quarter, and something closer to two-thirds historically. The coverage went to Neil Vogel saying he won't block Google's crawlers yet. Underneath that is the first public company to report a full quarter through the AI-search decline and hold the line, and it did that two ways: it repriced a shrinking supply of premium human page views, and it moved 43% of its digital revenue onto things a salesperson negotiates. Scarcity pricing pays you only if buyers ask for your brands by name. Everybody else gets the volume loss with none of the rate. Split volume from rate in your own reporting this quarter, because a flat revenue line hides which one moved.",
+  },
+  {
+    slug: "iab-ai-visibility-decision-grade-procurement",
+    title: "The IAB's new AI visibility rules contain exactly one hard number",
+    date: "Aug 5, 2026",
+    readTime: "6 min",
+    excerpt:
+      "The IAB published 36 pages Monday on measuring whether your brand shows up in AI answers, sorting every claim into directional data and decision-grade data, the tier you're supposed to require before allocating budget. Nine dimensions separate the two. One carries a number: under 50 queries is exploratory. Decision-grade query volume is \"large, diverse.\" Platform coverage is \"a substantial majority.\" There's no certification program to check any of it, only a potential future one with no date.",
+    tag: "GEO",
+    color: "from-amber-600 to-cyan-600",
+    tldr: "On August 3 the IAB published \"Measuring Visibility in the AI Era,\" 36 pages sorting AI visibility metrics into four categories and two quality tiers: directional, for internal briefings, and decision-grade, the tier it says you should use for budget allocation and picking a vendor. Nine dimensions separate the two. Exactly one carries a number: fewer than 50 queries is \"exploratory\" and cannot characterize a category. Decision-grade query volume is \"large, diverse.\" Decision-grade platform coverage is \"a substantial majority\" of consumer AI traffic. No figures for either, no certification program to check, only a \"potential future\" one with no date. So any of the 20-plus companies selling AI visibility tools can put decision-grade on a slide, and IAB says up front the document \"does not rate measurement providers.\" The useful part is the disclosure list underneath. Three dimensions are checkable today: coverage of all four query intent types with results segmented by intent, a weekly or faster testing cadence, and per-platform results reported separately with the weighting disclosed. Put those three in your next GEO renewal by name. A vendor selling you a blended monthly score is selling directional data, and IAB just wrote down what directional is for, which is not your budget.",
+  },
+  {
     slug: "ai-tokens-principal-buying-agency-margin",
     title: "Your agency wants to sell you AI tokens the way it sells you media",
     date: "Aug 5, 2026",
@@ -20,6 +42,17 @@ export const posts: PostMeta[] = [
     tag: "Sales",
     color: "from-rose-700 to-amber-500",
     tldr: "Digiday reported this week that marketers are being offered free AI tokenization in exchange for signing a principal buying and data services contract. Omnicom's third-party service costs ran $2.9 billion in the first half, up from $1.7 billion a year earlier, and its margin still improved to 15.5%. Meanwhile the input keeps getting cheaper: Cloudflare cut token costs about 80% by serving Markdown instead of HTML, and Alphabet says Gemini serving costs fell 78% through 2025. Seven agencies have seven different pricing models for the same line item, and Ebiquity says token usage audits are headed into contracts. If you buy: get compute quoted at cost, separately from media, with an audit right, before it gets bundled into anything undisclosed. If you sell AI: your unit cost is about to be somebody's audit finding.",
+  },
+  {
+    slug: "gemini-spark-chrome-logged-in-shopper",
+    title: "Google's agent now shops with your customer's saved passwords",
+    date: "Aug 4, 2026",
+    readTime: "6 min",
+    excerpt:
+      "On July 30 Google gave Gemini Spark the keys to desktop Chrome: it browses through the user's logged-in accounts, signs in with saved passwords, and stops only at payment. The coverage is convenience and password anxiety. The commerce problem is bigger: every defense retailers built against agentic shopping assumes the agent arrives from outside. This one arrives as your customer, and retail media is priced on a human being looking.",
+    tag: "MadTech",
+    color: "from-cyan-700 to-amber-500",
+    tldr: "On July 30 Google gave Gemini Spark the ability to drive desktop Chrome: with the user's permission it browses through their logged-in accounts, signs in with credentials from Google Password Manager, fills forms, and stops at the point of payment for approval. It's in preview for AI Pro and Ultra subscribers in the US. The coverage is convenience features and password anxiety. The commerce problem is bigger: every defense retailers built against agentic shopping assumes the agent arrives from outside, through an API, a partnership, or a bot filter. An agent driving the customer's own browser session arrives with their cookies, their loyalty login and their address book, and your server can't easily tell it from the customer. Retail media sells impressions to human attention, personalization models train on human browsing, and both now have a visitor that is neither. If you sell retail media, get an answer ready for how you detect agent-driven sessions before an advertiser asks. If you buy it, start watching the gap between impressions and conversions on your biggest logged-in retail partners, because that gap is where the agents will show up first.",
   },
   {
     slug: "chatgpt-ad-destination-is-an-agent",
