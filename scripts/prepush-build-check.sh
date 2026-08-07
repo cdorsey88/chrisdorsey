@@ -18,16 +18,15 @@ cd "$REPO_ROOT" || exit 0
 [ -d "$REPO_ROOT/node_modules" ] || { echo "build-check: no node_modules, skipping."; exit 0; }
 
 TMP="$(mktemp -d -t chrisdorsey-prepush-XXXXXX)" || exit 0
-cleanup() {
-  git worktree remove --force "$TMP" >/dev/null 2>&1
-  rm -rf "$TMP" >/dev/null 2>&1
-}
-trap cleanup EXIT
+trap 'rm -rf "$TMP" >/dev/null 2>&1' EXIT
 
 echo "build-check: type-checking the committed tree (what Vercel will build)..."
 
-if ! git worktree add --detach --quiet "$TMP" HEAD >/dev/null 2>&1; then
-  echo "build-check: could not create worktree, skipping (not blocking push)."
+# `git archive` exports HEAD as a plain tarball. Deliberately NOT `git worktree`:
+# worktrees register state under .git/ and take HEAD.lock, so an interrupted run
+# leaves stale locks that block every later commit. This writes nothing to .git.
+if ! git archive HEAD 2>/dev/null | tar -x -C "$TMP" 2>/dev/null; then
+  echo "build-check: could not export HEAD, skipping (not blocking push)."
   exit 0
 fi
 

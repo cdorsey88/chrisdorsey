@@ -28,7 +28,7 @@ export const post: Post = {
           CFO Tim Quinn said it plainly on the call: &ldquo;While our sessions are down, our rates are up significantly. Our rates are up as a function of the quality content and the performance of our sales.&rdquo;
         </p>
         <p>
-          Run the arithmetic on that. If impressions drop roughly a fifth and revenue holds, the effective rate on what&rsquo;s left rose about a quarter. People Inc. sold fewer ads for enough more money to cover a 22% hole. That is a supply story, and it&rsquo;s the first hard evidence I&rsquo;ve seen that the AI-search decline is doing something to premium editorial CPMs other than crushing them.
+          If impressions drop roughly a fifth and revenue holds, the effective rate on what&rsquo;s left rose about a quarter. People Inc. sold fewer ads for enough more money to cover a 22% hole. That is a supply story, and it&rsquo;s the first hard evidence I&rsquo;ve seen that the AI-search decline is doing something to premium editorial CPMs other than crushing them.
         </p>
         <p>
           It makes sense once you say it out loud. AI answers are absorbing the low-intent, high-volume, one-and-done visit. The person who wanted to know how long to boil an egg is never coming to Allrecipes again, and that visit was never worth much anyway. What&rsquo;s left on a People or Investopedia page skews toward someone who chose to be there. Fewer impressions, better ones, and a fixed pool of advertisers who still need to reach adults on brand-safe editorial. Supply contracts, demand doesn&rsquo;t, price moves.

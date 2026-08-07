@@ -101,6 +101,14 @@ HARD_REGEX = [
      'reader-instruction: "stay with me / here\'s what happened next"'),
     (r"\bwatch what \w[\w\s]{0,30}(did|does) next\b",
      'reader-instruction: "watch what X did next"'),
+    # compute-imperative: ordering the reader to do a calculation you're about to
+    # do for them anyway. Just state the result.
+    (r"\b(run|do|check|crunch|work out) the (math|arithmetic|numbers|calculation)\b",
+     'compute-imperative: "run the math/arithmetic/numbers" — just state the result'),
+    (r"\bthe (math|arithmetic) (is|here is|on this is) (simple|brutal|ugly|straightforward|not complicated)\b",
+     'compute tee-up: "the math is simple" — give the number instead'),
+    (r"\b(put|stack|hold) (that|those|these|it) (up )?(side by side|next to|against)\b",
+     'reader-instruction: "put those side by side" — do the comparison on the page'),
     (r"\b(this|that|it) is the (playbook|blueprint|template)\b",
      'significance tee-up: "this is the playbook/blueprint/template"'),
     # labeled-musing tee-ups
