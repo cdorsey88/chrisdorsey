@@ -39,7 +39,7 @@ export const post: Post = {
           You can finally make branded entertainment that&apos;s graded against a receipt instead of a vibe, and for a CPG brand that&apos;s worth taking seriously. Go in knowing the grader made the show. Ask for the sales lift measured independently of the retailer&apos;s own dashboard, run a holdout so you know what the content actually drove versus what those households would have bought anyway, and keep your own read on the result. The closed loop is convenient. It isn&apos;t neutral.
         </p>
         <p>
-          P&amp;G worked out ninety years ago that a durable way to sell a household product was to make something people genuinely wanted to watch and put the product inside it. The mechanics have caught up to the ambition &mdash; Albertsons can now connect an episode to a household&apos;s grocery bill in a way radio never could. The question a brand weighing one of these deals should ask is the one the original soap operas never had to answer: when the company producing your show also owns the data that says it worked, how hard did you check the math?
+          P&amp;G worked out ninety years ago that a durable way to sell a household product was to make something people genuinely wanted to watch and put the product inside it. The mechanics have caught up to the ambition &mdash; Albertsons can now connect an episode to a household&apos;s grocery bill in a way radio never could. The question a brand weighing one of these deals should ask is the one the original soap operas never had to answer: when the company producing your show also owns the data that says it worked, how hard did you audit the numbers?
         </p>
       </div>
     ),
