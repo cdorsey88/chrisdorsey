@@ -479,7 +479,7 @@ export default function ChrisDorseySite() {
   // Era cards — warming gray→teal toward "now".
   const eras = [
     { title: "Creative & PR", year: "2009", desc: "Crispin Porter + Bogusky — Agency of the Decade. Built the first proactive new-business function.", bg: CREAM2, fg: INK, border: INK },
-    { title: "Digital", year: "2013", desc: "First hire at an indie NYC shop. Grew it 300% in a year.", bg: ACID, fg: INK, border: INK },
+    { title: "Digital", year: "2013", desc: "First hire at an indie NYC shop. Grew revenue 300% in a year.", bg: ACID, fg: INK, border: INK },
     { title: "Data", year: "2018", desc: "Oracle — managed Amazon, J&J, PepsiCo. Edge infrastructure at Fastly.", bg: BLUE, fg: "#fff", border: BLUE },
     { title: "AI acquisition", year: "2024", desc: "Zeta Global — first email-based AI customer-acquisition product to market.", bg: VIOLET, fg: "#fff", border: VIOLET },
     { title: "AI & agents", year: "now", desc: "Advising founders, building with the AI tools I sell.", bg: TEAL, fg: "#fff", border: TEAL },
@@ -876,8 +876,8 @@ export default function ChrisDorseySite() {
               <div className="rounded-2xl p-6 mt-8" style={{ background: ACID, border: `3px solid ${INK}`, boxShadow: `6px 6px 0 ${INK}`, transform: "rotate(-1deg)" }}>
                 <p className="italic font-medium" style={{ color: INK }}>
                   Off the clock: I&apos;m girl dad to Sloane, my adorable and rambunctious toddler, married to my
-                  incredible wife Alexis, and happiest somewhere above 8,000 feet with Berkeley, our trail dog
-                  (she&apos;s the one in the logo). Elon University grad and Maryland native.
+                  incredible wife Alexis, and happiest somewhere above 8,000 feet with Berkeley, our trail dog.
+                  Elon University grad and Maryland native.
                 </p>
               </div>
             </div>
