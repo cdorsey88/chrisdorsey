@@ -11,6 +11,17 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "stripe-openrouter-model-switching-meter",
+    title: "Stripe paid $7 billion for a company that switches away from your model",
+    date: "Aug 17, 2026",
+    readTime: "6 min",
+    excerpt:
+      "Bloomberg reported Sunday that Stripe agreed to buy OpenRouter for more than $7 billion — a company with fewer than 100 employees that routes traffic across 400-plus models and was worth $1.3 billion in May. The argument online is about the multiple. The part that lands on anyone selling AI is that a gateway turns switching from a negotiation into a configuration change, made by a developer who isn't on your account plan.",
+    tag: "Sales",
+    color: "from-indigo-800 to-emerald-500",
+    tldr: "Bloomberg reported on August 16 that Stripe agreed to acquire OpenRouter for more than $7 billion. OpenRouter routes traffic across more than 400 models for a claimed 8 million users, runs on fewer than 100 employees, and was valued at $1.3 billion after a $113 million Series B in May. Reported annualized revenue sits somewhere around $140 million, which puts the price at 50 to 70 times revenue depending on whose number you use. Coverage has been about Stripe's move into AI infrastructure and whether the multiple is defensible. The part that lands on anyone selling AI: a gateway makes switching a configuration change instead of a negotiation. In June I wrote that Kimi K3 gave buyers a free alternative to wave at you in a renewal. A router removes the waving. Traffic moves on a rule, continuously, and the person moving it usually isn't the person on your account plan. Meanwhile Stripe is assembling both meters on the same enterprise, since it co-wrote the Agentic Commerce Protocol with OpenAI and bid $53 billion for PayPal in July. Routers are not obviously durable — Databricks put part of a $5 billion round into its own gateway on August 13, and every cloud sells one. But the direction is set. This week, find out whether your company already routes through a gateway and who has permission to edit the model in the rules file, because that file is setting vendor spend without a purchase order.",
+  },
+  {
     slug: "doubleverify-nielsen-verification-independence-repriced",
     title: "DoubleVerify sold for half its IPO price and the buyer said “independent” nine times",
     date: "Aug 17, 2026",
