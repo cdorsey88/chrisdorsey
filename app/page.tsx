@@ -524,7 +524,7 @@ export default function ChrisDorseySite() {
       proofLabel: null as string | null,
     },
     {
-      title: "Basecamp Alerts",
+      title: "Campsite Ranger",
       stack: "Designed & built solo · Next.js · Python · Fly.io + Supabase · 24/7 cloud monitoring",
       desc: "A live product I designed and built end to end, now running around the clock in the cloud. Colorado's campgrounds, timed-entry permits, and wilderness zones sell out months ahead, so it watches recreation.gov and emails a booking link the moment a cancellation opens your dates. It also tracks wildfire, smoke, and closures around RMNP trips, so the spot you grabbed is still worth the drive. Real people use it every week — I build with the AI I sell.",
       proofText: null as string | null,
