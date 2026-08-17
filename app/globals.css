@@ -117,7 +117,13 @@ html {
   transform: translateY(-4px) rotate(var(--card-rot, 0deg));
   box-shadow: var(--card-hshadow, 10px 10px 0 var(--ink));
 }
-/* Invert helper text + accents inside an alive card on hover */
+/* Helper text inside an alive card. Resting and hover colors both come from
+   CSS variables so neither state relies on an inline style, which would
+   outrank these rules and strand light text on the light hover fill. */
+.card-alive .card-sub {
+  color: var(--card-sub, inherit);
+  transition: color 0.25s ease;
+}
 .card-alive:hover .card-sub {
   color: var(--card-hsub, var(--card-hfg));
 }

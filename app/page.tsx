@@ -918,6 +918,9 @@ export default function ChrisDorseySite() {
                     const isAcid = card.bg === ACID;
                     const hbg = isAcid ? INK : ACID;
                     const hfg = isAcid ? PAPER : INK;
+                    // Body copy is softened a notch from the heading in both states.
+                    const sub = card.fg === "#fff" ? "rgba(255,255,255,0.9)" : "rgba(26,22,19,0.82)";
+                    const hsub = isAcid ? "rgba(242,236,221,0.82)" : "rgba(26,22,19,0.82)";
                     return (
                     <div
                       key={card.title}
@@ -927,7 +930,8 @@ export default function ChrisDorseySite() {
                         "--card-fg": card.fg,
                         "--card-hbg": hbg,
                         "--card-hfg": hfg,
-                        "--card-hsub": hfg,
+                        "--card-sub": sub,
+                        "--card-hsub": hsub,
                         "--card-hshadow": `8px 8px 0 ${isAcid ? INK : ACID}`,
                         border: `3px solid ${card.fg === "#fff" ? card.bg : INK}`,
                         boxShadow: `6px 6px 0 ${ACID === card.bg ? INK : ACID}`,
@@ -938,7 +942,7 @@ export default function ChrisDorseySite() {
                         <card.icon className="w-6 h-6" style={{ color: "currentColor" }} />
                       </div>
                       <h3 className="font-display font-bold mb-2 text-lg">{card.title}</h3>
-                      <p className="card-sub text-sm leading-relaxed" style={{ color: card.fg === "#fff" ? "rgba(255,255,255,0.9)" : "rgba(26,22,19,0.82)" }}>{card.body}</p>
+                      <p className="card-sub text-sm leading-relaxed">{card.body}</p>
                     </div>
                     );
                   })}
