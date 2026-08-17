@@ -1,4 +1,7 @@
 import type { Post } from "./types";
+import { post as pDVN } from "./doubleverify-nielsen-verification-independence-repriced";
+import { post as pCRT } from "./criteo-two-clients-retail-media-concentration";
+import { post as pAAM } from "./chatgpt-ads-advanced-matching-default-august-17";
 import { post as pPPL } from "./people-inc-sessions-down-rates-up";
 import { post as pIAB } from "./iab-ai-visibility-decision-grade-procurement";
 import { post as pTOK } from "./ai-tokens-principal-buying-agency-margin";
@@ -70,6 +73,9 @@ import { post as p56 } from "./selling-ai-skeptical-buyers";
 
 export type { Post } from "./types";
 export const posts: Post[] = [
+  pDVN,
+  pCRT,
+  pAAM,
   pPPL,
   pIAB,
   pTOK,

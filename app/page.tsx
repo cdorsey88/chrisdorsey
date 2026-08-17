@@ -499,16 +499,16 @@ export default function ChrisDorseySite() {
       url: "https://www.madrona.com/enterprise-ai-sales-2026-selling-is-easy-staying-in-is-everything/",
     },
     {
-      title: "Mission Andromeda: Gong Opens Its Revenue AI to Outside Agents",
-      by: "Gong",
-      desc: "Gong added native Model Context Protocol support, so agents living in Salesforce, Copilot, or your own stack can pull deal and conversation insight directly, with controls over what they see. If you run a revenue org, this is the reference for what an interoperable AI stack looks like instead of one more walled garden.",
-      url: "https://www.gong.io/press/gong-launches-mission-andromeda-expanding-its-revenue-ai-os-to-enablement-and-account-management",
+      title: "Verification Providers Missed Easy-To-Spot Bots, Says Adalytics",
+      by: "AdExchanger",
+      desc: "Adalytics documented verification vendors scoring self-declared bots as human traffic: IAS 77% of the time across a 2019–2024 dataset, DoubleVerify 21% on the same bots. The vendors dispute the methodology and the fight is now in litigation. Worth reading before your next media-quality renewal, because Nielsen just paid $2.15 billion for one side of this argument.",
+      url: "https://www.adexchanger.com/platforms/verification-providers-missed-easy-to-spot-bots-says-adalytics-what-went-wrong/",
     },
     {
-      title: "Where Enterprises are Actually Adopting AI",
-      by: "Kimberly Tan × a16z",
-      desc: "Hard numbers instead of survey sentiment: 29% of the Fortune 500 and roughly 19% of the Global 2000 are live, paying customers of a leading AI startup, and adoption is concentrated in coding, support and search, with tech, legal and healthcare buying first. If you're building a territory plan or an ROI case, this is the most useful map of where enterprise AI budget is actually landing.",
-      url: "https://a16z.com/where-enterprises-are-actually-adopting-ai/",
+      title: "Lighthouse or Landgrab? How to Pick Your AI Sales Strategy",
+      by: "Joe Schmidt × a16z",
+      desc: "Two questions decide your enterprise AI motion: how exposed is the person who signs, and does social proof travel in that market. High exposure with traveling proof means you need marquee logos first; recoverable mistakes in a fragmented market means you should be selling on math in Ohio while a competitor courts the Fortune 100. The trap list at the end is the part to bring to your pipeline review.",
+      url: "https://a16z.com/lighthouse-or-landgrab-how-to-pick-your-ai-sales-strategy/",
     },
   ];
 

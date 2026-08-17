@@ -11,6 +11,39 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "doubleverify-nielsen-verification-independence-repriced",
+    title: "DoubleVerify sold for half its IPO price and the buyer said “independent” nine times",
+    date: "Aug 17, 2026",
+    readTime: "6 min",
+    excerpt:
+      "Nielsen agreed on August 6 to buy DoubleVerify for $2.15 billion, or $13.60 a share. DV went public in 2021 at $27 and opened at $35. Eleven months after Novacap took Integral Ad Science private for $1.9 billion, both of the largest independent verification companies are off the public markets at roughly half what the category once fetched. Invalid traffic is still running near 20%, so the market didn't decide verification stopped mattering. It decided verification can't charge for it.",
+    tag: "MadTech",
+    color: "from-slate-700 to-rose-600",
+    tldr: "On August 6, Nielsen agreed to buy DoubleVerify for $13.60 a share in cash, an enterprise value of about $2.15 billion and a 30% premium to the 60-day VWAP. DV closed at $11.71 the day before. It went public in April 2021 at $27, opened at $35, carried a market value over $5 billion on day one, and peaked at $43.52. The exit is roughly half the entry. Eleven months earlier Novacap took Integral Ad Science private for $1.9 billion, so both of the largest independent verification companies are now off the public markets at prices in the same neighborhood. DV grew revenue 3% last quarter to $193.8 million with its core activation business down 1%. The Nielsen press release uses the word independent nine times, which is what happens when a measurement company with a commercial position buys the layer that checks its inputs. The category is not less necessary: Fraudlogix put global invalid traffic at 20.64% across 105.7 billion impressions this year, and Pixalate's Q1 benchmarks were 20% on web, 39% on mobile app, 25% on CTV. Adalytics also showed IAS classifying self-declared bot traffic as human 77% of the time in one 2019-2024 dataset, with DV missing the same bots 21% of the time. Necessary and defensible are different properties. If you sell a trust layer of any kind, your leverage was never that customers need the function, it was that they couldn't grade you on it. Before this closes in Q1 2027: find the change-of-control clause in your verification contract, ask in writing for per-platform miss rates against a declared-bot dataset, and put the independence commitments in the MSA rather than the press release.",
+  },
+  {
+    slug: "criteo-two-clients-retail-media-concentration",
+    title: "Two customers Criteo won't name took a third of its retail media profit",
+    date: "Aug 10, 2026",
+    readTime: "6 min",
+    excerpt:
+      "Criteo's Q2 landed Wednesday: revenue down 11%, the stock down 28%, the CFO replaced. Retail Media contribution ex-TAC fell 21%, carrying a $21 million hit from scope changes at two clients the company has never named — about a third of the segment's gross profit from the year-ago quarter. Strip those two out and the rest of the book grew 20%. A couple hundred retail partners, and two of them moved the whole year.",
+    tag: "MadTech",
+    color: "from-orange-800 to-slate-600",
+    tldr: "Criteo reported Q2 on August 5. Revenue $428 million, down 11%. Retail Media contribution ex-TAC fell 21% to $47.2 million, carrying a $21 million headwind from what the company calls scope changes with two specific Retail Media clients. It has never named them. Take those two out and the rest of the retail media book grew 20% with take rates intact. Full-year guidance moved to a 10-12% contribution ex-TAC decline at constant currency, against the low-single-digit decline guided on May 6. Q3 is guided to $237-241 million, down 14-15%. Adjusted EBITDA margin guidance went from 32-34% to about 30%. The stock fell 28%, and CFO Sarah Glickman is out after six years, with Connor McGogney starting today. Criteo monetizes retail media for a couple hundred retailers and ran $4.5 billion of media spend over the last twelve months, and two accounts still moved the whole year. The concentration was disclosed in May and repriced in August anyway. If you run a monetization business, pull the contribution concentration on your top five retail accounts this week and write down what happens when one of them insources. If you're a retailer on the other side of that contract, you have more room than your rate card implies.",
+  },
+  {
+    slug: "chatgpt-ads-advanced-matching-default-august-17",
+    title: "Your ChatGPT ad pixel starts reading your forms on August 17",
+    date: "Aug 10, 2026",
+    readTime: "6 min",
+    excerpt:
+      "OpenAI announced Friday that Automatic Advanced Matching turns on for every existing ChatGPT Ads pixel on August 17 unless you opt out. It reads what visitors type into your forms, hashes it in the browser, and sends it with the conversion event. The trades covered the menu path. Ten days is shorter than a privacy review at any enterprise I've sold into, and most of these pixels went in during a pilot last spring.",
+    tag: "Future of Ads",
+    color: "from-emerald-800 to-amber-500",
+    tldr: "OpenAI announced on August 7 that Automatic Advanced Matching is now the default on all new ChatGPT Ads web pixels and switches on for every existing pixel on August 17 unless the advertiser opts out first. AAM reads customer information visitors type into your forms, hashes it in the browser, and sends it with the conversion event so OpenAI can match more conversions back to ad interactions. The same release brought oCPC bidding in beta, dynamic URL parameters, Triple Whale and Hightouch and Sonar integrations, pixel validation diagnostics, a multi-product carousel test, and launches in Brazil and Mexico. Google is running its own version of the maneuver: on September 1 it starts auto-upgrading campaigns using automatically created assets or campaign-level broad match to AI Max, with search term matching enabled by default. The PPC trades covered the menu path for opting out. The part that lands on a company is that a default-on change to what customer data leaves your website arrives with ten days of notice, which is shorter than a privacy review at any enterprise I've ever sold into. Most of these pixels went in during a pilot last spring. Find out who owns yours, decide before Monday the 17th, and put the answer somewhere your legal team can find it.",
+  },
+  {
     slug: "people-inc-sessions-down-rates-up",
     title: "People Inc. lost 22% of its sessions and its ad revenue stayed flat",
     date: "Aug 6, 2026",
