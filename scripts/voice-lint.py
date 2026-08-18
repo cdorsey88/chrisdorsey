@@ -164,6 +164,53 @@ HARD_REGEX = [
      'cliche: "X walked so Y could run"'),
     (r"\bthe (question|issue|problem) (is|isn'?t|is not) (whether|if)\b[^.?!\n]{1,80}\bit'?s\b",
      'negation: "the question isn\'t X, it\'s Y"'),
+    # --- added Aug 2026 (v4): shapes pulled from a live edit pass ---
+    # anaphoric negate-then-restate: "The X was never A. ... The X was B."
+    (r"\b(The \w+) was (almost never|never|rarely|not|hardly ever)\b[^.?!\n]*[.?!](?:[^.?!\n]*[.?!])?\s*\1 was\b",
+     'anaphoric negate-restate: "The X was never A... The X was B"'),
+    # balanced metaphor couplet: "The fee was the appetizer. The window was the check."
+    (r"\bThe \w+ (was|is) the \w+\.\s+The \w+ (was|is) the \w+\.",
+     'aphoristic couplet: "The X was the A. The Y was the B."'),
+    # verbless two-beat verdict fragment: "Better ceiling, same shape."
+    (r"(^|[.?!]\s+)(Better|Bigger|Smaller|Higher|Lower|Faster|Slower|Newer|Older|Same|More|Less|Different)\s+\w+,\s*(same|different|new|old|better|worse|bigger|smaller|higher|lower|fewer|more|less)\s+\w+\.",
+     'verbless verdict fragment: "Better ceiling, same shape."'),
+    # significance-flagging the paragraph you are about to write
+    (r"\b(this|that|here) is the part (that|where)\b",
+     'significance-flag: "this is the part that..."'),
+    (r"\bgets? (misdiagnosed|misread|misunderstood|overlooked|underrated)\b",
+     'significance-flag: "the part that gets misread"'),
+    # tired idiom for self-interest
+    (r"\b(grading|marking) (their|his|her|its|your|my) own homework\b",
+     'dead idiom: "grading their own homework"'),
+    # strawman reader / preemptive insult
+    (r"\banyone (who|walking|coming|showing up|going|reading)\b[^.?!\n]{0,90}\b(is going to|will|would) (sound|look|come off|come across)\b",
+     'strawman-reader insult: "anyone who X will sound like Y"'),
+    # mirrored imperative-conditional pair
+    (r"\b(Run|Put|Push|Feed|Send|Take) (that|this|the same) \w+ through\b[^.?!\n]{0,90}\band it (is|becomes|turns)\b",
+     'imperative-conditional mirror: "Run X through A and it is B"'),
+    # self-congratulatory novelty claim
+    (r"\b(I|we) (have not|haven'?t|had not) seen\b[^.?!\n]{0,50}\b(written|said|covered|reported|made|anywhere|by anyone)\b",
+     'novelty self-congratulation: "I haven\'t seen this written anywhere"'),
+    (r"\bthe (shift|thing|part|point|angle) (I|we) (have not|haven'?t) seen\b",
+     'novelty self-congratulation: "the part I haven\'t seen"'),
+    # parallel-preposition antithesis couplet ("Under X... Under Y...")
+    (r"\bUnder (the|a|an|this|that) [^.?!\n]{2,55}[,.][^.?!\n]{0,90}[.?!]\s+Under (the|a|an|this|that)\b",
+     'parallel-preposition couplet: "Under X... Under Y..."'),
+    # snide either/or aside + cutesy hedge
+    (r"\bwhich is either \w+ or \w+\b",
+     'snide either/or aside: "which is either X or Y"'),
+    (r"\bdepending on your (mood|priors|politics|taste|tolerance)\b",
+     'cutesy hedge: "depending on your mood"'),
+    # performative humility / invitation to correct
+    (r"\b(I'?d|I would|happy to|glad to|I'?m happy to)\s*(happily |gladly )?be (corrected|proven wrong|told otherwise)\b",
+     'performative humility: "I\'d happily be corrected"'),
+    (r"\bcorrect me if I'?m wrong\b",
+     'performative humility: "correct me if I\'m wrong"'),
+    # significance tag — telling the reader a fact is important instead of showing it
+    (r",\s*(and|which) (that|this|it) (matters|counts|is significant|is the point|should tell you)\b",
+     'significance tag: ", and that matters"'),
+    (r"\band (that|this|it) matters\.",
+     'significance tag: "and that matters."'),
 ]
 
 # Moralizing / aphoristic closers — only HARD when they appear in the LAST
