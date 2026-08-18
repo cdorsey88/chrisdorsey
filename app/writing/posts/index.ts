@@ -1,4 +1,5 @@
 import type { Post } from "./types";
+import { post as pELV } from "./elevenlabs-voice-payouts-residual-returns";
 import { post as pSOR } from "./stripe-openrouter-model-switching-meter";
 import { post as pDVN } from "./doubleverify-nielsen-verification-independence-repriced";
 import { post as pCRT } from "./criteo-two-clients-retail-media-concentration";
@@ -74,6 +75,7 @@ import { post as p56 } from "./selling-ai-skeptical-buyers";
 
 export type { Post } from "./types";
 export const posts: Post[] = [
+  pELV,
   pSOR,
   pDVN,
   pCRT,

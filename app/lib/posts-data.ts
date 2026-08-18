@@ -11,6 +11,17 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "elevenlabs-voice-payouts-residual-returns",
+    title: "ElevenLabs pays voice talent per use. Advertising spent 30 years buying its way out of that.",
+    date: "Aug 18, 2026",
+    readTime: "7 min",
+    excerpt:
+      "ElevenLabs said in May it has paid $22 million to voice creators, double the November figure, cleared every six to eight days on usage. Advertising moved talent the other way decades ago because counting where a spot ran cost more than the check. Generative platforms count by default, so that constraint is gone \u2014 right as Meta asks for 50 assets an ad set and Unilever makes 400 per product.",
+    tag: "MadTech",
+    color: "from-violet-700 to-orange-500",
+    tldr: "ElevenLabs has paid $22 million to voice creators through its Voice Library across 10,400 people and 32 languages, double the $11 million reported in November, cleared through Stripe every six to eight days on metered usage. Advertising spent three decades moving talent toward flat buyouts for an accounting reason: tracking where a spot ran cost more than the check. Generative platforms count every character by default because metering is how they invoice, so the constraint that killed per-use payment is gone. That matters now because Meta Advantage+ asks for 20 to 50 assets per ad set refreshed every two to four weeks and Unilever told Digiday its AI studios produce 400 assets per product against a prior norm of 20 per campaign. Under a buyout that volume is liability with no upside for talent; under a per-use rate it is income. The open questions are real: ElevenLabs does not publish its split (roughly 15 to 18 percent by arithmetic), has no SAG-AFTRA agreement while Narrativ, Replica and Ethovox do, and was sued in Illinois in May. If you buy voice, get a usage-reporting clause into the paper while you are the one asking for it.",
+  },
+  {
     slug: "stripe-openrouter-model-switching-meter",
     title: "Stripe paid $7 billion for a company that switches away from your model",
     date: "Aug 17, 2026",

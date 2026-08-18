@@ -120,6 +120,50 @@ HARD_REGEX = [
     # "quietly [verb]ing" insinuation
     (r"\bquietly (rewriting|drawing|placing|building|becoming|reshaping|redrawing|assembling|winning|eating)\b",
      'insinuation: "quietly [verb]ing" — say plainly what happened'),
+    # --- added Aug 2026: 2026-vintage tells ---
+    # "Enter <Proper Noun>." — the blog-transition tic
+    (r"(^|[.?!]\s+)Enter\s+[A-Z][\w.\-]*[.,]",
+     'transition tic: "Enter <Company>."'),
+    (r"\b(cue the|welcome to the (era|age|world) of|in a world where)\b",
+     'hype transition: "cue the / welcome to the era of / in a world where"'),
+    (r"\b(let me (explain|be clear)|spoiler( alert)?:|hot take:)\b",
+     'faux-intimacy / faux-precision opener'),
+    (r"\bstop me if you'?ve heard this (one|before)\b",
+     'faux-intimacy opener: "stop me if you\'ve heard this"'),
+    (r"\b(buckle up|strap in)\b",
+     'hype filler: "buckle up"'),
+    # structural narration — describing your own essay instead of writing it
+    (r"\b(the )?(through-?line|punchline) (is|here is)\b",
+     'structural narration: "the throughline/punchline is"'),
+    (r"\bwhat'?s (actually|really) (happening|going on) (here )?is\b",
+     'significance-flag: "what\'s really happening is"'),
+    (r"\bhere'?s what (that|this) means for (you|your)\b",
+     'signposting: "here\'s what that means for you"'),
+    (r"\bso what does (this|that) mean\??",
+     'signposting: "so what does this mean?"'),
+    # sibling of the banned "quiet truth" family
+    (r"\bthe (uncomfortable|inconvenient|unglamorous|unsexy) (truth|reality|answer|part|math)\b",
+     'banned reveal: "the uncomfortable truth" family'),
+    (r"\bnobody (wants to|is willing to) (say|admit) (this|it)\b",
+     'insight-tease: "nobody wants to say this"'),
+    # 2026 commentary tics
+    (r"\b(is|are|was|were)\s+doing (a lot of|most of|all of|the) (the )?(work|heavy lifting)\b",
+     'commentary tic: "doing a lot of work here"'),
+    (r"\bif you squint\b",
+     'commentary tic: "if you squint"'),
+    # dead metaphors
+    (r"\b(the writing is on the wall|canary in the coal ?mine|tip of the iceberg|double-?edged sword|the genie is out of the bottle|moving the goalposts?)\b",
+     'dead metaphor'),
+    (r"\b(seismic|tectonic) (shift|change)\b|\bsea change\b",
+     'dead metaphor: "seismic/tectonic shift"'),
+    (r"\ba masterclass in\b",
+     'cliche: "a masterclass in"'),
+    (r"\b(living rent[- ]free|make it make sense|chef'?s kiss|it'?s giving)\b",
+     'social slop phrasing'),
+    (r"\b\w+ walked so \w+ could run\b",
+     'cliche: "X walked so Y could run"'),
+    (r"\bthe (question|issue|problem) (is|isn'?t|is not) (whether|if)\b[^.?!\n]{1,80}\bit'?s\b",
+     'negation: "the question isn\'t X, it\'s Y"'),
 ]
 
 # Moralizing / aphoristic closers — only HARD when they appear in the LAST
@@ -131,6 +175,17 @@ CLOSER_REGEX = [
      'closer opener "Ultimately,"'),
     (r"\b(the journey doesn'?t end here|the choice is ours|change is the only constant)\b",
      'poster-quote / universal-truism closer'),
+    # --- added Aug 2026 ---
+    (r"\b(time will tell|one thing is clear|watch this space|we'?re just getting started)\b",
+     'closer cliche: "time will tell / one thing is clear"'),
+    (r"\bthe next (\d+|twelve|six|eighteen|twenty-four) months will (tell|decide|determine|be)\b",
+     'closer cliche: "the next 12 months will tell"'),
+    (r"\bwelcome to the new normal\b",
+     'closer cliche: "welcome to the new normal"'),
+    (r"\bthat'?s the (world|game) (we'?re|we are) (living in|playing) now\b",
+     'closer cliche: "that\'s the world we live in now"'),
+    (r"^\s*(and )?that'?s the (whole )?point\.?\s*$",
+     'closer cliche: standalone "That\'s the point."'),
 ]
 
 # ----------------------------------------------------------------------------
@@ -147,6 +202,15 @@ SOFT_VOCAB = [
     "supercharge", "supercharged", "supercharges", "skyrocket", "skyrocketed",
     "skyrocketing", "unpack", "unpacking", "paradigm", "juggernaut",
     "meteoric", "behemoth", "trailblazing", "groundbreaking",
+    # added Aug 2026
+    "unlock", "unlocks", "unlocking", "reimagine", "reimagined", "reimagining",
+    "redefine", "redefines", "revolutionize", "revolutionizes", "democratize",
+    "democratizes", "democratizing", "frictionless", "turnkey", "bespoke",
+    "curated", "elevate", "elevates", "empower", "empowers", "empowering",
+    "actionable", "synergy", "synergies", "ideate", "operationalize",
+    "learnings", "myriad", "plethora", "veritable", "staggering", "sobering",
+    "eye-watering", "jaw-dropping", "game-changer", "game-changing",
+    "cutting-edge", "state-of-the-art", "best-in-class", "world-class",
 ]
 SOFT_INTENSIFIERS = ["actually", "genuinely", "truly", "simply", "essentially",
                      "crucially", "notably", "importantly", "fundamentally"]
@@ -171,6 +235,15 @@ SOFT_REGEX = [
     # in ones; flag the "truth is," opener which reads as unearned honesty
     (r"^\s*truth is[, ]",
      'unearned-honesty opener: "Truth is,"'),
+    # --- added Aug 2026 ---
+    (r"\bzoom(ing)? (out|in)\b",
+     'structural narration: "zoom out/in" — just make the wider point'),
+    (r"\bto be clear,",
+     'faux-precision opener: "To be clear,"'),
+    (r"\bwhich is to say\b",
+     'AI connective: "which is to say"'),
+    (r"\bat the risk of (stating the obvious|oversimplifying)\b",
+     'hedge tee-up'),
 ]
 
 # ----------------------------------------------------------------------------
