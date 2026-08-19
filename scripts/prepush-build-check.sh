@@ -38,6 +38,16 @@ STATUS=$?
 
 if [ $STATUS -eq 0 ]; then
   echo "build-check: committed tree compiles."
+  # Registry check runs against the SAME exported tree: a post .tsx that was
+  # never git-added is absent here, so this catches it even though the
+  # working-tree registry check passed.
+  if ! python3 "$REPO_ROOT/scripts/check-post-registry.py" --root "$TMP"; then
+    echo ""
+    echo "build-check: the COMMITTED tree has post-registration problems (above)."
+    echo "Most likely a file exists on disk but was never committed."
+    echo "Fix:  git add app/ && git commit --amend --no-edit"
+    exit 1
+  fi
   exit 0
 fi
 
