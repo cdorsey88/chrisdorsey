@@ -14,12 +14,12 @@ export const posts: PostMeta[] = [
     slug: "elevenlabs-voice-payouts-residual-returns",
     title: "ElevenLabs pays voice talent per use. Advertising spent 30 years buying its way out of that.",
     date: "Aug 18, 2026",
-    readTime: "7 min",
+    readTime: "4 min",
     excerpt:
-      "ElevenLabs said in May it has paid $22 million to voice creators, double the November figure, cleared every six to eight days on usage. Advertising moved talent the other way decades ago because counting where a spot ran cost more than the check. Generative platforms count by default, so that constraint is gone, right as Meta asks for 50 assets an ad set and Unilever makes 400 per product.",
+      "ElevenLabs has paid voice creators $22 million, double what it reported in November, and it pays per use. Advertising dropped per-use pay decades ago because counting how often an ad ran cost more than the check. AI platforms count every character to bill, so the counting is free, right as Meta asks for up to 50 assets per ad set.",
     tag: "MadTech",
     color: "from-violet-700 to-orange-500",
-    tldr: "ElevenLabs has paid $22 million to voice creators through its Voice Library across 10,400 people and 32 languages, double the $11 million reported in November, cleared through Stripe every six to eight days on metered usage. Advertising spent three decades moving talent toward flat buyouts for an accounting reason: tracking where a spot ran cost more than the check. Generative platforms count every character by default because metering is how they invoice, so the constraint that killed per-use payment is gone. That matters now because Meta Advantage+ asks for 20 to 50 assets per ad set refreshed every two to four weeks and Unilever told Digiday its AI studios produce 400 assets per product against a prior norm of 20 per campaign. A buyout turns that volume into liability with no upside for the talent, while metering it turns the same volume into their earnings. For the first time the brand scaling a campaign and the person who voiced it want the same thing. Most voice agreements on file still carry only a term and a territory, worth fixing while you are the one bringing it up.",
+    tldr: "ElevenLabs has paid $22 million to the 10,400 people who lend their voices to its Voice Library, double the figure from November, and the money is paid per use, every six to eight days. Advertising stopped paying voice talent per use decades ago for a bookkeeping reason: working out how often an ad ran cost more than the check. AI platforms count every character because that is how they bill, so the counting is free. Right as Meta asks for up to 50 pieces of creative per ad set and Unilever makes 400 assets per product, that flips volume from the actor’s problem into the actor’s paycheck, and puts the brand and the talent on the same side for the first time.",
   },
   {
     slug: "stripe-openrouter-model-switching-meter",
