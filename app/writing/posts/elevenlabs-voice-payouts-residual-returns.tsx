@@ -4,10 +4,10 @@ export const post: Post = {
     slug: "elevenlabs-voice-payouts-residual-returns",
     title: "ElevenLabs pays voice talent per use. Advertising spent 30 years buying its way out of that.",
     date: "Aug 18, 2026",
-    readTime: "7 min",
+    readTime: "6 min",
     tag: "MadTech",
     color: "from-violet-700 to-orange-500",
-    tldr: "ElevenLabs said in May it has paid $22 million to voice creators through its Voice Library — 10,400 people, 32 languages, cleared every six to eight days on usage. That number was $11 million in November, so it doubled in six months. Advertising has spent three decades moving talent the other way, toward flat buyouts, for a boring reason: counting where a spot ran cost more than the check. Generative platforms count usage by default, because metering is how they bill. Meanwhile Meta wants 20 to 50 assets per ad set refreshed every few weeks and Unilever is producing 400 assets per product. A buyout turns that volume into pure exposure with no upside for the talent; metering it turns the same volume into their earnings. The open questions are real — ElevenLabs doesn't publish its split, has no SAG-AFTRA agreement while Narrativ and Ethovox do, and got sued in Illinois in May. Most voice agreements on file today carry a term and a territory and nothing else, which is worth fixing before the people collecting those payouts start asking for reporting themselves.",
+    tldr: "ElevenLabs said in May it has paid $22 million to voice creators through its Voice Library — 10,400 people, 32 languages, cleared every six to eight days on usage. That number was $11 million in November, so it doubled in six months. Advertising has spent three decades moving talent the other way, toward flat buyouts, for a boring reason: counting where a spot ran cost more than the check. Generative platforms count usage by default, because metering is how they bill. Meanwhile Meta wants 20 to 50 assets per ad set refreshed every few weeks and Unilever is producing 400 assets per product. A buyout turns that volume into pure exposure with no upside for the talent; metering it turns the same volume into their earnings. For the first time the brand scaling a campaign and the person who voiced it want the same thing, and most voice agreements on file still carry only a term and a territory — worth fixing while you are the one bringing it up.",
     content: (
       <div className="prose-content">
         <p>
@@ -52,28 +52,18 @@ export const post: Post = {
         <p>
           For the first time in my career, a brand scaling a campaign and the person who voiced it are pulling in the same direction. Thirty markets is thirty times the usage. That used to mean a renegotiation and a nervous call to legal. Now it turns up in the next payout.
         </p>
-        <h2>What ElevenLabs hasn&rsquo;t put a number on yet</h2>
         <p>
-          The split itself isn&rsquo;t published. Three cents per thousand characters against list pricing of roughly seventeen to twenty cents works out to a creator share somewhere in the 15% to 18% range, though that is my arithmetic off two public numbers rather than anything ElevenLabs has stated. No one in the category publishes a figure, including Deepdub, Respeecher, and Vermillio. Music worked out legible publishing and master splits decades ago. Voice is still early enough that whoever ships a real rate card and a statement-level view of earnings first gets a trust position that is currently sitting empty.
-        </p>
-        <p>
-          The union question is open too. Narrativ has had SAG-AFTRA endorsement since August 2024, with the actor approving every individual ad and pension and health contributions paid on each one. Replica signed in January 2024 at $956.75 per four-hour session. Ethovox signed in October 2024 with a session fee plus revenue share for the life of the model, and it is owned and run by voice actors. ElevenLabs is the largest player in the category and has not signed one of those. Given how much money is already moving through the payouts, that reads more like a question of timing than of principle. Seven journalists and voice actors filed suit in Illinois in May over models they say were built from their recordings without consent.
-        </p>
-        <p>
-          And the audience is not thrilled. The Harris Poll work with the 4A&rsquo;s and Infillion released at Cannes in June found 78% of people say AI makes ads feel less authentic and 63% are less likely to buy from a brand using AI-generated advertising. Smartly&rsquo;s number is the more useful one: 13% trust an ad made entirely by AI, against 48% for an ad made by humans with AI support. Human involvement is the variable that moves the needle, which is an argument for the licensed, credited, paid human being a product feature rather than a compliance checkbox.
-        </p>
-        <p>
-          It also happens to be the one thing Meta and Google can&rsquo;t copy. Both are moving toward giving ad creative generation away free to protect media spend — Meta has said it wants full automation of ad creation inside its own walls by the end of this year. Neither has a talent supply side. No rights business, no payment rail, no consenting human anywhere in the stack. Model quality is going to commoditize. A working royalty ledger with 10,400 people on it is harder to stand up in a quarter.
+          A licensed, credited, paid human in the loop is also the one thing Meta and Google can&rsquo;t easily copy. Both are moving toward giving ad creative generation away free to protect media spend, and Meta has said it wants full automation of ad creation inside its own walls by the end of this year. Neither has a talent supply side. No rights business, no payment rail, no consenting human anywhere in the stack. Model quality is going to commoditize. A working royalty ledger with 10,400 people on it is harder to stand up in a quarter.
         </p>
         <h2>The legal floor is moving underneath all of it</h2>
         <p>
-          The regulatory floor is moving underneath this too. EU AI Act transparency obligations went live on August 2, with penalties up to fifteen million euros or 3% of global turnover. New York&rsquo;s synthetic performer disclosure law took effect June 9, and it exempts audio-only advertising and exempts AI translation of a human performer, which is a friendlier read for dubbing and localization work than most people assume. The NO FAKES Act cleared Senate Judiciary on a unanimous voice vote in June and is waiting on floor time.
+          The regulatory floor is moving in the same direction. EU AI Act transparency obligations went live on August 2, with penalties up to fifteen million euros or 3% of global turnover. New York&rsquo;s synthetic performer disclosure law took effect June 9, and it exempts audio-only advertising and exempts AI translation of a human performer, which is a friendlier read for dubbing and localization work than most people assume. The NO FAKES Act cleared Senate Judiciary on a unanimous voice vote in June and is waiting on floor time.
         </p>
         <p>
           Meanwhile the IPA census in February put creative agency employment down 14.3% year over year. Those two facts are related, and the people leaving are disproportionately the ones who used to do versioning by hand.
         </p>
         <p>
-          Ten thousand people are now getting a payout statement from ElevenLabs every six to eight days, and people who get statements compare them. The going rate becomes common knowledge whether or not anyone publishes a rate card. Most voice agreements sitting in a brand or agency file today contain a term and a territory and nothing else, because a term and a territory were all anybody could enforce back when this was counted by hand. If you are on the buying side of one this fall, a usage-reporting clause costs almost nothing while you are the one bringing it up, and considerably more when their agent brings it up first.
+          Ten thousand people are now getting a payout statement from ElevenLabs every six to eight days, and metering is turning into the normal way voice work gets paid. Most voice agreements sitting in a brand or agency file today still contain a term and a territory and nothing else, because that was all anybody could enforce back when usage was counted by hand. That constraint is gone. If you are writing one of those agreements this fall, a usage-reporting clause costs almost nothing to add now, and it lines the brand and the talent up on the same side of the invoice.
         </p>
       </div>
     ),
@@ -83,14 +73,10 @@ export const post: Post = {
       { title: "ElevenLabs — How we solved multilingual advertising and built Ads Engine", url: "https://elevenlabs.io/blog/how-we-solved-multilingual-advertising-internally-and-why-we-are-launching-it-as-ads-engine" },
       { title: "SAG-AFTRA — 2025 Commercials Contracts", url: "https://www.sagaftra.org/contracts-industry-resources/commercials/2025-commercials-contracts" },
       { title: "Wrapbook — Essential guide to SAG rates (2026–27)", url: "https://www.wrapbook.com/blog/essential-guide-sag-rates" },
-      { title: "Deadline — SAG-AFTRA agreement with Narrativ for AI voice ads", url: "https://deadline.com/2024/08/sag-aftra-agreement-narrativ-ai-voice-ads-1236040192/" },
-      { title: "SAG-AFTRA — Ethovox agreement", url: "https://www.sagaftra.org/new-sag-aftra-and-ethovox-agreement-empowers-actors-and-secures-essential-ai-guardrails" },
       { title: "Digiday — Inside Unilever's AI beauty marketing assembly line", url: "https://digiday.com/marketing/inside-unilevers-ai-beauty-marketing-assembly-line-and-its-implications-for-agencies/" },
-      { title: "Marketing Brew — Harris Poll on AI fatigue and ad trust", url: "https://www.marketingbrew.com/stories/harris-poll-ai-fatigue-less-trust-ai-generated-ads-cannes-lions" },
       { title: "eMarketer — AI-driven ad creation could decrease need for agencies", url: "https://www.emarketer.com/content/ai-driven-ad-creation-could-give-meta-more-control-decrease-need-agencies" },
       { title: "Manatt — New York synthetic performer law: what advertisers need to know", url: "https://www.manatt.com/insights/newsletters/client-alert/new-york-synthetic-performer-law-what-advertisers-need-to-know" },
       { title: "EU AI Act — Article 50 transparency obligations", url: "https://artificialintelligenceact.eu/transparency-rules-article-50/" },
       { title: "The Drum — Agency leaders on the IPA's 14% agency job loss findings", url: "https://www.thedrum.com/news/a-structural-shift-not-a-blip-agency-leaders-on-ipa-14-agency-job-loss-findings" },
-      { title: "Sifted — ElevenLabs lawsuit (May 2026)", url: "https://sifted.eu/articles/elevenlabs-lawsuit-2026" },
     ],
 };
