@@ -1,4 +1,6 @@
 import type { Post } from "./types";
+import { post as pANA } from "./ana-retail-media-measurement-long-tail";
+import { post as pWMJ } from "./walmart-ad-margin-supplier-funded-jbp";
 import { post as pELV } from "./elevenlabs-voice-payouts-residual-returns";
 import { post as pSOR } from "./stripe-openrouter-model-switching-meter";
 import { post as pDVN } from "./doubleverify-nielsen-verification-independence-repriced";
@@ -75,6 +77,8 @@ import { post as p56 } from "./selling-ai-skeptical-buyers";
 
 export type { Post } from "./types";
 export const posts: Post[] = [
+  pANA,
+  pWMJ,
   pELV,
   pSOR,
   pDVN,

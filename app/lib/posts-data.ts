@@ -11,6 +11,28 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "ana-retail-media-measurement-long-tail",
+    title: "The ANA's new retail media rules are hardest on the networks that just launched",
+    date: "Aug 25, 2026",
+    readTime: "6 min",
+    excerpt:
+      "The ANA issued its Retail Media Measurement Standardization report on August 18, built with more than 40 brand heads of media and reviewed by seven networks. It asks for third-party validation, a standardized 14-day loopback window, and one shared definition of an outcome. The coverage went to the checklist and to Amazon's absence. An ID-linked impression is also a scale test, and the same fortnight produced two networks that will struggle to pass it.",
+    tag: "MadTech",
+    color: "from-teal-800 to-rose-500",
+    tldr: "On August 18 the ANA issued its Retail Media Measurement Standardization report, built by a subcommittee of more than 40 brand heads of media including Mondelez, PepsiCo, Hershey, Colgate-Palmolive, Clorox and Intel. The recommendations: third-party measurement and validation, transparency into methods and definitions, a standardized 14-day loopback window, performance context beyond attributed sales, and one shared definition of an outcome. Walmart Connect, Sam's Club Connect, CVS Media Exchange, Instacart, Albertsons Media Collective, BJ's Media Edge and Roundel gave feedback. Amazon never responded. Coverage went to the checklist and to Amazon's absence. The part that matters more: an ID-linked impression and third-party validation are scale tests, and the same fortnight produced two new networks that will struggle to pass them. Academy Sports launched on August 8, and Circle K relaunched Full Circle Media across 6,600 stores with up to 200 million monthly impressions from fuel pumps, checkout screens and in-store displays. If you run a network, sort your surfaces this quarter into the ones that can produce an ID-linked impression and the ones that cannot, and price the second group as something other than retail media before a buyer does it for you.",
+  },
+  {
+    slug: "walmart-ad-margin-supplier-funded-jbp",
+    title: "The ad business your brand funds now carries about a third of Walmart's operating income",
+    date: "Aug 25, 2026",
+    readTime: "6 min",
+    excerpt:
+      "Walmart's Q2 FY27 landed Thursday: revenue up 5.9%, operating income up $2.1 billion, global advertising up 38%. That's two straight quarters of an ad business growing about six times faster than the company that owns it. Reuters reported that Walmart Connect's margins contribute roughly a third of operating income. Every dollar in that line came out of a brand's marketing budget, and most brands still negotiate it like a toll.",
+    tag: "Sales",
+    color: "from-sky-800 to-amber-500",
+    tldr: "Walmart reported Q2 FY27 on August 20. Revenue of $187.9 billion, up 5.9%. Operating income up $2.1 billion, or 28.8%. Global advertising up 38%, with Walmart U.S. advertising also up 38%. That is the second straight quarter of advertising growing roughly six times faster than the company, after 37% global growth in Q1. Reuters reported ahead of the print that Walmart Connect's margins contribute about a third of operating income, with analysts putting gross margins near 70%. Coverage framed it as ads carrying Walmart while store sales cool. The part that lands on a brand: the money in that line is supplier marketing budget, and it is now load-bearing in a public company's earnings model. Your annual commitment stopped being the cost of the relationship somewhere around the point a CFO started forecasting it. Before your next joint business plan, pull two numbers. What share of your total spend with this retailer is media versus trade, and what the retailer's ad business grew last quarter. Negotiate against the gap between them.",
+  },
+  {
     slug: "elevenlabs-voice-payouts-residual-returns",
     title: "ElevenLabs pays voice talent per use. Advertising spent 30 years buying its way out of that.",
     date: "Aug 18, 2026",
