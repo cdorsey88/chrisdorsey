@@ -11,6 +11,17 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "cloudflare-ai-crawler-defaults-brand-content",
+    title: "Cloudflare’s new crawler defaults don’t touch most brand-owned content",
+    date: "Aug 25, 2026",
+    readTime: "6 min",
+    excerpt:
+      "Cloudflare will start blocking AI training and agent crawlers by default on September 15, but only on pages that carry ads. USA Today, Politico, Reuters and People Inc. are separately weighing whether to block Google’s crawlers outright. Almost all of that fight is about pages that carry ads. Most brand-owned content doesn’t, and stays open by default.",
+    tag: "MadTech",
+    color: "from-indigo-800 to-amber-500",
+    tldr: "On September 15, Cloudflare will start blocking Training and Agent crawlers by default on any page that carries ads, while Search crawlers stay allowed by default; the change applies as new domains onboard to a network Cloudflare says carries more than half of all web traffic. The same month, the Wall Street Journal reported that USA Today, Politico, Reuters and People Inc. are each weighing whether to block Google’s crawlers outright, after some publishers lost more than 40% of search traffic between June 2025 and June 2026 on Semrush data; Reddit is reevaluating a $60 million-a-year Google licensing deal, and Penske Media already sued Google over AI Overviews last year. USA Today CEO Mike Reed described the logic plainly: publishers with a licensing deal get crawled, everyone else gets blocked. Every one of those fights is about pages that carry ads, because that is the population Cloudflare’s new default targets and the population publishers monetize. Most brand-owned content — blog posts, comparison pages, documentation, buying guides — doesn’t run third-party ads, so it sits outside the fight and stays open to the same crawlers by default. As the ad-funded web gets harder for AI answer engines to reach, whatever a brand already publishes on its own domain becomes a larger share of what is left to crawl and cite, without anyone touching a robots.txt file. The catch: any brand property that does carry ad script inherits the same default block, opting itself out of AI citations without anyone deciding to.",
+  },
+  {
     slug: "ana-retail-media-measurement-long-tail",
     title: "The ANA's new retail media rules are hardest on the networks that just launched",
     date: "Aug 25, 2026",
