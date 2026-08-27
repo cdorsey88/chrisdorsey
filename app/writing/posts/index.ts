@@ -1,4 +1,5 @@
 import type { Post } from "./types";
+import { post as pCRB } from "./how-i-built-campsite-ranger";
 import { post as pCFD } from "./cloudflare-ai-crawler-defaults-brand-content";
 import { post as pANA } from "./ana-retail-media-measurement-long-tail";
 import { post as pWMJ } from "./walmart-ad-margin-supplier-funded-jbp";
@@ -78,6 +79,7 @@ import { post as p56 } from "./selling-ai-skeptical-buyers";
 
 export type { Post } from "./types";
 export const posts: Post[] = [
+  pCRB,
   pCFD,
   pANA,
   pWMJ,
