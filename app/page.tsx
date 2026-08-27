@@ -524,14 +524,6 @@ export default function ChrisDorseySite() {
       proofLabel: null as string | null,
     },
     {
-      title: "Campsite Ranger",
-      stack: "Designed & built solo · Next.js · Python · Fly.io + Supabase · 24/7 cloud monitoring",
-      desc: "A live product I designed and built end to end, now running around the clock in the cloud. Colorado's campgrounds, timed-entry permits, and wilderness zones sell out months ahead, so it watches recreation.gov and emails a booking link the moment a cancellation opens your dates. It also tracks wildfire, smoke, and closures around RMNP trips, so the spot you grabbed is still worth the drive. Real people use it every week — I build with the AI I sell.",
-      proofText: null as string | null,
-      proofUrl: "https://alerts.chrisdorsey.co",
-      proofLabel: "Try it live",
-    },
-    {
       title: "/client-brief slash command",
       stack: "Claude Code",
       desc: "A custom slash command that pulls public signals on a prospect and drafts a discovery-ready brief in under a minute.",
@@ -651,6 +643,18 @@ export default function ChrisDorseySite() {
         <section className="relative pt-20 pb-14 px-7" aria-labelledby="hero-heading">
           <div className="max-w-6xl mx-auto grid items-center gap-10" style={{ gridTemplateColumns: "minmax(0,1.2fr) minmax(0,0.9fr)" }}>
             <div>
+              {/* Campsite Ranger launch callout */}
+              <div className="mb-0">
+              <a
+                href="#builds"
+                className="inline-flex items-center gap-2.5 mb-6 font-semibold rounded-full lift"
+                style={{ fontSize: 14, padding: "6px 16px 6px 6px", background: ACID, color: INK, border: `2px solid ${INK}`, boxShadow: `4px 4px 0 ${INK}` }}
+              >
+                <span className="text-xs uppercase tracking-widest font-bold px-2.5 py-1 rounded-full" style={{ background: INK, color: ACID }}>Just shipped</span>
+                <span>Campsite Ranger is live. I built it.</span>
+                <ArrowUpRight className="w-4 h-4 shrink-0" />
+              </a>
+              </div>
               <div className="inline-flex gap-2 items-center font-semibold mb-4" style={{ fontSize: 13, letterSpacing: "0.06em", textTransform: "uppercase" }}>
                 <b style={{ background: ACID, padding: "4px 10px", borderRadius: 100 }}>AI</b>
                 <span style={{ color: "#4a4239" }}>· data · MadTech</span>
@@ -1115,6 +1119,59 @@ export default function ChrisDorseySite() {
               Sellers who build with AI win. I use the tools I sell, every week. Here&apos;s what I&apos;m
               shipping, and the community builds I think every seller and marketer should know about.
             </p>
+
+            {/* Campsite Ranger — launch feature */}
+            <div id="campsite-ranger" className="rounded-2xl mb-14 overflow-hidden" style={{ background: INK, color: PAPER, border: `3px solid ${INK}`, boxShadow: `10px 10px 0 ${TEAL}` }}>
+              <div className="grid md:grid-cols-2 items-center">
+                <div className="p-7 md:p-9">
+                  <div className="inline-block text-xs uppercase tracking-widest px-3 py-1 rounded-full mb-4 font-bold" style={{ background: ACID, color: INK }}>
+                    Launched &middot; August 2026
+                  </div>
+                  <h3 className="font-display font-extrabold mb-3" style={{ fontSize: "clamp(24px,3vw,34px)", lineHeight: 1.05, color: PAPER }}>
+                    Campsite Ranger is live.
+                  </h3>
+                  <p className="text-sm leading-relaxed mb-3" style={{ color: "rgba(242,236,221,0.85)" }}>
+                    A paying product, running around the clock. Campsite Ranger watches recreation.gov and emails Colorado campers a booking link the moment a sold-out campsite, timed-entry permit, or wilderness zone opens in their dates &mdash; then keeps watching wildfire, smoke, and closures so the trip is still worth the drive.
+                  </p>
+                  <p className="text-sm leading-relaxed mb-5" style={{ color: "rgba(242,236,221,0.85)" }}>
+                    I designed, built, and shipped every piece of it myself, pairing with Claude Code: 337 commits from first line to launch, in seven weeks, on nights and weekends.
+                  </p>
+                  <div className="flex gap-3 flex-wrap items-center mb-5">
+                    <a
+                      href="https://www.campsiteranger.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 font-semibold rounded-full lift"
+                      style={{ fontSize: 15, padding: "11px 20px", background: ACID, color: INK, border: `2px solid ${ACID}` }}
+                    >
+                      Visit campsiteranger.com <ArrowUpRight className="w-4 h-4" />
+                    </a>
+                    <Link
+                      href="/writing/how-i-built-campsite-ranger"
+                      className="inline-flex items-center gap-1 font-semibold rounded-full"
+                      style={{ fontSize: 15, padding: "11px 20px", border: `2px solid ${PAPER}`, color: PAPER }}
+                    >
+                      Read the build story <ArrowUpRight className="w-4 h-4" />
+                    </Link>
+                  </div>
+                  <div className="text-xs font-mono rounded-lg px-3 py-2 inline-block" style={{ background: "rgba(242,236,221,0.1)", color: PAPER }}>
+                    Next.js &middot; Python &middot; Supabase &middot; Fly.io &middot; Lemon Squeezy &middot; Claude Code
+                  </div>
+                </div>
+                <div className="p-5 md:p-7">
+                  <a href="https://www.campsiteranger.com" target="_blank" rel="noopener noreferrer" className="block">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src="/campsite-ranger-live.webp"
+                      alt="Campsite Ranger homepage: cancellation alerts for sold-out Colorado campsites and permits"
+                      loading="lazy"
+                      className="w-full block rounded-xl transition-transform hover:-translate-y-1"
+                      style={{ border: `3px solid ${PAPER}`, boxShadow: `8px 8px 0 ${ACID}`, transform: "rotate(-1deg)" }}
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
 
             {/* My builds — bold color tiles, big numbers */}
             <p className="inline-block text-xs uppercase tracking-widest px-3 py-1 rounded-full mb-5 font-bold" style={{ color: INK, background: ACID }}>What I&apos;m building</p>
