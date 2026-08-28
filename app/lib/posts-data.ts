@@ -11,6 +11,17 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "how-i-built-campsite-ranger",
+    title: "337 commits in seven weeks: I built and launched Campsite Ranger solo with Claude Code",
+    date: "Aug 27, 2026",
+    readTime: "5 min",
+    excerpt:
+      "Campsite Ranger went live this month: it watches recreation.gov around the clock and emails you a booking link the moment a sold-out Colorado campsite or permit opens in your dates, then keeps watching wildfire and closure feeds after you book. I designed, built, and launched it alone in seven weeks with Claude Code on the other keyboard \u2014 337 commits, one Python worker, one Next.js app, and one border collie in the logo.",
+    tag: "Builds",
+    color: "from-emerald-800 to-amber-500",
+    tldr: "Campsite Ranger is live at campsiteranger.com. It watches recreation.gov around the clock and emails you a booking link the moment a sold-out Colorado campsite, timed-entry permit, or wilderness zone opens in your dates, then keeps watching wildfire, smoke, and closure feeds so the trip is still worth the drive. It covers 49 Colorado locations: 43 campgrounds, 3 timed-entry permits, and 3 wilderness overnight zones. I designed, built, and launched it alone, 337 commits between July 8 and August 27, pairing with Claude Code across a Python monitoring worker on Fly.io, a Next.js and TypeScript web app backed by Supabase, email through Resend, and payments through Lemon Squeezy. A watch is free during the beta, a Trip Pass is $7, and the first hundred members lock in $25 a year for life. The larger point for anyone selling AI right now: the tools are good enough that the gap between a demo and a business is finishing.",
+  },
+  {
     slug: "cloudflare-ai-crawler-defaults-brand-content",
     title: "Cloudflare’s new crawler defaults don’t touch most brand-owned content",
     date: "Aug 25, 2026",
