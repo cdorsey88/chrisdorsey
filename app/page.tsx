@@ -643,18 +643,6 @@ export default function ChrisDorseySite() {
         <section className="relative pt-20 pb-14 px-7" aria-labelledby="hero-heading">
           <div className="max-w-6xl mx-auto grid items-center gap-10" style={{ gridTemplateColumns: "minmax(0,1.2fr) minmax(0,0.9fr)" }}>
             <div>
-              {/* Campsite Ranger launch callout */}
-              <div className="mb-0">
-              <a
-                href="#builds"
-                className="inline-flex items-center gap-2.5 mb-6 font-semibold rounded-full lift"
-                style={{ fontSize: 14, padding: "6px 16px 6px 6px", background: ACID, color: INK, border: `2px solid ${INK}`, boxShadow: `4px 4px 0 ${INK}` }}
-              >
-                <span className="text-xs uppercase tracking-widest font-bold px-2.5 py-1 rounded-full" style={{ background: INK, color: ACID }}>Just shipped</span>
-                <span>Campsite Ranger is live. I built it.</span>
-                <ArrowUpRight className="w-4 h-4 shrink-0" />
-              </a>
-              </div>
               <div className="inline-flex gap-2 items-center font-semibold mb-4" style={{ fontSize: 13, letterSpacing: "0.06em", textTransform: "uppercase" }}>
                 <b style={{ background: ACID, padding: "4px 10px", borderRadius: 100 }}>AI</b>
                 <span style={{ color: "#4a4239" }}>· data · MadTech</span>
@@ -741,6 +729,60 @@ export default function ChrisDorseySite() {
             </p>
           </div>
         </section>
+
+        {/* Campsite Ranger launch band — sits between the hero and the connector hub */}
+        <aside
+          aria-label="Campsite Ranger launch"
+          className="px-7 py-5 md:py-6"
+          style={{ background: ACID, borderTop: `3px solid ${INK}`, borderBottom: `3px solid ${INK}` }}
+        >
+          <div className="max-w-6xl mx-auto flex flex-wrap items-center gap-6 md:gap-7">
+            <a
+              href="https://www.campsiteranger.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Campsite Ranger — visit the live site"
+              className="shrink-0 block"
+              style={{ width: 190 }}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/campsite-ranger-live.webp"
+                alt="Campsite Ranger homepage: cancellation alerts for sold-out Colorado campsites and permits"
+                loading="lazy"
+                width={190}
+                className="w-full block rounded-[10px] transition-transform hover:-translate-y-1"
+                style={{ border: `3px solid ${INK}`, boxShadow: `5px 5px 0 ${INK}`, transform: "rotate(-1.5deg)" }}
+              />
+            </a>
+            <div className="flex-1" style={{ minWidth: 260 }}>
+              <span
+                className="inline-block text-xs uppercase tracking-widest font-bold px-3 py-1 rounded-full mb-2.5"
+                style={{ background: INK, color: ACID }}
+              >
+                Just shipped
+              </span>
+              <p className="font-display font-extrabold leading-tight mb-1" style={{ fontSize: "clamp(19px,2.2vw,22px)", color: INK }}>
+                I built Campsite Ranger start to finish.
+              </p>
+              <p className="leading-snug" style={{ fontSize: 15, color: "rgba(26,22,19,0.72)" }}>
+                A live product with paying users. Designed, coded, and shipped solo in seven weeks.{" "}
+                <Link href="/writing/how-i-built-campsite-ranger" className="font-semibold underline underline-offset-2" style={{ color: INK }}>
+                  How I did it
+                </Link>
+              </p>
+            </div>
+            <a
+              href="https://www.campsiteranger.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 font-semibold rounded-full lift shrink-0"
+              style={{ fontSize: 15, padding: "13px 22px", background: INK, color: PAPER, border: `2px solid ${INK}` }}
+            >
+              See it live <ArrowUpRight className="w-4 h-4" />
+            </a>
+          </div>
+        </aside>
 
         {/* Connector hub — no hard top rule; flows from the hero on color + spacing */}
         <section id="connect" className="px-7 pt-10 pb-14" style={{ background: CREAM2, borderBottom: `3px solid ${INK}` }}>
