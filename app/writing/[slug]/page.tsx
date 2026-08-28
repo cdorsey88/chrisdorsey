@@ -350,7 +350,7 @@ export default async function PostPage({
                 — most recently at Zeta Global, Oracle, and Fastly. Currently advising founders and sales leaders on
                 AI go-to-market and Generative Engine Optimization.
               </p>
-              <div className="flex flex-wrap items-center gap-3 text-xs">
+              <div className="flex flex-col items-start gap-2 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 text-xs">
                 <a
                   href="https://www.linkedin.com/in/cdorsey/"
                   target="_blank"
@@ -360,7 +360,7 @@ export default async function PostPage({
                 >
                   LinkedIn
                 </a>
-                <span style={{ color: "rgba(26,22,19,0.3)" }}>·</span>
+                <span className="hidden sm:inline" style={{ color: "rgba(26,22,19,0.3)" }}>·</span>
                 <a
                   href={`mailto:${CONTACT_EMAIL}`}
                   className="inline-flex items-center gap-1.5 font-semibold hover:opacity-70 transition"
@@ -368,7 +368,7 @@ export default async function PostPage({
                 >
                   {CONTACT_EMAIL}
                 </a>
-                <span style={{ color: "rgba(26,22,19,0.3)" }}>·</span>
+                <span className="hidden sm:inline" style={{ color: "rgba(26,22,19,0.3)" }}>·</span>
                 <Link
                   href="/work-with-me"
                   className="inline-flex items-center gap-1.5 font-semibold hover:opacity-70 transition"

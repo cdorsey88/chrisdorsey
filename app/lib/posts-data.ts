@@ -14,7 +14,7 @@ export const posts: PostMeta[] = [
     slug: "how-i-built-campsite-ranger",
     title: "337 commits in seven weeks: I built and launched Campsite Ranger solo with Claude Code",
     date: "Aug 27, 2026",
-    readTime: "5 min",
+    readTime: "4 min",
     excerpt:
       "Campsite Ranger went live this month: it watches recreation.gov around the clock and emails you a booking link the moment a sold-out Colorado campsite or permit opens in your dates, then keeps watching wildfire and closure feeds after you book. I designed, built, and launched it alone in seven weeks with Claude Code on the other keyboard \u2014 337 commits, one Python worker, one Next.js app, and one border collie in the logo.",
     tag: "Builds",
