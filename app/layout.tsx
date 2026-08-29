@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Newsreader, Bricolage_Grotesque } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import AnalyticsEvents from "@/app/components/AnalyticsEvents";
 import "./globals.css";
 import { CONTACT_EMAIL } from "@/app/lib/site-config";
 
@@ -218,6 +219,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <Analytics />
+        <AnalyticsEvents />
         <SpeedInsights />
       </body>
     </html>
