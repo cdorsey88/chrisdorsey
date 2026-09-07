@@ -535,9 +535,9 @@ export default function ChrisDorseySite() {
       title: "Soundcheck — brand QA for AI-generated audio ads",
       stack: "ElevenLabs Voice Design · TTS · Music · SFX · Dubbing · Scribe v2 · Python",
       desc: "Built as a demo for ElevenLabs. It turns a brand's guidelines into a machine-readable standard, generates a 12-spot, four-market campaign through six ElevenLabs APIs, then checks every render for script fidelity, pronunciation, pace, loudness, required disclosures, and voice drift, and prices each miss against the media plan. On the live run it failed 5 of 12 spots, $1.82M of a simulated $2.8M plan, and caught a mispronounced founder name nobody had planted. As far as I can find, no vendor sells this for audio yet; the brand-compliance tools score pixels.",
-      proofText: "Live run verified Aug 2026. Full write-up coming.",
-      proofUrl: null as string | null,
-      proofLabel: null as string | null,
+      proofText: "MVP. Live run verified Aug 2026.",
+      proofUrl: "/writing/soundcheck-audio-brand-qa" as string | null,
+      proofLabel: "Read the write-up" as string | null,
     },
     {
       title: "AI category landscape mapping",

@@ -132,6 +132,11 @@ HARD_REGEX = [
      'faux-intimacy opener: "stop me if you\'ve heard this"'),
     (r"\b(buckle up|strap in)\b",
      'hype filler: "buckle up"'),
+    # --- added Sept 7, 2026 (Chris caught "and no transcript is going to tell you that") ---
+    (r"\b(and|but) (no \w+( \w+)?|nothing( else)?|nobody|no one) (is |are |was |were )?(going to|will|would|can|could|ever) (tell|show|catch|save|fix|give|teach|do|say|explain)( you| them| that)? (that|this|it)\b",
+     'kicker tail: "...and no X is going to tell you that" (sentence-final zinger; end on the fact instead)'),
+    (r"\b(that|this) is (not )?(something|the part|the kind of thing) (that )?(no|a|any) \w+( \w+)? (can|will|could|would)( ever)? (tell|show|catch|see|teach) you\b",
+     'kicker tail: "that is the kind of thing no X can tell you"'),
     # structural narration — describing your own essay instead of writing it
     (r"\b(the )?(through-?line|punchline) (is|here is)\b",
      'structural narration: "the throughline/punchline is"'),

@@ -11,6 +11,17 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "soundcheck-audio-brand-qa",
+    title: "I built Soundcheck, a brand check for AI-generated audio ads. On its first live run it caught problems in 5 of 12 spots.",
+    date: "Sep 7, 2026",
+    readTime: "3 min",
+    excerpt:
+      "AI voice platforms can render a thousand audio ads in an afternoon, and nothing checks whether all thousand sound like the brand. I built an MVP called Soundcheck to be that check. On its first live run it flagged 5 of 12 spots, $1.82M of a simulated $2.8M plan, and caught a mispronounced founder name nobody had planted.",
+    tag: "Builds",
+    color: "from-violet-700 to-orange-500",
+    tldr: "AI voice platforms can render a thousand audio ads in an afternoon, and nothing checks whether all thousand sound like the brand. Ad verification listens to the content around the ad, script tools screen for regulatory words, and brand-compliance products score pixels. I built an MVP called Soundcheck that compiles a brand's guidelines into a machine-readable standard, generates a campaign through six ElevenLabs APIs, and runs six checks on every render, priced against the media plan. On its first live run it flagged 5 of 12 spots, $1.82M of a simulated $2.8M plan, and caught a mispronounced founder name nobody had planted. If something already does this, I want to hear about it.",
+  },
+  {
     slug: "how-i-built-campsite-ranger",
     title: "337 commits in seven weeks: I built and launched Campsite Ranger solo with Claude Code",
     date: "Aug 27, 2026",
