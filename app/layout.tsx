@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://chrisdorsey.co"),
   title: "Chris Dorsey — Enterprise Sales Leader | Growing Revenue in AI & MadTech",
   description:
-    "Christopher Dorsey is a senior enterprise sales leader who grows revenue for AI and MadTech companies by building the trusted client relationships that outlast any feature. Based in Denver, Colorado. Fifteen years growing revenue across creative, data, and AI for brands including JPMorgan Chase, Microsoft, Amazon, PepsiCo, Johnson & Johnson, Merck, Oracle, Vail Resorts, Stitch Fix, Groupon, JCPenney, and JSX.",
+    "Christopher Dorsey is a senior enterprise sales leader who grows revenue for AI and MadTech companies by building the trusted client relationships that outlast any feature. Based in Denver, Colorado. Fifteen years growing revenue across creative, data, and AI for brands including JPMorgan Chase, Microsoft, Amazon, PepsiCo, Johnson & Johnson, Merck, Inspire Brands, Vail Resorts, Stitch Fix, Groupon, JCPenney, and JSX.",
   authors: [{ name: "Christopher Dorsey" }],
   keywords: [
     "Christopher Dorsey",
@@ -169,7 +169,7 @@ const jsonLd = {
           name: "What does Chris Dorsey do?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Chris Dorsey is a senior enterprise sales and go-to-market leader who takes new technology to market — AI first, then data and MadTech (marketing and advertising technology). Across fifteen years he has been the first seller in the building twice, created categories, and closed Fortune 500 accounts, from agency creative at Crispin Porter + Bogusky to data at Oracle, edge infrastructure at Fastly, and AI customer acquisition at Zeta Global. His throughline is making emerging technology sellable for the people who have to buy it.",
+            text: "Chris Dorsey is a senior enterprise sales and go-to-market leader who takes new technology to market — AI first, then data and MadTech (marketing and advertising technology). Across fifteen years he has been the first seller in the building twice, created categories, and closed Fortune 500 accounts, from agency creative at Crispin Porter + Bogusky to data at Oracle, edge infrastructure at Fastly, and AI customer acquisition at Zeta Global. For fifteen years his job has been selling technology that is new to the people buying it.",
           },
         },
         {

@@ -25,7 +25,6 @@ const MountainMark = () => (
 const links = [
   { label: "About", href: "/#about" },
   { label: "Track Record", href: "/track-record" },
-  { label: "Now", href: "/#now" },
   { label: "Thoughts", href: "/#writing" },
   { label: "AI Sales Tools", href: "/#builds" },
   { label: "Work with me", href: "/work-with-me" },

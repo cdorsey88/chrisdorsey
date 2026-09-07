@@ -70,7 +70,7 @@ export default function Testimonials() {
           References
         </div>
         <h2 className="font-display font-extrabold tracking-tight mb-3" style={{ ...display, fontSize: "clamp(30px,4.5vw,52px)", color: INK }}>
-          They put their name on it.
+          They put their name on&nbsp;it.
         </h2>
         <p className="text-lg mb-12" style={{ color: "#4a4239" }}>
           Clients, executive leaders, and cross-functional peers who&apos;ll vouch for me, on the record.

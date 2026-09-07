@@ -3,10 +3,13 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import {
-  ArrowUpRight, Mail, Code2, Users, Calendar, Clock, Compass, ExternalLink,
+  ArrowUpRight, Mail, Code2, Calendar, Clock, ExternalLink,
 } from "lucide-react";
 import { posts as allPosts } from "@/app/lib/posts-data";
 import { CONTACT_EMAIL, SHOW_TESTIMONIALS } from "@/app/lib/site-config";
+
+// Community picks are hidden for now (Sept 2026) to reduce clutter. Flip to true to restore.
+const SHOW_COMMUNITY_PICKS = false;
 import Testimonials from "@/app/components/Testimonials";
 
 // Layered-range mark — three ridges (blue, teal, ink). Layers rise on load, drift on hover.
@@ -227,26 +230,30 @@ function ConnectorHub() {
         Chances are, I already know who you should talk to.
       </div>
       <p className="text-base md:text-lg mt-4 max-w-2xl" style={{ color: "#4a4239" }}>
-        Four industries, fifteen years, one deep network — from Fortune 500 CMOs
-        to the creatives who make the work. Tell me the gap and I&apos;ll make the
+        Fifteen years across four industries means I know a lot of people, from Fortune 500 CMOs
+        to the creatives who make the work. Tell me what you need and I&apos;ll make the
         introduction. No fee, no angle — I truly just enjoy connecting people.
         Things like that tend to come around.
       </p>
       <div className="font-display font-extrabold mt-5" style={{ fontSize: "clamp(22px,4vw,40px)", color: INK }}>
         I&apos;ll connect you with{" "}
-        <span
-          aria-live="polite"
-          style={{
-            color: TEAL,
-            borderBottom: `6px solid ${ACID}`,
-            display: "inline-block",
-            transition: "opacity .2s ease",
-            opacity: rotVisible ? 1 : 0,
-          }}
-        >
-          {rotWord}
+        {/* Below lg the rotating phrase always sits on its own line (block + nowrap), so the
+            line count is constant across words and the content below never shifts. */}
+        <span className="block lg:inline whitespace-nowrap">
+          <span
+            aria-live="polite"
+            style={{
+              color: TEAL,
+              borderBottom: `6px solid ${ACID}`,
+              display: "inline-block",
+              transition: "opacity .2s ease",
+              opacity: rotVisible ? 1 : 0,
+            }}
+          >
+            {rotWord}
+          </span>
+          .
         </span>
-        .
       </div>
 
       <svg
@@ -466,7 +473,7 @@ export default function ChrisDorseySite() {
     { name: "PepsiCo",             domain: "pepsico.com" },
     { name: "Johnson & Johnson",   domain: "jnj.com" },
     { name: "Merck",               domain: "merck.com" },
-    { name: "Oracle",              domain: "oracle.com" },
+    { name: "Inspire Brands",      domain: "inspirebrands.com" },
     { name: "Vail Resorts",        domain: "vailresorts.com", logoClass: "h-12" },
     { name: "Stitch Fix",          domain: "stitchfix.com" },
     { name: "Groupon",             domain: "groupon.com" },
@@ -479,9 +486,9 @@ export default function ChrisDorseySite() {
   // Era cards — warming gray→teal toward "now".
   const eras = [
     { title: "Creative & PR", year: "2009", desc: "Crispin Porter + Bogusky — Agency of the Decade. Built the first proactive new-business function.", bg: CREAM2, fg: INK, border: INK },
-    { title: "Digital", year: "2013", desc: "First hire at an indie NYC shop. Grew revenue 300% in a year.", bg: ACID, fg: INK, border: INK },
+    { title: "Digital", year: "2013", desc: "First hire at an indie NYC shop. Grew revenue 300% in a year and beat agencies with thousands of employees to win IMAX, then built the campaign that repositioned the brand around intensity.", bg: ACID, fg: INK, border: INK },
     { title: "Data", year: "2018", desc: "Oracle — managed Amazon, J&J, PepsiCo. Edge infrastructure at Fastly.", bg: BLUE, fg: "#fff", border: BLUE },
-    { title: "AI acquisition", year: "2024", desc: "Zeta Global — first email-based AI customer-acquisition product to market.", bg: VIOLET, fg: "#fff", border: VIOLET },
+    { title: "AI acquisition", year: "2024", desc: "Zeta Global — first email-based AI customer-acquisition product to market, with opt-in permission to email 110M+ people on behalf of our clients.", bg: VIOLET, fg: "#fff", border: VIOLET },
     { title: "AI & agents", year: "now", desc: "Advising founders, building with the AI tools I sell.", bg: TEAL, fg: "#fff", border: TEAL },
   ];
 
@@ -524,12 +531,12 @@ export default function ChrisDorseySite() {
       proofLabel: null as string | null,
     },
     {
-      title: "/client-brief slash command",
-      stack: "Claude Code",
-      desc: "A custom slash command that pulls public signals on a prospect and drafts a discovery-ready brief in under a minute.",
-      proofText: null as string | null,
+      title: "Soundcheck — brand QA for AI-generated audio ads",
+      stack: "ElevenLabs Voice Design · TTS · Music · SFX · Dubbing · Scribe v2 · Python",
+      desc: "Built as a demo for ElevenLabs. It turns a brand's guidelines into a machine-readable standard, generates a 12-spot, four-market campaign through six ElevenLabs APIs, then checks every render for script fidelity, pronunciation, pace, loudness, required disclosures, and voice drift, and prices each miss against the media plan. On the live run it failed 5 of 12 spots, $1.82M of a simulated $2.8M plan, and caught a mispronounced founder name nobody had planted. As far as I can find, no vendor sells this for audio yet; the brand-compliance tools score pixels.",
+      proofText: "Live run verified Aug 2026. Full write-up coming.",
       proofUrl: null as string | null,
-      proofLabel: "See it work",
+      proofLabel: null as string | null,
     },
     {
       title: "AI category landscape mapping",
@@ -553,7 +560,7 @@ export default function ChrisDorseySite() {
     },
     {
       q: "Is Chris looking for a full-time role?",
-      a: "Yes — that's the plan, full stop. He's focused on one full-time senior individual-contributor go-to-market role — Account Director, Strategic Account Manager, Director of Customer Success or Partnerships — at an AI, retail media, AdTech/MarTech, or enterprise SaaS company. He's led teams and chooses to be hands-on: carrying a number and owning the client relationships, not managing. He responds to every note personally.",
+      a: "Yes. He's focused on one full-time senior individual-contributor go-to-market role — Account Director, Strategic Account Manager, Director of Customer Success or Partnerships — at an AI, retail media, AdTech/MarTech, or enterprise SaaS company. He's led teams and chooses to be hands-on: carrying a number and owning the client relationships, not managing. He responds to every note personally.",
     },
     {
       q: "Where is Chris based?",
@@ -602,7 +609,6 @@ export default function ChrisDorseySite() {
             <div className="hidden md:flex items-center gap-7 text-sm" style={{ color: INK }}>
               <a href="#about"   className="font-medium nav-link">About</a>
               <Link href="/track-record" className="font-medium nav-link">Track Record</Link>
-              <a href="#now"     className="font-medium nav-link">Now</a>
               <a href="#writing" className="font-medium nav-link">Thoughts</a>
               <a href="#builds"  className="font-medium nav-link">AI Sales Tools</a>
               <Link href="/work-with-me" className="font-medium nav-link">Work with me</Link>
@@ -624,7 +630,7 @@ export default function ChrisDorseySite() {
           <p>
             Christopher Dorsey (Chris Dorsey) is a senior enterprise sales leader based in Denver, Colorado, who
             specializes in taking new AI products to market — first sales hire, category creator, Fortune 500
-            closer. The throughline of his fifteen-year career is making emerging technology sellable, from agency
+            closer. For fifteen years his job has been selling technology that is new to the people buying it, from agency
             creative and early-stage startups to AdTech, infrastructure, and AI. His career began at Crispin Porter
             + Bogusky, named Agency of the Decade by AdAge in 2009, where he helped build the agency&apos;s first
             proactive new business development function, contributing to a pitch-win streak of more than $100M in
@@ -753,41 +759,6 @@ export default function ChrisDorseySite() {
           </div>
         </aside>
 
-        {/* Personality strip — music links preserved */}
-        <section className="px-7 pt-9 pb-11" aria-label="Location and personal details">
-          <div className="max-w-6xl mx-auto">
-            <p className="text-sm leading-relaxed" style={{ color: "#6a6258" }}>
-              Based in <span className="font-medium" style={{ color: INK }}>Denver, CO</span>. Currently building{" "}
-              <span className="font-medium" style={{ color: INK }}>AI tools for the seller community</span> &mdash; sharpening how deals get worked, from first conversation to close. On rotation:{" "}
-              {[
-                { name: "King Gizzard & the Lizard Wizard", url: "https://music.youtube.com/search?q=King+Gizzard+and+the+Lizard+Wizard" },
-                { name: "Talking Heads", url: "https://music.youtube.com/search?q=Talking+Heads" },
-                { name: "Justice", url: "https://music.youtube.com/search?q=Justice+electronic+band" },
-                { name: "LCD Soundsystem", url: "https://music.youtube.com/search?q=LCD+Soundsystem" },
-                { name: "Harry Styles", url: "https://music.youtube.com/search?q=Harry+Styles" },
-                { name: "Angine de Poitrine", url: "https://music.youtube.com/search?q=Angine+de+Poitrine" },
-              ].map((band, i, arr) => (
-                <span key={band.name}>
-                  <a
-                    href={band.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-0.5 font-medium transition-colors group"
-                    style={{ color: INK }}
-                  >
-                    {band.name}
-                    <svg width="11" height="11" viewBox="0 0 24 24" className="inline-block ml-0.5 shrink-0 opacity-30 group-hover:opacity-100 transition-opacity">
-                      <circle cx="12" cy="12" r="12" fill="#1A1613" />
-                      <polygon points="9.5,7 18,12 9.5,17" fill="white" />
-                    </svg>
-                  </a>
-                  {i < arr.length - 2 ? ", " : i === arr.length - 2 ? ", and " : "."}
-                </span>
-              ))}
-            </p>
-          </div>
-        </section>
-
         {/* Connector hub — no hard top rule; flows from the hero on color + spacing */}
         <section id="connect" className="px-7 pt-10 pb-14" style={{ background: CREAM2, borderBottom: `3px solid ${INK}` }}>
           <div className="max-w-6xl mx-auto">
@@ -803,11 +774,11 @@ export default function ChrisDorseySite() {
           <div className="max-w-6xl mx-auto">
             <Reveal>
               <div className="font-display font-extrabold leading-[0.95]" style={{ fontSize: "clamp(28px,4vw,46px)", color: INK }}>
-                Seen every reinvention. Helped people win through each one.
+                I&apos;ve sold through every one of these shifts and helped clients come out ahead each time.
               </div>
               <p className="mt-3 mb-8 max-w-2xl" style={{ fontSize: 17, color: "#4a4239" }}>
-                Same job each era: figure out what&apos;s actually changing, then build the path before everyone else
-                catches up.
+                The job hasn&apos;t changed: figure out what&apos;s new, then help clients use it before their
+                competitors do.
               </p>
             </Reveal>
             <Reveal className="grid gap-4" style={{ gridTemplateColumns: "repeat(auto-fit,minmax(180px,1fr))" }}>
@@ -854,7 +825,7 @@ export default function ChrisDorseySite() {
                 Brands &amp; teams I&apos;ve worked with
               </p>
               <p className="text-lg leading-relaxed" style={{ color: "rgba(255,255,255,0.92)" }}>
-                The logos below represent campaigns built, revenue driven, and relationships that outlasted any single deal.
+                Companies I&apos;ve sold to or built work for. Many of these relationships lasted well past the first deal.
               </p>
             </div>
             <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-x-5 gap-y-5 items-stretch justify-items-stretch">
@@ -899,10 +870,9 @@ export default function ChrisDorseySite() {
             </h2>
             <div className="space-y-6 text-lg leading-relaxed" style={{ color: "#3a332c", maxWidth: "62ch" }}>
               <p>
-                The throughline of my career is simple: figure out what a client needs, then build the path to
-                get them there. The deals I&apos;m proudest of took months of showing up before anyone signed,
-                and the work kept going for years after. Most of the deciding in enterprise sales happens when
-                the seller isn&apos;t in the room. Trust is what speaks for you in there.
+                My whole career comes down to this: figure out what a client needs, then help them get there. The deals I&apos;m proudest of took months of showing up before anyone signed,
+                and the work kept going for years after. Most enterprise deals get decided in meetings the
+                seller isn&apos;t invited to. What carries you through those is whether the client trusts you.
               </p>
               <p>
                 The full fifteen years, with the numbers, lives on the{" "}
@@ -914,14 +884,13 @@ export default function ChrisDorseySite() {
                 NYC agency and helped grow it 300% in a year. I managed Amazon and Johnson &amp; Johnson for
                 Oracle. And for the last two years I&apos;ve sold AI products that reached market before their
                 budget lines existed, first at Zeta Global, then through an advisory engagement at FancyAI that
-                wrapped in May 2026, again the first seller in the building. After two motions built from zero, I&apos;m
-                looking to plant roots and do the work I love — carrying a number and building the client relationships.
+                wrapped in May 2026, again the first seller in the building. After two motions built from zero, I want to
+                stay somewhere for a long time and do the part I like most: carrying a number and building the client relationships.
               </p>
               <p>
                 I also build with the tools I sell. Lately that means Claude Code commands that compress prospect
                 research from hours to minutes, and an agent that surfaces untapped opportunities inside existing
-                accounts, building the expansion roadmap an account leader would otherwise piece together by hand. The best sellers of the next decade will know their product at the hands-on level, and
-                the only way I know to get there is to use the thing.
+                accounts, building the expansion roadmap an account leader would otherwise piece together by hand. I don&apos;t think you can sell a product well until you&apos;ve used it yourself, so I do.
               </p>
               <div className="rounded-2xl p-6 mt-8" style={{ background: ACID, border: `3px solid ${INK}`, boxShadow: `6px 6px 0 ${INK}`, transform: "rotate(-1deg)" }}>
                 <p className="italic font-medium" style={{ color: INK }}>
@@ -940,68 +909,6 @@ export default function ChrisDorseySite() {
         {/* Track record band */}
         <TrackRecordBand />
 
-        {/* Now */}
-        <section id="now" className="relative pt-6 pb-16 px-7">
-          <div className="max-w-5xl mx-auto">
-            <div className="rounded-3xl p-10 md:p-16 relative overflow-hidden" style={{ background: INK, color: PAPER, border: `3px solid ${INK}` }}>
-              <div className="relative">
-                <div className="flex items-center gap-3 mb-4 flex-wrap">
-                  <div className="text-xs uppercase tracking-widest px-3 py-1 rounded-full font-bold" style={{ color: INK, background: ACID }}>
-                    Now
-                  </div>
-                  <span className="text-xs" style={{ color: "rgba(242,236,221,0.6)" }}>Updated June 2026</span>
-                </div>
-                <h2 className="font-display font-extrabold mb-4 leading-[1.0]" style={{ fontSize: "clamp(28px,4vw,46px)" }}>
-                  What I&apos;m working on right now.
-                </h2>
-                <p className="mb-12 text-base md:text-lg max-w-2xl" style={{ color: "rgba(242,236,221,0.7)" }}>
-                  Between roles, I keep my hands on the work &mdash; here&apos;s where.
-                </p>
-                <div className="grid md:grid-cols-3 gap-5">
-                  {[
-                    { icon: Compass, num: "01", bg: BLUE, fg: "#fff", title: "Supporting Main Street with pro bono AI consulting", body: "Helping small businesses put AI to work so they can stay in business. Free, hands-on consulting for local owners on the work that eats their week, from customer follow-up to the books." },
-                    { icon: Code2, num: "02", bg: ACID, fg: INK, title: "Building the AI tools I'll bring to my next team", body: "An agent that maps untapped opportunities inside existing accounts to seed the account-expansion roadmap, plus Claude Code slash commands that cut prospect research from hours to minutes." },
-                    { icon: Users, num: "03", bg: VIOLET, fg: "#fff", title: "Mentoring & advising sales leaders", body: "Working with a small handful of founders and sales leaders on building durable pipeline motions — the kind that compound through relationships, not just outbound volume." },
-                  ].map((card, i) => {
-                    // Hover: acid-fill cards invert to ink; dark/blue/violet cards
-                    // brighten to acid. Body text follows via .card-sub.
-                    const isAcid = card.bg === ACID;
-                    const hbg = isAcid ? INK : ACID;
-                    const hfg = isAcid ? PAPER : INK;
-                    // Body copy is softened a notch from the heading in both states.
-                    const sub = card.fg === "#fff" ? "rgba(255,255,255,0.9)" : "rgba(26,22,19,0.82)";
-                    const hsub = isAcid ? "rgba(242,236,221,0.82)" : "rgba(26,22,19,0.82)";
-                    return (
-                    <div
-                      key={card.title}
-                      className="card-alive rounded-2xl p-6 flex flex-col"
-                      style={{
-                        "--card-bg": card.bg,
-                        "--card-fg": card.fg,
-                        "--card-hbg": hbg,
-                        "--card-hfg": hfg,
-                        "--card-sub": sub,
-                        "--card-hsub": hsub,
-                        "--card-hshadow": `8px 8px 0 ${isAcid ? INK : ACID}`,
-                        border: `3px solid ${card.fg === "#fff" ? card.bg : INK}`,
-                        boxShadow: `6px 6px 0 ${ACID === card.bg ? INK : ACID}`,
-                      } as React.CSSProperties}
-                    >
-                      <div className="flex items-center justify-between mb-4">
-                        <span className="font-display font-extrabold" style={{ fontSize: 34, lineHeight: 1, opacity: 0.9 }}>{card.num}</span>
-                        <card.icon className="w-6 h-6" style={{ color: "currentColor" }} />
-                      </div>
-                      <h3 className="font-display font-bold mb-2 text-lg">{card.title}</h3>
-                      <p className="card-sub text-sm leading-relaxed">{card.body}</p>
-                    </div>
-                    );
-                  })}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Writing — teal band, bento layout */}
         <section id="writing" className="relative py-16 px-7" style={{ background: TEAL, borderTop: `3px solid ${INK}`, borderBottom: `3px solid ${INK}` }}>
           <div className="max-w-5xl mx-auto">
@@ -1019,9 +926,9 @@ export default function ChrisDorseySite() {
               </Link>
             </div>
             <p className="text-lg leading-relaxed mb-10" style={{ color: "rgba(255,255,255,0.92)", maxWidth: "62ch" }}>
-              My beat is advertising, marketing, tech, and AI. The approach is the one I bring to sales:
-              find the angle everyone else walked past, and publish while the news is still warm, sources
-              attached. People occasionally call this thought leadership. I won&apos;t. I just can&apos;t bring
+              My beat is advertising, marketing, tech, and AI. Same approach I take in sales:
+              notice something other people haven&apos;t yet, say what I think about it, and get it out while
+              it&apos;s still news, sources attached. People occasionally call this thought leadership. I won&apos;t. I just can&apos;t bring
               myself to do it. I&apos;m also not a visionary, rockstar, or guru.
             </p>
             {/* Featured latest post — wide card that fills its space */}
@@ -1163,7 +1070,7 @@ export default function ChrisDorseySite() {
             </h2>
             <p className="mb-10 max-w-2xl text-lg" style={{ color: "#4a4239" }}>
               Sellers who build with AI win. I use the tools I sell, every week. Here&apos;s what I&apos;m
-              shipping, and the community builds I think every seller and marketer should know about.
+              shipping.
             </p>
 
             {/* Campsite Ranger — launch feature */}
@@ -1221,7 +1128,7 @@ export default function ChrisDorseySite() {
 
             {/* My builds — bold color tiles, big numbers */}
             <p className="inline-block text-xs uppercase tracking-widest px-3 py-1 rounded-full mb-5 font-bold" style={{ color: INK, background: ACID }}>What I&apos;m building</p>
-            <div className="grid md:grid-cols-2 gap-5 mb-14">
+            <div className={`grid md:grid-cols-2 gap-5 ${SHOW_COMMUNITY_PICKS ? "mb-14" : ""}`}>
               {builds.map((build, i) => {
                 const tiles = [
                   { bg: INK, fg: PAPER, accent: ACID, chip: "rgba(242,236,221,0.1)", chipFg: PAPER },
@@ -1266,7 +1173,8 @@ export default function ChrisDorseySite() {
               })}
             </div>
 
-            {/* Community picks */}
+                        {/* Community picks — hidden while SHOW_COMMUNITY_PICKS is false */}
+            {SHOW_COMMUNITY_PICKS && (<>
             <p className="text-xs uppercase tracking-widest font-bold mb-5" style={{ color: "#6a6258" }}>Community picks worth your time</p>
             <div className="grid md:grid-cols-2 gap-5">
               {communityBuilds.map((build, i) => (
@@ -1292,9 +1200,10 @@ export default function ChrisDorseySite() {
                     </div>
                     <p className="text-sm leading-relaxed" style={{ color: "#3a332c" }}>{build.desc}</p>
                   </div>
-                </a>
+                                </a>
               ))}
             </div>
+            </>)}
           </div>
         </section>
 
