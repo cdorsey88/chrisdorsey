@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import Link from "next/link";
 
 // Mobile-only navigation: a hamburger button in the sticky bar (upper right,
@@ -23,6 +24,9 @@ const links = [
 
 export default function MobileMenu() {
   const [open, setOpen] = useState(false);
+  // Portal target exists only on the client.
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
 
   // Lock page scroll while the overlay is up; close on Escape.
   useEffect(() => {
@@ -55,14 +59,16 @@ export default function MobileMenu() {
         )}
       </button>
 
-      {open && (
+      {/* Portaled to <body>: the sticky nav uses backdrop-filter, which Safari treats as the
+          containing block for position:fixed, so an overlay rendered inside it only covers the bar. */}
+      {mounted && open && createPortal(
         <div
           id="mobile-menu"
           role="dialog"
           aria-modal="true"
           aria-label="Site menu"
-          className="fixed inset-0 z-[60] flex flex-col"
-          style={{ background: INK, color: PAPER }}
+          className="fixed inset-0 z-[60] flex flex-col overflow-y-auto"
+          style={{ background: INK, color: PAPER, minHeight: "100dvh" }}
         >
           <div className="flex items-center justify-between px-6 py-4">
             <span className="font-display" style={{ fontSize: 21, fontWeight: 800, lineHeight: 1 }}>
@@ -99,7 +105,8 @@ export default function MobileMenu() {
               Say hi.
             </Link>
           </nav>
-        </div>
+        </div>,
+        document.body
       )}
     </div>
   );

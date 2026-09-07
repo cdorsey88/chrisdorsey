@@ -877,7 +877,7 @@ export default function ChrisDorseySite() {
                 Decade, helping build its first proactive new-business function. I was the first hire at an indie
                 NYC agency and helped grow it 300% in a year. I managed Amazon and Johnson &amp; Johnson for Oracle Advertising. And for the last two years I&apos;ve sold AI products that reached market before their
                 budget lines existed, first at Zeta Global, then through an advisory engagement at FancyAI that
-                wrapped in May 2026, again the first seller in the building. After two motions built from zero, the part I like most hasn&apos;t changed: carrying a number and building the client relationships.
+                wrapped in May 2026, again the first seller in the building. After two motions built from zero, the part I like most hasn&apos;t changed: carrying a number and building the client relationships. Today I do that at Epsilon, part of Publicis Groupe, on the beverage-alcohol desk.
               </p>
               <p>
                 I also build with the tools I sell. Lately that means Claude Code commands that compress prospect
