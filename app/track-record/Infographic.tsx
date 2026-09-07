@@ -156,14 +156,14 @@ const chapters: Chapter[] = [
     numberLabel: "closed on a first-to-market product",
   },
   {
-    company: "FancyAI",
-    years: "2026",
-    era: "ai",
-    headline: "First seller in the building, again",
+    company: "Epsilon",
+    years: "2026–",
+    era: "enterprise",
+    headline: "Carrying a number again",
     detail:
-      "A three-month advisory and consulting engagement in spring 2026 as FancyAI's first dedicated seller. Built the go-to-market motion from zero in an emerging AI category most buyers didn't have a budget line for yet. The second time starting a sales motion from scratch, using my network to get meetings at big brands and agencies.",
-    number: "0→1",
-    numberLabel: "sales motion built from scratch",
+      "Joined Epsilon, part of Publicis Groupe, in September 2026 on the beverage-alcohol desk. Enterprise sales of retail media, data, and digital programs to spirits, wine, and beer brands and the retailers that carry them.",
+    number: "Now",
+    numberLabel: "retail media, data, and digital for beverage-alcohol brands",
   },
 ];
 
