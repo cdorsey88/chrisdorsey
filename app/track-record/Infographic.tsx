@@ -25,7 +25,7 @@ const stats: Stat[] = [
   { prefix: "", end: 108, suffix: "%", label: "Net revenue retention", sub: "Fastly, technical buyers" },
   { prefix: "", end: 60, suffix: "%", label: "Book growth in one year", sub: "Oracle Advertising, $3.1M to $4.9M" },
   { prefix: "$", end: 4, suffix: "M+", label: "Enterprise RFPs led and won", sub: "Oracle Advertising, Fortune 500 evaluations" },
-  { prefix: "", end: 2, suffix: "×", label: "First seller in the building", sub: "Cooke + Wax hire, FancyAI advisory" },
+  { prefix: "", end: 2, suffix: "×", label: "First seller in the building", sub: "Cooke + Wax hire, Oracle Advertising data-informed contextual targeting" },
 ];
 
 // Accent color cycled across the stat-card numbers — the scoreboard "pops".
