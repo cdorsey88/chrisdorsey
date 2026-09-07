@@ -23,8 +23,8 @@ const stats: Stat[] = [
   { prefix: "", end: 3, suffix: "", label: "Categories sold before budget lines existed", sub: "AI acquisition, contextual, answer-engine" },
   { prefix: "$", end: 100, suffix: "M+", label: "Pitch-win streak", sub: "CP+B, first proactive new-business function" },
   { prefix: "", end: 108, suffix: "%", label: "Net revenue retention", sub: "Fastly, technical buyers" },
-  { prefix: "", end: 60, suffix: "%", label: "Book growth in one year", sub: "Oracle, $3.1M to $4.9M" },
-  { prefix: "$", end: 4, suffix: "M+", label: "Enterprise RFPs led and won", sub: "Oracle, Fortune 500 evaluations" },
+  { prefix: "", end: 60, suffix: "%", label: "Book growth in one year", sub: "Oracle Advertising, $3.1M to $4.9M" },
+  { prefix: "$", end: 4, suffix: "M+", label: "Enterprise RFPs led and won", sub: "Oracle Advertising, Fortune 500 evaluations" },
   { prefix: "", end: 2, suffix: "×", label: "First seller in the building", sub: "Cooke + Wax hire, FancyAI advisory" },
 ];
 
@@ -116,7 +116,7 @@ const chapters: Chapter[] = [
     numberLabel: "net-new business won",
   },
   {
-    company: "Oracle",
+    company: "Oracle Advertising",
     years: "2018–19",
     era: "enterprise",
     headline: "The mid-market sprint",
@@ -136,7 +136,7 @@ const chapters: Chapter[] = [
     numberLabel: "net revenue retention",
   },
   {
-    company: "Oracle",
+    company: "Oracle Advertising",
     years: "2021–24",
     era: "enterprise",
     headline: "Oracle Advertising's biggest account",
@@ -352,7 +352,7 @@ export default function Infographic() {
           {[
             "Agency of the Decade alum",
             "Fortune 500 closer",
-            "NA sellers' voice to Oracle product leadership",
+            "NA sellers' voice to Oracle Advertising product leadership",
             "Two presidential campaigns' agency",
             "Sells AI, builds with AI",
             "International hand model (retired)",

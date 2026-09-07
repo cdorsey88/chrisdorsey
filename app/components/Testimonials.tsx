@@ -42,7 +42,7 @@ const testimonials: Testimonial[] = [
     name: "Elizabeth Floyd",
     title: "AI Insights, Gemini",
     company: "Google",
-    relationship: "Former manager, Oracle Data Cloud",
+    relationship: "Former manager, Oracle Advertising",
   },
   {
     quote:

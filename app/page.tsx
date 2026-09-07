@@ -487,7 +487,7 @@ export default function ChrisDorseySite() {
   const eras = [
     { title: "Creative & PR", year: "2009", desc: "Crispin Porter + Bogusky — Agency of the Decade. Built the first proactive new-business function.", bg: CREAM2, fg: INK, border: INK },
     { title: "Digital", year: "2013", desc: "First hire at an indie NYC shop. Grew revenue 300% in a year and beat agencies with thousands of employees to win IMAX, then built the campaign that repositioned the brand around intensity.", bg: ACID, fg: INK, border: INK },
-    { title: "Data", year: "2018", desc: "Oracle — managed Amazon, J&J, PepsiCo. Edge infrastructure at Fastly.", bg: BLUE, fg: "#fff", border: BLUE },
+    { title: "Data", year: "2018", desc: "Oracle Advertising — managed Amazon, J&J, PepsiCo; #1 seller in the US for the pharma vertical. Edge infrastructure at Fastly.", bg: BLUE, fg: "#fff", border: BLUE },
     { title: "AI acquisition", year: "2024", desc: "Zeta Global — first email-based AI customer-acquisition product to market, with opt-in permission to email 110M+ people on behalf of our clients.", bg: VIOLET, fg: "#fff", border: VIOLET },
     { title: "AI & agents", year: "now", desc: "Advising founders, building with the AI tools I sell.", bg: TEAL, fg: "#fff", border: TEAL },
   ];
@@ -552,15 +552,15 @@ export default function ChrisDorseySite() {
   const faqs = [
     {
       q: "What does Chris Dorsey do?",
-      a: "Chris is a senior enterprise sales and go-to-market leader who takes new technology to market — AI first, then data and MadTech. Across fifteen years he has been the first seller in the building twice, created categories, and closed Fortune 500 accounts, from agency creative at Crispin Porter + Bogusky to data at Oracle, edge infrastructure at Fastly, and AI customer acquisition at Zeta Global.",
+      a: "Chris is a senior enterprise sales and go-to-market leader who takes new technology to market — AI first, then data and MadTech. Across fifteen years he has been the first seller in the building twice, created categories, and closed Fortune 500 accounts, from agency creative at Crispin Porter + Bogusky to data at Oracle Advertising, edge infrastructure at Fastly, and AI customer acquisition at Zeta Global.",
     },
     {
       q: "Who does Chris work with, and who can he introduce you to?",
       a: "Chris is a connector. Fifteen years across four industries put him a message away from Fortune 500 CMOs, creatives, data leaders, investors, agency execs, and engineers and PMs. Tell him what you're trying to do and odds are he already knows who you should talk to. Introductions are free — no fee, no catch.",
     },
     {
-      q: "Is Chris looking for a full-time role?",
-      a: "Yes. He's focused on one full-time senior individual-contributor go-to-market role — Account Director, Strategic Account Manager, Director of Customer Success or Partnerships — at an AI, retail media, AdTech/MarTech, or enterprise SaaS company. He's led teams and chooses to be hands-on: carrying a number and owning the client relationships, not managing. He responds to every note personally.",
+      q: "Is Chris open to new roles?",
+      a: "He's always open to the right conversation. The work he does best is senior individual-contributor go-to-market at AI, retail media, AdTech/MarTech, and enterprise SaaS companies: Account Director, Strategic Account Manager, Director of Customer Success or Partnerships. He's led teams and chooses to stay hands-on, carrying a number and owning the client relationships. He responds to every note personally.",
     },
     {
       q: "Where is Chris based?",
@@ -634,13 +634,13 @@ export default function ChrisDorseySite() {
             creative and early-stage startups to AdTech, infrastructure, and AI. His career began at Crispin Porter
             + Bogusky, named Agency of the Decade by AdAge in 2009, where he helped build the agency&apos;s first
             proactive new business development function, contributing to a pitch-win streak of more than $100M in
-            new revenue. He managed Fortune 500 accounts at Oracle including JPMorgan Chase, PepsiCo, Johnson &amp;
+            new revenue. He managed Fortune 500 accounts at Oracle Advertising including JPMorgan Chase, PepsiCo, Johnson &amp;
             Johnson, Amazon, and Merck, sold edge infrastructure to technical buyers at Fastly, led go-to-market at
             Zeta Global for the first email-based AI customer acquisition product to reach market — built on a
             deterministic universe of 250M+ people with 5,000+ data points on each individual, and with no existing
             budgets, contacts, or category playbook — and from March to May 2026 completed an advisory and consulting
             engagement as the first dedicated seller at FancyAI, building its go-to-market motion from zero in an
-            emerging AI category. His focus now is a full-time senior individual-contributor role where he can go deep on one company&apos;s growth. He graduated from Elon University and currently provides pro bono AI consulting
+            emerging AI category. He&apos;s open to the right conversation, whether that&apos;s hiring, building, or a deal that&apos;s stuck. He graduated from Elon University and currently provides pro bono AI consulting
             to small businesses, helping Main Street owners put AI to work so they can stay in business.
           </p>
         </aside>
@@ -684,15 +684,7 @@ export default function ChrisDorseySite() {
                   Read the writing
                 </a>
               </div>
-              {/* Hiring-audience path */}
-              <p className="text-sm mt-5" style={{ color: "#6a6258" }}>
-                What&apos;s next: one full-time senior GTM role at an AI company. One team, all in.{" "}
-                <Link href="/track-record" className="font-semibold inline-flex items-center gap-0.5" style={{ color: TEAL }}>
-                  Resume <ArrowUpRight className="w-3.5 h-3.5" />
-                </Link>
-              </p>
             </div>
-
             {/* Boldly framed portrait */}
             <div className="justify-self-center w-full" style={{ maxWidth: 340 }}>
               <div className="relative overflow-hidden" style={{ border: `3px solid ${INK}`, borderRadius: 20, boxShadow: `12px 12px 0 ${ACID}`, transform: "rotate(1.5deg)" }}>
@@ -881,11 +873,9 @@ export default function ChrisDorseySite() {
                 </Link>
                 . The short version: I started at Crispin Porter + Bogusky when it was AdAge&apos;s Agency of the
                 Decade, helping build its first proactive new-business function. I was the first hire at an indie
-                NYC agency and helped grow it 300% in a year. I managed Amazon and Johnson &amp; Johnson for
-                Oracle. And for the last two years I&apos;ve sold AI products that reached market before their
+                NYC agency and helped grow it 300% in a year. I managed Amazon and Johnson &amp; Johnson for Oracle Advertising. And for the last two years I&apos;ve sold AI products that reached market before their
                 budget lines existed, first at Zeta Global, then through an advisory engagement at FancyAI that
-                wrapped in May 2026, again the first seller in the building. After two motions built from zero, I want to
-                stay somewhere for a long time and do the part I like most: carrying a number and building the client relationships.
+                wrapped in May 2026, again the first seller in the building. After two motions built from zero, the part I like most hasn&apos;t changed: carrying a number and building the client relationships.
               </p>
               <p>
                 I also build with the tools I sell. Lately that means Claude Code commands that compress prospect

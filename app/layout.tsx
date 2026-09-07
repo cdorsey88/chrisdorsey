@@ -169,7 +169,7 @@ const jsonLd = {
           name: "What does Chris Dorsey do?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Chris Dorsey is a senior enterprise sales and go-to-market leader who takes new technology to market — AI first, then data and MadTech (marketing and advertising technology). Across fifteen years he has been the first seller in the building twice, created categories, and closed Fortune 500 accounts, from agency creative at Crispin Porter + Bogusky to data at Oracle, edge infrastructure at Fastly, and AI customer acquisition at Zeta Global. For fifteen years his job has been selling technology that is new to the people buying it.",
+            text: "Chris Dorsey is a senior enterprise sales and go-to-market leader who takes new technology to market — AI first, then data and MadTech (marketing and advertising technology). Across fifteen years he has been the first seller in the building twice, created categories, and closed Fortune 500 accounts, from agency creative at Crispin Porter + Bogusky to data at Oracle Advertising, edge infrastructure at Fastly, and AI customer acquisition at Zeta Global. For fifteen years his job has been selling technology that is new to the people buying it.",
           },
         },
         {
@@ -185,7 +185,7 @@ const jsonLd = {
           name: "Is Chris Dorsey available for roles or advisory?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. Chris is deliberately focused on senior individual-contributor go-to-market roles at AI, retail media, AdTech/MarTech, and enterprise SaaS companies — Account Director, Strategic Account Manager, and Director of Customer Success or Partnerships. He has led teams and chooses to stay hands-on: carrying a number and owning client relationships rather than managing. He responds to every note personally.",
+            text: "He is always open to the right conversation. The work he does best is senior individual-contributor go-to-market at AI, retail media, AdTech/MarTech, and enterprise SaaS companies: Account Director, Strategic Account Manager, and Director of Customer Success or Partnerships. He has led teams and chooses to stay hands-on, carrying a number and owning client relationships. He responds to every note personally.",
           },
         },
         {

@@ -56,7 +56,7 @@ export default function TrackRecord() {
 
         <Infographic />
 
-        {/* What I'm looking for */}
+        {/* The work I do best */}
         <div
           className="mb-16 rounded-2xl p-7 md:p-8"
           style={{ background: INK, color: PAPER, border: `3px solid ${INK}`, boxShadow: `8px 8px 0 ${TEAL}` }}
@@ -65,15 +65,10 @@ export default function TrackRecord() {
             className="inline-block text-xs uppercase tracking-widest px-3 py-1 rounded-full mb-4 font-bold"
             style={{ color: INK, background: ACID }}
           >
-            What I&apos;m looking for
+            The work I do best
           </div>
           <p className="leading-relaxed" style={{ color: "rgba(242,236,221,0.9)" }}>
-            Senior individual-contributor GTM roles at AI-native companies: Account Director, Strategic
-            Account Manager, or Director-level customer success and partnerships work. I&apos;ve led teams and
-            I&apos;m choosing to stay hands-on — carrying a number and owning the client relationships, not
-            managing. I want the hard version of the job: selling something new into enterprises that
-            haven&apos;t bought it before, then growing it into a lasting partnership. Remote, or hybrid from
-            Denver/Boulder.
+            Senior individual-contributor GTM: Account Director, Strategic Account Manager, or Director-level customer success and partnerships work. I&apos;ve led teams and I choose to stay hands-on, carrying a number and owning the client relationships. The version I like is the hard one: selling something new into enterprises that haven&apos;t bought it before, then growing it into a lasting partnership. Always open to the right conversation.
           </p>
         </div>
 

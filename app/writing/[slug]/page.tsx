@@ -347,8 +347,7 @@ export default async function PostPage({
               <p className="text-sm mb-3" style={{ color: "#6a6258" }}>Enterprise Sales Leader · AI Go-To-Market · Startup Advisor · Denver, CO</p>
               <p className="text-sm leading-relaxed mb-4" style={{ color: "#3a332c" }}>
                 Fifteen years selling technology to Fortune 500 brands across AI, advertising, and data infrastructure
-                — most recently at Zeta Global, Oracle, and Fastly. Currently advising founders and sales leaders on
-                AI go-to-market and Generative Engine Optimization.
+                — most recently at Zeta Global, Oracle Advertising, and Fastly. He builds with the AI tools he sells and writes about advertising, marketing, tech, and AI.
               </p>
               <div className="flex flex-col items-start gap-2 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 text-xs">
                 <a
