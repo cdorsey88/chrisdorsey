@@ -1,4 +1,5 @@
 import Link from "next/link";
+import MobileMenu from "./MobileMenu";
 
 // Redesign palette — matches the homepage nav.
 const INK = "#1A1613";
@@ -52,7 +53,7 @@ export default function SiteNav() {
           </span>
         </Link>
 
-        <div className="flex items-center gap-7">
+        <div className="flex items-center gap-3 md:gap-7">
           <div className="hidden md:flex items-center gap-7 text-sm" style={{ color: INK }}>
             {links.map((l) => (
               <Link key={l.href} href={l.href} className="font-medium nav-link">
@@ -64,8 +65,9 @@ export default function SiteNav() {
             href="/#contact"
             className="text-sm px-4 py-1.5 rounded-full font-semibold font-display btn-sayhi whitespace-nowrap"
           >
-            Say hi.
+                        Say hi.
           </Link>
+          <MobileMenu />
         </div>
       </div>
     </nav>
