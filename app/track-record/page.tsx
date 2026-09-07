@@ -49,7 +49,7 @@ export default function TrackRecord() {
           </h1>
           <p className="text-lg leading-relaxed mb-2" style={{ color: "#3a332c" }}>
             Senior enterprise sales leader who takes new AI products to market. First sales hire,
-            category creator, Fortune 500 closer. The details live in the resume; the shape of it lives here.
+            category creator, Fortune 500 closer. The full details are in the resume. This page is the short version.
           </p>
           <p className="text-sm" style={{ color: "#6a6258" }}>Denver, CO · Open to remote</p>
         </div>
@@ -71,7 +71,7 @@ export default function TrackRecord() {
             Senior individual-contributor GTM roles at AI-native companies: Account Director, Strategic
             Account Manager, or Director-level customer success and partnerships work. I&apos;ve led teams and
             I&apos;m choosing to stay hands-on — carrying a number and owning the client relationships, not
-            managing. The brief I want is the hard one: selling something new into enterprises that
+            managing. I want the hard version of the job: selling something new into enterprises that
             haven&apos;t bought it before, then growing it into a lasting partnership. Remote, or hybrid from
             Denver/Boulder.
           </p>

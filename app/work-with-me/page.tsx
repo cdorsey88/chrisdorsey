@@ -37,7 +37,7 @@ const offerings = [
   },
   {
     label: "Startup Advisory",
-    headline: "The strategic partner you bring in when the path isn't obvious.",
+    headline: "Help for founders working out their first enterprise sales motion.",
     body:
       "I've advised companies from pre-seed through Series D — usually at the moment when product is ready but go-to-market is still a hypothesis. I help founders think through their first enterprise motion, avoid the mistakes that kill early deals, and build the trust with early customers that turns into reference-able revenue. I work with a small number of companies at a time and stay engaged long enough to actually matter.",
     tags: ["Pre-seed → Series D", "GTM strategy", "First enterprise sale", "Founder advisory"],
@@ -87,11 +87,10 @@ export default function WorkWithMe() {
             className="font-display font-extrabold tracking-tight leading-[0.98] mb-6"
             style={{ fontSize: "clamp(34px,5.4vw,62px)", color: INK }}
           >
-            The best outcomes start with the right conversation.
+            It starts with a call.
           </h1>
           <p className="text-lg leading-relaxed" style={{ color: "#3a332c" }}>
-            I work with a small number of clients at a time — always on things where I can genuinely move
-            the needle. If something below sounds like your situation, let&apos;s talk.
+            I work with a small number of clients at a time — and only when I think I can actually help. If something below sounds like your situation, let&apos;s talk.
           </p>
         </div>
 
@@ -167,7 +166,7 @@ export default function WorkWithMe() {
               {
                 step: "03",
                 title: "Do the work",
-                body: "I stay involved for the full duration — not just the kickoff. The best outcomes come from staying close to the problem.",
+                body: "I stay involved for the full duration — not just the kickoff. Things go better when I&apos;m still around after kickoff.",
               },
             ].map((s, i) => {
               const accent = [BLUE, ACID, TEAL][i % 3];

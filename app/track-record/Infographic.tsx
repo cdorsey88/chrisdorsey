@@ -79,7 +79,7 @@ const chapters: Chapter[] = [
     company: "CP+B",
     years: "2010–12",
     era: "agency",
-    headline: "Where the throughline started",
+    headline: "Where it started",
     detail:
       "Chosen for the team that built the first proactive new-business function at AdAge's Agency of the Decade, when CP+B was one of the best agencies in the world. Creating demand where none existed has been the job ever since. Clients included Microsoft Windows 8, Groupon, and Vail Resorts. Also hand-modeled internationally for Best Buy and Burger King. Seriously.",
     number: "$100M+",
@@ -131,7 +131,7 @@ const chapters: Chapter[] = [
     era: "enterprise",
     headline: "Selling to engineers",
     detail:
-      "Edge infrastructure for 25 accounts including Condé Nast, The New York Times, and MLS. Technical buyers don't reward decks; they reward credibility.",
+      "Edge infrastructure for 25 accounts including Condé Nast, The New York Times, and MLS. Engineers only trust you once you know the product as well as they do.",
     number: "108%",
     numberLabel: "net revenue retention",
   },
@@ -139,7 +139,7 @@ const chapters: Chapter[] = [
     company: "Oracle",
     years: "2021–24",
     era: "enterprise",
-    headline: "The biggest room",
+    headline: "Oracle Advertising's biggest account",
     detail:
       "Ran Oracle Advertising's largest enterprise relationship (Amazon), driving $2.25M in incremental revenue through joint business plans. Expanded Pepsi, J&J, and GSK, and won enterprise RFPs exceeding $4M. Tapped by North American executive leadership to represent all NA sellers: I carried market feedback on contextual audience, third-party data, and measurement products into the quarterly executive product team meeting, and helped them prioritize the roadmap by revenue impact and client request volume.",
     number: "#1",
@@ -161,7 +161,7 @@ const chapters: Chapter[] = [
     era: "ai",
     headline: "First seller in the building, again",
     detail:
-      "A three-month advisory and consulting engagement in spring 2026 as FancyAI's first dedicated seller. Built the go-to-market motion from zero in an emerging AI category most buyers didn't have a budget line for yet. The second time starting a sales motion from scratch, leveraging my network to open doors at iconic brands and agencies.",
+      "A three-month advisory and consulting engagement in spring 2026 as FancyAI's first dedicated seller. Built the go-to-market motion from zero in an emerging AI category most buyers didn't have a budget line for yet. The second time starting a sales motion from scratch, using my network to get meetings at big brands and agencies.",
     number: "0→1",
     numberLabel: "sales motion built from scratch",
   },
