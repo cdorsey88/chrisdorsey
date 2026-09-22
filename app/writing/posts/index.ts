@@ -1,4 +1,5 @@
 import type { Post } from "./types";
+import { post as pSAACS } from "./sponsored-agents-ad-claims-substantiation";
 import { post as pSABQ } from "./soundcheck-audio-brand-qa";
 import { post as pCRB } from "./how-i-built-campsite-ranger";
 import { post as pCFD } from "./cloudflare-ai-crawler-defaults-brand-content";
@@ -80,6 +81,7 @@ import { post as p56 } from "./selling-ai-skeptical-buyers";
 
 export type { Post } from "./types";
 export const posts: Post[] = [
+  pSAACS,
   pSABQ,
   pCRB,
   pCFD,

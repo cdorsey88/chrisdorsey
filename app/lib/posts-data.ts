@@ -11,6 +11,17 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "sponsored-agents-ad-claims-substantiation",
+    title: "OpenAI's fine print makes every Sponsored Agent reply your ad claim, and nobody gets to approve it first",
+    date: "Sep 22, 2026",
+    readTime: "5 min",
+    excerpt:
+      "OpenAI's Ad Tools Terms treat anything a Sponsored Agent says as the advertiser's ad claim, even when OpenAI builds the agent. U.S. law requires proof for a claim before it runs, and an agent writes its claims after the shopper asks. Here's how to review an ad that has no final version.",
+    tag: "Future of Ads",
+    color: "from-violet-700 to-orange-500",
+    tldr: "OpenAI started testing Sponsored Agents on September 16. You tap an ad in ChatGPT and a labeled chat opens with the brand's own AI rep. The coverage has been about labels and user trust. The detail that matters to advertisers is in OpenAI's Ad Tools Terms: any claim tied to a Sponsored Agent, including what it says and does, counts as a claim tied to an ad, and that holds even when OpenAI builds the agent for you. U.S. advertising law has required proof for a claim before it runs since 1984. Every ad approval process I've worked with depends on seeing the words first, and an agent writes its words after the shopper asks. You can't approve the replies, so you approve what the agent is allowed to claim and you attack it before launch. The format is in a limited test right now, which is the cheapest time to build that.",
+  },
+  {
     slug: "soundcheck-audio-brand-qa",
     title: "I built Soundcheck, a brand check for AI-generated audio ads. On its first live run it caught problems in 5 of 12 spots.",
     date: "Sep 7, 2026",
