@@ -161,9 +161,9 @@ const chapters: Chapter[] = [
     era: "enterprise",
     headline: "Carrying a number again",
     detail:
-      "Joined Epsilon, part of Publicis Groupe, in September 2026 on the beverage-alcohol desk. Enterprise sales of retail media, data, and digital programs to spirits, wine, and beer brands and the retailers that carry them.",
+      "Joined Epsilon in September 2026 as an enterprise seller to national consumer brands. I sell retail media, first-party data, and identity programs, including AI-driven audience modeling and closed-loop measurement that ties spend back to sales at the retailers that carry those brands.",
     number: "Now",
-    numberLabel: "retail media, data, and digital for beverage-alcohol brands",
+    numberLabel: "enterprise retail media, data, and AI-driven audiences",
   },
 ];
 
