@@ -11,6 +11,17 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "pentagon-ai-report-data-label",
+    title: "The Pentagon's AI report was missing a data label",
+    date: "Sep 25, 2026",
+    readTime: "4 min",
+    excerpt:
+      "A chatbot's guess about a Chinese ship got formatted into a real intelligence report and put warplanes in the air. Ad tech already requires a label for exactly this problem.",
+    tag: "AI",
+    color: "from-slate-700 to-blue-600",
+    tldr: "A special operations analyst asked a chatbot about a Chinese ship's manifest. The chatbot wrongly decided the cargo included nuclear weapons components, and a second pass through AI turned that guess into a formal intelligence report. Troops suited up and planes launched before anyone checked the sourcing. Ad tech has required a label for this exact problem for years: every audience segment has to say whether it was observed, declared, inferred, or modeled. If your team is running decisions off AI-written briefs, put that label on them now.",
+  },
+  {
     slug: "sponsored-agents-ad-claims-substantiation",
     title: "OpenAI's fine print makes every Sponsored Agent reply your ad claim, and nobody gets to approve it first",
     date: "Sep 22, 2026",
