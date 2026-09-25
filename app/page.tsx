@@ -490,7 +490,7 @@ export default function ChrisDorseySite() {
     { title: "Digital", year: "2013", desc: "First hire at an indie NYC shop. Grew revenue 300% in a year and beat agencies with thousands of employees to win IMAX, then built the campaign that repositioned the brand around intensity.", bg: ACID, fg: INK, border: INK },
     { title: "Data", year: "2018", desc: "Oracle Advertising — managed Amazon, J&J, PepsiCo; #1 seller in the US for the pharma vertical. Edge infrastructure at Fastly.", bg: BLUE, fg: "#fff", border: BLUE },
     { title: "AI acquisition", year: "2024", desc: "Zeta Global — first email-based AI customer-acquisition product to market, with opt-in permission to email 110M+ people on behalf of our clients.", bg: VIOLET, fg: "#fff", border: VIOLET },
-    { title: "AI & agents", year: "now", desc: "Advising founders, building with the AI tools I sell.", bg: TEAL, fg: "#fff", border: TEAL },
+    { title: "AI & agents", year: "now", desc: "Full-time: advising Fortune 500 brands on advertising and growth strategy. Nights and weekends: Campsite Ranger, live and shipping.", bg: TEAL, fg: "#fff", border: TEAL },
   ];
 
   const communityBuilds = [
