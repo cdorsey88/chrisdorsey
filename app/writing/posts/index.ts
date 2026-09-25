@@ -1,4 +1,7 @@
 import type { Post } from "./types";
+import { post as pIOAREP } from "./iab-openproposal-agents-read-every-proposal";
+import { post as pTDIPS6 } from "./trade-desk-independence-pitch-smallcap-600";
+import { post as pCVMFRM } from "./costco-velocity-membership-fee-retail-media";
 import { post as pPARDL } from "./pentagon-ai-report-data-label";
 import { post as pSAACS } from "./sponsored-agents-ad-claims-substantiation";
 import { post as pSABQ } from "./soundcheck-audio-brand-qa";
@@ -82,6 +85,9 @@ import { post as p56 } from "./selling-ai-skeptical-buyers";
 
 export type { Post } from "./types";
 export const posts: Post[] = [
+  pCVMFRM,
+  pTDIPS6,
+  pIOAREP,
   pPARDL,
   pSAACS,
   pSABQ,

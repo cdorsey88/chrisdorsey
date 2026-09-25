@@ -2,6 +2,8 @@
 """
 voice-lint.py — flag AI-writing "tells" in a draft before you publish.
 
+v5 (Sept 25, 2026): 2026-survey tells added, .tsx sources array ignored, staccato check.
+
 Usage:
     python3 voice-lint.py path/to/draft.md [more files ...]
     cat draft.md | python3 voice-lint.py          # read from stdin
@@ -216,6 +218,39 @@ HARD_REGEX = [
      'significance tag: ", and that matters"'),
     (r"\band (that|this|it) matters\.",
      'significance tag: "and that matters."'),
+    # --- added Sept 25, 2026 (v5): tells from the Sept 2026 survey ---
+    # telegraphed reversals
+    (r"\bNot because\b[^.?!\n]{1,80}[.?!]\s+Because\b",
+     'telegraphed reversal: "Not because X. Because Y."'),
+    (r"\bIt (feels|looks|sounds|reads) like\b[^.?!\n]{1,80}[.?!]\s+It'?s (actually|really)\b",
+     'telegraphed reversal: "It feels like X. It\'s actually Y."'),
+    (r"\bMost people (think|assume|believe)\b[^.?!\n]{1,80}[.?!]\s+They'?re (wrong|not)\b",
+     'contrarian hook template: "Most people think X. They\'re wrong."'),
+    # one-word reveal bridges
+    (r"(^|[.?!]\s+)(Plot twist|The catch|The kicker|The result|The twist|The problem|The upshot)\s*[:?]",
+     'reveal bridge: "Plot twist: / The catch? / The result?"'),
+    # fake-casual openers and label prefixes
+    (r"(^|[.?!]\s+)(Look|Real talk|Can I be honest|Here'?s the (truth|deal)|The thing is|Honestly\?)\s*[,:.?]",
+     'fake-casual opener: "Look, / Real talk / The thing is"'),
+    (r"(^|[.?!]\s+)(Unpopular opinion|Fun fact|Pro tip|PSA|Friendly reminder)\s*:",
+     'label-prefix opener: "Unpopular opinion: / Pro tip:"'),
+    (r"\(yes, really\)|\*checks notes\*",
+     'fake-casual prop: "(yes, really)" / "*checks notes*"'),
+    # mannered-prose phrases (2026 Claude-era)
+    (r"\b(worth naming|worth stating plainly|worth saying out loud|the crux( of it)?|earns its keep|a dial worth turning|carr(y|ies) the argument)\b",
+     'mannered prose: "worth naming / the crux / earns its keep"'),
+    (r"\bload-?bearing\b",
+     'mannered prose: "load-bearing" (2026 AI favorite)'),
+    (r"\b(quietly|silently)\s+\w+(ing|ed|s)?\b",
+     'insinuation adverb: "quietly/silently [verb]" — say plainly what happened'),
+    (r"\b(nobody|no one) (tells you|will tell you)\b|\bhere'?s where it gets interesting\b",
+     'insight-tease: "nobody tells you / here\'s where it gets interesting"'),
+    (r"\bplays? an? (crucial|critical|vital|pivotal|key|central) role\b",
+     'AI stock phrase: "plays a crucial role"'),
+    (r"\b(think of it (as|like)|imagine a world where)\b",
+     'AI framing: "think of it as / imagine a world where"'),
+    (r"\bthis is the whole (game|ballgame|point)\b",
+     'significance-flag: "this is the whole game"'),
 ]
 
 # Moralizing / aphoristic closers — only HARD when they appear in the LAST
@@ -238,6 +273,11 @@ CLOSER_REGEX = [
      'closer cliche: "that\'s the world we live in now"'),
     (r"^\s*(and )?that'?s the (whole )?point\.?\s*$",
      'closer cliche: standalone "That\'s the point."'),
+    # --- added Sept 25, 2026 (v5) ---
+    (r"\bwhat about you\?|\bthe choice is yours\b|\bonly time will tell\b",
+     'closer cliche: "What about you? / the choice is yours"'),
+    (r"\b(the (real|hard) work (starts|begins) now|and that changes everything)\b",
+     'closer cliche: "the real work starts now / that changes everything"'),
 ]
 
 # ----------------------------------------------------------------------------
@@ -263,9 +303,17 @@ SOFT_VOCAB = [
     "learnings", "myriad", "plethora", "veritable", "staggering", "sobering",
     "eye-watering", "jaw-dropping", "game-changer", "game-changing",
     "cutting-edge", "state-of-the-art", "best-in-class", "world-class",
+    # added Sept 2026 (v5): statistically strongest 2026 tells per WriteHuman / tropes.fyi
+    "crucial", "vital", "essential", "ever-evolving", "underpin", "underpins",
+    "bolster", "bolsters", "spearhead", "spearheaded", "intricate", "intricacies",
+    "compelling", "profound", "remarkable", "invaluable", "unprecedented",
+    "meticulous", "meticulously", "granular", "nimble", "agile", "purpose-built",
 ]
 SOFT_INTENSIFIERS = ["actually", "genuinely", "truly", "simply", "essentially",
-                     "crucially", "notably", "importantly", "fundamentally"]
+                     "crucially", "notably", "importantly", "fundamentally",
+                     # added Sept 2026 (v5)
+                     "honestly", "frankly", "significantly", "effectively",
+                     "increasingly", "deeply", "profoundly", "incredibly"]
 SOFT_ATTRIBUTION = [r"studies show", r"experts say", r"research suggests",
                     r"it'?s widely (believed|known)", r"many believe"]
 SOFT_REGEX = [
@@ -296,6 +344,15 @@ SOFT_REGEX = [
      'AI connective: "which is to say"'),
     (r"\bat the risk of (stating the obvious|oversimplifying)\b",
      'hedge tee-up'),
+    # --- added Sept 25, 2026 (v5) ---
+    (r"\brather than\b",
+     'AI connective: "rather than" (top statistical ChatGPT tell; fine once, not thrice)'),
+    (r"(^|[.?!]\s+)Turns out,?\s",
+     'opener: "Turns out," (review; fine once)'),
+    (r"\bthe whole (game|ballgame)\b",
+     'significance idiom: "the whole ballgame" (you used it Sept 25; don\'t make it a habit)'),
+    (r",\s*(and|which) (this|that|it) (is|was) (the|a) (problem|point|gift|trap|opportunity)\b",
+     'significance tag variant: ", and that is the problem"'),
 ]
 
 # ----------------------------------------------------------------------------
@@ -304,6 +361,7 @@ SOFT_REGEX = [
 def to_prose(raw):
     lines = []
     in_code = False
+    stop_prose = False
     for ln in raw.splitlines():
         s = ln.rstrip("\n")
         if s.strip().startswith("```"):
@@ -313,6 +371,14 @@ def to_prose(raw):
             continue
         # drop obvious code lines
         if re.match(r"\s*(import |export |const |let |function |//|/\*|\*)", s):
+            continue
+        # .tsx posts: stop at the sources array / end of content so the
+        # closer check sees the last real paragraph, not "};"
+        if re.match(r"\s*(sources\s*:\s*\[|\{\s*title\s*:|</div>)", s):
+            stop_prose = True
+        if stop_prose:
+            continue
+        if re.match(r"\s*[\)\]\},;]+\s*$", s):
             continue
         s = re.sub(r"<[^>]+>", "", s)                 # JSX/HTML tags
         # decode common HTML entities so apostrophe/dash patterns still match
@@ -328,6 +394,21 @@ def to_prose(raw):
 
 def words(text):
     return re.findall(r"[A-Za-z']+", text)
+
+def paragraphs(raw):
+    """Real paragraphs: <p>…</p> blocks for JSX posts, blank-line blocks for md."""
+    if "<p" in raw:
+        blocks = re.findall(r"<p[^>]*>(.*?)</p>", raw, re.S)
+    else:
+        blocks = re.split(r"\n\s*\n", "\n".join(to_prose(raw)))
+    out = []
+    for b in blocks:
+        b = re.sub(r"\{\s*\" \"\s*\}", " ", b)
+        b = "\n".join(to_prose(b))
+        b = re.sub(r"\s+", " ", b).strip()
+        if b:
+            out.append(b)
+    return out
 
 def jaccard(a, b):
     sa, sb = set(a), set(b)
@@ -398,6 +479,21 @@ def lint(raw, label):
                 break
         else:
             run = 0
+
+    # Stacked one-sentence paragraphs (3+ in a row) — the LinkedIn/AI staccato
+    # layout. Paragraph = non-empty line (JSX <p> collapses to one line after
+    # tag stripping only if written on one line; markdown paragraphs are lines).
+    para_run = 0
+    for l in paragraphs(raw):
+        t = l.strip()
+        n_sents = len([x for x in re.split(r"(?<=[.?!])\s+", t) if words(x)])
+        if 0 < len(words(t)) <= 25 and n_sents == 1:
+            para_run += 1
+            if para_run == 3:
+                soft.append("  Staccato: three consecutive one-sentence paragraphs — merge or vary.")
+                break
+        else:
+            para_run = 0
 
     # Self-similarity: compare this post's closer to prior shipped closers.
     closer = nonempty[-1].strip() if nonempty else ""

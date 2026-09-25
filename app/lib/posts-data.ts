@@ -11,6 +11,39 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "costco-velocity-membership-fee-retail-media",
+    title: "Costco has a retail media network. It didn't come up once on a $94 billion earnings call.",
+    date: "Sep 25, 2026",
+    readTime: "4 min",
+    excerpt:
+      "Costco reported a $93.9 billion quarter and neither management nor any of the 14 analysts mentioned retail media, even though Costco Velocity exists. The $5.9 billion membership fee is doing the job the ad network does everywhere else. What that means if you sell to Costco, or sell retail media.",
+    tag: "Sales",
+    color: "from-slate-700 to-blue-600",
+    tldr: "Costco reported $93.9 billion in fourth-quarter sales on Wednesday, up 11.2%. Fourteen analysts asked questions. None of them asked about retail media, and management never brought it up, even though Costco launched an ad network called Velocity this year. The reason is the fee. Costco booked $5.9 billion in membership fees in fiscal 2026, which is the margin every other retailer is trying to pull out of suppliers through ads. If you sell to Costco, the joint business plan has no media line. If you sell retail media, Costco is the reference your prospect's CFO is going to bring up.",
+  },
+  {
+    slug: "trade-desk-independence-pitch-smallcap-600",
+    title: "The Trade Desk cut 15% of its staff and lost its S&P 500 seat on the same day. Independence was the whole pitch.",
+    date: "Sep 25, 2026",
+    readTime: "4 min",
+    excerpt:
+      "On the same day The Trade Desk cut 15% of its staff, S&P moved it from the S&P 500 straight to the SmallCap 600. Six days later Amazon's DSP started selling ChatGPT ads. Buyers rate The Trade Desk highest and route the money to the DSP that owns the inventory. What that means if your pitch is neutrality.",
+    tag: "MadTech",
+    color: "from-violet-700 to-orange-500",
+    tldr: "On September 4, The Trade Desk filed an 8-K cutting about 15% of its workforce, and S&P Dow Jones announced it was dropping the company from the S&P 500 straight to the SmallCap 600. Third-quarter guidance is at least $650 million, down 12% from a year ago. The stock is about 91% below its December 2024 high. Six days later, Amazon's DSP started selling ads inside ChatGPT. For a decade The Trade Desk's pitch was that it doesn't own media, so it's on the buyer's side. Buyers agree with that and are moving the money anyway. If your pitch is neutrality, this is what it looks like when the market stops paying for it.",
+  },
+  {
+    slug: "iab-openproposal-agents-read-every-proposal",
+    title: "Media buyers read 10 to 20 proposals per campaign. The IAB wants an agent to read all of them.",
+    date: "Sep 25, 2026",
+    readTime: "4 min",
+    excerpt:
+      "IAB Tech Lab's OpenProposal turns an RFP response into a machine-readable object a buying agent can compare against hundreds of others. Tech Lab says buyers read 10 to 20 proposals per campaign and blames familiar relationships. The long tail gets read; the mid-sized seller loses the dinner. Comments close October 22.",
+    tag: "Future of Ads",
+    color: "from-violet-700 to-orange-500",
+    tldr: "IAB Tech Lab published AAMP 3.0 on September 22 with OpenProposal, a draft standard that turns a seller's RFP response into a machine-readable object a buying agent can compare against hundreds of others. Comments close October 22. Tech Lab's own blog says media teams evaluate 10 to 20 publisher proposals per campaign while hundreds go unread, and blames over-reliance on familiar relationships. Those relationships are how mid-sized sellers win. The long tail, including the 80-plus U.S. retail media networks nobody has time to read, gets into the comparison for the first time. If you sell media, try filling out the Proposal object for your best package this week and see which fields you can't complete.",
+  },
+  {
     slug: "pentagon-ai-report-data-label",
     title: "The Pentagon's AI report was missing a data label",
     date: "Sep 25, 2026",
