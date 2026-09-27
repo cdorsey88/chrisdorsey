@@ -895,162 +895,6 @@ export default function ChrisDorseySite() {
           </div>
         </section>
 
-        {/* Testimonials — hidden until at least 2 real quotes exist. */}
-        {SHOW_TESTIMONIALS && <Testimonials />}
-
-        {/* Track record band */}
-        <TrackRecordBand />
-
-        {/* Writing — teal band, bento layout */}
-        <section id="writing" className="relative py-16 px-7" style={{ background: TEAL, borderTop: `3px solid ${INK}`, borderBottom: `3px solid ${INK}` }}>
-          <div className="max-w-5xl mx-auto">
-            <div className="flex items-end justify-between mb-8 flex-wrap gap-4">
-              <div>
-                <div className="inline-block text-xs uppercase tracking-widest px-3 py-1 rounded-full mb-4 font-bold" style={{ color: INK, background: ACID }}>
-                  Thoughts
-                </div>
-                <h2 className="font-display font-extrabold" style={{ fontSize: "clamp(28px,4vw,46px)", color: "#fff" }}>
-                  Notes from the field.
-                </h2>
-              </div>
-              <Link href="/writing" className="text-sm flex items-center gap-1 font-semibold" style={{ color: ACID }}>
-                All {allPosts.length} posts <ArrowUpRight className="w-3.5 h-3.5" />
-              </Link>
-            </div>
-            <p className="text-lg leading-relaxed mb-10" style={{ color: "rgba(255,255,255,0.92)", maxWidth: "62ch" }}>
-              My beat is advertising, marketing, tech, and AI. Same approach I take in sales:
-              notice something other people haven&apos;t yet, say what I think about it, and get it out while
-              it&apos;s still news, sources attached. People occasionally call this thought leadership. I won&apos;t. I just can&apos;t bring
-              myself to do it. I&apos;m also not a visionary, rockstar, or guru.
-            </p>
-            {/* Featured latest post — wide card that fills its space */}
-            {posts[0] && (() => {
-              const post = posts[0];
-              const summary = post.tldr || post.excerpt;
-              return (
-                <Link
-                  href={`/writing/${post.slug}`}
-                  className="group block rounded-2xl p-7 md:p-9 mb-4 transition-transform hover:-translate-y-1"
-                  style={{ background: ACID, color: INK, border: `3px solid ${INK}`, boxShadow: `8px 8px 0 ${INK}` }}
-                >
-                  <div className="grid gap-6 md:grid-cols-5 md:items-center">
-                    <div className="md:col-span-3">
-                      <div className="flex items-center gap-2.5 mb-4 flex-wrap">
-                        <span
-                          className="inline-block text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-full"
-                          style={{ background: INK, color: ACID }}
-                        >
-                          {post.tag}
-                        </span>
-                        <span className="text-xs font-bold uppercase tracking-widest" style={{ color: "rgba(26,22,19,0.6)" }}>
-                          Latest
-                        </span>
-                      </div>
-                      <h3 className="font-display font-extrabold leading-[0.98]" style={{ fontSize: "clamp(26px,3.2vw,40px)", color: INK }}>
-                        {post.title}
-                      </h3>
-                      <div className="flex items-center gap-4 text-xs mt-5 font-semibold" style={{ color: "#6a6258" }}>
-                        <span className="flex items-center gap-1.5">
-                          <Calendar className="w-3 h-3" /> {post.date}
-                        </span>
-                        <span className="flex items-center gap-1.5">
-                          <Clock className="w-3 h-3" /> {post.readTime}
-                        </span>
-                      </div>
-                    </div>
-                    <div className="md:col-span-2 flex flex-col">
-                      <p className="leading-relaxed text-[15px]" style={{ color: "rgba(26,22,19,0.82)" }}>
-                        {summary.length > 280 ? `${summary.slice(0, 280).trimEnd()}…` : summary}
-                      </p>
-                      <span
-                        className="inline-flex items-center gap-1.5 font-bold mt-5 px-5 py-2.5 rounded-full self-start transition-colors"
-                        style={{ background: INK, color: ACID }}
-                      >
-                        Read
-                        <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                      </span>
-                    </div>
-                  </div>
-                </Link>
-              );
-            })()}
-
-            {/* Remaining posts — tidy three-up grid */}
-            <div className="grid gap-4 md:grid-cols-3 md:auto-rows-fr">
-              {posts.slice(1).map((post, i) => {
-                // Alternate cream / violet / cream fills under the featured acid block.
-                const fills = [
-                  { bg: PAPER, fg: INK, tag: BLUE, tagText: "#fff" },
-                  { bg: VIOLET, fg: "#fff", tag: ACID, tagText: INK },
-                  { bg: PAPER, fg: INK, tag: VIOLET, tagText: "#fff" },
-                ];
-                const f = fills[i % fills.length];
-                const isLight = f.fg !== "#fff";
-                return (
-                  <Link
-                    key={i}
-                    href={`/writing/${post.slug}`}
-                    className="group flex flex-col justify-between rounded-2xl p-6 transition-transform hover:-translate-y-1"
-                    style={{
-                      background: f.bg,
-                      color: f.fg,
-                      border: `3px solid ${INK}`,
-                      boxShadow: `7px 7px 0 ${INK}`,
-                    }}
-                  >
-                    <div>
-                      <span
-                        className="inline-block text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-full mb-3.5"
-                        style={{ background: f.tag, color: f.tagText }}
-                      >
-                        {post.tag}
-                      </span>
-                      <h3 className="font-display font-bold leading-tight" style={{ fontSize: 19, color: f.fg }}>
-                        {post.title}
-                      </h3>
-                      <p className="leading-relaxed mt-3 text-sm" style={{ color: isLight ? "rgba(26,22,19,0.78)" : "rgba(255,255,255,0.88)" }}>
-                        {post.excerpt.slice(0, 110)}…
-                      </p>
-                    </div>
-                    <div className="flex items-center justify-between gap-4 text-xs mt-5 font-semibold" style={{ color: isLight ? "#6a6258" : "rgba(255,255,255,0.75)" }}>
-                      <span className="flex items-center gap-3">
-                        <span className="flex items-center gap-1.5">
-                          <Calendar className="w-3 h-3" /> {post.date}
-                        </span>
-                        <span className="flex items-center gap-1.5">
-                          <Clock className="w-3 h-3" /> {post.readTime}
-                        </span>
-                      </span>
-                      <span className="inline-flex items-center gap-0.5" style={{ color: isLight ? TEAL : ACID }}>
-                        Read <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                      </span>
-                    </div>
-                  </Link>
-                );
-              })}
-            </div>
-            <div className="mt-10 flex justify-center">
-              <style>{`
-                @keyframes ctaPulse {
-                  0%, 100% { box-shadow: 5px 5px 0 ${INK}; transform: translateY(0); }
-                  50% { box-shadow: 8px 8px 0 ${INK}; transform: translateY(-3px); }
-                }
-                @media (prefers-reduced-motion: reduce) {
-                  .cta-pulse { animation: none !important; box-shadow: 5px 5px 0 ${INK} !important; }
-                }
-              `}</style>
-              <Link
-                href="/writing"
-                className="cta-pulse group inline-flex items-center gap-2.5 font-extrabold px-9 py-4 rounded-full text-base hover:brightness-95 transition"
-                style={{ background: ACID, color: INK, border: `2.5px solid ${INK}`, animation: "ctaPulse 2.6s ease-in-out infinite" }}
-              >
-                See all {allPosts.length} posts
-                <ArrowUpRight className="w-5 h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-              </Link>
-            </div>
-          </div>
-        </section>
-
         {/* Builds */}
         <section id="builds" className="relative py-16 px-7">
           <div className="max-w-5xl mx-auto">
@@ -1231,6 +1075,162 @@ export default function ChrisDorseySite() {
               </div>
             </div>
           </Reveal>
+        </section>
+
+        {/* Testimonials — hidden until at least 2 real quotes exist. */}
+        {SHOW_TESTIMONIALS && <Testimonials />}
+
+        {/* Track record band */}
+        <TrackRecordBand />
+
+        {/* Writing — teal band, bento layout */}
+        <section id="writing" className="relative py-16 px-7" style={{ background: TEAL, borderTop: `3px solid ${INK}`, borderBottom: `3px solid ${INK}` }}>
+          <div className="max-w-5xl mx-auto">
+            <div className="flex items-end justify-between mb-8 flex-wrap gap-4">
+              <div>
+                <div className="inline-block text-xs uppercase tracking-widest px-3 py-1 rounded-full mb-4 font-bold" style={{ color: INK, background: ACID }}>
+                  Thoughts
+                </div>
+                <h2 className="font-display font-extrabold" style={{ fontSize: "clamp(28px,4vw,46px)", color: "#fff" }}>
+                  Notes from the field.
+                </h2>
+              </div>
+              <Link href="/writing" className="text-sm flex items-center gap-1 font-semibold" style={{ color: ACID }}>
+                All {allPosts.length} posts <ArrowUpRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+            <p className="text-lg leading-relaxed mb-10" style={{ color: "rgba(255,255,255,0.92)", maxWidth: "62ch" }}>
+              My beat is advertising, marketing, tech, and AI. Same approach I take in sales:
+              notice something other people haven&apos;t yet, say what I think about it, and get it out while
+              it&apos;s still news, sources attached. People occasionally call this thought leadership. I won&apos;t. I just can&apos;t bring
+              myself to do it. I&apos;m also not a visionary, rockstar, or guru.
+            </p>
+            {/* Featured latest post — wide card that fills its space */}
+            {posts[0] && (() => {
+              const post = posts[0];
+              const summary = post.tldr || post.excerpt;
+              return (
+                <Link
+                  href={`/writing/${post.slug}`}
+                  className="group block rounded-2xl p-7 md:p-9 mb-4 transition-transform hover:-translate-y-1"
+                  style={{ background: ACID, color: INK, border: `3px solid ${INK}`, boxShadow: `8px 8px 0 ${INK}` }}
+                >
+                  <div className="grid gap-6 md:grid-cols-5 md:items-center">
+                    <div className="md:col-span-3">
+                      <div className="flex items-center gap-2.5 mb-4 flex-wrap">
+                        <span
+                          className="inline-block text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-full"
+                          style={{ background: INK, color: ACID }}
+                        >
+                          {post.tag}
+                        </span>
+                        <span className="text-xs font-bold uppercase tracking-widest" style={{ color: "rgba(26,22,19,0.6)" }}>
+                          Latest
+                        </span>
+                      </div>
+                      <h3 className="font-display font-extrabold leading-[0.98]" style={{ fontSize: "clamp(26px,3.2vw,40px)", color: INK }}>
+                        {post.title}
+                      </h3>
+                      <div className="flex items-center gap-4 text-xs mt-5 font-semibold" style={{ color: "#6a6258" }}>
+                        <span className="flex items-center gap-1.5">
+                          <Calendar className="w-3 h-3" /> {post.date}
+                        </span>
+                        <span className="flex items-center gap-1.5">
+                          <Clock className="w-3 h-3" /> {post.readTime}
+                        </span>
+                      </div>
+                    </div>
+                    <div className="md:col-span-2 flex flex-col">
+                      <p className="leading-relaxed text-[15px]" style={{ color: "rgba(26,22,19,0.82)" }}>
+                        {summary.length > 280 ? `${summary.slice(0, 280).trimEnd()}…` : summary}
+                      </p>
+                      <span
+                        className="inline-flex items-center gap-1.5 font-bold mt-5 px-5 py-2.5 rounded-full self-start transition-colors"
+                        style={{ background: INK, color: ACID }}
+                      >
+                        Read
+                        <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                      </span>
+                    </div>
+                  </div>
+                </Link>
+              );
+            })()}
+
+            {/* Remaining posts — tidy three-up grid */}
+            <div className="grid gap-4 md:grid-cols-3 md:auto-rows-fr">
+              {posts.slice(1).map((post, i) => {
+                // Alternate cream / violet / cream fills under the featured acid block.
+                const fills = [
+                  { bg: PAPER, fg: INK, tag: BLUE, tagText: "#fff" },
+                  { bg: VIOLET, fg: "#fff", tag: ACID, tagText: INK },
+                  { bg: PAPER, fg: INK, tag: VIOLET, tagText: "#fff" },
+                ];
+                const f = fills[i % fills.length];
+                const isLight = f.fg !== "#fff";
+                return (
+                  <Link
+                    key={i}
+                    href={`/writing/${post.slug}`}
+                    className="group flex flex-col justify-between rounded-2xl p-6 transition-transform hover:-translate-y-1"
+                    style={{
+                      background: f.bg,
+                      color: f.fg,
+                      border: `3px solid ${INK}`,
+                      boxShadow: `7px 7px 0 ${INK}`,
+                    }}
+                  >
+                    <div>
+                      <span
+                        className="inline-block text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-full mb-3.5"
+                        style={{ background: f.tag, color: f.tagText }}
+                      >
+                        {post.tag}
+                      </span>
+                      <h3 className="font-display font-bold leading-tight" style={{ fontSize: 19, color: f.fg }}>
+                        {post.title}
+                      </h3>
+                      <p className="leading-relaxed mt-3 text-sm" style={{ color: isLight ? "rgba(26,22,19,0.78)" : "rgba(255,255,255,0.88)" }}>
+                        {post.excerpt.slice(0, 110)}…
+                      </p>
+                    </div>
+                    <div className="flex items-center justify-between gap-4 text-xs mt-5 font-semibold" style={{ color: isLight ? "#6a6258" : "rgba(255,255,255,0.75)" }}>
+                      <span className="flex items-center gap-3">
+                        <span className="flex items-center gap-1.5">
+                          <Calendar className="w-3 h-3" /> {post.date}
+                        </span>
+                        <span className="flex items-center gap-1.5">
+                          <Clock className="w-3 h-3" /> {post.readTime}
+                        </span>
+                      </span>
+                      <span className="inline-flex items-center gap-0.5" style={{ color: isLight ? TEAL : ACID }}>
+                        Read <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                      </span>
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+            <div className="mt-10 flex justify-center">
+              <style>{`
+                @keyframes ctaPulse {
+                  0%, 100% { box-shadow: 5px 5px 0 ${INK}; transform: translateY(0); }
+                  50% { box-shadow: 8px 8px 0 ${INK}; transform: translateY(-3px); }
+                }
+                @media (prefers-reduced-motion: reduce) {
+                  .cta-pulse { animation: none !important; box-shadow: 5px 5px 0 ${INK} !important; }
+                }
+              `}</style>
+              <Link
+                href="/writing"
+                className="cta-pulse group inline-flex items-center gap-2.5 font-extrabold px-9 py-4 rounded-full text-base hover:brightness-95 transition"
+                style={{ background: ACID, color: INK, border: `2.5px solid ${INK}`, animation: "ctaPulse 2.6s ease-in-out infinite" }}
+              >
+                See all {allPosts.length} posts
+                <ArrowUpRight className="w-5 h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </Link>
+            </div>
+          </div>
         </section>
 
         {/* FAQ — de-emphasized: small label, compact 2-col accordions. Text kept for GEO; mirrors FAQPage JSON-LD */}
