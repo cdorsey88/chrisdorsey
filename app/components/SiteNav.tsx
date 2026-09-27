@@ -28,6 +28,7 @@ const links = [
   { label: "Track Record", href: "/track-record" },
   { label: "Thoughts", href: "/#writing" },
   { label: "AI Sales Tools", href: "/#builds" },
+  { label: "Speaking", href: "/speaking" },
   { label: "Work with me", href: "/work-with-me" },
 ];
 
