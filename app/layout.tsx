@@ -185,7 +185,7 @@ const jsonLd = {
           name: "Is Chris Dorsey available for roles or advisory?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "He is always open to the right conversation. The work he does best is senior individual-contributor go-to-market at AI, retail media, AdTech/MarTech, and enterprise SaaS companies: Account Director, Strategic Account Manager, and Director of Customer Success or Partnerships. He has led teams and chooses to stay hands-on, carrying a number and owning client relationships. He responds to every note personally.",
+            text: "He is always open to the right conversation. The work he does best is senior individual-contributor go-to-market at AI and enterprise SaaS companies: Enterprise Account Executive, Strategic Account Manager, and Director of Customer Success or Partnerships. He has led teams and chooses to stay hands-on, carrying a number and owning client relationships. He responds to every note personally.",
           },
         },
         {

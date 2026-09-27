@@ -534,7 +534,7 @@ export default function ChrisDorseySite() {
     {
       title: "Soundcheck — brand QA for AI-generated audio ads",
       stack: "ElevenLabs Voice Design · TTS · Music · SFX · Dubbing · Scribe v2 · Python",
-      desc: "Built as a demo for ElevenLabs. It turns a brand's guidelines into a machine-readable standard, generates a 12-spot, four-market campaign through six ElevenLabs APIs, then checks every render for script fidelity, pronunciation, pace, loudness, required disclosures, and voice drift, and prices each miss against the media plan. On the live run it failed 5 of 12 spots, $1.82M of a simulated $2.8M plan, and caught a mispronounced founder name nobody had planted. As far as I can find, no vendor sells this for audio yet; the brand-compliance tools score pixels.",
+      desc: "An MVP built on ElevenLabs's audio APIs. It turns a brand's guidelines into a machine-readable standard, generates a 12-spot, four-market campaign through six ElevenLabs APIs, then checks every render for script fidelity, pronunciation, pace, loudness, required disclosures, and voice drift, and prices each miss against the media plan. On the live run it flagged 5 of 12 spots, $1.82M of a simulated $2.8M plan, and caught a mispronounced founder name nobody had planted. As far as I can find, no vendor sells this for audio yet; the brand-compliance tools score pixels.",
       proofText: "MVP. Live run verified Aug 2026.",
       proofUrl: "/writing/soundcheck-audio-brand-qa" as string | null,
       proofLabel: "Read the write-up" as string | null,
@@ -561,7 +561,7 @@ export default function ChrisDorseySite() {
     },
     {
       q: "Is Chris open to new roles?",
-      a: "He's always open to the right conversation. The work he does best is senior individual-contributor go-to-market at AI, retail media, AdTech/MarTech, and enterprise SaaS companies: Account Director, Strategic Account Manager, Director of Customer Success or Partnerships. He's led teams and chooses to stay hands-on, carrying a number and owning the client relationships. He responds to every note personally.",
+      a: "He's always open to the right conversation. The work he does best is senior individual-contributor go-to-market at AI and enterprise SaaS companies: Enterprise Account Executive, Strategic Account Manager, Director of Customer Success or Partnerships. He's led teams and chooses to stay hands-on, carrying a number and owning the client relationships. He responds to every note personally.",
     },
     {
       q: "Where is Chris based?",
