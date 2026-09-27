@@ -612,6 +612,7 @@ export default function ChrisDorseySite() {
               <Link href="/track-record" className="font-medium nav-link">Track Record</Link>
               <a href="#writing" className="font-medium nav-link">Thoughts</a>
               <a href="#builds"  className="font-medium nav-link">AI Sales Tools</a>
+              <Link href="/speaking" className="font-medium nav-link">Speaking</Link>
               <Link href="/work-with-me" className="font-medium nav-link">Work with me</Link>
             </div>
             <a
