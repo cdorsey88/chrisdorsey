@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { Calendar, Clock, ArrowUpRight } from "lucide-react";
+import { Calendar, Clock, ArrowUpRight, Mail } from "lucide-react";
 import SiteNav from "@/app/components/SiteNav";
 import type { Metadata } from "next";
 import { posts } from "@/app/lib/posts-data";
+import { CONTACT_EMAIL } from "@/app/lib/site-config";
 
 // Redesign palette — matches the homepage + post pages.
 const INK = "#1A1613";
@@ -119,6 +120,27 @@ export default function WritingIndex() {
               </Link>
             );
           })}
+        </div>
+
+        {/* Get new posts by email — mailto today, real signup once an ESP is wired up */}
+        <div
+          className="rounded-2xl p-8 mt-14 flex flex-col md:flex-row items-start md:items-center justify-between gap-5"
+          style={{ background: INK, color: PAPER, border: `3px solid ${INK}`, boxShadow: `6px 6px 0 ${TEAL}` }}
+        >
+          <div>
+            <h3 className="font-display font-bold mb-1" style={{ fontSize: 20 }}>Get new posts by email</h3>
+            <p className="text-sm" style={{ color: "rgba(242,236,221,0.78)" }}>
+              No mailing list yet &mdash; send a note and I&apos;ll add you by hand until there is one.
+            </p>
+          </div>
+          <a
+            href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Add me to the list")}`}
+            className="flex items-center justify-center gap-2 font-semibold px-6 py-3 rounded-full transition text-sm hover:opacity-90 whitespace-nowrap"
+            style={{ background: ACID, color: INK }}
+          >
+            <Mail className="w-4 h-4" />
+            Sign me up
+          </a>
         </div>
       </main>
     </div>
