@@ -51,7 +51,7 @@ export const post: Post = {
 
       <h2>What the live run caught</h2>
       <p>
-        I seeded four defects into the twelve scripts: an invented retail claim, a mispronounced product term, a 107-word script jammed into a :30, and a missing AI-disclosure line. On August 13 I ran it against the live APIs. Seven passed, five failed. All four seeded defects were caught, and $1.82M of the fictional brand&rsquo;s $2.8M plan sat behind creative that would have shipped with a problem in it.
+        I seeded four defects into the twelve scripts: an invented retail claim, a mispronounced product term, a 107-word script jammed into a :30, and a missing AI-disclosure line. On August 13 I ran it against the live APIs. Seven passed, five got flagged. All four seeded defects were caught, and $1.82M of the fictional brand&rsquo;s $2.8M plan sat behind creative that would have shipped with a problem in it.
       </p>
       <p>
         The fifth failure was the one I hadn&rsquo;t planted. The brand voice couldn&rsquo;t say the founder&rsquo;s name: &ldquo;Renata Oyelaran&rdquo; came back as &ldquo;renata ollerenshaw,&rdquo; in the hero spot, on the placement with the most money behind it. The script was fine, so nobody reading it would have caught that.
