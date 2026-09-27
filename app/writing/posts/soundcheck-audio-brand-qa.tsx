@@ -57,7 +57,7 @@ export const post: Post = {
         The fifth failure was the one I hadn&rsquo;t planted. The brand voice couldn&rsquo;t say the founder&rsquo;s name: &ldquo;Renata Oyelaran&rdquo; came back as &ldquo;renata ollerenshaw,&rdquo; in the hero spot, on the placement with the most money behind it. The script was fine, so nobody reading it would have caught that.
       </p>
       <p>
-        There was one miss. Scribe quietly corrected two of the staged mispronunciations before my check could see them. That&rsquo;s the ceiling on checking pronunciation through a transcript; a real version needs phoneme-level alignment.
+        There was one miss. Scribe auto-corrected two of the staged mispronunciations before my check could see them. That&rsquo;s the ceiling on checking pronunciation through a transcript; a real version needs phoneme-level alignment.
       </p>
 
       <h2>What to ask before you buy</h2>
