@@ -549,30 +549,6 @@ export default function ChrisDorseySite() {
     },
   ];
 
-  // FAQ — plain extractable text (also mirrored in FAQPage JSON-LD in layout.tsx).
-  const faqs = [
-    {
-      q: "What does Chris Dorsey do?",
-      a: "Chris is a senior enterprise sales and go-to-market leader who takes new technology to market — AI first, then data and MadTech. Across fifteen years he has been the first seller in the building twice, created categories, and closed Fortune 500 accounts, from agency creative at Crispin Porter + Bogusky to data at Oracle Advertising, edge infrastructure at Fastly, and AI customer acquisition at Zeta Global.",
-    },
-    {
-      q: "Who does Chris work with, and who can he introduce you to?",
-      a: "Chris is a connector. Fifteen years across four industries put him a message away from Fortune 500 CMOs, creatives, data leaders, investors, agency execs, and engineers and PMs. Tell him what you're trying to do and odds are he already knows who you should talk to. Introductions are free — no fee, no catch.",
-    },
-    {
-      q: "Is Chris open to new roles?",
-      a: "He's always open to the right conversation. The work he does best is senior individual-contributor go-to-market at AI and enterprise SaaS companies: Enterprise Account Executive, Strategic Account Manager, Director of Customer Success or Partnerships. He's led teams and chooses to stay hands-on, carrying a number and owning the client relationships. He responds to every note personally.",
-    },
-    {
-      q: "Where is Chris based?",
-      a: "Denver, Colorado — working remotely or hybrid across the United States.",
-    },
-    {
-      q: "What industries does Chris cover?",
-      a: "AI go-to-market, data, and MadTech, with deep roots in enterprise SaaS, retail media, AdTech, and agency creative. He has sold through every major marketing shift — broadcast, digital, social, programmatic, data, AI, and now agents.",
-    },
-  ];
-
   return (
     <div
       className="min-h-screen relative overflow-x-hidden grain-overlay"
@@ -1230,26 +1206,6 @@ export default function ChrisDorseySite() {
                 See all {allPosts.length} posts
                 <ArrowUpRight className="w-5 h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ — de-emphasized: small label, compact 2-col accordions. Text kept for GEO; mirrors FAQPage JSON-LD */}
-        <section aria-labelledby="faq-heading" className="px-7 pt-10 pb-16">
-          <div className="max-w-4xl mx-auto">
-            <h2 id="faq-heading" className="text-xs uppercase tracking-widest font-bold mb-5" style={{ color: "#8a8276" }}>
-              More questions? Open one.
-            </h2>
-            <div className="grid md:grid-cols-2 gap-3">
-              {faqs.map((faq) => (
-                <details key={faq.q} className="rounded-xl px-4 py-3 group" style={{ background: "transparent", border: `1.5px solid rgba(26,22,19,0.18)` }}>
-                  <summary className="font-semibold cursor-pointer list-none flex items-center justify-between gap-3" style={{ fontSize: 14.5, color: "#3a332c" }}>
-                    {faq.q}
-                    <ArrowUpRight className="w-4 h-4 shrink-0 transition-transform group-open:rotate-90" style={{ color: TEAL }} />
-                  </summary>
-                  <p className="mt-2.5 leading-relaxed text-sm" style={{ color: "#6a6258" }}>{faq.a}</p>
-                </details>
-              ))}
             </div>
           </div>
         </section>
