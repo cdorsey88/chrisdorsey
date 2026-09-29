@@ -11,6 +11,17 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "instacart-shelf-data-sold-twice",
+    title: "Instacart built a live map of every grocery aisle. It is selling the same map to both sides of the table.",
+    date: "Sep 28, 2026",
+    readTime: "5 min",
+    excerpt:
+      "Instacart is selling grocers a live view of their own shelves and selling the same shelves, with a competitive layer on top, to the brands that stock them. The lost-sales estimate lands in a supplier negotiation, not a category report. And the 10 million data points a day arrive free from work the company once paid $12 a task for.",
+    tag: "MadTech",
+    color: "from-emerald-700 to-orange-500",
+    tldr: "Instacart launched two products off one data feed. Grocers buy Inventory Intelligence, a live view of their own shelves. CPG brands buy a Store Excellence Portal that estimates, in dollars and refreshed daily, what a retailer's out-of-stocks cost them by store and by UPC, plus which competitor won the substitution. That second product hands suppliers a weapon to carry into their next negotiation with the retailer. If you run a banner, a number about your stores is about to show up on the supplier's side of the table, and nobody asked you how it should be calculated.",
+  },
+  {
     slug: "costco-velocity-membership-fee-retail-media",
     title: "Costco has a retail media network. It didn't come up once on a $94 billion earnings call.",
     date: "Sep 25, 2026",

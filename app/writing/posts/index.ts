@@ -1,4 +1,5 @@
 import type { Post } from "./types";
+import { post as pISDST } from "./instacart-shelf-data-sold-twice";
 import { post as pIOAREP } from "./iab-openproposal-agents-read-every-proposal";
 import { post as pTDIPS6 } from "./trade-desk-independence-pitch-smallcap-600";
 import { post as pCVMFRM } from "./costco-velocity-membership-fee-retail-media";
@@ -85,6 +86,7 @@ import { post as p56 } from "./selling-ai-skeptical-buyers";
 
 export type { Post } from "./types";
 export const posts: Post[] = [
+  pISDST,
   pCVMFRM,
   pTDIPS6,
   pIOAREP,
