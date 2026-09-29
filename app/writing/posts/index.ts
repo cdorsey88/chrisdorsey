@@ -1,4 +1,6 @@
 import type { Post } from "./types";
+import { post as pODARCEF } from "./openai-dots-agent-reads-cold-email-first";
+import { post as pMEPATAF } from "./meta-enterprise-platform-ad-to-agent-funnel";
 import { post as pISDST } from "./instacart-shelf-data-sold-twice";
 import { post as pIOAREP } from "./iab-openproposal-agents-read-every-proposal";
 import { post as pTDIPS6 } from "./trade-desk-independence-pitch-smallcap-600";
@@ -86,6 +88,8 @@ import { post as p56 } from "./selling-ai-skeptical-buyers";
 
 export type { Post } from "./types";
 export const posts: Post[] = [
+  pODARCEF,
+  pMEPATAF,
   pISDST,
   pCVMFRM,
   pTDIPS6,

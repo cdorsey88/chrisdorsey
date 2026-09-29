@@ -11,6 +11,28 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "openai-dots-agent-reads-cold-email-first",
+    title: "Your cold email now has a first reader with its own browser",
+    date: "Sep 29, 2026",
+    readTime: "4 min",
+    excerpt:
+      "OpenAI's new dots are always-on agents with their own browser and 4,000 connected apps, and Instinct just raised $1 billion for another one. Nobody has said how they treat mail from strangers, which puts open rates, click rates and every cold sequence built on them in question.",
+    tag: "AI & GTM",
+    color: "from-violet-700 to-orange-500",
+    tldr: "OpenAI announced dots at DevDay on September 29: always-on agents with their own cloud computer and browser, connected to more than 4,000 apps, included with Pro and Business Premium. The day before, Instinct raised $1 billion at a $10 billion valuation for a personal agent that texts, calls and cancels subscriptions for its users, and Meta's Muse has 2.5 million downloads since September 8. Nobody has said how these agents treat mail from senders they do not know. Open rates and click rates may soon count software, and a first email has to make sense when a machine summarizes it before a person sees it.",
+  },
+  {
+    slug: "meta-enterprise-platform-ad-to-agent-funnel",
+    title: "Meta sells the ad, runs the conversation it starts, and now sells the agent that closes the sale",
+    date: "Sep 29, 2026",
+    readTime: "4 min",
+    excerpt:
+      "Meta's Business Agent qualifies leads and closes sales inside WhatsApp, Messenger and Instagram threads, and over a million businesses already use it. For a small business that advertises on Meta, the ad, the inbox and the lead qualification can now come from one vendor. Pricing, a named customer and a close rate are still missing.",
+    tag: "AI & GTM",
+    color: "from-blue-700 to-orange-500",
+    tldr: "Meta announced its Enterprise Platform on September 28. It includes Business Agent, which answers questions, qualifies leads, books appointments and closes sales inside WhatsApp, Messenger and Instagram threads, and over a million businesses already use it. A free small-business version of Muse connects to Shopify, Stripe and a company's Meta ad accounts. For a small business, the ad, the inbound conversation and the lead qualification can now come from one vendor. Meta has not published a price, a named launch customer or a close rate.",
+  },
+  {
     slug: "instacart-shelf-data-sold-twice",
     title: "Instacart built a live map of every grocery aisle. It is selling the same map to both sides of the table.",
     date: "Sep 28, 2026",
