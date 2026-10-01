@@ -2,6 +2,8 @@
 """
 voice-lint.py — flag AI-writing "tells" in a draft before you publish.
 
+v6 (Oct 1, 2026): Wikipedia Sept 2026 revision (chatbot markup leaks, copula
+    avoidance), slogan/tricolon shapes, P.S. closer, seamslop check.
 v5 (Sept 25, 2026): 2026-survey tells added, .tsx sources array ignored, staccato check.
 
 Usage:
@@ -251,6 +253,17 @@ HARD_REGEX = [
      'AI framing: "think of it as / imagine a world where"'),
     (r"\bthis is the whole (game|ballgame|point)\b",
      'significance-flag: "this is the whole game"'),
+    # --- added Oct 1, 2026 (v6) ---
+    (r"\bNo [^.!?\n]{1,40}\. No [^.!?\n]{1,40}\. (Just|Only|All)\b",
+     'tricolon: "No X. No Y. Just Z."'),
+    # slogan form only (period-split, short clause). The comma form "stop X,
+    # and start Y" is plain advice and hit a shipped post, so it lives in SOFT.
+    (r"\bStop \w+ing\b[^.!?\n,]{0,25}\.\s+Start \w+ing\b",
+     'slogan: "Stop X-ing. Start Y-ing."'),
+    (r"\bI can'?t stop thinking about\b",
+     'false intimacy: "I can\'t stop thinking about"'),
+    (r"^\s*(In )?(Conclusion|Final thoughts|Key takeaways)\s*:?\s*$",
+     'generic AI section header: "Conclusion / Final thoughts / Key takeaways"'),
 ]
 
 # Moralizing / aphoristic closers — only HARD when they appear in the LAST
@@ -278,6 +291,18 @@ CLOSER_REGEX = [
      'closer cliche: "What about you? / the choice is yours"'),
     (r"\b(the (real|hard) work (starts|begins) now|and that changes everything)\b",
      'closer cliche: "the real work starts now / that changes everything"'),
+    # --- added Oct 1, 2026 (v6) ---
+    (r"^\s*p\.\s?s\.",
+     'closer: "P.S." sign-off'),
+]
+
+# Raw-text HARD checks (run before tag stripping, so hrefs are visible).
+# --- added Oct 1, 2026 (v6): Wikipedia Signs of AI writing, Sept 2026 revision ---
+RAW_HARD = [
+    (r"oaicite|contentReference\[|\bturn\d+(search|news|view)\d+\b|\[cite:\s*\d+\]|\[span_\d+\]\(start_span\)|grok_card|\[(web|attached_file):\d+\]|ppl-ai-file-upload|【\d+†",
+     'chatbot citation-markup leak'),
+    (r"utm_source=(openai|chatgpt\.com|copilot\.com)|referrer=grok\.com",
+     'chatbot tracking parameter in a URL'),
 ]
 
 # ----------------------------------------------------------------------------
@@ -308,6 +333,8 @@ SOFT_VOCAB = [
     "bolster", "bolsters", "spearhead", "spearheaded", "intricate", "intricacies",
     "compelling", "profound", "remarkable", "invaluable", "unprecedented",
     "meticulous", "meticulously", "granular", "nimble", "agile", "purpose-built",
+    # added Oct 1, 2026 (v6)
+    "symphony", "nestled", "renowned", "boasts", "boasting",
 ]
 SOFT_INTENSIFIERS = ["actually", "genuinely", "truly", "simply", "essentially",
                      "crucially", "notably", "importantly", "fundamentally",
@@ -353,6 +380,32 @@ SOFT_REGEX = [
      'significance idiom: "the whole ballgame" (you used it Sept 25; don\'t make it a habit)'),
     (r",\s*(and|which) (this|that|it) (is|was) (the|a) (problem|point|gift|trap|opportunity)\b",
      'significance tag variant: ", and that is the problem"'),
+    # --- added Oct 1, 2026 (v6) ---
+    (r"\bthe trap (is|here is)\b",
+     'framing tee-up: "the trap is"'),
+    (r"\b(risk|value|margin|problem|money|leverage|power|answer) lives (in|at|with)\b",
+     'abstract locative: "the risk lives in"'),
+    (r"\bnot only\b[^.?!\n]{1,80}\bbut also\b",
+     'balanced construction: "not only... but also"'),
+    (r"\b(serves|stands|functions) as (a|an|the)\b",
+     'copula avoidance: "serves as / stands as" (just say "is")'),
+    (r"(^|[.?!]\s+)(Moreover|Furthermore|Additionally),",
+     'essay connective: "Moreover, / Furthermore,"'),
+    (r"\b(hit|struck|touched) a (nerve|chord)\b",
+     'stock reaction idiom: "hit a nerve / struck a chord"'),
+    (r"\bwhat I keep (noticing|running into)\b",
+     'labeled musing: "what I keep noticing"'),
+    (r"\baims? to\b",
+     'hedge: "aims to" (say what it does)'),
+    (r"\b(deep dive|in the heart of|diverse array|commitment to)\b",
+     'promotional / AI stock phrase (Wikipedia, Sept 2026)'),
+    # downgraded from HARD in v6 testing: both hit shipped posts (Aug 2026)
+    (r"\bworth sitting with\b",
+     'false intimacy: "worth sitting with" (say what the detail is)'),
+    (r"\bstop \w+ing\b[^.!?\n]{0,60}[,;]\s+(and\s+)?start \w+ing\b",
+     'slogan-ish: "stop X-ing, start Y-ing" (fine as plain advice)'),
+    (r"\bI(?: have to|'ll| will| gotta| need to) be honest\b",
+     'honesty tee-up: "I have to be honest" (Claude tic, arXiv 2604.19139)'),
 ]
 
 # ----------------------------------------------------------------------------
@@ -437,6 +490,13 @@ def lint(raw, label):
         if re.search(pat, tail, re.I | re.M):
             hard.append(f"  CLOSER  [{name}] — appears in your final paragraph; rewrite the ending.")
 
+    # Raw-text checks (v6): chatbot markup / tracking leaks survive in hrefs
+    for pat, name in RAW_HARD:
+        m = re.search(pat, raw, re.I)
+        if m:
+            snip = raw[max(0, m.start() - 30):m.end() + 30].replace("\n", " ").strip()
+            hard.append(f"  RAW  [{name}]\n        {snip}")
+
     # Soft: vocabulary + intensifier counts
     wlist = [w.lower() for w in words(full)]
     wc = len(wlist) or 1
@@ -462,6 +522,15 @@ def lint(raw, label):
         for m in re.finditer(pat, full, re.I):
             soft.append(f"  {name}")
             break
+
+    # Seamslop (v6, Matt Pocock Aug 2026): one figurative noun leaned on 3+ times
+    FIG_NOUNS = {"seam": ("seam", "seams"), "lever": ("lever", "levers"),
+                 "moat": ("moat", "moats"), "flywheel": ("flywheel", "flywheels"),
+                 "playbook": ("playbook", "playbooks"), "wedge": ("wedge", "wedges")}
+    for base, forms in FIG_NOUNS.items():
+        n = sum(1 for w in wlist if w in forms)
+        if n >= 3:
+            soft.append(f'  Seamslop: "{base}" used {n}x as a metaphor; vary or say it plainly.')
 
     # Em-dash density (— ). Flag if more than ~1 per 100 words or >4 total.
     dashes = full.count("—")
