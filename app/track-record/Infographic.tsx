@@ -72,6 +72,7 @@ type Chapter = {
   detail: string;
   number: string;
   numberLabel: string;
+  color?: string;
 };
 
 const chapters: Chapter[] = [
@@ -149,6 +150,7 @@ const chapters: Chapter[] = [
     company: "Zeta Global",
     years: "2024–26",
     era: "ai",
+    color: VIOLET,
     headline: "A product with no category",
     detail:
       "Brought the first AI, email-based customer acquisition product to market, built on a 250M+ person deterministic universe with 5,000+ data points on each individual. No budgets existed for it, so the job was creating them. Closed $1.5M+ in pilot and follow-on revenue with new enterprise logos.",
@@ -158,7 +160,7 @@ const chapters: Chapter[] = [
   {
     company: "Epsilon",
     years: "2026–",
-    era: "enterprise",
+    era: "ai",
     headline: "Carrying a number again",
     detail:
       "Joined Epsilon in September 2026 as an enterprise seller to national consumer brands. I sell retail media, first-party data, and identity programs, including AI-driven audience modeling and closed-loop measurement that ties spend back to sales at the retailers that carry those brands.",
@@ -201,7 +203,7 @@ export default function Infographic() {
   const score = useInView<HTMLDivElement>();
   const arc = useInView<HTMLDivElement>();
   const chapter = chapters[active];
-  const era = eraStyles[chapter.era];
+  const era = { ...eraStyles[chapter.era], ...(chapter.color ? { color: chapter.color } : {}) };
 
   return (
     <>
@@ -289,7 +291,7 @@ export default function Infographic() {
                       isActive ? "scale-125" : "group-hover:scale-110"
                     }`}
                     style={{
-                      background: st.color,
+                      background: c.color ?? st.color,
                       border: `2.5px solid ${INK}`,
                       boxShadow: isActive ? `0 0 0 3px ${ACID}` : "none",
                     }}
