@@ -158,6 +158,16 @@ const chapters: Chapter[] = [
     numberLabel: "closed on a first-to-market product",
   },
   {
+    company: "Campsite Ranger",
+    years: "Aug 2026",
+    era: "ai",
+    headline: "Shipped my own product",
+    detail:
+      "Built and launched a paying product on my own, pairing with Claude Code. Campsite Ranger emails Colorado campers a booking link the moment a sold-out campsite or permit opens in their dates. 337 commits in seven weeks, on nights and weekends.",
+    number: "7",
+    numberLabel: "weeks from first line to launch",
+  },
+  {
     company: "Epsilon",
     years: "2026–",
     era: "ai",
@@ -251,7 +261,7 @@ export default function Infographic() {
           The arc
         </h2>
         <p className="text-sm mb-8" style={{ color: "#6a6258" }}>
-          Fifteen years in three acts. Tap a chapter; one number per stop.
+          Sixteen years in three acts. Tap a chapter; one number per stop.
         </p>
 
         <div className="flex flex-wrap gap-x-4 gap-y-2 mb-5 text-xs" style={{ color: "#6a6258" }}>
@@ -270,7 +280,7 @@ export default function Infographic() {
             style={{ width: arc.inView ? "100%" : "0%", background: `linear-gradient(90deg, ${VIOLET}, ${BLUE} 55%, ${TEAL})` }}
             aria-hidden="true"
           />
-          <div className="relative grid grid-cols-3 sm:grid-cols-9 gap-y-6">
+          <div className="relative grid grid-cols-5 sm:grid-cols-10 gap-y-6">
             {chapters.map((c, i) => {
               const st = eraStyles[c.era];
               const isActive = i === active;
