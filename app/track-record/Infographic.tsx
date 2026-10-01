@@ -139,9 +139,9 @@ const chapters: Chapter[] = [
     company: "Oracle Advertising",
     years: "2021–24",
     era: "enterprise",
-    headline: "Oracle Advertising's biggest account",
+    headline: "Oracle Advertising's biggest accounts",
     detail:
-      "Ran Oracle Advertising's largest enterprise relationship (Amazon), driving $2.25M in incremental revenue through joint business plans. Expanded Pepsi, J&J, and GSK, and won enterprise RFPs exceeding $4M. Tapped by North American executive leadership to represent all NA sellers: I carried market feedback on contextual audience, third-party data, and measurement products into the quarterly executive product team meeting, and helped them prioritize the roadmap by revenue impact and client request volume.",
+      "Ran Oracle Advertising's largest enterprise relationships (Amazon, J&J, Pepsi), driving $2.25M in incremental Amazon revenue through joint business plans. Expanded GSK and won enterprise RFPs exceeding $4M. Tapped by North American executive leadership to represent all NA sellers: I carried market feedback on contextual audience, third-party data, and measurement products into the quarterly executive product team meeting, and helped them prioritize the roadmap by revenue impact and client request volume.",
     number: "#1",
     numberLabel: "largest client relationship at Oracle Advertising",
   },
