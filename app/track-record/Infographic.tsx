@@ -91,7 +91,7 @@ const chapters: Chapter[] = [
     era: "agency",
     headline: "The Obama campaign's agency",
     detail:
-      "New business development at the agency behind the Obama 2008 and 2012 campaigns. Worked across Chevrolet, J.P. Morgan, and MSNBC.",
+      "New business development at the agency behind the Obama 2008 and 2012 campaigns, which also branded the yellow Livestrong wristband. Worked across Chevrolet, J.P. Morgan, and MSNBC.",
     number: "2",
     numberLabel: "presidential campaigns in the building",
   },
