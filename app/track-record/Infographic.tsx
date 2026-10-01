@@ -163,7 +163,7 @@ const chapters: Chapter[] = [
     era: "ai",
     headline: "Carrying a number again",
     detail:
-      "Joined Epsilon in September 2026 as an enterprise seller to national consumer brands. I sell retail media, first-party data, and identity programs, including AI-driven audience modeling and closed-loop measurement that ties spend back to sales at the retailers that carry those brands.",
+      "Joined Epsilon in September 2026 as an enterprise seller to national consumer brands. I sell retail media, third-party data, and the industry's best identity spine, including AI-driven audience modeling and closed-loop measurement that ties spend back to sales at the retailers that carry those brands.",
     number: "Now",
     numberLabel: "enterprise retail media, data, and AI-driven audiences",
   },
