@@ -17,7 +17,7 @@ const VIOLET = "#6B4BFF";
 type Stat = { prefix: string; end: number; suffix: string; label: string; sub: string; text?: string };
 
 const stats: Stat[] = [
-  { prefix: "", end: 15, suffix: "+", label: "Years selling technology", sub: "Agency, enterprise, AI frontier" },
+  { prefix: "", end: 16, suffix: "+", label: "Years selling technology", sub: "Agency, enterprise, AI frontier" },
   { prefix: "", end: 7, suffix: "-figure", text: "7-figure", label: "Deals closed, repeatedly", sub: "Enterprise pilots through multi-year" },
   { prefix: "", end: 8, suffix: "-figure", text: "8-figure", label: "Client relationships managed", sub: "Fortune 500 books of business" },
   { prefix: "", end: 3, suffix: "", label: "Categories sold before budget lines existed", sub: "AI acquisition, contextual, answer-engine" },

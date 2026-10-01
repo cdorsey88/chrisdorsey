@@ -486,10 +486,10 @@ export default function ChrisDorseySite() {
 
   // Era cards — warming gray→teal toward "now".
   const eras = [
-    { title: "Creative & PR", year: "2009", desc: "Crispin Porter + Bogusky — Agency of the Decade. Built the first proactive new-business function.", bg: CREAM2, fg: INK, border: INK },
-    { title: "Digital", year: "2013", desc: "First hire at an indie NYC shop. Grew revenue 300% in a year and beat agencies with thousands of employees to win IMAX, then built the campaign that repositioned the brand around intensity.", bg: ACID, fg: INK, border: INK },
-    { title: "Data", year: "2018", desc: "Oracle Advertising — managed Amazon, J&J, PepsiCo; #1 seller in the US for the pharma vertical. Edge infrastructure at Fastly.", bg: BLUE, fg: "#fff", border: BLUE },
-    { title: "AI acquisition", year: "2024", desc: "Zeta Global — first email-based AI customer-acquisition product to market, with opt-in permission to email 110M+ people on behalf of our clients.", bg: VIOLET, fg: "#fff", border: VIOLET },
+    { title: "Creative & PR", year: "2010", desc: "Crispin Porter + Bogusky — Agency of the Decade. Built the first proactive new-business team, which won $100M+. Worked on Groupon's Super Bowl commercials.", bg: CREAM2, fg: INK, border: INK },
+    { title: "Digital", year: "2013", desc: "First hire at an indie NYC shop. Grew revenue 300% in a year. With 8 people full-time, we beat legacy industry leaders for IMAX creative AOR, then repositioned the brand around intensity.", bg: ACID, fg: INK, border: INK },
+    { title: "Data", year: "2018", desc: "Oracle Advertising — managed Amazon, J&J, PepsiCo. #1 US pharma seller for audience data and contextual targeting. Tapped by the exec team to represent all US sellers on roadmap feedback. Edge infrastructure at Fastly.", bg: BLUE, fg: "#fff", border: BLUE },
+    { title: "AI acquisition", year: "2024", desc: "Zeta Global — first email-based AI customer-acquisition product to market, with opt-in permission to email 110M+ people for clients. Grew a $200K pilot into a $1M+ contract on performance.", bg: VIOLET, fg: "#fff", border: VIOLET },
     { title: "AI & agents", year: "now", desc: "Full-time: advising Fortune 500 brands on advertising and growth strategy. Nights and weekends: Campsite Ranger, live and shipping.", bg: TEAL, fg: "#fff", border: TEAL },
   ];
 
@@ -792,7 +792,7 @@ export default function ChrisDorseySite() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-10 max-w-3xl mx-auto">
               <p className="inline-block text-xs uppercase tracking-widest px-3 py-1 rounded-full mb-3 font-bold" style={{ color: INK, background: ACID }}>
-                Brands &amp; teams I&apos;ve worked with
+                Brands &amp; teams I&apos;ve advised
               </p>
               <p className="text-lg leading-relaxed" style={{ color: "rgba(255,255,255,0.92)" }}>
                 Companies I&apos;ve sold to or built work for. Many of these relationships lasted well past the first deal.
