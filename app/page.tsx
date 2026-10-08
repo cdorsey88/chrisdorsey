@@ -700,12 +700,15 @@ export default function ChrisDorseySite() {
               />
             </a>
             <div className="flex-1" style={{ minWidth: 260 }}>
-              <span
-                className="inline-block text-xs uppercase tracking-widest font-bold px-3 py-1 rounded-full mb-2"
+              <a
+                href="https://coloradosun.com/2026/10/08/new-websites-helps-campers-score-top-campsites-in-colorado/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-xs uppercase tracking-widest font-bold px-3 py-1 rounded-full mb-2 transition-transform hover:-translate-y-0.5"
                 style={{ background: INK, color: ACID }}
               >
-                Just shipped
-              </span>
+                Featured in The Colorado Sun <ArrowUpRight className="w-3.5 h-3.5" />
+              </a>
               <p className="font-display font-extrabold leading-tight mb-1" style={{ fontSize: "clamp(19px,2.2vw,22px)", color: INK }}>
                 Campsite Ranger gets you into sold-out campgrounds.
               </p>
@@ -901,6 +904,21 @@ export default function ChrisDorseySite() {
                   <p className="text-sm leading-relaxed mb-5" style={{ color: "rgba(242,236,221,0.85)" }}>
                     I designed, built, and shipped every piece of it myself, pairing with Claude Code: 337 commits from first line to launch, in seven weeks, on nights and weekends.
                   </p>
+                  <a
+                    href="https://coloradosun.com/2026/10/08/new-websites-helps-campers-score-top-campsites-in-colorado/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group block rounded-xl px-4 py-3 mb-5"
+                    style={{ border: "2px solid rgba(242,236,221,0.25)", background: "rgba(242,236,221,0.06)" }}
+                  >
+                    <span className="block text-xs uppercase tracking-widest font-bold mb-1" style={{ color: ACID }}>
+                      In the press &middot; The Colorado Sun &middot; Oct 8, 2026
+                    </span>
+                    <span className="flex items-start gap-1.5 font-display font-bold leading-snug" style={{ fontSize: 17, color: PAPER }}>
+                      &ldquo;A new website is helping campers score Colorado&rsquo;s most elusive campsites&rdquo;
+                      <ArrowUpRight className="w-4 h-4 shrink-0 mt-0.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                    </span>
+                  </a>
                   <div className="flex gap-3 flex-wrap items-center mb-5">
                     <a
                       href="https://www.campsiteranger.com"
