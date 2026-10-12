@@ -11,6 +11,28 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "safari-blocklist-trade-desk-appeal-bug-ticket",
+    title: "The Trade Desk's appeal to Apple is a bug ticket with no assignee",
+    date: "Oct 12, 2026",
+    readTime: "5 min",
+    excerpt:
+      "Safari on iOS 27 stopped loading ads from The Trade Desk, along with eight identity vendors on a list Apple has not published. Google's ad domain still loads. Coverage has focused on publisher revenue. Anyone buying or selling ad tech should be asking which of a vendor's domains a browser can switch off.",
+    tag: "MadTech",
+    color: "from-slate-700 to-cyan-600",
+    tldr: "Safari on iOS 27 blocks requests to adsrvr.org, the domain The Trade Desk uses to request and deliver ads, along with domains belonging to UID2, ID5, LiveRamp, Permutive and Audigent. Apple has not published the list. The Trade Desk filed a WebKit bug on September 21, and Apple's only public step since was asking it on October 5 to test an iOS 27.2 beta. In The Trade Desk's own test, Safari blocked its bids and let Google's through. Publishers are moving ad calls onto their own servers with IAB Tech Lab's Trusted Server. If you buy or sell ad tech, ask each vendor which of its domains a browser could block and what keeps working if one is.",
+  },
+  {
+    slug: "amazon-dsp-brand-budget-retail-media-networks",
+    title: "Agencies now pitch Amazon's DSP to CFOs as a brand budget",
+    date: "Oct 12, 2026",
+    readTime: "5 min",
+    excerpt:
+      "Media buyers say Amazon ad spend is up 15% to 40% this year, and the DSP, streaming and live sports are taking a growing share of it. The trade read is that Amazon keeps growing. For other retail media networks, the bigger issue is that the money moving to Amazon now belongs to brand and video teams.",
+    tag: "Retail Media",
+    color: "from-orange-600 to-amber-400",
+    tldr: "Five media buyers told Digiday on October 7 that client spend on Amazon ads is up 15% to 40% from a year ago. At Tinuiti, spend through Amazon DSP grew 25% to 30% while total Amazon spend grew about 15%, and Power Digital described the DSP as a brand-building tool more than a checkout driver. Amazon's second-quarter ad revenue was $19.8 billion, up 26%, with live sports sold out. Average Prime Day discounts are also shrinking. A retail media network that sells mostly onsite sponsored listings is pitching the trade and shopper budgets, while the growth Amazon is winning comes from brand and video budgets owned by different people.",
+  },
+  {
     slug: "openai-dots-agent-reads-cold-email-first",
     title: "Your cold email now has a first reader with its own browser",
     date: "Sep 29, 2026",
