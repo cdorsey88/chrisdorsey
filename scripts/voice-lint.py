@@ -2,6 +2,10 @@
 """
 voice-lint.py — flag AI-writing "tells" in a draft before you publish.
 
+v7 (Oct 16, 2026): post-em-dash tells (Opus 5.5 / GPT-6 frames from Graphite,
+    TechCrunch, Remio), op-ed comma antithesis, engagement-bait closers,
+    structural checks: flat rhythm, no contractions, header inflation,
+    bold-stem bullets, emoji.
 v6 (Oct 1, 2026): Wikipedia Sept 2026 revision (chatbot markup leaks, copula
     avoidance), slogan/tricolon shapes, P.S. closer, seamslop check.
 v5 (Sept 25, 2026): 2026-survey tells added, .tsx sources array ignored, staccato check.
@@ -264,6 +268,34 @@ HARD_REGEX = [
      'false intimacy: "I can\'t stop thinking about"'),
     (r"^\s*(In )?(Conclusion|Final thoughts|Key takeaways)\s*:?\s*$",
      'generic AI section header: "Conclusion / Final thoughts / Key takeaways"'),
+    # --- added Oct 16, 2026 (v7): post-em-dash tells (Graphite Sept 16 / TechCrunch Oct 1 / Remio Oct 2, 2026) ---
+    # Opus 5.5 swapped "it's not X, it's Y" for "is more than an X, it's a Y"
+    (r"\b(is|are|was|were) more than (just )?(a|an|the)\b[^.?!\n]{1,60}[,;:]\s*(it'?s|it is|they'?re|they are|that'?s)\b",
+     'negation swap: "is more than an X, it\'s a Y" (Opus 5.5 stand-in for "not X, it\'s Y")'),
+    # comma-form op-ed antithesis (Semafor Aug 26, 2026: "This wasn't liquidity management, it was price management")
+    (r"\b(this|that|it) (wasn'?t|was not|isn'?t|is not)\b[^.?!\n]{1,60},\s*(it|this|that) (was|is)\b",
+     'negation: "This wasn\'t X, it was Y" (op-ed antithesis)'),
+    # importance flagging ("this matters because", "why this matters") lives in SOFT: hit shipped posts
+    # stock transitions
+    (r"(^|[.?!]\s+)Looking ahead,",
+     'stock transition: "Looking ahead,"'),
+    (r"\badds? (another|a new|a further) (layer|dimension|wrinkle)\b",
+     'stock transition: "adds another layer"'),
+    (r"(^|[.?!]\s+)Together,? (these|those|they)\b",
+     'stock transition: "Together, these..."'),
+    # GPT-6 corrective hedge frames
+    (r"\brather than (simply|merely)\b",
+     'corrective hedge: "rather than simply/merely"'),
+    (r"\b(is|are|was) not (simply|merely) (a|an|about)\b",
+     'corrective hedge: "is not simply a"'),
+    # suspense hook (Link & Think catalog, June 2026)
+    (r"\b(this|that|it|which) (pattern |move |thing |problem )?has a name\b",
+     'suspense hook: "this has a name"'),
+    # fake-casual openers, 2026 crop (Olivia Cal; EcomGhosts)
+    (r"(^|[.?!]\s+)(Picture this|Imagine this|Quick story|Story time|Confession|Reality check)\s*[,:.]",
+     'fake-casual opener: "Picture this: / Quick story:"'),
+    (r"\b(only|just) half (of )?the story\b",
+     'reveal bridge: "that\'s only half the story"'),
 ]
 
 # Moralizing / aphoristic closers — only HARD when they appear in the LAST
@@ -294,6 +326,13 @@ CLOSER_REGEX = [
     # --- added Oct 1, 2026 (v6) ---
     (r"^\s*p\.\s?s\.",
      'closer: "P.S." sign-off'),
+    # --- added Oct 16, 2026 (v7): engagement-bait and neat-lesson closers (EcomGhosts Jul 2026, Mylance Aug 2026, Semafor Aug 2026) ---
+    (r"\b(what do you think\?|have you (experienced|seen|noticed|felt) (this|that|it)\?|drop (your thoughts|a comment|a line)|let me know in the comments|curious (to hear|what you think)|agree\?|thoughts\?)",
+     'closer: engagement bait ("What do you think? / drop a comment / Agree?")'),
+    (r"\b(the lesson|the takeaway|the moral) (here )?(is|\?)",
+     'closer: "the lesson here is" (neat-lesson wrap)'),
+    (r"\bis (brutally|deceptively|refreshingly|remarkably) simple\s*[:.]",
+     'closer: "is brutally simple:" (op-ed aphorism tee-up)'),
 ]
 
 # Raw-text HARD checks (run before tag stripping, so hrefs are visible).
@@ -335,12 +374,19 @@ SOFT_VOCAB = [
     "meticulous", "meticulously", "granular", "nimble", "agile", "purpose-built",
     # added Oct 1, 2026 (v6)
     "symphony", "nestled", "renowned", "boasts", "boasting",
+    # added Oct 16, 2026 (v7): Opus 5.5 rating words (Graphite/TechCrunch), Olivia Cal blacklist
+    "dependable", "thoughtful", "thoughtfully", "meaningful", "meaningfully",
+    "deliberate", "deliberately", "future-ready", "demystify", "demystifies",
+    "unwavering", "ignite", "ignites",
 ]
 SOFT_INTENSIFIERS = ["actually", "genuinely", "truly", "simply", "essentially",
                      "crucially", "notably", "importantly", "fundamentally",
                      # added Sept 2026 (v5)
                      "honestly", "frankly", "significantly", "effectively",
-                     "increasingly", "deeply", "profoundly", "incredibly"]
+                     "increasingly", "deeply", "profoundly", "incredibly",
+                     # added Oct 16, 2026 (v7)
+                     "structurally", "enormously", "remarkably", "absolutely",
+                     "immensely", "arguably", "undeniably"]
 SOFT_ATTRIBUTION = [r"studies show", r"experts say", r"research suggests",
                     r"it'?s widely (believed|known)", r"many believe"]
 SOFT_REGEX = [
@@ -406,6 +452,36 @@ SOFT_REGEX = [
      'slogan-ish: "stop X-ing, start Y-ing" (fine as plain advice)'),
     (r"\bI(?: have to|'ll| will| gotta| need to) be honest\b",
      'honesty tee-up: "I have to be honest" (Claude tic, arXiv 2604.19139)'),
+    # --- added Oct 16, 2026 (v7) ---
+    (r"\b(this|that|it) matters (because|more than|most|here)\b",
+     'significance-flag: "this matters because / matters more than" (Opus 5.5 top frame; downgraded: 4 shipped posts use it)'),
+    (r"\bwhy (this|that|it) matters\b|\bwhy does (this|that|it) matter\b",
+     'significance-flag: "why this matters / why does this matter?" (downgraded: used as a header in 3 shipped posts)'),
+    # downgraded from HARD in v7 testing (hit already-shipped posts)
+    (r"\bless like (a|an)\b[^.?!\n]{1,50}\band more like\b",
+     'negation swap: "less like a X and more like a Y" (downgraded: hit shipped walmart-vibe post)'),
+    (r"\b(perhaps|arguably|easily) the most\b|\bthe single most\b",
+     'superlative frame: "perhaps/arguably the most" (Claude tic, Graphite Sept 2026)'),
+    (r"\bone of the (best|most \w+) (things? |parts? )?about\b",
+     'superlative frame: "one of the best things about"'),
+    (r"\bjust as important(ly)?\b|\bwhat matters most\b",
+     'significance-flag: "just as important / what matters most"'),
+    (r"\bwhat comes next\b",
+     'stock transition: "what comes next" (Opus 5.5 tic)'),
+    (r"\b(not necessarily|need not|does not establish|may well)\b",
+     'hedge (GPT-6 Astra tic): "not necessarily / need not / may well"'),
+    (r"(^|[.?!]\s+)(Put|Said|Stated) (differently|another way|simply),|\bin other words\b",
+     'restatement gloss: "Put differently, / in other words" (say it once)'),
+    (r"\bwithout (sacrificing|compromising|losing sight of)\b",
+     'no-tradeoff promise: "without sacrificing X"'),
+    (r"\b(first and foremost|firstly|it'?s important to (note|remember|understand)|a variety of factors|several (key|important) (reasons|factors))\b",
+     'essay scaffold phrase: "first and foremost / it\'s important to note"'),
+    (r"\b(can help you|is especially (helpful|useful))\b",
+     'helper-talk (Opus 5.5 tic): "can help you"'),
+    (r"\b(is|are) not optional\b",
+     'litotes verdict: "is not optional"'),
+    (r"\bthe (deepest|cleanest|sharpest) (point|version|cut|organizing idea)\b",
+     'self-ranking: "the deepest point / cleanest version"'),
 ]
 
 # ----------------------------------------------------------------------------
@@ -563,6 +639,31 @@ def lint(raw, label):
                 break
         else:
             para_run = 0
+
+    # --- added Oct 16, 2026 (v7): structural tells that survive word swaps ---
+    # Flat rhythm: AIs hold 15-22 words per sentence; humans burst
+    # (Graphite Sept 2026, PaperBleach Jul 2026). Flag low variation.
+    slens = [len(words(s)) for s in sents if words(s)]
+    if len(slens) >= 15:
+        mean = sum(slens) / len(slens)
+        sd = (sum((x - mean) ** 2 for x in slens) / len(slens)) ** 0.5
+        if mean and sd / mean < 0.4:
+            soft.append(f"  Flat rhythm: {len(slens)} sentences averaging {mean:.0f} words with little variation (cv {sd/mean:.2f}) — put a 4-word sentence next to a 30-word one.")
+    # No contractions in a long piece (Gemini drops them; your rule is contractions always)
+    if wc > 300 and not re.search(r"\b\w+['\u2019](s|t|re|ll|ve|d|m)\b", full, re.I):
+        soft.append(f"  No contractions in ~{wc} words — reads as a press release, not you.")
+    # Header inflation: Gemini's "four headers in 400 words"
+    n_heads = len(re.findall(r"<h[23]\b", raw)) + len(re.findall(r"^\s*#{2,3}\s", raw, re.M))
+    if n_heads >= 3 and wc / n_heads < 120:
+        soft.append(f"  Header inflation: {n_heads} section headers in ~{wc} words — merge sections.")
+    # Bold-stem bullets ("**Term:** explanation"), the listicle tic
+    n_bold_stem = len(re.findall(r"<li[^>]*>\s*<(strong|b)>[^<]{1,40}</(strong|b)>\s*[:\u2014\u2013-]|^\s*[-*]\s+\*\*[^*]{1,40}\*\*\s*[:\u2014\u2013-]", raw, re.M))
+    if n_bold_stem >= 2:
+        soft.append(f"  Bold-stem bullets: {n_bold_stem} '**Term:** explanation' items — write it as prose.")
+    # Emoji in body copy (Mylance Aug 2026: "the dashes and the little emojis")
+    n_emoji = len(re.findall("[\U0001F300-\U0001FAFF\u2705\u2728\u26A1\U0001F680]", full))
+    if n_emoji >= 2:
+        soft.append(f"  Emoji: {n_emoji} in body copy — drop them.")
 
     # Self-similarity: compare this post's closer to prior shipped closers.
     closer = nonempty[-1].strip() if nonempty else ""
