@@ -11,6 +11,17 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "salesforce-braze-personal-agents-channel",
+    title: "Salesforce paid $5.66 billion to reach your customers at the right moment. It also listed their AI agents as a channel.",
+    date: "Oct 20, 2026",
+    readTime: "4 min",
+    excerpt:
+      "Salesforce paid $5.66 billion for the best right-moment engine in marketing, and its own exec listed the customer's AI agent as a channel. An agent doesn't have a right moment. What holds up is the SDK inside 2,789 brands' apps.",
+    tag: "Future of Ads",
+    color: "from-violet-700 to-orange-500",
+    tldr: "Salesforce agreed on October 20 to buy Braze for about $5.66 billion in cash, a 58% premium. On the investor call, Patrick Stokes listed personal agents as a channel alongside SMS and WhatsApp. Braze's value has been timing: reaching a distracted person at the right moment. An agent doesn't get distracted and reads every offer, and Braze's own survey projects agent use for brand interactions going from 19% to 46% of consumers by the end of 2026. The asset that holds up is Braze's SDK, sitting inside 2,789 brands' apps and recording what happens there. If you're renewing Braze or Marketing Cloud, ask whether you can publish offers an agent can read and whether the decisioning model knows when it's talking to software.",
+  },
+  {
     slug: "safari-blocklist-trade-desk-appeal-bug-ticket",
     title: "The Trade Desk's appeal to Apple is a bug ticket with no assignee",
     date: "Oct 12, 2026",
