@@ -11,6 +11,17 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "campsite-ranger-two-months-after-launch",
+    title: "Campsite Ranger, two months after launch",
+    date: "Oct 28, 2026",
+    readTime: "7 min",
+    excerpt:
+      "Two months after launch, Campsite Ranger covers 89 Colorado campgrounds and 96 of 100 Founding Ranger spots are sold. What two newspaper stories did for growth, what 5,483 campsite openings taught me about booking, and what running a one-person company looks like with a day job and a toddler.",
+    tag: "Builds",
+    color: "from-emerald-800 to-amber-500",
+    tldr: "Campsite Ranger launched August 27 covering 49 Colorado locations. It now covers 89 campgrounds plus permits and wilderness zones, about 600 people have accounts, and 96 have paid $25 to become Founding Rangers. Most of that growth came from two newspaper stories in early October. Our cancellation data shows 96.8% of openings were still bookable about 93 seconds after we spotted them, which is why the product sends alerts and won’t ask for your recreation.gov password. The annual membership price increases to $40 when the last four Founding Ranger spots sell, and I’m deciding at the end of February whether this is a real business. (Regardless, I’ll maintain existing functionality. I just may not keep innovating.)",
+  },
+  {
     slug: "salesforce-braze-personal-agents-channel",
     title: "Salesforce paid $5.66 billion to reach your customers at the right moment. It also listed their AI agents as a channel.",
     date: "Oct 20, 2026",

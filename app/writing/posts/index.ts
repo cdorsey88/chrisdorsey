@@ -1,4 +1,5 @@
 import type { Post } from "./types";
+import { post as pCRTMAL } from "./campsite-ranger-two-months-after-launch";
 import { post as pSBPAC } from "./salesforce-braze-personal-agents-channel";
 import { post as pSBTDABT } from "./safari-blocklist-trade-desk-appeal-bug-ticket";
 import { post as pADBBRMN } from "./amazon-dsp-brand-budget-retail-media-networks";
@@ -91,6 +92,7 @@ import { post as p56 } from "./selling-ai-skeptical-buyers";
 
 export type { Post } from "./types";
 export const posts: Post[] = [
+  pCRTMAL,
   pSBPAC,
   pSBTDABT,
   pADBBRMN,
