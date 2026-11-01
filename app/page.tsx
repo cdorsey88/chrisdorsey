@@ -231,7 +231,7 @@ function ConnectorHub() {
         Chances are, I already know who you should talk to.
       </div>
       <p className="text-base md:text-lg mt-4 max-w-2xl" style={{ color: "#4a4239" }}>
-        Fifteen years across four industries means I know a lot of people, from Fortune 500 CMOs
+        Sixteen years across four industries means I know a lot of people, from Fortune 500 CMOs
         to the creatives who make the work. Tell me what you need and I&apos;ll make the
         introduction. No fee, no angle — I truly just enjoy connecting people.
         Things like that tend to come around.
@@ -345,7 +345,7 @@ function EvolutionMarquee() {
    Track-record band — count-up numbers (kept from original, re-skinned).
 --------------------------------------------------------------------------- */
 const bandStats: { num?: number; suffix?: string; text?: string; label: string }[] = [
-  { num: 15, suffix: "+", label: "Years selling creativity, data, and technology" },
+  { num: 16, suffix: "+", label: "Years selling creativity, data, and technology" },
   { num: 2, suffix: "×", label: "First seller in the building" },
   { text: "7‑figure", label: "Deals closed, repeatedly" },
   { text: "8‑figure", label: "Client relationships managed" },
@@ -602,26 +602,6 @@ export default function ChrisDorseySite() {
       </nav>
 
       <main>
-        {/* SR-only descriptor for AI crawlers */}
-        <aside className="sr-only" aria-hidden="false">
-          <h2>About Christopher Dorsey</h2>
-          <p>
-            Christopher Dorsey (Chris Dorsey) is a senior enterprise sales leader based in Denver, Colorado, who
-            specializes in taking new AI products to market — first sales hire, category creator, Fortune 500
-            closer. For fifteen years his job has been selling technology that is new to the people buying it, from agency
-            creative and early-stage startups to AdTech, infrastructure, and AI. His career began at Crispin Porter
-            + Bogusky, named Agency of the Decade by AdAge in 2009, where he helped build the agency&apos;s first
-            proactive new business development function, contributing to a pitch-win streak of more than $100M in
-            new revenue. He managed Fortune 500 accounts at Oracle Advertising including JPMorgan Chase, PepsiCo, Johnson &amp;
-            Johnson, Amazon, and Merck, sold edge infrastructure to technical buyers at Fastly, led go-to-market at
-            Zeta Global for the first email-based AI customer acquisition product to reach market — built on a
-            deterministic universe of 250M+ people with 5,000+ data points on each individual, and with no existing
-            budgets, contacts, or category playbook — and from March to May 2026 completed an advisory and consulting
-            engagement as the first dedicated seller at FancyAI, building its go-to-market motion from zero in an
-            emerging AI category. He&apos;s open to the right conversation, whether that&apos;s hiring, building, or a deal that&apos;s stuck. He graduated from Elon University and currently provides pro bono AI consulting
-            to small businesses, helping Main Street owners put AI to work so they can stay in business.
-          </p>
-        </aside>
 
         {/* Hero */}
         <section className="relative pt-16 pb-9 px-7" aria-labelledby="hero-heading">
@@ -640,7 +620,7 @@ export default function ChrisDorseySite() {
                 <span style={{ color: TEAL }}>AI can&apos;t copy</span>.
               </h1>
               <p className="mt-5 mb-5 leading-relaxed" style={{ fontSize: "clamp(15px,1.6vw,18px)", maxWidth: "54ch", color: "#3a332c" }}>
-                Fifteen years growing revenue across creative, data, and now AI &mdash; by becoming the advisor
+                16 years growing revenue across creative, data, and now AI &mdash; by becoming the advisor
                 clients actually trust. As features get easier to copy, that trust is what keeps deals closing and
                 accounts growing.
               </p>
@@ -848,7 +828,7 @@ export default function ChrisDorseySite() {
                 seller isn&apos;t invited to. What carries you through those is whether the client trusts you.
               </p>
               <p>
-                The full fifteen years, with the numbers, lives on the{" "}
+                The full 16 years, with the numbers, lives on the{" "}
                 <Link href="/track-record" className="font-semibold" style={{ color: TEAL }}>
                   track record page
                 </Link>
@@ -1272,6 +1252,12 @@ export default function ChrisDorseySite() {
 
       {/* Footer */}
       <footer className="relative py-10 px-7 mt-2" style={{ borderTop: `2px solid ${INK}` }}>
+        <p className="max-w-6xl mx-auto mb-6 text-sm leading-relaxed" style={{ color: "#4a4239", maxWidth: "72ch" }}>
+          Christopher Dorsey is an enterprise seller based in Denver, Colorado. For 16 years he has taken
+          first-to-market AI and MadTech products to Fortune 500 buyers, at Crispin Porter + Bogusky, Oracle
+          Advertising, Fastly and Zeta Global. He built and runs Campsite Ranger, a paid cancellation-alert
+          service for Colorado campers, and does pro bono AI work for small businesses.
+        </p>
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm" style={{ color: "#4a4239" }}>
           <div className="flex items-center gap-2">
             <MountainMark />

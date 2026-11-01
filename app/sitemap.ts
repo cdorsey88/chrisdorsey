@@ -32,13 +32,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE}/track-record`,
-      lastModified: new Date("2026-06-09"),
+      lastModified: new Date("2026-11-01"), // update when /track-record changes
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: `${BASE}/work-with-me`,
-      lastModified: new Date("2026-05-06"),
+      lastModified: new Date("2026-09-06"), // update when /work-with-me changes
       changeFrequency: "monthly",
       priority: 0.8,
     },

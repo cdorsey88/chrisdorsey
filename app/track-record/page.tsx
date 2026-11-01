@@ -13,10 +13,19 @@ const ACID = "#C7F03A";
 export const metadata: Metadata = {
   title: "Track Record — Christopher Dorsey",
   description:
-    "The career scoreboard: 15 years taking new AI and enterprise technology to market, from first sales hire to Fortune 500 accounts. The numbers, in one screen.",
+    "The career scoreboard: 16 years taking new AI and enterprise technology to market, from first sales hire to Fortune 500 accounts. The numbers, in one screen.",
   alternates: {
     canonical: "https://chrisdorsey.co/track-record",
   },
+};
+
+// Current employer lives on this page only (site rule): merges into the #person node from layout.tsx.
+const trackRecordJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://chrisdorsey.co/#person",
+  name: "Christopher Dorsey",
+  worksFor: { "@type": "Organization", name: "Epsilon", url: "https://www.epsilon.com" },
 };
 
 export default function TrackRecord() {
@@ -29,6 +38,10 @@ export default function TrackRecord() {
         fontFamily: "var(--font-inter)",
       }}
     >
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(trackRecordJsonLd) }}
+      />
       {/* Nav */}
       <SiteNav />
 
@@ -45,7 +58,7 @@ export default function TrackRecord() {
             className="font-display font-extrabold tracking-tight leading-[0.98] mb-4"
             style={{ fontSize: "clamp(34px,5.4vw,62px)", color: INK }}
           >
-            Fifteen years, one screen.
+            Sixteen years, one screen.
           </h1>
           <p className="text-lg leading-relaxed mb-2" style={{ color: "#3a332c" }}>
             Senior enterprise sales leader who takes new AI products to market. First sales hire,

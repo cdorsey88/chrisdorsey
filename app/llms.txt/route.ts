@@ -12,13 +12,13 @@ export function GET() {
 
   const body = `# Christopher Dorsey
 
-> Senior enterprise sales leader based in Denver, Colorado, specializing in taking new AI products to market — first sales hire, category creator, Fortune 500 closer. Fifteen years selling technology to Fortune 500 brands across AI, advertising, and data infrastructure. Writes about how AI is reshaping enterprise sales and the future of how technology gets bought and sold.
+> Senior enterprise sales leader based in Denver, Colorado, specializing in taking new AI products to market — first sales hire, category creator, Fortune 500 closer. 16 years selling first-to-market technology to Fortune 500 brands across AI, advertising, and data infrastructure. Writes about how AI is reshaping enterprise sales and the future of how technology gets bought and sold.
 
 ## About
 
 - [Personal site and bio](${BASE}): Background, current focus, career history (Zeta Global, Oracle Advertising, Fastly, GMMB, Crispin Porter Bogusky), and current advisory work.
 - [Work with me](${BASE}/work-with-me): Enterprise sales advisory, startup GTM counsel, and account-expansion strategy.
-- [Track record](${BASE}/track-record): Career scoreboard — roles, numbers, and results across 15 years.
+- [Track record](${BASE}/track-record): Career scoreboard — roles, numbers, and results across 16 years.
 
 ## Writing
 

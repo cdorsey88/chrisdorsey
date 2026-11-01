@@ -346,7 +346,7 @@ export default async function PostPage({
               <p className="text-base font-bold font-display" style={{ color: INK }}>Christopher Dorsey</p>
               <p className="text-sm mb-3" style={{ color: "#6a6258" }}>Enterprise Sales Leader · AI Go-To-Market · Startup Advisor · Denver, CO</p>
               <p className="text-sm leading-relaxed mb-4" style={{ color: "#3a332c" }}>
-                Chris started his career at CP+B, Ad Age&apos;s Agency of the Decade, and never lost his love for the creative side of advertising. He&apos;s spent fifteen years selling technology to Fortune 500 brands, with stints at Zeta Global, Oracle Advertising, and Fastly, and he consults for companies beyond his full-time role. He&apos;s all in on AI, builds his own products with it, and writes about where advertising and AI meet.
+                Chris started his career at CP+B, Ad Age&apos;s Agency of the Decade, and never lost his love for the creative side of advertising. He&apos;s spent 16 years selling technology to Fortune 500 brands, with stints at Zeta Global, Oracle Advertising, and Fastly, and he consults for companies beyond his full-time role. He&apos;s all in on AI, builds his own products with it, and writes about where advertising and AI meet.
               </p>
               <div className="flex flex-col items-start gap-2 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 text-xs">
                 <a

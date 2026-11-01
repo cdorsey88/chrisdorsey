@@ -28,9 +28,9 @@ const bricolage = Bricolage_Grotesque({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://chrisdorsey.co"),
-  title: "Chris Dorsey — Enterprise Sales Leader | Growing Revenue in AI & MadTech",
+  title: "Chris Dorsey — Enterprise Sales for First-to-Market AI",
   description:
-    "Christopher Dorsey is a senior enterprise sales leader who grows revenue for AI and MadTech companies by building the trusted client relationships that outlast any feature. Based in Denver, Colorado. Fifteen years growing revenue across creative, data, and AI for brands including JPMorgan Chase, Microsoft, Amazon, PepsiCo, Johnson & Johnson, Merck, Inspire Brands, Vail Resorts, Stitch Fix, Groupon, JCPenney, and JSX.",
+    "Denver-based enterprise seller taking first-to-market AI and MadTech to Fortune 500 buyers. 16 years across CP+B, Oracle Advertising, Fastly and Zeta Global.",
   authors: [{ name: "Christopher Dorsey" }],
   keywords: [
     "Christopher Dorsey",
@@ -41,7 +41,11 @@ export const metadata: Metadata = {
     "first sales hire",
     "agentic AI sales",
     "MadTech",
-    "account director",
+    "Senior Account Executive",
+    "Account Director",
+    "Sales Director",
+    "Client Lead",
+    "first-to-market",
     "sales consultant",
     "Colorado",
     "Denver",
@@ -50,9 +54,9 @@ export const metadata: Metadata = {
     canonical: "https://chrisdorsey.co",
   },
   openGraph: {
-    title: "Chris Dorsey — Enterprise Sales Leader Clients Trust. Girl Dad.",
+    title: "Chris Dorsey — Enterprise Sales for First-to-Market AI",
     description:
-      "Senior enterprise sales leader who grows revenue for AI and MadTech companies through trusted, long-term client relationships. Fifteen years across creative, data, and AI.",
+      "16 years selling AI and MadTech to Fortune 500 buyers before the budget line existed. He builds with the same tools, and Campsite Ranger, his solo build, has paying customers.",
     url: "https://chrisdorsey.co",
     siteName: "Christopher Dorsey",
     type: "profile",
@@ -61,15 +65,15 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Christopher Dorsey — AI & MadTech Advisor, Enterprise Sales Leader",
+        alt: "Christopher Dorsey, enterprise sales for first-to-market AI and MadTech",
       },
     ],
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Chris Dorsey — Enterprise Sales Leader Clients Trust. Girl Dad.",
-    description: "Senior enterprise sales leader who grows revenue through trusted client relationships. Based in Denver, Colorado.",
+    title: "Chris Dorsey — Enterprise Sales for First-to-Market AI",
+    description: "16 years selling AI and MadTech to Fortune 500 buyers before the budget line existed. Based in Denver, Colorado.",
     images: ["/og-image.jpg"],
   },
   robots: {
@@ -94,7 +98,7 @@ const jsonLd = {
       name: "Christopher Dorsey",
       alternateName: ["Chris Dorsey", "CT Dorsey"],
       description:
-        "Senior enterprise sales leader who grows revenue for AI and MadTech companies by building trusted, long-term client relationships. 15 years across creative, data, and enterprise SaaS, including agentic AI customer acquisition and edge infrastructure.",
+        "Enterprise sales leader who takes first-to-market AI and MadTech products to Fortune 500 buyers, often before a budget line exists for them. 16 years across agency creative, data, and enterprise SaaS, including agentic AI customer acquisition and edge infrastructure.",
       url: "https://chrisdorsey.co/",
       email: `mailto:${CONTACT_EMAIL}`,
       jobTitle: ["Enterprise Sales Leader", "AI Go-To-Market Leader", "Startup Advisor", "Sales Strategy Advisor"],
@@ -119,11 +123,24 @@ const jsonLd = {
         name: "Elon University",
         sameAs: "https://www.elon.edu/",
       },
-      sameAs: ["https://www.linkedin.com/in/cdorsey/"],
-      worksFor: {
-        "@type": "Organization",
-        name: "Independent AI Sales & GTM Advisor",
+      sameAs: ["https://www.linkedin.com/in/cdorsey/", "https://github.com/cdorsey88"],
+      subjectOf: {
+        "@type": "NewsArticle",
+        headline: "A new website is helping campers score Colorado's most elusive campsites",
+        url: "https://coloradosun.com/2026/10/08/new-websites-helps-campers-score-top-campsites-in-colorado/",
+        datePublished: "2026-10-08",
+        publisher: { "@type": "NewsMediaOrganization", name: "The Colorado Sun", url: "https://coloradosun.com" },
+        about: { "@id": "https://chrisdorsey.co/#campsite-ranger" },
       },
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://chrisdorsey.co/#campsite-ranger",
+      name: "Campsite Ranger",
+      url: "https://www.campsiteranger.com",
+      description: "Cancellation alerts for sold-out Colorado campsites, timed-entry permits, and wilderness zones.",
+      foundingDate: "2026-08",
+      founder: { "@id": "https://chrisdorsey.co/#person" },
     },
     {
       "@type": "WebSite",
@@ -169,7 +186,7 @@ const jsonLd = {
           name: "What does Chris Dorsey do?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Chris Dorsey is a senior enterprise sales and go-to-market leader who takes new technology to market — AI first, then data and MadTech (marketing and advertising technology). Across fifteen years he has been the first seller in the building twice, created categories, and closed Fortune 500 accounts, from agency creative at Crispin Porter + Bogusky to data at Oracle Advertising, edge infrastructure at Fastly, and AI customer acquisition at Zeta Global. For fifteen years his job has been selling technology that is new to the people buying it.",
+            text: "Chris Dorsey is an enterprise sales leader who sells first-to-market AI and MadTech (marketing and advertising technology), usually before buyers have a budget line for it. Across 16 years he has been the first seller in the building twice, sold three categories before budgets existed for them, and closed Fortune 500 accounts, from agency creative at Crispin Porter + Bogusky to data at Oracle Advertising, edge infrastructure at Fastly, and AI customer acquisition at Zeta Global. He also builds with AI: Campsite Ranger, a paid product he shipped solo, has paying customers.",
           },
         },
         {
@@ -177,7 +194,7 @@ const jsonLd = {
           name: "Who does Chris work with, and who can he introduce you to?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Chris is a connector. After fifteen years across four industries he knows Fortune 500 CMOs, AI founders, data leaders, investors, agency executives, and engineers and product managers. Tell him what you are trying to do and odds are he already knows who you should be talking to. He makes introductions freely — no fee, no catch.",
+            text: "Chris is a connector. After 16 years across four industries he knows Fortune 500 CMOs, AI founders, data leaders, investors, agency executives, and engineers and product managers. Tell him what you are trying to do and odds are he already knows who you should be talking to. He makes introductions freely — no fee, no catch.",
           },
         },
         {
@@ -185,7 +202,7 @@ const jsonLd = {
           name: "Is Chris Dorsey available for roles or advisory?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "He is always open to the right conversation. The work he does best is senior individual-contributor go-to-market at AI and enterprise SaaS companies: Enterprise Account Executive, Strategic Account Manager, and Director of Customer Success or Partnerships. He has led teams and chooses to stay hands-on, carrying a number and owning client relationships. He responds to every note personally.",
+            text: "He is always open to the right conversation. The roles that fit are Senior Account Executive, Account Director, Sales Director, and Client Lead at AI-native companies, plus advisory work with startups taking a first product to market. He responds to every note personally.",
           },
         },
         {
