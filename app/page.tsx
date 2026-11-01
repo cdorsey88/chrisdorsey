@@ -607,44 +607,45 @@ export default function ChrisDorseySite() {
         <section className="relative pt-16 pb-9 px-7" aria-labelledby="hero-heading">
           <div className="max-w-6xl mx-auto grid items-center gap-8 md:gap-10 grid-cols-1 md:grid-cols-[minmax(0,1.2fr)_minmax(0,0.9fr)]">
             <div>
-              <div className="inline-flex gap-2 items-center font-semibold mb-4" style={{ fontSize: 13, letterSpacing: "0.06em", textTransform: "uppercase" }}>
-                <b style={{ background: ACID, padding: "4px 10px", borderRadius: 100 }}>AI</b>
-                <span style={{ color: "#4a4239" }}>· data · MadTech</span>
+              <div className="font-semibold mb-4" style={{ fontSize: 13, letterSpacing: "0.06em", textTransform: "uppercase", color: "#4a4239" }}>
+                Enterprise sales · AI &amp; MadTech
               </div>
-              <h1 id="hero-heading" className="font-display font-extrabold" style={{ fontSize: "clamp(36px,5.6vw,72px)", lineHeight: 0.95, maxWidth: "15ch", color: INK }}>
+              <h1 id="hero-heading" className="font-display font-extrabold" style={{ fontSize: "clamp(36px,5.6vw,72px)", lineHeight: 0.95, maxWidth: "16ch", color: INK, isolation: "isolate" }}>
+                I sell what buyers{" "}
                 <span style={{ position: "relative", whiteSpace: "nowrap" }}>
-                  The relationship
+                  don&apos;t have
                   <span aria-hidden="true" style={{ position: "absolute", left: -2, right: -2, bottom: "0.08em", height: "0.34em", background: ACID, zIndex: -1, transform: "skewX(-8deg)" }} />
                 </span>{" "}
-                is the part{" "}
-                <span style={{ color: TEAL }}>AI can&apos;t copy</span>.
+                <span style={{ color: TEAL }}>a budget for yet</span>.
               </h1>
+              <p className="font-display font-extrabold mt-3.5" style={{ fontSize: "clamp(20px,2.2vw,28px)", lineHeight: 1.1, maxWidth: "26ch", color: TEAL }}>
+                AI-native builder, too. My solo build has paying customers.
+              </p>
               <p className="mt-5 mb-5 leading-relaxed" style={{ fontSize: "clamp(15px,1.6vw,18px)", maxWidth: "54ch", color: "#3a332c" }}>
-                16 years growing revenue across creative, data, and now AI &mdash; by becoming the advisor
-                clients actually trust. As features get easier to copy, that trust is what keeps deals closing and
-                accounts growing.
+                16 years taking first-to-market AI and MadTech to Fortune 500 buyers, from Oracle Advertising&apos;s
+                contextual targeting to Zeta Global&apos;s first AI acquisition product.
               </p>
               <div className="flex flex-col sm:flex-row gap-3.5 sm:items-center">
-                <a
-                  href="#connect"
+                <Link
+                  href="/track-record"
                   className="font-semibold rounded-full lift text-center whitespace-nowrap w-full sm:w-auto"
                   style={{ fontSize: 16, padding: "15px 26px", background: TEAL, color: "#fff", border: `2px solid ${TEAL}` }}
                 >
-                  Who can I connect you with?
-                </a>
-                <a
-                  href="#writing"
+                  See the track record
+                </Link>
+                <Link
+                  href="/work-with-me"
                   className="font-semibold rounded-full transition-colors hover:text-[var(--paper)] text-center whitespace-nowrap w-full sm:w-auto"
                   style={{ fontSize: 16, padding: "15px 26px", border: `2px solid ${INK}`, color: INK }}
                   onMouseEnter={(e) => { e.currentTarget.style.background = INK; e.currentTarget.style.color = PAPER; }}
                   onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = INK; }}
                 >
-                  Read the writing
-                </a>
+                  Work with me
+                </Link>
               </div>
             </div>
             {/* Boldly framed portrait */}
-            <div className="justify-self-center w-full max-w-[260px] md:max-w-[340px]">
+            <div className="justify-self-center w-full max-w-[200px] md:max-w-[340px]">
               <div className="relative overflow-hidden" style={{ border: `3px solid ${INK}`, borderRadius: 20, boxShadow: `12px 12px 0 ${ACID}`, transform: "rotate(1.5deg)" }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src="/headshot.jpg" alt="Christopher Dorsey" className="w-full block" />
