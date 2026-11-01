@@ -2,6 +2,10 @@
 """
 voice-lint.py — flag AI-writing "tells" in a draft before you publish.
 
+v8 (Nov 1, 2026): LinkedIn slop CTAs/openers (FeedHive detector, Creative Bloq,
+    LexiConn), Wikipedia Oct 2026 revision (distinction-matters editorializing,
+    canned coverage/attribution, outlook headers), Fable 5.1 density, colon-label
+    staccato, clock-time anecdote openers, question-opener and one-word-paragraph checks.
 v7 (Oct 16, 2026): post-em-dash tells (Opus 5.5 / GPT-6 frames from Graphite,
     TechCrunch, Remio), op-ed comma antithesis, engagement-bait closers,
     structural checks: flat rhythm, no contractions, header inflation,
@@ -296,6 +300,29 @@ HARD_REGEX = [
      'fake-casual opener: "Picture this: / Quick story:"'),
     (r"\b(only|just) half (of )?the story\b",
      'reveal bridge: "that\'s only half the story"'),
+    # --- added Nov 1, 2026 (v8): LinkedIn-slop CTAs/openers (FeedHive ai-slop-detector L-02..L-12, Creative Bloq Oct 2026, LexiConn) ---
+    (r"\bI'?ll say it louder\b|\bfor the people in the back\b",
+     'LinkedIn slop: "I\'ll say it louder (for the people in the back)"'),
+    (r"\bthat'?s it\.\s+that'?s the (post|tweet|take|whole post|whole thing)\b",
+     'LinkedIn slop: "That\'s it. That\'s the post."'),
+    (r"\brepost\b[^.!?\n]{0,30}\b(if|so|to)\b|♻|\bsave this (post |one )?for later\b|\bfollow (me )?for more\b|\btag (someone|a \w+) who\b",
+     'LinkedIn slop CTA: "repost if / save this for later / follow for more / tag someone who"'),
+    (r"\bI'?m (no longer|done) gatekeeping\b|\bhere'?s what I learned\b",
+     'LinkedIn slop: "I\'m no longer gatekeeping / here\'s what I learned"'),
+    (r"\bI don'?t (usually|normally|often) post\b",
+     'LinkedIn slop opener: "I don\'t usually post, but"'),
+    (r"(^|[.?!]\s+)RIP\b[^.?!\n]{0,40}[.?!]",
+     'LinkedIn slop opener: "RIP <industry>."'),
+    # thinkfluencer hype lines (Creative Bloq Oct 2026; LexiConn 2026)
+    (r"\b(adapt or die|(this|that|it) is a wake-?up call|will never be the same( again)?|you'?re already behind|(this|that|it) changes everything)\b",
+     'hype line: "adapt or die / wake-up call / will never be the same / this changes everything"'),
+    (r"\breplaced by (someone|a person|people|those) (who|that) (use|uses|know|knows how to use)\b",
+     'cliche: "you won\'t be replaced by AI, you\'ll be replaced by someone who uses AI"'),
+    (r"\bmore (important|critical|relevant|urgent) than ever\b",
+     'hype filler: "more important than ever" (sibling of "now more than ever")'),
+    # Wikipedia Signs of AI writing, Oct 2026 revision: outlook/legacy section headers
+    (r"^\s*(Closing thoughts|Wrapping up|Future outlook|The road ahead|Looking forward|Final word|Challenges and (legacy|opportunities)|What this means)\s*:?\s*$",
+     'generic AI section header: "Closing thoughts / Future outlook / The road ahead"'),
 ]
 
 # Moralizing / aphoristic closers — only HARD when they appear in the LAST
@@ -333,6 +360,11 @@ CLOSER_REGEX = [
      'closer: "the lesson here is" (neat-lesson wrap)'),
     (r"\bis (brutally|deceptively|refreshingly|remarkably) simple\s*[:.]",
      'closer: "is brutally simple:" (op-ed aphorism tee-up)'),
+    # --- added Nov 1, 2026 (v8): LexiConn "closing line about resilience, leadership, or the future of work"; FeedHive L-11 ---
+    (r"\bthe future (of work )?(belongs to|is \w+ for|will be)\b|\bthose who adapt\b|\bstay curious\b|\bkeep (building|learning|shipping|going)\.|^\s*here'?s to\b",
+     'closer: uplift wrap ("the future belongs to / stay curious / here\'s to")'),
+    (r"\bthanks for reading\b|\bif this (resonated|helped|hit home)\b|\bshare (this|it) with\b",
+     'closer: newsletter sign-off / share-ask ("thanks for reading / if this resonated")'),
 ]
 
 # Raw-text HARD checks (run before tag stripping, so hrefs are visible).
@@ -388,7 +420,10 @@ SOFT_INTENSIFIERS = ["actually", "genuinely", "truly", "simply", "essentially",
                      "structurally", "enormously", "remarkably", "absolutely",
                      "immensely", "arguably", "undeniably"]
 SOFT_ATTRIBUTION = [r"studies show", r"experts say", r"research suggests",
-                    r"it'?s widely (believed|known)", r"many believe"]
+                    r"it'?s widely (believed|known)", r"many believe",
+                    # added Nov 1, 2026 (v8): Wikipedia Oct 2026 vague-sourcing list
+                    r"(experts|critics|analysts|observers) (argue|agree|point out|have noted)",
+                    r"some (critics|experts|analysts)", r"industry reports", r"research indicates"]
 SOFT_REGEX = [
     # bare "X, not Y." reversal — soft, because it's often a legitimate
     # clarification ("the original PDF, not the recap"). Only the templated
@@ -482,6 +517,31 @@ SOFT_REGEX = [
      'litotes verdict: "is not optional"'),
     (r"\bthe (deepest|cleanest|sharpest) (point|version|cut|organizing idea)\b",
      'self-ranking: "the deepest point / cleanest version"'),
+    # --- added Nov 1, 2026 (v8) ---
+    # Wikipedia Oct 2026: "editorializing about how a particular distinction or nuance is important"
+    (r"\b(the|this|that) (distinction|nuance|difference) (matters|is important|is key|is crucial|is worth)\b",
+     'significance-flag: "the distinction matters" (Wikipedia Oct 2026)'),
+    # Wikipedia Oct 2026: canned emphasis on coverage / legacy phrasing
+    (r"\bgarner(ed|s|ing)? (significant |widespread |considerable |much )?(attention|coverage|praise|acclaim|interest)\b|\b(set|sets|setting) the stage for\b|\bindelible mark\b|\bkey turning point\b",
+     'canned-coverage phrase: "garnered attention / sets the stage for / indelible mark"'),
+    # Wikipedia Oct 2026: vague association
+    (r"\bin (connection|association) (with|to)\b",
+     'vague association: "in connection with" (say what the link is)'),
+    # GPT-6 Astra hedges (Graphite via dev.to/kalkazu Oct 2026)
+    (r"\bmay (provide|offer|serve to|help to|prove)\b",
+     'hedge (GPT-6 Astra tic): "may provide / may offer"'),
+    # restatement glosses, 2026 crop (extends "Put differently")
+    (r"(^|[.?!]\s+)(Translation|In plain English|Put plainly|Simply put|Short version|The short answer)\s*[:,]",
+     'restatement gloss: "Translation: / In plain English: / Short version:"'),
+    # colon-label staccato "Speed: fast. Price: low." (FeedHive F-05)
+    (r"\b[A-Z]\w+: [^.!?\n:]{1,25}\. [A-Z]\w+: [^.!?\n:]{1,25}\.",
+     'colon-label staccato: "Speed: fast. Price: low." (write the sentence)'),
+    # invented-anecdote clock-time opener (Lisa Peyton Fable 5.1 test, Sept 2026: "vivid 7:04 a.m. anecdote")
+    (r"(^|[.?!]\s+)(It'?s|It was|At) \d{1,2}:\d{2} ?(a\.?m\.?|p\.?m\.?)\b",
+     'scene-setting clock-time opener ("At 7:04 a.m.") — invented-anecdote tell unless it really happened'),
+    # recurring costume metaphor (Peyton: "Collaboration wearing a Delegation costume")
+    (r"\bwearing an? \w+ (costume|hat|mask|disguise)\b|\bin an? \w+ costume\b",
+     'costume metaphor: "X wearing a Y costume"'),
 ]
 
 # ----------------------------------------------------------------------------
@@ -664,6 +724,22 @@ def lint(raw, label):
     n_emoji = len(re.findall("[\U0001F300-\U0001FAFF\u2705\u2728\u26A1\U0001F680]", full))
     if n_emoji >= 2:
         soft.append(f"  Emoji: {n_emoji} in body copy — drop them.")
+
+    # --- added Nov 1, 2026 (v8): structural tells ---
+    # Fable 5.1 density (explainx Sept 2026; Peyton Sept 2026): longer sentences, fewer breaks
+    paras = [p.strip() for p in paragraphs(raw) if words(p.strip())]
+    long_paras = [p for p in paras if len(words(p)) > 140]
+    if long_paras:
+        soft.append(f"  Wall-of-text: {len(long_paras)} paragraph(s) over 140 words — break them up (Fable 5.1 density tell).")
+    if len(slens) >= 10 and sum(slens) / len(slens) > 27:
+        soft.append(f"  Long sentences: averaging {sum(slens)/len(slens):.0f} words — your register is shorter.")
+    # Fortune Oct 6, 2026 ghostwriter slop: rhetorical-question openers
+    if paras and paras[0].rstrip().endswith("?") and len(words(paras[0])) <= 30:
+        soft.append("  Question opener: the post opens on a rhetorical question — open on the fact and the date instead.")
+    # Creative Bloq Oct 2026: the single-word paragraph ("Wild." / "Brutal.")
+    one_word = [p for p in paras if len(words(p)) == 1]
+    if one_word:
+        soft.append(f"  One-word paragraph(s): {', '.join(repr(p[:20]) for p in one_word[:3])} — verdict fragments read as LinkedIn slop.")
 
     # Self-similarity: compare this post's closer to prior shipped closers.
     closer = nonempty[-1].strip() if nonempty else ""
