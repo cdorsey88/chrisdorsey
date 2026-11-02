@@ -221,3 +221,8 @@ html {
   .mountain-mark:hover .range-front,
   .ridge-drift { animation: none; }
 }
+
+/* Avoid one-word last lines (widows) in body copy site-wide. */
+@layer base {
+  p, li { text-wrap: pretty; }
+}

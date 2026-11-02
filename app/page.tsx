@@ -770,7 +770,7 @@ export default function ChrisDorseySite() {
               <p className="inline-block text-xs uppercase tracking-widest px-3 py-1 rounded-full mb-3 font-bold" style={{ color: INK, background: ACID }}>
                 Brands &amp; teams I&apos;ve advised
               </p>
-              <p className="text-lg leading-relaxed" style={{ color: "rgba(255,255,255,0.92)" }}>
+              <p className="text-lg leading-relaxed text-balance" style={{ color: "rgba(255,255,255,0.92)" }}>
                 Companies I&apos;ve sold to or built work for. Many of these relationships lasted well past the first deal.
               </p>
             </div>
@@ -831,12 +831,12 @@ export default function ChrisDorseySite() {
                 Advertising, then took Zeta Global&apos;s first AI customer-acquisition product to market before buyers
                 had a budget line for it. Today I&apos;m at Epsilon, selling AI-driven audience modeling and closed-loop
                 measurement to national brands, and I consult for a handful of companies on the side. Carrying a
-                number is still the part I like most.
+                number is still the part I like&nbsp;most.
               </p>
               <p>
                 I also build with the tools I sell. Lately that means Claude Code commands that compress prospect
                 research from hours to minutes, and an agent that surfaces untapped opportunities inside existing
-                accounts, building the expansion roadmap an account leader would otherwise piece together by hand. I don&apos;t think you can sell a product well until you&apos;ve used it yourself, so I do.
+                accounts, building the expansion roadmap an account leader would otherwise piece together by hand. I don&apos;t think you can sell a product well until you&apos;ve used it yourself, so&nbsp;I&nbsp;do.
               </p>
               <div className="rounded-2xl p-6 mt-8" style={{ background: ACID, border: `3px solid ${INK}`, boxShadow: `6px 6px 0 ${INK}`, transform: "rotate(-1deg)" }}>
                 <p className="italic font-medium" style={{ color: INK }}>
@@ -858,7 +858,7 @@ export default function ChrisDorseySite() {
             <h2 className="font-display font-extrabold mb-3" style={{ fontSize: "clamp(28px,4vw,46px)", color: INK }}>
               Hands on the keyboard.
             </h2>
-            <p className="mb-10 max-w-2xl text-lg" style={{ color: "#4a4239" }}>
+            <p className="mb-10 max-w-2xl text-lg text-balance" style={{ color: "#4a4239" }}>
               Sellers who build with AI win. I use the tools I sell, every week. Here&apos;s what I&apos;m
               shipping.
             </p>
