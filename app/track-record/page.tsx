@@ -64,7 +64,7 @@ export default function TrackRecord() {
             Senior enterprise sales leader who takes new AI products to market. First sales hire,
             category creator, Fortune 500 closer. The full details are in the resume. This page is the short version.
           </p>
-          <p className="text-sm" style={{ color: "#6a6258" }}>Denver, CO · Open to remote</p>
+          <p className="text-sm" style={{ color: "#6a6258" }}>Denver, CO</p>
         </div>
 
         <Infographic />

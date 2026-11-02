@@ -28,7 +28,7 @@ const bricolage = Bricolage_Grotesque({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://chrisdorsey.co"),
-  title: "Chris Dorsey — Enterprise Sales for First-to-Market AI",
+  title: "Chris Dorsey — Enterprise Seller & AI-Native Builder",
   description:
     "Denver-based enterprise seller taking first-to-market AI and MadTech to Fortune 500 buyers. 16 years across CP+B, Oracle Advertising, Fastly and Zeta Global.",
   authors: [{ name: "Christopher Dorsey" }],
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     canonical: "https://chrisdorsey.co",
   },
   openGraph: {
-    title: "Chris Dorsey — Enterprise Sales for First-to-Market AI",
+    title: "Chris Dorsey — Enterprise Seller & AI-Native Builder",
     description:
       "16 years selling AI and MadTech to Fortune 500 buyers before the budget line existed. He builds with the same tools, and Campsite Ranger, his solo build, has paying customers.",
     url: "https://chrisdorsey.co",
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Chris Dorsey — Enterprise Sales for First-to-Market AI",
+    title: "Chris Dorsey — Enterprise Seller & AI-Native Builder",
     description: "16 years selling AI and MadTech to Fortune 500 buyers before the budget line existed. Based in Denver, Colorado.",
     images: ["/og-image.jpg"],
   },

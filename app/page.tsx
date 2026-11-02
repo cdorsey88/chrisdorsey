@@ -227,7 +227,7 @@ function ConnectorHub() {
 
   return (
     <Reveal as="section">
-      <div className="text-3xl md:text-5xl font-extrabold font-display leading-[0.95]" style={{ color: INK, maxWidth: "20ch" }}>
+      <div className="text-2xl md:text-4xl font-extrabold font-display leading-[0.95]" style={{ color: INK, maxWidth: "24ch" }}>
         Chances are, I already know who you should talk to.
       </div>
       <p className="text-base md:text-lg mt-4 max-w-2xl" style={{ color: "#4a4239" }}>
@@ -236,7 +236,7 @@ function ConnectorHub() {
         introduction. No fee, no angle — I truly just enjoy connecting people.
         Things like that tend to come around.
       </p>
-      <div className="font-display font-extrabold mt-5" style={{ fontSize: "clamp(22px,4vw,40px)", color: INK }}>
+      <div className="font-display font-extrabold mt-4" style={{ fontSize: "clamp(20px,3vw,30px)", color: INK }}>
         I&apos;ll connect you with{" "}
         {/* Below lg the rotating phrase always sits on its own line (block + nowrap), so the
             line count is constant across words and the content below never shifts. */}
@@ -261,7 +261,7 @@ function ConnectorHub() {
         ref={svgRef}
         viewBox="0 0 920 360"
         className="w-full h-auto block mx-auto mt-6"
-        style={{ maxWidth: 940 }}
+        style={{ maxWidth: 720 }}
         role="img"
         aria-label="Chris at the center of a network, connected to Fortune 500 CMOs, creatives, data leaders, investors, agency execs, and engineers and product managers."
       >
@@ -458,15 +458,63 @@ function TrackRecordBand() {
   );
 }
 
-export default function ChrisDorseySite() {
-  const [scrollY, setScrollY] = useState(0);
-
+// Fixed homepage nav. Holds its own scroll state (only flips at the 50px threshold)
+// so scrolling no longer re-renders the whole page.
+function HomeNav() {
+  const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    const onScroll = () => setScrolled(window.scrollY > 50);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
+  return (
+    <nav
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+      style={
+        scrolled
+          ? { background: "rgba(242,236,221,0.85)", backdropFilter: "blur(8px)", borderBottom: `1px solid rgba(26,22,19,0.12)` }
+          : { background: "transparent" }
+      }
+      aria-label="Primary navigation"
+    >
+      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <a
+          href="#"
+          aria-label="Back to top"
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+          className="flex items-center gap-2 cursor-pointer select-none hover:opacity-80 transition-opacity"
+        >
+          <MountainMark />
+          <span className="font-display whitespace-nowrap" style={{ fontSize: 21, fontWeight: 800, lineHeight: 1, color: INK, transform: "translateY(1px)" }}>
+            Chris <span style={{ color: TEAL }}>Dorsey</span>
+          </span>
+        </a>
+        <div className="flex items-center gap-3 md:gap-7">
+          <div className="hidden md:flex items-center gap-7 text-sm" style={{ color: INK }}>
+            <a href="#about"   className="font-medium nav-link">About</a>
+            <Link href="/track-record" className="font-medium nav-link">Track Record</Link>
+            <a href="#writing" className="font-medium nav-link">Writing</a>
+            <a href="#builds"  className="font-medium nav-link">Builds</a>
+            <Link href="/work-with-me" className="font-medium nav-link">Work with me</Link>
+          </div>
+          <a
+            href="#contact"
+            className="text-sm px-4 py-1.5 rounded-full font-semibold font-display btn-sayhi"
+          >
+            Say hi.
+          </a>
+          <MobileMenu />
+        </div>
+      </div>
+    </nav>
+  );
+}
 
+export default function ChrisDorseySite() {
   const clients = [
     { name: "JPMorgan Chase",      domain: "jpmorganchase.com" },
     { name: "Microsoft",           domain: "microsoft.com" },
@@ -490,7 +538,7 @@ export default function ChrisDorseySite() {
     { title: "Digital", year: "2013", desc: "First hire at an indie NYC shop. Grew revenue 300% in a year. With 8 people full-time, we beat legacy industry leaders for IMAX creative AOR, then repositioned the brand around intensity.", bg: ACID, fg: INK, border: INK },
     { title: "Data", year: "2018", desc: "Oracle Advertising — managed Amazon, J&J, PepsiCo. #1 US pharma seller for audience data and contextual targeting. Tapped by the exec team to represent all US sellers on roadmap feedback. Edge infrastructure at Fastly.", bg: BLUE, fg: "#fff", border: BLUE },
     { title: "AI acquisition", year: "2024", desc: "Zeta Global — first email-based AI customer-acquisition product to market, with opt-in permission to email 110M+ people for clients. Grew a $200K pilot into a $1M+ contract on performance.", bg: VIOLET, fg: "#fff", border: VIOLET },
-    { title: "AI & agents", year: "now", desc: "Full-time: advising Fortune 500 brands on advertising and growth strategy. Nights and weekends: live music, toddler playtime, and Campsite Ranger, live and shipping.", bg: TEAL, fg: "#fff", border: TEAL },
+    { title: "AI & agents", year: "now", desc: "Full-time: selling AI-driven audience modeling and closed-loop measurement to national consumer brands. Nights and weekends: live music, toddler playtime, and Campsite Ranger, live with paying customers.", bg: TEAL, fg: "#fff", border: TEAL },
   ];
 
   const communityBuilds = [
@@ -526,7 +574,7 @@ export default function ChrisDorseySite() {
     {
       title: "Call Butler — live call assistant for sellers",
       stack: "Claude API · Deepgram · Real-time · Shared with sellers",
-      desc: "A real-time call assistant I built and share with other sellers. It transcribes the call live, catches the moment someone asks a real question or drops an unfamiliar term, and quietly surfaces talking points in a side window — pulled from your prep notes and a live web lookup. Nothing is sent into the call; it's like a subject-matter expert sitting beside you while you talk.",
+      desc: "A real-time call assistant I built and share with other sellers. It transcribes the call live, catches the moment someone asks a real question or drops an unfamiliar term, and puts talking points in a side window, pulled from your prep notes and a live web lookup. Nothing is sent into the call; it's like a subject-matter expert sitting beside you while you talk.",
       proofText: "Built, live-tested, and in daily use.",
       proofUrl: null as string | null,
       proofLabel: null as string | null,
@@ -539,14 +587,6 @@ export default function ChrisDorseySite() {
       proofUrl: "/writing/soundcheck-audio-brand-qa" as string | null,
       proofLabel: "Read the write-up" as string | null,
     },
-    {
-      title: "AI category landscape mapping",
-      stack: "Research · Synthesis · Sales Enablement",
-      desc: "Living competitive maps and capability matrices for emerging AI categories — from agentic sales tools to answer-engine platforms — including a five-tier landscape with a 10-vendor capability matrix.",
-      proofText: null as string | null,
-      proofUrl: null as string | null,
-      proofLabel: "See a sample",
-    },
   ];
 
   return (
@@ -557,49 +597,8 @@ export default function ChrisDorseySite() {
       {/* Scroll progress indicator — color shifts teal→blue→violet→acid */}
       <ScrollProgress />
 
-      {/* Nav */}
-      <nav
-        className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
-        style={
-          scrollY > 50
-            ? { background: "rgba(242,236,221,0.85)", backdropFilter: "blur(8px)", borderBottom: `1px solid rgba(26,22,19,0.12)` }
-            : { background: "transparent" }
-        }
-        aria-label="Primary navigation"
-      >
-        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <a
-            href="#"
-            aria-label="Back to top"
-            onClick={(e) => {
-              e.preventDefault();
-              window.scrollTo({ top: 0, behavior: "smooth" });
-            }}
-            className="flex items-center gap-2 cursor-pointer select-none hover:opacity-80 transition-opacity"
-          >
-            <MountainMark />
-            <span className="font-display whitespace-nowrap" style={{ fontSize: 21, fontWeight: 800, lineHeight: 1, color: INK, transform: "translateY(1px)" }}>
-              Chris <span style={{ color: TEAL }}>Dorsey</span>
-            </span>
-          </a>
-          <div className="flex items-center gap-3 md:gap-7">
-            <div className="hidden md:flex items-center gap-7 text-sm" style={{ color: INK }}>
-              <a href="#about"   className="font-medium nav-link">About</a>
-              <Link href="/track-record" className="font-medium nav-link">Track Record</Link>
-              <a href="#writing" className="font-medium nav-link">Thoughts</a>
-              <a href="#builds"  className="font-medium nav-link">AI Sales Tools</a>
-              <Link href="/work-with-me" className="font-medium nav-link">Work with me</Link>
-            </div>
-            <a
-              href="#contact"
-              className="text-sm px-4 py-1.5 rounded-full font-semibold font-display btn-sayhi"
-            >
-              Say hi.
-            </a>
-            <MobileMenu />
-          </div>
-        </div>
-      </nav>
+      {/* Nav — own component so scrolling doesn't re-render the page */}
+      <HomeNav />
 
       <main>
 
@@ -712,13 +711,6 @@ export default function ChrisDorseySite() {
             </a>
           </div>
         </aside>
-
-        {/* Connector hub — no hard top rule; flows from the hero on color + spacing */}
-        <section id="connect" className="px-7 pt-10 pb-14" style={{ background: CREAM2, borderBottom: `3px solid ${INK}` }}>
-          <div className="max-w-6xl mx-auto">
-            <ConnectorHub />
-          </div>
-        </section>
 
         {/* Evolution marquee */}
         <EvolutionMarquee />
@@ -835,9 +827,11 @@ export default function ChrisDorseySite() {
                 </Link>
                 . The short version: I started at Crispin Porter + Bogusky when it was AdAge&apos;s Agency of the
                 Decade, helping build its first proactive new-business function. I was the first hire at an indie
-                NYC agency and helped grow it 300% in a year. I managed Amazon and Johnson &amp; Johnson for Oracle Advertising. And for the last two years I&apos;ve sold AI products that reached market before their
-                budget lines existed, first at Zeta Global, then through an advisory engagement at FancyAI that
-                wrapped in May 2026, again the first seller in the building. After two motions built from zero, the part I like most hasn&apos;t changed: carrying a number and building the client relationships. I still do that full-time, and I consult for a handful of companies on the side.
+                NYC agency and helped grow it 300% in a year. I managed Amazon and Johnson &amp; Johnson for Oracle
+                Advertising, then took Zeta Global&apos;s first AI customer-acquisition product to market before buyers
+                had a budget line for it. Today I&apos;m at Epsilon, selling AI-driven audience modeling and closed-loop
+                measurement to national brands, and I consult for a handful of companies on the side. Carrying a
+                number is still the part I like most.
               </p>
               <p>
                 I also build with the tools I sell. Lately that means Claude Code commands that compress prospect
@@ -859,7 +853,7 @@ export default function ChrisDorseySite() {
         <section id="builds" className="relative py-16 px-7">
           <div className="max-w-5xl mx-auto">
             <div className="inline-block text-xs uppercase tracking-widest px-3 py-1 rounded-full mb-4 font-bold" style={{ color: INK, background: ACID }}>
-              AI Sales Tools
+              Builds
             </div>
             <h2 className="font-display font-extrabold mb-3" style={{ fontSize: "clamp(28px,4vw,46px)", color: INK }}>
               Hands on the keyboard.
@@ -1018,6 +1012,13 @@ export default function ChrisDorseySite() {
           </div>
         </section>
 
+        {/* Connector hub — moved below Builds (Nov 2026) and shrunk */}
+        <section id="connect" className="px-7 pt-10 pb-12" style={{ background: CREAM2, borderTop: `3px solid ${INK}` }}>
+          <div className="max-w-5xl mx-auto">
+            <ConnectorHub />
+          </div>
+        </section>
+
         {/* Ridgeline divider — cream fades into the ink band like dusk over the Front Range */}
         <div aria-hidden="true" className="relative overflow-hidden" style={{ marginBottom: -1 }}>
           <svg viewBox="0 0 1440 64" preserveAspectRatio="none" className="block ridge-drift" style={{ height: 56, width: "104%", marginLeft: "-2%" }}>
@@ -1064,7 +1065,7 @@ export default function ChrisDorseySite() {
             <div className="flex items-end justify-between mb-8 flex-wrap gap-4">
               <div>
                 <div className="inline-block text-xs uppercase tracking-widest px-3 py-1 rounded-full mb-4 font-bold" style={{ color: INK, background: ACID }}>
-                  Thoughts
+                  Writing
                 </div>
                 <h2 className="font-display font-extrabold" style={{ fontSize: "clamp(28px,4vw,46px)", color: "#fff" }}>
                   Notes from the field.
@@ -1077,8 +1078,7 @@ export default function ChrisDorseySite() {
             <p className="text-lg leading-relaxed mb-10" style={{ color: "rgba(255,255,255,0.92)", maxWidth: "62ch" }}>
               My beat is advertising, marketing, tech, and AI. Same approach I take in sales:
               notice something other people haven&apos;t yet, say what I think about it, and get it out while
-              it&apos;s still news, sources attached. People occasionally call this thought leadership. I won&apos;t. I just can&apos;t bring
-              myself to do it. I&apos;m also not a visionary, rockstar, or guru.
+              it&apos;s still news, sources attached.
             </p>
             {/* Featured latest post — wide card that fills its space */}
             {posts[0] && (() => {

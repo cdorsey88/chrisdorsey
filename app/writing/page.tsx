@@ -14,7 +14,7 @@ const BLUE = "#2B43E8";
 const VIOLET = "#6B4BFF";
 
 export const metadata: Metadata = {
-  title: "Thoughts — Christopher Dorsey",
+  title: "Writing — Christopher Dorsey",
   description: "Writing on AI, marketing, enterprise sales, and the future of how technology gets bought and sold.",
   alternates: {
     canonical: "https://chrisdorsey.co/writing",
@@ -51,7 +51,7 @@ export default function WritingIndex() {
             className="inline-block text-xs uppercase tracking-widest px-3 py-1 rounded-full mb-4 font-bold"
             style={{ color: INK, background: ACID }}
           >
-            Thoughts
+            Writing
           </div>
           <h1
             className="font-display font-extrabold tracking-tight"

@@ -17,8 +17,8 @@ const TEAL = "#0E9F86";
 const links = [
   { label: "About", href: "/#about" },
   { label: "Track Record", href: "/track-record" },
-  { label: "Thoughts", href: "/#writing" },
-  { label: "AI Sales Tools", href: "/#builds" },
+  { label: "Writing", href: "/#writing" },
+  { label: "Builds", href: "/#builds" },
   { label: "Work with me", href: "/work-with-me" },
 ];
 
