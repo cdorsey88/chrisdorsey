@@ -11,6 +11,17 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "iab-openproposal-audio-format-registry",
+    title: "An agent can buy a host-read ad under the IAB's new standard. Nothing in it says what the host has to say.",
+    date: "Nov 3, 2026",
+    readTime: "5 min",
+    excerpt:
+      "IAB Tech Lab's OpenProposal draft lets an AI agent commit budget to a host-read audio spot, but the format registry it relies on has no audio entries, so nothing in the buy says how the brand name is pronounced or whether the voice may be synthetic.",
+    tag: "Future of Ads",
+    color: "from-violet-700 to-orange-500",
+    tldr: "IAB Tech Lab extended public comment on OpenProposal, the AAMP 3.0 spec that lets AI agents compare and buy media proposals, to November 10. The draft lists audio, CTV and DOOH as channels an agent can buy, but the format registry it relies on for creative specs has no entries for any of them, and the spec says so in its own open questions. For audio, that means an agent can commit budget to a host-read spot with no machine-readable way to say how the brand name is pronounced or whether the voice may be synthetic. I filed a comment proposing audio registry entries and a provenance field on every asset. If you sell or buy audio, file yours before November 10.",
+  },
+  {
     slug: "campsite-ranger-two-months-after-launch",
     title: "Campsite Ranger, two months after launch",
     date: "Oct 28, 2026",
