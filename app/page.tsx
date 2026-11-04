@@ -354,7 +354,9 @@ const bandStats: { num?: number; suffix?: string; text?: string; label: string }
 function TrackRecordBand() {
   const ref = useRef<HTMLDivElement | null>(null);
   const [inView, setInView] = useState(false);
-  const [tick, setTick] = useState(0);
+  // Start at the final values so the server HTML (and no-JS readers, crawlers, AI
+  // answer engines) see "16+" and "2×", never "0+". The count-up runs client-side only.
+  const [tick, setTick] = useState(1);
 
   useEffect(() => {
     const el = ref.current;
@@ -374,10 +376,7 @@ function TrackRecordBand() {
 
   useEffect(() => {
     if (!inView) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      setTick(1);
-      return;
-    }
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const t0 = performance.now();
     let raf: number;
     const step = (t: number) => {
