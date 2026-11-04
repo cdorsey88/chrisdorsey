@@ -2,17 +2,17 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import {
-  ArrowUpRight, Mail, Code2, Calendar, Clock, ExternalLink,
-} from "lucide-react";
+import { ArrowUpRight, Mail, Calendar, Clock } from "lucide-react";
 import { posts as allPosts } from "@/app/lib/posts-data";
 import { CONTACT_EMAIL, SHOW_TESTIMONIALS } from "@/app/lib/site-config";
 import MobileMenu from "@/app/components/MobileMenu";
-
 import Testimonials from "@/app/components/Testimonials";
 import NewsletterSignup from "@/app/components/NewsletterSignup";
 import SiteFooter from "@/app/components/SiteFooter";
-import { AboutStory, BuildsSection, CareerEras, ConnectorHub, EvolutionMarquee, OffTheClock } from "@/app/components/ProfileSections";
+
+// Homepage, cut to six sections (Nov 2026): hero, Campsite Ranger band, proof strip,
+// latest writing, references, contact. About, the career timeline, the keyword ticker,
+// Off the clock and the connector hub moved to /about; the Builds section moved to /builds.
 
 // Layered-range mark — three ridges (blue, teal, ink). Layers rise on load, drift on hover.
 const MountainMark = ({ size = 48 }: { size?: number }) => (
@@ -28,22 +28,12 @@ const MountainMark = ({ size = 48 }: { size?: number }) => (
   </svg>
 );
 
-const LinkedinIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-    <rect x="2" y="9" width="4" height="12" />
-    <circle cx="4" cy="4" r="2" />
-  </svg>
-);
-
 const INK = "#1A1613";
 const PAPER = "#F2ECDD";
-const CREAM2 = "#E7DEC8";
 const TEAL = "#0E9F86";
 const BLUE = "#2B43E8";
 const ACID = "#C7F03A";
 const VIOLET = "#6B4BFF";
-const MAGENTA = "#0E9F86";
 
 /* ---------------------------------------------------------------------------
    Scroll progress bar — slim fixed indicator at the very top of the viewport.
@@ -82,7 +72,8 @@ function ScrollProgress() {
 }
 
 /* ---------------------------------------------------------------------------
-   Track-record band — count-up numbers (kept from original, re-skinned).
+   Proof strip — the track-record stat tiles and the client logo row in one band.
+   Stats render their final values in server HTML; the count-up runs client-side.
 --------------------------------------------------------------------------- */
 const bandStats: { num?: number; suffix?: string; text?: string; label: string }[] = [
   { num: 16, suffix: "+", label: "Years selling creativity, data, and technology" },
@@ -91,105 +82,110 @@ const bandStats: { num?: number; suffix?: string; text?: string; label: string }
   { text: "8‑figure", label: "Client relationships managed" },
 ];
 
-function TrackRecordBand() {
+const clients: { name: string; domain: string; logoClass?: string }[] = [
+  { name: "JPMorgan Chase",      domain: "jpmorganchase.com" },
+  { name: "Microsoft",           domain: "microsoft.com" },
+  { name: "Amazon",              domain: "amazon.com" },
+  { name: "PepsiCo",             domain: "pepsico.com" },
+  { name: "Johnson & Johnson",   domain: "jnj.com" },
+  { name: "Merck",               domain: "merck.com" },
+  { name: "Inspire Brands",      domain: "inspirebrands.com" },
+  { name: "Vail Resorts",        domain: "vailresorts.com", logoClass: "h-12" },
+  { name: "Stitch Fix",          domain: "stitchfix.com" },
+  { name: "Groupon",             domain: "groupon.com" },
+  { name: "JCPenney",            domain: "jcpenney.com" },
+  { name: "JSX",                 domain: "jsx.com" },
+];
+
+
+function ProofStrip() {
   const ref = useRef<HTMLDivElement | null>(null);
-  const [inView, setInView] = useState(false);
-  // Start at the final values so the server HTML (and no-JS readers, crawlers, AI
-  // answer engines) see "16+" and "2×", never "0+". The count-up runs client-side only.
   const [tick, setTick] = useState(1);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    let raf = 0;
     const obs = new IntersectionObserver(
       (entries) => {
-        if (entries[0].isIntersecting) {
-          setInView(true);
-          obs.disconnect();
-        }
+        if (!entries[0].isIntersecting) return;
+        obs.disconnect();
+        const t0 = performance.now();
+        const step = (t: number) => {
+          const p = Math.min((t - t0) / 1600, 1);
+          setTick(1 - Math.pow(1 - p, 3));
+          if (p < 1) raf = requestAnimationFrame(step);
+        };
+        raf = requestAnimationFrame(step);
       },
       { threshold: 0.3 }
     );
     obs.observe(el);
-    return () => obs.disconnect();
+    return () => {
+      obs.disconnect();
+      cancelAnimationFrame(raf);
+    };
   }, []);
 
-  useEffect(() => {
-    if (!inView) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    const t0 = performance.now();
-    let raf: number;
-    const step = (t: number) => {
-      const p = Math.min((t - t0) / 2000, 1);
-      setTick(1 - Math.pow(1 - p, 3));
-      if (p < 1) raf = requestAnimationFrame(step);
-    };
-    raf = requestAnimationFrame(step);
-    return () => cancelAnimationFrame(raf);
-  }, [inView]);
-
   return (
-    <section aria-label="Track record highlights" className="relative pt-2 pb-14 px-7">
-      <div className="max-w-6xl mx-auto" ref={ref}>
-        <div
-          className="relative overflow-hidden rounded-3xl p-6 sm:p-10 md:p-12"
-          style={{
-            background: INK,
-            color: PAPER,
-            border: `3px solid ${INK}`,
-            boxShadow: `10px 10px 0 ${TEAL}`,
-            opacity: inView ? 1 : 0,
-            transform: inView ? "translateY(0)" : "translateY(28px)",
-            transition: "opacity 900ms ease, transform 900ms ease",
-          }}
-        >
-          <div className="relative flex flex-col xl:flex-row xl:items-center gap-10">
-            <div className="flex-1">
-              <div className="inline-block text-xs uppercase tracking-widest px-3 py-1 rounded-full mb-8 font-bold" style={{ color: INK, background: ACID }}>Track record</div>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-x-5 sm:gap-x-8 gap-y-8">
-                {bandStats.map((stat, i) => (
-                  <div
-                    key={stat.label}
-                    style={{
-                      opacity: inView ? 1 : 0,
-                      transform: inView ? "translateY(0)" : "translateY(24px)",
-                      transition: `opacity 1000ms ease ${300 + i * 220}ms, transform 1000ms ease ${300 + i * 220}ms`,
-                    }}
-                  >
-                    <div className="font-extrabold leading-none font-display whitespace-nowrap" style={{ color: ACID, fontSize: "clamp(1.25rem, 3.6vw, 2.5rem)" }}>
-                      {stat.text ?? `${Math.round((stat.num ?? 0) * tick)}${stat.suffix}`}
-                    </div>
-                    <div
-                      className="h-0.5 rounded-full mt-3 mb-2.5"
-                      style={{
-                        background: TEAL,
-                        width: inView ? "2.25rem" : "0rem",
-                        transition: `width 1400ms ease ${700 + i * 220}ms`,
-                      }}
-                    />
-                    <div className="text-xs uppercase tracking-widest font-bold" style={{ color: "rgba(242,236,221,0.65)" }}>
-                      {stat.label}
-                    </div>
-                  </div>
-                ))}
+    <section id="proof" aria-label="Track record and clients" className="relative px-7 py-14" style={{ background: INK, color: PAPER, borderBottom: `3px solid ${INK}` }}>
+      <div className="max-w-6xl mx-auto">
+        <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
+          <div className="inline-block text-xs uppercase tracking-widest px-3 py-1 rounded-full font-bold" style={{ color: INK, background: ACID }}>Track record</div>
+          <Link
+            href="/track-record"
+            className="inline-flex items-center gap-2 font-semibold px-6 py-3 rounded-full text-sm lift"
+            style={{ background: TEAL, color: "#fff" }}
+          >
+            See the full track record <ArrowUpRight className="w-4 h-4" />
+          </Link>
+        </div>
+        <div ref={ref} className="grid grid-cols-2 md:grid-cols-4 gap-x-5 sm:gap-x-8 gap-y-8">
+          {bandStats.map((stat) => (
+            <div key={stat.label}>
+              <div className="font-extrabold leading-none font-display whitespace-nowrap" style={{ color: ACID, fontSize: "clamp(1.6rem, 3.6vw, 2.5rem)" }}>
+                {stat.text ?? `${Math.round((stat.num ?? 0) * tick)}${stat.suffix}`}
+              </div>
+              <div className="h-0.5 rounded-full mt-3 mb-2.5" style={{ background: TEAL, width: "2.25rem" }} />
+              <div className="text-xs uppercase tracking-widest font-bold" style={{ color: "rgba(242,236,221,0.65)" }}>
+                {stat.label}
               </div>
             </div>
-            <div
-              className="shrink-0"
-              style={{
-                opacity: inView ? 1 : 0,
-                transform: inView ? "translateY(0)" : "translateY(24px)",
-                transition: "opacity 1000ms ease 1300ms, transform 1000ms ease 1300ms",
-              }}
-            >
-              <Link
-                href="/track-record"
-                className="inline-flex items-center gap-2 font-semibold px-7 py-3.5 rounded-full text-sm lift"
-                style={{ background: TEAL, color: "#fff" }}
+          ))}
+        </div>
+
+        <div className="mt-12 pt-10" style={{ borderTop: "1px solid rgba(242,236,221,0.16)" }}>
+          <p className="text-sm mb-6 text-balance" style={{ color: "rgba(242,236,221,0.82)" }}>
+            <span className="font-bold uppercase tracking-widest text-xs mr-2" style={{ color: PAPER }}>Brands &amp; teams I&apos;ve advised.</span>
+            Companies I&apos;ve sold to or built work for. Many of these relationships lasted well past the first deal.
+          </p>
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-x-5 gap-y-5 items-stretch justify-items-stretch">
+            {clients.map((client) => (
+              <a
+                key={client.name}
+                href={`https://www.${client.domain}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-2xl flex flex-col items-center justify-center gap-1.5 w-full p-4 transition-all duration-300 hover:-translate-y-1"
+                style={{ background: PAPER, border: `2px solid ${INK}`, boxShadow: `4px 4px 0 ${TEAL}` }}
+                title={`Visit ${client.name}`}
+                aria-label={client.name}
               >
-                See the full track record <ArrowUpRight className="w-4 h-4" />
-              </Link>
-            </div>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={`https://img.logo.dev/${client.domain}?token=pk_c7ynXyEOSNGSRzM5jrzKBw&size=200&format=png`}
+                  alt={`${client.name} logo`}
+                  className={`${client.logoClass ?? "h-7"} w-auto max-w-full object-contain`}
+                  onError={(e) => {
+                    e.currentTarget.style.display = "none";
+                  }}
+                />
+                <span className="text-[10px] font-semibold tracking-tight text-center leading-tight" style={{ color: "#6a6258" }}>
+                  {client.name}
+                </span>
+              </a>
+            ))}
           </div>
         </div>
       </div>
@@ -253,22 +249,7 @@ function HomeNav() {
 }
 
 export default function ChrisDorseySite() {
-  const clients = [
-    { name: "JPMorgan Chase",      domain: "jpmorganchase.com" },
-    { name: "Microsoft",           domain: "microsoft.com" },
-    { name: "Amazon",              domain: "amazon.com" },
-    { name: "PepsiCo",             domain: "pepsico.com" },
-    { name: "Johnson & Johnson",   domain: "jnj.com" },
-    { name: "Merck",               domain: "merck.com" },
-    { name: "Inspire Brands",      domain: "inspirebrands.com" },
-    { name: "Vail Resorts",        domain: "vailresorts.com", logoClass: "h-12" },
-    { name: "Stitch Fix",          domain: "stitchfix.com" },
-    { name: "Groupon",             domain: "groupon.com" },
-    { name: "JCPenney",            domain: "jcpenney.com" },
-    { name: "JSX",                 domain: "jsx.com" },
-  ];
-
-  const posts = allPosts.slice(0, 4);
+  const posts = allPosts.slice(0, 3);
 
   return (
     <div
@@ -312,15 +293,6 @@ export default function ChrisDorseySite() {
                   style={{ fontSize: 16, padding: "15px 26px", background: TEAL, color: "#fff", border: `2px solid ${TEAL}` }}
                 >
                   See the track record
-                </Link>
-                <Link
-                  href="/work-with-me"
-                  className="font-semibold rounded-full transition-colors hover:text-[var(--paper)] text-center whitespace-nowrap w-full sm:w-auto"
-                  style={{ fontSize: 16, padding: "15px 26px", border: `2px solid ${INK}`, color: INK }}
-                  onMouseEnter={(e) => { e.currentTarget.style.background = INK; e.currentTarget.style.color = PAPER; }}
-                  onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = INK; }}
-                >
-                  Work with me
                 </Link>
               </div>
             </div>
@@ -393,69 +365,8 @@ export default function ChrisDorseySite() {
           </div>
         </aside>
 
-        {/* Evolution marquee */}
-        <EvolutionMarquee />
-
-        {/* Evolution era cards */}
-        <CareerEras />
-        {/* Client logos — saturated blue band */}
-        <section className="relative py-16 px-7" style={{ background: BLUE, borderTop: `3px solid ${INK}`, borderBottom: `3px solid ${INK}` }}>
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-10 max-w-3xl mx-auto">
-              <p className="inline-block text-xs uppercase tracking-widest px-3 py-1 rounded-full mb-3 font-bold" style={{ color: INK, background: ACID }}>
-                Brands &amp; teams I&apos;ve advised
-              </p>
-              <p className="text-lg leading-relaxed text-balance" style={{ color: "rgba(255,255,255,0.92)" }}>
-                Companies I&apos;ve sold to or built work for. Many of these relationships lasted well past the first deal.
-              </p>
-            </div>
-            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-x-5 gap-y-5 items-stretch justify-items-stretch">
-              {clients.map((client) => (
-                <a
-                  key={client.name}
-                  href={`https://www.${client.domain}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-2xl flex flex-col items-center justify-center gap-1.5 w-full p-4 transition-all duration-300 hover:-translate-y-1"
-                  style={{ background: PAPER, border: `2px solid ${INK}`, boxShadow: `4px 4px 0 ${INK}` }}
-                  title={`Visit ${client.name}`}
-                  aria-label={client.name}
-                >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={`https://img.logo.dev/${client.domain}?token=pk_c7ynXyEOSNGSRzM5jrzKBw&size=200&format=png`}
-                    alt={`${client.name} logo`}
-                    className={`${client.logoClass ?? "h-7"} w-auto max-w-full object-contain`}
-                    onError={(e) => {
-                      e.currentTarget.style.display = "none";
-                    }}
-                  />
-                  <span className="text-[10px] font-semibold tracking-tight text-center leading-tight" style={{ color: "#6a6258" }}>
-                    {client.name}
-                  </span>
-                </a>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* About */}
-        <AboutStory />
-        {/* Builds */}
-        <BuildsSection />
-        {/* Connector hub — moved below Builds (Nov 2026) and shrunk */}
-        <section id="connect" className="px-7 pt-10 pb-12" style={{ background: CREAM2, borderTop: `3px solid ${INK}` }}>
-          <div className="max-w-5xl mx-auto">
-            <ConnectorHub />
-          </div>
-        </section>
-
-        <OffTheClock />
-        {/* Testimonials — hidden until at least 2 real quotes exist. */}
-        {SHOW_TESTIMONIALS && <Testimonials />}
-
-        {/* Track record band */}
-        <TrackRecordBand />
+        {/* Proof strip — stat tiles + client logos */}
+        <ProofStrip />
 
         {/* Writing — teal band, bento layout */}
         <section id="writing" className="relative py-16 px-7" style={{ background: TEAL, borderTop: `3px solid ${INK}`, borderBottom: `3px solid ${INK}` }}>
@@ -530,14 +441,13 @@ export default function ChrisDorseySite() {
               );
             })()}
 
-            {/* Remaining posts — tidy three-up grid */}
-            <div className="grid gap-4 md:grid-cols-3 md:auto-rows-fr">
+            {/* Remaining posts — two-up grid */}
+            <div className="grid gap-4 md:grid-cols-2 md:auto-rows-fr">
               {posts.slice(1).map((post, i) => {
-                // Alternate cream / violet / cream fills under the featured acid block.
+                // Cream / violet fills under the featured acid block.
                 const fills = [
                   { bg: PAPER, fg: INK, tag: BLUE, tagText: "#fff" },
                   { bg: VIOLET, fg: "#fff", tag: ACID, tagText: INK },
-                  { bg: PAPER, fg: INK, tag: VIOLET, tagText: "#fff" },
                 ];
                 const f = fills[i % fills.length];
                 const isLight = f.fg !== "#fff";
@@ -585,27 +495,11 @@ export default function ChrisDorseySite() {
               })}
             </div>
             <NewsletterSignup source="home" className="mt-10" />
-            <div className="mt-10 flex justify-center">
-              <style>{`
-                @keyframes ctaPulse {
-                  0%, 100% { box-shadow: 5px 5px 0 ${INK}; transform: translateY(0); }
-                  50% { box-shadow: 8px 8px 0 ${INK}; transform: translateY(-3px); }
-                }
-                @media (prefers-reduced-motion: reduce) {
-                  .cta-pulse { animation: none !important; box-shadow: 5px 5px 0 ${INK} !important; }
-                }
-              `}</style>
-              <Link
-                href="/writing"
-                className="cta-pulse group inline-flex items-center gap-2.5 font-extrabold px-9 py-4 rounded-full text-base hover:brightness-95 transition"
-                style={{ background: ACID, color: INK, border: `2.5px solid ${INK}`, animation: "ctaPulse 2.6s ease-in-out infinite" }}
-              >
-                See all {allPosts.length} posts
-                <ArrowUpRight className="w-5 h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-              </Link>
-            </div>
           </div>
         </section>
+
+        {/* References — two quotes; the full set lives on /about */}
+        {SHOW_TESTIMONIALS && <Testimonials featured />}
 
         {/* Contact */}
         <section id="contact" className="relative py-16 px-7">
@@ -617,33 +511,13 @@ export default function ChrisDorseySite() {
                   Hiring, building, or stuck on a deal?<br />Let&apos;s talk.
                 </h2>
                 <p className="text-lg mb-10" style={{ color: "rgba(255,255,255,0.9)" }}>I respond to every note personally.</p>
-                <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                  <a
-                    href={`mailto:${CONTACT_EMAIL}`}
-                    className="px-6 py-3 rounded-full transition flex items-center justify-center gap-2 font-semibold flex-1 hover:opacity-90"
-                    style={{ background: "#fff", color: INK }}
-                  >
-                    <Mail className="w-4 h-4" /> Email me
-                  </a>
-                  <a
-                    href="https://calendar.app.google/WdU29EvH2jzfwNHe9"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-6 py-3 rounded-full transition flex items-center justify-center gap-2 font-semibold flex-1 hover:opacity-90"
-                    style={{ background: "#fff", color: INK }}
-                  >
-                    <Calendar className="w-4 h-4" /> Book time
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/in/cdorsey/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-6 py-3 rounded-full transition flex items-center justify-center gap-2 font-semibold flex-1"
-                    style={{ border: "2px solid rgba(255,255,255,0.5)" }}
-                  >
-                    <LinkedinIcon /> LinkedIn
-                  </a>
-                </div>
+                <a
+                  href={`mailto:${CONTACT_EMAIL}`}
+                  className="inline-flex items-center justify-center gap-2 font-semibold px-8 py-4 rounded-full transition hover:opacity-90 lift"
+                  style={{ background: "#fff", color: INK, border: `2px solid ${INK}` }}
+                >
+                  <Mail className="w-4 h-4" /> Email me
+                </a>
               </div>
             </div>
           </div>
