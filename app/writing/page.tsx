@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { posts } from "@/app/lib/posts-data";
 import NewsletterSignup from "@/app/components/NewsletterSignup";
 import WritingList from "./WritingList";
+import { SERIES, postsInSeries } from "@/app/lib/series";
 
 // Redesign palette — matches the homepage + post pages.
 const INK = "#1A1613";
@@ -102,6 +103,31 @@ export default function WritingIndex() {
             </ol>
           </section>
         )}
+
+        {/* Series */}
+        <section aria-labelledby="series-heading" className="mb-14">
+          <h2 id="series-heading" className="font-display font-extrabold mb-5" style={{ fontSize: "clamp(24px,3vw,32px)", color: INK }}>
+            Series
+          </h2>
+          <div className="grid gap-4 md:grid-cols-3">
+            {SERIES.map((s) => (
+              <Link
+                key={s.slug}
+                href={`/writing/series/${s.slug}`}
+                className="group flex flex-col justify-between rounded-2xl p-5 transition-transform hover:-translate-y-1"
+                style={{ background: s.color, color: s.fg, border: `3px solid ${INK}`, boxShadow: `6px 6px 0 ${INK}` }}
+              >
+                <span>
+                  <span className="block font-display font-extrabold leading-tight" style={{ fontSize: 21 }}>{s.title}</span>
+                  <span className="block text-sm leading-relaxed mt-2" style={{ color: "rgba(255,255,255,0.86)" }}>{s.description}</span>
+                </span>
+                <span className="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-widest mt-4">
+                  {postsInSeries(s.slug).length} posts <ArrowUpRight className="w-3.5 h-3.5" />
+                </span>
+              </Link>
+            ))}
+          </div>
+        </section>
 
         {/* All posts, with tag filter chips */}
         <h2 className="font-display font-extrabold mb-5" style={{ fontSize: "clamp(24px,3vw,32px)", color: INK }}>

@@ -8,6 +8,7 @@ import type { Metadata } from "next";
 import { posts } from "@/app/writing/posts";
 import NewsletterSignup from "@/app/components/NewsletterSignup";
 import CopyLinkButton from "@/app/components/CopyLinkButton";
+import { seriesForPost } from "@/app/lib/series";
 
 const sans  = { fontFamily: "var(--font-inter)" };
 
@@ -167,6 +168,18 @@ export default async function PostPage({
           <span className="flex items-center gap-1.5 text-xs" style={{ color: "#6a6258" }}>
             <Clock className="w-3 h-3" /> {post.readTime} read
           </span>
+          {(() => {
+            const series = seriesForPost(post.slug);
+            return series ? (
+              <Link
+                href={`/writing/series/${series.slug}`}
+                className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full hover:opacity-80 transition"
+                style={{ border: `2px solid ${series.color}`, color: series.color }}
+              >
+                Series: {series.title} →
+              </Link>
+            ) : null;
+          })()}
         </div>
 
         {/* Headline */}
