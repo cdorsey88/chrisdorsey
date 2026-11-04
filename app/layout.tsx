@@ -175,7 +175,7 @@ const jsonLd = {
         "Writing on AI go-to-market, the future of advertising in LLMs, retail media, and selling AI to skeptical buyers.",
       author: { "@id": "https://chrisdorsey.co/#person" },
       publisher: { "@id": "https://chrisdorsey.co/#person" },
-      url: "https://chrisdorsey.co/#writing",
+      url: "https://chrisdorsey.co/writing",
     },
     {
       "@type": "FAQPage",

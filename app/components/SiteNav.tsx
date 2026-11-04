@@ -22,13 +22,12 @@ const MountainMark = () => (
   </svg>
 );
 
-// Section links point back to the homepage (/#section) so they work from any page.
+// Every nav item is a real page (Nov 2026). "Say hi." still jumps to the homepage contact block.
 const links = [
-  { label: "About", href: "/#about" },
+  { label: "Writing", href: "/writing" },
+  { label: "Builds", href: "/builds" },
   { label: "Track Record", href: "/track-record" },
-  { label: "Writing", href: "/#writing" },
-  { label: "Builds", href: "/#builds" },
-  { label: "Work with me", href: "/work-with-me" },
+  { label: "About", href: "/about" },
 ];
 
 export default function SiteNav() {

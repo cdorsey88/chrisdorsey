@@ -6,8 +6,7 @@ import Link from "next/link";
 
 // Mobile-only navigation: a hamburger button in the sticky bar (upper right,
 // next to "Say hi.") that opens a full-screen ink overlay with the same links
-// the desktop nav shows. Hidden at md and up. Section links use /#hash so they
-// work from every page, including the homepage.
+// the desktop nav shows. Hidden at md and up. Every link is a real page.
 
 const INK = "#1A1613";
 const PAPER = "#F2ECDD";
@@ -15,11 +14,10 @@ const ACID = "#C8F135";
 const TEAL = "#0E9F86";
 
 const links = [
-  { label: "About", href: "/#about" },
+  { label: "Writing", href: "/writing" },
+  { label: "Builds", href: "/builds" },
   { label: "Track Record", href: "/track-record" },
-  { label: "Writing", href: "/#writing" },
-  { label: "Builds", href: "/#builds" },
-  { label: "Work with me", href: "/work-with-me" },
+  { label: "About", href: "/about" },
 ];
 
 export default function MobileMenu() {
