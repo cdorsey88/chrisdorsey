@@ -15,7 +15,7 @@ export const post: Post = {
         <a target="_blank" rel="noopener noreferrer" href="https://iabtechlab.com/press-releases/iab-tech-lab-introduces-aamp-3-0-with-openproposal/">announcement</a>{" "}
         says the extension came &ldquo;due to overwhelming feedback,&rdquo; and{" "}
         <a target="_blank" rel="noopener noreferrer" href="https://ppc.land/iab-tech-lab-extends-ai-ad-buying-standard-comments-to-november-10/">ppc.land</a>{" "}
-        reported it from Tech Lab&rsquo;s LinkedIn on October 23. The{" "}
+        reported it from Tech Lab&rsquo;s October 23 LinkedIn post. The{" "}
         <a target="_blank" rel="noopener noreferrer" href="https://github.com/IABTechLab/OpenProposal">README on GitHub</a>{" "}
         still says October 22, so the press release got updated before the documentation, which makes Tech Lab exactly like every company I&rsquo;ve worked for.
       </p>
@@ -36,7 +36,7 @@ export const post: Post = {
         What the agent can&rsquo;t resolve is what the spot is. A line item&rsquo;s <code>formats</code>{" "}field holds ids like <code>audio/host-read-30s</code>, and its <code>specs</code>{" "}field is &ldquo;as defined by the referenced format registry entry.&rdquo; The draft&rsquo;s fourth open question says the registry &ldquo;has no entries for <code>audio/*</code>, <code>ctv/*</code>{" "}or <code>dooh/*</code>&rdquo; and &ldquo;cannot currently answer for half the declared channels.&rdquo; Credit to the working group for writing that down. Most drafts leave it for the implementers to find.
       </p>
       <p>
-        I expected to write that this draft lets agents buy TV and not audio. That&rsquo;s wrong. The CTV example points at <code>ctv/instream-15s</code>, which resolves to nothing too. The difference is what breaks when the spec is missing. Video ads have moved through VAST for well over a decade, and a 15-second instream file is a known shape. Tech Lab{" "}
+        I expected to write that this draft lets agents buy TV and not audio, but the CTV example points at <code>ctv/instream-15s</code>, which resolves to nothing too. The difference is what breaks when the spec is missing. Video ads have moved through VAST for well over a decade, and a 15-second instream file is a known shape. Tech Lab{" "}
         <a target="_blank" rel="noopener noreferrer" href="https://iabcanada.com/?p=7388">folded audio into VAST 4.1</a>{" "}
         in 2018, so delivery is covered for audio as well. What the draft has no way to describe is how the spot has to sound.
       </p>
