@@ -12,6 +12,7 @@ import MobileMenu from "@/app/components/MobileMenu";
 // Community picks are hidden for now (Sept 2026) to reduce clutter. Flip to true to restore.
 const SHOW_COMMUNITY_PICKS = false;
 import Testimonials from "@/app/components/Testimonials";
+import NewsletterSignup from "@/app/components/NewsletterSignup";
 
 // Layered-range mark — three ridges (blue, teal, ink). Layers rise on load, drift on hover.
 const MountainMark = ({ size = 48 }: { size?: number }) => (
@@ -1185,6 +1186,7 @@ export default function ChrisDorseySite() {
                 );
               })}
             </div>
+            <NewsletterSignup source="home" className="mt-10" />
             <div className="mt-10 flex justify-center">
               <style>{`
                 @keyframes ctaPulse {

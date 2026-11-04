@@ -6,6 +6,7 @@ import { Calendar, Clock } from "lucide-react";
 import SiteNav from "@/app/components/SiteNav";
 import type { Metadata } from "next";
 import { posts } from "@/app/writing/posts";
+import NewsletterSignup from "@/app/components/NewsletterSignup";
 
 const sans  = { fontFamily: "var(--font-inter)" };
 
@@ -378,6 +379,9 @@ export default async function PostPage({
             </div>
           </div>
         </div>
+
+        {/* Newsletter */}
+        <NewsletterSignup source="post" className="mt-12" />
 
         {/* Related posts */}
         {relatedPosts.length > 0 && (
