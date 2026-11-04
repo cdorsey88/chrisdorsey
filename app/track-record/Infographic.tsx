@@ -131,7 +131,7 @@ const chapters: Chapter[] = [
     era: "enterprise",
     headline: "Selling to engineers",
     detail:
-      "Edge infrastructure for 25 accounts including Condé Nast, The New York Times, and MLS. Engineers only trust you once you know the product as well as they do.",
+      "Edge infrastructure for 25 accounts including Condé Nast, The New York Times, and MLS. Fastly bills on usage, so the number I carried moved with the traffic customers pushed through it. Engineers only trust you once you know the product as well as they do.",
     number: "108%",
     numberLabel: "net revenue retention",
   },
