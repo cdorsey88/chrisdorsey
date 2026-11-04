@@ -44,21 +44,12 @@ export async function generateMetadata({
       modifiedTime: publishedISO,
       authors: ["https://chrisdorsey.co"],
       siteName: "Chris Dorsey",
-      images: [
-        {
-          url: "/og-image.jpg",
-          width: 1200,
-          height: 630,
-          alt: post.title,
-        },
-      ],
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
       description: `${post.tldr} — Chris Dorsey, AI & MadTech Advisor & Sales Leader`,
       creator: "@chrisdorsey",
-      images: ["/og-image.jpg"],
     },
   };
 }

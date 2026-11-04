@@ -10,6 +10,9 @@ export type PostMeta = {
   // Optional reading series (see app/lib/series.ts). Builds-tag posts join
   // "seller-who-builds" automatically.
   series?: "seller-who-builds" | "agents-in-the-funnel" | "before-the-budget-line";
+  // Optional hand-made social preview in /public (e.g. "/og/campsite-ranger.png").
+  // When set it replaces the generated card from app/writing/[slug]/opengraph-image.tsx.
+  ogImage?: string;
 };
 
 export const posts: PostMeta[] = [
@@ -27,6 +30,7 @@ export const posts: PostMeta[] = [
   },
   {
     slug: "campsite-ranger-two-months-after-launch",
+    ogImage: "/og/campsite-ranger.png",
     title: "Campsite Ranger, two months after launch",
     date: "Oct 28, 2026",
     readTime: "7 min",
@@ -175,6 +179,7 @@ export const posts: PostMeta[] = [
   },
   {
     slug: "how-i-built-campsite-ranger",
+    ogImage: "/og/campsite-ranger.png",
     title: "337 commits in seven weeks: I built and launched Campsite Ranger solo with Claude Code",
     date: "Aug 27, 2026",
     readTime: "4 min",
