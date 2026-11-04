@@ -202,7 +202,7 @@ const jsonLd = {
           name: "Is Chris Dorsey available for roles or advisory?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "He is always open to the right conversation. The roles that fit are Senior Account Executive, Account Director, Sales Director, and Client Lead at AI-native companies, plus advisory work with startups taking a first product to market. He responds to every note personally.",
+            text: "He is always open to the right conversation, especially Senior Account Executive, Account Director, Sales Director or Client Lead seats at AI-native companies. He also advises startups taking a first product to market, and he responds to every note personally.",
           },
         },
         {
