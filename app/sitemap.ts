@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { posts } from "@/app/lib/posts-data";
+import { SERIES } from "@/app/lib/series";
 
 const BASE = "https://chrisdorsey.co";
 
@@ -31,6 +32,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${BASE}/about`,
+      lastModified: new Date("2026-11-03"), // update when /about changes
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${BASE}/builds`,
+      lastModified: new Date("2026-11-03"), // update when /builds changes
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: `${BASE}/track-record`,
       lastModified: new Date("2026-11-01"), // update when /track-record changes
       changeFrequency: "monthly",
@@ -42,6 +55,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
+    ...SERIES.map((s) => ({
+      url: `${BASE}/writing/series/${s.slug}`,
+      lastModified: newestPostDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.6,
+    })),
     ...postEntries,
   ];
 }

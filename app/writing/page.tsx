@@ -1,17 +1,16 @@
 import Link from "next/link";
-import { Calendar, Clock, ArrowUpRight, Mail } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import SiteNav from "@/app/components/SiteNav";
 import type { Metadata } from "next";
 import { posts } from "@/app/lib/posts-data";
-import { CONTACT_EMAIL } from "@/app/lib/site-config";
+import NewsletterSignup from "@/app/components/NewsletterSignup";
+import WritingList from "./WritingList";
+import { SERIES, postsInSeries } from "@/app/lib/series";
 
 // Redesign palette — matches the homepage + post pages.
 const INK = "#1A1613";
 const PAPER = "#F2ECDD";
-const TEAL = "#0E9F86";
 const ACID = "#C7F03A";
-const BLUE = "#2B43E8";
-const VIOLET = "#6B4BFF";
 
 export const metadata: Metadata = {
   title: "Writing — Christopher Dorsey",
@@ -21,17 +20,21 @@ export const metadata: Metadata = {
   },
 };
 
-// Alternating bold card fills, cycled across the full list for variety.
-const fills: { bg: string; fg: string; tag: string; tagText: string }[] = [
-  { bg: PAPER, fg: INK, tag: BLUE, tagText: "#fff" },
-  { bg: BLUE, fg: "#fff", tag: ACID, tagText: INK },
-  { bg: PAPER, fg: INK, tag: VIOLET, tagText: "#fff" },
-  { bg: VIOLET, fg: "#fff", tag: ACID, tagText: INK },
-  { bg: PAPER, fg: INK, tag: TEAL, tagText: "#fff" },
-  { bg: INK, fg: PAPER, tag: ACID, tagText: INK },
+// Pinned "Start here" posts, in reading order. Edit slugs to change the row.
+const START_HERE = [
+  "how-i-built-campsite-ranger",
+  "soundcheck-audio-brand-qa",
+  "iab-openproposal-agents-read-every-proposal",
+  "openai-dots-agent-reads-cold-email-first",
+  "costco-velocity-membership-fee-retail-media",
 ];
 
 export default function WritingIndex() {
+  const pinned = START_HERE.map((slug) => posts.find((p) => p.slug === slug)).filter(
+    (p): p is (typeof posts)[number] => Boolean(p)
+  );
+  const listPosts = posts.map(({ slug, title, date, readTime, excerpt, tag }) => ({ slug, title, date, readTime, excerpt, tag }));
+
   return (
     <div
       className="min-h-screen grain-overlay"
@@ -64,84 +67,75 @@ export default function WritingIndex() {
           </p>
         </div>
 
-        {/* Posts grid — bold cards matching the new system */}
-        <div className="grid gap-4 sm:gap-5 md:grid-cols-2 md:auto-rows-fr">
-          {posts.map((post, i) => {
-            const f = fills[i % fills.length];
-            const darkCard = f.fg !== INK;
-            return (
-              <Link
-                key={post.slug}
-                href={`/writing/${post.slug}`}
-                className="group flex flex-col justify-between rounded-2xl p-6 md:p-7 transition-transform hover:-translate-y-1"
-                style={{
-                  background: f.bg,
-                  color: f.fg,
-                  border: `3px solid ${INK}`,
-                  boxShadow: `7px 7px 0 ${INK}`,
-                }}
-              >
-                <div>
-                  <span
-                    className="inline-block text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-full mb-3.5"
-                    style={{ background: f.tag, color: f.tagText }}
-                  >
-                    {post.tag}
-                  </span>
-                  <h2
-                    className="font-display font-bold leading-tight"
-                    style={{ fontSize: "clamp(20px,2.2vw,24px)", color: f.fg }}
-                  >
-                    {post.title}
-                  </h2>
-                  <p
-                    className="leading-relaxed mt-3 text-sm"
-                    style={{ color: darkCard ? "rgba(242,236,221,0.86)" : "rgba(26,22,19,0.78)" }}
-                  >
-                    {post.excerpt.length > 150 ? `${post.excerpt.slice(0, 150).trimEnd()}…` : post.excerpt}
-                  </p>
-                </div>
-                <div
-                  className="flex items-center justify-between gap-4 text-xs mt-6 font-semibold"
-                  style={{ color: darkCard ? "rgba(242,236,221,0.72)" : "#6a6258" }}
-                >
-                  <span className="flex items-center gap-3">
-                    <span className="flex items-center gap-1.5">
-                      <Calendar className="w-3 h-3" /> {post.date}
-                    </span>
-                    <span className="flex items-center gap-1.5">
-                      <Clock className="w-3 h-3" /> {post.readTime}
-                    </span>
-                  </span>
-                  <span className="inline-flex items-center gap-0.5" style={{ color: darkCard ? ACID : TEAL }}>
-                    Read <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                  </span>
-                </div>
-              </Link>
-            );
-          })}
-        </div>
-
-        {/* Get new posts by email — mailto today, real signup once an ESP is wired up */}
-        <div
-          className="rounded-2xl p-8 mt-14 flex flex-col md:flex-row items-start md:items-center justify-between gap-5"
-          style={{ background: INK, color: PAPER, border: `3px solid ${INK}`, boxShadow: `6px 6px 0 ${TEAL}` }}
-        >
-          <div>
-            <h3 className="font-display font-bold mb-1" style={{ fontSize: 20 }}>Get new posts by email</h3>
-            <p className="text-sm" style={{ color: "rgba(242,236,221,0.78)" }}>
-              No mailing list yet &mdash; send a note and I&apos;ll add you by hand until there is one.
-            </p>
-          </div>
-          <a
-            href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Add me to the list")}`}
-            className="flex items-center justify-center gap-2 font-semibold px-6 py-3 rounded-full transition text-sm hover:opacity-90 whitespace-nowrap"
-            style={{ background: ACID, color: INK }}
+        {/* Start here — pinned row */}
+        {pinned.length > 0 && (
+          <section
+            aria-labelledby="start-here"
+            className="rounded-2xl p-6 md:p-8 mb-14"
+            style={{ background: INK, color: PAPER, border: `3px solid ${INK}`, boxShadow: `8px 8px 0 ${ACID}` }}
           >
-            <Mail className="w-4 h-4" />
-            Sign me up
-          </a>
-        </div>
+            <h2
+              id="start-here"
+              className="inline-block text-xs uppercase tracking-widest px-3 py-1 rounded-full mb-5 font-bold"
+              style={{ color: INK, background: ACID }}
+            >
+              Start here
+            </h2>
+            <ol className="grid gap-x-8 md:grid-cols-2">
+              {pinned.map((p, i) => (
+                <li key={p.slug} style={{ borderTop: "1px solid rgba(242,236,221,0.16)" }}>
+                  <Link href={`/writing/${p.slug}`} className="group flex items-start gap-4 py-4">
+                    <span className="font-display font-extrabold shrink-0" style={{ fontSize: 26, lineHeight: 1, color: ACID }}>
+                      {`0${i + 1}`}
+                    </span>
+                    <span className="min-w-0">
+                      <span className="block text-[11px] font-bold uppercase tracking-widest mb-1" style={{ color: "rgba(242,236,221,0.6)" }}>
+                        {p.tag} · {p.readTime}
+                      </span>
+                      <span className="font-display font-bold leading-snug group-hover:underline underline-offset-4" style={{ fontSize: 17, color: PAPER }}>
+                        {p.title}
+                      </span>
+                    </span>
+                    <ArrowUpRight className="w-4 h-4 shrink-0 mt-1 ml-auto" style={{ color: ACID }} />
+                  </Link>
+                </li>
+              ))}
+            </ol>
+          </section>
+        )}
+
+        {/* Series */}
+        <section aria-labelledby="series-heading" className="mb-14">
+          <h2 id="series-heading" className="font-display font-extrabold mb-5" style={{ fontSize: "clamp(24px,3vw,32px)", color: INK }}>
+            Series
+          </h2>
+          <div className="grid gap-4 md:grid-cols-3">
+            {SERIES.map((s) => (
+              <Link
+                key={s.slug}
+                href={`/writing/series/${s.slug}`}
+                className="group flex flex-col justify-between rounded-2xl p-5 transition-transform hover:-translate-y-1"
+                style={{ background: s.color, color: s.fg, border: `3px solid ${INK}`, boxShadow: `6px 6px 0 ${INK}` }}
+              >
+                <span>
+                  <span className="block font-display font-extrabold leading-tight" style={{ fontSize: 21 }}>{s.title}</span>
+                  <span className="block text-sm leading-relaxed mt-2" style={{ color: "rgba(255,255,255,0.86)" }}>{s.description}</span>
+                </span>
+                <span className="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-widest mt-4">
+                  {postsInSeries(s.slug).length} posts <ArrowUpRight className="w-3.5 h-3.5" />
+                </span>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {/* All posts, with tag filter chips */}
+        <h2 className="font-display font-extrabold mb-5" style={{ fontSize: "clamp(24px,3vw,32px)", color: INK }}>
+          Every post
+        </h2>
+        <WritingList posts={listPosts} />
+
+        <NewsletterSignup source="writing-index" className="mt-14" />
       </main>
     </div>
   );

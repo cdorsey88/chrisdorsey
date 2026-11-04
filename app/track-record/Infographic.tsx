@@ -32,14 +32,13 @@ const stats: Stat[] = [
 const statAccents = [TEAL, BLUE, VIOLET, TEAL, BLUE, VIOLET, TEAL, BLUE, VIOLET];
 
 function CountUp({ stat, started }: { stat: Stat; started: boolean }) {
-  const [val, setVal] = useState(0);
+  // Initial state is the final value, so server HTML carries the real number.
+  // After hydration, once the scoreboard scrolls into view, it counts up from 0.
+  const [val, setVal] = useState(stat.end);
   useEffect(() => {
     if (!started || stat.text) return;
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduced) {
-      setVal(stat.end);
-      return;
-    }
+    if (reduced) return;
     const dur = 900;
     const t0 = performance.now();
     let raf: number;
@@ -51,7 +50,7 @@ function CountUp({ stat, started }: { stat: Stat; started: boolean }) {
     };
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [started, stat.end]);
+  }, [started, stat.end, stat.text]);
   if (stat.text) return <span>{stat.text}</span>;
   return (
     <span>

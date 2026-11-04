@@ -7,6 +7,9 @@ export type PostMeta = {
   tag: string;
   color: string;
   tldr: string;
+  // Optional reading series (see app/lib/series.ts). Builds-tag posts join
+  // "seller-who-builds" automatically.
+  series?: "seller-who-builds" | "agents-in-the-funnel" | "before-the-budget-line";
 };
 
 export const posts: PostMeta[] = [
@@ -34,6 +37,7 @@ export const posts: PostMeta[] = [
   },
   {
     slug: "salesforce-braze-personal-agents-channel",
+    series: "agents-in-the-funnel",
     title: "Salesforce paid $5.66 billion to reach your customers at the right moment. It also listed their AI agents as a channel.",
     date: "Oct 20, 2026",
     readTime: "4 min",
@@ -67,6 +71,7 @@ export const posts: PostMeta[] = [
   },
   {
     slug: "openai-dots-agent-reads-cold-email-first",
+    series: "agents-in-the-funnel",
     title: "Your cold email now has a first reader with its own browser",
     date: "Sep 29, 2026",
     readTime: "4 min",
@@ -78,6 +83,7 @@ export const posts: PostMeta[] = [
   },
   {
     slug: "meta-enterprise-platform-ad-to-agent-funnel",
+    series: "agents-in-the-funnel",
     title: "Meta sells the ad, runs the conversation it starts, and now sells the agent that closes the sale",
     date: "Sep 29, 2026",
     readTime: "4 min",
@@ -122,6 +128,7 @@ export const posts: PostMeta[] = [
   },
   {
     slug: "iab-openproposal-agents-read-every-proposal",
+    series: "agents-in-the-funnel",
     title: "Media buyers read 10 to 20 proposals per campaign. The IAB wants an agent to read all of them.",
     date: "Sep 25, 2026",
     readTime: "4 min",
@@ -144,6 +151,7 @@ export const posts: PostMeta[] = [
   },
   {
     slug: "sponsored-agents-ad-claims-substantiation",
+    series: "agents-in-the-funnel",
     title: "OpenAI's fine print makes every Sponsored Agent reply your ad claim, and nobody gets to approve it first",
     date: "Sep 22, 2026",
     readTime: "5 min",
@@ -298,6 +306,7 @@ export const posts: PostMeta[] = [
   },
   {
     slug: "gemini-spark-chrome-logged-in-shopper",
+    series: "agents-in-the-funnel",
     title: "Google's agent now shops with your customer's saved passwords",
     date: "Aug 4, 2026",
     readTime: "6 min",
@@ -309,6 +318,7 @@ export const posts: PostMeta[] = [
   },
   {
     slug: "chatgpt-ad-destination-is-an-agent",
+    series: "agents-in-the-funnel",
     title: "Your next ad's landing page is a conversation somebody has to staff",
     date: "Aug 4, 2026",
     readTime: "6 min",
@@ -551,6 +561,7 @@ export const posts: PostMeta[] = [
   },
   {
     slug: "expansion-is-the-whole-business-ai-gtm",
+    series: "before-the-budget-line",
     title: "I closed my best deal four times",
     date: "Jul 11, 2026",
     readTime: "6 min",
@@ -562,6 +573,7 @@ export const posts: PostMeta[] = [
   },
   {
     slug: "six-reinventions-same-sales-job-dies",
+    series: "before-the-budget-line",
     title: "Six technology shifts later, the same sales job keeps dying",
     date: "Jul 11, 2026",
     readTime: "7 min",
@@ -584,6 +596,7 @@ export const posts: PostMeta[] = [
   },
   {
     slug: "microsoft-frontier-company-deployment-is-the-product",
+    series: "before-the-budget-line",
     title: "Microsoft spent $2.5 billion to put its own engineers inside your customer's building.",
     date: "Jul 8, 2026",
     readTime: "6 min",
@@ -760,6 +773,7 @@ export const posts: PostMeta[] = [
   },
   {
     slug: "ai-labs-hiring-salespeople-which-sales-jobs-last",
+    series: "before-the-budget-line",
     title: "The companies with the best AI on earth are hiring salespeople faster than SaaS is.",
     date: "Jun 17, 2026",
     readTime: "5 min",
@@ -826,6 +840,7 @@ export const posts: PostMeta[] = [
   },
   {
     slug: "agentic-commerce-shopping-agents",
+    series: "agents-in-the-funnel",
     title: "Your next big customer is a shopping agent that doesn't care about your brand.",
     date: "Jun 9, 2026",
     readTime: "6 min",
@@ -881,6 +896,7 @@ export const posts: PostMeta[] = [
   },
   {
     slug: "anthropic-900b-category-sale-is-over",
+    series: "before-the-budget-line",
     title: "Anthropic just crossed $900B. The AI category sale is over.",
     date: "May 26, 2026",
     readTime: "7 min",
@@ -1002,6 +1018,7 @@ export const posts: PostMeta[] = [
   },
   {
     slug: "selling-ai-skeptical-buyers",
+    series: "before-the-budget-line",
     title: "Selling AI to skeptical buyers (a field guide)",
     date: "Feb 11, 2026",
     readTime: "7 min",

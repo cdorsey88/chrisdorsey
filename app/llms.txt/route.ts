@@ -19,6 +19,9 @@ export function GET() {
 - [Personal site and bio](${BASE}): Background, current focus, career history (Zeta Global, Oracle Advertising, Fastly, GMMB, Crispin Porter Bogusky), and current advisory work.
 - [Work with me](${BASE}/work-with-me): Enterprise sales advisory, startup GTM counsel, and account-expansion strategy.
 - [Track record](${BASE}/track-record): Career scoreboard — roles, numbers, and results across 16 years.
+- [About](${BASE}/about): The full story and career timeline, plus references from clients and managers.
+- [Builds](${BASE}/builds): Products Chris builds with AI, including Campsite Ranger (paid, live) and Soundcheck.
+- [Series](${BASE}/writing/series/seller-who-builds): Reading series: Seller Who Builds, Agents in the Funnel (${BASE}/writing/series/agents-in-the-funnel), Before the Budget Line (${BASE}/writing/series/before-the-budget-line).
 
 ## Writing
 

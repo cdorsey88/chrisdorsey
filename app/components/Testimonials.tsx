@@ -1,3 +1,4 @@
+import Link from "next/link";
 // Testimonials section — gated behind SHOW_TESTIMONIALS in app/lib/site-config.ts.
 // All four quotes below are real, excerpted verbatim from Chris's public
 // LinkedIn recommendations (linkedin.com/in/cdorsey, pulled June 2026).
@@ -54,7 +55,11 @@ const testimonials: Testimonial[] = [
   },
 ];
 
-export default function Testimonials() {
+// `featured` shows two quotes and links to the full set on /about (homepage use).
+const FEATURED = ["Courtney King", "Elizabeth Floyd"];
+
+export default function Testimonials({ featured = false }: { featured?: boolean }) {
+  const shown = featured ? testimonials.filter((t) => FEATURED.includes(t.name)) : testimonials;
   // Each card gets a different bold fill so the set reads as varied, not templated.
   const fills = [
     { bg: ACID, fg: INK, sub: "rgba(26,22,19,0.7)", chip: INK, chipFg: ACID, shadow: INK, rot: -1 },
@@ -64,7 +69,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <section id="testimonials" className="relative py-20 px-6">
+    <section id="references" className="relative py-20 px-6">
       <div className="max-w-5xl mx-auto">
         <div className="inline-block text-xs uppercase tracking-widest px-3 py-1 rounded-full mb-4 font-bold" style={{ color: INK, background: ACID }}>
           References
@@ -76,7 +81,7 @@ export default function Testimonials() {
           Clients, executive leaders, and cross-functional peers who&apos;ll vouch for me, on the record.
         </p>
         <div className="grid md:grid-cols-2 gap-5">
-          {testimonials.map((t, i) => {
+          {shown.map((t, i) => {
             const f = fills[i % fills.length];
             return (
               <figure
@@ -96,7 +101,16 @@ export default function Testimonials() {
             );
           })}
         </div>
-        <div className="mt-10">
+        <div className="mt-10 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8">
+          {featured && (
+            <Link
+              href="/about#references"
+              className="inline-flex items-center gap-1.5 font-semibold px-6 py-3 rounded-full lift self-start"
+              style={{ background: INK, color: PAPER, border: `2px solid ${INK}` }}
+            >
+              More on /about <span aria-hidden="true">→</span>
+            </Link>
+          )}
           <a
             href="https://www.linkedin.com/in/cdorsey/details/recommendations/"
             target="_blank"
