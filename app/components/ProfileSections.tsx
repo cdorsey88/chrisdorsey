@@ -290,7 +290,7 @@ const eras = [
   { title: "Digital", year: "2013", desc: "First hire at an indie NYC shop. Grew revenue 300% in a year. With 8 people full-time, we beat legacy industry leaders for IMAX creative AOR, then repositioned the brand around intensity.", bg: ACID, fg: INK, border: INK },
   { title: "Data", year: "2018", desc: "Oracle Advertising — managed Amazon, J&J, PepsiCo. #1 US pharma seller for audience data and contextual targeting. Tapped by the exec team to represent all US sellers on roadmap feedback. Edge infrastructure at Fastly.", bg: BLUE, fg: "#fff", border: BLUE },
   { title: "AI acquisition", year: "2024", desc: "Zeta Global — first email-based AI customer-acquisition product to market, with opt-in permission to email 110M+ people for clients. Grew a $200K pilot into a $1M+ contract on performance.", bg: VIOLET, fg: "#fff", border: VIOLET },
-  { title: "AI & agents", year: "now", desc: "Full-time: selling AI-driven audience modeling and closed-loop measurement to national consumer brands. Nights and weekends: live music, toddler playtime, and Campsite Ranger, live with paying customers.", bg: TEAL, fg: "#fff", border: TEAL },
+  { title: "AI & agents", year: "now", desc: "Full-time: selling AI-driven audience modeling and closed-loop measurement to national consumer brands. Nights and weekends: live music, toddler playtime, and Campsite Ranger, live with over 600 users and more than 100 paying customers.", bg: TEAL, fg: "#fff", border: TEAL },
 ];
 
 

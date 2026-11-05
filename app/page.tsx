@@ -279,8 +279,8 @@ export default function ChrisDorseySite() {
                 </span>{" "}
                 <span style={{ color: TEAL }}>a budget for yet</span>.
               </h1>
-              <p className="font-display font-extrabold mt-3.5" style={{ fontSize: "clamp(20px,2.2vw,28px)", lineHeight: 1.1, maxWidth: "26ch", color: TEAL }}>
-                AI-native builder, too. My solo build has paying customers.
+              <p className="font-display font-extrabold mt-3.5" style={{ fontSize: "clamp(20px,2.2vw,28px)", lineHeight: 1.1, maxWidth: "34ch", color: TEAL }}>
+                AI-native builder, too. I built Campsite Ranger solo, and it has over 600 users, more than 100 of them paying.
               </p>
               <p className="mt-5 mb-5 leading-relaxed" style={{ fontSize: "clamp(15px,1.6vw,18px)", maxWidth: "54ch", color: "#3a332c" }}>
                 16 years taking first-to-market AI and MadTech to Fortune 500 buyers, from Oracle Advertising&apos;s
@@ -347,7 +347,7 @@ export default function ChrisDorseySite() {
               </p>
               <p className="leading-snug" style={{ fontSize: 15, color: "rgba(26,22,19,0.72)" }}>
                 It emails you the moment a cancellation opens your dates on Colorado campsites and permits. A live
-                product with paying users, designed and shipped solo in seven weeks.{" "}
+                product with over 600 users and more than 100 paying customers, designed and shipped solo in seven weeks.{" "}
                 <Link href="/writing/how-i-built-campsite-ranger" className="font-semibold underline underline-offset-2" style={{ color: INK }}>
                   How I did it
                 </Link>

@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Chris Dorsey — Enterprise Seller & AI-Native Builder",
     description:
-      "16 years selling AI and MadTech to Fortune 500 buyers before the budget line existed. He builds with the same tools, and Campsite Ranger, his solo build, has paying customers.",
+      "16 years selling AI and MadTech to Fortune 500 buyers before the budget line existed. He builds with the same tools, and Campsite Ranger, his solo build, has over 600 users, more than 100 of them paying.",
     url: "https://chrisdorsey.co",
     siteName: "Christopher Dorsey",
     type: "profile",
@@ -186,7 +186,7 @@ const jsonLd = {
           name: "What does Chris Dorsey do?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Chris Dorsey is an enterprise sales leader who sells first-to-market AI and MadTech (marketing and advertising technology), usually before buyers have a budget line for it. Across 16 years he has been the first seller in the building twice, sold three categories before budgets existed for them, and closed Fortune 500 accounts, from agency creative at Crispin Porter + Bogusky to data at Oracle Advertising, edge infrastructure at Fastly, and AI customer acquisition at Zeta Global. He also builds with AI: Campsite Ranger, a paid product he shipped solo, has paying customers.",
+            text: "Chris Dorsey is an enterprise sales leader who sells first-to-market AI and MadTech (marketing and advertising technology), usually before buyers have a budget line for it. Across 16 years he has been the first seller in the building twice, sold three categories before budgets existed for them, and closed Fortune 500 accounts, from agency creative at Crispin Porter + Bogusky to data at Oracle Advertising, edge infrastructure at Fastly, and AI customer acquisition at Zeta Global. He also builds with AI: Campsite Ranger, a paid product he shipped solo, has over 600 users, more than 100 of them paying.",
           },
         },
         {
