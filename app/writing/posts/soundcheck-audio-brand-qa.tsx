@@ -60,6 +60,23 @@ export const post: Post = {
         There was one miss. Scribe auto-corrected two of the staged mispronunciations before my check could see them. That&rsquo;s the ceiling on checking pronunciation through a transcript; a real version needs phoneme-level alignment.
       </p>
 
+      <h2>Update: what it changed in the IAB&rsquo;s audio draft</h2>
+      <p>
+        The IAB Tech Lab is taking public comment until November 10 on{" "}
+        <a href="https://github.com/IABTechLab/OpenProposal" target="_blank" rel="noopener noreferrer">OpenProposal 3.0</a>,
+        a draft spec for how AI agents buy and sell media. Its format registry had no audio entries, and nothing on an asset recorded whether the voice was synthetic. Soundcheck ran into both gaps.
+      </p>
+      <p>
+        On November 3 I filed a{" "}
+        <a href="https://github.com/IABTechLab/OpenProposal/issues/5" target="_blank" rel="noopener noreferrer">public comment</a>{" "}
+        as an individual. It asks for audio entries in the registry, with loudness targets, and for a provenance record on every asset covering how the audio was made and a hash of the file. That&rsquo;s the shape of Soundcheck&rsquo;s ledger. Host reads get a requirements object too, with a pronunciation guide and whether a synthetic voice is allowed. I wrote up the full comment{" "}
+        <a href="/writing/iab-openproposal-audio-format-registry">here</a>.
+      </p>
+      <p>
+        Konstantin Mirin of Postindustria, an IAB Tech Lab member, picked it up in{" "}
+        <a href="https://github.com/IABTechLab/OpenProposal/pull/152" target="_blank" rel="noopener noreferrer">an open pull request</a>.
+        It now has a <code>voice</code> key, a <code>pronunciation_guide</code> and an optional provenance object, and the description credits my comment. It hasn&rsquo;t been merged and has no reviews yet, so none of this is in the draft. The open question is the one Soundcheck keeps raising: when a seller builds the audio, who checks it? I asked the draft to require a receiver to report a synthetic read marked human-only. The author held off because buyers have no channel yet to report on seller-built assets.
+      </p>
       <h2>What to ask before you buy</h2>
       <p>
         If a vendor is pitching you on volume, ask what happens between the render and the ad server. Who or what checks each file against your brand standard, and what does it cost per asset? If the answer is a person, ask how that works at a thousand assets. If the answer is nothing, that&rsquo;s the risk you&rsquo;re carrying, and it&rsquo;s biggest in the markets where you can&rsquo;t judge the audio yourself.
@@ -70,6 +87,9 @@ export const post: Post = {
     </div>
   ),
   sources: [
+    { title: "IAB Tech Lab — OpenProposal 3.0 draft (GitHub)", url: "https://github.com/IABTechLab/OpenProposal" },
+    { title: "IAB Tech Lab OpenProposal — issue #5: format registry audio entries (public comment)", url: "https://github.com/IABTechLab/OpenProposal/issues/5" },
+    { title: "IAB Tech Lab OpenProposal — pull request #152: formats, assets and provenance (open)", url: "https://github.com/IABTechLab/OpenProposal/pull/152" },
     { title: "ElevenLabs — Ads Engine documentation", url: "https://elevenlabs.io/docs/overview/capabilities/ads-engine" },
     { title: "ElevenLabs — Speech to Text (Scribe v2) documentation", url: "https://elevenlabs.io/docs/overview/capabilities/speech-to-text" },
     { title: "EU AI Act — Article 50: Transparency obligations (applies 2 Aug 2026)", url: "https://artificialintelligenceact.eu/article/50/" },

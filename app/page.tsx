@@ -365,6 +365,53 @@ export default function ChrisDorseySite() {
           </div>
         </aside>
 
+        {/* Soundcheck band — sits directly under the Campsite Ranger band */}
+        <aside
+          aria-label="Soundcheck build"
+          className="px-7 py-4 md:py-5"
+          style={{ background: VIOLET, color: PAPER, borderBottom: `3px solid ${INK}` }}
+        >
+          <div className="max-w-6xl mx-auto flex flex-wrap items-center gap-5 md:gap-6">
+            <Link
+              href="/writing/soundcheck-audio-brand-qa"
+              aria-label="Soundcheck: read how I built it"
+              className="shrink-0 block rounded-[10px] transition-transform hover:-translate-y-1"
+              style={{ width: 165, height: 100, background: PAPER, border: `3px solid ${INK}`, boxShadow: `5px 5px 0 ${INK}`, transform: "rotate(1.5deg)" }}
+            >
+              <svg viewBox="0 0 165 100" width="100%" height="100%" aria-hidden="true">
+                {[10, 22, 34, 18, 46, 62, 40, 70, 52, 30, 56, 38, 20, 44, 26, 14].map((h, i) => (
+                  <rect key={i} x={12 + i * 9.2} y={50 - h / 2} width={5} height={h} rx={2.5} fill={i === 7 ? "#E5484D" : INK} />
+                ))}
+              </svg>
+            </Link>
+            <div className="flex-1" style={{ minWidth: 260 }}>
+              <span
+                className="inline-block text-xs uppercase tracking-widest font-bold px-3 py-1 rounded-full mb-2"
+                style={{ background: PAPER, color: INK }}
+              >
+                MVP · built in August
+              </span>
+              <p className="font-display font-extrabold leading-tight mb-1" style={{ fontSize: "clamp(19px,2.2vw,22px)" }}>
+                Soundcheck listens to AI-generated audio ads before they air.
+              </p>
+              <p className="leading-snug" style={{ fontSize: 15, color: "rgba(242,236,221,0.9)" }}>
+                On its first live run it flagged 5 of 12 spots in a simulated campaign. My comments on the IAB&rsquo;s
+                agent-buying spec led to changes in an open pull request on how audio ads record voice and provenance.{" "}
+                <Link href="/writing/iab-openproposal-audio-format-registry" className="font-semibold underline underline-offset-2">
+                  The IAB comment
+                </Link>
+              </p>
+            </div>
+            <Link
+              href="/writing/soundcheck-audio-brand-qa"
+              className="inline-flex items-center gap-1.5 font-semibold rounded-full lift shrink-0"
+              style={{ fontSize: 15, padding: "12px 21px", background: PAPER, color: INK, border: `2px solid ${INK}` }}
+            >
+              How I built it <ArrowUpRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </aside>
+
         {/* Proof strip — stat tiles + client logos */}
         <ProofStrip />
 
