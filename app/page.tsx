@@ -249,7 +249,11 @@ function HomeNav() {
 }
 
 export default function ChrisDorseySite() {
-  const posts = allPosts.slice(0, 3);
+  // Campsite Ranger build story is pinned as the featured post; the rest follow newest-first.
+  const pinnedPost = allPosts.find((p) => p.slug === "how-i-built-campsite-ranger");
+  const posts = pinnedPost
+    ? [pinnedPost, ...allPosts.filter((p) => p !== pinnedPost).slice(0, 2)]
+    : allPosts.slice(0, 3);
 
   return (
     <div
