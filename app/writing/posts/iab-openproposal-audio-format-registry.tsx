@@ -82,9 +82,15 @@ export const post: Post = {
         <a target="_blank" rel="noopener noreferrer" href="https://github.com/IABTechLab/OpenProposal/issues/5#issuecomment-6619455053">filed mine</a>{" "}
         on issue #5, the format registry thread. Comments close November 10.
       </p>
+      <p>
+        <strong>Update, November 6.</strong>{" "}Konstantin Mirin of Postindustria, an IAB Tech Lab member, took the audio parts of that comment into{" "}
+        <a target="_blank" rel="noopener noreferrer" href="https://github.com/IABTechLab/OpenProposal/pull/152">an open pull request</a>.
+        It adds a <code>voice</code> key that is either <code>human_only</code> or <code>synthetic_permitted</code>, a <code>pronunciation_guide</code> on the host-read example and an optional provenance object, and its description credits my comment. It hasn&rsquo;t been merged and has no reviews yet, so none of it is in the draft. I asked that a receiver report a synthetic read that arrives under a human-only spec. He held off, because buyers have no channel yet to report on assets the seller built. That&rsquo;s still open, and it&rsquo;s the next thing worth commenting on before November 10.
+      </p>
     </div>
   ),
   sources: [
+    { title: "IAB Tech Lab OpenProposal: pull request #152, formats, assets and provenance (open)", url: "https://github.com/IABTechLab/OpenProposal/pull/152" },
     { title: "IAB Tech Lab: IAB Tech Lab Introduces AAMP 3.0 to Standardize the RFP-to-Buy Process for Agentic Advertising (Sept 22, 2026; extension banner added Oct 2026)", url: "https://iabtechlab.com/press-releases/iab-tech-lab-introduces-aamp-3-0-with-openproposal/" },
     { title: "ppc.land: IAB Tech Lab extends AI ad-buying standard comments to November 10", url: "https://ppc.land/iab-tech-lab-extends-ai-ad-buying-standard-comments-to-november-10/" },
     { title: "IAB Tech Lab: OpenProposal 3.0 draft specification (GitHub)", url: "https://github.com/IABTechLab/OpenProposal/blob/main/spec/openproposal-3.0.md" },
