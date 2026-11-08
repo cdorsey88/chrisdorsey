@@ -286,19 +286,21 @@ export default function ChrisDorseySite() {
               <p className="font-display font-extrabold mt-3.5" style={{ fontSize: "clamp(20px,2.2vw,28px)", lineHeight: 1.1, maxWidth: "34ch", color: TEAL }}>
                 AI-native builder, too. I built Campsite Ranger solo, and it has over 600 users, more than 100 of them paying.
               </p>
-              <p className="mt-5 font-semibold leading-snug" style={{ fontSize: "clamp(15px,1.6vw,18px)", maxWidth: "54ch", color: INK }}>
-                16 years taking first-to-market AI and MadTech to Fortune 500 buyers.
-              </p>
-              <dl className="mt-3 mb-5" style={{ maxWidth: 440, borderTop: `2px solid ${INK}`, color: "#3a332c" }}>
-                <div className="flex justify-between gap-4 py-2 text-sm" style={{ borderBottom: `1px solid ${INK}` }}>
-                  <dt className="font-mono text-xs whitespace-nowrap" style={{ color: INK }}>Visigent</dt>
-                  <dd className="m-0 text-right">Advisor, early GEO platform and zero-to-one GTM</dd>
-                </div>
-                <div className="flex justify-between gap-4 py-2 text-sm" style={{ borderBottom: `2px solid ${INK}` }}>
-                  <dt className="font-mono text-xs whitespace-nowrap" style={{ color: INK }}>Zeta Global</dt>
-                  <dd className="m-0 text-right">First email AI customer acquisition product</dd>
-                </div>
-              </dl>
+              <div className="mt-5 mb-6 overflow-hidden" style={{ maxWidth: 480, border: `3px solid ${INK}`, borderRadius: 16, background: "#FBF8EF", boxShadow: `6px 6px 0 ${INK}` }}>
+                <p className="font-display font-extrabold m-0" style={{ fontSize: "clamp(16px,1.7vw,19px)", lineHeight: 1.15, padding: "14px 18px", background: INK, color: PAPER }}>
+                  16 years taking first-to-market AI and MadTech to Fortune 500 buyers.
+                </p>
+                <dl className="m-0">
+                  <div className="grid grid-cols-1 sm:grid-cols-[108px_minmax(0,1fr)] items-center gap-1.5 sm:gap-4 px-4 py-3" style={{ borderBottom: `2px solid ${INK}` }}>
+                    <dt className="font-mono font-bold uppercase rounded-full text-center justify-self-start sm:justify-self-stretch whitespace-nowrap" style={{ fontSize: 11, letterSpacing: "0.06em", padding: "5px 12px", background: TEAL, color: "#fff" }}>Visigent</dt>
+                    <dd className="m-0 font-semibold leading-snug" style={{ fontSize: 15, color: INK }}>Advisor, early GEO platform and zero-to-one GTM</dd>
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-[108px_minmax(0,1fr)] items-center gap-1.5 sm:gap-4 px-4 py-3">
+                    <dt className="font-mono font-bold uppercase rounded-full text-center justify-self-start sm:justify-self-stretch whitespace-nowrap" style={{ fontSize: 11, letterSpacing: "0.06em", padding: "5px 12px", background: BLUE, color: "#fff" }}>Zeta Global</dt>
+                    <dd className="m-0 font-semibold leading-snug" style={{ fontSize: 15, color: INK }}>First email AI customer acquisition product</dd>
+                  </div>
+                </dl>
+              </div>
               <div className="flex flex-col sm:flex-row gap-3.5 sm:items-center">
                 <Link
                   href="/track-record"
