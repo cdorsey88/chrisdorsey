@@ -400,8 +400,9 @@ export default function ChrisDorseySite() {
               </p>
               <p className="leading-snug" style={{ fontSize: 15, color: "rgba(242,236,221,0.9)" }}>
                 On its first live run it flagged 5 of 12 spots in a simulated campaign. My comments on the IAB&rsquo;s
-                agent-buying spec led to changes in an open pull request on how audio ads record voice and provenance.{" "}
-                <Link href="/writing/iab-openproposal-audio-format-registry" className="font-semibold underline underline-offset-2">
+                agent-buying spec led to changes in an open pull request on how audio ads record voice and provenance.
+                <br />
+                <Link href="/writing/iab-openproposal-audio-format-registry" className="font-semibold underline underline-offset-2 whitespace-nowrap">
                   The IAB comment
                 </Link>
               </p>
