@@ -286,10 +286,19 @@ export default function ChrisDorseySite() {
               <p className="font-display font-extrabold mt-3.5" style={{ fontSize: "clamp(20px,2.2vw,28px)", lineHeight: 1.1, maxWidth: "34ch", color: TEAL }}>
                 AI-native builder, too. I built Campsite Ranger solo, and it has over 600 users, more than 100 of them paying.
               </p>
-              <p className="mt-5 mb-5 leading-relaxed" style={{ fontSize: "clamp(15px,1.6vw,18px)", maxWidth: "54ch", color: "#3a332c" }}>
-                16 years taking first-to-market AI and MadTech to Fortune 500 buyers, from Oracle Advertising&apos;s
-                contextual targeting to Zeta Global&apos;s first AI acquisition product.
+              <p className="mt-5 font-semibold leading-snug" style={{ fontSize: "clamp(15px,1.6vw,18px)", maxWidth: "54ch", color: INK }}>
+                16 years taking first-to-market AI and MadTech to Fortune 500 buyers.
               </p>
+              <dl className="mt-3 mb-5" style={{ maxWidth: 440, borderTop: `2px solid ${INK}`, color: "#3a332c" }}>
+                <div className="flex justify-between gap-4 py-2 text-sm" style={{ borderBottom: `1px solid ${INK}` }}>
+                  <dt className="font-mono text-xs whitespace-nowrap" style={{ color: INK }}>Visigent</dt>
+                  <dd className="m-0 text-right">Advisor, early GEO platform and zero-to-one GTM</dd>
+                </div>
+                <div className="flex justify-between gap-4 py-2 text-sm" style={{ borderBottom: `2px solid ${INK}` }}>
+                  <dt className="font-mono text-xs whitespace-nowrap" style={{ color: INK }}>Zeta Global</dt>
+                  <dd className="m-0 text-right">First email AI customer acquisition product</dd>
+                </div>
+              </dl>
               <div className="flex flex-col sm:flex-row gap-3.5 sm:items-center">
                 <Link
                   href="/track-record"
