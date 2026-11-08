@@ -286,7 +286,7 @@ export default function ChrisDorseySite() {
               <p className="font-display font-extrabold mt-3.5" style={{ fontSize: "clamp(20px,2.2vw,28px)", lineHeight: 1.1, maxWidth: "34ch", color: TEAL }}>
                 AI-native builder, too. I built Campsite Ranger solo, and it has over 600 users, more than 100 of them paying.
               </p>
-              <div className="mt-5 mb-6 overflow-hidden" style={{ maxWidth: 480, border: `3px solid ${INK}`, borderRadius: 16, background: "#FBF8EF", boxShadow: `6px 6px 0 ${INK}` }}>
+              <div className="mt-5 mb-6 overflow-hidden" style={{ maxWidth: 530, border: `3px solid ${INK}`, borderRadius: 16, background: "#FBF8EF", boxShadow: `6px 6px 0 ${INK}` }}>
                 <p className="font-display font-extrabold m-0" style={{ fontSize: "clamp(16px,1.7vw,19px)", lineHeight: 1.15, padding: "14px 18px", background: INK, color: PAPER }}>
                   16 years taking first-to-market AI and MadTech to Fortune 500 buyers.
                 </p>
