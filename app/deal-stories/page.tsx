@@ -9,7 +9,7 @@ const TEAL = "#0E9F86";
 const ACID = "#C7F03A";
 
 const DESCRIPTION =
-  "Short accounts of enterprise deals Chris Dorsey closed before the budget line existed, starting with a $200K pilot that became a contract worth more than $1M.";
+  "Short accounts of enterprise deals Chris Dorsey sold, from a $200K AI pilot that became a contract worth more than $1M to an Amazon account grown from $10M to $12.5M.";
 
 export const metadata: Metadata = {
   title: "Deal stories — Christopher Dorsey",
@@ -44,6 +44,15 @@ const STORIES: Story[] = [
       "The budget line didn't exist when I started. It did by the time the contract closed.",
     ],
   },
+  {
+    id: "amazon-three-campaigns",
+    title: "A shrinking Amazon account, grown to $12.5M",
+    meta: "Oracle Advertising · Amazon · $10M to $12.5M",
+    paragraphs: [
+      "Amazon was one of Oracle Advertising's biggest accounts, and it was declining 30% year over year. I grew it from $10M to $12.5M. I sold into it the same way each time: third-party audiences and contextual targeting, built into full-funnel campaigns.",
+      "The campaigns were Thursday Night Football promotion, Prime Day promotion and Amazon Pharmacy advertising. Each had its own audience and its own goal. All three ran on the same targeting.",
+    ],
+  },
 ];
 
 const storiesJsonLd = {
@@ -65,10 +74,10 @@ export default function DealStoriesPage() {
           Deal stories
         </div>
         <h1 className="font-display font-extrabold" style={{ fontSize: "clamp(32px,5vw,52px)", lineHeight: 1.0 }}>
-          Deals with no budget line yet
+          Deal stories
         </h1>
         <p className="mt-4" style={{ fontSize: 18, lineHeight: 1.5, color: "#4a4239" }}>
-          Short accounts of enterprise deals where the budget line didn&apos;t exist when I started. Client names are left out where the client hasn&apos;t cleared them.
+          Short accounts of enterprise deals from my own book. I name a client only where I&apos;m free to.
         </p>
 
         <div className="mt-12 flex flex-col gap-8">
