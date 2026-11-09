@@ -14,6 +14,17 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "seller-who-builds-agents-on-my-calendar",
+    title: "I run eight AI agents. One of them is allowed to email my customers.",
+    date: "Nov 8, 2026",
+    readTime: "4 min",
+    excerpt:
+      "Eight scheduled agents run around my sales job and Campsite Ranger. One sends customer email on its own, behind a preflight and automatic stops. The rules that decide which agents get that freedom are the same ones enterprise buyers are asking for.",
+    tag: "Builds",
+    color: "from-emerald-800 to-amber-500",
+    tldr: "I run eight scheduled AI agents around my sales job and my side business. Most of them research or draft, and a person ships what they make. One sends customer email by itself, and it earned that by passing a preflight the day before, with automatic stops for bounces and complaints. Anything that writes to production data or speaks for me somewhere new still waits for me. Enterprise buyers are trying to draw this same line right now. If you sell agents, draw yours first.",
+  },
+  {
     slug: "iab-openproposal-audio-format-registry",
     title: "An agent can buy a host-read ad under the IAB's new standard. Nothing in it says what the host has to say.",
     date: "Nov 3, 2026",
