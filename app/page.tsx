@@ -76,10 +76,10 @@ function ScrollProgress() {
    Stats render their final values in server HTML; the count-up runs client-side.
 --------------------------------------------------------------------------- */
 const bandStats: { num?: number; suffix?: string; text?: string; label: string }[] = [
+  { num: 124, suffix: "%", label: "Quota attainment across my second Oracle Advertising stint" },
   { num: 108, suffix: "%", label: "Net revenue retention at Fastly, selling on usage" },
   { num: 60, suffix: "%", label: "Book growth in one year at Oracle Advertising" },
   { text: "#1", label: "US pharma seller at Oracle Advertising" },
-  { text: "7‑figure", label: "Deals closed, repeatedly" },
 ];
 
 const clients: { name: string; domain: string; logoClass?: string }[] = [

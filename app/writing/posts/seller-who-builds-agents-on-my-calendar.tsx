@@ -39,7 +39,6 @@ export const post: Post = {
         <p>
           The last two are for my own writing. One refreshes voice-lint, the linter I wrote to flag AI-writing tells, twice a month. Yes, I built a robot to catch me sounding like a robot. The other is a weekly content strategist for this site.
         </p>
-        {/* COST-LINE: pending Chris's monthly cost number. Insert as a short paragraph here, or delete this comment if he says cut it. */}
 
         <h2>Where I draw the line</h2>
         <p>

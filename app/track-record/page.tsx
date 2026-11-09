@@ -69,6 +69,16 @@ export default function TrackRecord() {
 
         <Infographic />
 
+        <div className="text-center">
+          <Link
+            href="/deal-stories"
+            className="inline-flex items-center gap-2 font-semibold px-7 py-3.5 rounded-full text-sm lift"
+            style={{ background: INK, color: PAPER, border: `2px solid ${INK}` }}
+          >
+            Read the deal stories
+          </Link>
+        </div>
+
         {/* Contact */}
         <div className="text-center">
           <Link
