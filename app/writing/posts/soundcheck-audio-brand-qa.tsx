@@ -75,7 +75,10 @@ export const post: Post = {
       <p>
         Konstantin Mirin of Postindustria, an IAB Tech Lab member, picked it up in{" "}
         <a href="https://github.com/IABTechLab/OpenProposal/pull/152" target="_blank" rel="noopener noreferrer">an open pull request</a>.
-        It now has a <code>voice</code> key, a <code>pronunciation_guide</code> and an optional provenance object, and the description credits my comment. It hasn&rsquo;t been merged and has no reviews yet, so none of this is in the draft. The open question is the one Soundcheck keeps raising: when a seller builds the audio, who checks it? I asked the draft to require a receiver to report a synthetic read marked human-only. The author held off because buyers have no channel yet to report on seller-built assets.
+        It now has a <code>voice</code> key, a <code>pronunciation_guide</code> and an optional provenance object, and the description credits my comment. It hasn&rsquo;t been merged, has no reviews yet and says the task force can drop these commits, so none of this is in the draft. The open question is the one Soundcheck keeps raising: when a seller builds the audio, who checks it? 
+      </p>
+      <p>
+        I asked the draft to require a receiver to report a synthetic read marked human-only. The author held off at first, because buyers had no channel to report on seller-built assets. On November 11 I sent him evidence from Soundcheck&rsquo;s run, and he added the rule. The receiver reports the mismatch, naming the asset, the digest of the file it reviewed, the spec key it conflicts with and what it observed, and the pull request says the rule follows my evidence. Where the buyer sends that report is still open.
       </p>
       <h2>What to ask before you buy</h2>
       <p>

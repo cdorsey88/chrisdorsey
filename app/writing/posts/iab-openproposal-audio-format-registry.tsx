@@ -80,12 +80,15 @@ export const post: Post = {
       <p>
         I{" "}
         <a target="_blank" rel="noopener noreferrer" href="https://github.com/IABTechLab/OpenProposal/issues/5#issuecomment-6619455053">filed mine</a>{" "}
-        on issue #5, the format registry thread. Comments close November 10.
+        on issue #5, the format registry thread. Comments closed November 10.
       </p>
       <p>
-        <strong>Update, November 6.</strong>{" "}Konstantin Mirin of Postindustria, an IAB Tech Lab member, took the audio parts of that comment into{" "}
+        <strong>Updates, November 6 and 11.</strong>{" "}Konstantin Mirin of Postindustria, an IAB Tech Lab member, took the audio parts of that comment into{" "}
         <a target="_blank" rel="noopener noreferrer" href="https://github.com/IABTechLab/OpenProposal/pull/152">an open pull request</a>.
-        It adds a <code>voice</code> key that is either <code>human_only</code> or <code>synthetic_permitted</code>, a <code>pronunciation_guide</code> on the host-read example and an optional provenance object, and its description credits my comment. It hasn&rsquo;t been merged and has no reviews yet, so none of it is in the draft. I asked that a receiver report a synthetic read that arrives under a human-only spec. He held off, because buyers have no channel yet to report on assets the seller built. That&rsquo;s still open, and it&rsquo;s the next thing worth commenting on before November 10.
+        It adds a <code>voice</code> key that is either <code>human_only</code> or <code>synthetic_permitted</code>, a <code>pronunciation_guide</code> on the host-read example and an optional provenance object, and its description credits my comment. It hasn&rsquo;t been merged, has no reviews yet and says the task force can drop these commits, so none of it is in the draft. 
+      </p>
+      <p>
+        I asked that a receiver report a synthetic read that arrives under a human-only spec. He held off at first, because buyers have no channel to report on assets the seller built. On November 11 I sent him evidence from Soundcheck&rsquo;s test run, and he added the rule: the receiver reports the mismatch, naming the asset, the digest of the file it reviewed, the spec key it conflicts with and what it observed. Where the buyer sends that report is still open. Public comment closed November 10.
       </p>
     </div>
   ),
