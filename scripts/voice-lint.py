@@ -2,6 +2,10 @@
 """
 voice-lint.py — flag AI-writing "tells" in a draft before you publish.
 
+v9 (Nov 15, 2026): Gemini 4 Argon stock idioms (Graphite Oct 21), Opus 5.5 helper
+    register + "not only about", editor-flagged hedges (Poynter Sept 28), false-balance
+    templates, chatbot conversational leaks, anaphora check, false-range and
+    "Despite its challenges" closers (Wikipedia), LinkedIn reach study (magicpost).
 v8 (Nov 1, 2026): LinkedIn slop CTAs/openers (FeedHive detector, Creative Bloq,
     LexiConn), Wikipedia Oct 2026 revision (distinction-matters editorializing,
     canned coverage/attribution, outlook headers), Fable 5.1 density, colon-label
@@ -323,6 +327,25 @@ HARD_REGEX = [
     # Wikipedia Signs of AI writing, Oct 2026 revision: outlook/legacy section headers
     (r"^\s*(Closing thoughts|Wrapping up|Future outlook|The road ahead|Looking forward|Final word|Challenges and (legacy|opportunities)|What this means)\s*:?\s*$",
      'generic AI section header: "Closing thoughts / Future outlook / The road ahead"'),
+    # --- added Nov 15, 2026 (v9): Gemini 4 Argon idioms (Graphite Oct 21, 2026), Opus 5.5 "not only about" (Graphite),
+    #     editor-flagged hedges (Poynter Sept 28, 2026), false-balance + chatbot leaks (Vollmer; dfriends Oct 30, 2026),
+    #     didactic asides (Wikipedia Signs of AI writing; magicpost LinkedIn study) ---
+    (r"\b(half the battle|crystal clear|bridg(e|es|ed|ing) the gap|fast-?paced world)\b",
+     'stock idiom (Gemini 4 Argon favorites): "half the battle / crystal clear / bridges the gap / fast-paced world"'),
+    (r"\b(is|are|was|were|it'?s|this is|that'?s) not only about\b",
+     'negation sibling: "is not only about X" (Opus 5.5, 13x human rate)'),
+    (r"\b(it'?s |it is )?worth (noting|mentioning|pointing out)( that)?\b",
+     'didactic aside: "it\'s worth noting that" (Wikipedia; magicpost "dead giveaway")'),
+    (r"\b(it (can|could|might) be argued( that)?|one (could|might) argue( that)?|some (would|might) argue( that)?)\b",
+     'editor-flagged hedge: "it can be argued that / one could argue" (Poynter, Sept 2026)'),
+    (r"\b(truth|answer|reality|real story) (lies|is|sits|falls) somewhere in (between|the middle)\b|\bsomewhere in between\.",
+     'false balance: "the truth lies somewhere in between"'),
+    (r"\bwhile (critics|skeptics|some|detractors|supporters|proponents) (argue|say|worry|claim|contend|maintain|insist)\b[^.?!\n]{1,90},\s*(supporters|others|proponents|advocates|critics|skeptics|defenders|optimists)\b",
+     'false-balance template: "While critics argue X, supporters maintain Y"'),
+    (r"\b(you'?re absolutely right|great question|hope (this|that) helps|happy to (elaborate|dig in|expand|clarify)|let me know if you'?d like|I hope this (helps|is helpful|clarifies))\b",
+     'chatbot conversational leak: "You\'re absolutely right / Great question / Hope this helps"'),
+    (r"\blet'?s (break (it|this|that|these|those) down|unpack (this|that|it|these)|take a closer look)\b",
+     'false-casual tour guide: "Let\'s break it down / Let\'s unpack this / Let\'s take a closer look"'),
 ]
 
 # Moralizing / aphoristic closers — only HARD when they appear in the LAST
@@ -365,6 +388,11 @@ CLOSER_REGEX = [
      'closer: uplift wrap ("the future belongs to / stay curious / here\'s to")'),
     (r"\bthanks for reading\b|\bif this (resonated|helped|hit home)\b|\bshare (this|it) with\b",
      'closer: newsletter sign-off / share-ask ("thanks for reading / if this resonated")'),
+    # --- added Nov 15, 2026 (v9): Wikipedia "Despite its challenges" outlook wrap; magicpost "the key is" (-6.7% reach) ---
+    (r"\bdespite (its|these|those|the|some|all the|all these) (challenges|hurdles|setbacks|headwinds)\b",
+     'closer: "Despite its challenges, ..." (rigid outlook wrap)'),
+    (r"\bbottom line\b|\bthe key (is|here is|takeaway is)\b",
+     'closer: "the bottom line / the key is" (neat-wrap tee-up)'),
 ]
 
 # Raw-text HARD checks (run before tag stripping, so hrefs are visible).
@@ -410,6 +438,8 @@ SOFT_VOCAB = [
     "dependable", "thoughtful", "thoughtfully", "meaningful", "meaningfully",
     "deliberate", "deliberately", "future-ready", "demystify", "demystifies",
     "unwavering", "ignite", "ignites",
+    # added Nov 15, 2026 (v9): Gemini 4 Argon emphatics (Graphite Oct 21, 2026)
+    "fantastic", "unmatched", "incredible",
 ]
 SOFT_INTENSIFIERS = ["actually", "genuinely", "truly", "simply", "essentially",
                      "crucially", "notably", "importantly", "fundamentally",
@@ -418,7 +448,9 @@ SOFT_INTENSIFIERS = ["actually", "genuinely", "truly", "simply", "essentially",
                      "increasingly", "deeply", "profoundly", "incredibly",
                      # added Oct 16, 2026 (v7)
                      "structurally", "enormously", "remarkably", "absolutely",
-                     "immensely", "arguably", "undeniably"]
+                     "immensely", "arguably", "undeniably",
+                     # added Nov 15, 2026 (v9): Gemini 4 Argon / Gemini-family markers
+                     "entirely", "completely", "drastically"]
 SOFT_ATTRIBUTION = [r"studies show", r"experts say", r"research suggests",
                     r"it'?s widely (believed|known)", r"many believe",
                     # added Nov 1, 2026 (v8): Wikipedia Oct 2026 vague-sourcing list
@@ -470,7 +502,7 @@ SOFT_REGEX = [
      'balanced construction: "not only... but also"'),
     (r"\b(serves|stands|functions) as (a|an|the)\b",
      'copula avoidance: "serves as / stands as" (just say "is")'),
-    (r"(^|[.?!]\s+)(Moreover|Furthermore|Additionally),",
+    (r"(^|[.?!]\s+)(Moreover|Furthermore|Additionally|Conversely),",
      'essay connective: "Moreover, / Furthermore,"'),
     (r"\b(hit|struck|touched) a (nerve|chord)\b",
      'stock reaction idiom: "hit a nerve / struck a chord"'),
@@ -542,6 +574,24 @@ SOFT_REGEX = [
     # recurring costume metaphor (Peyton: "Collaboration wearing a Delegation costume")
     (r"\bwearing an? \w+ (costume|hat|mask|disguise)\b|\bin an? \w+ costume\b",
      'costume metaphor: "X wearing a Y costume"'),
+    # --- added Nov 15, 2026 (v9) ---
+    # anaphora: three consecutive sentences opening on the same word (FeedHive detector via Hackaday Oct 14, 2026)
+    (r"(^|[.?!]\s+)(?!(?:the|it|this|that|he|she|we|they|you|and|but|so|if|in|a|an|i)\b)(?P<w>\w{2,})\b[^.?!\n]{3,80}[.?!]\s+(?P=w)\b[^.?!\n]{3,80}[.?!]\s+(?P=w)\b",
+     'anaphora: 3 consecutive sentences open on the same word (vary the openings)'),
+    (r"\b(everything|ranging|anything|everyone) from\b[^.?!\n]{1,50}\bto\b",
+     'false range: "everything from X to Y" (Wikipedia: usually no real scale behind it)'),
+    (r"\b(generally|broadly) speaking\b|\bin most cases\b|\bfor the most part\b|\bto some extent\b",
+     'hedge stack: "generally speaking / in most cases / for the most part" (Poynter editors, Sept 2026)'),
+    (r"(^|[.?!]\s+)Here'?s (what|how|why) ",
+     'opener: "Here\'s what / Here\'s how" (10% of LinkedIn posts, -4.3% reach; fine once)'),
+    (r"\bmakes? it easier (to|for)\b|\bhelps? you avoid\b",
+     'helper register (new Opus 5.5 tic): "makes it easier to / helps you avoid"'),
+    (r"(^|[.?!]\s+)(In practice|Instead),",
+     'stock transition (Opus 5.5 7x/8x human): "In practice, / Instead,"'),
+    (r"\bworth remembering\b",
+     'didactic aside: "worth remembering" (downgraded: hit shipped mcp-final-spec and microsoft-copilot posts)'),
+    (r"\bgold standard\b",
+     'stock idiom: "gold standard" (Gemini 4 Argon, 58x GPT-6 Astra)'),
 ]
 
 # ----------------------------------------------------------------------------
