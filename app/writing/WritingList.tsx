@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { Calendar, Clock, ArrowUpRight } from "lucide-react";
+import { tagSlug } from "@/app/lib/tags";
 
 // Tag-filtered post grid for /writing. The server HTML lists every post (crawlers and
 // no-JS readers get the full archive); the filter runs client-side and mirrors the
@@ -34,8 +35,7 @@ const fills: { bg: string; fg: string; tag: string; tagText: string }[] = [
   { bg: INK, fg: PAPER, tag: ACID, tagText: INK },
 ];
 
-export const tagSlug = (tag: string) =>
-  tag.toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+export { tagSlug };
 
 export default function WritingList({ posts }: { posts: ListPost[] }) {
   // Tags ordered by how many posts carry them.

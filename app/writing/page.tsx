@@ -6,11 +6,35 @@ import { posts } from "@/app/lib/posts-data";
 import NewsletterSignup from "@/app/components/NewsletterSignup";
 import WritingList from "./WritingList";
 import { SERIES, postsInSeries } from "@/app/lib/series";
+import WritingHeader, { type HeaderData, type HeaderVariant } from "./WritingHeaders";
 
 // Redesign palette — matches the homepage + post pages.
 const INK = "#1A1613";
 const PAPER = "#F2ECDD";
 const ACID = "#C7F03A";
+
+// Header treatment for the top of /writing: "a" masthead, "b" ink band, "c" nameplate.
+const WRITING_HEADER = "a" as HeaderVariant;
+
+const DEK = "On AI, marketing, enterprise sales, and the future of how technology gets bought and sold.";
+
+// Counts and dates for the header, computed from posts-data.ts at build time.
+function headerData(): HeaderData {
+  const counts = new Map<string, number>();
+  posts.forEach((p) => counts.set(p.tag, (counts.get(p.tag) ?? 0) + 1));
+  const topics = [...counts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+  const times = posts.map((p) => new Date(p.date).getTime()).filter((t) => !Number.isNaN(t));
+  const fmt = (t: number, month: "short" | "long") =>
+    new Date(t).toLocaleDateString("en-US", { month, year: "numeric" });
+  return {
+    dek: DEK,
+    total: posts.length,
+    topics,
+    firstMonth: fmt(Math.min(...times), "short"),
+    latestMonthLong: fmt(Math.max(...times), "long"),
+    seriesCount: SERIES.length,
+  };
+}
 
 export const metadata: Metadata = {
   title: "Writing — Christopher Dorsey",
@@ -30,6 +54,7 @@ const START_HERE = [
 ];
 
 export default function WritingIndex() {
+  const variant = WRITING_HEADER;
   const pinned = START_HERE.map((slug) => posts.find((p) => p.slug === slug)).filter(
     (p): p is (typeof posts)[number] => Boolean(p)
   );
@@ -47,26 +72,9 @@ export default function WritingIndex() {
       {/* Nav */}
       <SiteNav />
 
-      <main className="max-w-5xl mx-auto px-7 py-16">
-        {/* Header */}
-        <div className="mb-12">
-          <div
-            className="inline-block text-xs uppercase tracking-widest px-3 py-1 rounded-full mb-4 font-bold"
-            style={{ color: INK, background: ACID }}
-          >
-            Writing
-          </div>
-          <h1
-            className="font-display font-extrabold tracking-tight"
-            style={{ fontSize: "clamp(34px,5.2vw,60px)", lineHeight: 0.98, color: INK }}
-          >
-            Notes from the field.
-          </h1>
-          <p className="text-lg mt-4 max-w-2xl leading-relaxed" style={{ color: "#4a4239" }}>
-            On AI, marketing, enterprise sales, and the future of how technology gets bought and sold.
-          </p>
-        </div>
+      <WritingHeader variant={variant} data={headerData()} />
 
+      <main className={`max-w-5xl mx-auto px-7 pb-16 ${variant === "b" ? "pt-14" : "pt-2"}`}>
         {/* Start here — pinned row */}
         {pinned.length > 0 && (
           <section
@@ -130,12 +138,13 @@ export default function WritingIndex() {
         </section>
 
         {/* All posts, with tag filter chips */}
-        <h2 className="font-display font-extrabold mb-5" style={{ fontSize: "clamp(24px,3vw,32px)", color: INK }}>
+        <h2 id="every-post" className="font-display font-extrabold mb-5 scroll-mt-24" style={{ fontSize: "clamp(24px,3vw,32px)", color: INK }}>
           Every post
         </h2>
         <WritingList posts={listPosts} />
 
-        <NewsletterSignup source="writing-index" className="mt-14" />
+        {/* The ink band header carries its own signup. */}
+        {variant !== "b" && <NewsletterSignup source="writing-index" className="mt-14" />}
       </main>
     </div>
   );
