@@ -9,6 +9,7 @@ import { posts } from "@/app/writing/posts";
 import NewsletterSignup from "@/app/components/NewsletterSignup";
 import CopyLinkButton from "@/app/components/CopyLinkButton";
 import { seriesForPost } from "@/app/lib/series";
+import { findOgPost } from "@/app/lib/og/og-post";
 
 const sans  = { fontFamily: "var(--font-inter)" };
 
@@ -44,21 +45,12 @@ export async function generateMetadata({
       modifiedTime: publishedISO,
       authors: ["https://chrisdorsey.co"],
       siteName: "Chris Dorsey",
-      images: [
-        {
-          url: "/og-image.jpg",
-          width: 1200,
-          height: 630,
-          alt: post.title,
-        },
-      ],
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
       description: `${post.tldr} — Chris Dorsey, AI & MadTech Advisor & Sales Leader`,
       creator: "@chrisdorsey",
-      images: ["/og-image.jpg"],
     },
   };
 }
@@ -100,6 +92,12 @@ export default async function PostPage({
   const postUrl = `https://chrisdorsey.co/writing/${post.slug}`;
   const publishedISO = new Date(post.date).toISOString();
   const relatedPosts = posts.filter((p) => p.slug !== post.slug).slice(0, 3);
+  // Same preview the og:image/twitter:image tags use: the post's hand-made
+  // override (posts-data ogImage) or its generated opengraph-image card.
+  const ogOverride = findOgPost(post.slug)?.ogImage;
+  const previewImage = ogOverride
+    ? `https://chrisdorsey.co${ogOverride}`
+    : `${postUrl}/opengraph-image/card`;
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -114,7 +112,7 @@ export default async function PostPage({
     url: postUrl,
     articleSection: post.tag,
     keywords: [post.tag, "Christopher Dorsey", "AI", "MadTech", "GEO"].join(", "),
-    image: "https://chrisdorsey.co/og-image.jpg",
+    image: previewImage,
     inLanguage: "en-US",
     ...(post.sources?.length
       ? {
