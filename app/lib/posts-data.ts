@@ -17,6 +17,28 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "databricks-ai-index-enterprises-route-between-models",
+    title: "Most enterprises now run AI the way they ran CDNs",
+    date: "Nov 18, 2026",
+    readTime: "5 min",
+    excerpt:
+      "Databricks' new AI Index says the share of enterprises relying on one model provider fell from about 64% in July to 28% by November 2. I've sold into accounts set up like this before, at Fastly, and the job changes once the customer has a router.",
+    tag: "AI",
+    color: "from-cyan-500 to-blue-600",
+    tldr: "On November 16, Databricks published the first edition of a weekly AI Index built from model traffic at more than 10,000 companies. The share of those companies relying on a single model provider fell from about 64% in July to 28% by November 2. Anthropic's token share rose to 68.8% over the same stretch, and open-weight models went from 7.3% of tokens to 30.9%. Most coverage went to the leaderboard, but for anyone selling or renewing an AI contract, the bigger change is that most enterprise accounts now sit behind a router that can move work between vendors any week. If you sell models, report your share of each account's traffic by workload, because that's the number your buyer is already watching.",
+  },
+  {
+    slug: "gemini-tasks-shopping-agent-no-ad-slot",
+    title: "Google's free shopping agent shipped with Visa, Mastercard and no ad slot",
+    date: "Nov 18, 2026",
+    readTime: "5 min",
+    excerpt:
+      "Gemini Tasks went free on November 17 and can buy on its own under a spending cap. Amazon's text-message shopping agent can buy when a price target hits. Retail media is priced on a shopper seeing an ad, and these agents act on rules the shopper set days earlier.",
+    tag: "Future of Ads",
+    color: "from-amber-500 to-rose-600",
+    tldr: "On November 17, Google made Tasks in Gemini free to hundreds of millions of users in six countries. It can call businesses and buy products through Google's Agent Payments Protocol, with a hard spending cap and an \"Always allow\" setting that skips the confirmation step. Google's announcement doesn't mention sponsored results. Eleven days earlier, Amazon let invited US customers text its shopping agent, which can buy automatically when a product hits a price the customer set. Retail media is priced on a shopper seeing an ad, and these agents act on rules the shopper set days earlier. If you sell retail media, find out what an agent sees when it queries your catalog, and start pricing that.",
+  },
+  {
     slug: "seller-who-builds-agents-on-my-calendar",
     title: "I run eight AI agents. One of them is allowed to email my customers.",
     date: "Nov 8, 2026",

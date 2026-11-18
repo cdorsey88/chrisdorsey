@@ -1,4 +1,6 @@
 import type { Post } from "./types";
+import { post as pDAIERBM } from "./databricks-ai-index-enterprises-route-between-models";
+import { post as pGTSANAS } from "./gemini-tasks-shopping-agent-no-ad-slot";
 import { post as pSWBAOMC } from "./seller-who-builds-agents-on-my-calendar";
 import { post as pIOAFR } from "./iab-openproposal-audio-format-registry";
 import { post as pCRTMAL } from "./campsite-ranger-two-months-after-launch";
@@ -94,6 +96,8 @@ import { post as p56 } from "./selling-ai-skeptical-buyers";
 
 export type { Post } from "./types";
 export const posts: Post[] = [
+  pDAIERBM,
+  pGTSANAS,
   pSWBAOMC,
   pIOAFR,
   pCRTMAL,
