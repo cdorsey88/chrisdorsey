@@ -12,7 +12,7 @@ export const post: Post = {
     readTime: "7 min",
     tag: "Builds",
     color: "from-emerald-800 to-amber-500",
-    tldr: "Campsite Ranger launched August 27 covering 49 Colorado locations. It now covers 89 campgrounds plus permits and wilderness zones, about 600 people have accounts, and 96 have paid $25 to become Founding Rangers. Most of that growth came from two newspaper stories in early October. Our cancellation data shows 96.8% of openings were still bookable about 93 seconds after we spotted them, which is why the product sends alerts and won’t ask for your recreation.gov password. The annual membership price increases to $40 when the last four Founding Ranger spots sell, and I’m deciding at the end of February whether this is a real business. (Regardless, I’ll maintain existing functionality. I just may not keep innovating.)",
+    tldr: "Campsite Ranger launched August 27 covering 49 Colorado locations. It now covers 89 campgrounds plus permits and wilderness zones, about 600 people have accounts, and 96 have paid $25 to become Founding Rangers. Most of that growth came from two newspaper stories in early October. Our cancellation data shows 96.8% of openings were still bookable about 93 seconds after we spotted them, which is why the product sends alerts and won’t ask for your recreation.gov password. The annual membership price increases to $40 when the last four Founding Ranger spots sell, and I’m deciding at the end of February whether this is a real business. (Regardless, I’ll maintain existing functionality. I just may not keep innovating.) (Update, Nov 23: the beta ended Nov 21. One watch is still free, and membership is now $35 a year.)",
     content: (
       <div className="prose-content">
         <p>
@@ -86,7 +86,10 @@ export const post: Post = {
           When the last four Founding spots sell, the annual plan goes to $40 through December 31 and $49 after that. One watch stays free. I don’t know yet whether people who have never met me will pay $40 for what early users got for $25. Colorado’s summer booking season starts in January, and I’ve set February 28 as the day I look at the real numbers and decide whether Campsite Ranger is a business. The next cancellation report, built from more of the 89 campgrounds, should be out before then.
         </p>
         <p>
-          <A href="https://www.campsiteranger.com/memberships">Claim one of the last Founding Ranger spots</A> or set a free watch at <A href="https://www.campsiteranger.com">www.campsiteranger.com</A>.
+          <em>Update, Nov 23, 2026: the beta ended Nov 21. One watch is still free, and membership is now $35 a year.</em>
+        </p>
+        <p>
+          <A href="https://www.campsiteranger.com/memberships">See memberships</A> or set a free watch at <A href="https://www.campsiteranger.com">www.campsiteranger.com</A>.
         </p>
       </div>
     ),
