@@ -24,7 +24,7 @@ export const post: Post = {
 
         <h2>They’re right about the first part</h2>
         <p>
-          Campsite Ranger emails you when a cancellation opens up at a sold-out Colorado campsite. I built it with Claude Code on nights and weekends: more than 300 commits in seven weeks, live Aug 27. It has over 600 users now, more than 100 of them paying. I wrote up <a href="/writing/campsite-ranger-two-months-after-launch">the first two months</a>{" "}in October.
+          Campsite Ranger emails you when a cancellation opens up at a sold-out Colorado campsite. I built it with Claude Code on nights and weekends: more than 300 commits in seven weeks, live Aug 27, and more than 590 since. It has over 600 users now, more than 100 of them paying. I wrote up <a href="/writing/campsite-ranger-two-months-after-launch">the first two months</a>{" "}in October.
         </p>
         <p>
           So when a buyer says AI makes building fast, I don’t argue. It does. I’d be a hypocrite with a GitHub history.
