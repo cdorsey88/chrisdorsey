@@ -527,8 +527,11 @@ const builds = [
               <p className="text-sm leading-relaxed mb-3" style={{ color: "rgba(242,236,221,0.85)" }}>
                 A paying product, running around the clock. Campsite Ranger watches recreation.gov and emails Colorado campers a booking link the moment a sold-out campsite, timed-entry permit, or wilderness zone opens in their dates &mdash; then keeps watching wildfire, smoke, and closures so the trip is still worth the drive.
               </p>
-              <p className="text-sm leading-relaxed mb-5" style={{ color: "rgba(242,236,221,0.85)" }}>
+              <p className="text-sm leading-relaxed mb-3" style={{ color: "rgba(242,236,221,0.85)" }}>
                 I designed, built, and shipped every piece of it myself, pairing with Claude Code: 337 commits from first line to launch, in seven weeks, on nights and weekends.
+              </p>
+              <p className="text-sm leading-relaxed mb-5" style={{ color: "rgba(242,236,221,0.85)" }}>
+                When Lemon Squeezy announced it was shutting down, its affiliate program went with it, and Stripe&rsquo;s replacement doesn&rsquo;t have one. The tools on the market didn&rsquo;t fit, so I built Campsite Ranger&rsquo;s own partner program: tracked links, 25% commissions and a payout ledger in our own database that moves with us to the next checkout.
               </p>
               <a
                 href="https://coloradosun.com/2026/10/08/new-websites-helps-campers-score-top-campsites-in-colorado/"

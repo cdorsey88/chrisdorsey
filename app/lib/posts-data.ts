@@ -37,7 +37,7 @@ export const posts: PostMeta[] = [
       "A Fullcast survey found 65% of nearly 100 revenue operators had postponed a software purchase to build it with AI. I built Campsite Ranger that way, and month three was a payments migration, a privacy policy rewrite and a suspended phone account. Here is what to ask a prospect who says they will build it.",
     tag: "Builds",
     color: "from-teal-700 to-amber-500",
-    tldr: "In a July report from Fullcast, 65% of nearly 100 senior revenue operators said they had postponed a software purchase because they thought they could build it faster with AI. They’re half right. I built Campsite Ranger with Claude Code in seven weeks of nights and weekends, and the build was the cheap part. Month three has been a payments migration, a privacy policy rewrite and a suspended phone account. If a prospect tells you they’ll build it, ask who owns it in month three.",
+    tldr: "In a July report from Fullcast, 65% of nearly 100 senior revenue operators said they had postponed a software purchase because they thought they could build it faster with AI. They’re half right. I built Campsite Ranger with Claude Code in seven weeks of nights and weekends, and the build was the cheap part. Month three has been a payments migration, a privacy policy rewrite and a suspended phone account. It’s also why I built my own affiliate program when Lemon Squeezy’s went away. If a prospect tells you they’ll build it, ask who owns it in month three.",
   },
   {
     slug: "cyber-week-agent-influenced-sales-uncounted",

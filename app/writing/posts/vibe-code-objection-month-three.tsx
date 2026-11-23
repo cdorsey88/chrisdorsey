@@ -12,7 +12,7 @@ export const post: Post = {
     readTime: "3 min",
     tag: "Builds",
     color: "from-teal-700 to-amber-500",
-    tldr: "In a July report from Fullcast, 65% of nearly 100 senior revenue operators said they had postponed a software purchase because they thought they could build it faster with AI. They’re half right. I built Campsite Ranger with Claude Code in seven weeks of nights and weekends, and the build was the cheap part. Month three has been a payments migration, a privacy policy rewrite and a suspended phone account. If a prospect tells you they’ll build it, ask who owns it in month three.",
+    tldr: "In a July report from Fullcast, 65% of nearly 100 senior revenue operators said they had postponed a software purchase because they thought they could build it faster with AI. They’re half right. I built Campsite Ranger with Claude Code in seven weeks of nights and weekends, and the build was the cheap part. Month three has been a payments migration, a privacy policy rewrite and a suspended phone account. It’s also why I built my own affiliate program when Lemon Squeezy’s went away. If a prospect tells you they’ll build it, ask who owns it in month three.",
     content: (
       <div className="prose-content">
         <p>
@@ -57,6 +57,9 @@ export const post: Post = {
           Some of it should be built. Lead scoring on your own data, routing rules, an internal tool three people use. A seller who says so earns the right to be believed about the rest.
         </p>
         <p>
+          I took that advice myself the day Lemon Squeezy said it was closing. It also ran my affiliate program, and Stripe Managed Payments, where Lemon Squeezy is sending its sellers, <A href="https://techstartups.com/?p=140481">has no affiliate management</A>. The add-on tools I looked at didn’t fit how Campsite Ranger sells, so I built a <A href="https://www.campsiteranger.com/partners">partner program</A>{" "}into the product. Creators get their own link and 25% of what the buyer pays, and every commission sits in my own database, so it moves with me when checkout does. It runs on my own customers, and I’m the named owner.
+        </p>
+        <p>
           Campsite Ranger is worth maintaining because it’s the product. For most of your buyers, the thing they’re tempted to build is a tool next to the product. Ask them which one it is.
         </p>
         <p>
@@ -68,5 +71,6 @@ export const post: Post = {
       { title: "Fullcast: Builder, Buyer, or Both? How RevOps leaders are navigating build vs. buy in the age of AI (July 2026 report)", url: "https://www.fullcast.com/ebooks/builder-buyer-both-ebook/" },
       { title: "GTM Alliance: The vibe-coding question every GTM stack now has to answer (Oct 28, 2026, marked sponsored)", url: "https://www.gotomarketalliance.com/the-vibe-coding-question-every-gtm-stack-now-has-to-answer/" },
       { title: "Lemon Squeezy: Saying goodbye to Lemon Squeezy (Nov 2026)", url: "https://www.lemonsqueezy.com/blog/saying-goodbye-to-lemon-squeezy" },
+      { title: "TechStartups: Stripe shuts down Lemon Squeezy two years after acquisition; Managed Payments lacks affiliate management (Nov 2026)", url: "https://techstartups.com/?p=140481" },
     ],
 };
