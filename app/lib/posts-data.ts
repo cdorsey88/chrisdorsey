@@ -17,6 +17,42 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "cyber-week-agent-influenced-sales-uncounted",
+    title: "Salesforce says AI and agents will influence $75.8 billion of Cyber Week. It doesn't say how many orders an agent paid for.",
+    date: "Nov 23, 2026",
+    readTime: "4 min",
+    excerpt:
+      "Salesforce expects AI and agents to influence $75.8 billion of Cyber Week sales, but neither its forecast nor Adobe's gives a count of orders an agent completed. Amazon's shopping agent keeps its own purchases ad-free, so the split between those orders and the rest decides how much holiday inventory can carry an ad.",
+    tag: "Retail Media",
+    color: "from-rose-500 to-orange-500",
+    tldr: "Salesforce forecasts that AI and agents will influence $75.8 billion of Cyber Week sales, 21% of a $357 billion global total, and that AI-driven traffic to retailer sites will rise 104%. The forecast doesn't say how that influence is measured or how many orders an agent completed. Talkdesk surveyed 1,048 US holiday shoppers in September: 74% plan to use AI assistants, and 15% would let an agent buy with their payment details, or 10% if there's no review step. Amazon's shopping agent shows sponsored products among the options it texts back, and Digiday reports that purchases the agent makes on its own will stay ad-free. So the number that decides how much holiday inventory can carry an ad is the share of orders an agent completes, and neither forecast publishes it. Cyber Monday is November 30, so check whether either company's results count it.",
+    series: "agents-in-the-funnel",
+  },
+  {
+    slug: "ads-mcp-servers-agent-permissions",
+    title: "Amazon and Meta let an AI agent create ad campaigns. Google's server can't touch a budget.",
+    date: "Nov 23, 2026",
+    readTime: "3 min",
+    excerpt:
+      "Amazon's and Meta's MCP servers let an AI agent create, edit and delete campaigns. Google's can read reports and create assets and labels, and it can't create a campaign or change a budget or a bid.",
+    tag: "Future of Ads",
+    color: "from-indigo-500 to-violet-600",
+    tldr: "Amazon opened its Ads MCP server to partners in open beta on February 2, and an agent connected to it can create, update and delete campaigns and pull billing data. Meta's server launched on July 16 with the same kind of access to campaigns, ad sets and ads, plus rules an advertiser can set to limit what an agent may touch. Google's documentation, last updated on November 19, says its server can read reports and create assets and labels, and that it can't create or change a campaign, budget or bid. It's the same protocol with three different answers to how much a buyer's agent gets to do. Whichever platform an advertiser's agent connects to decides what's left for a person on the account. Google's docs are at version 0.0.6, so check whether the next one lets an agent near a budget.",
+    series: "agents-in-the-funnel",
+  },
+  {
+    slug: "iab-artf-patch-log-stays-with-host",
+    title: "The IAB's agent auction standard has an audit log, and the spec only promises it inside the platform running the agent",
+    date: "Nov 23, 2026",
+    readTime: "4 min",
+    excerpt:
+      "IAB Tech Lab's standard for AI agents inside the ad auction logs every change an agent proposes, and its audit language for the auction scopes that log to the platform hosting the agent. The spec doesn't use the words liability, accountability or attestation.",
+    tag: "Future of Ads",
+    color: "from-slate-700 to-sky-600",
+    tldr: "IAB Tech Lab declared version 1.0 of its Agentic RTB Framework final on August 12. It puts third-party agents, packaged as containers, inside an exchange's or ad platform's own environment to propose changes to bid requests and responses. The platform that hosts the agent decides which fields it sees and which changes to accept, and the spec says each change is logged for auditability within that platform's environment. I searched the full text of the spec, and it doesn't use the words liability, accountability or attestation. A technical spec isn't a contract, so the question moves to the contract. If you buy or sell through a platform that hosts agents, ask who can read the patch log.",
+    series: "agents-in-the-funnel",
+  },
+  {
     slug: "databricks-ai-index-enterprises-route-between-models",
     title: "Most enterprises now run AI the way they ran CDNs",
     date: "Nov 18, 2026",

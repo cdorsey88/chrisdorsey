@@ -1,4 +1,7 @@
 import type { Post } from "./types";
+import { post as pCWAISU } from "./cyber-week-agent-influenced-sales-uncounted";
+import { post as pAMSAP } from "./ads-mcp-servers-agent-permissions";
+import { post as pIAPLSWH } from "./iab-artf-patch-log-stays-with-host";
 import { post as pDAIERBM } from "./databricks-ai-index-enterprises-route-between-models";
 import { post as pGTSANAS } from "./gemini-tasks-shopping-agent-no-ad-slot";
 import { post as pSWBAOMC } from "./seller-who-builds-agents-on-my-calendar";
@@ -96,6 +99,9 @@ import { post as p56 } from "./selling-ai-skeptical-buyers";
 
 export type { Post } from "./types";
 export const posts: Post[] = [
+  pCWAISU,
+  pAMSAP,
+  pIAPLSWH,
   pDAIERBM,
   pGTSANAS,
   pSWBAOMC,
