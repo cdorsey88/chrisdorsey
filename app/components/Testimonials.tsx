@@ -108,19 +108,22 @@ export default function Testimonials({ featured = false }: { featured?: boolean 
               className="inline-flex items-center gap-1.5 font-semibold px-6 py-3 rounded-full lift self-start"
               style={{ background: INK, color: PAPER, border: `2px solid ${INK}` }}
             >
-              More on /about <span aria-hidden="true">→</span>
+              More references <span aria-hidden="true">→</span>
             </Link>
           )}
-          <a
-            href="https://www.linkedin.com/in/cdorsey/details/recommendations/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 font-semibold hover:opacity-70 transition-opacity"
-            style={{ color: INK }}
-          >
-            See more from clients, executive leaders, and cross-functional colleagues
-            <span aria-hidden="true">→</span>
-          </a>
+          {/* Homepage keeps one link (the rest live on /about); /about keeps the LinkedIn link. */}
+          {!featured && (
+            <a
+              href="https://www.linkedin.com/in/cdorsey/details/recommendations/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 font-semibold hover:opacity-70 transition-opacity"
+              style={{ color: INK }}
+            >
+              See more from clients, executive leaders, and cross-functional colleagues
+              <span aria-hidden="true">→</span>
+            </a>
+          )}
         </div>
       </div>
     </section>

@@ -5,6 +5,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import AnalyticsEvents from "@/app/components/AnalyticsEvents";
 import "./globals.css";
 import { CONTACT_EMAIL } from "@/app/lib/site-config";
+import { FAQ } from "@/app/lib/faq";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -101,7 +102,7 @@ const jsonLd = {
         "Enterprise sales leader who takes first-to-market AI and MadTech products to Fortune 500 buyers, often before a budget line exists for them. 16 years across agency creative, data, and enterprise SaaS, including agentic AI customer acquisition and edge infrastructure.",
       url: "https://chrisdorsey.co/",
       email: `mailto:${CONTACT_EMAIL}`,
-      jobTitle: ["Enterprise Sales Leader", "AI Go-To-Market Leader", "Startup Advisor", "Sales Strategy Advisor"],
+      jobTitle: ["Enterprise Sales Leader", "AI Go-To-Market Leader"],
       knowsAbout: [
         "AI Go-To-Market Strategy",
         "Enterprise Sales",
@@ -180,48 +181,13 @@ const jsonLd = {
     {
       "@type": "FAQPage",
       "@id": "https://chrisdorsey.co/#faq",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "What does Chris Dorsey do?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Chris Dorsey is an enterprise sales leader who sells first-to-market AI and MadTech (marketing and advertising technology), usually before buyers have a budget line for it. Across 16 years he has been the first seller in the building twice, sold three categories before budgets existed for them, and closed Fortune 500 accounts, from agency creative at Crispin Porter + Bogusky to data at Oracle Advertising, edge infrastructure at Fastly, and AI customer acquisition at Zeta Global. He also builds with AI: Campsite Ranger, a paid product he shipped solo, has over 600 users, more than 100 of them paying.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Who does Chris work with, and who can he introduce you to?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Chris is a connector. After 16 years across four industries he knows Fortune 500 CMOs, AI founders, data leaders, investors, agency executives, and engineers and product managers. Tell him what you are trying to do and odds are he already knows who you should be talking to. He makes introductions freely — no fee, no catch.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Is Chris Dorsey available for roles or advisory?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "He is always open to the right conversation, especially Senior Account Executive, Account Director, Sales Director or Client Lead seats at AI-native companies. He also advises startups taking a first product to market, and he responds to every note personally.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Where is Chris Dorsey based?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Chris is based in Denver, Colorado, and works remotely or hybrid across the United States.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "What industries does Chris cover?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "AI go-to-market, data, and MadTech (marketing and advertising technology), with deep roots in enterprise SaaS, retail media, AdTech, and agency creative. He has sold through every major marketing shift — broadcast, digital, social, programmatic, data, AI, and now agents — which is what lets him spot what is actually changing before everyone else catches up.",
-          },
-        },
-      ],
+      url: "https://chrisdorsey.co/about#faq",
+      // Same items /about shows as visible copy. Edit them in app/lib/faq.ts.
+      mainEntity: FAQ.map(({ q, a }) => ({
+        "@type": "Question",
+        name: q,
+        acceptedAnswer: { "@type": "Answer", text: a },
+      })),
     },
   ],
 };

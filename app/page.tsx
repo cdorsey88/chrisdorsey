@@ -12,7 +12,7 @@ import SiteFooter from "@/app/components/SiteFooter";
 
 // Homepage, cut to six sections (Nov 2026): hero, Campsite Ranger band, proof strip,
 // latest writing, references, contact. About, the career timeline, the keyword ticker,
-// Off the clock and the connector hub moved to /about; the Builds section moved to /builds.
+// Off the clock and the connector hub moved to /about; the Builds section (including Soundcheck) moved to /builds.
 
 // Layered-range mark — three ridges (blue, teal, ink). Layers rise on load, drift on hover.
 const MountainMark = ({ size = 48 }: { size?: number }) => (
@@ -76,7 +76,7 @@ function ScrollProgress() {
    Stats render their final values in server HTML; the count-up runs client-side.
 --------------------------------------------------------------------------- */
 const bandStats: { num?: number; suffix?: string; text?: string; label: string }[] = [
-  { num: 124, suffix: "%", label: "Quota attainment across my second Oracle Advertising stint" },
+  { num: 124, suffix: "%", label: "Quota attainment after Oracle Advertising hired me back" },
   { num: 108, suffix: "%", label: "Net revenue retention at Fastly, selling on usage" },
   { num: 60, suffix: "%", label: "Book growth in one year at Oracle Advertising" },
   { text: "#1", label: "US pharma seller at Oracle Advertising" },
@@ -377,54 +377,6 @@ export default function ChrisDorseySite() {
             >
               See it live <ArrowUpRight className="w-4 h-4" />
             </a>
-          </div>
-        </aside>
-
-        {/* Soundcheck band — sits directly under the Campsite Ranger band */}
-        <aside
-          aria-label="Soundcheck build"
-          className="px-7 py-4 md:py-5"
-          style={{ background: VIOLET, color: PAPER, borderBottom: `3px solid ${INK}` }}
-        >
-          <div className="max-w-6xl mx-auto flex flex-wrap items-center gap-5 md:gap-6">
-            <Link
-              href="/writing/soundcheck-audio-brand-qa"
-              aria-label="Soundcheck: read how I built it"
-              className="shrink-0 block rounded-[10px] transition-transform hover:-translate-y-1"
-              style={{ width: 165, height: 100, background: PAPER, border: `3px solid ${INK}`, boxShadow: `5px 5px 0 ${INK}`, transform: "rotate(1.5deg)" }}
-            >
-              <svg viewBox="0 0 165 100" width="100%" height="100%" aria-hidden="true">
-                {[10, 22, 34, 18, 46, 62, 40, 70, 52, 30, 56, 38, 20, 44, 26, 14].map((h, i) => (
-                  <rect key={i} x={12 + i * 9.2} y={50 - h / 2} width={5} height={h} rx={2.5} fill={i === 7 ? "#E5484D" : INK} />
-                ))}
-              </svg>
-            </Link>
-            <div className="flex-1" style={{ minWidth: 260 }}>
-              <span
-                className="inline-block text-xs uppercase tracking-widest font-bold px-3 py-1 rounded-full mb-2"
-                style={{ background: PAPER, color: INK }}
-              >
-                MVP · built in August
-              </span>
-              <p className="font-display font-extrabold leading-tight mb-1" style={{ fontSize: "clamp(19px,2.2vw,22px)" }}>
-                Soundcheck listens to AI-generated audio ads before they air.
-              </p>
-              <p className="leading-snug" style={{ fontSize: 15, color: "rgba(242,236,221,0.9)" }}>
-                On its first live run it flagged 5 of 12 spots in a simulated campaign. My comments on the IAB&rsquo;s
-                agent-buying spec led to changes in an open pull request on how audio ads record voice and provenance.
-                <br />
-                <Link href="/writing/iab-openproposal-audio-format-registry" className="font-semibold underline underline-offset-2 whitespace-nowrap">
-                  The IAB comment
-                </Link>
-              </p>
-            </div>
-            <Link
-              href="/writing/soundcheck-audio-brand-qa"
-              className="inline-flex items-center gap-1.5 font-semibold rounded-full lift shrink-0"
-              style={{ fontSize: 15, padding: "12px 21px", background: PAPER, color: INK, border: `2px solid ${INK}` }}
-            >
-              How I built it <ArrowUpRight className="w-4 h-4" />
-            </Link>
           </div>
         </aside>
 

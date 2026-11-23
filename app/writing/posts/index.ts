@@ -1,4 +1,6 @@
 import type { Post } from "./types";
+import { post as pCSRAP } from "./cio-stop-rules-ai-pilots";
+import { post as pVCOMT } from "./vibe-code-objection-month-three";
 import { post as pCWAISU } from "./cyber-week-agent-influenced-sales-uncounted";
 import { post as pAMSAP } from "./ads-mcp-servers-agent-permissions";
 import { post as pIAPLSWH } from "./iab-artf-patch-log-stays-with-host";
@@ -99,6 +101,8 @@ import { post as p56 } from "./selling-ai-skeptical-buyers";
 
 export type { Post } from "./types";
 export const posts: Post[] = [
+  pCSRAP,
+  pVCOMT,
   pCWAISU,
   pAMSAP,
   pIAPLSWH,

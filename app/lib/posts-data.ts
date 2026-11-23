@@ -17,6 +17,29 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "cio-stop-rules-ai-pilots",
+    series: "before-the-budget-line",
+    title: "Only 31% of CIOs have a rule for killing an AI pilot. Sellers should bring one.",
+    date: "Nov 23, 2026",
+    readTime: "3 min",
+    excerpt:
+      "Gartner surveyed 2,002 CIOs and found only 31% have guidelines for when an AI pilot should not move to production. A pilot with no way to fail also has no way to win, and it sits in your forecast the whole time. Here is the one-page stop rule I would bring to the buyer.",
+    tag: "Sales",
+    color: "from-blue-700 to-cyan-500",
+    tldr: "Gartner surveyed 2,002 CIOs and technology executives. Only 13% say AI has delivered significant or transformational value so far, and only 31% have guidelines for when a pilot should not move to production. Just 17% have rules for pulling AI that’s already live. A pilot with no way to fail also has no way to win, and it sits in your forecast the whole time. A separate HFS Research and Rackspace survey found AI embedded in standard operations met its business case twice as often as AI spread across several functions. If you sell AI, write the stop rule with your buyer before the pilot starts.",
+  },
+  {
+    slug: "vibe-code-objection-month-three",
+    title: "Your prospect thinks they can vibe-code your product. Here's month three of mine.",
+    date: "Nov 23, 2026",
+    readTime: "3 min",
+    excerpt:
+      "A Fullcast survey found 65% of nearly 100 revenue operators had postponed a software purchase to build it with AI. I built Campsite Ranger that way, and month three was a payments migration, a privacy policy rewrite and a suspended phone account. Here is what to ask a prospect who says they will build it.",
+    tag: "Builds",
+    color: "from-teal-700 to-amber-500",
+    tldr: "In a July report from Fullcast, 65% of nearly 100 senior revenue operators said they had postponed a software purchase because they thought they could build it faster with AI. They’re half right. I built Campsite Ranger with Claude Code in seven weeks of nights and weekends, and the build was the cheap part. Month three has been a payments migration, a privacy policy rewrite and a suspended phone account. If a prospect tells you they’ll build it, ask who owns it in month three.",
+  },
+  {
     slug: "cyber-week-agent-influenced-sales-uncounted",
     title: "Salesforce says AI and agents will influence $75.8 billion of Cyber Week. It doesn't say how many orders an agent paid for.",
     date: "Nov 23, 2026",

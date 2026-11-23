@@ -483,14 +483,19 @@ const builds = [
     proofText: "Built, live-tested, and in daily use.",
     proofUrl: null as string | null,
     proofLabel: null as string | null,
+    extraUrl: null as string | null,
+    extraLabel: null as string | null,
   },
   {
     title: "Soundcheck — brand QA for AI-generated audio ads",
     stack: "ElevenLabs Voice Design · TTS · Music · SFX · Dubbing · Scribe v2 · Python",
-    desc: "An MVP I built using six ElevenLabs APIs. It turns a brand's guidelines into a machine-readable standard, generates a 12-spot, four-market campaign, then checks every render for script fidelity, pronunciation, pace, loudness, required disclosures, and voice drift, and prices each miss against the media plan. On the live run it flagged 5 of 12 spots, $1.82M of a simulated $2.8M plan, and caught a mispronounced founder name nobody had planted. As far as I can find, no vendor sells this for audio yet; the brand-compliance tools score pixels.",
+    desc: "An MVP I built using six ElevenLabs APIs. It turns a brand's guidelines into a machine-readable standard, generates a 12-spot, four-market campaign, then checks every render for script fidelity, pronunciation, pace, loudness, required disclosures, and voice drift, and prices each miss against the media plan. On the live run it flagged 5 of 12 spots, $1.82M of a simulated $2.8M plan, and caught a mispronounced founder name nobody had planted. As far as I can find, no vendor sells this for audio yet; the brand-compliance tools score pixels. My comments on the IAB’s agent-buying spec led to changes in an open pull request on how audio ads record voice and provenance.",
     proofText: "MVP. Live run verified Aug 2026.",
     proofUrl: "/writing/soundcheck-audio-brand-qa" as string | null,
     proofLabel: "Read the write-up" as string | null,
+    // Moved here from the homepage Soundcheck band (Nov 2026 reorg).
+    extraUrl: "/writing/iab-openproposal-audio-format-registry" as string | null,
+    extraLabel: "The IAB comment" as string | null,
   },
 ];
 
@@ -614,6 +619,15 @@ const builds = [
                     style={{ color: t.accent }}
                   >
                     {build.proofLabel} <ArrowUpRight className="w-3.5 h-3.5" />
+                  </a>
+                )}
+                {build.extraUrl && (
+                  <a
+                    href={build.extraUrl}
+                    className="inline-flex items-center gap-1 text-sm font-semibold mb-4"
+                    style={{ color: t.accent }}
+                  >
+                    {build.extraLabel} <ArrowUpRight className="w-3.5 h-3.5" />
                   </a>
                 )}
                 <div className="text-xs font-mono rounded-lg px-3 py-2 inline-block mt-auto" style={{ color: t.chipFg, background: t.chip }}>

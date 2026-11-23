@@ -6,11 +6,13 @@ import SiteFooter from "@/app/components/SiteFooter";
 import Testimonials from "@/app/components/Testimonials";
 import { AboutStory, CareerEras, ConnectorHub, EvolutionMarquee, OffTheClock } from "@/app/components/ProfileSections";
 import { SHOW_TESTIMONIALS } from "@/app/lib/site-config";
+import { FAQ } from "@/app/lib/faq";
 
 const INK = "#1A1613";
 const PAPER = "#F2ECDD";
 const CREAM2 = "#E7DEC8";
 const TEAL = "#0E9F86";
+const ACID = "#C7F03A";
 
 const DESCRIPTION =
   "Chris Dorsey is a Denver enterprise seller who has spent 16 years taking first-to-market AI and MadTech to Fortune 500 buyers, from CP+B to Oracle Advertising and Zeta Global. The full story and career timeline, plus references from clients and managers.";
@@ -62,6 +64,26 @@ export default function AboutPage() {
         </section>
 
         {SHOW_TESTIMONIALS && <Testimonials />}
+
+        {/* FAQ — visible copy for the FAQPage JSON-LD in app/layout.tsx. Edit in app/lib/faq.ts. */}
+        <section id="faq" aria-labelledby="faq-heading" className="px-7 pb-16">
+          <div className="max-w-3xl mx-auto">
+            <div className="inline-block text-xs uppercase tracking-widest px-3 py-1 rounded-full mb-4 font-bold" style={{ color: INK, background: ACID }}>
+              FAQ
+            </div>
+            <h2 id="faq-heading" className="font-display font-extrabold tracking-tight mb-8" style={{ fontSize: "clamp(28px,4vw,44px)", lineHeight: 1.05, color: INK }}>
+              Quick answers.
+            </h2>
+            <dl>
+              {FAQ.map(({ q, a }) => (
+                <div key={q} className="py-5" style={{ borderTop: `2px solid ${INK}` }}>
+                  <dt className="font-display font-bold text-lg mb-2" style={{ color: INK }}>{q}</dt>
+                  <dd className="leading-relaxed" style={{ color: "#3a332c", maxWidth: "65ch" }}>{a}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </section>
 
         {/* Work with me */}
         <section className="px-7 pb-16">

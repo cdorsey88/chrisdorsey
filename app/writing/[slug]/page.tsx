@@ -200,7 +200,7 @@ export default async function PostPage({
             />
             <div>
               <p className="text-sm font-semibold" style={{ color: INK }}>Christopher Dorsey</p>
-              <p className="text-xs" style={{ color: "#6a6258" }}>AI &amp; MadTech Advisor · Enterprise Sales Leader</p>
+              <p className="text-xs" style={{ color: "#6a6258" }}>Enterprise seller of what buyers don&apos;t have a budget for yet · AI-native builder with a paid product</p>
             </div>
           </div>
           {/* Icon-only share bar */}
@@ -449,7 +449,7 @@ export default async function PostPage({
               Get in touch
             </Link>
             <Link
-              href="/#writing"
+              href="/writing"
               className="text-sm px-5 py-2.5 rounded-full transition font-semibold"
               style={{ border: `2px solid ${INK}`, color: INK }}
             >
