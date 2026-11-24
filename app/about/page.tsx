@@ -41,10 +41,24 @@ const aboutJsonLd = {
   isPartOf: { "@id": "https://chrisdorsey.co/#website" },
 };
 
+// FAQPage markup lives here, on the page that shows the same items as visible copy.
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://chrisdorsey.co/about#faq",
+  url: "https://chrisdorsey.co/about#faq",
+  mainEntity: FAQ.map(({ q, a }) => ({
+    "@type": "Question",
+    name: q,
+    acceptedAnswer: { "@type": "Answer", text: a },
+  })),
+};
+
 export default function AboutPage() {
   return (
     <div className="min-h-screen relative overflow-x-hidden grain-overlay" style={{ background: PAPER, color: INK, fontFamily: "var(--font-inter)" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <SiteNav />
 
       <main>

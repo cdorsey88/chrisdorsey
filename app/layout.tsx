@@ -5,7 +5,6 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import AnalyticsEvents from "@/app/components/AnalyticsEvents";
 import "./globals.css";
 import { CONTACT_EMAIL } from "@/app/lib/site-config";
-import { FAQ } from "@/app/lib/faq";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -177,17 +176,6 @@ const jsonLd = {
       author: { "@id": "https://chrisdorsey.co/#person" },
       publisher: { "@id": "https://chrisdorsey.co/#person" },
       url: "https://chrisdorsey.co/writing",
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://chrisdorsey.co/#faq",
-      url: "https://chrisdorsey.co/about#faq",
-      // Same items /about shows as visible copy. Edit them in app/lib/faq.ts.
-      mainEntity: FAQ.map(({ q, a }) => ({
-        "@type": "Question",
-        name: q,
-        acceptedAnswer: { "@type": "Answer", text: a },
-      })),
     },
   ],
 };

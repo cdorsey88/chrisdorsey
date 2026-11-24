@@ -31,14 +31,14 @@ export async function generateMetadata({
   const publishedISO = new Date(post.date).toISOString();
   return {
     title: `${post.title} — Chris Dorsey`,
-    description: `${post.tldr} — Chris Dorsey, AI & MadTech Advisor & Sales Leader`,
+    description: `${post.tldr} — Chris Dorsey, enterprise seller and AI-native builder`,
     authors: [{ name: "Christopher Dorsey", url: "https://chrisdorsey.co" }],
     alternates: {
       canonical: postUrl,
     },
     openGraph: {
       title: post.title,
-      description: `${post.tldr} — Chris Dorsey, AI & MadTech Advisor & Sales Leader`,
+      description: `${post.tldr} — Chris Dorsey, enterprise seller and AI-native builder`,
       url: postUrl,
       type: "article",
       publishedTime: publishedISO,
@@ -49,7 +49,7 @@ export async function generateMetadata({
     twitter: {
       card: "summary_large_image",
       title: post.title,
-      description: `${post.tldr} — Chris Dorsey, AI & MadTech Advisor & Sales Leader`,
+      description: `${post.tldr} — Chris Dorsey, enterprise seller and AI-native builder`,
       creator: "@chrisdorsey",
     },
   };
