@@ -34,7 +34,7 @@ export const post: Post = {
         If an agent opens a message in its own browser and follows the link to check it, the open and the click get logged the same way a person&rsquo;s would. That is an inference, and no vendor has confirmed it, but it is the mechanism sellers should assume. A sequence that reports a 45% open rate and a 6% click rate may be reporting how many of its recipients run an agent. Meanwhile the reply rate could drop, because an agent that summarizes for its owner has no reason to answer a stranger.
       </p>
       <p>
-        At Zeta and Oracle I sold into marketing teams that judged a program on those top-of-funnel numbers, and I watched what happened when Apple&rsquo;s mail privacy change inflated opens. Teams kept optimizing subject lines against a number that had stopped measuring people. Agents can do the same thing again, at larger scale.
+        At Zeta and Oracle Advertising I sold into marketing teams that judged a program on those top-of-funnel numbers, and I watched what happened when Apple&rsquo;s mail privacy change inflated opens. Teams kept optimizing subject lines against a number that had stopped measuring people. Agents can do the same thing again, at larger scale.
       </p>
 
       <h2>A first email that survives a summary</h2>

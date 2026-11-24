@@ -25,7 +25,7 @@ export const post: Post = {
           Now look at what these three just did. ZoomInfo hands verified records to a rep inside Claude who never visits a ZoomInfo screen. Clay&rsquo;s ops-built workflows fire from ChatGPT, with permissioning and credit budgets, so the rep never touches the table view. Gong&rsquo;s insight surfaces inside Copilot and Teams. In each case the vendor kept the data and the workflow logic and gave up the interface. Voluntarily, and from strength: Gong is past $500 million in ARR and growing more than 55% a year. This is the strongest player in its category choosing the channel, not a struggling one grasping for distribution.
         </p>
         <p>
-          I sold data at Oracle for years, into Amazon, J&amp;J and PepsiCo, and one lesson from that era holds up: the data products that grew were the ones that showed up where the buyer already worked. The ones that made you come to their dashboard got politely admired and then unplugged. A UI is a rental. Records, signals and workflow logic are the asset, and the sales-tech incumbents just repriced themselves accordingly.
+          I sold data at Oracle Advertising for years, into Amazon, J&amp;J and PepsiCo, and one lesson from that era holds up: the data products that grew were the ones that showed up where the buyer already worked. The ones that made you come to their dashboard got politely admired and then unplugged. A UI is a rental. Records, signals and workflow logic are the asset, and the sales-tech incumbents just repriced themselves accordingly.
         </p>
         <h2>The purchase is moving inside the Microsoft agreement</h2>
         <p>

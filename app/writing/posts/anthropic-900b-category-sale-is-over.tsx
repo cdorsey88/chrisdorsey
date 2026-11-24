@@ -22,7 +22,7 @@ export const post: Post = {
           The enterprise AI sale &mdash; the one where you were creating category urgency, helping buyers understand why they couldn&apos;t afford to wait &mdash; is over. Your buyers made up their minds. The question now is whether you&apos;ve updated your pitch.
         </p>
         <p>
-          I started my career at Crispin Porter + Bogusky when digital was the emerging channel nobody had a budget line for. Then I was at Oracle when mobile changed how enterprise buyers researched vendors. Then at Zeta when AI-powered acquisition was new enough that I had to explain what a model was before I could get to the demo. The pattern is always the same: there&apos;s a window where early category framing is the job, and then the window closes and the job becomes something else. Most sellers miss the transition.
+          I started my career at Crispin Porter + Bogusky when digital was the emerging channel nobody had a budget line for. Then I was at Oracle Advertising when mobile changed how enterprise buyers researched vendors. Then at Zeta when AI-powered acquisition was new enough that I had to explain what a model was before I could get to the demo. The pattern is always the same: there&apos;s a window where early category framing is the job, and then the window closes and the job becomes something else. Most sellers miss the transition.
         </p>
         <p>
           The window on &ldquo;AI is coming, you should get ready&rdquo; closed sometime in the last six months. Here&apos;s what replaced it.

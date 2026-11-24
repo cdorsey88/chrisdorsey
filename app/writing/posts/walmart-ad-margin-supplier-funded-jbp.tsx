@@ -24,7 +24,7 @@ export const post: Post = {
         </p>
         <h2>A commitment a CFO forecasts is a commitment with a price</h2>
         <p>
-          I spent years at Zeta and Oracle selling data and media products into the same brand teams that write these retailer checks, and the framing I heard in almost every account was some version of &ldquo;that&rsquo;s the cost of doing business with them.&rdquo; Retail media budgets got treated like slotting fees with a dashboard: a toll you pay to keep the shelf, negotiated by whoever owns the account, and largely fenced off from the rest of the marketing conversation.
+          I spent years at Zeta and Oracle Advertising selling data and media products into the same brand teams that write these retailer checks, and the framing I heard in almost every account was some version of &ldquo;that&rsquo;s the cost of doing business with them.&rdquo; Retail media budgets got treated like slotting fees with a dashboard: a toll you pay to keep the shelf, negotiated by whoever owns the account, and largely fenced off from the rest of the marketing conversation.
         </p>
         <p>
           That framing made sense when the retailer&rsquo;s ad business was a rounding error. It fits worse each quarter. When a segment throws off 70% gross margins and analysts think it accounts for a third of operating income, the retailer&rsquo;s finance organization is modeling your commitment, sizing it, and telling public investors it will keep growing. Walmart&rsquo;s ad business is small against $713 billion in annual sales and enormous against the company&rsquo;s profit.

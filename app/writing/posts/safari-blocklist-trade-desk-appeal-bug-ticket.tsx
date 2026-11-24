@@ -29,7 +29,7 @@ export const post: Post = {
 
       <h2>Ad tech contracts assume the browser will load the vendor</h2>
       <p>
-        At Oracle and Zeta I sold products that ran on identity and data signals. Buyers pushed hard on match rates, data sources and price. A browser refusing to load the vendor&rsquo;s domain wasn&rsquo;t a scenario anyone priced, because it had not happened at this scale to a company this size.
+        At Oracle Advertising and Zeta I sold products that ran on identity and data signals. Buyers pushed hard on match rates, data sources and price. A browser refusing to load the vendor&rsquo;s domain wasn&rsquo;t a scenario anyone priced, because it had not happened at this scale to a company this size.
       </p>
       <p>
         It has now, and it belongs in the next renewal. Ask each vendor which of its domains handle delivery and which handle identity, and whether those are separate. Ask which calls can run server-side today, through Trusted Server, Prebid Server or the vendor&rsquo;s own setup. Ask what its Safari fill rate did the week of September 14, and what the contract says about service levels when a browser blocks delivery. If you sell ad tech, have those answers ready before the buyer asks, because the buyer reading this week&rsquo;s trade press is about to.

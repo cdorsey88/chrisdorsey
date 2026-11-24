@@ -38,7 +38,7 @@ export const post: Post = {
       </p>
       <h2>Claude Code wrote most of the code. The business was still the hard part.</h2>
       <p>
-        I&rsquo;ve spent fifteen years selling technology other people built: agency work at Crispin Porter + Bogusky, data at Oracle, edge infrastructure at Fastly, an AI acquisition product at Zeta. There was always an engineering team on the other side of the wall. This time there was a terminal.
+        I&rsquo;ve spent fifteen years selling technology other people built: agency work at Crispin Porter + Bogusky, data at Oracle Advertising, edge infrastructure at Fastly, an AI acquisition product at Zeta. There was always an engineering team on the other side of the wall. This time there was a terminal.
       </p>
       <p>
         The loop was plain. I described what should exist, Claude Code wrote it, I read it, tested it, and shipped it or sent it back. It carried the syntax, the boilerplate, and most of the debugging. It couldn&rsquo;t carry any of the deciding. Which 49 locations out of hundreds. What an alert says at 6 a.m. so a groggy human taps the right link. What to cut, which was most things. What it costs. I was the product manager, the designer, the QA team, and the guy the QA team escalates to.

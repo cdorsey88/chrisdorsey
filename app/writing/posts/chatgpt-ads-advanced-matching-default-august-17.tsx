@@ -33,7 +33,7 @@ export const post: Post = {
         </p>
         <h2>Ten days versus a privacy review</h2>
         <p>
-          At Oracle and Zeta I spent a good part of my life waiting on the other side of this exact process. A change to what customer data a tag collects goes to privacy, then to security, then to whoever owns the data processing agreement, and in a regulated industry it goes to compliance after that. Six weeks was a good outcome. Two weeks meant someone owed someone a favor.
+          At Oracle Advertising and Zeta I spent a good part of my life waiting on the other side of this exact process. A change to what customer data a tag collects goes to privacy, then to security, then to whoever owns the data processing agreement, and in a regulated industry it goes to compliance after that. Six weeks was a good outcome. Two weeks meant someone owed someone a favor.
         </p>
         <p>
           Ten days from a Friday announcement, over a summer weekend, in August, when half the approval chain is out. The people who will find out about this are the ones whose agency mentions it in a September performance review, or whose privacy team runs a tag audit in the fourth quarter and asks a question nobody enjoys answering.

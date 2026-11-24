@@ -25,7 +25,7 @@ export const post: Post = {
 
         <h2>Money inside the commit is already spent</h2>
         <p>
-          I sold at Oracle, and later at Fastly, where revenue lived and died by committed-use
+          I sold at Oracle Advertising, and later at Fastly, where revenue lived and died by committed-use
           contracts. A commit changes the physics of every purchase near it. Money inside the commit
           is already spent in the CFO&apos;s head. Money outside the commit is a new ask, with a
           fresh approval chain, a fresh security review, and a fresh chance for procurement to say

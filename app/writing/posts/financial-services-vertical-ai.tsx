@@ -16,7 +16,7 @@ export const post: Post = {
           <a href="https://investors.fiserv.com/news-releases/news-release-details/fiserv-launches-agentos-operating-system-agentic-ai-banking" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">Fiserv just launched an agent operating system for banking</a>{" "}with six institutions co-building it. The money moved from someday to this quarter.
         </p>
         <p>
-          I spent years at Oracle inside accounts like JPMorgan Chase, where the difference between a deal that closed and one that died was rarely the technology. It was whether risk, compliance, and the audit function could live with what you were proposing. Selling into a regulated buyer teaches you a humbling lesson. The coolest capability in the room loses to the one with a clean control story.
+          I spent years at Oracle Advertising inside accounts like JPMorgan Chase, where the difference between a deal that closed and one that died was rarely the technology. It was whether risk, compliance, and the audit function could live with what you were proposing. Selling into a regulated buyer teaches you a humbling lesson. The coolest capability in the room loses to the one with a clean control story.
         </p>
 
         <h2>Why vertical beats horizontal in a regulated buyer</h2>

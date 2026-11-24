@@ -30,7 +30,7 @@ export const post: Post = {
         </p>
         <h2>I&apos;ve spent most of my career on the grow, not the land</h2>
         <p>
-          At Oracle I carried Amazon and Johnson &amp; Johnson. The dollars that mattered didn&apos;t come from the first signature. They came from year two and year three, from finding the second and third use case, from being trusted enough to sit in a planning meeting I wasn&apos;t invited to and leave with a bigger footprint. That work is unglamorous, it doesn&apos;t demo, and it&apos;s the hardest thing in enterprise sales to fake, because it runs on a relationship you can&apos;t manufacture in a quarter.
+          At Oracle Advertising I carried Amazon and Johnson &amp; Johnson. The dollars that mattered didn&apos;t come from the first signature. They came from year two and year three, from finding the second and third use case, from being trusted enough to sit in a planning meeting I wasn&apos;t invited to and leave with a bigger footprint. That work is unglamorous, it doesn&apos;t demo, and it&apos;s the hardest thing in enterprise sales to fake, because it runs on a relationship you can&apos;t manufacture in a quarter.
         </p>
         <h2>The labs are hiring for the wrong half</h2>
         <p>

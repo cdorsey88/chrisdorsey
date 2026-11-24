@@ -24,7 +24,7 @@ export const post: Post = {
         <p>
           In July I wrote about{" "}
           <Link href="/writing/kimi-k3-open-weights-renewal-lever" className="text-blue-600 hover:text-blue-700 underline underline-offset-2">Kimi K3 showing up in renewals before it shows up in production</Link>
-          , and that argument was about negotiating position. A buyer picks up a credible-sounding zero-dollar alternative, waves it across the table, and takes a discount whether or not anyone was ever going to run it. I sold through years of that at Oracle. The migration stayed six months away forever. The discounts were immediate.
+          , and that argument was about negotiating position. A buyer picks up a credible-sounding zero-dollar alternative, waves it across the table, and takes a discount whether or not anyone was ever going to run it. I sold through years of that at Oracle Advertising. The migration stayed six months away forever. The discounts were immediate.
         </p>
         <p>
           A router changes the shape of that. Nobody waves anything. The rule in the config says route this class of request to whichever model clears the quality bar at the lowest cost per token, and traffic moves the day a competitor cuts price. No renewal cycle, no bake-off, no meeting. You find out from the usage line.

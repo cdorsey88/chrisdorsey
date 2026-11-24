@@ -27,7 +27,7 @@ export const post: Post = {
           Here&rsquo;s what the money bought. TPG, Blackstone, Bain and the rest own thousands of portfolio companies between them, and a PE owner can do the one thing every enterprise software seller dreams about: tell the CEO to adopt, from the board seat, and mean it. The engineers are the visible part. The distribution is the part you pay a 17.5% guarantee to lock up, a standing channel into hundreds of companies where the adoption decision comes down from the top instead of clawing its way up from a pilot.
         </p>
         <p>
-          I&rsquo;ve sold on both sides of that line. At Oracle and Fastly, the deals that died slow were the ones where a champion three levels down loved us and nobody above them had signed up for the outcome. The deals that moved had air cover from the top. The hardest thing to manufacture in enterprise sales is a mandate. OpenAI and Anthropic just rented thousands of them.
+          I&rsquo;ve sold on both sides of that line. At Oracle Advertising and Fastly, the deals that died slow were the ones where a champion three levels down loved us and nobody above them had signed up for the outcome. The deals that moved had air cover from the top. The hardest thing to manufacture in enterprise sales is a mandate. OpenAI and Anthropic just rented thousands of them.
         </p>
         <h2>Two things can be true</h2>
         <p>
